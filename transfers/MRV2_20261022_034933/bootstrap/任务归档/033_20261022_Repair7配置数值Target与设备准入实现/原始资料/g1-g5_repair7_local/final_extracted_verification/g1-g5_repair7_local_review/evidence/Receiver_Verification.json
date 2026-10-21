@@ -1,0 +1,21 @@
+{
+  "status": "VERIFIED",
+  "source": "/Users/wenqingzhang/Desktop/\u4e2d\u8f6c/private-file-relay/transfers/2026-10-21/MRV2_P7X_A3_Repair6/20261021T071630Z_fd0716c5/return",
+  "packages": [
+    {
+      "package": "Repair6_review.zip",
+      "bytes": 735828,
+      "sha256": "3df148a7f95158251e9cee8eef42da8bd037865fdb1edf5c70b9b7998e356dde",
+      "members": 260,
+      "indexed_members": 258
+    },
+    {
+      "package": "Repair6_raw.zip",
+      "bytes": 167619564,
+      "sha256": "0d1c0ed9cab821265f84cf9740e51f035fe4b6ff2dbe5eac33621a61b83fc7ba",
+      "members": 3499,
+      "indexed_members": 3497
+    }
+  ],
+  "device_correctness": "NOT_ASSESSED"
+}

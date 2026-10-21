@@ -1,0 +1,9 @@
+# 首因、依赖、资源与恢复
+
+runner单case执行，所有旧attempt只读保留；同目录不可覆写。新run用新root重新PREPARE。当前已实现精确run/SHA/tree依赖、case选择与原始命令/退出码保留；未实现自动跨attempt继承成功。
+配置/模型启动失败→EXECUTION_FAILED，checker缺文件→acceptance_status INVALID_EVIDENCE另列，primary_failure始终首个非预期失败。
+数值3→NUMERIC_MISMATCH，未知native74→SUBMISSION_UNCERTAIN_QUARANTINED，预算5→BLOCKED_RESOURCE，producer超时→EXECUTION_TIMEOUT，比较超时→COMPARISON_TIMEOUT，用户中断→USER_INTERRUPTED。ABORT73必须联合专用checker成功，不能通用忽略非零。
+合法complete prefix可由只读比较恢复；生产者非零仍保留。COMPARE必须等两臂attempt都结束，不要求两臂都PASS，且拒绝跨run/source旧runner-result。
+不通过复制旧runner-result恢复：跨attempt复用需显式离线reanalysis记录，只参考旧结果；新SHA锚点重跑。
+预算沿用Repair6各分支resource_policy/runtime几何预检；完整Target累计chunk/两臂/临时落盘与打包空间单独核算。无全局Target硬门；不足不缩矩阵、不删失败证据。profiling不依赖NUMERIC或完整Target。
+当前RAM/HBM自动估计只到既有几何预检能力，不是实时服务器资源保证；owner资源receipt和每分支preload-resource-plan是必需证据。

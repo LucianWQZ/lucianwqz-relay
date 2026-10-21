@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "special_cases": [
+    {
+      "source_relative_path": "g1-g5_repair1/P7X_A3_06_Evidence.part001.json",
+      "format": "comma_separated_top_level_json_objects",
+      "object_count": 6,
+      "bytes": 167437,
+      "validation": "STRICT_RAW_DECODE_TO_EOF",
+      "note_zh": "原始Repair1证据由六个逗号分隔的顶层JSON对象组成。归档保持原始字节，不重新序列化；验证器逐对象解码并校验分隔符与尾部。"
+    }
+  ]
+}

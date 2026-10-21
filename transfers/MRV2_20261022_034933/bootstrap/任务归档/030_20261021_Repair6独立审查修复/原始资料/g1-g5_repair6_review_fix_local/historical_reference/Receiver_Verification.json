@@ -1,0 +1,91 @@
+{
+  "run_id": "20261020T144145Z_d0a3fc3d",
+  "started": 1792549458.537683,
+  "scope": "LOCAL_RECEIVER_NOT_DEVICE_PASS",
+  "top": [
+    {
+      "name": "P7X_Graph_Base_A3_Repair5_Server_Final_Report.md",
+      "bytes": 23913,
+      "sha256": "ca8a53619197cf76e941c984ea006e71de4b52956128d4c4d5c5b6ff20da52fe"
+    },
+    {
+      "name": "NEXT_LOCAL_CODEX_INPUT.json",
+      "bytes": 18360,
+      "sha256": "2dbdf0752642de9ebc0577521507188323b1637415e63a605769e81720a72961"
+    },
+    {
+      "name": "Repair5_Profiling_Report.md",
+      "bytes": 9149,
+      "sha256": "37052c66c171619f71752acdce9913e36f5b543e8e67715c7206f90ec0cfb41e"
+    },
+    {
+      "name": "Repair5_Profiling_Summary.json",
+      "bytes": 159519,
+      "sha256": "124c60eedc0ea6b7051bee2ff3b2862b23b196623115e0a9063e17c7bfbbb127"
+    },
+    {
+      "name": "Repair5_RECEIVER_VERIFY.py",
+      "bytes": 9214,
+      "sha256": "32fbf73c0456ead8731602aef57a019661415b76cc718f3e6abf92174f3bdefd"
+    },
+    {
+      "name": "Repair5_SHARDING.log",
+      "bytes": 2158,
+      "sha256": "92188e7bf1cba191b475550f41eba9aae0ee277154314fa19a7d8e92f8e260f6"
+    }
+  ],
+  "shards": [
+    {
+      "bytes": 94371840,
+      "name": "Repair5_raw.zip.part-000",
+      "order": 0,
+      "sha256": "036aa613953b2504b55bbb6cb4e32b5f985be15194f11d510dfdde8c337550cb"
+    },
+    {
+      "bytes": 94371840,
+      "name": "Repair5_raw.zip.part-001",
+      "order": 1,
+      "sha256": "51d3dfd2f180b000bd7d7d1b8865ea61c1bd0d4dd2e76d63ff70278a37818843"
+    },
+    {
+      "bytes": 94371840,
+      "name": "Repair5_raw.zip.part-002",
+      "order": 2,
+      "sha256": "7755725cd009a12f03b62997c7f71ca17c8681df70bece6c4a214e3d23f55143"
+    },
+    {
+      "bytes": 94371840,
+      "name": "Repair5_raw.zip.part-003",
+      "order": 3,
+      "sha256": "2452fed822e1c3dc4c1691e1ddf48dfc93889e595c525368190efc9823238d81"
+    },
+    {
+      "bytes": 94371840,
+      "name": "Repair5_raw.zip.part-004",
+      "order": 4,
+      "sha256": "7e3db608b35d7b3de9cf094d60c77a17ec371148c6f9a374ba28423ab067bb61"
+    },
+    {
+      "bytes": 73499667,
+      "name": "Repair5_raw.zip.part-005",
+      "order": 5,
+      "sha256": "aebce93ab21c069f32730be1675d42ac5c6789f4e6d78b4699a9af0b8cc1bde5"
+    }
+  ],
+  "review": {
+    "package": "Repair5_review.zip",
+    "bytes": 2619378,
+    "sha256": "52b3bf122c0c63ca35d63eecc32e56503d2ea133a60443b6d3cf6b567794b1dc",
+    "members": 434,
+    "indexed_members": 432
+  },
+  "raw": {
+    "package": "Repair5_raw.zip",
+    "bytes": 545358867,
+    "sha256": "6b58da786bfe8ef095f20d771891086c85e79cf678087c42756864f876d5aea1",
+    "members": 1001,
+    "indexed_members": 999
+  },
+  "status": "VERIFIED",
+  "finished": 1792549487.766134
+}

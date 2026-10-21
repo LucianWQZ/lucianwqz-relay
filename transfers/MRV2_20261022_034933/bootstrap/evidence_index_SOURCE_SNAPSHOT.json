@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "source_root": "/Users/wenqingzhang/Desktop/Note/MRV2",
+  "snapshot_started_at": "2026-10-22T03:47:36+08:00",
+  "snapshot_finished_at": "2026-10-22T03:47:50+08:00",
+  "included_entry_count": 7512,
+  "included_file_count": 7512,
+  "included_symlink_count": 0,
+  "included_file_bytes": 29806830277,
+  "excluded_count": 16,
+  "error_count": 0,
+  "exclusion_rule": "仅排除 .DS_Store、AppleDouble (._*) 与非普通系统项"
+}

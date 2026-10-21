@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "commit": "fd0716c59562f64262672de12e4ae26259908d0b",
+  "tree": "125b29bcb8fe501d69b53e185f9ec89075528310",
+  "parent": "febc43be3309f6d2cd87f9332cb7e031ebaad001",
+  "publication": "VERIFIED",
+  "new_sha_device_verification": "NOT_RUN",
+  "files": [
+    {
+      "path": "P7X_Graph_Base_A3_Repair6_Publication_And_Server_Readiness_Report.md",
+      "bytes": 9166,
+      "sha256": "f66b82f20ebc228ee04e481dbb48dc25e00e4701bb3a7b51f1d4428d38697ac7",
+      "purpose": "中文发布与准入报告"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair6_Server_Handoff.json",
+      "bytes": 276080,
+      "sha256": "9ed64f7f0788c4a15b7850f3d252d72f0ce5274703fe0688fab1ac4298442ef4",
+      "purpose": "最终机器交接"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair6_Server_Input_Pack.zip",
+      "bytes": 76403,
+      "sha256": "6fcf372b12a73ab75845b003c1ca5c4caa4b95ea4f9d5c2d7b2327b57794b7d9",
+      "purpose": "POST_PUBLICATION服务器输入（无源码覆盖）"
+    },
+    {
+      "path": "g1-g5_repair6_publication.zip",
+      "bytes": 75702,
+      "sha256": "b4fe8b17da075e644196f03ac9f408071f8efc530ea0034f224aae96b41ecb2c",
+      "purpose": "紧凑发布及独立网络恢复证据"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair6_Publication_Package_Verification.json",
+      "bytes": 2045,
+      "sha256": "05274473e970f69713da7600dd292815b7299ebd8d12b14857b42b59e696ca6e",
+      "purpose": "实际解包与合同校验"
+    }
+  ],
+  "no_self_hash": "Manifest is outside ZIP and does not hash itself; final response gives its hash.",
+  "server_required": [
+    "P7X_Graph_Base_A3_Repair6_Server_Input_Pack.zip"
+  ],
+  "review_required": [
+    "P7X_Graph_Base_A3_Repair6_Publication_And_Server_Readiness_Report.md",
+    "g1-g5_repair6_publication.zip",
+    "P7X_Graph_Base_A3_Repair6_Publication_Package_Verification.json"
+  ],
+  "historical_archive": "/Users/wenqingzhang/Desktop/Note/MRV2/g1-g5_repair6_publication_local/archive_pre_publication"
+}

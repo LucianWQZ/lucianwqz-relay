@@ -1,0 +1,19 @@
+{
+  "status": "VERIFIED_LOCAL_HANDOFF_CONTRACT",
+  "generated_at": "2026-10-22T03:31:22.831134+08:00",
+  "publication": "VERIFIED",
+  "device_verification": "NOT_RUN",
+  "path": "/Users/wenqingzhang/Desktop/vllm/mrv2_server_handoff_staging/output/current_handoff/P7X_Graph_Base_A3_Repair7_Server_Input_Pack_POST_PUBLICATION.zip",
+  "bytes": 44571,
+  "sha256": "09ec1b2be09816c42d0d5a466b4afa8e0931ba23d0665c8975745cd56d300b16",
+  "crc": "PASS",
+  "json": "PASS",
+  "handoff_equal": true,
+  "source_identity": {
+    "commit": "7a9f4aae1ebe5c5f3d4876ec9b49926949dfae14",
+    "tree": "6dd40a67a500480556068be8b6ebcd977e3cc3e8",
+    "parent": "fd0716c59562f64262672de12e4ae26259908d0b"
+  },
+  "fixture_sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+  "public_graph_gate": "STILL_FROZEN"
+}

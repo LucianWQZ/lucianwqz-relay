@@ -1,0 +1,92 @@
+{
+  "status": "VERIFIED",
+  "final": {
+    "branch": "fix/p7x-graph-base-a3-repair6",
+    "commit": "febc43be3309f6d2cd87f9332cb7e031ebaad001",
+    "tree": "f68e57e4501dacb67cdf4c81831b8f713e4ddc18",
+    "parent": "d41bb588a7e62b67a3ee1ce4bf652bf2701662da",
+    "base": "d0a3fc3d42d7d97e5e7da3890d2710263a097e63",
+    "base_tree": "2f6b93415ced94fe3f4ba22c518699a023b97511",
+    "status": "",
+    "vllm": {
+      "commit": "84030bbe3d74d99bad477a3d2e37a973ccd8865c",
+      "tree": "f3e320f8ae2e9a30e57a3c8dccfac94fcae93bee",
+      "status": ""
+    },
+    "commits": [
+      "d41bb588a7e62b67a3ee1ce4bf652bf2701662da",
+      "febc43be3309f6d2cd87f9332cb7e031ebaad001"
+    ],
+    "tested_file_sha256": {
+      "tests/ut/spec_decode/test_draft_window_graph_diagnostics.py": "fe99f1739e8cb7d53c66579107e61b1bfc5e188fc4c89405e0b312c4cc64e7f5",
+      "tests/ut/spec_decode/test_graph_repair6_contracts.py": "cc56d338abcf326780fe816287e22285a0e0635de6bf232cc21085b10c1f6b57",
+      "tests/ut/spec_decode/test_graph_repair6_delivery.py": "b99a293b106b2e4ad45d5adf5cfbb6c3fa1b9048434d7dd46b4faacb9d42b8e5",
+      "tests/ut/spec_decode/test_graph_repair6_storage.py": "b48143adbeaa0239db8c72dd559bb99f7a6153e4e3c40fdcc5353dd442f7e9d2",
+      "tools/p7x_graph_repair2.py": "4d44a04933b5fbfeb2f51de00d7460b95693f9c0f4cb0a25c659428a3c61e8e0",
+      "tools/p7x_graph_repair4_target.py": "b726f711f561d6add8e7fe95242124b5d255105310d800480829487089f8b207",
+      "tools/p7x_graph_repair5_evidence.py": "07e1dd94daa063157ebf8a8b838bf05de1891b5f1aa47b27b03ba4e963dbfb4c",
+      "tools/p7x_graph_repair5_profile.py": "0f30fcc623b5486b964b3dd7da080cecd0b1be268c50939ebefcbba5c70cc323",
+      "tools/p7x_graph_repair5_target.py": "681fbdf9357a0a6e152ee2e5f912398a0a75f9d6ffe403efc3ce67a5688dc5c3",
+      "tools/p7x_graph_repair6.py": "1c3ad23bb9fd4fb7204535b757f2618fe06a1e2a95d5fc68de27b79f028f63aa",
+      "tools/p7x_graph_repair6_campaign.py": "2bc6a47721cea796e0774f68970b49e4d5fcd184929589846074aa59b54ce395",
+      "tools/p7x_graph_repair6_lifecycle.py": "d8f8274df50221c2d699ded6bcd6d9a10500fcbc272f6df5900cdbc6e1480b24",
+      "tools/p7x_graph_repair6_natural.py": "5206f4764b0b1132d61fbe4e6bd568affd0e4c90ae4c7888830a10a8c34382dc",
+      "tools/p7x_graph_repair6_numeric.py": "942b1b9ecd501cbf333c91b94ba4a3e95d205c90452246b8f443548651518426",
+      "tools/p7x_graph_repair6_runner.py": "89a4600ef565fe0441ba6fe31498bf1fc390d90b8fb9687990b315ba0792d089",
+      "tools/p7x_graph_repair6_storage.py": "6dd4a09950f1f76ad1afa04ab619dedda19c4bc1045e8d3c0ea14c7b9be55ef3",
+      "tools/p7x_graph_repair6_trace.py": "0c566486d3568884b6efb661312873d4d756159a34249df8366423910f8d00a4",
+      "vllm_ascend/worker/v2/spec_decode/dflash/aclgraph.py": "0573d438b70bce4fc4fff2fc61e3c658b6011513c0a7d46d8ca461efc08bddbf",
+      "vllm_ascend/worker/v2/spec_decode/draft_window_graph_diagnostics.py": "f8291d29e27460f80de5cf1dd088a871e4be851a20aef835c5ae6e93f1482a56",
+      "vllm_ascend/worker/v2/spec_decode/dspark/speculator.py": "0753f47dd22782d55b69f56081efef67ec4026a5e2fa8263738afd44ef35e81d"
+    },
+    "tested_tree_equals_committed_files": true,
+    "signature": "Signed-off-by present; cryptographic signature N",
+    "publication": "NOT_PUBLISHED",
+    "device": "NOT_RUN",
+    "time": "2026-10-21T11:02:47.019945+08:00"
+  },
+  "packages": [
+    {
+      "status": "VERIFIED",
+      "path": "/Users/wenqingzhang/Desktop/Note/MRV2/g1-g5_repair6_local_review.zip",
+      "bytes": 502068,
+      "sha256": "b2893c0a6876f824c6764bc3800a39406211c442c33e2688c4169e968c7ce273",
+      "members": 121,
+      "memory": "streaming 4 MiB; JSON index <=16 MiB",
+      "device_verification": "NOT_ASSESSED",
+      "extracted_hashes": "VERIFIED",
+      "json": "PARSED",
+      "handoff_matches_external": true
+    },
+    {
+      "status": "VERIFIED",
+      "path": "/Users/wenqingzhang/Desktop/Note/MRV2/P7X_Graph_Base_A3_Repair6_Server_Input_Pack.zip",
+      "bytes": 43526,
+      "sha256": "d1d38c1a9baf0fb91fb892842463d5e5200f3515a12607e7448462104e79a532",
+      "members": 15,
+      "memory": "streaming 4 MiB; JSON index <=16 MiB",
+      "device_verification": "NOT_ASSESSED",
+      "extracted_hashes": "VERIFIED",
+      "json": "PARSED",
+      "handoff_matches_external": true
+    }
+  ],
+  "cli": {
+    "status": "PASS",
+    "cases": 42,
+    "commands": [
+      {
+        "command": [
+          "PREPARE.py",
+          "--help"
+        ],
+        "exit_code": 0,
+        "output": "usage: PREPARE.py [-h] --repo REPO --vllm VLLM --output OUTPUT --run-id RUN_ID\n\nRepair6 post-publication preflight and plan materialization; no device run.\n\noptions:\n  -h, --help       show this help message and exit\n  --repo REPO\n  --vllm VLLM\n  --output OUTPUT\n  --run-id RUN_ID\n"
+      }
+    ],
+    "device_execution": "NOT_RUN",
+    "scope": "argv paths/identity/dependencies plus prior actual CLI --help tests"
+  },
+  "scope": "Integrity and local readiness only; no device PASS",
+  "remote_publication": "NOT_ATTEMPTED"
+}

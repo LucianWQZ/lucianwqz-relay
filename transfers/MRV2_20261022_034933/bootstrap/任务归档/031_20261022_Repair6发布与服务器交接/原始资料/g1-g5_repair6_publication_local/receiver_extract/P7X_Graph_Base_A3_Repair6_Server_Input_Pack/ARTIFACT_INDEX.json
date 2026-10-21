@@ -1,0 +1,124 @@
+{
+  "files": [
+    {
+      "path": "ACCEPTANCE.md",
+      "bytes": 1602,
+      "sha256": "ac0e2505b37f24a6ef2842619fc472e76eb55c186dd3feb1f63edc296f25e8a5"
+    },
+    {
+      "path": "COMMANDS.md",
+      "bytes": 3816,
+      "sha256": "2e24d899f9a027c8b23f8f3d6f52435f1d4209dd4858b263656133a84771314a"
+    },
+    {
+      "path": "Continuous_Reference_Contract.md",
+      "bytes": 2280,
+      "sha256": "263c4051981f96acfd2fe24aecc4b459e9d5596906d0a91b4a21c2b1c0139154"
+    },
+    {
+      "path": "Failure_Exit_And_Isolation_Contract.md",
+      "bytes": 1602,
+      "sha256": "ac0e2505b37f24a6ef2842619fc472e76eb55c186dd3feb1f63edc296f25e8a5"
+    },
+    {
+      "path": "Graph_Release_Evidence_Decisions.md",
+      "bytes": 1479,
+      "sha256": "5830a5114c6a01028327fec4bf6ab651185fa858e617f506a9ee595acc63744a"
+    },
+    {
+      "path": "NUMERIC_SCHEMA.md",
+      "bytes": 2280,
+      "sha256": "263c4051981f96acfd2fe24aecc4b459e9d5596906d0a91b4a21c2b1c0139154"
+    },
+    {
+      "path": "Normal_Lifecycle_Source_Audit.md",
+      "bytes": 3224,
+      "sha256": "f6c3a63885a4c241438247cac98cd61fa170cb8f3119411c2f89e206221f9dcb"
+    },
+    {
+      "path": "PREPARE.py",
+      "bytes": 1988,
+      "sha256": "e6fee20f743b23ea1a6cca47ba034ca240a1c189b87b57944b21c109c790f466"
+    },
+    {
+      "path": "PUBLICATION_REPORT.md",
+      "bytes": 9166,
+      "sha256": "f66b82f20ebc228ee04e481dbb48dc25e00e4701bb3a7b51f1d4428d38697ac7"
+    },
+    {
+      "path": "Profiling_Coverage_Contract.md",
+      "bytes": 1317,
+      "sha256": "73c4f61540ad322703e8cbeb97ef3083243b4002b57a01db9487854ec61d5fe3"
+    },
+    {
+      "path": "REVIEW_FIX_REPORT.md",
+      "bytes": 15161,
+      "sha256": "04cf956700ea78252a174b81e9929c4c6b7508988d17ea0e7878febc5f1df72e"
+    },
+    {
+      "path": "Stage_Resource_Plan.md",
+      "bytes": 1287,
+      "sha256": "48282bcaa43c30bbe41a97edd2b658f9ed4833bf2108b6fd416f0e8fcbf0fa9f"
+    },
+    {
+      "path": "case-acceptance-contracts.json",
+      "bytes": 246320,
+      "sha256": "81b351e114ddaf056c8d1954f8534d905a48b18b375fd2a14248f02ba65888f7"
+    },
+    {
+      "path": "case-plan.preview.json",
+      "bytes": 252374,
+      "sha256": "3aa65f7b58dac49eb18572692c8fbdb220f8cad6e11689dcee5ccac7d1fb7a34"
+    },
+    {
+      "path": "handoff.json",
+      "bytes": 276080,
+      "sha256": "9ed64f7f0788c4a15b7850f3d252d72f0ce5274703fe0688fab1ac4298442ef4"
+    },
+    {
+      "path": "inputs/fixture_manifest.json",
+      "bytes": 1781,
+      "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+    },
+    {
+      "path": "inputs/requests/combined.json",
+      "bytes": 117829,
+      "sha256": "f73dcae6d0b0d4a02e32fc2985d5b4aba086289499945aca01b7b12b0b18502e"
+    },
+    {
+      "path": "inputs/requests/g4-long-group1.json",
+      "bytes": 49906,
+      "sha256": "179e70b48c93fb761399f4e3ccf8672f524ea3a06c1ba30b9659a70aabc67a2f"
+    },
+    {
+      "path": "inputs/requests/g4-long-group2.json",
+      "bytes": 67506,
+      "sha256": "dd6a502907fe0bfd3deb61d489d41aedf89750abda39821ccee9385041b01953"
+    },
+    {
+      "path": "inputs/requests/mixed.json",
+      "bytes": 129862,
+      "sha256": "85e2cbd9547eee459e7e90c17ef7829ae249e34f574a3a219e39a3d34e749226"
+    },
+    {
+      "path": "inputs/requests/smoke.json",
+      "bytes": 423,
+      "sha256": "f4239cd07ac597c32ec29d6209fcbb3926b6649dbbb5b3e249c7e4fea3ce6daa"
+    },
+    {
+      "path": "profiling-plan.json",
+      "bytes": 279,
+      "sha256": "bd5ee2b74624941a9e53698d6fe5f6c79d6783e60bcfa6c6070025a425619f3a"
+    },
+    {
+      "path": "publication-verification.json",
+      "bytes": 3667,
+      "sha256": "5da2453cecc94507961aabb376b914a7cb578f0fb1790d6587abcae055b6fee1"
+    },
+    {
+      "path": "target-budget.json",
+      "bytes": 6028,
+      "sha256": "0cf52d0077eb73ad1a496851f40ce36c5830135307c426e02d2c87ebbc2701c7"
+    }
+  ]
+}

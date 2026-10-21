@@ -1,0 +1,290 @@
+[
+  {
+    "source_relative_path": ".DS_Store",
+    "type": "system_metadata",
+    "bytes": 18436,
+    "reason_zh": "macOS 系统元数据，不属于项目资料"
+  },
+  {
+    "source_relative_path": "Draft/.DS_Store",
+    "type": "system_metadata",
+    "bytes": 6148,
+    "reason_zh": "macOS 系统元数据，不属于项目资料"
+  },
+  {
+    "source_relative_path": "Draft/Stage8_MRV2_Draft_Sliding_Window_Architecture/.DS_Store",
+    "type": "system_metadata",
+    "bytes": 6148,
+    "reason_zh": "macOS 系统元数据，不属于项目资料"
+  },
+  {
+    "source_relative_path": "MRV2_Speculative_Draft_Sliding_Window_%E5%AF%BC%E5%B8%88%E8%AF%84%E5%AE%A1%E6%BC%94%E7%A4%BA%E5%8C%85/.DS_Store",
+    "type": "system_metadata",
+    "bytes": 6148,
+    "reason_zh": "macOS 系统元数据，不属于项目资料"
+  },
+  {
+    "source_relative_path": "P4_freeze/.DS_Store",
+    "type": "system_metadata",
+    "bytes": 6148,
+    "reason_zh": "macOS 系统元数据，不属于项目资料"
+  },
+  {
+    "source_relative_path": "P7X_nongraph_local_freeze/.DS_Store",
+    "type": "system_metadata",
+    "bytes": 6148,
+    "reason_zh": "macOS 系统元数据，不属于项目资料"
+  },
+  {
+    "source_relative_path": "P8_eager_freeze/.DS_Store",
+    "type": "system_metadata",
+    "bytes": 6148,
+    "reason_zh": "macOS 系统元数据，不属于项目资料"
+  },
+  {
+    "source_relative_path": "P8_eager_freeze/prior_p4_freeze/.DS_Store",
+    "type": "system_metadata",
+    "bytes": 6148,
+    "reason_zh": "macOS 系统元数据，不属于项目资料"
+  },
+  {
+    "source_relative_path": "g1-g5_repair2_local/.DS_Store",
+    "type": "system_metadata",
+    "bytes": 6148,
+    "reason_zh": "macOS 系统元数据，不属于项目资料"
+  },
+  {
+    "source_relative_path": "g1-g5_repair3_local/.DS_Store",
+    "type": "system_metadata",
+    "bytes": 8196,
+    "reason_zh": "macOS 系统元数据，不属于项目资料"
+  },
+  {
+    "source_relative_path": "g1-g5_repair4_local/.DS_Store",
+    "type": "system_metadata",
+    "bytes": 6148,
+    "reason_zh": "macOS 系统元数据，不属于项目资料"
+  },
+  {
+    "source_relative_path": "g1-g5_repair6_local/.DS_Store",
+    "type": "system_metadata",
+    "bytes": 8196,
+    "reason_zh": "macOS 系统元数据，不属于项目资料"
+  },
+  {
+    "source_relative_path": "g1-g5_repair6_publication_local/.DS_Store",
+    "type": "system_metadata",
+    "bytes": 8196,
+    "reason_zh": "macOS 系统元数据，不属于项目资料"
+  },
+  {
+    "source_relative_path": "g1-g5_repair6_review_fix_local/.DS_Store",
+    "type": "system_metadata",
+    "bytes": 8196,
+    "reason_zh": "macOS 系统元数据，不属于项目资料"
+  },
+  {
+    "source_relative_path": "g1-g5_repair7_local/.DS_Store",
+    "type": "system_metadata",
+    "bytes": 8196,
+    "reason_zh": "macOS 系统元数据，不属于项目资料"
+  },
+  {
+    "source_relative_path": "private-file-relay/.DS_Store",
+    "type": "system_metadata",
+    "bytes": 6148,
+    "reason_zh": "macOS 系统元数据，不属于项目资料"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/COMMIT_EDITMSG",
+    "type": "nested_git_administration",
+    "bytes": 53,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/HEAD",
+    "type": "nested_git_administration",
+    "bytes": 21,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/config",
+    "type": "nested_git_administration",
+    "bytes": 259,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/description",
+    "type": "nested_git_administration",
+    "bytes": 73,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/index",
+    "type": "nested_git_administration",
+    "bytes": 499,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/hooks/applypatch-msg.sample",
+    "type": "nested_git_administration",
+    "bytes": 478,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/hooks/commit-msg.sample",
+    "type": "nested_git_administration",
+    "bytes": 896,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/hooks/fsmonitor-watchman.sample",
+    "type": "nested_git_administration",
+    "bytes": 4726,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/hooks/post-update.sample",
+    "type": "nested_git_administration",
+    "bytes": 189,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/hooks/pre-applypatch.sample",
+    "type": "nested_git_administration",
+    "bytes": 424,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/hooks/pre-commit.sample",
+    "type": "nested_git_administration",
+    "bytes": 1649,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/hooks/pre-merge-commit.sample",
+    "type": "nested_git_administration",
+    "bytes": 416,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/hooks/pre-push.sample",
+    "type": "nested_git_administration",
+    "bytes": 1374,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/hooks/pre-rebase.sample",
+    "type": "nested_git_administration",
+    "bytes": 4898,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/hooks/pre-receive.sample",
+    "type": "nested_git_administration",
+    "bytes": 544,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/hooks/prepare-commit-msg.sample",
+    "type": "nested_git_administration",
+    "bytes": 1492,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/hooks/push-to-checkout.sample",
+    "type": "nested_git_administration",
+    "bytes": 2783,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/hooks/sendemail-validate.sample",
+    "type": "nested_git_administration",
+    "bytes": 2308,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/hooks/update.sample",
+    "type": "nested_git_administration",
+    "bytes": 3650,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/info/exclude",
+    "type": "nested_git_administration",
+    "bytes": 240,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/logs/HEAD",
+    "type": "nested_git_administration",
+    "bytes": 203,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/logs/refs/heads/main",
+    "type": "nested_git_administration",
+    "bytes": 203,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/objects/0e/4910a9322d4e807e744ecc2382f842dfe56e4f",
+    "type": "nested_git_administration",
+    "bytes": 162,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/objects/3c/24bea46309b4a118101b51fbabd3c090f794dd",
+    "type": "nested_git_administration",
+    "bytes": 46,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/objects/95/3a6a7cb4c9a3bc51bce591568087a3f50c131e",
+    "type": "nested_git_administration",
+    "bytes": 110,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/objects/a2/a839c55bfb7f3c175887a91e07f5c31c0b9db8",
+    "type": "nested_git_administration",
+    "bytes": 744,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/objects/b0/56b8d135745b796d6018ecff6074f2e2c1f8c1",
+    "type": "nested_git_administration",
+    "bytes": 57,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/objects/c1/2361d456d048c572714b21497e0ff055555b73",
+    "type": "nested_git_administration",
+    "bytes": 2187,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/objects/c7/76f1b839da36164efd58e040044a5a9db07390",
+    "type": "nested_git_administration",
+    "bytes": 545737,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/objects/ce/b4dcd2fabb6d5b61b067ca52aefa31494e3415",
+    "type": "nested_git_administration",
+    "bytes": 160,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/objects/f1/f4e83fdfbb5bf8c8601b0fb67ef329bd11ddca",
+    "type": "nested_git_administration",
+    "bytes": 53,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  },
+  {
+    "source_relative_path": "private-file-relay/.git/refs/heads/main",
+    "type": "nested_git_administration",
+    "bytes": 41,
+    "reason_zh": "嵌套传输仓库的.git管理数据，不是项目文档；公开/私有认证状态不归档"
+  }
+]

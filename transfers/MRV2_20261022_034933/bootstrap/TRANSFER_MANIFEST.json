@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "complete_set_rule_zh": "TRANSFER_MANIFEST.json与下列完整ZIP共同构成完整迁移集合；快速评审包不能替代。",
+  "source_snapshot_time": "2026-10-22T03:47:36+08:00",
+  "packages": [
+    {
+      "filename": "MRV2_完整中文迁移包.zip",
+      "relative_path": "完整包/MRV2_完整中文迁移包.zip",
+      "bytes": 29839300507,
+      "sha256": "cdea50597f7f7dc898fae79935d8fecfac5cba73b59aa23a15f867125f267f45",
+      "purpose_zh": "覆盖全部纳入原始文件、中文导航和机器索引的完整迁移包"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "status": "VERIFIED",
+  "packages": [
+    {
+      "name": "g1-g5_repair5_local_review.zip",
+      "bytes": 418135,
+      "sha256": "91ad3e56dde3459b4b3742b83a36f2792ae90c8a971cda75b452a66215101ed1",
+      "crc": "PASS",
+      "extracted_to": "/var/folders/jg/1291_6m930x__sj1qzy3kdsh0000gn/T/repair5-package-check-g8qvlktk",
+      "json_parsed": 38,
+      "member_hashes": "PASS",
+      "references": "PASS",
+      "handoff": "EXACT_FINAL"
+    },
+    {
+      "name": "P7X_Graph_Base_A3_Repair5_Server_Input_Pack.zip",
+      "bytes": 27305,
+      "sha256": "f589dd6411993a64f0732730626b963182bf4fe36bd3fb5ace95ed1dfb73c6d1",
+      "crc": "PASS",
+      "extracted_to": "/var/folders/jg/1291_6m930x__sj1qzy3kdsh0000gn/T/repair5-package-check-4j0c_es2",
+      "json_parsed": 11,
+      "member_hashes": "PASS",
+      "references": "PASS",
+      "handoff": "EXACT_FINAL"
+    }
+  ]
+}

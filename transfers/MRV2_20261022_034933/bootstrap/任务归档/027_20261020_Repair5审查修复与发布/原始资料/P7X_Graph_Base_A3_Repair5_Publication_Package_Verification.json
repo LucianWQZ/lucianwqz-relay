@@ -1,0 +1,38 @@
+{
+  "status": "VERIFIED",
+  "archives": [
+    {
+      "status": "VERIFIED",
+      "path": "/private/tmp/repair5-review/delivery/P7X_Graph_Base_A3_Repair5_Server_Input_Pack.zip",
+      "bytes": 35287,
+      "sha256": "1288673bca8ea9e58dcc01e8b7448ae5a1fad27eb96e4470333d5fa8d1106746",
+      "members": 21,
+      "memory": "streaming 4 MiB; JSON index <=16 MiB",
+      "device_verification": "NOT_ASSESSED"
+    },
+    {
+      "status": "VERIFIED",
+      "path": "/private/tmp/repair5-review/delivery/g1-g5_repair5_review_fix_publication.zip",
+      "bytes": 189780,
+      "sha256": "81da144065c57f0d8b8615ddbe66cfc14f9f6080f0d2867b11bd66c580c34fc4",
+      "members": 63,
+      "memory": "streaming 4 MiB; JSON index <=16 MiB",
+      "device_verification": "NOT_ASSESSED"
+    }
+  ],
+  "json": "ALL_PARSED",
+  "member_hashes": "ALL_MATCH",
+  "crc": "PASS",
+  "extract": "ACTUAL_TEMP_EXTRACTION",
+  "handoff_inside_outside": "EXACT_BYTES",
+  "plan_argv_outputs": "ALL_MATCH",
+  "script_paths": "ALL_EXIST_IN_FINAL_GIT",
+  "final_identity": {
+    "branch": "fix/p7x-graph-base-a3-repair5",
+    "sha": "d0a3fc3d42d7d97e5e7da3890d2710263a097e63",
+    "commit": "d0a3fc3d42d7d97e5e7da3890d2710263a097e63",
+    "tree": "2f6b93415ced94fe3f4ba22c518699a023b97511",
+    "parent": "3bdc413aa9826e4c199f5d96125e71db2c343420"
+  },
+  "device_execution": "NOT_RUN"
+}

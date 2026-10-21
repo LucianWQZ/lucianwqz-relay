@@ -1,0 +1,84 @@
+{
+  "all_match": true,
+  "files": [
+    {
+      "actual": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+      "exists": true,
+      "expected": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+      "match": true,
+      "path": "/mnt/share/wql/Qwen3-8B/config.json"
+    },
+    {
+      "actual": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc",
+      "exists": true,
+      "expected": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc",
+      "match": true,
+      "path": "/mnt/share/wql/Qwen3-8B/model.safetensors.index.json"
+    },
+    {
+      "actual": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "exists": true,
+      "expected": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "match": true,
+      "path": "/mnt/share/wql/Qwen3-8B/tokenizer.json"
+    },
+    {
+      "actual": "e470e70a553616f0dce8f783f42cfd25b7bd7dfdcd57ead680a0623040725611",
+      "exists": true,
+      "expected": "e470e70a553616f0dce8f783f42cfd25b7bd7dfdcd57ead680a0623040725611",
+      "match": true,
+      "path": "/mnt/share/dspark_qwen3_8b_block7/config.json"
+    },
+    {
+      "actual": "5c922d1f96c8d18dbdf005c40ea99878d9133d70eaa3be4bd1077ee5f2afc1e5",
+      "exists": true,
+      "expected": "5c922d1f96c8d18dbdf005c40ea99878d9133d70eaa3be4bd1077ee5f2afc1e5",
+      "match": true,
+      "path": "/mnt/share/dspark_qwen3_8b_block7/model.safetensors"
+    },
+    {
+      "actual": "31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f",
+      "exists": true,
+      "expected": "31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f",
+      "match": true,
+      "path": "/mnt/share/wql/Qwen3-8B/model-00001-of-00005.safetensors"
+    },
+    {
+      "actual": "5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282",
+      "exists": true,
+      "expected": "5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282",
+      "match": true,
+      "path": "/mnt/share/wql/Qwen3-8B/model-00002-of-00005.safetensors"
+    },
+    {
+      "actual": "c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836",
+      "exists": true,
+      "expected": "c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836",
+      "match": true,
+      "path": "/mnt/share/wql/Qwen3-8B/model-00003-of-00005.safetensors"
+    },
+    {
+      "actual": "b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a",
+      "exists": true,
+      "expected": "b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a",
+      "match": true,
+      "path": "/mnt/share/wql/Qwen3-8B/model-00004-of-00005.safetensors"
+    },
+    {
+      "actual": "20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff",
+      "exists": true,
+      "expected": "20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff",
+      "match": true,
+      "path": "/mnt/share/wql/Qwen3-8B/model-00005-of-00005.safetensors"
+    }
+  ],
+  "files_match": 10,
+  "files_total": 10,
+  "manifest_path": "/mnt/wenqing/mrv2_graph_repair3_verify/20261019T185701Z_10cbf4c0/artifacts/inputs/repair3_pack/fixture_manifest.json",
+  "manifest_sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+  "manifest_sha256_expected": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+  "manifest_sha_match": true,
+  "origin_run_id": "20261019_055109_13373fff",
+  "run_id": "20261019T185701Z_10cbf4c0",
+  "schema_version": "p7x-repair3-fixture-verification-v1"
+}

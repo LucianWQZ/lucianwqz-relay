@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "source_scope": "/Users/wenqingzhang/Desktop/Note/MRV2",
+  "source_snapshot_time": "2026-10-22T03:47:36+08:00",
+  "source_file_count": 7512,
+  "source_bytes": 29806830277,
+  "included_file_count": 7480,
+  "included_bytes": 29806253602,
+  "excluded_file_count": 48,
+  "unreadable_file_count": 0,
+  "copy_error_count": 0,
+  "unresolved_reference_count": 21744,
+  "task_count": 35,
+  "zip_file_count": 35,
+  "zip_crc_pass_count": 35,
+  "source_copy_hash_verification": "PASS",
+  "scope_guards": [
+    "未扫描或导入 /Users/wenqingzhang/Desktop/Note/PR",
+    "未扫描或导入 /Users/wenqingzhang/Desktop/中转/private-file-relay"
+  ]
+}

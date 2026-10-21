@@ -1,0 +1,69 @@
+{
+  "files": [
+    {
+      "path": "COMMANDS.md",
+      "bytes": 5389,
+      "sha256": "dba198561ad37c6de26057f049f0b3535ec044c87a83b4d74207c61a40ad159f"
+    },
+    {
+      "path": "IMPLEMENTATION_REPORT.md",
+      "bytes": 28558,
+      "sha256": "02f8654ca87f4543a0e6289896ffac049797ec5746f32984c8107f76a6dc8d74"
+    },
+    {
+      "path": "PREPARE.py",
+      "bytes": 2045,
+      "sha256": "9c080d0780a8b7b6a3909d418df3f8308c61430c330234aa2ed99d40a10c25ac"
+    },
+    {
+      "path": "case-plan.preview.json",
+      "bytes": 238308,
+      "sha256": "546a5048494a4535080d35293244663a84ebd2aab253c0c0c2fe3bdcb2c4f125"
+    },
+    {
+      "path": "handoff.json",
+      "bytes": 132742,
+      "sha256": "23848a9e2d0404e7ec21b3d17a719907e9089aa45b9218d79124b9fa6754389c"
+    },
+    {
+      "path": "inputs/fixture_manifest.json",
+      "bytes": 1781,
+      "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+    },
+    {
+      "path": "inputs/requests/combined.json",
+      "bytes": 117829,
+      "sha256": "f73dcae6d0b0d4a02e32fc2985d5b4aba086289499945aca01b7b12b0b18502e"
+    },
+    {
+      "path": "inputs/requests/g4-long-group1.json",
+      "bytes": 49906,
+      "sha256": "179e70b48c93fb761399f4e3ccf8672f524ea3a06c1ba30b9659a70aabc67a2f"
+    },
+    {
+      "path": "inputs/requests/g4-long-group2.json",
+      "bytes": 67506,
+      "sha256": "dd6a502907fe0bfd3deb61d489d41aedf89750abda39821ccee9385041b01953"
+    },
+    {
+      "path": "inputs/requests/mixed.json",
+      "bytes": 129862,
+      "sha256": "85e2cbd9547eee459e7e90c17ef7829ae249e34f574a3a219e39a3d34e749226"
+    },
+    {
+      "path": "inputs/requests/smoke.json",
+      "bytes": 423,
+      "sha256": "f4239cd07ac597c32ec29d6209fcbb3926b6649dbbb5b3e249c7e4fea3ce6daa"
+    },
+    {
+      "path": "profiling-plan.json",
+      "bytes": 902,
+      "sha256": "736d2ee783c13c3facccd915c791aeaf40041d94463aed4e8665986469f8c51b"
+    },
+    {
+      "path": "target-budget.json",
+      "bytes": 4591,
+      "sha256": "3f8a54955f72b8b0590299692bf8e5434b237c243a1152ad0b5419c7476a0fbb"
+    }
+  ]
+}

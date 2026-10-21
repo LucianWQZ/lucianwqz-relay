@@ -1,0 +1,111 @@
+{
+ "schema_version": 1,
+ "generated_at": "2026-10-22T04:54:35+0800",
+ "task_id": "MRV2_完整中文迁移_20261022_034933_0800",
+ "code_repo": {
+  "url": "https://github.com/LucianWQZ/vllm-ascend.git",
+  "branch": "fix/p7x-graph-base-a3-repair7",
+  "commit": "7a9f4aae1ebe5c5f3d4876ec9b49926949dfae14",
+  "tree": "6dd40a67a500480556068be8b6ebcd977e3cc3e8",
+  "parent": "fd0716c59562f64262672de12e4ae26259908d0b",
+  "pinned_vllm_commit": "84030bbe3d74d99bad477a3d2e37a973ccd8865c",
+  "pinned_vllm_tree": "f3e320f8ae2e9a30e57a3c8dccfac94fcae93bee",
+  "publication_status": "VERIFIED"
+ },
+ "relay": {
+  "repo": "LucianWQZ/private-file-relay",
+  "url": "https://github.com/LucianWQZ/private-file-relay",
+  "branch": "transfer/mrv2-adaption-20261022",
+  "tag": "mrv2-transfer-20261022-034933",
+  "release_url": "https://github.com/LucianWQZ/private-file-relay/releases/tag/mrv2-transfer-20261022-034933",
+  "directory": "transfers/MRV2_20261022_034933",
+  "commit_note_zh": "分支头提交即 tag 指向的提交；精确 SHA 见交付件与终端输出，避免本文件自引用。",
+  "assets": [
+   "MRV2_full_archive.zip.part-000",
+   "MRV2_full_archive.zip.part-001",
+   "MRV2_full_archive.zip.part-002",
+   "MRV2_full_archive.zip.part-003",
+   "MRV2_full_archive.zip.part-004",
+   "MRV2_full_archive.zip.part-005",
+   "MRV2_full_archive.zip.part-006",
+   "MRV2_full_archive.zip.part-007",
+   "MRV2_full_archive.zip.part-008",
+   "MRV2_full_archive.zip.part-009",
+   "MRV2_full_archive.zip.part-010",
+   "MRV2_full_archive.zip.part-011",
+   "MRV2_full_archive.zip.part-012",
+   "MRV2_full_archive.zip.part-013",
+   "MRV2_full_archive.zip.part-014",
+   "MRV2_full_archive.zip.part-015",
+   "MRV2_full_archive.zip.part-016",
+   "MRV2_full_archive.zip.part-017",
+   "MRV2_full_archive.zip.part-018",
+   "MRV2_full_archive.zip.part-019",
+   "MRV2_full_archive.zip.part-020",
+   "MRV2_full_archive.zip.part-021",
+   "MRV2_full_archive.zip.part-022",
+   "MRV2_full_archive.zip.part-023",
+   "MRV2_full_archive.zip.part-024",
+   "MRV2_full_archive.zip.part-025",
+   "MRV2_full_archive.zip.part-026",
+   "MRV2_full_archive.zip.part-027",
+   "MRV2_full_archive.zip.part-028",
+   "MRV2_full_archive.zip.part-029",
+   "MRV2_full_archive.zip.part-030",
+   "MRV2_full_archive.zip.part-031",
+   "MRV2_full_archive.zip.part-032",
+   "MRV2_full_archive.zip.part-033",
+   "MRV2_full_archive.zip.part-034",
+   "MRV2_full_archive.zip.part-035",
+   "MRV2_full_archive.zip.part-036",
+   "MRV2_full_archive.zip.part-037",
+   "MRV2_full_archive.zip.part-038",
+   "MRV2_full_archive.zip.part-039",
+   "MRV2_full_archive.zip.part-040",
+   "MRV2_full_archive.zip.part-041",
+   "MRV2_full_archive.zip.part-042",
+   "MRV2_full_archive.zip.part-043",
+   "MRV2_full_archive.zip.part-044",
+   "MRV2_full_archive.zip.part-045",
+   "MRV2_full_archive.zip.part-046",
+   "MRV2_full_archive.zip.part-047",
+   "MRV2_full_archive.zip.part-048",
+   "MRV2_full_archive.zip.part-049",
+   "MRV2_full_archive.zip.part-050",
+   "MRV2_full_archive.zip.part-051",
+   "MRV2_full_archive.zip.part-052",
+   "MRV2_full_archive.zip.part-053",
+   "MRV2_full_archive.zip.part-054",
+   "MRV2_full_archive.zip.part-055"
+  ]
+ },
+ "post_publication": {
+  "handoff": {
+   "path_in_archive": "任务归档/034_20261022_Repair7发布与服务器接管准备/原始资料/P7X_Graph_Base_A3_Repair7_Server_Handoff_POST_PUBLICATION.json",
+   "bytes": 302527,
+   "sha256": "56d67a55b7f9c91ce010d1b90f3660eb2218e71d5569e1fae0f55828392d5147"
+  },
+  "input_pack": {
+   "path_in_archive": "任务归档/034_20261022_Repair7发布与服务器接管准备/原始资料/P7X_Graph_Base_A3_Repair7_Server_Input_Pack_POST_PUBLICATION.zip",
+   "bytes": 44571,
+   "sha256": "09ec1b2be09816c42d0d5a466b4afa8e0931ba23d0665c8975745cd56d300b16"
+  }
+ },
+ "archive": {
+  "filename": "MRV2_完整中文迁移包.zip",
+  "bytes": 29839300507,
+  "sha256": "cdea50597f7f7dc898fae79935d8fecfac5cba73b59aa23a15f867125f267f45",
+  "shard_count": 56
+ },
+ "server": {
+  "target_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/reference/adaption",
+  "restore_dir": "<target_root>/MRV2_完整中文迁移_20261022_034933_0800",
+  "developer_reference_root_note_zh": "reference 与 dev 根目录以服务器实际挂载为准，恢复脚本按 --root 参数落位。"
+ },
+ "boundaries_zh": [
+  "publication=VERIFIED 仅描述 Repair7 已发布，不代表资料已到服务器。",
+  "不代表 NPU 已验收；新 SHA 设备验证仍为 NOT_RUN。",
+  "PUBLIC_GRAPH_GATE=STILL_FROZEN。",
+  "本任务未修改 vllm-ascend production，未重新发布 Repair7，未运行服务器实验。"
+ ]
+}

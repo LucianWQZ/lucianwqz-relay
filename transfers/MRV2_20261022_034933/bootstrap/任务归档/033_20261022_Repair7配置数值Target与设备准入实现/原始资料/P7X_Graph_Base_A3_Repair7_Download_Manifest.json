@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "commit": "7a9f4aae1ebe5c5f3d4876ec9b49926949dfae14",
+  "tree": "6dd40a67a500480556068be8b6ebcd977e3cc3e8",
+  "publication": "NOT_PUBLISHED",
+  "scope": "six top-level deliverables; excludes self hash to avoid recursion",
+  "files": [
+    {
+      "path": "P7X_Graph_Base_A3_Repair7_Implementation_And_Readiness_Report.md",
+      "absolute_path": "/Users/wenqingzhang/Desktop/Note/MRV2/P7X_Graph_Base_A3_Repair7_Implementation_And_Readiness_Report.md",
+      "bytes": 26061,
+      "sha256": "3e81164fa1384b60d4371212a4b07d8bb6bb436d3ff14fd2821f3ca0d859ece0",
+      "purpose": "independent review"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair7_Server_Handoff.json",
+      "absolute_path": "/Users/wenqingzhang/Desktop/Note/MRV2/P7X_Graph_Base_A3_Repair7_Server_Handoff.json",
+      "bytes": 301809,
+      "sha256": "94a59d6f5f0b5d3654a6d4fc853e0ad5cb7974397723455d0b62ef1d41ae41d4",
+      "purpose": "handoff/verification"
+    },
+    {
+      "path": "g1-g5_repair7_local_review.zip",
+      "absolute_path": "/Users/wenqingzhang/Desktop/Note/MRV2/g1-g5_repair7_local_review.zip",
+      "bytes": 491880,
+      "sha256": "365e96e5313f56ebc3754c688f94598fa2d250d7e563ec82e6bbe9b1b679038f",
+      "purpose": "independent review"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair7_Server_Input_Pack.zip",
+      "absolute_path": "/Users/wenqingzhang/Desktop/Note/MRV2/P7X_Graph_Base_A3_Repair7_Server_Input_Pack.zip",
+      "bytes": 44213,
+      "sha256": "9953b270f266aa59594025cbf2216f887b89a32e1ccebc6c41ba6b0826b8e04e",
+      "purpose": "handoff/verification"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair7_Independent_Review_Request.md",
+      "absolute_path": "/Users/wenqingzhang/Desktop/Note/MRV2/P7X_Graph_Base_A3_Repair7_Independent_Review_Request.md",
+      "bytes": 2320,
+      "sha256": "ea3dfb9e3e2b3ce8a19d4d1f724f3354681896cc79d50fb6e2bb94e517da2a81",
+      "purpose": "independent review"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair7_Package_Verification.json",
+      "absolute_path": "/Users/wenqingzhang/Desktop/Note/MRV2/P7X_Graph_Base_A3_Repair7_Package_Verification.json",
+      "bytes": 3128,
+      "sha256": "dc08faa64eae2609c4853c61736a9b785cb75133d1b4933b3480cd7311d98a47",
+      "purpose": "handoff/verification"
+    }
+  ]
+}

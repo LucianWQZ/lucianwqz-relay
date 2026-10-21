@@ -1,0 +1,84 @@
+{
+  "files": [
+    {
+      "path": "ACCEPTANCE.md",
+      "bytes": 1602,
+      "sha256": "ac0e2505b37f24a6ef2842619fc472e76eb55c186dd3feb1f63edc296f25e8a5"
+    },
+    {
+      "path": "COMMANDS.md",
+      "bytes": 2750,
+      "sha256": "99de7f3da5d044cc073ec9399ebeafb9ba8c1dd714096e2d2e4392139c71ecf8"
+    },
+    {
+      "path": "NUMERIC_SCHEMA.md",
+      "bytes": 2280,
+      "sha256": "263c4051981f96acfd2fe24aecc4b459e9d5596906d0a91b4a21c2b1c0139154"
+    },
+    {
+      "path": "PREPARE.py",
+      "bytes": 1988,
+      "sha256": "e6fee20f743b23ea1a6cca47ba034ca240a1c189b87b57944b21c109c790f466"
+    },
+    {
+      "path": "REVIEW_FIX_REPORT.md",
+      "bytes": 15161,
+      "sha256": "04cf956700ea78252a174b81e9929c4c6b7508988d17ea0e7878febc5f1df72e"
+    },
+    {
+      "path": "case-acceptance-contracts.json",
+      "bytes": 246320,
+      "sha256": "81b351e114ddaf056c8d1954f8534d905a48b18b375fd2a14248f02ba65888f7"
+    },
+    {
+      "path": "case-plan.preview.json",
+      "bytes": 252348,
+      "sha256": "2b1e681e7ec6981703ac4d40669bf20f6d741d6e299a84d2798b00a35ec48ca9"
+    },
+    {
+      "path": "handoff.json",
+      "bytes": 271310,
+      "sha256": "6db541684037a18f3162ad5b9e41a3e22a771c65a18557cdb01b78e1ad6e76b1"
+    },
+    {
+      "path": "inputs/fixture_manifest.json",
+      "bytes": 1781,
+      "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+    },
+    {
+      "path": "inputs/requests/combined.json",
+      "bytes": 117829,
+      "sha256": "f73dcae6d0b0d4a02e32fc2985d5b4aba086289499945aca01b7b12b0b18502e"
+    },
+    {
+      "path": "inputs/requests/g4-long-group1.json",
+      "bytes": 49906,
+      "sha256": "179e70b48c93fb761399f4e3ccf8672f524ea3a06c1ba30b9659a70aabc67a2f"
+    },
+    {
+      "path": "inputs/requests/g4-long-group2.json",
+      "bytes": 67506,
+      "sha256": "dd6a502907fe0bfd3deb61d489d41aedf89750abda39821ccee9385041b01953"
+    },
+    {
+      "path": "inputs/requests/mixed.json",
+      "bytes": 129862,
+      "sha256": "85e2cbd9547eee459e7e90c17ef7829ae249e34f574a3a219e39a3d34e749226"
+    },
+    {
+      "path": "inputs/requests/smoke.json",
+      "bytes": 423,
+      "sha256": "f4239cd07ac597c32ec29d6209fcbb3926b6649dbbb5b3e249c7e4fea3ce6daa"
+    },
+    {
+      "path": "profiling-plan.json",
+      "bytes": 279,
+      "sha256": "bd5ee2b74624941a9e53698d6fe5f6c79d6783e60bcfa6c6070025a425619f3a"
+    },
+    {
+      "path": "target-budget.json",
+      "bytes": 6028,
+      "sha256": "0cf52d0077eb73ad1a496851f40ce36c5830135307c426e02d2c87ebbc2701c7"
+    }
+  ]
+}

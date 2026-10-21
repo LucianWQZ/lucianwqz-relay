@@ -1,0 +1,6 @@
+# Profiling子range覆盖与时钟
+
+RequestProfiler包装真实实例方法，不复制实现：_materialize_draft_window_read_inputs、build_draft_attn_metadatas、manager._update_full_graph_params、runtime.retire_generation。
+安装时四项均有installed/method/owner或missing reason。产物报告expected minimum/actual/missing generations；新plan要求coverage，MISSING/NOT_EXECUTED不能PASS。请求group、descriptor、可取得generation/epoch作为Host关联保存；Hostrange不是device completion。材化调用可能多于replay（context/prefill），保留多余记录不剪掉。
+初始化/capture仍由driver initialization_seconds和capture inventory单列，request profiler在模型capture后安装；没有伪称抓到初始化native trace。首组warmup不计active；正常control无native profiler，normal启用torch_npu.profiler；detailed shapes/stack单列，不参与正常开销对比。prefill/decode或Target/Draft kernel无法唯一关联则UNRESOLVED。
+OFF/ON×short/真正S>0 long的相同16token合同保留；旧完整trace分析复用，不能拿前500X裁决缺flow。新增子range帮助拆分materialize/metadata/update/retire Host成本；嵌套duration不能相加充当E2E，Host monotonic_ns不直接与device时间拼接；未覆盖区间不称全设备idle。

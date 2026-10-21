@@ -1,0 +1,27 @@
+{
+  "publication": "VERIFIED",
+  "verified_at_utc": "2026-10-19T18:40:47.670268+00:00",
+  "self_excluded": "P7X_Graph_Base_A3_Repair3_Publication_Download_Manifest.json",
+  "files": [
+    {
+      "path": "P7X_Graph_Base_A3_Repair3_Publication_And_Server_Readiness_Report.md",
+      "bytes": 11546,
+      "sha256": "c8c0a90c7ef2fa3728644075d5d54ba90fb7b7d136ef2761f0dd906288d8816a"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair3_Server_Handoff.json",
+      "bytes": 4496,
+      "sha256": "808ad311388db8b9da2699a3db66652996b69c233ed05a9a864c5a0e6a49d65b"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair3_Server_Input_Pack.zip",
+      "bytes": 39927,
+      "sha256": "3b1397d660e9254b1f06ce9cfbbf24c95f148ac40fed3320ade8390d0d6fdd27"
+    },
+    {
+      "path": "g1-g5_repair3_publication.zip",
+      "bytes": 62609,
+      "sha256": "b1c5b9e547d86733c88a0b4f7cc05b052203357077b0a0598c84e614997d17ac"
+    }
+  ]
+}

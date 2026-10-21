@@ -1,0 +1,84 @@
+{
+  "files": [
+    {
+      "path": "BIND_DEVICE.py",
+      "bytes": 1018,
+      "sha256": "2040bee811fed63849682a4d064d577e37f7c00f93f3e88e9c2e01f4cb213943"
+    },
+    {
+      "path": "COMMANDS.md",
+      "bytes": 3714,
+      "sha256": "250f5abd4f9535d6d05a91a5fc8f9193d6bdbb9730d416bd50c37087995719ba"
+    },
+    {
+      "path": "CONTINUOUS_NUMERIC.md",
+      "bytes": 1648,
+      "sha256": "3fa25677b6a266b8403fb5677730439b1105d765337ed5f753dfd1a8c9d5d893"
+    },
+    {
+      "path": "DEVICE_ADMISSION.md",
+      "bytes": 2045,
+      "sha256": "6900e22390f59b4d74c324d23c4a8f4103e83d844c03307f0973ae21ddf02410"
+    },
+    {
+      "path": "FAILURE_AND_RESUME.md",
+      "bytes": 1443,
+      "sha256": "6edb07a7f4b2a1acbfe5845e99d9db1b8ec28c1b5d20964a9d7cb856fea8a9dd"
+    },
+    {
+      "path": "LIFECYCLE.md",
+      "bytes": 2758,
+      "sha256": "26d9371913f7ef7ad1edf4ec5918beb6093a4ecac187052d36532e0fc164054e"
+    },
+    {
+      "path": "PREPARE.py",
+      "bytes": 3092,
+      "sha256": "dda619de4ac91b221ab553d354013b2c9c9f157e5a331aa4fb9f55bb5c66e063"
+    },
+    {
+      "path": "PROFILING.md",
+      "bytes": 1608,
+      "sha256": "d40100bf35545ae7311a824b18d7a088f0244f052aa406397704552302816c32"
+    },
+    {
+      "path": "case-plan.preview.json",
+      "bytes": 291765,
+      "sha256": "846366d65b565becf86135e454c1e4bb332b624dc7e30238b8ee7ec0f4fee635"
+    },
+    {
+      "path": "handoff.json",
+      "bytes": 301809,
+      "sha256": "94a59d6f5f0b5d3654a6d4fc853e0ad5cb7974397723455d0b62ef1d41ae41d4"
+    },
+    {
+      "path": "inputs/fixture_manifest.json",
+      "bytes": 1781,
+      "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+    },
+    {
+      "path": "inputs/requests/combined.json",
+      "bytes": 117829,
+      "sha256": "f73dcae6d0b0d4a02e32fc2985d5b4aba086289499945aca01b7b12b0b18502e"
+    },
+    {
+      "path": "inputs/requests/g4-long-group1.json",
+      "bytes": 49906,
+      "sha256": "179e70b48c93fb761399f4e3ccf8672f524ea3a06c1ba30b9659a70aabc67a2f"
+    },
+    {
+      "path": "inputs/requests/g4-long-group2.json",
+      "bytes": 67506,
+      "sha256": "dd6a502907fe0bfd3deb61d489d41aedf89750abda39821ccee9385041b01953"
+    },
+    {
+      "path": "inputs/requests/mixed.json",
+      "bytes": 129862,
+      "sha256": "85e2cbd9547eee459e7e90c17ef7829ae249e34f574a3a219e39a3d34e749226"
+    },
+    {
+      "path": "inputs/requests/smoke.json",
+      "bytes": 423,
+      "sha256": "f4239cd07ac597c32ec29d6209fcbb3926b6649dbbb5b3e249c7e4fea3ce6daa"
+    }
+  ]
+}

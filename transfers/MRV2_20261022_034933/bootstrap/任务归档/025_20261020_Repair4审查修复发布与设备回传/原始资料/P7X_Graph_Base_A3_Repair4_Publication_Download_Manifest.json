@@ -1,0 +1,64 @@
+{
+  "schema_version": "repair4-publication-download-v1",
+  "created_utc": "2026-10-20T03:44:53.912475+00:00",
+  "commit": "08c94a99032c47e2608b976c25065adbbc8dea09",
+  "tree": "7d58b3414a9911662604634198c32e98094b15cf",
+  "parent": "aaa4632612503adb34d90b55c36eedcaf0848979",
+  "review_baseline": "aaa4632612503adb34d90b55c36eedcaf0848979",
+  "publication": "VERIFIED",
+  "clean_room": "VERIFIED",
+  "new_sha_device_verification": "NOT_RUN",
+  "public_graph_gate": "STILL_FROZEN",
+  "verification": {
+    "P7X_Graph_Base_A3_Repair4_Server_Input_Pack.zip": {
+      "integrity": "VERIFIED",
+      "members": 20,
+      "sha256": "315b2441bd82782a29b6cab798bdaa56f15e97469e8e39650fd4586e704bf778",
+      "device_correctness": "NOT_ASSESSED"
+    },
+    "g1-g5_repair4_review_fix_publication.zip": {
+      "integrity": "VERIFIED",
+      "members": 73,
+      "sha256": "1c1b94fc7d4d4d2c97d0894fa4ab62fb61dd77fc5986e90e2fe1eff1cbf0a3d9",
+      "device_correctness": "NOT_ASSESSED"
+    }
+  },
+  "handoff_copies": "BYTE_IDENTICAL",
+  "json_and_relative_refs": "VERIFIED",
+  "historical_archive": "/Users/wenqingzhang/Desktop/Note/MRV2/Repair4_PRE_PUBLICATION_aaa463261",
+  "files": [
+    {
+      "filename": "P7X_Graph_Base_A3_Repair4_Review_Fix_And_Publication_Report.md",
+      "bytes": 17935,
+      "sha256": "2d633e901128b6777a889e4d7dc36186dfbefbb2d9c7d7b08e3e5b41d4f65782",
+      "purpose": "current independent review/publication report"
+    },
+    {
+      "filename": "P7X_Graph_Base_A3_Repair4_Server_Handoff.json",
+      "bytes": 9043,
+      "sha256": "6eba8c2a988bd0a125471ca4d6a6ad0c5324cd97a391fac58d9bfe6e387d66d0",
+      "purpose": "current machine handoff"
+    },
+    {
+      "filename": "P7X_Graph_Base_A3_Repair4_Server_Input_Pack.zip",
+      "bytes": 48439,
+      "sha256": "315b2441bd82782a29b6cab798bdaa56f15e97469e8e39650fd4586e704bf778",
+      "purpose": "server required inputs, code only from exact Git"
+    },
+    {
+      "filename": "g1-g5_repair4_review_fix_publication.zip",
+      "bytes": 157436,
+      "sha256": "1c1b94fc7d4d4d2c97d0894fa4ab62fb61dd77fc5986e90e2fe1eff1cbf0a3d9",
+      "purpose": "review diff/red/green/checks/publication evidence"
+    }
+  ],
+  "review_needs": [
+    "P7X_Graph_Base_A3_Repair4_Review_Fix_And_Publication_Report.md",
+    "g1-g5_repair4_review_fix_publication.zip"
+  ],
+  "server_needs": [
+    "P7X_Graph_Base_A3_Repair4_Server_Handoff.json",
+    "P7X_Graph_Base_A3_Repair4_Server_Input_Pack.zip"
+  ],
+  "self_hash_excluded": true
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "p7x-repair3-handoff-v1",
+  "repo_url": "https://github.com/LucianWQZ/vllm-ascend.git",
+  "branch": "fix/p7x-graph-base-a3-repair3",
+  "base_commit": "8198ab7a6df6a163316f5d4ed2126242bbeb4aa8",
+  "base_tree": "27eee84d06ec60461be7471d7c2ff941ad6d27ea",
+  "base_parent": "1870e0ba8a00eeeae16c27f877e81eb65b711080",
+  "commit": "10cbf4c014fc6cc48a6fea611bb605cecdd54cfd",
+  "tree": "28dddd6d1fc19e67270ee71b7b9e7fcd410ab3c9",
+  "parents": [
+    "8198ab7a6df6a163316f5d4ed2126242bbeb4aa8"
+  ],
+  "commit_range": "8198ab7a6df6a163316f5d4ed2126242bbeb4aa8..10cbf4c014fc6cc48a6fea611bb605cecdd54cfd",
+  "changed_files": [
+    "tests/ut/spec_decode/test_draft_window_capture_observer.py",
+    "tests/ut/spec_decode/test_draft_window_graph_characterization.py",
+    "tests/ut/spec_decode/test_graph_repair2_campaign.py",
+    "tools/p7x_graph_repair2.py",
+    "vllm_ascend/attention/attention_v1.py",
+    "vllm_ascend/worker/v2/spec_decode/draft_window_graph_characterization.py"
+  ],
+  "source_clean": true,
+  "vllm_commit": "84030bbe3d74d99bad477a3d2e37a973ccd8865c",
+  "vllm_tree": "f3e320f8ae2e9a30e57a3c8dccfac94fcae93bee",
+  "vllm_clean": true,
+  "driver_relative_path": "tools/p7x_graph_repair2.py",
+  "driver_sha256": "7e6f2e5984430bc5231511960da2fdc9b073ddc58cfed8bfaed796498b70660d",
+  "fixture_manifest_sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+  "publication_status": "NOT_PUBLISHED",
+  "pr_created": false,
+  "findings_closed_locally": [
+    "R3-01 unsafe observer query",
+    "R3-02 device-free snapshot",
+    "R3-03 actual execution layer identity"
+  ],
+  "findings_still_device_required": [
+    "A3 SIGSEGV regression",
+    "G1 actual task operand",
+    "G2 device ABA",
+    "G3 physical read",
+    "G4 S>0/FULL_TARGET",
+    "G5 update/completion/reuse"
+  ],
+  "host_verification_status": "LOCAL_REPAIR_HOST_VERIFIED",
+  "ready_for_publication_review": true,
+  "ready_for_a3_smoke_after_publication": true,
+  "readiness_condition": "independent review, owner-authorized publication, exact clean GitHub clone and fixture/import checks first",
+  "ready_for_all_g1_g5_closure": false,
+  "new_sha_device_verification": "NOT_RUN",
+  "public_graph_gate": "STILL_FROZEN",
+  "server_plan_relative_path": "g1-g5_repair3_local/Repair3_A3_Rerun_Plan.json",
+  "artifact_index_relative_path": "g1-g5_repair3_local/ARTIFACT_INDEX.json",
+  "full_precommit": "ENVIRONMENT_BLOCKED_actionlint_dependency_network",
+  "host_tests_passed": 270
+}

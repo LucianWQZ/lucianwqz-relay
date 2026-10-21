@@ -1,0 +1,53 @@
+{
+  "schema_version": "repair5-download-v1",
+  "final": {
+    "branch": "fix/p7x-graph-base-a3-repair5",
+    "sha": "3bdc413aa9826e4c199f5d96125e71db2c343420",
+    "tree": "e72a3ef82fbd1cfd70ea20010c2eeb0b08c50a62",
+    "parent": "a8210d4f725cdce7cf7ee9840a71d8feca3ce48d",
+    "status": ""
+  },
+  "files": [
+    {
+      "path": "P7X_Graph_Base_A3_Repair5_Implementation_And_Readiness_Report.md",
+      "bytes": 30634,
+      "sha256": "7332154f84080c9bc96598ed41d819744d2c2aa304734c3309bd3197daf7beae",
+      "purpose": "independent review/evidence"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair5_Server_Handoff.json",
+      "bytes": 100265,
+      "sha256": "cdce8f6ada7d8c6849520acee53b77c978905f5e7a6e0f6e744947b65a67b8d5",
+      "purpose": "independent review/evidence"
+    },
+    {
+      "path": "g1-g5_repair5_local_review.zip",
+      "bytes": 418135,
+      "sha256": "91ad3e56dde3459b4b3742b83a36f2792ae90c8a971cda75b452a66215101ed1",
+      "purpose": "independent review/evidence"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair5_Server_Input_Pack.zip",
+      "bytes": 27305,
+      "sha256": "f589dd6411993a64f0732730626b963182bf4fe36bd3fb5ace95ed1dfb73c6d1",
+      "purpose": "server execution input PRE_PUBLICATION"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair5_Package_Verification.json",
+      "bytes": 881,
+      "sha256": "4873683ef37b3e4a5be23d2277d3d77f310a2d62da6fa365131e7841d6649671",
+      "purpose": "independent review/evidence"
+    }
+  ],
+  "minimum_online_review": [
+    "P7X_Graph_Base_A3_Repair5_Implementation_And_Readiness_Report.md",
+    "g1-g5_repair5_local_review.zip"
+  ],
+  "server": [
+    "P7X_Graph_Base_A3_Repair5_Server_Handoff.json",
+    "P7X_Graph_Base_A3_Repair5_Server_Input_Pack.zip"
+  ],
+  "excludes_self_hash": true,
+  "publication": "NOT_PUBLISHED",
+  "device": "NOT_RUN"
+}

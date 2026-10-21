@@ -1,0 +1,38 @@
+[
+  {
+    "path": "/Users/wenqingzhang/Desktop/Note/MRV2/P7X_Graph_Base_A3_Repair6_Implementation_And_Readiness_Report.md",
+    "archived": "/Users/wenqingzhang/Desktop/Note/MRV2/g1-g5_repair6_review_fix_local/archive_pre_review/P7X_Graph_Base_A3_Repair6_Implementation_And_Readiness_Report.md",
+    "bytes": 28558,
+    "sha256": "02f8654ca87f4543a0e6289896ffac049797ec5746f32984c8107f76a6dc8d74"
+  },
+  {
+    "path": "/Users/wenqingzhang/Desktop/Note/MRV2/P7X_Graph_Base_A3_Repair6_Server_Handoff.json",
+    "archived": "/Users/wenqingzhang/Desktop/Note/MRV2/g1-g5_repair6_review_fix_local/archive_pre_review/P7X_Graph_Base_A3_Repair6_Server_Handoff.json",
+    "bytes": 132742,
+    "sha256": "23848a9e2d0404e7ec21b3d17a719907e9089aa45b9218d79124b9fa6754389c"
+  },
+  {
+    "path": "/Users/wenqingzhang/Desktop/Note/MRV2/g1-g5_repair6_local_review.zip",
+    "archived": "/Users/wenqingzhang/Desktop/Note/MRV2/g1-g5_repair6_review_fix_local/archive_pre_review/g1-g5_repair6_local_review.zip",
+    "bytes": 502068,
+    "sha256": "b2893c0a6876f824c6764bc3800a39406211c442c33e2688c4169e968c7ce273"
+  },
+  {
+    "path": "/Users/wenqingzhang/Desktop/Note/MRV2/P7X_Graph_Base_A3_Repair6_Server_Input_Pack.zip",
+    "archived": "/Users/wenqingzhang/Desktop/Note/MRV2/g1-g5_repair6_review_fix_local/archive_pre_review/P7X_Graph_Base_A3_Repair6_Server_Input_Pack.zip",
+    "bytes": 43526,
+    "sha256": "d1d38c1a9baf0fb91fb892842463d5e5200f3515a12607e7448462104e79a532"
+  },
+  {
+    "path": "/Users/wenqingzhang/Desktop/Note/MRV2/P7X_Graph_Base_A3_Repair6_Download_Manifest.json",
+    "archived": "/Users/wenqingzhang/Desktop/Note/MRV2/g1-g5_repair6_review_fix_local/archive_pre_review/P7X_Graph_Base_A3_Repair6_Download_Manifest.json",
+    "bytes": 1581,
+    "sha256": "9bbbb3185166a1c359bcd6b9c522b8f652c2534cd391dd94c1d7de82e6b35952"
+  },
+  {
+    "path": "/Users/wenqingzhang/Desktop/Note/MRV2/P7X_Graph_Base_A3_Repair6_Package_Verification.json",
+    "archived": "/Users/wenqingzhang/Desktop/Note/MRV2/g1-g5_repair6_review_fix_local/archive_pre_review/P7X_Graph_Base_A3_Repair6_Package_Verification.json",
+    "bytes": 4991,
+    "sha256": "3cb8929dc56c32b457fc549df9763c02d4164888f29018cef22e98224b4a2bcc"
+  }
+]

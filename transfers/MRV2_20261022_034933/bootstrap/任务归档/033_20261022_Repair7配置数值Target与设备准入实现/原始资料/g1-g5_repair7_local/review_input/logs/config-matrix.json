@@ -1,0 +1,13 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "tools/p7x_graph_repair7.py",
+    "config-check",
+    "--plan",
+    "/Users/wenqingzhang/Desktop/Note/MRV2/g1-g5_repair7_local/preview/case-plan.json",
+    "--output",
+    "/Users/wenqingzhang/Desktop/Note/MRV2/g1-g5_repair7_local/Config_Contract_Matrix.json"
+  ],
+  "exit": 1,
+  "stdout_file": "config-matrix.log"
+}

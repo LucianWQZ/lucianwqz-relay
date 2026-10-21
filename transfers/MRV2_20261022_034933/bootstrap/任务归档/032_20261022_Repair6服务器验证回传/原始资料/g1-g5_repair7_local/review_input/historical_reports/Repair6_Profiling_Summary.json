@@ -1,0 +1,54 @@
+{
+  "schema": "p7x-repair6-profiling-summary-v1",
+  "run_id": "20261021T071630Z_fd0716c5",
+  "source_sha": "fd0716c59562f64262672de12e4ae26259908d0b",
+  "status": "BLOCKED_DEVICE_MAPPING",
+  "new_profile_trace_cases": [],
+  "planned_profiling_cases": [
+    "PROFILE_OFF_short_control",
+    "PROFILE_OFF_short_normal",
+    "PROFILE_OFF_long_control",
+    "PROFILE_OFF_long_normal",
+    "PROFILE_ON_short_control",
+    "PROFILE_ON_short_normal",
+    "PROFILE_ON_long_control",
+    "PROFILE_ON_long_normal",
+    "PROFILE_ON_long_detailed",
+    "PROFILE_LIFE"
+  ],
+  "blocked_reason": "The container's visible device 0 maps to host NPU4/Chip0/Phy-ID8; host Phy-ID 0-7 are not selectable from this container. All new NPU starts were stopped by user resource correction.",
+  "old_device_segment": {
+    "completed_cases": [
+      "P0", "A0", "A1", "B0", "PREFIX_OFF", "PREFIX_ON",
+      "G4F_OFF", "G4F_ON", "G4F_COMPARE",
+      "TARGET4_OFF", "TARGET4_ON", "TARGET4_COMPARE",
+      "NORMAL_ORDER", "B1"
+    ],
+    "profiling_cases": [],
+    "not_new_sha_profiling": true
+  },
+  "historical_reference_only": {
+    "repair5_run_id": "20261020T144145Z_d0a3fc3d",
+    "repair5_root": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d",
+    "repair5_summary": "artifacts/reports/Repair5_Profiling_Summary.json",
+    "repair5_report": "artifacts/reports/Repair5_Profiling_Report.md",
+    "note": "Old traces may be used as historical analysis reference only; they are not current-SHA or allowed-device results."
+  },
+  "required_answers": {
+    "A_replay_inventory": "NOT_COLLECTED_NEW; historical Repair5 has short 21 / long 47 Draft replay counts but is not current-SHA evidence.",
+    "B_four_host_subranges": "NOT_COLLECTED_NEW; expected names are Draft_materialize, Draft_metadata_bind, Draft_UPDATE_CALL, Draft_retire_host.",
+    "C_costs": "NOT_COLLECTED_NEW",
+    "D_device_task_correlation": "NOT_COLLECTED_NEW",
+    "E_target_draft_fia": "NOT_COLLECTED_NEW",
+    "F_memcpy_wait_sync": "NOT_COLLECTED_NEW",
+    "G_stream_overlap": "NOT_COLLECTED_NEW",
+    "H_idle_gaps": "NOT_COLLECTED_NEW",
+    "I_off_on_difference": "NOT_COLLECTED_NEW; no cross-device pairing performed.",
+    "J_remaining_gaps": "task operand, physical read-set, UPDATE effective generation and completion owner remain OPEN; no new trace can establish them yet."
+  },
+  "limits": [
+    "No new profiling was run after the device reassignment correction.",
+    "Repair5 traces are historical and must not be reported as Repair6 device PASS.",
+    "No release performance claim is made."
+  ]
+}

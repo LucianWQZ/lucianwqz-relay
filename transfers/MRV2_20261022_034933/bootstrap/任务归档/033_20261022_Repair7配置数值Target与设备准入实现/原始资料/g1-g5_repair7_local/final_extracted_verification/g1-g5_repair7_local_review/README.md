@@ -1,0 +1,1 @@
+本包为本地Repair7审查，非设备PASS。source为最终提交快照；完整raw不随包，成员hash在evidence。历史失败未覆盖。

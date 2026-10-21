@@ -1,0 +1,92 @@
+[
+  {
+    "package": {
+      "filename": "P7X_A3_Repair2_20261019T065743Z_8198ab7a_review.zip",
+      "bytes": 577782,
+      "sha256": "726bbf44393da3dd316c9252728e7a59c13e7e1c29b8d21a9b0d3d4d9649d959",
+      "entries": 163,
+      "required": true,
+      "server_path": "/mnt/wenqing/mrv2_graph_repair2_verify/20261019T065743Z_8198ab7a/return/P7X_A3_Repair2_20261019T065743Z_8198ab7a_review.zip",
+      "content_scope": "reports, inputs, manifests, logs, analysis (without two 47.9MB head-compare inputs), traces, commands, cases, device campaign/partial/target-boundary JSON, campaign_plan.json",
+      "excluded": [
+        "src/",
+        "runtime/",
+        "model weights",
+        "target-logits-*.pt",
+        "analysis/compare_target_head_left.json",
+        "analysis/compare_target_head_right.json",
+        "return/"
+      ]
+    },
+    "checked": 161,
+    "missing": [
+      "G4-A0/target-logits-00000.pt",
+      "G4-A0/target-logits-00002.pt",
+      "G4-A0/target-logits-00004.pt",
+      "G4-A0/target-logits-00006.pt",
+      "G4-A0/target-logits-00008.pt",
+      "G4-A0/target-logits-00010.pt",
+      "G4-A0/target-logits-00012.pt",
+      "G4-A0/target-logits-00014.pt",
+      "G4-A0/target-logits-00016.pt",
+      "G4-A0/target-logits-00018.pt",
+      "G4-A0/target-logits-00020.pt",
+      "G4-A0/target-logits-00022.pt",
+      "G4-A0/target-logits-00024.pt",
+      "G4-A0/target-logits-00026.pt",
+      "G4-A0/target-logits-00028.pt",
+      "G4-A0/target-logits-00030.pt",
+      "G4-A0/target-logits-00032.pt",
+      "G4-A0/target-logits-00034.pt",
+      "G4-A0/target-logits-00036.pt",
+      "G4-A0/target-logits-00038.pt",
+      "G4-A0/target-logits-00040.pt",
+      "G4-B/target-logits-00000.pt",
+      "G4-B/target-logits-00002.pt",
+      "G4-B/target-logits-00004.pt",
+      "G4-B/target-logits-00006.pt",
+      "G4-B/target-logits-00008.pt",
+      "G4-B/target-logits-00010.pt",
+      "G4-B/target-logits-00012.pt",
+      "G4-B/target-logits-00014.pt",
+      "G4-B/target-logits-00016.pt",
+      "G4-B/target-logits-00018.pt",
+      "G4-B/target-logits-00020.pt",
+      "G4-B/target-logits-00022.pt",
+      "G4-B/target-logits-00024.pt",
+      "G4-B/target-logits-00026.pt",
+      "G4-B/target-logits-00028.pt",
+      "G4-B/target-logits-00030.pt",
+      "G4-B/target-logits-00032.pt",
+      "G4-B/target-logits-00034.pt",
+      "G4-B/target-logits-00036.pt",
+      "G4-B/target-logits-00038.pt",
+      "G4-B/target-logits-00040.pt",
+      "analysis/compare_target_head_left.json",
+      "analysis/compare_target_head_right.json"
+    ],
+    "json_parsed": 51,
+    "extracted": "/private/tmp/p7x-repair3.BV5NUG/review"
+  },
+  {
+    "package": {
+      "filename": "P7X_A3_Repair2_20261019T065743Z_8198ab7a_raw.zip",
+      "bytes": 179215014,
+      "sha256": "ffe1b1581707509c13aaa100d1b0157aad96ece5423ae7f893025100be995f08",
+      "entries": 207,
+      "required": false,
+      "server_path": "/mnt/wenqing/mrv2_graph_repair2_verify/20261019T065743Z_8198ab7a/return/P7X_A3_Repair2_20261019T065743Z_8198ab7a_raw.zip",
+      "content_scope": "review scope plus all target-logits-*.pt and both head-compare inputs",
+      "excluded": [
+        "src/",
+        "runtime/",
+        "model weights",
+        "return/"
+      ]
+    },
+    "checked": 205,
+    "missing": [],
+    "json_parsed": 53,
+    "extracted": "/private/tmp/p7x-repair3.BV5NUG/raw"
+  }
+]

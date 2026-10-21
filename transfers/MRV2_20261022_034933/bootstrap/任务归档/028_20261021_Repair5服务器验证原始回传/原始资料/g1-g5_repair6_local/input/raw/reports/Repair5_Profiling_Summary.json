@@ -1,0 +1,2977 @@
+{
+  "answers": {
+    "A_active_graph_replay": "YES for all 9 cases; active call counts are recorded per case. Short: 21 Draft replays; long: 47 Draft replays.",
+    "B_target_draft_distinguishability": "Host labels distinguish Draft and Target ranges; native task/flow correlation to a specific generation is UNRESOLVED without calibrated IDs.",
+    "C_replay_update_association": "Manager range includes replay+UPDATE; separate UPDATE Host subrange is UNRESOLVED.",
+    "D_stream_wait_overlap": "stream_id/task_id fields exist in task_time.csv; same/cross-stream overlap is not causally resolved.",
+    "E_copy_bytes": "acl_memcpy_host_to_device / acl_memcpy_device_to_host events exist; byte counts are UNAVAILABLE (no size field). D2D bytes/time not established.",
+    "F_idle_gap_repeat_prepare_sync": "Event::synchronize and flow events exist; device idle/gap and repeated preparation are UNRESOLVED; no calibrated host/device join.",
+    "G_off_on_difference": "Control/normal pairs report diagnostic host submission deltas only; OFF/ON are different execution paths and total duration is not a speedup claim.",
+    "H_profiling_life_overhead": "PROFILE_LIFE is DIAGNOSTIC_SERIALIZED; Draft_REPLAY_PLUS_UPDATE host mean is about 1062 ms vs ~1.5-2.9 ms normal, showing serialization overhead; not a release comparison.",
+    "I_remaining_gaps": "No task-operand addresses, physical read-set, UPDATE effective-generation or completion owner fields; these remain OPEN."
+  },
+  "cases": {
+    "PROFILE_LIFE": {
+      "profile": {
+        "active_calls": 87,
+        "active_descriptors": {
+          "()": 54,
+          "(1, 7)": 7,
+          "(1, 8)": 6,
+          "(2, 14)": 7,
+          "(2, 16)": 6,
+          "(4, 28)": 7
+        },
+        "active_labels": {
+          "Draft_REPLAY_PLUS_UPDATE": 21,
+          "Draft_REPLAY_SUBMIT": 21,
+          "Draft_propose": 21,
+          "Target_REPLAY_PLUS_UPDATE": 12,
+          "Target_REPLAY_SUBMIT": 12
+        },
+        "active_source_gt0": 0,
+        "calls_total": 120,
+        "clock_domain": "HOST_MONOTONIC_NS_ONLY",
+        "completion": "NOT_PROVEN",
+        "groups": [
+          {
+            "active": false,
+            "duration_ms": 2531.948,
+            "label": "warmup/smoke-1"
+          },
+          {
+            "active": true,
+            "duration_ms": 5650.143,
+            "label": "smoke-1"
+          },
+          {
+            "active": true,
+            "duration_ms": 9247.324,
+            "label": "smoke-2"
+          },
+          {
+            "active": true,
+            "duration_ms": 14194.654,
+            "label": "smoke-4"
+          }
+        ],
+        "host_statistics": {
+          "Draft_REPLAY_PLUS_UPDATE": {
+            "mean_ms": 1062.4966766666666,
+            "p50_ms": 1012.88187,
+            "p95_ms": 1723.37957,
+            "samples": 21,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 22312.43021
+          },
+          "Draft_REPLAY_SUBMIT": {
+            "mean_ms": 0.4193857142857142,
+            "p50_ms": 0.27982,
+            "p95_ms": 1.68474,
+            "samples": 21,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 8.807099999999998
+          },
+          "Draft_propose": {
+            "mean_ms": 1360.02313,
+            "p50_ms": 1299.1749,
+            "p95_ms": 2203.04276,
+            "samples": 21,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 28560.48573
+          },
+          "Target_REPLAY_PLUS_UPDATE": {
+            "mean_ms": 5.127798333333334,
+            "p50_ms": 4.5856,
+            "p95_ms": 10.07926,
+            "samples": 12,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 61.53358
+          },
+          "Target_REPLAY_SUBMIT": {
+            "mean_ms": 0.5297808333333333,
+            "p50_ms": 0.0658,
+            "p95_ms": 5.10759,
+            "samples": 12,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 6.3573699999999995
+          }
+        },
+        "initialization_capture": "EXCLUDED",
+        "physical_read": "NOT_PROVEN",
+        "profiler_enabled": true,
+        "scope": "DIAGNOSTIC_SERIALIZED",
+        "source_start_columns_active": {
+          "0": 49
+        },
+        "status": "GRAPH_REPLAY_OBSERVED",
+        "update_host_range": "UNRESOLVED_SEPARATE; manager range includes replay plus UPDATE",
+        "warmup": "first request group once before begin_active"
+      },
+      "raw_exports": [
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/ASCEND_PROFILER_OUTPUT/analyse.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/ASCEND_PROFILER_OUTPUT/analysis.db",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/ASCEND_PROFILER_OUTPUT/ascend_pytorch_profiler_0.db",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/ASCEND_PROFILER_OUTPUT/operator_details.csv",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/ASCEND_PROFILER_OUTPUT/trace_view.json",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/FRAMEWORK/torch.op_mark",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/FRAMEWORK/torch.op_range",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/device_8/data/all_file.complete",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/device_8/data/stars_soc.data.8.slice_0",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/device_8/data/stars_soc.data.8.slice_0.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/device_8/data/stars_soc.data.8.slice_1",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/device_8/data/stars_soc.data.8.slice_1.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/device_8/dev_start.log.8",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/device_8/dev_start.log.8.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/device_8/end_info.8",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/device_8/end_info.8.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/device_8/host_start.log.8",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/device_8/host_start.log.8.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/device_8/info.json.8",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/device_8/info.json.8.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/device_8/sample.json",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/device_8/sample.json.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/device_8/start_info.8",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/device_8/start_info.8.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/aging.additional.context_id_info.slice_0",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/aging.additional.context_id_info.slice_0.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/aging.api_event.data.slice_0",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/aging.api_event.data.slice_0.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/aging.compact.task_track.slice_0",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/aging.compact.task_track.slice_0.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/all_file.complete",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.additional.capture_op_info.slice_0",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.additional.capture_op_info.slice_0.complete",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.additional.capture_op_info.slice_0.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.additional.hash_dic.slice_0",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.additional.hash_dic.slice_0.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.additional.hash_dic.slice_1",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.additional.hash_dic.slice_1.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.additional.type_info_dic.slice_0",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.additional.type_info_dic.slice_0.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.api_event.data.slice_0",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.api_event.data.slice_0.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.compact.capture_stream_info.slice_0",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.compact.capture_stream_info.slice_0.complete",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.compact.capture_stream_info.slice_0.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.compact.expand_stream_spec.slice_0",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.compact.expand_stream_spec.slice_0.complete",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.compact.expand_stream_spec.slice_0.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.compact.stream_sq_info.slice_0",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.compact.stream_sq_info.slice_0.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.compact.task_track.slice_0",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.compact.task_track.slice_0.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.variable.capture_op_info.slice_0",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/data/unaging.variable.capture_op_info.slice_0.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/end_info",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/end_info.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/host_start.log",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/host_start.log.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/info.json",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/info.json.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/sample.json",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/sample.json.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/start_info",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/PROF_000001_20261021005738437_00614038LNJDQQDN/host/start_info.done",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/logs/profiler_20261021005808_615577_ProfilingParser.log",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/logs/profiler_20261021005808_615586_CANNExportParser.log",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/logs/profiler_20261021005808_615605_TracePreParser.log",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/logs/profiler_20261021005840_616161_TraceViewParser.log",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/logs/profiler_20261021005840_616167_CANNAnalyzeParser.log",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/logs/profiler_20261021005841_616197_TraceStepTimeParser.log",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/logs/profiler_20261021005841_616199_OperatorViewParser.log",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/logs/profiler_20261021005843_616236_MemoryViewParser.log",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/logs/profiler_20261021005843_616238_KernelViewParser.log",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/logs/profiler_20261021005843_616240_IntegrateParser.log",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/logs/profiler_20261021005855_616338_CommunicationParser.log",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/profiler_info_0.json",
+        "trace/node-39-101_614038_20261021005738425_ascend_pt/profiler_metadata.json"
+      ],
+      "trace": {
+        "kernel_details": {
+          "fields": [
+            "Device_id",
+            "Name",
+            "Type",
+            "Accelerator Core",
+            "Start Time(us)",
+            "Duration(us)",
+            "Wait Time(us)",
+            "Block Num"
+          ],
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_LIFE/trace/node-39-101_614038_20261021005738425_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+          "rows": 10956,
+          "types": {
+            "N/A": 10956
+          },
+          "wait_us": {
+            "max": 650258.77,
+            "mean": 2618.1449664110987,
+            "p50": 0.1,
+            "samples": 10956,
+            "sum": 28684396.25200002
+          }
+        },
+        "operator_details": {
+          "fields": [
+            "Name",
+            "Input Shapes",
+            "Call Stack",
+            "Host Self Duration(us)",
+            "Host Total Duration(us)",
+            "Device Self Duration(us)",
+            "Device Total Duration(us)",
+            "Device Self Duration With AICore(us)",
+            "Device Total Duration With AICore(us)"
+          ],
+          "host_self_us": {
+            "mean": 464.46127163292675,
+            "samples": 62636,
+            "sum": 29091996.21000008
+          },
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_LIFE/trace/node-39-101_614038_20261021005738425_ascend_pt/ASCEND_PROFILER_OUTPUT/operator_details.csv",
+          "rows": 62636
+        },
+        "step_trace_time": {
+          "fields": [
+            "Device_id",
+            "Step",
+            "Computing",
+            "Communication(Not Overlapped)",
+            "Overlapped",
+            "Communication",
+            "Free",
+            "Stage",
+            "Bubble",
+            "Communication(Not Overlapped and Exclude Receive)",
+            "Preparing"
+          ],
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_LIFE/trace/node-39-101_614038_20261021005738425_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv",
+          "rows": 1
+        },
+        "task_time": {
+          "fields": [
+            "Device_id",
+            "kernel_name",
+            "kernel_type",
+            "stream_id",
+            "task_id",
+            "task_time(us)",
+            "task_start(us)",
+            "task_stop(us)"
+          ],
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_LIFE/trace/node-39-101_614038_20261021005738425_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv",
+          "rows": 20311,
+          "streams": {
+            "10": 1176,
+            "11": 1176,
+            "12": 4842,
+            "13": 4842,
+            "42": 63,
+            "43": 1128,
+            "45": 126,
+            "47": 5825,
+            "48": 6,
+            "9": 1127
+          }
+        },
+        "trace_view": {
+          "bytes_fields": "UNAVAILABLE_NO_SIZE_IN_EVENTS",
+          "categories": {
+            "HostToDevice": 19764,
+            "None": 42280,
+            "async_npu": 13078,
+            "async_task_queue": 14852,
+            "cpu_op": 62636,
+            "dequeue": 7426,
+            "enqueue": 7426
+          },
+          "events": 167462,
+          "flow_event_count": 47694,
+          "flow_names": {
+            "HostToDevice230334801117184": 6686,
+            "HostToDevice42734924595200": 2,
+            "HostToDevice42782169235456": 2,
+            "HostToDevice42807939039232": 2,
+            "HostToDevice42838003810304": 2,
+            "HostToDevice42872363548672": 2,
+            "HostToDevice42893838385152": 2,
+            "HostToDevice42919608188928": 2,
+            "HostToDevice43009802502144": 2,
+            "HostToDevice43035572305920": 2,
+            "HostToDevice43057047142400": 2,
+            "HostToDevice43069932044288": 2,
+            "HostToDevice43087111913472": 2,
+            "HostToDevice43108586749952": 2,
+            "HostToDevice43142946488320": 2,
+            "HostToDevice43168716292096": 2,
+            "HostToDevice43211665965056": 2,
+            "HostToDevice43224550866944": 2,
+            "enqueue_to_dequeue": 14852,
+            "torch_to_npu": 13078
+          },
+          "host_device_clock_join": "UNAVAILABLE_NO_CALIBRATED_CLOCK",
+          "memcpy_or_copy_names": {
+            "Dequeue@acl_memcpy_device_to_host": 63,
+            "Dequeue@acl_memcpy_host_to_device": 513,
+            "Dequeue@aclnnInplaceCopy": 1021,
+            "Enqueue@acl_memcpy_device_to_host": 63,
+            "Enqueue@acl_memcpy_host_to_device": 513,
+            "Enqueue@aclnnInplaceCopy": 1021,
+            "MEMCPY_ASYNC": 1859,
+            "acl_memcpy_device_to_host": 63,
+            "acl_memcpy_host_to_device": 513,
+            "aclnnInplaceCopy": 1021,
+            "aclnnInplaceCopy_CastAiCore_Cast": 42,
+            "aclnnInplaceCopy_SliceAiCore_Slice": 42,
+            "aclnnInplaceCopy_TransposeAiCore_Transpose": 21,
+            "aclnnInplaceCopy_ViewCopyAiCore_ViewCopy": 98,
+            "aten::_to_copy": 550,
+            "aten::copy_": 2497
+          },
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_LIFE/trace/node-39-101_614038_20261021005738425_ascend_pt/ASCEND_PROFILER_OUTPUT/trace_view.json",
+          "phases": {
+            "C": 4,
+            "M": 53,
+            "X": 119711,
+            "f": 27190,
+            "s": 20504
+          },
+          "status": "PARSED",
+          "sync_named_events": 1943
+        }
+      },
+      "trace_analysis": {
+        "device_idle": "UNRESOLVED_WITHOUT_CALIBRATED_TIMELINE",
+        "files": [
+          {
+            "duration_units": "us",
+            "fields": [
+              "Device_id",
+              "Name",
+              "Type",
+              "Accelerator Core",
+              "Start Time(us)",
+              "Duration(us)",
+              "Wait Time(us)",
+              "Block Num"
+            ],
+            "nonempty": {
+              "Accelerator Core": 10956,
+              "Block Num": 10956,
+              "Device_id": 10956,
+              "Duration(us)": 10956,
+              "Name": 10956,
+              "Start Time(us)": 10956,
+              "Type": 10956,
+              "Wait Time(us)": 10956
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_LIFE/trace/node-39-101_614038_20261021005738425_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+            "rows": 10956
+          },
+          {
+            "duration_units": "us",
+            "fields": [
+              "Name",
+              "Input Shapes",
+              "Call Stack",
+              "Host Self Duration(us)",
+              "Host Total Duration(us)",
+              "Device Self Duration(us)",
+              "Device Total Duration(us)",
+              "Device Self Duration With AICore(us)",
+              "Device Total Duration With AICore(us)"
+            ],
+            "nonempty": {
+              "Call Stack": 0,
+              "Device Self Duration With AICore(us)": 62636,
+              "Device Self Duration(us)": 62636,
+              "Device Total Duration With AICore(us)": 62636,
+              "Device Total Duration(us)": 62636,
+              "Host Self Duration(us)": 62636,
+              "Host Total Duration(us)": 62636,
+              "Input Shapes": 0,
+              "Name": 62636
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_LIFE/trace/node-39-101_614038_20261021005738425_ascend_pt/ASCEND_PROFILER_OUTPUT/operator_details.csv",
+            "rows": 62636
+          },
+          {
+            "duration_units": "us",
+            "fields": [
+              "Device_id",
+              "Step",
+              "Computing",
+              "Communication(Not Overlapped)",
+              "Overlapped",
+              "Communication",
+              "Free",
+              "Stage",
+              "Bubble",
+              "Communication(Not Overlapped and Exclude Receive)",
+              "Preparing"
+            ],
+            "nonempty": {
+              "Bubble": 1,
+              "Communication": 1,
+              "Communication(Not Overlapped and Exclude Receive)": 1,
+              "Communication(Not Overlapped)": 1,
+              "Computing": 1,
+              "Device_id": 1,
+              "Free": 1,
+              "Overlapped": 1,
+              "Preparing": 1,
+              "Stage": 1,
+              "Step": 0
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_LIFE/trace/node-39-101_614038_20261021005738425_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv",
+            "rows": 1
+          },
+          {
+            "duration_units": "us",
+            "fields": [
+              "Device_id",
+              "kernel_name",
+              "kernel_type",
+              "stream_id",
+              "task_id",
+              "task_time(us)",
+              "task_start(us)",
+              "task_stop(us)"
+            ],
+            "nonempty": {
+              "Device_id": 20311,
+              "kernel_name": 20311,
+              "kernel_type": 20311,
+              "stream_id": 20311,
+              "task_id": 20311,
+              "task_start(us)": 20311,
+              "task_stop(us)": 20311,
+              "task_time(us)": 20311
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_LIFE/trace/node-39-101_614038_20261021005738425_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv",
+            "rows": 20311
+          }
+        ],
+        "stage": "request-only profiling; prefill/decode attribution requires actual ranges",
+        "status": "FIELDS_ANALYZED",
+        "stream_context_flow": "FIELDS_INVENTORIED_NOT_INFERRED",
+        "target_draft_kernel_attribution": "UNRESOLVED_UNLESS_EXPLICIT_FLOW_ASSOCIATION",
+        "totals": {
+          "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_LIFE/trace/node-39-101_614038_20261021005738425_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv:UNRESOLVED_KERNEL_OR_API": {
+            "duration_us_sum": 407350.2780000049,
+            "samples": 10935
+          },
+          "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_LIFE/trace/node-39-101_614038_20261021005738425_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv:update": {
+            "duration_us_sum": 66.28299999999999,
+            "samples": 21
+          }
+        },
+        "warning": "overlapping duration sums are not end-to-end elapsed; host/device clocks not joined"
+      }
+    },
+    "PROFILE_OFF_long_control": {
+      "profile": {
+        "active_calls": 201,
+        "active_descriptors": {
+          "()": 124,
+          "(1, 7)": 33,
+          "(1, 8)": 24,
+          "(2, 14)": 7,
+          "(2, 16)": 6,
+          "(4, 28)": 7
+        },
+        "active_labels": {
+          "Draft_REPLAY_PLUS_UPDATE": 47,
+          "Draft_REPLAY_SUBMIT": 47,
+          "Draft_propose": 47,
+          "Target_REPLAY_PLUS_UPDATE": 30,
+          "Target_REPLAY_SUBMIT": 30
+        },
+        "active_source_gt0": 0,
+        "calls_total": 234,
+        "clock_domain": "HOST_MONOTONIC_NS_ONLY",
+        "completion": "NOT_PROVEN",
+        "groups": [
+          {
+            "active": false,
+            "duration_ms": 265.507,
+            "label": "warmup/smoke-1"
+          },
+          {
+            "active": true,
+            "duration_ms": 155.873,
+            "label": "smoke-1"
+          },
+          {
+            "active": true,
+            "duration_ms": 171.258,
+            "label": "smoke-2"
+          },
+          {
+            "active": true,
+            "duration_ms": 261.095,
+            "label": "smoke-4"
+          },
+          {
+            "active": true,
+            "duration_ms": 77.731,
+            "label": "prompt-length-32-attempt-3"
+          },
+          {
+            "active": true,
+            "duration_ms": 119.691,
+            "label": "prompt-length-1024-attempt-4"
+          },
+          {
+            "active": true,
+            "duration_ms": 121.433,
+            "label": "prompt-length-1025-attempt-5"
+          },
+          {
+            "active": true,
+            "duration_ms": 125.107,
+            "label": "prompt-length-1151-attempt-6"
+          },
+          {
+            "active": true,
+            "duration_ms": 125.158,
+            "label": "prompt-length-1152-attempt-7"
+          },
+          {
+            "active": true,
+            "duration_ms": 128.408,
+            "label": "prompt-length-1153-attempt-8"
+          },
+          {
+            "active": true,
+            "duration_ms": 223.218,
+            "label": "prompt-length-2049-attempt-9"
+          },
+          {
+            "active": true,
+            "duration_ms": 74.656,
+            "label": "prompt-length-32-attempt-10"
+          }
+        ],
+        "host_statistics": {
+          "Draft_REPLAY_PLUS_UPDATE": {
+            "mean_ms": 1.2280729787234044,
+            "p50_ms": 1.16081,
+            "p95_ms": 1.35537,
+            "samples": 47,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 57.71943
+          },
+          "Draft_REPLAY_SUBMIT": {
+            "mean_ms": 0.12398106382978719,
+            "p50_ms": 0.07444,
+            "p95_ms": 0.0806,
+            "samples": 47,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 5.827109999999998
+          },
+          "Draft_propose": {
+            "mean_ms": 16.190779574468085,
+            "p50_ms": 12.86299,
+            "p95_ms": 49.77934,
+            "samples": 47,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 760.96664
+          },
+          "Target_REPLAY_PLUS_UPDATE": {
+            "mean_ms": 3.7908456666666672,
+            "p50_ms": 3.60996,
+            "p95_ms": 4.30499,
+            "samples": 30,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 113.72537000000001
+          },
+          "Target_REPLAY_SUBMIT": {
+            "mean_ms": 0.21248599999999998,
+            "p50_ms": 0.06667,
+            "p95_ms": 0.06891,
+            "samples": 30,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 6.374579999999999
+          }
+        },
+        "initialization_capture": "EXCLUDED",
+        "physical_read": "NOT_PROVEN",
+        "profiler_enabled": false,
+        "scope": "NORMAL_OBSERVER_OFF",
+        "source_start_columns_active": {},
+        "status": "GRAPH_REPLAY_OBSERVED",
+        "update_host_range": "UNRESOLVED_SEPARATE; manager range includes replay plus UPDATE",
+        "warmup": "first request group once before begin_active"
+      },
+      "raw_exports": [],
+      "trace": {},
+      "trace_analysis": null
+    },
+    "PROFILE_OFF_long_normal": {
+      "profile": {
+        "active_calls": 201,
+        "active_descriptors": {
+          "()": 124,
+          "(1, 7)": 33,
+          "(1, 8)": 24,
+          "(2, 14)": 7,
+          "(2, 16)": 6,
+          "(4, 28)": 7
+        },
+        "active_labels": {
+          "Draft_REPLAY_PLUS_UPDATE": 47,
+          "Draft_REPLAY_SUBMIT": 47,
+          "Draft_propose": 47,
+          "Target_REPLAY_PLUS_UPDATE": 30,
+          "Target_REPLAY_SUBMIT": 30
+        },
+        "active_source_gt0": 0,
+        "calls_total": 234,
+        "clock_domain": "HOST_MONOTONIC_NS_ONLY",
+        "completion": "NOT_PROVEN",
+        "groups": [
+          {
+            "active": false,
+            "duration_ms": 270.33,
+            "label": "warmup/smoke-1"
+          },
+          {
+            "active": true,
+            "duration_ms": 173.742,
+            "label": "smoke-1"
+          },
+          {
+            "active": true,
+            "duration_ms": 190.433,
+            "label": "smoke-2"
+          },
+          {
+            "active": true,
+            "duration_ms": 347.838,
+            "label": "smoke-4"
+          },
+          {
+            "active": true,
+            "duration_ms": 95.62,
+            "label": "prompt-length-32-attempt-3"
+          },
+          {
+            "active": true,
+            "duration_ms": 124.531,
+            "label": "prompt-length-1024-attempt-4"
+          },
+          {
+            "active": true,
+            "duration_ms": 126.024,
+            "label": "prompt-length-1025-attempt-5"
+          },
+          {
+            "active": true,
+            "duration_ms": 129.843,
+            "label": "prompt-length-1151-attempt-6"
+          },
+          {
+            "active": true,
+            "duration_ms": 129.942,
+            "label": "prompt-length-1152-attempt-7"
+          },
+          {
+            "active": true,
+            "duration_ms": 134.427,
+            "label": "prompt-length-1153-attempt-8"
+          },
+          {
+            "active": true,
+            "duration_ms": 229.641,
+            "label": "prompt-length-2049-attempt-9"
+          },
+          {
+            "active": true,
+            "duration_ms": 90.125,
+            "label": "prompt-length-32-attempt-10"
+          }
+        ],
+        "host_statistics": {
+          "Draft_REPLAY_PLUS_UPDATE": {
+            "mean_ms": 1.649232553191489,
+            "p50_ms": 1.59553,
+            "p95_ms": 1.82687,
+            "samples": 47,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 77.51392999999999
+          },
+          "Draft_REPLAY_SUBMIT": {
+            "mean_ms": 0.12302893617021278,
+            "p50_ms": 0.06101,
+            "p95_ms": 0.21133,
+            "samples": 47,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 5.782360000000001
+          },
+          "Draft_propose": {
+            "mean_ms": 14.80585,
+            "p50_ms": 12.09061,
+            "p95_ms": 39.89678,
+            "samples": 47,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 695.87495
+          },
+          "Target_REPLAY_PLUS_UPDATE": {
+            "mean_ms": 4.694224000000001,
+            "p50_ms": 4.54452,
+            "p95_ms": 4.84262,
+            "samples": 30,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 140.82672000000002
+          },
+          "Target_REPLAY_SUBMIT": {
+            "mean_ms": 0.23650666666666667,
+            "p50_ms": 0.05974,
+            "p95_ms": 0.54447,
+            "samples": 30,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 7.0952
+          }
+        },
+        "initialization_capture": "EXCLUDED",
+        "physical_read": "NOT_PROVEN",
+        "profiler_enabled": true,
+        "scope": "NORMAL_OBSERVER_OFF",
+        "source_start_columns_active": {},
+        "status": "GRAPH_REPLAY_OBSERVED",
+        "update_host_range": "UNRESOLVED_SEPARATE; manager range includes replay plus UPDATE",
+        "warmup": "first request group once before begin_active"
+      },
+      "raw_exports": [
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/ASCEND_PROFILER_OUTPUT/analyse.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/ASCEND_PROFILER_OUTPUT/analysis.db",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/ASCEND_PROFILER_OUTPUT/ascend_pytorch_profiler_0.db",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/ASCEND_PROFILER_OUTPUT/operator_details.csv",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/ASCEND_PROFILER_OUTPUT/trace_view.json",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/FRAMEWORK/torch.op_mark",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/FRAMEWORK/torch.op_range",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/device_8/data/all_file.complete",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/device_8/data/stars_soc.data.8.slice_0",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/device_8/data/stars_soc.data.8.slice_0.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/device_8/data/stars_soc.data.8.slice_1",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/device_8/data/stars_soc.data.8.slice_1.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/device_8/data/stars_soc.data.8.slice_2",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/device_8/data/stars_soc.data.8.slice_2.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/device_8/dev_start.log.8",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/device_8/dev_start.log.8.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/device_8/end_info.8",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/device_8/end_info.8.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/device_8/host_start.log.8",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/device_8/host_start.log.8.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/device_8/info.json.8",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/device_8/info.json.8.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/device_8/sample.json",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/device_8/sample.json.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/device_8/start_info.8",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/device_8/start_info.8.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/aging.additional.context_id_info.slice_0",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/aging.additional.context_id_info.slice_0.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/aging.api_event.data.slice_0",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/aging.api_event.data.slice_0.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/aging.api_event.data.slice_1",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/aging.api_event.data.slice_1.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/aging.compact.task_track.slice_0",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/aging.compact.task_track.slice_0.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/all_file.complete",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.additional.capture_op_info.slice_0",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.additional.capture_op_info.slice_0.complete",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.additional.capture_op_info.slice_0.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.additional.hash_dic.slice_0",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.additional.hash_dic.slice_0.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.additional.hash_dic.slice_1",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.additional.hash_dic.slice_1.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.additional.hash_dic.slice_2",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.additional.hash_dic.slice_2.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.additional.type_info_dic.slice_0",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.additional.type_info_dic.slice_0.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.api_event.data.slice_0",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.api_event.data.slice_0.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.compact.capture_stream_info.slice_0",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.compact.capture_stream_info.slice_0.complete",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.compact.capture_stream_info.slice_0.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.compact.expand_stream_spec.slice_0",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.compact.expand_stream_spec.slice_0.complete",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.compact.expand_stream_spec.slice_0.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.compact.stream_sq_info.slice_0",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.compact.stream_sq_info.slice_0.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.compact.task_track.slice_0",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.compact.task_track.slice_0.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.variable.capture_op_info.slice_0",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/data/unaging.variable.capture_op_info.slice_0.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/end_info",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/end_info.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/host_start.log",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/host_start.log.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/info.json",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/info.json.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/sample.json",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/sample.json.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/start_info",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/PROF_000001_20261021004034721_00594713MBNNKNBD/host/start_info.done",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/logs/profiler_20261021004037_596205_ProfilingParser.log",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/logs/profiler_20261021004037_596214_CANNExportParser.log",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/logs/profiler_20261021004038_596232_TracePreParser.log",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/logs/profiler_20261021004111_596796_TraceViewParser.log",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/logs/profiler_20261021004111_596798_CANNAnalyzeParser.log",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/logs/profiler_20261021004112_596825_OperatorViewParser.log",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/logs/profiler_20261021004112_596827_TraceStepTimeParser.log",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/logs/profiler_20261021004114_596864_IntegrateParser.log",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/logs/profiler_20261021004114_596866_KernelViewParser.log",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/logs/profiler_20261021004114_596868_MemoryViewParser.log",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/logs/profiler_20261021004126_596957_CommunicationParser.log",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/profiler_info_0.json",
+        "trace/node-39-101_594713_20261021004034710_ascend_pt/profiler_metadata.json"
+      ],
+      "trace": {
+        "kernel_details": {
+          "fields": [
+            "Device_id",
+            "Name",
+            "Type",
+            "Accelerator Core",
+            "Start Time(us)",
+            "Duration(us)",
+            "Wait Time(us)",
+            "Block Num"
+          ],
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_long_normal/trace/node-39-101_594713_20261021004034710_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+          "rows": 24640,
+          "types": {
+            "N/A": 24640
+          },
+          "wait_us": {
+            "max": 5575.01,
+            "mean": 18.15413778409091,
+            "p50": 0.077,
+            "samples": 24640,
+            "sum": 447317.95500000357
+          }
+        },
+        "operator_details": {
+          "fields": [
+            "Name",
+            "Input Shapes",
+            "Call Stack",
+            "Host Self Duration(us)",
+            "Host Total Duration(us)",
+            "Device Self Duration(us)",
+            "Device Total Duration(us)",
+            "Device Self Duration With AICore(us)",
+            "Device Total Duration With AICore(us)"
+          ],
+          "host_self_us": {
+            "mean": 16.339645514989993,
+            "samples": 108439,
+            "sum": 1771854.819999996
+          },
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_long_normal/trace/node-39-101_594713_20261021004034710_ascend_pt/ASCEND_PROFILER_OUTPUT/operator_details.csv",
+          "rows": 108439
+        },
+        "step_trace_time": {
+          "fields": [
+            "Device_id",
+            "Step",
+            "Computing",
+            "Communication(Not Overlapped)",
+            "Overlapped",
+            "Communication",
+            "Free",
+            "Stage",
+            "Bubble",
+            "Communication(Not Overlapped and Exclude Receive)",
+            "Preparing"
+          ],
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_long_normal/trace/node-39-101_594713_20261021004034710_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv",
+          "rows": 1
+        },
+        "task_time": {
+          "fields": [
+            "Device_id",
+            "kernel_name",
+            "kernel_type",
+            "stream_id",
+            "task_id",
+            "task_time(us)",
+            "task_start(us)",
+            "task_stop(us)"
+          ],
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_long_normal/trace/node-39-101_594713_20261021004034710_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv",
+          "rows": 46584,
+          "streams": {
+            "10": 1176,
+            "11": 1176,
+            "12": 19368,
+            "13": 4842,
+            "42": 141,
+            "43": 2707,
+            "45": 282,
+            "47": 11573,
+            "48": 6,
+            "9": 5313
+          }
+        },
+        "trace_view": {
+          "bytes_fields": "UNAVAILABLE_NO_SIZE_IN_EVENTS",
+          "categories": {
+            "HostToDevice": 42486,
+            "None": 95920,
+            "async_npu": 26468,
+            "async_task_queue": 29802,
+            "cpu_op": 108439,
+            "dequeue": 14901,
+            "enqueue": 14901
+          },
+          "events": 332917,
+          "flow_event_count": 98756,
+          "flow_names": {
+            "HostToDevice450207061901312": 16018,
+            "HostToDevice79787607457792": 2,
+            "HostToDevice79834852098048": 2,
+            "HostToDevice79860621901824": 2,
+            "HostToDevice79890686672896": 2,
+            "HostToDevice79925046411264": 2,
+            "HostToDevice79946521247744": 2,
+            "HostToDevice79972291051520": 2,
+            "HostToDevice80062485364736": 2,
+            "HostToDevice80088255168512": 2,
+            "HostToDevice80109730004992": 2,
+            "HostToDevice80122614906880": 2,
+            "HostToDevice80139794776064": 2,
+            "HostToDevice80161269612544": 2,
+            "HostToDevice80195629350912": 2,
+            "HostToDevice80221399154688": 2,
+            "HostToDevice80264348827648": 2,
+            "HostToDevice80277233729536": 2,
+            "enqueue_to_dequeue": 29802,
+            "torch_to_npu": 26468
+          },
+          "host_device_clock_join": "UNAVAILABLE_NO_CALIBRATED_CLOCK",
+          "memcpy_or_copy_names": {
+            "Dequeue@acl_memcpy_device_to_host": 141,
+            "Dequeue@acl_memcpy_host_to_device": 1221,
+            "Dequeue@aclnnInplaceCopy": 1711,
+            "Enqueue@acl_memcpy_device_to_host": 141,
+            "Enqueue@acl_memcpy_host_to_device": 1221,
+            "Enqueue@aclnnInplaceCopy": 1711,
+            "MEMCPY_ASYNC": 3771,
+            "acl_memcpy_device_to_host": 141,
+            "acl_memcpy_host_to_device": 1221,
+            "aclnnInplaceCopy": 1711,
+            "aclnnInplaceCopy_CastAiCore_Cast": 94,
+            "aclnnInplaceCopy_SliceAiCore_Slice": 94,
+            "aclnnInplaceCopy_TensorMoveAiCore_TensorMove": 468,
+            "aclnnInplaceCopy_TransposeAiCore_Transpose": 47,
+            "aclnnInplaceCopy_ViewCopyAiCore_ViewCopy": 98,
+            "aten::_to_copy": 689,
+            "aten::copy_": 3883
+          },
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_long_normal/trace/node-39-101_594713_20261021004034710_ascend_pt/ASCEND_PROFILER_OUTPUT/trace_view.json",
+          "phases": {
+            "C": 4,
+            "M": 53,
+            "X": 234104,
+            "f": 57387,
+            "s": 41369
+          },
+          "status": "PARSED",
+          "sync_named_events": 3865
+        }
+      },
+      "trace_analysis": {
+        "device_idle": "UNRESOLVED_WITHOUT_CALIBRATED_TIMELINE",
+        "files": [
+          {
+            "duration_units": "us",
+            "fields": [
+              "Device_id",
+              "Name",
+              "Type",
+              "Accelerator Core",
+              "Start Time(us)",
+              "Duration(us)",
+              "Wait Time(us)",
+              "Block Num"
+            ],
+            "nonempty": {
+              "Accelerator Core": 24640,
+              "Block Num": 24640,
+              "Device_id": 24640,
+              "Duration(us)": 24640,
+              "Name": 24640,
+              "Start Time(us)": 24640,
+              "Type": 24640,
+              "Wait Time(us)": 24640
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_long_normal/trace/node-39-101_594713_20261021004034710_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+            "rows": 24640
+          },
+          {
+            "duration_units": "us",
+            "fields": [
+              "Name",
+              "Input Shapes",
+              "Call Stack",
+              "Host Self Duration(us)",
+              "Host Total Duration(us)",
+              "Device Self Duration(us)",
+              "Device Total Duration(us)",
+              "Device Self Duration With AICore(us)",
+              "Device Total Duration With AICore(us)"
+            ],
+            "nonempty": {
+              "Call Stack": 0,
+              "Device Self Duration With AICore(us)": 108439,
+              "Device Self Duration(us)": 108439,
+              "Device Total Duration With AICore(us)": 108439,
+              "Device Total Duration(us)": 108439,
+              "Host Self Duration(us)": 108439,
+              "Host Total Duration(us)": 108439,
+              "Input Shapes": 0,
+              "Name": 108439
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_long_normal/trace/node-39-101_594713_20261021004034710_ascend_pt/ASCEND_PROFILER_OUTPUT/operator_details.csv",
+            "rows": 108439
+          },
+          {
+            "duration_units": "us",
+            "fields": [
+              "Device_id",
+              "Step",
+              "Computing",
+              "Communication(Not Overlapped)",
+              "Overlapped",
+              "Communication",
+              "Free",
+              "Stage",
+              "Bubble",
+              "Communication(Not Overlapped and Exclude Receive)",
+              "Preparing"
+            ],
+            "nonempty": {
+              "Bubble": 1,
+              "Communication": 1,
+              "Communication(Not Overlapped and Exclude Receive)": 1,
+              "Communication(Not Overlapped)": 1,
+              "Computing": 1,
+              "Device_id": 1,
+              "Free": 1,
+              "Overlapped": 1,
+              "Preparing": 1,
+              "Stage": 1,
+              "Step": 0
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_long_normal/trace/node-39-101_594713_20261021004034710_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv",
+            "rows": 1
+          },
+          {
+            "duration_units": "us",
+            "fields": [
+              "Device_id",
+              "kernel_name",
+              "kernel_type",
+              "stream_id",
+              "task_id",
+              "task_time(us)",
+              "task_start(us)",
+              "task_stop(us)"
+            ],
+            "nonempty": {
+              "Device_id": 46584,
+              "kernel_name": 46584,
+              "kernel_type": 46584,
+              "stream_id": 46584,
+              "task_id": 46584,
+              "task_start(us)": 46584,
+              "task_stop(us)": 46584,
+              "task_time(us)": 46584
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_long_normal/trace/node-39-101_594713_20261021004034710_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv",
+            "rows": 46584
+          }
+        ],
+        "stage": "request-only profiling; prefill/decode attribution requires actual ranges",
+        "status": "FIELDS_ANALYZED",
+        "stream_context_flow": "FIELDS_INVENTORIED_NOT_INFERRED",
+        "target_draft_kernel_attribution": "UNRESOLVED_UNLESS_EXPLICIT_FLOW_ASSOCIATION",
+        "totals": {
+          "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_long_normal/trace/node-39-101_594713_20261021004034710_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv:UNRESOLVED_KERNEL_OR_API": {
+            "duration_us_sum": 1331845.657999993,
+            "samples": 24593
+          },
+          "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_long_normal/trace/node-39-101_594713_20261021004034710_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv:update": {
+            "duration_us_sum": 161.58599999999998,
+            "samples": 47
+          }
+        },
+        "warning": "overlapping duration sums are not end-to-end elapsed; host/device clocks not joined"
+      }
+    },
+    "PROFILE_OFF_short_control": {
+      "profile": {
+        "active_calls": 87,
+        "active_descriptors": {
+          "()": 54,
+          "(1, 7)": 7,
+          "(1, 8)": 6,
+          "(2, 14)": 7,
+          "(2, 16)": 6,
+          "(4, 28)": 7
+        },
+        "active_labels": {
+          "Draft_REPLAY_PLUS_UPDATE": 21,
+          "Draft_REPLAY_SUBMIT": 21,
+          "Draft_propose": 21,
+          "Target_REPLAY_PLUS_UPDATE": 12,
+          "Target_REPLAY_SUBMIT": 12
+        },
+        "active_source_gt0": 0,
+        "calls_total": 120,
+        "clock_domain": "HOST_MONOTONIC_NS_ONLY",
+        "completion": "NOT_PROVEN",
+        "groups": [
+          {
+            "active": false,
+            "duration_ms": 267.191,
+            "label": "warmup/smoke-1"
+          },
+          {
+            "active": true,
+            "duration_ms": 157.524,
+            "label": "smoke-1"
+          },
+          {
+            "active": true,
+            "duration_ms": 172.143,
+            "label": "smoke-2"
+          },
+          {
+            "active": true,
+            "duration_ms": 262.369,
+            "label": "smoke-4"
+          }
+        ],
+        "host_statistics": {
+          "Draft_REPLAY_PLUS_UPDATE": {
+            "mean_ms": 1.3370538095238096,
+            "p50_ms": 1.22435,
+            "p95_ms": 2.34638,
+            "samples": 21,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 28.07813
+          },
+          "Draft_REPLAY_SUBMIT": {
+            "mean_ms": 0.19333952380952382,
+            "p50_ms": 0.07584,
+            "p95_ms": 1.21968,
+            "samples": 21,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 4.06013
+          },
+          "Draft_propose": {
+            "mean_ms": 8.62689857142857,
+            "p50_ms": 12.26375,
+            "p95_ms": 13.27281,
+            "samples": 21,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 181.16486999999998
+          },
+          "Target_REPLAY_PLUS_UPDATE": {
+            "mean_ms": 3.9639425,
+            "p50_ms": 3.56064,
+            "p95_ms": 8.25191,
+            "samples": 12,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 47.56731
+          },
+          "Target_REPLAY_SUBMIT": {
+            "mean_ms": 0.43326916666666665,
+            "p50_ms": 0.06818,
+            "p95_ms": 4.44536,
+            "samples": 12,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 5.19923
+          }
+        },
+        "initialization_capture": "EXCLUDED",
+        "physical_read": "NOT_PROVEN",
+        "profiler_enabled": false,
+        "scope": "NORMAL_OBSERVER_OFF",
+        "source_start_columns_active": {},
+        "status": "GRAPH_REPLAY_OBSERVED",
+        "update_host_range": "UNRESOLVED_SEPARATE; manager range includes replay plus UPDATE",
+        "warmup": "first request group once before begin_active"
+      },
+      "raw_exports": [],
+      "trace": {},
+      "trace_analysis": null
+    },
+    "PROFILE_OFF_short_normal": {
+      "profile": {
+        "active_calls": 87,
+        "active_descriptors": {
+          "()": 54,
+          "(1, 7)": 7,
+          "(1, 8)": 6,
+          "(2, 14)": 7,
+          "(2, 16)": 6,
+          "(4, 28)": 7
+        },
+        "active_labels": {
+          "Draft_REPLAY_PLUS_UPDATE": 21,
+          "Draft_REPLAY_SUBMIT": 21,
+          "Draft_propose": 21,
+          "Target_REPLAY_PLUS_UPDATE": 12,
+          "Target_REPLAY_SUBMIT": 12
+        },
+        "active_source_gt0": 0,
+        "calls_total": 120,
+        "clock_domain": "HOST_MONOTONIC_NS_ONLY",
+        "completion": "NOT_PROVEN",
+        "groups": [
+          {
+            "active": false,
+            "duration_ms": 264.255,
+            "label": "warmup/smoke-1"
+          },
+          {
+            "active": true,
+            "duration_ms": 167.719,
+            "label": "smoke-1"
+          },
+          {
+            "active": true,
+            "duration_ms": 192.733,
+            "label": "smoke-2"
+          },
+          {
+            "active": true,
+            "duration_ms": 314.629,
+            "label": "smoke-4"
+          }
+        ],
+        "host_statistics": {
+          "Draft_REPLAY_PLUS_UPDATE": {
+            "mean_ms": 1.5549990476190476,
+            "p50_ms": 1.42336,
+            "p95_ms": 2.78152,
+            "samples": 21,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 32.65498
+          },
+          "Draft_REPLAY_SUBMIT": {
+            "mean_ms": 0.186452380952381,
+            "p50_ms": 0.05736,
+            "p95_ms": 1.34359,
+            "samples": 21,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 3.915500000000001
+          },
+          "Draft_propose": {
+            "mean_ms": 8.989800952380953,
+            "p50_ms": 11.45246,
+            "p95_ms": 12.39372,
+            "samples": 21,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 188.78582000000003
+          },
+          "Target_REPLAY_PLUS_UPDATE": {
+            "mean_ms": 4.789090833333334,
+            "p50_ms": 4.32442,
+            "p95_ms": 9.42213,
+            "samples": 12,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 57.46909
+          },
+          "Target_REPLAY_SUBMIT": {
+            "mean_ms": 0.4910391666666665,
+            "p50_ms": 0.05577,
+            "p95_ms": 4.89856,
+            "samples": 12,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 5.8924699999999985
+          }
+        },
+        "initialization_capture": "EXCLUDED",
+        "physical_read": "NOT_PROVEN",
+        "profiler_enabled": true,
+        "scope": "NORMAL_OBSERVER_OFF",
+        "source_start_columns_active": {},
+        "status": "GRAPH_REPLAY_OBSERVED",
+        "update_host_range": "UNRESOLVED_SEPARATE; manager range includes replay plus UPDATE",
+        "warmup": "first request group once before begin_active"
+      },
+      "raw_exports": [
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/ASCEND_PROFILER_OUTPUT/analyse.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/ASCEND_PROFILER_OUTPUT/analysis.db",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/ASCEND_PROFILER_OUTPUT/ascend_pytorch_profiler_0.db",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/ASCEND_PROFILER_OUTPUT/operator_details.csv",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/ASCEND_PROFILER_OUTPUT/trace_view.json",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/FRAMEWORK/torch.op_mark",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/FRAMEWORK/torch.op_range",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/device_8/data/all_file.complete",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/device_8/data/stars_soc.data.8.slice_0",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/device_8/data/stars_soc.data.8.slice_0.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/device_8/data/stars_soc.data.8.slice_1",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/device_8/data/stars_soc.data.8.slice_1.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/device_8/dev_start.log.8",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/device_8/dev_start.log.8.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/device_8/end_info.8",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/device_8/end_info.8.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/device_8/host_start.log.8",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/device_8/host_start.log.8.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/device_8/info.json.8",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/device_8/info.json.8.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/device_8/sample.json",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/device_8/sample.json.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/device_8/start_info.8",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/device_8/start_info.8.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/aging.additional.context_id_info.slice_0",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/aging.additional.context_id_info.slice_0.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/aging.api_event.data.slice_0",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/aging.api_event.data.slice_0.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/aging.compact.task_track.slice_0",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/aging.compact.task_track.slice_0.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/all_file.complete",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.additional.capture_op_info.slice_0",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.additional.capture_op_info.slice_0.complete",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.additional.capture_op_info.slice_0.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.additional.hash_dic.slice_0",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.additional.hash_dic.slice_0.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.additional.hash_dic.slice_1",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.additional.hash_dic.slice_1.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.additional.type_info_dic.slice_0",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.additional.type_info_dic.slice_0.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.additional.type_info_dic.slice_1",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.additional.type_info_dic.slice_1.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.additional.type_info_dic.slice_2",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.additional.type_info_dic.slice_2.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.additional.type_info_dic.slice_3",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.additional.type_info_dic.slice_3.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.additional.type_info_dic.slice_4",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.additional.type_info_dic.slice_4.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.additional.type_info_dic.slice_5",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.additional.type_info_dic.slice_5.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.api_event.data.slice_0",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.api_event.data.slice_0.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.compact.capture_stream_info.slice_0",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.compact.capture_stream_info.slice_0.complete",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.compact.capture_stream_info.slice_0.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.compact.expand_stream_spec.slice_0",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.compact.expand_stream_spec.slice_0.complete",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.compact.expand_stream_spec.slice_0.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.compact.stream_sq_info.slice_0",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.compact.stream_sq_info.slice_0.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.compact.task_track.slice_0",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.compact.task_track.slice_0.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.variable.capture_op_info.slice_0",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/data/unaging.variable.capture_op_info.slice_0.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/end_info",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/end_info.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/host_start.log",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/host_start.log.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/info.json",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/info.json.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/sample.json",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/sample.json.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/start_info",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/PROF_000001_20261021003334016_00586744ABMRLCEH/host/start_info.done",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/logs/profiler_20261021003335_588243_ProfilingParser.log",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/logs/profiler_20261021003335_588252_CANNExportParser.log",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/logs/profiler_20261021003335_588270_TracePreParser.log",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/logs/profiler_20261021003409_588826_CANNAnalyzeParser.log",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/logs/profiler_20261021003409_588837_TraceViewParser.log",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/logs/profiler_20261021003409_588856_TraceStepTimeParser.log",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/logs/profiler_20261021003409_588858_OperatorViewParser.log",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/logs/profiler_20261021003411_588902_MemoryViewParser.log",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/logs/profiler_20261021003411_588904_KernelViewParser.log",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/logs/profiler_20261021003411_588906_IntegrateParser.log",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/logs/profiler_20261021003424_588987_CommunicationParser.log",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/profiler_info_0.json",
+        "trace/node-39-101_586744_20261021003334004_ascend_pt/profiler_metadata.json"
+      ],
+      "trace": {
+        "kernel_details": {
+          "fields": [
+            "Device_id",
+            "Name",
+            "Type",
+            "Accelerator Core",
+            "Start Time(us)",
+            "Duration(us)",
+            "Wait Time(us)",
+            "Block Num"
+          ],
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_short_normal/trace/node-39-101_586744_20261021003334004_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+          "rows": 10893,
+          "types": {
+            "N/A": 10893
+          },
+          "wait_us": {
+            "max": 11428.07,
+            "mean": 24.532007252363904,
+            "p50": 0.09,
+            "samples": 10893,
+            "sum": 267227.1550000002
+          }
+        },
+        "operator_details": {
+          "fields": [
+            "Name",
+            "Input Shapes",
+            "Call Stack",
+            "Host Self Duration(us)",
+            "Host Total Duration(us)",
+            "Device Self Duration(us)",
+            "Device Total Duration(us)",
+            "Device Self Duration With AICore(us)",
+            "Device Total Duration With AICore(us)"
+          ],
+          "host_self_us": {
+            "mean": 12.625833816569708,
+            "samples": 53459,
+            "sum": 674964.4500000018
+          },
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_short_normal/trace/node-39-101_586744_20261021003334004_ascend_pt/ASCEND_PROFILER_OUTPUT/operator_details.csv",
+          "rows": 53459
+        },
+        "step_trace_time": {
+          "fields": [
+            "Device_id",
+            "Step",
+            "Computing",
+            "Communication(Not Overlapped)",
+            "Overlapped",
+            "Communication",
+            "Free",
+            "Stage",
+            "Bubble",
+            "Communication(Not Overlapped and Exclude Receive)",
+            "Preparing"
+          ],
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_short_normal/trace/node-39-101_586744_20261021003334004_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv",
+          "rows": 1
+        },
+        "task_time": {
+          "fields": [
+            "Device_id",
+            "kernel_name",
+            "kernel_type",
+            "stream_id",
+            "task_id",
+            "task_time(us)",
+            "task_start(us)",
+            "task_stop(us)"
+          ],
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_short_normal/trace/node-39-101_586744_20261021003334004_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv",
+          "rows": 20052,
+          "streams": {
+            "10": 1176,
+            "11": 1176,
+            "12": 4842,
+            "13": 4842,
+            "42": 63,
+            "43": 1107,
+            "45": 126,
+            "47": 5587,
+            "48": 6,
+            "9": 1127
+          }
+        },
+        "trace_view": {
+          "bytes_fields": "UNAVAILABLE_NO_SIZE_IN_EVENTS",
+          "categories": {
+            "HostToDevice": 19246,
+            "None": 41894,
+            "async_npu": 12560,
+            "async_task_queue": 14250,
+            "cpu_op": 53459,
+            "dequeue": 7125,
+            "enqueue": 7125
+          },
+          "events": 155659,
+          "flow_event_count": 46056,
+          "flow_names": {
+            "HostToDevice221182225809408": 6686,
+            "HostToDevice41622528065536": 2,
+            "HostToDevice41669772705792": 2,
+            "HostToDevice41695542509568": 2,
+            "HostToDevice41725607280640": 2,
+            "HostToDevice41759967019008": 2,
+            "HostToDevice41781441855488": 2,
+            "HostToDevice41807211659264": 2,
+            "HostToDevice41897405972480": 2,
+            "HostToDevice41923175776256": 2,
+            "HostToDevice41944650612736": 2,
+            "HostToDevice41957535514624": 2,
+            "HostToDevice41974715383808": 2,
+            "HostToDevice41996190220288": 2,
+            "HostToDevice42030549958656": 2,
+            "HostToDevice42056319762432": 2,
+            "HostToDevice42099269435392": 2,
+            "HostToDevice42112154337280": 2,
+            "enqueue_to_dequeue": 14250,
+            "torch_to_npu": 12560
+          },
+          "host_device_clock_join": "UNAVAILABLE_NO_CALIBRATED_CLOCK",
+          "memcpy_or_copy_names": {
+            "Dequeue@acl_memcpy_device_to_host": 63,
+            "Dequeue@acl_memcpy_host_to_device": 513,
+            "Dequeue@aclnnInplaceCopy": 867,
+            "Enqueue@acl_memcpy_device_to_host": 63,
+            "Enqueue@acl_memcpy_host_to_device": 513,
+            "Enqueue@aclnnInplaceCopy": 867,
+            "MEMCPY_ASYNC": 1705,
+            "acl_memcpy_device_to_host": 63,
+            "acl_memcpy_host_to_device": 513,
+            "aclnnInplaceCopy": 867,
+            "aclnnInplaceCopy_CastAiCore_Cast": 42,
+            "aclnnInplaceCopy_SliceAiCore_Slice": 42,
+            "aclnnInplaceCopy_TransposeAiCore_Transpose": 21,
+            "aclnnInplaceCopy_ViewCopyAiCore_ViewCopy": 98,
+            "aten::_to_copy": 319,
+            "aten::copy_": 1853
+          },
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_short_normal/trace/node-39-101_586744_20261021003334004_ascend_pt/ASCEND_PROFILER_OUTPUT/trace_view.json",
+          "phases": {
+            "C": 4,
+            "M": 53,
+            "X": 109546,
+            "f": 26371,
+            "s": 19685
+          },
+          "status": "PARSED",
+          "sync_named_events": 1747
+        }
+      },
+      "trace_analysis": {
+        "device_idle": "UNRESOLVED_WITHOUT_CALIBRATED_TIMELINE",
+        "files": [
+          {
+            "duration_units": "us",
+            "fields": [
+              "Device_id",
+              "Name",
+              "Type",
+              "Accelerator Core",
+              "Start Time(us)",
+              "Duration(us)",
+              "Wait Time(us)",
+              "Block Num"
+            ],
+            "nonempty": {
+              "Accelerator Core": 10893,
+              "Block Num": 10893,
+              "Device_id": 10893,
+              "Duration(us)": 10893,
+              "Name": 10893,
+              "Start Time(us)": 10893,
+              "Type": 10893,
+              "Wait Time(us)": 10893
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_short_normal/trace/node-39-101_586744_20261021003334004_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+            "rows": 10893
+          },
+          {
+            "duration_units": "us",
+            "fields": [
+              "Name",
+              "Input Shapes",
+              "Call Stack",
+              "Host Self Duration(us)",
+              "Host Total Duration(us)",
+              "Device Self Duration(us)",
+              "Device Total Duration(us)",
+              "Device Self Duration With AICore(us)",
+              "Device Total Duration With AICore(us)"
+            ],
+            "nonempty": {
+              "Call Stack": 0,
+              "Device Self Duration With AICore(us)": 53459,
+              "Device Self Duration(us)": 53459,
+              "Device Total Duration With AICore(us)": 53459,
+              "Device Total Duration(us)": 53459,
+              "Host Self Duration(us)": 53459,
+              "Host Total Duration(us)": 53459,
+              "Input Shapes": 0,
+              "Name": 53459
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_short_normal/trace/node-39-101_586744_20261021003334004_ascend_pt/ASCEND_PROFILER_OUTPUT/operator_details.csv",
+            "rows": 53459
+          },
+          {
+            "duration_units": "us",
+            "fields": [
+              "Device_id",
+              "Step",
+              "Computing",
+              "Communication(Not Overlapped)",
+              "Overlapped",
+              "Communication",
+              "Free",
+              "Stage",
+              "Bubble",
+              "Communication(Not Overlapped and Exclude Receive)",
+              "Preparing"
+            ],
+            "nonempty": {
+              "Bubble": 1,
+              "Communication": 1,
+              "Communication(Not Overlapped and Exclude Receive)": 1,
+              "Communication(Not Overlapped)": 1,
+              "Computing": 1,
+              "Device_id": 1,
+              "Free": 1,
+              "Overlapped": 1,
+              "Preparing": 1,
+              "Stage": 1,
+              "Step": 0
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_short_normal/trace/node-39-101_586744_20261021003334004_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv",
+            "rows": 1
+          },
+          {
+            "duration_units": "us",
+            "fields": [
+              "Device_id",
+              "kernel_name",
+              "kernel_type",
+              "stream_id",
+              "task_id",
+              "task_time(us)",
+              "task_start(us)",
+              "task_stop(us)"
+            ],
+            "nonempty": {
+              "Device_id": 20052,
+              "kernel_name": 20052,
+              "kernel_type": 20052,
+              "stream_id": 20052,
+              "task_id": 20052,
+              "task_start(us)": 20052,
+              "task_stop(us)": 20052,
+              "task_time(us)": 20052
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_short_normal/trace/node-39-101_586744_20261021003334004_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv",
+            "rows": 20052
+          }
+        ],
+        "stage": "request-only profiling; prefill/decode attribution requires actual ranges",
+        "status": "FIELDS_ANALYZED",
+        "stream_context_flow": "FIELDS_INVENTORIED_NOT_INFERRED",
+        "target_draft_kernel_attribution": "UNRESOLVED_UNLESS_EXPLICIT_FLOW_ASSOCIATION",
+        "totals": {
+          "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_short_normal/trace/node-39-101_586744_20261021003334004_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv:UNRESOLVED_KERNEL_OR_API": {
+            "duration_us_sum": 410169.1349999992,
+            "samples": 10872
+          },
+          "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_OFF_short_normal/trace/node-39-101_586744_20261021003334004_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv:update": {
+            "duration_us_sum": 67.521,
+            "samples": 21
+          }
+        },
+        "warning": "overlapping duration sums are not end-to-end elapsed; host/device clocks not joined"
+      }
+    },
+    "PROFILE_ON_long_control": {
+      "profile": {
+        "active_calls": 201,
+        "active_descriptors": {
+          "()": 124,
+          "(1, 7)": 33,
+          "(1, 8)": 24,
+          "(2, 14)": 7,
+          "(2, 16)": 6,
+          "(4, 28)": 7
+        },
+        "active_labels": {
+          "Draft_REPLAY_PLUS_UPDATE": 47,
+          "Draft_REPLAY_SUBMIT": 47,
+          "Draft_propose": 47,
+          "Target_REPLAY_PLUS_UPDATE": 30,
+          "Target_REPLAY_SUBMIT": 30
+        },
+        "active_source_gt0": 14,
+        "calls_total": 234,
+        "clock_domain": "HOST_MONOTONIC_NS_ONLY",
+        "completion": "NOT_PROVEN",
+        "groups": [
+          {
+            "active": false,
+            "duration_ms": 291.046,
+            "label": "warmup/smoke-1"
+          },
+          {
+            "active": true,
+            "duration_ms": 179.251,
+            "label": "smoke-1"
+          },
+          {
+            "active": true,
+            "duration_ms": 194.447,
+            "label": "smoke-2"
+          },
+          {
+            "active": true,
+            "duration_ms": 318.635,
+            "label": "smoke-4"
+          },
+          {
+            "active": true,
+            "duration_ms": 91.168,
+            "label": "prompt-length-32-attempt-3"
+          },
+          {
+            "active": true,
+            "duration_ms": 129.618,
+            "label": "prompt-length-1024-attempt-4"
+          },
+          {
+            "active": true,
+            "duration_ms": 131.05,
+            "label": "prompt-length-1025-attempt-5"
+          },
+          {
+            "active": true,
+            "duration_ms": 135.024,
+            "label": "prompt-length-1151-attempt-6"
+          },
+          {
+            "active": true,
+            "duration_ms": 156.84,
+            "label": "prompt-length-1152-attempt-7"
+          },
+          {
+            "active": true,
+            "duration_ms": 135.559,
+            "label": "prompt-length-1153-attempt-8"
+          },
+          {
+            "active": true,
+            "duration_ms": 216.11,
+            "label": "prompt-length-2049-attempt-9"
+          },
+          {
+            "active": true,
+            "duration_ms": 83.945,
+            "label": "prompt-length-32-attempt-10"
+          }
+        ],
+        "host_statistics": {
+          "Draft_REPLAY_PLUS_UPDATE": {
+            "mean_ms": 2.6618440425531924,
+            "p50_ms": 2.56384,
+            "p95_ms": 3.59518,
+            "samples": 47,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 125.10667000000004
+          },
+          "Draft_REPLAY_SUBMIT": {
+            "mean_ms": 0.13853638297872348,
+            "p50_ms": 0.08606,
+            "p95_ms": 0.16791,
+            "samples": 47,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 6.511210000000004
+          },
+          "Draft_propose": {
+            "mean_ms": 18.517503829787227,
+            "p50_ms": 15.32076,
+            "p95_ms": 50.37555,
+            "samples": 47,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 870.3226799999997
+          },
+          "Target_REPLAY_PLUS_UPDATE": {
+            "mean_ms": 4.078487333333333,
+            "p50_ms": 3.60648,
+            "p95_ms": 8.49907,
+            "samples": 30,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 122.35462000000001
+          },
+          "Target_REPLAY_SUBMIT": {
+            "mean_ms": 0.220329,
+            "p50_ms": 0.07214,
+            "p95_ms": 0.12968,
+            "samples": 30,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 6.60987
+          }
+        },
+        "initialization_capture": "EXCLUDED",
+        "physical_read": "NOT_PROVEN",
+        "profiler_enabled": false,
+        "scope": "NORMAL_OBSERVER_OFF",
+        "source_start_columns_active": {
+          "0": 61,
+          "1": 10,
+          "8": 4
+        },
+        "status": "GRAPH_REPLAY_OBSERVED",
+        "update_host_range": "UNRESOLVED_SEPARATE; manager range includes replay plus UPDATE",
+        "warmup": "first request group once before begin_active"
+      },
+      "raw_exports": [],
+      "trace": {},
+      "trace_analysis": null
+    },
+    "PROFILE_ON_long_normal": {
+      "profile": {
+        "active_calls": 201,
+        "active_descriptors": {
+          "()": 124,
+          "(1, 7)": 33,
+          "(1, 8)": 24,
+          "(2, 14)": 7,
+          "(2, 16)": 6,
+          "(4, 28)": 7
+        },
+        "active_labels": {
+          "Draft_REPLAY_PLUS_UPDATE": 47,
+          "Draft_REPLAY_SUBMIT": 47,
+          "Draft_propose": 47,
+          "Target_REPLAY_PLUS_UPDATE": 30,
+          "Target_REPLAY_SUBMIT": 30
+        },
+        "active_source_gt0": 14,
+        "calls_total": 234,
+        "clock_domain": "HOST_MONOTONIC_NS_ONLY",
+        "completion": "NOT_PROVEN",
+        "groups": [
+          {
+            "active": false,
+            "duration_ms": 284.906,
+            "label": "warmup/smoke-1"
+          },
+          {
+            "active": true,
+            "duration_ms": 187.036,
+            "label": "smoke-1"
+          },
+          {
+            "active": true,
+            "duration_ms": 202.372,
+            "label": "smoke-2"
+          },
+          {
+            "active": true,
+            "duration_ms": 335.396,
+            "label": "smoke-4"
+          },
+          {
+            "active": true,
+            "duration_ms": 95.711,
+            "label": "prompt-length-32-attempt-3"
+          },
+          {
+            "active": true,
+            "duration_ms": 131.949,
+            "label": "prompt-length-1024-attempt-4"
+          },
+          {
+            "active": true,
+            "duration_ms": 133.853,
+            "label": "prompt-length-1025-attempt-5"
+          },
+          {
+            "active": true,
+            "duration_ms": 137.527,
+            "label": "prompt-length-1151-attempt-6"
+          },
+          {
+            "active": true,
+            "duration_ms": 162.395,
+            "label": "prompt-length-1152-attempt-7"
+          },
+          {
+            "active": true,
+            "duration_ms": 140.517,
+            "label": "prompt-length-1153-attempt-8"
+          },
+          {
+            "active": true,
+            "duration_ms": 218.307,
+            "label": "prompt-length-2049-attempt-9"
+          },
+          {
+            "active": true,
+            "duration_ms": 97.336,
+            "label": "prompt-length-32-attempt-10"
+          }
+        ],
+        "host_statistics": {
+          "Draft_REPLAY_PLUS_UPDATE": {
+            "mean_ms": 2.8851895744680847,
+            "p50_ms": 2.79848,
+            "p95_ms": 3.31847,
+            "samples": 47,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 135.60390999999998
+          },
+          "Draft_REPLAY_SUBMIT": {
+            "mean_ms": 0.1193614893617021,
+            "p50_ms": 0.05921,
+            "p95_ms": 0.19328,
+            "samples": 47,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 5.609989999999999
+          },
+          "Draft_propose": {
+            "mean_ms": 17.80469936170213,
+            "p50_ms": 15.05962,
+            "p95_ms": 43.83989,
+            "samples": 47,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 836.8208700000001
+          },
+          "Target_REPLAY_PLUS_UPDATE": {
+            "mean_ms": 4.5161109999999995,
+            "p50_ms": 4.29949,
+            "p95_ms": 4.68412,
+            "samples": 30,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 135.48333
+          },
+          "Target_REPLAY_SUBMIT": {
+            "mean_ms": 0.23911733333333327,
+            "p50_ms": 0.05751,
+            "p95_ms": 0.49588,
+            "samples": 30,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 7.173519999999998
+          }
+        },
+        "initialization_capture": "EXCLUDED",
+        "physical_read": "NOT_PROVEN",
+        "profiler_enabled": true,
+        "scope": "NORMAL_OBSERVER_OFF",
+        "source_start_columns_active": {
+          "0": 61,
+          "1": 10,
+          "8": 4
+        },
+        "status": "GRAPH_REPLAY_OBSERVED",
+        "update_host_range": "UNRESOLVED_SEPARATE; manager range includes replay plus UPDATE",
+        "warmup": "first request group once before begin_active"
+      },
+      "raw_exports": [
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/ASCEND_PROFILER_OUTPUT/analyse.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/ASCEND_PROFILER_OUTPUT/analysis.db",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/ASCEND_PROFILER_OUTPUT/ascend_pytorch_profiler_0.db",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/ASCEND_PROFILER_OUTPUT/operator_details.csv",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/ASCEND_PROFILER_OUTPUT/trace_view.json",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/FRAMEWORK/torch.op_mark",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/FRAMEWORK/torch.op_range",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/device_8/data/all_file.complete",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/device_8/data/stars_soc.data.8.slice_0",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/device_8/data/stars_soc.data.8.slice_0.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/device_8/data/stars_soc.data.8.slice_1",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/device_8/data/stars_soc.data.8.slice_1.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/device_8/data/stars_soc.data.8.slice_2",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/device_8/data/stars_soc.data.8.slice_2.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/device_8/dev_start.log.8",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/device_8/dev_start.log.8.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/device_8/end_info.8",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/device_8/end_info.8.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/device_8/host_start.log.8",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/device_8/host_start.log.8.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/device_8/info.json.8",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/device_8/info.json.8.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/device_8/sample.json",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/device_8/sample.json.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/device_8/start_info.8",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/device_8/start_info.8.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/aging.additional.context_id_info.slice_0",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/aging.additional.context_id_info.slice_0.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/aging.api_event.data.slice_0",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/aging.api_event.data.slice_0.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/aging.api_event.data.slice_1",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/aging.api_event.data.slice_1.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/aging.compact.task_track.slice_0",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/aging.compact.task_track.slice_0.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/all_file.complete",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.additional.capture_op_info.slice_0",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.additional.capture_op_info.slice_0.complete",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.additional.capture_op_info.slice_0.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.additional.hash_dic.slice_0",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.additional.hash_dic.slice_0.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.additional.hash_dic.slice_1",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.additional.hash_dic.slice_1.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.additional.hash_dic.slice_2",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.additional.hash_dic.slice_2.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.additional.type_info_dic.slice_0",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.additional.type_info_dic.slice_0.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.api_event.data.slice_0",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.api_event.data.slice_0.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.compact.capture_stream_info.slice_0",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.compact.capture_stream_info.slice_0.complete",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.compact.capture_stream_info.slice_0.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.compact.expand_stream_spec.slice_0",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.compact.expand_stream_spec.slice_0.complete",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.compact.expand_stream_spec.slice_0.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.compact.stream_sq_info.slice_0",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.compact.stream_sq_info.slice_0.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.compact.task_track.slice_0",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.compact.task_track.slice_0.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.variable.capture_op_info.slice_0",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/data/unaging.variable.capture_op_info.slice_0.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/end_info",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/end_info.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/host_start.log",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/host_start.log.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/info.json",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/info.json.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/sample.json",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/sample.json.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/start_info",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/PROF_000001_20261021005343975_00609735DJJPEPAH/host/start_info.done",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/logs/profiler_20261021005346_611221_ProfilingParser.log",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/logs/profiler_20261021005346_611230_CANNExportParser.log",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/logs/profiler_20261021005347_611248_TracePreParser.log",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/logs/profiler_20261021005421_611818_TraceViewParser.log",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/logs/profiler_20261021005421_611821_CANNAnalyzeParser.log",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/logs/profiler_20261021005422_611848_TraceStepTimeParser.log",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/logs/profiler_20261021005422_611850_OperatorViewParser.log",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/logs/profiler_20261021005424_611897_IntegrateParser.log",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/logs/profiler_20261021005424_611899_KernelViewParser.log",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/logs/profiler_20261021005424_611901_MemoryViewParser.log",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/logs/profiler_20261021005436_611994_CommunicationParser.log",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/profiler_info_0.json",
+        "trace/node-39-101_609735_20261021005343964_ascend_pt/profiler_metadata.json"
+      ],
+      "trace": {
+        "kernel_details": {
+          "fields": [
+            "Device_id",
+            "Name",
+            "Type",
+            "Accelerator Core",
+            "Start Time(us)",
+            "Duration(us)",
+            "Wait Time(us)",
+            "Block Num"
+          ],
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_long_normal/trace/node-39-101_609735_20261021005343964_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+          "rows": 24781,
+          "types": {
+            "N/A": 24781
+          },
+          "wait_us": {
+            "max": 5527.13,
+            "mean": 20.970391590331303,
+            "p50": 0.075,
+            "samples": 24781,
+            "sum": 519667.2740000018
+          }
+        },
+        "operator_details": {
+          "fields": [
+            "Name",
+            "Input Shapes",
+            "Call Stack",
+            "Host Self Duration(us)",
+            "Host Total Duration(us)",
+            "Device Self Duration(us)",
+            "Device Total Duration(us)",
+            "Device Self Duration With AICore(us)",
+            "Device Total Duration With AICore(us)"
+          ],
+          "host_self_us": {
+            "mean": 15.737440133956413,
+            "samples": 117053,
+            "sum": 1842114.5799999875
+          },
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_long_normal/trace/node-39-101_609735_20261021005343964_ascend_pt/ASCEND_PROFILER_OUTPUT/operator_details.csv",
+          "rows": 117053
+        },
+        "step_trace_time": {
+          "fields": [
+            "Device_id",
+            "Step",
+            "Computing",
+            "Communication(Not Overlapped)",
+            "Overlapped",
+            "Communication",
+            "Free",
+            "Stage",
+            "Bubble",
+            "Communication(Not Overlapped and Exclude Receive)",
+            "Preparing"
+          ],
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_long_normal/trace/node-39-101_609735_20261021005343964_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv",
+          "rows": 1
+        },
+        "task_time": {
+          "fields": [
+            "Device_id",
+            "kernel_name",
+            "kernel_type",
+            "stream_id",
+            "task_id",
+            "task_time(us)",
+            "task_start(us)",
+            "task_stop(us)"
+          ],
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_long_normal/trace/node-39-101_609735_20261021005343964_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv",
+          "rows": 47035,
+          "streams": {
+            "10": 1176,
+            "11": 1176,
+            "12": 19368,
+            "13": 4842,
+            "42": 141,
+            "43": 2707,
+            "45": 282,
+            "47": 12024,
+            "48": 6,
+            "9": 5313
+          }
+        },
+        "trace_view": {
+          "bytes_fields": "UNAVAILABLE_NO_SIZE_IN_EVENTS",
+          "categories": {
+            "HostToDevice": 43388,
+            "None": 96653,
+            "async_npu": 27370,
+            "async_task_queue": 30704,
+            "cpu_op": 117053,
+            "dequeue": 15352,
+            "enqueue": 15352
+          },
+          "events": 345872,
+          "flow_event_count": 101462,
+          "flow_names": {
+            "HostToDevice462894395293696": 16018,
+            "HostToDevice81724637708288": 2,
+            "HostToDevice81771882348544": 2,
+            "HostToDevice81797652152320": 2,
+            "HostToDevice81827716923392": 2,
+            "HostToDevice81862076661760": 2,
+            "HostToDevice81883551498240": 2,
+            "HostToDevice81909321302016": 2,
+            "HostToDevice81999515615232": 2,
+            "HostToDevice82025285419008": 2,
+            "HostToDevice82046760255488": 2,
+            "HostToDevice82059645157376": 2,
+            "HostToDevice82076825026560": 2,
+            "HostToDevice82098299863040": 2,
+            "HostToDevice82132659601408": 2,
+            "HostToDevice82158429405184": 2,
+            "HostToDevice82201379078144": 2,
+            "HostToDevice82214263980032": 2,
+            "enqueue_to_dequeue": 30704,
+            "torch_to_npu": 27370
+          },
+          "host_device_clock_join": "UNAVAILABLE_NO_CALIBRATED_CLOCK",
+          "memcpy_or_copy_names": {
+            "Dequeue@acl_memcpy_device_to_host": 141,
+            "Dequeue@acl_memcpy_host_to_device": 1221,
+            "Dequeue@aclnnInplaceCopy": 2021,
+            "Enqueue@acl_memcpy_device_to_host": 141,
+            "Enqueue@acl_memcpy_host_to_device": 1221,
+            "Enqueue@aclnnInplaceCopy": 2021,
+            "MEMCPY_ASYNC": 4081,
+            "acl_memcpy_device_to_host": 141,
+            "acl_memcpy_host_to_device": 1221,
+            "aclnnInplaceCopy": 2021,
+            "aclnnInplaceCopy_CastAiCore_Cast": 94,
+            "aclnnInplaceCopy_SliceAiCore_Slice": 94,
+            "aclnnInplaceCopy_TensorMoveAiCore_TensorMove": 468,
+            "aclnnInplaceCopy_TransposeAiCore_Transpose": 47,
+            "aclnnInplaceCopy_ViewCopyAiCore_ViewCopy": 98,
+            "aten::_to_copy": 642,
+            "aten::copy_": 4743
+          },
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_long_normal/trace/node-39-101_609735_20261021005343964_ascend_pt/ASCEND_PROFILER_OUTPUT/trace_view.json",
+          "phases": {
+            "C": 4,
+            "M": 53,
+            "X": 244353,
+            "f": 58740,
+            "s": 42722
+          },
+          "status": "PARSED",
+          "sync_named_events": 4175
+        }
+      },
+      "trace_analysis": {
+        "device_idle": "UNRESOLVED_WITHOUT_CALIBRATED_TIMELINE",
+        "files": [
+          {
+            "duration_units": "us",
+            "fields": [
+              "Device_id",
+              "Name",
+              "Type",
+              "Accelerator Core",
+              "Start Time(us)",
+              "Duration(us)",
+              "Wait Time(us)",
+              "Block Num"
+            ],
+            "nonempty": {
+              "Accelerator Core": 24781,
+              "Block Num": 24781,
+              "Device_id": 24781,
+              "Duration(us)": 24781,
+              "Name": 24781,
+              "Start Time(us)": 24781,
+              "Type": 24781,
+              "Wait Time(us)": 24781
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_long_normal/trace/node-39-101_609735_20261021005343964_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+            "rows": 24781
+          },
+          {
+            "duration_units": "us",
+            "fields": [
+              "Name",
+              "Input Shapes",
+              "Call Stack",
+              "Host Self Duration(us)",
+              "Host Total Duration(us)",
+              "Device Self Duration(us)",
+              "Device Total Duration(us)",
+              "Device Self Duration With AICore(us)",
+              "Device Total Duration With AICore(us)"
+            ],
+            "nonempty": {
+              "Call Stack": 0,
+              "Device Self Duration With AICore(us)": 117053,
+              "Device Self Duration(us)": 117053,
+              "Device Total Duration With AICore(us)": 117053,
+              "Device Total Duration(us)": 117053,
+              "Host Self Duration(us)": 117053,
+              "Host Total Duration(us)": 117053,
+              "Input Shapes": 0,
+              "Name": 117053
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_long_normal/trace/node-39-101_609735_20261021005343964_ascend_pt/ASCEND_PROFILER_OUTPUT/operator_details.csv",
+            "rows": 117053
+          },
+          {
+            "duration_units": "us",
+            "fields": [
+              "Device_id",
+              "Step",
+              "Computing",
+              "Communication(Not Overlapped)",
+              "Overlapped",
+              "Communication",
+              "Free",
+              "Stage",
+              "Bubble",
+              "Communication(Not Overlapped and Exclude Receive)",
+              "Preparing"
+            ],
+            "nonempty": {
+              "Bubble": 1,
+              "Communication": 1,
+              "Communication(Not Overlapped and Exclude Receive)": 1,
+              "Communication(Not Overlapped)": 1,
+              "Computing": 1,
+              "Device_id": 1,
+              "Free": 1,
+              "Overlapped": 1,
+              "Preparing": 1,
+              "Stage": 1,
+              "Step": 0
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_long_normal/trace/node-39-101_609735_20261021005343964_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv",
+            "rows": 1
+          },
+          {
+            "duration_units": "us",
+            "fields": [
+              "Device_id",
+              "kernel_name",
+              "kernel_type",
+              "stream_id",
+              "task_id",
+              "task_time(us)",
+              "task_start(us)",
+              "task_stop(us)"
+            ],
+            "nonempty": {
+              "Device_id": 47035,
+              "kernel_name": 47035,
+              "kernel_type": 47035,
+              "stream_id": 47035,
+              "task_id": 47035,
+              "task_start(us)": 47035,
+              "task_stop(us)": 47035,
+              "task_time(us)": 47035
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_long_normal/trace/node-39-101_609735_20261021005343964_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv",
+            "rows": 47035
+          }
+        ],
+        "stage": "request-only profiling; prefill/decode attribution requires actual ranges",
+        "status": "FIELDS_ANALYZED",
+        "stream_context_flow": "FIELDS_INVENTORIED_NOT_INFERRED",
+        "target_draft_kernel_attribution": "UNRESOLVED_UNLESS_EXPLICIT_FLOW_ASSOCIATION",
+        "totals": {
+          "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_long_normal/trace/node-39-101_609735_20261021005343964_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv:UNRESOLVED_KERNEL_OR_API": {
+            "duration_us_sum": 1329438.026000003,
+            "samples": 24734
+          },
+          "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_long_normal/trace/node-39-101_609735_20261021005343964_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv:update": {
+            "duration_us_sum": 161.346,
+            "samples": 47
+          }
+        },
+        "warning": "overlapping duration sums are not end-to-end elapsed; host/device clocks not joined"
+      }
+    },
+    "PROFILE_ON_short_control": {
+      "profile": {
+        "active_calls": 87,
+        "active_descriptors": {
+          "()": 54,
+          "(1, 7)": 7,
+          "(1, 8)": 6,
+          "(2, 14)": 7,
+          "(2, 16)": 6,
+          "(4, 28)": 7
+        },
+        "active_labels": {
+          "Draft_REPLAY_PLUS_UPDATE": 21,
+          "Draft_REPLAY_SUBMIT": 21,
+          "Draft_propose": 21,
+          "Target_REPLAY_PLUS_UPDATE": 12,
+          "Target_REPLAY_SUBMIT": 12
+        },
+        "active_source_gt0": 0,
+        "calls_total": 120,
+        "clock_domain": "HOST_MONOTONIC_NS_ONLY",
+        "completion": "NOT_PROVEN",
+        "groups": [
+          {
+            "active": false,
+            "duration_ms": 285.234,
+            "label": "warmup/smoke-1"
+          },
+          {
+            "active": true,
+            "duration_ms": 174.95,
+            "label": "smoke-1"
+          },
+          {
+            "active": true,
+            "duration_ms": 189.478,
+            "label": "smoke-2"
+          },
+          {
+            "active": true,
+            "duration_ms": 284.392,
+            "label": "smoke-4"
+          }
+        ],
+        "host_statistics": {
+          "Draft_REPLAY_PLUS_UPDATE": {
+            "mean_ms": 2.5779638095238093,
+            "p50_ms": 2.44607,
+            "p95_ms": 3.66583,
+            "samples": 21,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 54.13723999999999
+          },
+          "Draft_REPLAY_SUBMIT": {
+            "mean_ms": 0.18825666666666666,
+            "p50_ms": 0.07687,
+            "p95_ms": 1.2436,
+            "samples": 21,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 3.9533899999999997
+          },
+          "Draft_propose": {
+            "mean_ms": 11.261304761904762,
+            "p50_ms": 14.66415,
+            "p95_ms": 15.68544,
+            "samples": 21,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 236.4874
+          },
+          "Target_REPLAY_PLUS_UPDATE": {
+            "mean_ms": 3.978075833333333,
+            "p50_ms": 3.56485,
+            "p95_ms": 8.38969,
+            "samples": 12,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 47.736909999999995
+          },
+          "Target_REPLAY_SUBMIT": {
+            "mean_ms": 0.4343050000000001,
+            "p50_ms": 0.06863,
+            "p95_ms": 4.45828,
+            "samples": 12,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 5.211660000000001
+          }
+        },
+        "initialization_capture": "EXCLUDED",
+        "physical_read": "NOT_PROVEN",
+        "profiler_enabled": false,
+        "scope": "NORMAL_OBSERVER_OFF",
+        "source_start_columns_active": {
+          "0": 49
+        },
+        "status": "GRAPH_REPLAY_OBSERVED",
+        "update_host_range": "UNRESOLVED_SEPARATE; manager range includes replay plus UPDATE",
+        "warmup": "first request group once before begin_active"
+      },
+      "raw_exports": [],
+      "trace": {},
+      "trace_analysis": null
+    },
+    "PROFILE_ON_short_normal": {
+      "profile": {
+        "active_calls": 87,
+        "active_descriptors": {
+          "()": 54,
+          "(1, 7)": 7,
+          "(1, 8)": 6,
+          "(2, 14)": 7,
+          "(2, 16)": 6,
+          "(4, 28)": 7
+        },
+        "active_labels": {
+          "Draft_REPLAY_PLUS_UPDATE": 21,
+          "Draft_REPLAY_SUBMIT": 21,
+          "Draft_propose": 21,
+          "Target_REPLAY_PLUS_UPDATE": 12,
+          "Target_REPLAY_SUBMIT": 12
+        },
+        "active_source_gt0": 0,
+        "calls_total": 120,
+        "clock_domain": "HOST_MONOTONIC_NS_ONLY",
+        "completion": "NOT_PROVEN",
+        "groups": [
+          {
+            "active": false,
+            "duration_ms": 284.95,
+            "label": "warmup/smoke-1"
+          },
+          {
+            "active": true,
+            "duration_ms": 186.269,
+            "label": "smoke-1"
+          },
+          {
+            "active": true,
+            "duration_ms": 209.338,
+            "label": "smoke-2"
+          },
+          {
+            "active": true,
+            "duration_ms": 354.653,
+            "label": "smoke-4"
+          }
+        ],
+        "host_statistics": {
+          "Draft_REPLAY_PLUS_UPDATE": {
+            "mean_ms": 2.941902857142857,
+            "p50_ms": 2.83588,
+            "p95_ms": 4.1713,
+            "samples": 21,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 61.779959999999996
+          },
+          "Draft_REPLAY_SUBMIT": {
+            "mean_ms": 0.18737238095238096,
+            "p50_ms": 0.05741,
+            "p95_ms": 1.35566,
+            "samples": 21,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 3.93482
+          },
+          "Draft_propose": {
+            "mean_ms": 11.599129523809525,
+            "p50_ms": 14.07667,
+            "p95_ms": 15.33632,
+            "samples": 21,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 243.58172000000002
+          },
+          "Target_REPLAY_PLUS_UPDATE": {
+            "mean_ms": 4.814961666666667,
+            "p50_ms": 4.43072,
+            "p95_ms": 9.74688,
+            "samples": 12,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 57.779540000000004
+          },
+          "Target_REPLAY_SUBMIT": {
+            "mean_ms": 0.5120125,
+            "p50_ms": 0.05691,
+            "p95_ms": 4.99263,
+            "samples": 12,
+            "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION",
+            "sum_ms": 6.14415
+          }
+        },
+        "initialization_capture": "EXCLUDED",
+        "physical_read": "NOT_PROVEN",
+        "profiler_enabled": true,
+        "scope": "NORMAL_OBSERVER_OFF",
+        "source_start_columns_active": {
+          "0": 49
+        },
+        "status": "GRAPH_REPLAY_OBSERVED",
+        "update_host_range": "UNRESOLVED_SEPARATE; manager range includes replay plus UPDATE",
+        "warmup": "first request group once before begin_active"
+      },
+      "raw_exports": [
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/ASCEND_PROFILER_OUTPUT/analyse.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/ASCEND_PROFILER_OUTPUT/analysis.db",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/ASCEND_PROFILER_OUTPUT/ascend_pytorch_profiler_0.db",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/ASCEND_PROFILER_OUTPUT/operator_details.csv",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/ASCEND_PROFILER_OUTPUT/trace_view.json",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/FRAMEWORK/torch.op_mark",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/FRAMEWORK/torch.op_range",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/device_8/data/all_file.complete",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/device_8/data/stars_soc.data.8.slice_0",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/device_8/data/stars_soc.data.8.slice_0.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/device_8/data/stars_soc.data.8.slice_1",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/device_8/data/stars_soc.data.8.slice_1.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/device_8/dev_start.log.8",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/device_8/dev_start.log.8.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/device_8/end_info.8",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/device_8/end_info.8.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/device_8/host_start.log.8",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/device_8/host_start.log.8.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/device_8/info.json.8",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/device_8/info.json.8.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/device_8/sample.json",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/device_8/sample.json.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/device_8/start_info.8",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/device_8/start_info.8.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/aging.additional.context_id_info.slice_0",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/aging.additional.context_id_info.slice_0.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/aging.api_event.data.slice_0",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/aging.api_event.data.slice_0.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/aging.compact.task_track.slice_0",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/aging.compact.task_track.slice_0.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/all_file.complete",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.additional.capture_op_info.slice_0",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.additional.capture_op_info.slice_0.complete",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.additional.capture_op_info.slice_0.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.additional.hash_dic.slice_0",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.additional.hash_dic.slice_0.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.additional.hash_dic.slice_1",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.additional.hash_dic.slice_1.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.additional.type_info_dic.slice_0",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.additional.type_info_dic.slice_0.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.additional.type_info_dic.slice_1",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.additional.type_info_dic.slice_1.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.additional.type_info_dic.slice_2",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.additional.type_info_dic.slice_2.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.additional.type_info_dic.slice_3",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.additional.type_info_dic.slice_3.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.additional.type_info_dic.slice_4",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.additional.type_info_dic.slice_4.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.additional.type_info_dic.slice_5",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.additional.type_info_dic.slice_5.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.api_event.data.slice_0",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.api_event.data.slice_0.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.compact.capture_stream_info.slice_0",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.compact.capture_stream_info.slice_0.complete",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.compact.capture_stream_info.slice_0.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.compact.expand_stream_spec.slice_0",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.compact.expand_stream_spec.slice_0.complete",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.compact.expand_stream_spec.slice_0.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.compact.stream_sq_info.slice_0",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.compact.stream_sq_info.slice_0.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.compact.task_track.slice_0",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.compact.task_track.slice_0.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.variable.capture_op_info.slice_0",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/data/unaging.variable.capture_op_info.slice_0.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/end_info",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/end_info.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/host_start.log",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/host_start.log.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/info.json",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/info.json.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/sample.json",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/sample.json.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/start_info",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/PROF_000001_20261021004712671_00602233DQFPCAFN/host/start_info.done",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/logs/profiler_20261021004714_603728_ProfilingParser.log",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/logs/profiler_20261021004714_603737_CANNExportParser.log",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/logs/profiler_20261021004714_603754_TracePreParser.log",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/logs/profiler_20261021004747_604323_CANNAnalyzeParser.log",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/logs/profiler_20261021004747_604328_TraceViewParser.log",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/logs/profiler_20261021004747_604353_OperatorViewParser.log",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/logs/profiler_20261021004747_604355_TraceStepTimeParser.log",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/logs/profiler_20261021004750_604397_KernelViewParser.log",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/logs/profiler_20261021004750_604399_IntegrateParser.log",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/logs/profiler_20261021004750_604401_MemoryViewParser.log",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/logs/profiler_20261021004802_604490_CommunicationParser.log",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/profiler_info_0.json",
+        "trace/node-39-101_602233_20261021004712660_ascend_pt/profiler_metadata.json"
+      ],
+      "trace": {
+        "kernel_details": {
+          "fields": [
+            "Device_id",
+            "Name",
+            "Type",
+            "Accelerator Core",
+            "Start Time(us)",
+            "Duration(us)",
+            "Wait Time(us)",
+            "Block Num"
+          ],
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_short_normal/trace/node-39-101_602233_20261021004712660_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+          "rows": 10956,
+          "types": {
+            "N/A": 10956
+          },
+          "wait_us": {
+            "max": 5679.699,
+            "mean": 31.301515699160277,
+            "p50": 0.097,
+            "samples": 10956,
+            "sum": 342939.40600000095
+          }
+        },
+        "operator_details": {
+          "fields": [
+            "Name",
+            "Input Shapes",
+            "Call Stack",
+            "Host Self Duration(us)",
+            "Host Total Duration(us)",
+            "Device Self Duration(us)",
+            "Device Total Duration(us)",
+            "Device Self Duration With AICore(us)",
+            "Device Total Duration With AICore(us)"
+          ],
+          "host_self_us": {
+            "mean": 12.987892030403241,
+            "samples": 57757,
+            "sum": 750141.679999993
+          },
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_short_normal/trace/node-39-101_602233_20261021004712660_ascend_pt/ASCEND_PROFILER_OUTPUT/operator_details.csv",
+          "rows": 57757
+        },
+        "step_trace_time": {
+          "fields": [
+            "Device_id",
+            "Step",
+            "Computing",
+            "Communication(Not Overlapped)",
+            "Overlapped",
+            "Communication",
+            "Free",
+            "Stage",
+            "Bubble",
+            "Communication(Not Overlapped and Exclude Receive)",
+            "Preparing"
+          ],
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_short_normal/trace/node-39-101_602233_20261021004712660_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv",
+          "rows": 1
+        },
+        "task_time": {
+          "fields": [
+            "Device_id",
+            "kernel_name",
+            "kernel_type",
+            "stream_id",
+            "task_id",
+            "task_time(us)",
+            "task_start(us)",
+            "task_stop(us)"
+          ],
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_short_normal/trace/node-39-101_602233_20261021004712660_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv",
+          "rows": 20269,
+          "streams": {
+            "10": 1176,
+            "11": 1176,
+            "12": 4842,
+            "13": 4842,
+            "42": 63,
+            "43": 1107,
+            "45": 126,
+            "47": 5804,
+            "48": 6,
+            "9": 1127
+          }
+        },
+        "trace_view": {
+          "bytes_fields": "UNAVAILABLE_NO_SIZE_IN_EVENTS",
+          "categories": {
+            "HostToDevice": 19680,
+            "None": 42237,
+            "async_npu": 12994,
+            "async_task_queue": 14684,
+            "cpu_op": 57757,
+            "dequeue": 7342,
+            "enqueue": 7342
+          },
+          "events": 162036,
+          "flow_event_count": 47358,
+          "flow_names": {
+            "HostToDevice227293964271616": 6686,
+            "HostToDevice42554535968768": 2,
+            "HostToDevice42601780609024": 2,
+            "HostToDevice42627550412800": 2,
+            "HostToDevice42657615183872": 2,
+            "HostToDevice42691974922240": 2,
+            "HostToDevice42713449758720": 2,
+            "HostToDevice42739219562496": 2,
+            "HostToDevice42829413875712": 2,
+            "HostToDevice42855183679488": 2,
+            "HostToDevice42876658515968": 2,
+            "HostToDevice42889543417856": 2,
+            "HostToDevice42906723287040": 2,
+            "HostToDevice42928198123520": 2,
+            "HostToDevice42962557861888": 2,
+            "HostToDevice42988327665664": 2,
+            "HostToDevice43031277338624": 2,
+            "HostToDevice43044162240512": 2,
+            "enqueue_to_dequeue": 14684,
+            "torch_to_npu": 12994
+          },
+          "host_device_clock_join": "UNAVAILABLE_NO_CALIBRATED_CLOCK",
+          "memcpy_or_copy_names": {
+            "Dequeue@acl_memcpy_device_to_host": 63,
+            "Dequeue@acl_memcpy_host_to_device": 513,
+            "Dequeue@aclnnInplaceCopy": 1021,
+            "Enqueue@acl_memcpy_device_to_host": 63,
+            "Enqueue@acl_memcpy_host_to_device": 513,
+            "Enqueue@aclnnInplaceCopy": 1021,
+            "MEMCPY_ASYNC": 1859,
+            "acl_memcpy_device_to_host": 63,
+            "acl_memcpy_host_to_device": 513,
+            "aclnnInplaceCopy": 1021,
+            "aclnnInplaceCopy_CastAiCore_Cast": 42,
+            "aclnnInplaceCopy_SliceAiCore_Slice": 42,
+            "aclnnInplaceCopy_TransposeAiCore_Transpose": 21,
+            "aclnnInplaceCopy_ViewCopyAiCore_ViewCopy": 98,
+            "aten::_to_copy": 298,
+            "aten::copy_": 2245
+          },
+          "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_short_normal/trace/node-39-101_602233_20261021004712660_ascend_pt/ASCEND_PROFILER_OUTPUT/trace_view.json",
+          "phases": {
+            "C": 4,
+            "M": 53,
+            "X": 114621,
+            "f": 27022,
+            "s": 20336
+          },
+          "status": "PARSED",
+          "sync_named_events": 1901
+        }
+      },
+      "trace_analysis": {
+        "device_idle": "UNRESOLVED_WITHOUT_CALIBRATED_TIMELINE",
+        "files": [
+          {
+            "duration_units": "us",
+            "fields": [
+              "Device_id",
+              "Name",
+              "Type",
+              "Accelerator Core",
+              "Start Time(us)",
+              "Duration(us)",
+              "Wait Time(us)",
+              "Block Num"
+            ],
+            "nonempty": {
+              "Accelerator Core": 10956,
+              "Block Num": 10956,
+              "Device_id": 10956,
+              "Duration(us)": 10956,
+              "Name": 10956,
+              "Start Time(us)": 10956,
+              "Type": 10956,
+              "Wait Time(us)": 10956
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_short_normal/trace/node-39-101_602233_20261021004712660_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+            "rows": 10956
+          },
+          {
+            "duration_units": "us",
+            "fields": [
+              "Name",
+              "Input Shapes",
+              "Call Stack",
+              "Host Self Duration(us)",
+              "Host Total Duration(us)",
+              "Device Self Duration(us)",
+              "Device Total Duration(us)",
+              "Device Self Duration With AICore(us)",
+              "Device Total Duration With AICore(us)"
+            ],
+            "nonempty": {
+              "Call Stack": 0,
+              "Device Self Duration With AICore(us)": 57757,
+              "Device Self Duration(us)": 57757,
+              "Device Total Duration With AICore(us)": 57757,
+              "Device Total Duration(us)": 57757,
+              "Host Self Duration(us)": 57757,
+              "Host Total Duration(us)": 57757,
+              "Input Shapes": 0,
+              "Name": 57757
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_short_normal/trace/node-39-101_602233_20261021004712660_ascend_pt/ASCEND_PROFILER_OUTPUT/operator_details.csv",
+            "rows": 57757
+          },
+          {
+            "duration_units": "us",
+            "fields": [
+              "Device_id",
+              "Step",
+              "Computing",
+              "Communication(Not Overlapped)",
+              "Overlapped",
+              "Communication",
+              "Free",
+              "Stage",
+              "Bubble",
+              "Communication(Not Overlapped and Exclude Receive)",
+              "Preparing"
+            ],
+            "nonempty": {
+              "Bubble": 1,
+              "Communication": 1,
+              "Communication(Not Overlapped and Exclude Receive)": 1,
+              "Communication(Not Overlapped)": 1,
+              "Computing": 1,
+              "Device_id": 1,
+              "Free": 1,
+              "Overlapped": 1,
+              "Preparing": 1,
+              "Stage": 1,
+              "Step": 0
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_short_normal/trace/node-39-101_602233_20261021004712660_ascend_pt/ASCEND_PROFILER_OUTPUT/step_trace_time.csv",
+            "rows": 1
+          },
+          {
+            "duration_units": "us",
+            "fields": [
+              "Device_id",
+              "kernel_name",
+              "kernel_type",
+              "stream_id",
+              "task_id",
+              "task_time(us)",
+              "task_start(us)",
+              "task_stop(us)"
+            ],
+            "nonempty": {
+              "Device_id": 20269,
+              "kernel_name": 20269,
+              "kernel_type": 20269,
+              "stream_id": 20269,
+              "task_id": 20269,
+              "task_start(us)": 20269,
+              "task_stop(us)": 20269,
+              "task_time(us)": 20269
+            },
+            "path": "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_short_normal/trace/node-39-101_602233_20261021004712660_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv",
+            "rows": 20269
+          }
+        ],
+        "stage": "request-only profiling; prefill/decode attribution requires actual ranges",
+        "status": "FIELDS_ANALYZED",
+        "stream_context_flow": "FIELDS_INVENTORIED_NOT_INFERRED",
+        "target_draft_kernel_attribution": "UNRESOLVED_UNLESS_EXPLICIT_FLOW_ASSOCIATION",
+        "totals": {
+          "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_short_normal/trace/node-39-101_602233_20261021004712660_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv:UNRESOLVED_KERNEL_OR_API": {
+            "duration_us_sum": 409702.001999999,
+            "samples": 10935
+          },
+          "/mnt/wenqing/mrv2_graph_repair5_verify/20261020T144145Z_d0a3fc3d/artifacts/retry1/PROFILE_ON_short_normal/trace/node-39-101_602233_20261021004712660_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv:update": {
+            "duration_us_sum": 66.722,
+            "samples": 21
+          }
+        },
+        "warning": "overlapping duration sums are not end-to-end elapsed; host/device clocks not joined"
+      }
+    }
+  },
+  "control_normal_pairs": {
+    "OFF_long": {
+      "control_active_ms": 1583.628,
+      "control_mean_ms": 1.2280729787234044,
+      "diagnostic_delta_pct": 34.29,
+      "normal_active_ms": 1772.166,
+      "normal_mean_ms": 1.649232553191489,
+      "scope": "DIAGNOSTIC_ONLY; host submission duration, not device completion or release throughput"
+    },
+    "OFF_short": {
+      "control_active_ms": 592.036,
+      "control_mean_ms": 1.3370538095238096,
+      "diagnostic_delta_pct": 16.3,
+      "normal_active_ms": 675.081,
+      "normal_mean_ms": 1.5549990476190476,
+      "scope": "DIAGNOSTIC_ONLY; host submission duration, not device completion or release throughput"
+    },
+    "ON_long": {
+      "control_active_ms": 1771.647,
+      "control_mean_ms": 2.6618440425531924,
+      "diagnostic_delta_pct": 8.39,
+      "normal_active_ms": 1842.399,
+      "normal_mean_ms": 2.8851895744680847,
+      "scope": "DIAGNOSTIC_ONLY; host submission duration, not device completion or release throughput"
+    },
+    "ON_short": {
+      "control_active_ms": 648.82,
+      "control_mean_ms": 2.5779638095238093,
+      "diagnostic_delta_pct": 14.12,
+      "normal_active_ms": 750.26,
+      "normal_mean_ms": 2.941902857142857,
+      "scope": "DIAGNOSTIC_ONLY; host submission duration, not device completion or release throughput"
+    }
+  },
+  "limits": [
+    "Duration sums are not end-to-end elapsed or device occupancy.",
+    "Overlapping durations must not be added.",
+    "Host monotonic_ns is not joined to device timestamps.",
+    "Control still has light Host ranges; its overhead is not zero.",
+    "No profiling result is physical-read proof."
+  ],
+  "profile_capability": {
+    "apis": {
+      "profile": {
+        "signature": "(*, activities: Optional[collections.abc.Iterable[torch_npu._C._profiler.ProfilerActivity]] = None, schedule: Optional[collections.abc.Callable[[int], torch_npu.profiler.scheduler.ProfilerAction]] = None, on_trace_ready: Optional[collections.abc.Callable[..., Any]] = None, record_shapes: bool = False, profile_memory: bool = False, with_stack: bool = False, with_flops: bool = False, with_modules: bool = False, experimental_config: Optional[torch_npu.profiler.experimental_config._ExperimentalConfig] = None, custom_trace_id_callback: Optional[collections.abc.Callable[[], str]] = None, use_cuda: Optional[bool] = None)",
+        "source": "class profile(_KinetoProfile):\n    def __init__(\n        self,\n        *,\n        activities: Optional[Iterable[ProfilerActivity]] = None,\n        schedule: Optional[Callable[[int], ProfilerAction]] = None,\n        on_trace_ready: Optional[Callable[..., Any]] = None,\n        record_shapes: bool = False,\n        profile_memory: bool = False,\n        with_stack: bool = False,\n        with_flops: bool = False,\n        with_modules: bool = False,\n        experimental_config: Optional[_ExperimentalConfig] = None,\n        custom_trace_id_callback: Optional[Callable[[], str]] = None,\n        # deprecated:\n        use_cuda: Optional[bool] = None,\n    ):\n        super().__init__(\n            activities=activities,\n            record_shapes=record_shapes,\n            profile_memory=profile_memory,\n            with_stack=with_stack,\n            with_flops=with_flops,\n            with_modules=with_modules,\n            experimental_config=experimental_config,\n        )\n        activities_set = set(activities) if activities else supported_activities()\n        if schedule and isinstance(schedule, Callable):\n            self.schedule = schedule\n            # add step markers into the trace and table view\n            self.record_steps = True\n        else:\n            if schedule:\n                print_warn_msg(\"schedule is not Callable, set by default.\")\n            self.schedule = _default_schedule_fn\n            self.record_steps = False\n        if on_trace_ready and not isinstance(on_trace_ready, Callable):\n            print_warn_msg(\"on_trace_ready is not Callable, set by default.\")\n            on_trace_ready = None\n        self.prof_if = _ProfInterface(\n            activities=activities_set,\n            record_shapes=record_shapes,\n            profile_memory=profile_memory,\n            with_stack=with_stack,\n            with_flops=with_flops,\n            with_modules=with_modules,\n            experimental_config=experimental_config,\n            schedule=self.schedule,\n            metadata=self.metadata,\n            custom_trace_id_callback=custom_trace_id_callback,\n        )\n        self.on_trace_ready = on_trace_ready\n        self.step_num = 0\n        self.current_action = self.schedule(self.step_num)\n        self._step_num_offset = 0\n        self.step_rec_fn: Optional[prof.record_function] = None\n        self._step_mstx_range_id = 0\n        self._is_dynamic_prof = False\n        if use_cuda is not None:\n            print_warn_msg(\"This is npu environment, use_cuda is invalid\")\n        self.stopped = False\n        self.action_controller = ProfActionController(\n            self, self.prof_if, self.on_trace_ready\n        )\n\n    @no_exception_func()\n    def __enter__(self):\n        self.start()\n        return self\n\n    @no_exception_func()\n    def __exit__(self, exe_type, exe_val, exc_tb):\n        self.stop()\n\n    @no_exception_func()\n    def __del__(self):\n        if not self.stopped:\n            self.stop()\n\n    @no_exception_func()\n    def _set_step_num_offset_for_dynamic_prof(self, step: int):\n        self._step_num_offset = step\n        self._is_dynamic_prof = True\n\n    def _start_step_mstx_range(self, message: str):\n        if not self._is_dynamic_prof:\n            self._step_mstx_range_id = mstx.range_start(message, current_stream())\n\n    def _end_step_mstx_range(self):\n        if self._is_dynamic_prof or not self._step_mstx_range_id:\n            return\n        mstx.range_end(self._step_mstx_range_id)\n        self._step_mstx_range_id = 0\n\n    @no_exception_func()\n    def start(self):\n        self.stopped = False\n        if not self.on_trace_ready:\n            ProfPathCreator().init(export_only_mode=True)\n        self.action_controller.transit_action(ProfilerAction.NONE, self.current_action)\n        if self.record_steps:\n            step_name = \"ProfilerStep#\" + str(self.step_num + self._step_num_offset)\n            self.step_rec_fn = prof.record_function(step_name)\n            self.step_rec_fn.__enter__()\n            self._start_step_mstx_range(step_name)\n\n    @no_exception_func()\n    def stop(self):\n        if self.record_steps and self.step_rec_fn:\n            self.step_rec_fn.__exit__(None, None, None)\n            self._end_step_mstx_range()\n        self.action_controller.transit_action(self.current_action, None)\n        self.stopped = True\n\n    @no_exception_func()\n    def step(self):\n        if self.stopped:\n            print_warn_msg(\"Profiler is stopped, step takes no effect!\")\n            return\n        if self.record_steps and self.step_rec_fn:\n            self.step_rec_fn.__exit__(None, None, None)\n            self._end_step_mstx_range()\n        prev_action = self.current_action\n        self.step_num += 1\n        self.current_action = self.schedule(self.step_num)\n        self.action_controller.transit_action(prev_action, self.current_action)\n        if self.record_steps:\n            step_name = \"ProfilerStep#\" + str(self.step_num + self._step_num_offset)\n            self.step_rec_fn = prof.record_function(step_name)\n            self.step_rec_fn.__enter__()\n            self._start_step_mstx_range(step_name)\n\n    @no_exception_func()\n    def set_custom_trace_id_callback(self, callback: Callable[[], str]) -> None:\n        self.prof_if.custom_trace_id_callback = callback\n\n    @no_exception_func()\n    def get_trace_id(self) -> str:\n        return self.prof_if.trace_id\n\n    @classmethod\n    @no_exception_func()\n    def enable_profiler_in_child_thread(\n        cls,\n        record_shapes: bool = False,\n        profile_memory: bool = False,\n        with_stack: bool = False,\n        with_flops: bool = False,\n        with_modules: bool = False,\n    ):\n        params = {\n            \"record_shapes\": record_shapes,\n            \"profile_memory\": profile_memory,\n            \"with_stack\": with_stack,\n            \"with_flops\": with_flops,\n            \"with_modules\": with_modules,\n        }\n        for param_name, param_value in params.items():\n            if not isinstance(param_value, bool):\n                print_warn_msg(\n                    f\"{param_name} in enable_profiler_in_child_thread is not bool, reset it to False.\"\n                )\n                params[param_name] = False\n        npu_prof_config = NpuProfilerConfig(\n            \"\",\n            params[\"record_shapes\"],\n            params[\"profile_memory\"],\n            params[\"with_stack\"],\n            params[\"with_flops\"],\n            params[\"with_modules\"],\n            C_ExperimentalConfig(),\n        )\n        _enable_profiler_in_child_thread(npu_prof_config)\n\n    @classmethod\n    @no_exception_func()\n    def disable_profiler_in_child_thread(cls):\n        torch_npu.npu.synchronize()\n        _disable_profiler_in_child_thread()\n"
+      },
+      "tensorboard_trace_handler": {
+        "signature": "(dir_name: Optional[str] = None, worker_name: Optional[str] = None, analyse_flag: bool = True, async_mode: bool = False)",
+        "source": "@no_exception_func()\ndef tensorboard_trace_handler(\n    dir_name: Optional[str] = None,\n    worker_name: Optional[str] = None,\n    analyse_flag: bool = True,\n    async_mode: bool = False,\n):\n    ProfPathCreator().init(worker_name=worker_name, dir_name=dir_name)\n    if not isinstance(analyse_flag, bool):\n        print_warn_msg(\"analyse_flag is not bool, set by default.\")\n        analyse_flag = True\n    if not isinstance(async_mode, bool):\n        print_warn_msg(\"async_mode is not bool, set by default.\")\n        async_mode = False\n\n    def handler_fn(prof_inst) -> None:\n        if analyse_flag:\n            prof_inst.prof_if.analyse(async_mode=async_mode)\n\n    return handler_fn\n"
+      }
+    },
+    "status": "APIS_AVAILABLE_DEVICE_NOT_RUN",
+    "version": "2.10.0.post4"
+  },
+  "run_id": "20261020T144145Z_d0a3fc3d",
+  "schema": "p7x-repair5-profiling-summary-v1",
+  "source_sha": "d0a3fc3d42d7d97e5e7da3890d2710263a097e63"
+}

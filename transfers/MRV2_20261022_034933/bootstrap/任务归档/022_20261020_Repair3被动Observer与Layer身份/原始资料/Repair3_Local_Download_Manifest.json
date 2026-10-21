@@ -1,0 +1,29 @@
+{
+  "schema_version": "repair3-local-download-v1",
+  "commit": "10cbf4c014fc6cc48a6fea611bb605cecdd54cfd",
+  "tree": "28dddd6d1fc19e67270ee71b7b9e7fcd410ab3c9",
+  "zip_crc": "PASS",
+  "extraction": "PASS",
+  "json_parsed": 26,
+  "payload_hashes_verified": 66,
+  "artifact_index_entries": 65,
+  "extraction_path": "/var/folders/jg/1291_6m930x__sj1qzy3kdsh0000gn/T/repair3-final-zip-verify.x_tzp1vn",
+  "receiver_verification": "NOT_YET_RECEIVED",
+  "files": [
+    {
+      "filename": "P7X_Graph_Base_A3_Repair3_Implementation_And_Readiness_Report.md",
+      "bytes": 33834,
+      "sha256": "40c0e86ae630ce77b4b5e85331aff223f6394960347557d7b6f24c1ada0bfc37"
+    },
+    {
+      "filename": "P7X_Graph_Base_A3_Repair3_Server_Handoff.json",
+      "bytes": 2489,
+      "sha256": "5f132248bc7fbbe021435675671761c1d79641f02434edc021f60e39436d0a18"
+    },
+    {
+      "filename": "g1-g5_repair3_local.zip",
+      "bytes": 140669,
+      "sha256": "2c46b30e324514b3f77a3711c61af8be4868c806fe31c2b6aac905086b6db5ce"
+    }
+  ]
+}

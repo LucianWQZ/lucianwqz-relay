@@ -1,0 +1,47 @@
+{
+  "schema_version": "repair4-download-v1",
+  "created_utc": "2026-10-20T03:07:52.391988+00:00",
+  "commit": "aaa4632612503adb34d90b55c36eedcaf0848979",
+  "tree": "d39adc3de6b98523680b918997469914ca3992e4",
+  "publication": "NOT_PUBLISHED",
+  "new_sha_device": "NOT_RUN",
+  "zip_crc": "VERIFIED",
+  "member_hashes": "VERIFIED",
+  "json_parse": "VERIFIED",
+  "handoff_and_report_copies": "IDENTICAL",
+  "files": [
+    {
+      "filename": "P7X_Graph_Base_A3_Repair4_Implementation_And_Readiness_Report.md",
+      "purpose": "independent reviewer self-contained report",
+      "bytes": 28950,
+      "sha256": "55b6c9e39aae91151316f81e69162965c3942548b81dc548d9432406381bde1e"
+    },
+    {
+      "filename": "P7X_Graph_Base_A3_Repair4_Server_Handoff.json",
+      "purpose": "machine handoff PRE_PUBLICATION",
+      "bytes": 7768,
+      "sha256": "5e0291ac77e86ce0f7a5e7f155bd574eea05f309fee89e66468e9233c5ce4f3d"
+    },
+    {
+      "filename": "g1-g5_repair4_local.zip",
+      "purpose": "reviewer evidence/diff/tests",
+      "bytes": 169919,
+      "sha256": "b02aa5d6ee417d1406c5c9bddfa5199eb224fd395c93c220d113e5ca8ca0e0d4"
+    },
+    {
+      "filename": "P7X_Graph_Base_A3_Repair4_Server_Input_Pack.zip",
+      "purpose": "server inputs only; not authorization",
+      "bytes": 30126,
+      "sha256": "e84561750c3edf0eca5871b4f33aeb3db15af81924d8b5009a0044ce3f646ec7"
+    }
+  ],
+  "review_needs": [
+    "P7X_Graph_Base_A3_Repair4_Implementation_And_Readiness_Report.md",
+    "g1-g5_repair4_local.zip"
+  ],
+  "server_needs": [
+    "P7X_Graph_Base_A3_Repair4_Server_Handoff.json",
+    "P7X_Graph_Base_A3_Repair4_Server_Input_Pack.zip"
+  ],
+  "self_hash_excluded": true
+}

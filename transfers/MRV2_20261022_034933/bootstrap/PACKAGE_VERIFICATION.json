@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "source_copy_files_checked": 7480,
+  "json_jsonl_checked": 1747,
+  "new_internal_links_checked": 7702,
+  "complete_zip_members": 7535,
+  "complete_zip_crc": "PASS",
+  "errors": [],
+  "scope_assertions": {
+    "note_pr_scanned": false,
+    "external_private_file_relay_scanned": false,
+    "production_modified": false,
+    "server_experiment_run": false
+  }
+}

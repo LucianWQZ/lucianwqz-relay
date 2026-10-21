@@ -1,0 +1,69 @@
+{
+  "created_utc": "2026-10-19T20:09:42.716638+00:00",
+  "fixture_manifest_sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+  "local_integrity": "VERIFIED",
+  "notes": [
+    "B0 observer-on is FAIL; no campaign outputs were fabricated.",
+    "T0 msprof capture and export succeeded, but task/operand/generation/completion fields are insufficient.",
+    "This machine verification does not mean the receiver has downloaded or verified the packages."
+  ],
+  "package_verification": "return/VERIFICATION.json",
+  "packager_command": "return/PACKAGER_COMMAND.json",
+  "packages": [
+    {
+      "bytes": 19342605,
+      "contents_scope": "all artifacts except target-logits-*.pt",
+      "excluded": [
+        "target-logits-*.pt"
+      ],
+      "filename": "Repair3_review.zip",
+      "index_files": 335,
+      "local_integrity": "VERIFIED",
+      "members": 337,
+      "pt_members": 0,
+      "receiver_integrity": "NOT_YET_VERIFIED",
+      "sha256": "633664dee2062f654162e71e9da04c745940b34d2ee33b183351d71cee57f164",
+      "shards": [],
+      "trace_members": 116
+    },
+    {
+      "bytes": 133525200,
+      "contents_scope": "all artifacts under artifacts/",
+      "excluded": [],
+      "filename": "Repair3_raw.zip",
+      "index_files": 382,
+      "local_integrity": "VERIFIED",
+      "members": 384,
+      "pt_members": 47,
+      "receiver_integrity": "NOT_YET_VERIFIED",
+      "sha256": "9625b9eab9b4baf2400700bb127ab40de63896915ba7e89e96d6a44efcd74031",
+      "shards": [],
+      "trace_members": 116
+    }
+  ],
+  "receiver_integrity": "NOT_YET_VERIFIED",
+  "review_vs_raw": {
+    "raw_includes": [
+      "all approved artifacts",
+      "target-logits-*.pt"
+    ],
+    "raw_only_all_pt": true,
+    "raw_only_count": 47,
+    "review_excludes": [
+      "target-logits-*.pt"
+    ]
+  },
+  "run_id": "20261019T185701Z_10cbf4c0",
+  "schema_version": "repair3-download-v2",
+  "shards": [],
+  "source_sha": "10cbf4c014fc6cc48a6fea611bb605cecdd54cfd",
+  "source_tree": "28dddd6d1fc19e67270ee71b7b9e7fcd410ab3c9",
+  "trace_delivery": {
+    "included_in_raw": true,
+    "included_in_review": true,
+    "note": "The provided packager review excludes only .pt files; it does not auto-exclude the large trace. The full trace is present in both packages.",
+    "path": "traces/msprof-T0/PROF_000001_20261020034728044_00224640QLGMJHNC/",
+    "raw_binary_db_and_json_retained": true,
+    "separate_trace_raw_zip": false
+  }
+}

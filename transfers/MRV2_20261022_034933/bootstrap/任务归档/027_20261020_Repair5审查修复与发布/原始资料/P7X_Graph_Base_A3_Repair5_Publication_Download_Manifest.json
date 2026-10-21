@@ -1,0 +1,53 @@
+{
+  "schema_version": "repair5-publication-download-v1",
+  "final": {
+    "branch": "fix/p7x-graph-base-a3-repair5",
+    "sha": "d0a3fc3d42d7d97e5e7da3890d2710263a097e63",
+    "commit": "d0a3fc3d42d7d97e5e7da3890d2710263a097e63",
+    "tree": "2f6b93415ced94fe3f4ba22c518699a023b97511",
+    "parent": "3bdc413aa9826e4c199f5d96125e71db2c343420"
+  },
+  "publication": "VERIFIED",
+  "new_sha_device_verification": "NOT_RUN",
+  "minimum_online_review": [
+    "P7X_Graph_Base_A3_Repair5_Review_Fix_And_Publication_Report.md",
+    "g1-g5_repair5_review_fix_publication.zip"
+  ],
+  "server_files": [
+    "P7X_Graph_Base_A3_Repair5_Server_Input_Pack.zip",
+    "P7X_Graph_Base_A3_Repair5_Publication_Download_Manifest.json"
+  ],
+  "files": [
+    {
+      "path": "P7X_Graph_Base_A3_Repair5_Review_Fix_And_Publication_Report.md",
+      "bytes": 21550,
+      "sha256": "9a619e1108ddf08b866f386d599074c6ebbddbc9c6dda6994d3077fb508f8a48",
+      "purpose": "自包含最终审查/发布报告"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair5_Server_Handoff.json",
+      "bytes": 142554,
+      "sha256": "f4ff8891fe44d08e89c851c4a3c985902f338e5997ca07912d83515c127efc90",
+      "purpose": "最终机器交接"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair5_Server_Input_Pack.zip",
+      "bytes": 35287,
+      "sha256": "1288673bca8ea9e58dcc01e8b7448ae5a1fad27eb96e4470333d5fa8d1106746",
+      "purpose": "服务器输入，无production覆盖补丁"
+    },
+    {
+      "path": "g1-g5_repair5_review_fix_publication.zip",
+      "bytes": 189780,
+      "sha256": "81da144065c57f0d8b8615ddbe66cfc14f9f6080f0d2867b11bd66c580c34fc4",
+      "purpose": "紧凑在线评审证据"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair5_Publication_Package_Verification.json",
+      "bytes": 1349,
+      "sha256": "ca296092e1773bc12f2f28c7b09e4de3455b57cf53305a84756a0d75c3ee71ac",
+      "purpose": "本地解压验收结果"
+    }
+  ],
+  "hash_policy": "manifest not self-hashed; zip internal index excludes itself; no circular reference"
+}

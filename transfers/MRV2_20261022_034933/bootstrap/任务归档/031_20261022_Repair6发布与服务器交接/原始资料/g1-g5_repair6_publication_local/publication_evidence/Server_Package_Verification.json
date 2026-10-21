@@ -1,0 +1,11 @@
+{
+  "status": "VERIFIED",
+  "path": "/Users/wenqingzhang/Desktop/Note/MRV2/g1-g5_repair6_publication_local/P7X_Graph_Base_A3_Repair6_Server_Input_Pack.zip",
+  "bytes": 76403,
+  "sha256": "6fcf372b12a73ab75845b003c1ca5c4caa4b95ea4f9d5c2d7b2327b57794b7d9",
+  "members": 26,
+  "memory": "streaming 4 MiB; JSON index <=16 MiB",
+  "device_verification": "NOT_ASSESSED",
+  "actual_extract_verified": true,
+  "extract": "/Users/wenqingzhang/Desktop/Note/MRV2/g1-g5_repair6_publication_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack"
+}

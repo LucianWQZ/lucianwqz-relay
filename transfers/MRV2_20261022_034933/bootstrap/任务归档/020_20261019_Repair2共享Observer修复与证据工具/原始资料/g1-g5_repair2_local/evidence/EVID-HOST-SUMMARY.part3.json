@@ -1,0 +1,10 @@
+{
+  "ut_files": {
+    "test_draft_window_graph_characterization.py": "25 passed",
+    "test_draft_window_graph_carrier.py": "47 passed",
+    "test_draft_window_graph_binding.py": "37 passed",
+    "test_draft_window_graph_oracle.py": "7 passed"
+  },
+  "real_owner_regression": "2 passed",
+  "host_lifecycle": "16 passed"
+}

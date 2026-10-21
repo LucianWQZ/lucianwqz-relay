@@ -1,0 +1,140 @@
+{
+  "checks": [
+    {
+      "check": "sha256:Repair3_review.zip",
+      "detail": "633664dee2062f654162e71e9da04c745940b34d2ee33b183351d71cee57f164",
+      "status": "PASS"
+    },
+    {
+      "check": "crc:Repair3_review.zip",
+      "detail": null,
+      "status": "PASS"
+    },
+    {
+      "check": "safe_paths:Repair3_review.zip",
+      "detail": [],
+      "status": "PASS"
+    },
+    {
+      "check": "no_model_native:Repair3_review.zip",
+      "detail": [],
+      "status": "PASS"
+    },
+    {
+      "check": "approved_pt:Repair3_review.zip",
+      "detail": [],
+      "status": "PASS"
+    },
+    {
+      "check": "artifact_index:Repair3_review.zip",
+      "detail": [],
+      "status": "PASS"
+    },
+    {
+      "check": "sha256sums:Repair3_review.zip",
+      "detail": [],
+      "status": "PASS"
+    },
+    {
+      "check": "no_unindexed_members:Repair3_review.zip",
+      "detail": [],
+      "status": "PASS"
+    },
+    {
+      "check": "json_parse:Repair3_review.zip",
+      "detail": [],
+      "status": "PASS"
+    },
+    {
+      "check": "required_members:Repair3_review.zip",
+      "detail": [],
+      "status": "PASS"
+    },
+    {
+      "check": "sha256:Repair3_raw.zip",
+      "detail": "9625b9eab9b4baf2400700bb127ab40de63896915ba7e89e96d6a44efcd74031",
+      "status": "PASS"
+    },
+    {
+      "check": "crc:Repair3_raw.zip",
+      "detail": null,
+      "status": "PASS"
+    },
+    {
+      "check": "safe_paths:Repair3_raw.zip",
+      "detail": [],
+      "status": "PASS"
+    },
+    {
+      "check": "no_model_native:Repair3_raw.zip",
+      "detail": [],
+      "status": "PASS"
+    },
+    {
+      "check": "approved_pt:Repair3_raw.zip",
+      "detail": [],
+      "status": "PASS"
+    },
+    {
+      "check": "artifact_index:Repair3_raw.zip",
+      "detail": [],
+      "status": "PASS"
+    },
+    {
+      "check": "sha256sums:Repair3_raw.zip",
+      "detail": [],
+      "status": "PASS"
+    },
+    {
+      "check": "no_unindexed_members:Repair3_raw.zip",
+      "detail": [],
+      "status": "PASS"
+    },
+    {
+      "check": "json_parse:Repair3_raw.zip",
+      "detail": [],
+      "status": "PASS"
+    },
+    {
+      "check": "required_members:Repair3_raw.zip",
+      "detail": [],
+      "status": "PASS"
+    },
+    {
+      "check": "review_vs_raw_exclusion",
+      "detail": {
+        "raw_only_all_pt": true,
+        "raw_only_count": 47,
+        "review_only": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "raw_contains_all_artifacts",
+      "detail": {
+        "artifact_files": 382,
+        "raw_index": 382
+      },
+      "status": "PASS"
+    }
+  ],
+  "local_integrity": "VERIFIED",
+  "overall": "PASS",
+  "package_info": {
+    "Repair3_raw.zip": {
+      "index_files": 382,
+      "members": 384,
+      "pt_members": 47,
+      "trace_members": 116
+    },
+    "Repair3_review.zip": {
+      "index_files": 335,
+      "members": 337,
+      "pt_members": 0,
+      "trace_members": 116
+    }
+  },
+  "receiver_integrity": "NOT_YET_VERIFIED",
+  "run_id": "20261019T185701Z_10cbf4c0",
+  "schema_version": "p7x-repair3-package-verification-v1"
+}

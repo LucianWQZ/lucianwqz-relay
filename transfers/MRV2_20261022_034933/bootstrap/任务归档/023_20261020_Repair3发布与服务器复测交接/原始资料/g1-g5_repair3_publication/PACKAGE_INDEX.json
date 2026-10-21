@@ -1,0 +1,118 @@
+{
+  "self_excluded": [
+    "PACKAGE_INDEX.json",
+    "SHA256SUMS"
+  ],
+  "files": [
+    {
+      "path": "COMMAND_LEDGER.md",
+      "bytes": 2957,
+      "sha256": "b397ffc074812902beb474f30669dba2c8fef23dacfe97ccb8279e2fac40b4f7"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair3_Publication_And_Server_Readiness_Report.md",
+      "bytes": 11546,
+      "sha256": "c8c0a90c7ef2fa3728644075d5d54ba90fb7b7d136ef2761f0dd906288d8816a"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair3_Server_Handoff.json",
+      "bytes": 4496,
+      "sha256": "808ad311388db8b9da2699a3db66652996b69c233ed05a9a864c5a0e6a49d65b"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair3_Server_Input_Pack.zip",
+      "bytes": 39927,
+      "sha256": "3b1397d660e9254b1f06ce9cfbbf24c95f148ac40fed3320ade8390d0d6fdd27"
+    },
+    {
+      "path": "PUBLICATION_STATUS.json",
+      "bytes": 4496,
+      "sha256": "808ad311388db8b9da2699a3db66652996b69c233ed05a9a864c5a0e6a49d65b"
+    },
+    {
+      "path": "check_results.json",
+      "bytes": 5282,
+      "sha256": "664d030254b1b1e8120fdc3aface665f9a6155aadf5f2d9b894ef84e177ad463"
+    },
+    {
+      "path": "historical-COMMAND_LEDGER.md",
+      "bytes": 1232,
+      "sha256": "6a8426cb2117f058c0b9253277216511c9652beea3cc9a11a5a26d834c5691c7"
+    },
+    {
+      "path": "historical-PUBLICATION_STATUS.json",
+      "bytes": 821,
+      "sha256": "e4441a8e50814df254a5bdeded67722fcbf1dac0c2978fab7f166031a1ea9ffe"
+    },
+    {
+      "path": "logs/api-fallback-safety.txt",
+      "bytes": 652,
+      "sha256": "b90b0235f2b1ea7ab57c4a1d2a646dd01956fea45ebf5623cf88292ebf6f018e"
+    },
+    {
+      "path": "logs/clean-room-status.txt",
+      "bytes": 333,
+      "sha256": "bc1d5572826abb5ea26c3c4af84938142f8f2062b2429a92d084be6743f64233"
+    },
+    {
+      "path": "logs/final-network-check.txt",
+      "bytes": 333,
+      "sha256": "23b21c027aafb096557ffd7184594d3c0c26c1f1919df54c3fc4cfcb4f63fc71"
+    },
+    {
+      "path": "logs/full-precommit-environment-blocked.log",
+      "bytes": 3989,
+      "sha256": "1553d1f8366f2bf5f7d3e5e8c2aa3101e6c71fb58a423968613c34227238cc19"
+    },
+    {
+      "path": "logs/github-identity-and-refs.txt",
+      "bytes": 515,
+      "sha256": "3ca60c8fad34634bc41112401485c806f4dc1d335dd01cab0d2f8881f68b8e00"
+    },
+    {
+      "path": "logs/gitleaks.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "logs/hook-codespell.log",
+      "bytes": 80,
+      "sha256": "dfe34c2da94f22ade96c5485dbf1eb1593b7667a3817d5e5c375baf8853676c3"
+    },
+    {
+      "path": "logs/hook-ruff-check.log",
+      "bytes": 80,
+      "sha256": "a0b89d57f9b6c3ceb980814836970c036d45058fc93ed1be57acf8b0381352f1"
+    },
+    {
+      "path": "logs/hook-ruff-format.log",
+      "bytes": 80,
+      "sha256": "370442f018ade47bf8c4df3e9a82d9ee38eb53948d2e813c3609b4b23daa2752"
+    },
+    {
+      "path": "logs/hook-typos.log",
+      "bytes": 80,
+      "sha256": "c0683881eb620e308ed9508e95a93695a24ba5fe3baa7bf27492a1fc058bffbe"
+    },
+    {
+      "path": "logs/local-source-identity.txt",
+      "bytes": 585,
+      "sha256": "27db7ec9971b7c50ac181d0f0b8dc7751fe6c2463470456c260aaa9b52e05e8a"
+    },
+    {
+      "path": "logs/ordinary-push-failure.txt",
+      "bytes": 298,
+      "sha256": "57a99b0422d70e31ee7cecb2a3c2074e71bb177e9472d7ecaf5f3b2f8e779a89"
+    },
+    {
+      "path": "logs/targeted.log",
+      "bytes": 757,
+      "sha256": "cb4f2961bbf70d604c7df7b0b28cc1f74d64c70521e12655993373aa6a47cb0d"
+    },
+    {
+      "path": "source_identity.json",
+      "bytes": 1423,
+      "sha256": "5789775d486101debaaa995e900f323b268705235d9e4b6c3a7269a30cce8605"
+    }
+  ]
+}

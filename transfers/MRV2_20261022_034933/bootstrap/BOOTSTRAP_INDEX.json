@@ -1,0 +1,3419 @@
+{
+ "schema_version": 1,
+ "note_zh": "bootstrap只覆盖中文导航、原始Markdown、关键交接与校验材料；未列出的文件必须由完整ZIP取得。",
+ "excluded_nested_relay_files": 4,
+ "file_count": 682,
+ "total_bytes": 43240601,
+ "files": [
+  {
+   "path": "00_先读这里.md",
+   "bytes": 966,
+   "sha256": "393596c5cc9b4beec89a8f75d7989b0b0f1b01e8ece8f8349cd22991c2f5ad3e"
+  },
+  {
+   "path": "01_当前进展与下一步.md",
+   "bytes": 1263,
+   "sha256": "13d1522f3c16dbd86b18cf210aa903d22eaaa8e604de20b3bcb705a4ae60ece8"
+  },
+  {
+   "path": "02_任务时间线.md",
+   "bytes": 11928,
+   "sha256": "b0218fed804ccbfb869d790e8738165d481b7529a1d50d909bb625557b8306aa"
+  },
+  {
+   "path": "03_完整文档目录.md",
+   "bytes": 2834828,
+   "sha256": "7750b49bb9f4751116be7a2f0d6d929c0c3c832a63e1b973a0cfb16c4943ee1c"
+  },
+  {
+   "path": "04_迁移范围与完整性报告.md",
+   "bytes": 972,
+   "sha256": "8da77e7b239619a0752e34320da8c768a4b4da4e323ecedf4ff11160a33a4a02"
+  },
+  {
+   "path": "05_服务器接管说明.md",
+   "bytes": 957,
+   "sha256": "66239c2cf257d3bf426c71cac819c895b0c99e8bca3eea7c450d9fa10b37b066"
+  },
+  {
+   "path": "DOCUMENT_CATALOG.jsonl",
+   "bytes": 8570181,
+   "sha256": "452203d0cb9920efe32dfbfe3e0e5adefb9cc679068d8273287b190f23b7ff26"
+  },
+  {
+   "path": "PACKAGE_VERIFICATION.json",
+   "bytes": 407,
+   "sha256": "dd56e306d28ff85707247b6f19c740696fc7fb09034e7b1b25603439551a59b3"
+  },
+  {
+   "path": "PATH_MAP.json",
+   "bytes": 5267049,
+   "sha256": "927d3bd3fde3a5e006addf9c415d5dcde16aa59781df02c6ee372918776a92ae"
+  },
+  {
+   "path": "SHA256SUMS",
+   "bytes": 1889506,
+   "sha256": "96e0e0631b68868c2c70cdfefb3e077303036a42d3abcb611ed9a6fd0abc15cb"
+  },
+  {
+   "path": "TASK_INDEX.json",
+   "bytes": 13823,
+   "sha256": "614381280e8fedf5265e1ffece42ae20c3c763e2e7fddfbeab52778bdac69c2e"
+  },
+  {
+   "path": "TRANSFER_MANIFEST.json",
+   "bytes": 579,
+   "sha256": "2740ca1e5e3b1c3b69276713cb12193eb078d970f291faa576d727d8f9946f3f"
+  },
+  {
+   "path": "VERIFY_TRANSFER.py",
+   "bytes": 1285,
+   "sha256": "63810188982a423ba58db318dfc9902428001b879354e532257ea649ce87ac67"
+  },
+  {
+   "path": "evidence_index_BUILD_SUMMARY.json",
+   "bytes": 668,
+   "sha256": "4fee1d95253dac0e6ea66f3c37ad104457639caf3c51e0d2d1ee6b346286670f"
+  },
+  {
+   "path": "evidence_index_COPY_ERRORS.json",
+   "bytes": 3,
+   "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  {
+   "path": "evidence_index_EXCLUDED_ITEMS.json",
+   "bytes": 11622,
+   "sha256": "da6fd2387c2e42552405c7e51bba39576d3b5198dde696b04ae58bcdb04d7107"
+  },
+  {
+   "path": "evidence_index_FROZEN_SOURCE_FILES.jsonl",
+   "bytes": 2822951,
+   "sha256": "056bfca67a0a2ec5d87c80439de893a5e57c587c17af4e697ae644b3b1db1773"
+  },
+  {
+   "path": "evidence_index_JSON_PARSE_SPECIAL_CASES.json",
+   "bytes": 487,
+   "sha256": "37badfd6913b403b7e2ff2a2a8ece7e689806c902e8dc711d92a3688ed4aa766"
+  },
+  {
+   "path": "evidence_index_SOURCE_SNAPSHOT.json",
+   "bytes": 454,
+   "sha256": "9ed32e3e92b2532a6917896cc9a0a453cebe922278e198a19c37b87f5e2f2b8c"
+  },
+  {
+   "path": "evidence_index_UNREADABLE_ITEMS.json",
+   "bytes": 3,
+   "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  {
+   "path": "evidence_index_ZIP_MEMBER_CATALOG.jsonl",
+   "bytes": 1175877,
+   "sha256": "044c0ae9359b7d754b15f6b06c3a14b9b1f06c9ae8ae1a6242faee53cff6ef76"
+  },
+  {
+   "path": "任务归档/001_20260924_滑动窗口原理与MRV1到MRV2前期研究/00_任务说明.md",
+   "bytes": 3416,
+   "sha256": "da2977cab4970feb72b8ef078512c2281bc4d933617bab9d2096691c7afdc559"
+  },
+  {
+   "path": "任务归档/001_20260924_滑动窗口原理与MRV1到MRV2前期研究/原始资料/DSpark_sliding_window_v1_to_v2.md",
+   "bytes": 39575,
+   "sha256": "2f03dd141d30016714b706ddf3e62a9a14d457c0ec7dae4815ee5dcf8ba4ceec"
+  },
+  {
+   "path": "任务归档/001_20260924_滑动窗口原理与MRV1到MRV2前期研究/原始资料/Draft/MRV1_SlidingWindowAdapter_阶段1_v1.md",
+   "bytes": 49740,
+   "sha256": "b58d75c90d5b3e3e618ee582f4e461672a146d11afc7b1c8627fc7b43b7266f1"
+  },
+  {
+   "path": "任务归档/001_20260924_滑动窗口原理与MRV1到MRV2前期研究/原始资料/Draft/MRV1_SlidingWindowAdapter_阶段1_知识沉淀_v2.md",
+   "bytes": 16227,
+   "sha256": "bc4caadf9837728d9406f9a82e95afd00bd9470175411b66a3bfe8fef4dc0bf5"
+  },
+  {
+   "path": "任务归档/001_20260924_滑动窗口原理与MRV1到MRV2前期研究/原始资料/Sliding window原理_gpt.md",
+   "bytes": 184613,
+   "sha256": "99b97a64d17a06bb5851ad29e18ee20acc50656c5f65da5ba6ab9711f3ae2796"
+  },
+  {
+   "path": "任务归档/001_20260924_滑动窗口原理与MRV1到MRV2前期研究/原始资料/Sliding window源码_codex.md",
+   "bytes": 435834,
+   "sha256": "29ea0faf45ebe01180bffb52c2260b891bd10210059d7efc51bcffa4eda75e35"
+  },
+  {
+   "path": "任务归档/001_20260924_滑动窗口原理与MRV1到MRV2前期研究/原始资料/测试/P7X_Full_NonGraph_Validation_师傅汇报_Phase1_Phase2.md",
+   "bytes": 6821,
+   "sha256": "b752ba449d3820114f470a196007b96cf0f08da3cde3dce24397416fa324bc4f"
+  },
+  {
+   "path": "任务归档/001_20260924_滑动窗口原理与MRV1到MRV2前期研究/原始资料/测试/P7X_Phase1_Phase2_工程复盘_面向开发者.md",
+   "bytes": 10826,
+   "sha256": "e4e73ce1c6ff7b444699c9aeb81d1e237c5b1ad16df8baf79ffe88fff7312318"
+  },
+  {
+   "path": "任务归档/001_20260924_滑动窗口原理与MRV1到MRV2前期研究/原始资料/测试/SW_DSpark_性能汇总_P7X_Phase2_全长度矩阵.md",
+   "bytes": 12869,
+   "sha256": "2cc2068d327e8a43b94e1105d9e016cd492187a3eab6ecd69a4922b7bb0c69b4"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/00_任务说明.md",
+   "bytes": 2892,
+   "sha256": "a7a58e1e75b61457078d5a4763f34aa8be8548f0625e4a313ded50ad163327ca"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/原始资料/MRV2_Draft_Window_Implementation_Plan.md",
+   "bytes": 226073,
+   "sha256": "9fb89ca67e20ebdae34d9c4419945acd34baf22cca9f6358b79320d21ca05725"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/原始资料/MRV2_Final_Design_Codex_Review_By_DS.md",
+   "bytes": 70539,
+   "sha256": "676a753cf4c413e7b395b9185de11853e6717b300a33537ba7d5307b39f769e7"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/原始资料/MRV2_Final_Design_DS_Review_By_Codex.md",
+   "bytes": 112532,
+   "sha256": "7d6ba78dd1777819152a6e462691e263dc1e44e11ba9e836f86e63b08af8ec14"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/原始资料/MRV2_Speculative_Draft_Sliding_Window_%E5%AF%BC%E5%B8%88%E8%AF%84%E5%AE%A1%E6%BC%94%E7%A4%BA%E5%8C%85/MRV2_Draft_Sliding_Window_导师评审与讲解版.md",
+   "bytes": 55917,
+   "sha256": "eafb92cb89142507b83714eb49ff4a3e21c66f9ab486748202614bf39c77af90"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/原始资料/MRV2_Speculative_Draft_Sliding_Window_%E5%AF%BC%E5%B8%88%E8%AF%84%E5%AE%A1%E6%BC%94%E7%A4%BA%E5%8C%85/README_如何演示.md",
+   "bytes": 1508,
+   "sha256": "decf2110f8f956492c8997f19024ce768aff184b4cfc267345591c7ab6a68974"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/原始资料/MRV2_Speculative_Draft_Sliding_Window_%E5%AF%BC%E5%B8%88%E8%AF%84%E5%AE%A1%E6%BC%94%E7%A4%BA%E5%8C%85/reference/MRV2_Speculative_Draft_Sliding_Window_Final_Design.md",
+   "bytes": 83210,
+   "sha256": "34bac670d7651f468d75b55300d35df5ca5ab1ef9fd9ffcce53731effcfbcdba"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/原始资料/MRV2_Speculative_Draft_Sliding_Window_Design_Codex.md",
+   "bytes": 87059,
+   "sha256": "e2c82c1b3ccddfcc73409e37b8cf16ca1d90af5055dbcd06c190c21f86a08927"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/原始资料/MRV2_Speculative_Draft_Sliding_Window_Design_Codex_v2.md",
+   "bytes": 58178,
+   "sha256": "a4d7ce9c814a0cf592a8476c36e5f88d0f29a853ca11a8fd1692aeb62aaf76ee"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/原始资料/MRV2_Speculative_Draft_Sliding_Window_Design_DS.md",
+   "bytes": 87803,
+   "sha256": "150908cb98520198df1f57d91d84fd27a972f7c5e1e03dc31c4dfa168e2b94b3"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/原始资料/MRV2_Speculative_Draft_Sliding_Window_Design_DS_v2.md",
+   "bytes": 74106,
+   "sha256": "aca8190e80a29636b466afe5b1cc5208f239ee9721070c6b4bb5f7702e314007"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/原始资料/MRV2_Speculative_Draft_Sliding_Window_Design_GPT.md",
+   "bytes": 49338,
+   "sha256": "5c362bcfae298b54bda1d6ef3d3fbccbd13579c19c939a6cdb59a7b11c4b5c02"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/原始资料/MRV2_Speculative_Draft_Sliding_Window_Design_GPT_v2.md",
+   "bytes": 75477,
+   "sha256": "8dfa5f8d1db24f1d01eb3672ee23e4e97fba1f267dd79a9734b5e46d74c7cbab"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/原始资料/MRV2_Speculative_Draft_Sliding_Window_Design_codex_dsReview.md",
+   "bytes": 76733,
+   "sha256": "2014072999de887b5848855dffa5fbdc7a177b4f124ea7785848788ace5dd4cd"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/原始资料/MRV2_Speculative_Draft_Sliding_Window_Design_ds_codexReview.md",
+   "bytes": 55851,
+   "sha256": "54f6020e1544656a29b39257dd94ef0bcc1de9c20561be71b0d19bbd99a6e41f"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/原始资料/MRV2_Speculative_Draft_Sliding_Window_Design_gpt_dsReview.md",
+   "bytes": 70629,
+   "sha256": "405e6f4e0427422ca4cbb102515845f74c297034a181bbe3ac12115d7c4e0f96"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/原始资料/MRV2_Speculative_Draft_Sliding_Window_Final_Design.md",
+   "bytes": 102075,
+   "sha256": "47a8e54d4f36f25ef6fe13a519d3f3c9361930de2afbe515e2c2d686f95bb006"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/原始资料/MRV2_Speculative_Draft_Sliding_Window_Final_Design_Codex.md",
+   "bytes": 106489,
+   "sha256": "b11e4f7fb19c8df0d17ac79c26c8c0148e5c85e5d351c012a7d8526430dcfd27"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/原始资料/MRV2_Speculative_Draft_Sliding_Window_Final_Design_DS.md",
+   "bytes": 124711,
+   "sha256": "6540fe78bdae6062c9d15291c6ea1250e71aa2e5544995d02842e6144c9867a2"
+  },
+  {
+   "path": "任务归档/002_20261008_多方设计评审与最终架构冻结/原始资料/MRV2_Speculative_Draft_Sliding_Window_Final_Design_Mentor_Presentation.md",
+   "bytes": 80169,
+   "sha256": "b5ca567a1f2e2d15f90ee3d19c068d6190bff5d17e35dc34489f8753a5d0476e"
+  },
+  {
+   "path": "任务归档/003_20261010_P1策略数学与类型/00_任务说明.md",
+   "bytes": 1237,
+   "sha256": "625ef9167d76a81507e23ae108e18f0a3c332eb1b7ed0fc71de3a1c00010fed6"
+  },
+  {
+   "path": "任务归档/003_20261010_P1策略数学与类型/原始资料/P1_Policy_Math_Types_Implementation_Notes.md",
+   "bytes": 47207,
+   "sha256": "5fb5a30e4df0e40bd422455579aae6abfb5c58dccc32af4c71db23f302ba817f"
+  },
+  {
+   "path": "任务归档/004_20261010_P2库存FullSource与Provider/00_任务说明.md",
+   "bytes": 1291,
+   "sha256": "e96fd39d20778c08c1d7c0f7d5762e09adb9896af660f6f2c1be5730205813e9"
+  },
+  {
+   "path": "任务归档/004_20261010_P2库存FullSource与Provider/原始资料/P2_Inventory_FullSource_Provider_Implementation_Notes.md",
+   "bytes": 46569,
+   "sha256": "0d008c77a9a4df199e8f60fe455d78c52ef0d7b25cace3c7374c528a425f1714"
+  },
+  {
+   "path": "任务归档/005_20261010_P3租约Workspace传输与Store/00_任务说明.md",
+   "bytes": 1302,
+   "sha256": "04762454867f91feb2765f191d98a0a94f2381524782c58d093c23a782003ccc"
+  },
+  {
+   "path": "任务归档/005_20261010_P3租约Workspace传输与Store/原始资料/P3_Lease_Workspace_Transport_Store_Implementation_Notes.md",
+   "bytes": 36804,
+   "sha256": "939391cf699277cb0bd535642d7088b1afa45730346689afd67ee3c22903937f"
+  },
+  {
+   "path": "任务归档/006_20261010_P4_Eager集成实现/00_任务说明.md",
+   "bytes": 1695,
+   "sha256": "db4f4492e27bd398a7accec78b1b915356e2e6f721885779df061dc49f0eb015"
+  },
+  {
+   "path": "任务归档/006_20261010_P4_Eager集成实现/原始资料/P4_Draft_Attention_Eager_Integration_Implementation_Notes.md",
+   "bytes": 36928,
+   "sha256": "0db2fcda15e06b98376896cf7f9cfed4dfd7f351ee3cf507737ff3b4db6420b0"
+  },
+  {
+   "path": "任务归档/006_20261010_P4_Eager集成实现/原始资料/P4a_Ascend_Only_Eager_Integration_Implementation_Notes.md",
+   "bytes": 33971,
+   "sha256": "2d6541b8ff1a2e1cbd7ee339fd58d8ee9a2a8123055688ff89ed9cca8b64f123"
+  },
+  {
+   "path": "任务归档/006_20261010_P4_Eager集成实现/原始资料/P4b_Eagle3_StaticK_Eager_Integration_Implementation_Notes.md",
+   "bytes": 36985,
+   "sha256": "2b1810f5cb97a24abc4a90feca1e48876cc9d537f8e07bc1d1604ba30a1fc58f"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/00_任务说明.md",
+   "bytes": 3198,
+   "sha256": "430082433baa85d9db12977361d2092bf4f49a79d12991c13048b79a3cf1439e"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/P4_freeze/MRV2_P0_P4b_Commit_Manifest.md",
+   "bytes": 16576,
+   "sha256": "aec26b80f9e2a7ed73d2d062b711efdf1e06eba14c959e83d0508a47527b3680"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/P4_freeze/MRV2_P0_P4b_Implementation_Snapshot.md",
+   "bytes": 27124,
+   "sha256": "5cf8e7e2fdad9f7a0144bec8a1d3c1440541b7264416223adbb4ed87420c0d1f"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/P4_freeze/P4_GitHub_Cleanroom_Deployment_Audit.md",
+   "bytes": 22783,
+   "sha256": "e045fe27f5f5ae6fa84c86274b89bdf429f5bc7a078d6eddd6c7b82d1d147436"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/P4_freeze/notes/MRV2_Draft_Window_Implementation_Plan.md",
+   "bytes": 161499,
+   "sha256": "d657ad09a6b96f58d328f6d6d65c59ead5fcbece73dbc47d5ec790eabc1fda44"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/P4_freeze/notes/MRV2_Speculative_Draft_Sliding_Window_Final_Design.md",
+   "bytes": 95505,
+   "sha256": "8f2bb2d2ffe9a8f5705a6fc86affd004e07d8f27416bcd0d57233ad570a2b83d"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/P4_freeze/notes/P1_Policy_Math_Types_Implementation_Notes.md",
+   "bytes": 47207,
+   "sha256": "5fb5a30e4df0e40bd422455579aae6abfb5c58dccc32af4c71db23f302ba817f"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/P4_freeze/notes/P2_Inventory_FullSource_Provider_Implementation_Notes.md",
+   "bytes": 46569,
+   "sha256": "0d008c77a9a4df199e8f60fe455d78c52ef0d7b25cace3c7374c528a425f1714"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/P4_freeze/notes/P3_Lease_Workspace_Transport_Store_Implementation_Notes.md",
+   "bytes": 36804,
+   "sha256": "939391cf699277cb0bd535642d7088b1afa45730346689afd67ee3c22903937f"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/P4_freeze/notes/P4_Draft_Attention_Eager_Integration_Implementation_Notes.md",
+   "bytes": 36928,
+   "sha256": "0db2fcda15e06b98376896cf7f9cfed4dfd7f351ee3cf507737ff3b4db6420b0"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/P4_freeze/notes/P4a_Ascend_Only_Eager_Integration_Implementation_Notes.md",
+   "bytes": 33971,
+   "sha256": "2d6541b8ff1a2e1cbd7ee339fd58d8ee9a2a8123055688ff89ed9cca8b64f123"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/P4_freeze/notes/P4b_Eagle3_StaticK_Eager_Integration_Implementation_Notes.md",
+   "bytes": 36985,
+   "sha256": "2b1810f5cb97a24abc4a90feca1e48876cc9d537f8e07bc1d1604ba30a1fc58f"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/P4_validation_report/MRV2_Draft_Window_P0_P4_Evidence_Decision_Log.md",
+   "bytes": 8633,
+   "sha256": "32d58a55f32a6b83347327b11a48a0c7c9e32a58ff36827db9d051f4916daa9e"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/P4_validation_report/MRV2_Draft_Window_P0_P4_Final_Engineering_Summary_CN.md",
+   "bytes": 25381,
+   "sha256": "8baaa12e73137d134e686392f67666343dfe4937f511421cb3ae896827e53bd5"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/P4_validation_report/MRV2_Draft_Window_P0_P4_Runtime_Support_Matrix.md",
+   "bytes": 8829,
+   "sha256": "ceaa7dfea4342a1c847a2683ea065e93255e4e14e4c36f6e97f7f13560cd245f"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/P4_validation_report/MRV2_Draft_Window_P5_P8_Entry_Baseline.md",
+   "bytes": 9341,
+   "sha256": "15e3e796596256ffeffdf81ef133b6d17c4dbbcee6a23f6457f0c14469efe9ad"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/P4_validation_report/P0_P4_Final_Commit_Manifest.md",
+   "bytes": 11018,
+   "sha256": "d828f8b060c036cf4ff810085490975685cb730575752d73045b7c984d9e539d"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/Server_Final_Evidence/MRV2_Draft_Window_P0_P4_Server_Final_Evidence_Report_CN.md",
+   "bytes": 33338,
+   "sha256": "c076b2c577ea2a4ff23bac4987474b4251aefcd53869492f6ea75fa0fa13d153"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/Server_Final_Evidence/MRV2_P0_P4_Server_Final_Evidence_CN.md",
+   "bytes": 57930,
+   "sha256": "25f610cea116d980abe8dd9d2a001007cbaf4af74d640a52e16f1e6cd119a95f"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/Server_Final_Evidence/P0_P4_Server_Evidence_Index.md",
+   "bytes": 6581,
+   "sha256": "247a689c71bc4c57a6912aa5af034b56f430eb5ba8382621d797f45ec65d1368"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/Server_Final_Evidence/P0_P4_Server_Support_Matrix.json",
+   "bytes": 4937,
+   "sha256": "3b1c398de3bb7f175243ff02f8206b729d6f790eb5a0811f87943a1986a3bb26"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/Server_Final_Evidence/P4b_R3_Closeout_Report_node133.md",
+   "bytes": 17197,
+   "sha256": "791bfd880d3dec6030b48278bdf6676ddca1d8bde26a069bb0167a4982c5b9ef"
+  },
+  {
+   "path": "任务归档/007_20261012_P4冻结部署与服务器证据/原始资料/Server_Final_Evidence/P4b_R3_Final_Eagle3_NPU_Correctness_Validation_Report.md",
+   "bytes": 40336,
+   "sha256": "999535cec056a3b5b0091dd9a6c12abac3ec53e8f5b67222394fd5a0a7a945fa"
+  },
+  {
+   "path": "任务归档/008_20261012_MRV2目录内私有传输副本/00_任务说明.md",
+   "bytes": 1632,
+   "sha256": "583eb4a0a22b1f96cf379986239cd0fd07bbc5d84dfb9308e4f0381885371e26"
+  },
+  {
+   "path": "任务归档/009_20261013_P5_Graph绑定基础/00_任务说明.md",
+   "bytes": 1347,
+   "sha256": "b880821bc6cbc7970888c081a6ae71568f8f40faaed94e0aa764170abc0652e6"
+  },
+  {
+   "path": "任务归档/009_20261013_P5_Graph绑定基础/原始资料/P5_Ascend_Only_Graph_Binding_Implementation_Notes.md",
+   "bytes": 26600,
+   "sha256": "eb09de9be0b056030f8c3066f93de2a45e1854e365123895f47dd93747d4d392"
+  },
+  {
+   "path": "任务归档/009_20261013_P5_Graph绑定基础/原始资料/P5_DeepSeek_Independent_Review.md",
+   "bytes": 25595,
+   "sha256": "26b066f9ea1490a64c92d3d50e4439d1dc9230768c6df82fda1a86754730598e"
+  },
+  {
+   "path": "任务归档/010_20261013_P6按Consumer_Graph读Carrier/00_任务说明.md",
+   "bytes": 1385,
+   "sha256": "c84cf8f0f5475bcae2e71ef58afb891e33f9ef8206c1dae802f9f34539deb423"
+  },
+  {
+   "path": "任务归档/010_20261013_P6按Consumer_Graph读Carrier/原始资料/P6_Capture_Runtime_Identity_Spec.md",
+   "bytes": 5704,
+   "sha256": "50d880ad8b5ce35831023cfde69425cdb17ae81ccb66c245c793d1c66e518814"
+  },
+  {
+   "path": "任务归档/010_20261013_P6按Consumer_Graph读Carrier/原始资料/P6_DeepSeek_Independent_Review.md",
+   "bytes": 32069,
+   "sha256": "f51476b551ae9c5694617c529e320fdee07d4d02afea4b837a1a5a7c500710f8"
+  },
+  {
+   "path": "任务归档/010_20261013_P6按Consumer_Graph读Carrier/原始资料/P6_Graph_Consumer_Matrix.md",
+   "bytes": 5440,
+   "sha256": "ca7342fb7e4a857cbb5efb2092a5330591555aacdd61cf9d26ecb6cceb7f7db1"
+  },
+  {
+   "path": "任务归档/010_20261013_P6按Consumer_Graph读Carrier/原始资料/P6_Graph_Read_Carrier_Per_Consumer_Implementation_Notes.md",
+   "bytes": 24127,
+   "sha256": "dd12582eb8cffc512483fb10b1841966b91fd486174ad9d6f290c22f4279ed90"
+  },
+  {
+   "path": "任务归档/010_20261013_P6按Consumer_Graph读Carrier/原始资料/P6_Replay_Update_Timeline.md",
+   "bytes": 4135,
+   "sha256": "e1de131ee12e0d9a39887e60f14048aee6ac0d95710d0c25f80dc5a60b3264d1"
+  },
+  {
+   "path": "任务归档/010_20261013_P6按Consumer_Graph读Carrier/原始资料/P6_Route_Fingerprint_Spec.md",
+   "bytes": 3995,
+   "sha256": "be6956eefb47604ffe9b424d684008bd0c9d4c0355e52a7fc8cee377a6ef4c2e"
+  },
+  {
+   "path": "任务归档/011_20261014_P6A_Capture_Seam调查与Graph冻结/00_任务说明.md",
+   "bytes": 1241,
+   "sha256": "7bb174dac79917747aa0befaa500902ef90cac0a1bb7b8c5c60c1ad14b33ff91"
+  },
+  {
+   "path": "任务归档/011_20261014_P6A_Capture_Seam调查与Graph冻结/原始资料/P6A_Ascend_Capture_Seam_Search_Ledger.md",
+   "bytes": 23077,
+   "sha256": "484280fdcfc467519d2bba12b91cc5dc4a33169c4e6f8762b2bc7f7f908cfb12"
+  },
+  {
+   "path": "任务归档/011_20261014_P6A_Capture_Seam调查与Graph冻结/原始资料/P6A_Ascend_Owned_Pre_Capture_Seam_Investigation_Notes.md",
+   "bytes": 23047,
+   "sha256": "6043bf2ca294b12bf7e97ac04a56dff662df2702dd971fdbf942ff6d301f5665"
+  },
+  {
+   "path": "任务归档/011_20261014_P6A_Capture_Seam调查与Graph冻结/原始资料/P6A_Codex_Final_Review_Adjudication_and_Graph_Track_Freeze.md",
+   "bytes": 12427,
+   "sha256": "f0542f578e5c2cda872233c06932f337b177da4699085d5eb1c89c2bd84c3d8f"
+  },
+  {
+   "path": "任务归档/011_20261014_P6A_Capture_Seam调查与Graph冻结/原始资料/P6A_DeepSeek_Independent_Review.md",
+   "bytes": 27575,
+   "sha256": "30c886f48a94582219d4eed385a65d1cd5961fa911ba7a6522a5a821be135f10"
+  },
+  {
+   "path": "任务归档/012_20261014_P7_Eager能力矩阵/00_任务说明.md",
+   "bytes": 1516,
+   "sha256": "3d2b5d9f3fa1c1c51a237f5dd63b3b635bfcef9fe51e562421b36fb10d4fc0a0"
+  },
+  {
+   "path": "任务归档/012_20261014_P7_Eager能力矩阵/原始资料/P7_Eager_Async_State_Machine.md",
+   "bytes": 6855,
+   "sha256": "ba2c5f2f865e40797b008779610f7708dfafa82a52e18e0fb1e3904a7b768e6a"
+  },
+  {
+   "path": "任务归档/012_20261014_P7_Eager能力矩阵/原始资料/P7_Eager_Capability_Matrix.md",
+   "bytes": 9272,
+   "sha256": "c2e4ac0dfa3081cc448b4ba191b243a141777e5831578d23dcf2ae2a0c527767"
+  },
+  {
+   "path": "任务归档/012_20261014_P7_Eager能力矩阵/原始资料/P7_Eager_DeepSeek_Independent_Review.md",
+   "bytes": 27218,
+   "sha256": "5c0aa0e55ead90e5ce1bccc0f44a3ec23613e5469a6d49919b5edee092ea14ff"
+  },
+  {
+   "path": "任务归档/012_20261014_P7_Eager能力矩阵/原始资料/P7_Eager_Implementation_Notes.md",
+   "bytes": 20114,
+   "sha256": "2131b29e23eabea6f12b737a9dbac05e6d317551a1b24dcd056bea4f85b8b40f"
+  },
+  {
+   "path": "任务归档/012_20261014_P7_Eager能力矩阵/原始资料/P7_Eager_NPU_Test_Matrix.md",
+   "bytes": 8904,
+   "sha256": "36c534def7bfb3af2b13ffb3367fbf25ec6c5cdffa2bdd3a0a9e16559acb4fb0"
+  },
+  {
+   "path": "任务归档/012_20261014_P7_Eager能力矩阵/原始资料/P7_Eager_Source_Inventory.md",
+   "bytes": 15406,
+   "sha256": "376a62882a0c71ee9bfb08d9e01ef1a605849d60e6188a3061e90d1629354bdb"
+  },
+  {
+   "path": "任务归档/012_20261014_P7_Eager能力矩阵/原始资料/P7_Eager_Topology_Fingerprint_Spec.md",
+   "bytes": 6283,
+   "sha256": "86faf6ebc8a0700f24003e67e1e75248b66750718abbd4235c5292a5301e9f69"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/00_任务说明.md",
+   "bytes": 3922,
+   "sha256": "589b581efce4a587f0bef73f997ae58364a26945a5ed87db311058e3f92a3efd"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_Eager_DeepSeek_Independent_Delivery_Review.md",
+   "bytes": 35129,
+   "sha256": "449673824a8cc1879657075b8702eb0a078f2597c5c85083c192c393341d669a"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/MRV2_P0_P7_Commit_Manifest.md",
+   "bytes": 8241,
+   "sha256": "94982afd38dd7626cc48d2a2cef8a760834449ceb44157f5190467e05cc42c31"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/MRV2_P0_P7_Implementation_Snapshot.md",
+   "bytes": 7559,
+   "sha256": "5d3db7e9919c258298262fa2e69046b2c7da1cfab9ad559d76e511bc9f81f91c"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/P8_Eager_Cleanroom_Restore_Report.md",
+   "bytes": 4314,
+   "sha256": "9b543f2f218b18086c2c0a1c85cd1af306f22a446b9fb9c934e2d107eb7483db"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/P8_Eager_Comprehensive_NPU_Test_Plan.md",
+   "bytes": 19993,
+   "sha256": "980f255ce12d83590da7a9119d32e560e50cca972baff8a02dd63eb1d2092a0a"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/P8_Eager_DeepSeek_Independent_Delivery_Review.md",
+   "bytes": 35129,
+   "sha256": "449673824a8cc1879657075b8702eb0a078f2597c5c85083c192c393341d669a"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/P8_Eager_Delivery_Acceptance_Report.md",
+   "bytes": 15355,
+   "sha256": "93b4d381279d412cee9ea8edbbeea55cb1f16ebc19cfc2dbc20480704b86edd9"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/P8_Eager_Final_Support_Matrix.md",
+   "bytes": 7159,
+   "sha256": "d5bb0d90e763291ec2dba5ee29ddb034bc1ddb8e8f8da8ab47a215bfb3c07168"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/P8_Eager_Online_Debug_Playbook.md",
+   "bytes": 11810,
+   "sha256": "99b195d6ad30056729d875a9e52ba6079e8f0f704f248fd8847b2a2ae617b1e6"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/P8_Eager_Owner_Mandatory_Matrix.md",
+   "bytes": 7070,
+   "sha256": "8c652b63b8afb4ae2d257ec36c65490e8e5c7e0fbe1dddef5300bba853e2ecaf"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/P8_Eager_Release_Risk_Register.md",
+   "bytes": 5939,
+   "sha256": "86bac724668d8b5320933d89138c93120edf7d517f466c178f0eebf685de6228"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/P8_Eager_Runtime_Evidence_Ledger.md",
+   "bytes": 4986,
+   "sha256": "5c035aab844173627a2f82059006a585f3542d5ebcb422ce4f3f26125bcaaa1a"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/P8_Eager_Runtime_Gates.md",
+   "bytes": 5282,
+   "sha256": "8a05a44a60ca756fc36a60d5b54819e303e33e4c41377c6e4a8d333bdf0ae0f4"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/P8_Freeze_Reproducibility_Report.md",
+   "bytes": 3775,
+   "sha256": "afc6bea9646f535584e0308d2dacbbd4f63fcd88ece9a8b14129091e4c6af5b3"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/P8_GitHub_Deployment_Audit.md",
+   "bytes": 8778,
+   "sha256": "95eb0c0a46a9dd69ba44b3b9c610eb91ba2c27ccb292d11fcf8d6cd1090268b9"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/P8_Local_Test_Results.md",
+   "bytes": 4914,
+   "sha256": "1d7a37d09a664514fe6a8de7f7eaec0f12fee0e423ec356ef9ecbc02cf685a4b"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/evidence/P4_validation_report/MRV2_Draft_Window_P0_P4_Evidence_Decision_Log.md",
+   "bytes": 8633,
+   "sha256": "32d58a55f32a6b83347327b11a48a0c7c9e32a58ff36827db9d051f4916daa9e"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/evidence/P4_validation_report/MRV2_Draft_Window_P0_P4_Final_Engineering_Summary_CN.md",
+   "bytes": 25381,
+   "sha256": "8baaa12e73137d134e686392f67666343dfe4937f511421cb3ae896827e53bd5"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/evidence/P4_validation_report/MRV2_Draft_Window_P0_P4_Runtime_Support_Matrix.md",
+   "bytes": 8829,
+   "sha256": "ceaa7dfea4342a1c847a2683ea065e93255e4e14e4c36f6e97f7f13560cd245f"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/evidence/P4_validation_report/MRV2_Draft_Window_P5_P8_Entry_Baseline.md",
+   "bytes": 9341,
+   "sha256": "15e3e796596256ffeffdf81ef133b6d17c4dbbcee6a23f6457f0c14469efe9ad"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/evidence/P4_validation_report/P0_P4_Final_Commit_Manifest.md",
+   "bytes": 11018,
+   "sha256": "d828f8b060c036cf4ff810085490975685cb730575752d73045b7c984d9e539d"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/evidence/Server_Final_Evidence/MRV2_Draft_Window_P0_P4_Server_Final_Evidence_Report_CN.md",
+   "bytes": 33338,
+   "sha256": "c076b2c577ea2a4ff23bac4987474b4251aefcd53869492f6ea75fa0fa13d153"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/evidence/Server_Final_Evidence/MRV2_P0_P4_Server_Final_Evidence_CN.md",
+   "bytes": 57930,
+   "sha256": "25f610cea116d980abe8dd9d2a001007cbaf4af74d640a52e16f1e6cd119a95f"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/evidence/Server_Final_Evidence/P0_P4_Server_Evidence_Index.md",
+   "bytes": 6581,
+   "sha256": "247a689c71bc4c57a6912aa5af034b56f430eb5ba8382621d797f45ec65d1368"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/evidence/Server_Final_Evidence/P0_P4_Server_Support_Matrix.json",
+   "bytes": 4937,
+   "sha256": "3b1c398de3bb7f175243ff02f8206b729d6f790eb5a0811f87943a1986a3bb26"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/evidence/Server_Final_Evidence/P4b_R3_Closeout_Report_node133.md",
+   "bytes": 17197,
+   "sha256": "791bfd880d3dec6030b48278bdf6676ddca1d8bde26a069bb0167a4982c5b9ef"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/evidence/Server_Final_Evidence/P4b_R3_Final_Eagle3_NPU_Correctness_Validation_Report.md",
+   "bytes": 40336,
+   "sha256": "999535cec056a3b5b0091dd9a6c12abac3ec53e8f5b67222394fd5a0a7a945fa"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/MRV2_Draft_Window_Implementation_Plan.md",
+   "bytes": 213905,
+   "sha256": "eaa256fe28f14e2fe942692cf2e642745e2cb0989a8049230c0044255b3df1a3"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/MRV2_Speculative_Draft_Sliding_Window_Final_Design.md",
+   "bytes": 95505,
+   "sha256": "8f2bb2d2ffe9a8f5705a6fc86affd004e07d8f27416bcd0d57233ad570a2b83d"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P1_Policy_Math_Types_Implementation_Notes.md",
+   "bytes": 47207,
+   "sha256": "5fb5a30e4df0e40bd422455579aae6abfb5c58dccc32af4c71db23f302ba817f"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P2_Inventory_FullSource_Provider_Implementation_Notes.md",
+   "bytes": 46569,
+   "sha256": "0d008c77a9a4df199e8f60fe455d78c52ef0d7b25cace3c7374c528a425f1714"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P3_Lease_Workspace_Transport_Store_Implementation_Notes.md",
+   "bytes": 36804,
+   "sha256": "939391cf699277cb0bd535642d7088b1afa45730346689afd67ee3c22903937f"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P4_Draft_Attention_Eager_Integration_Implementation_Notes.md",
+   "bytes": 36928,
+   "sha256": "0db2fcda15e06b98376896cf7f9cfed4dfd7f351ee3cf507737ff3b4db6420b0"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P4a_Ascend_Only_Eager_Integration_Implementation_Notes.md",
+   "bytes": 33971,
+   "sha256": "2d6541b8ff1a2e1cbd7ee339fd58d8ee9a2a8123055688ff89ed9cca8b64f123"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P4b_Eagle3_StaticK_Eager_Integration_Implementation_Notes.md",
+   "bytes": 36985,
+   "sha256": "2b1810f5cb97a24abc4a90feca1e48876cc9d537f8e07bc1d1604ba30a1fc58f"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P5_Ascend_Only_Graph_Binding_Implementation_Notes.md",
+   "bytes": 26600,
+   "sha256": "eb09de9be0b056030f8c3066f93de2a45e1854e365123895f47dd93747d4d392"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P5_DeepSeek_Independent_Review.md",
+   "bytes": 25595,
+   "sha256": "26b066f9ea1490a64c92d3d50e4439d1dc9230768c6df82fda1a86754730598e"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P6A_Ascend_Capture_Seam_Search_Ledger.md",
+   "bytes": 23077,
+   "sha256": "484280fdcfc467519d2bba12b91cc5dc4a33169c4e6f8762b2bc7f7f908cfb12"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P6A_Ascend_Owned_Pre_Capture_Seam_Investigation_Notes.md",
+   "bytes": 23047,
+   "sha256": "6043bf2ca294b12bf7e97ac04a56dff662df2702dd971fdbf942ff6d301f5665"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P6A_Codex_Final_Review_Adjudication_and_Graph_Track_Freeze.md",
+   "bytes": 12427,
+   "sha256": "f0542f578e5c2cda872233c06932f337b177da4699085d5eb1c89c2bd84c3d8f"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P6A_DeepSeek_Independent_Review.md",
+   "bytes": 27575,
+   "sha256": "30c886f48a94582219d4eed385a65d1cd5961fa911ba7a6522a5a821be135f10"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P6_Capture_Runtime_Identity_Spec.md",
+   "bytes": 5704,
+   "sha256": "50d880ad8b5ce35831023cfde69425cdb17ae81ccb66c245c793d1c66e518814"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P6_DeepSeek_Independent_Review.md",
+   "bytes": 32069,
+   "sha256": "f51476b551ae9c5694617c529e320fdee07d4d02afea4b837a1a5a7c500710f8"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P6_Graph_Consumer_Matrix.md",
+   "bytes": 5440,
+   "sha256": "ca7342fb7e4a857cbb5efb2092a5330591555aacdd61cf9d26ecb6cceb7f7db1"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P6_Graph_Read_Carrier_Per_Consumer_Implementation_Notes.md",
+   "bytes": 24127,
+   "sha256": "dd12582eb8cffc512483fb10b1841966b91fd486174ad9d6f290c22f4279ed90"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P6_Replay_Update_Timeline.md",
+   "bytes": 4135,
+   "sha256": "e1de131ee12e0d9a39887e60f14048aee6ac0d95710d0c25f80dc5a60b3264d1"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P6_Route_Fingerprint_Spec.md",
+   "bytes": 3995,
+   "sha256": "be6956eefb47604ffe9b424d684008bd0c9d4c0355e52a7fc8cee377a6ef4c2e"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P7_Eager_Async_State_Machine.md",
+   "bytes": 6855,
+   "sha256": "ba2c5f2f865e40797b008779610f7708dfafa82a52e18e0fb1e3904a7b768e6a"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P7_Eager_Capability_Matrix.md",
+   "bytes": 9272,
+   "sha256": "c2e4ac0dfa3081cc448b4ba191b243a141777e5831578d23dcf2ae2a0c527767"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P7_Eager_DeepSeek_Independent_Review.md",
+   "bytes": 27218,
+   "sha256": "5c0aa0e55ead90e5ce1bccc0f44a3ec23613e5469a6d49919b5edee092ea14ff"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P7_Eager_Implementation_Notes.md",
+   "bytes": 20114,
+   "sha256": "2131b29e23eabea6f12b737a9dbac05e6d317551a1b24dcd056bea4f85b8b40f"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P7_Eager_NPU_Test_Matrix.md",
+   "bytes": 8904,
+   "sha256": "36c534def7bfb3af2b13ffb3367fbf25ec6c5cdffa2bdd3a0a9e16559acb4fb0"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P7_Eager_Source_Inventory.md",
+   "bytes": 15406,
+   "sha256": "376a62882a0c71ee9bfb08d9e01ef1a605849d60e6188a3061e90d1629354bdb"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/notes/P7_Eager_Topology_Fingerprint_Spec.md",
+   "bytes": 6283,
+   "sha256": "86faf6ebc8a0700f24003e67e1e75248b66750718abbd4235c5292a5301e9f69"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/prior_p4_freeze/MRV2_P0_P4b_Commit_Manifest.md",
+   "bytes": 16576,
+   "sha256": "aec26b80f9e2a7ed73d2d062b711efdf1e06eba14c959e83d0508a47527b3680"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/prior_p4_freeze/MRV2_P0_P4b_Implementation_Snapshot.md",
+   "bytes": 27124,
+   "sha256": "5cf8e7e2fdad9f7a0144bec8a1d3c1440541b7264416223adbb4ed87420c0d1f"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/prior_p4_freeze/P4_GitHub_Cleanroom_Deployment_Audit.md",
+   "bytes": 22783,
+   "sha256": "e045fe27f5f5ae6fa84c86274b89bdf429f5bc7a078d6eddd6c7b82d1d147436"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/prior_p4_freeze/notes/MRV2_Draft_Window_Implementation_Plan.md",
+   "bytes": 161499,
+   "sha256": "d657ad09a6b96f58d328f6d6d65c59ead5fcbece73dbc47d5ec790eabc1fda44"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/prior_p4_freeze/notes/MRV2_Speculative_Draft_Sliding_Window_Final_Design.md",
+   "bytes": 95505,
+   "sha256": "8f2bb2d2ffe9a8f5705a6fc86affd004e07d8f27416bcd0d57233ad570a2b83d"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/prior_p4_freeze/notes/P1_Policy_Math_Types_Implementation_Notes.md",
+   "bytes": 47207,
+   "sha256": "5fb5a30e4df0e40bd422455579aae6abfb5c58dccc32af4c71db23f302ba817f"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/prior_p4_freeze/notes/P2_Inventory_FullSource_Provider_Implementation_Notes.md",
+   "bytes": 46569,
+   "sha256": "0d008c77a9a4df199e8f60fe455d78c52ef0d7b25cace3c7374c528a425f1714"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/prior_p4_freeze/notes/P3_Lease_Workspace_Transport_Store_Implementation_Notes.md",
+   "bytes": 36804,
+   "sha256": "939391cf699277cb0bd535642d7088b1afa45730346689afd67ee3c22903937f"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/prior_p4_freeze/notes/P4_Draft_Attention_Eager_Integration_Implementation_Notes.md",
+   "bytes": 36928,
+   "sha256": "0db2fcda15e06b98376896cf7f9cfed4dfd7f351ee3cf507737ff3b4db6420b0"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/prior_p4_freeze/notes/P4a_Ascend_Only_Eager_Integration_Implementation_Notes.md",
+   "bytes": 33971,
+   "sha256": "2d6541b8ff1a2e1cbd7ee339fd58d8ee9a2a8123055688ff89ed9cca8b64f123"
+  },
+  {
+   "path": "任务归档/013_20261014_P8_Eager验收与冻结/原始资料/P8_eager_freeze/prior_p4_freeze/notes/P4b_Eagle3_StaticK_Eager_Integration_Implementation_Notes.md",
+   "bytes": 36985,
+   "sha256": "2b1810f5cb97a24abc4a90feca1e48876cc9d537f8e07bc1d1604ba30a1fc58f"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/00_任务说明.md",
+   "bytes": 2283,
+   "sha256": "853b647b80c6aa03efdd1fcd5b7b3f4370bdbe32ee97b700467ac9b4e46fa50c"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_Async_Lifecycle_Spec.md",
+   "bytes": 2703,
+   "sha256": "b52f7032897909996d8908c183820c61e24e7f5a2bb510eba41c08f9728ca891"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_Backend_Provider_Matrix.md",
+   "bytes": 3116,
+   "sha256": "e6b07b41ff247b71048b9253902685e849fba43de817094a98cbd3f61f08d192"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_DSA_CP_Window_Spec.md",
+   "bytes": 2521,
+   "sha256": "847ab5264e6b9365faa37c5798450390022429092110a9f53e3f1c598a386180"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_MRV2_Runtime_Identity_Requirement.md",
+   "bytes": 1861,
+   "sha256": "9ad41d2b30bada3ff8840065127675b43536f3f75bc9872ffc0ddcf5af49b223"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_Mixed_MultiRequest_Spec.md",
+   "bytes": 1833,
+   "sha256": "1e28b550475103e625116bbc0026ffdba1bfe85460bbd1267fc9c077e466769e"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_NPU_Revalidation_Matrix.md",
+   "bytes": 4861,
+   "sha256": "2cbc7bf23412d542367c93785c1da7ab303c6b6f49160639e85f2b24a457d24a"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_NonGraph_Capability_Matrix.md",
+   "bytes": 4856,
+   "sha256": "ccca5d7d0983843ddb6d7e880ee6aedf73cc9402acef31d1278705416c745ae2"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_NonGraph_Implementation_Notes.md",
+   "bytes": 9707,
+   "sha256": "37a2ec7072ec52c11893930255e0e59163c5bd697df908c2eb473d7b925d1174"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_NonGraph_Required_Delivery_Manifest.md",
+   "bytes": 4043,
+   "sha256": "23e792e9727c4eee6e14ceb22a58c52a749c32a7618a166d0be788167626f109"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_NonGraph_Source_Preflight.md",
+   "bytes": 11294,
+   "sha256": "4e9d0b7627e6d9781921b39a4358ef81cad426fee7b063e00407df7c5ff52448"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_Original_Commit_Manifest.md",
+   "bytes": 1847,
+   "sha256": "c0c360cf7c970f1e7a4d6a43814019b307a88f3e8444bb8e407097ab44aa7a23"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_Parallel_Window_Spec.md",
+   "bytes": 3005,
+   "sha256": "1b25890ab0c46b241e47f1afcd686cb0ccf0d3a100aa7830ac4d01e3217fa03e"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_Prefix_Prefill_Spec.md",
+   "bytes": 2290,
+   "sha256": "00b2ea4f648fde49a476f6d92b14637897af740f0f0345102de79b4c42b24390"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_Report1_Assumption_Register.md",
+   "bytes": 7384,
+   "sha256": "bd002ff0bf4473a300035233673bb6c7ceabca3307d6f5a18044973e05e35054"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_Report1_Reality_Reconciliation.md",
+   "bytes": 7928,
+   "sha256": "9fc091afd692d3752c8943e312f6422914485db9b16cf85417fcf35c8c46aeed"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_Test_Results.md",
+   "bytes": 6236,
+   "sha256": "03e7d9b92b5a98b7dc43b85dbe6a75562578953917e8d2838bf54e988fc95be3"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_nongraph_local_freeze/MRV2_Draft_Window_Implementation_Plan.md",
+   "bytes": 226073,
+   "sha256": "9fb89ca67e20ebdae34d9c4419945acd34baf22cca9f6358b79320d21ca05725"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_nongraph_local_freeze/MRV2_Speculative_Draft_Sliding_Window_Final_Design.md",
+   "bytes": 102075,
+   "sha256": "47a8e54d4f36f25ef6fe13a519d3f3c9361930de2afbe515e2c2d686f95bb006"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_nongraph_local_freeze/P7X_Async_Lifecycle_Spec.md",
+   "bytes": 2703,
+   "sha256": "b52f7032897909996d8908c183820c61e24e7f5a2bb510eba41c08f9728ca891"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_nongraph_local_freeze/P7X_Backend_Provider_Matrix.md",
+   "bytes": 3116,
+   "sha256": "e6b07b41ff247b71048b9253902685e849fba43de817094a98cbd3f61f08d192"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_nongraph_local_freeze/P7X_DSA_CP_Window_Spec.md",
+   "bytes": 2521,
+   "sha256": "847ab5264e6b9365faa37c5798450390022429092110a9f53e3f1c598a386180"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_nongraph_local_freeze/P7X_MRV2_Runtime_Identity_Requirement.md",
+   "bytes": 1861,
+   "sha256": "9ad41d2b30bada3ff8840065127675b43536f3f75bc9872ffc0ddcf5af49b223"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_nongraph_local_freeze/P7X_Mixed_MultiRequest_Spec.md",
+   "bytes": 1833,
+   "sha256": "1e28b550475103e625116bbc0026ffdba1bfe85460bbd1267fc9c077e466769e"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_nongraph_local_freeze/P7X_NPU_Revalidation_Matrix.md",
+   "bytes": 4861,
+   "sha256": "2cbc7bf23412d542367c93785c1da7ab303c6b6f49160639e85f2b24a457d24a"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_nongraph_local_freeze/P7X_NonGraph_Capability_Matrix.md",
+   "bytes": 4856,
+   "sha256": "ccca5d7d0983843ddb6d7e880ee6aedf73cc9402acef31d1278705416c745ae2"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_nongraph_local_freeze/P7X_NonGraph_Implementation_Notes.md",
+   "bytes": 9707,
+   "sha256": "37a2ec7072ec52c11893930255e0e59163c5bd697df908c2eb473d7b925d1174"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_nongraph_local_freeze/P7X_NonGraph_Required_Delivery_Manifest.md",
+   "bytes": 4043,
+   "sha256": "23e792e9727c4eee6e14ceb22a58c52a749c32a7618a166d0be788167626f109"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_nongraph_local_freeze/P7X_Parallel_Window_Spec.md",
+   "bytes": 3005,
+   "sha256": "1b25890ab0c46b241e47f1afcd686cb0ccf0d3a100aa7830ac4d01e3217fa03e"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_nongraph_local_freeze/P7X_Prefix_Prefill_Spec.md",
+   "bytes": 2290,
+   "sha256": "00b2ea4f648fde49a476f6d92b14637897af740f0f0345102de79b4c42b24390"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_nongraph_local_freeze/P7X_Report1_Assumption_Register.md",
+   "bytes": 7384,
+   "sha256": "bd002ff0bf4473a300035233673bb6c7ceabca3307d6f5a18044973e05e35054"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_nongraph_local_freeze/P7X_Report1_Reality_Reconciliation.md",
+   "bytes": 7928,
+   "sha256": "9fc091afd692d3752c8943e312f6422914485db9b16cf85417fcf35c8c46aeed"
+  },
+  {
+   "path": "任务归档/014_20261014_P7X非Graph必需能力扩展/原始资料/P7X_nongraph_local_freeze/P7X_Test_Results.md",
+   "bytes": 6236,
+   "sha256": "03e7d9b92b5a98b7dc43b85dbe6a75562578953917e8d2838bf54e988fc95be3"
+  },
+  {
+   "path": "任务归档/015_20261015_P7X独立审查冻结与发布/00_任务说明.md",
+   "bytes": 1754,
+   "sha256": "1398e08f55acba24948705494a90ac71945673020f00700736c5413f7bd355b8"
+  },
+  {
+   "path": "任务归档/015_20261015_P7X独立审查冻结与发布/原始资料/P7X_Cleanroom_Restore_Report.md",
+   "bytes": 2021,
+   "sha256": "969bd9045f5dbe9c843cd0a59f80054ab67e896f90be4c911e6cd9c1b0b3ce56"
+  },
+  {
+   "path": "任务归档/015_20261015_P7X独立审查冻结与发布/原始资料/P7X_DeepSeek_Independent_Review.md",
+   "bytes": 52231,
+   "sha256": "00d02d218b58597a4163595bec40dc94fe83bdf70d0dfe11c81df8574ef54611"
+  },
+  {
+   "path": "任务归档/015_20261015_P7X独立审查冻结与发布/原始资料/P7X_Document_Index.md",
+   "bytes": 72503,
+   "sha256": "f95fdaf162b916ad956c7a175196bb65a899ff439ecd5071610d8d8a41c9911c"
+  },
+  {
+   "path": "任务归档/015_20261015_P7X独立审查冻结与发布/原始资料/P7X_Final_Commit_Manifest.md",
+   "bytes": 3129,
+   "sha256": "c990994df71143a572bbc06d2085d6fa30ea0aec24e253006d5e5a0be8a1fd4c"
+  },
+  {
+   "path": "任务归档/015_20261015_P7X独立审查冻结与发布/原始资料/P7X_GitHub_Publication_Audit.md",
+   "bytes": 6360,
+   "sha256": "b410a73624eb258278cefa18dc50bfcc48be89e764bd549d2dcbadbd8b8bdf81"
+  },
+  {
+   "path": "任务归档/015_20261015_P7X独立审查冻结与发布/原始资料/P7X_Review_Entry.md",
+   "bytes": 2417,
+   "sha256": "a99db7ebc999cd4cc2209ce8a697c5ba95b3f26687b4b331d82825c836772a2d"
+  },
+  {
+   "path": "任务归档/015_20261015_P7X独立审查冻结与发布/原始资料/P7X_Review_Resolution.md",
+   "bytes": 7698,
+   "sha256": "feb90ed3047f73ee95fe9f51b64997e727119622cf8aa34748964e0f3424b7e9"
+  },
+  {
+   "path": "任务归档/015_20261015_P7X独立审查冻结与发布/原始资料/P7X_nongraph_local_freeze/P7X_Cleanroom_Restore_Report.md",
+   "bytes": 2021,
+   "sha256": "969bd9045f5dbe9c843cd0a59f80054ab67e896f90be4c911e6cd9c1b0b3ce56"
+  },
+  {
+   "path": "任务归档/015_20261015_P7X独立审查冻结与发布/原始资料/P7X_nongraph_local_freeze/P7X_DeepSeek_Independent_Review.md",
+   "bytes": 52231,
+   "sha256": "00d02d218b58597a4163595bec40dc94fe83bdf70d0dfe11c81df8574ef54611"
+  },
+  {
+   "path": "任务归档/015_20261015_P7X独立审查冻结与发布/原始资料/P7X_nongraph_local_freeze/P7X_Document_Index.md",
+   "bytes": 72503,
+   "sha256": "f95fdaf162b916ad956c7a175196bb65a899ff439ecd5071610d8d8a41c9911c"
+  },
+  {
+   "path": "任务归档/015_20261015_P7X独立审查冻结与发布/原始资料/P7X_nongraph_local_freeze/P7X_Final_Commit_Manifest.md",
+   "bytes": 3129,
+   "sha256": "c990994df71143a572bbc06d2085d6fa30ea0aec24e253006d5e5a0be8a1fd4c"
+  },
+  {
+   "path": "任务归档/015_20261015_P7X独立审查冻结与发布/原始资料/P7X_nongraph_local_freeze/P7X_Review_Resolution.md",
+   "bytes": 7698,
+   "sha256": "feb90ed3047f73ee95fe9f51b64997e727119622cf8aa34748964e0f3424b7e9"
+  },
+  {
+   "path": "任务归档/016_20261016_P7X性能优化与设备性能记录/00_任务说明.md",
+   "bytes": 1913,
+   "sha256": "922721b4328d61952d3ed92e3249994a91de9867ef56c6ce7e89b0f76ed96815"
+  },
+  {
+   "path": "任务归档/016_20261016_P7X性能优化与设备性能记录/原始资料/P7X_Performance_GitHub_Publication_Audit.md",
+   "bytes": 6968,
+   "sha256": "a9907759f3a0fa2c1f82a18b1d3888886bf77503763bf97b2dc94ad27962f0fb"
+  },
+  {
+   "path": "任务归档/016_20261016_P7X性能优化与设备性能记录/原始资料/P7X_Window_Performance_Investigation.md",
+   "bytes": 18457,
+   "sha256": "d0e91d2be6d50e82a0dcbfc66c192eb08ba3feb3cb6d4bcc9c1f42ffb56b381b"
+  },
+  {
+   "path": "任务归档/016_20261016_P7X性能优化与设备性能记录/原始资料/P7X_Window_Performance_Optimization_Report.md",
+   "bytes": 13429,
+   "sha256": "81e838ad245b0387b16f813cae3582a3c877c6ebe614216ed9f74ac5efc86b48"
+  },
+  {
+   "path": "任务归档/016_20261016_P7X性能优化与设备性能记录/原始资料/P8_eager_freeze/P8_Eager_Performance_Test_Plan.md",
+   "bytes": 5966,
+   "sha256": "ca026e7eef086dccd94868572ff25635d4a52f377e6bc64ec616d64ebb8d0ec2"
+  },
+  {
+   "path": "任务归档/016_20261016_P7X性能优化与设备性能记录/原始资料/测试/P7X_Phase1_Performance_Commit_Attribution.md",
+   "bytes": 14133,
+   "sha256": "6d46b57798af3746752acba2a74ab39029400992a5aa99330bfe21dc2ad96a2e"
+  },
+  {
+   "path": "任务归档/017_20261017_Graph重开设计Spike与Characterization准备/00_任务说明.md",
+   "bytes": 1280,
+   "sha256": "720c14944b0783d23f71a497abf50929f29a186bf87e50809bce1d073021e53f"
+  },
+  {
+   "path": "任务归档/017_20261017_Graph重开设计Spike与Characterization准备/原始资料/P7X_Graph_Async_Design.md",
+   "bytes": 4185,
+   "sha256": "fef2a960d4dde349ca44c2418d33880ae56850ffa9fe705b7ad3d4bbe5a1ef77"
+  },
+  {
+   "path": "任务归档/017_20261017_Graph重开设计Spike与Characterization准备/原始资料/P7X_Graph_Base_Characterization_Candidate_Report.md",
+   "bytes": 8003,
+   "sha256": "6a8b303a3d4bdc6c3aa6d28b55f5a25d2d6856848e765dc266c3072b6b07da52"
+  },
+  {
+   "path": "任务归档/017_20261017_Graph重开设计Spike与Characterization准备/原始资料/P7X_Graph_Base_Characterization_GitHub_Publication_Report.md",
+   "bytes": 10791,
+   "sha256": "98f4be591065103c1b7f5267fb66694f0879a0834a364270c90585288576703a"
+  },
+  {
+   "path": "任务归档/017_20261017_Graph重开设计Spike与Characterization准备/原始资料/P7X_Graph_Chunked_Mixed_Multi_Design.md",
+   "bytes": 9046,
+   "sha256": "9c2132f6162dcaf8ee431ad317d1c9b79512b0d7ad37f66fc1bd7621279ce7b0"
+  },
+  {
+   "path": "任务归档/017_20261017_Graph重开设计Spike与Characterization准备/原始资料/P7X_Graph_Complex_Backends_Design.md",
+   "bytes": 8753,
+   "sha256": "03b2d853377b8c2afd02053a3f27edc2a306e2abddeda3722d908e413e7186f2"
+  },
+  {
+   "path": "任务归档/017_20261017_Graph重开设计Spike与Characterization准备/原始资料/P7X_Graph_DSA_DSACP_Design.md",
+   "bytes": 8191,
+   "sha256": "a00f6f7f25e8b7bbacc7ca8b4876ef00b4fca431ef8d9f2eddfc2a13bea6b1c8"
+  },
+  {
+   "path": "任务归档/017_20261017_Graph重开设计Spike与Characterization准备/原始资料/P7X_Graph_Eagle3_Design.md",
+   "bytes": 7493,
+   "sha256": "4ded5513a3f0f0ca8157195021544955c3cbe74abf96da9cbefda53d0901b8ae"
+  },
+  {
+   "path": "任务归档/017_20261017_Graph重开设计Spike与Characterization准备/原始资料/P7X_Graph_Feature_Dependency_Graph.md",
+   "bytes": 6113,
+   "sha256": "2b7745c34e8ae7665939ef34551afdb51aa71324d247b4eddcf2b5f814d7e35c"
+  },
+  {
+   "path": "任务归档/017_20261017_Graph重开设计Spike与Characterization准备/原始资料/P7X_Graph_Feature_Implementation_Blueprint.md",
+   "bytes": 18863,
+   "sha256": "43a5fa232d21a277a32ed1dd3d1f500710c0aa9a81589e9e4ca1927df71928af"
+  },
+  {
+   "path": "任务归档/017_20261017_Graph重开设计Spike与Characterization准备/原始资料/P7X_Graph_NPU_Full_Campaign_v2.md",
+   "bytes": 9556,
+   "sha256": "f65fbc51a125b2f807a6e273bf83d6d6f0911155bad8acd1cee94af02369f2b4"
+  },
+  {
+   "path": "任务归档/017_20261017_Graph重开设计Spike与Characterization准备/原始资料/P7X_Graph_Patch_Feasibility_Study.md",
+   "bytes": 9230,
+   "sha256": "b5d530c9801208257e850d07605eb03c3525d73680dc541af4e93f67a504d32f"
+  },
+  {
+   "path": "任务归档/017_20261017_Graph重开设计Spike与Characterization准备/原始资料/P7X_Graph_Patch_NPU_Handoff.md",
+   "bytes": 6468,
+   "sha256": "ac05591812764cf09772287f61588ac61c8af968f17cbd38392ecb5e67b0869e"
+  },
+  {
+   "path": "任务归档/017_20261017_Graph重开设计Spike与Characterization准备/原始资料/P7X_Graph_Patch_POC_Report.md",
+   "bytes": 6532,
+   "sha256": "8de7ea576b5c829ea47e89af43b2ef9ba6dbb852859a90f77ee1c49dca5f9331"
+  },
+  {
+   "path": "任务归档/017_20261017_Graph重开设计Spike与Characterization准备/原始资料/P7X_Graph_Patch_Source_Callgraph.md",
+   "bytes": 6398,
+   "sha256": "a86b84e1231aa08a438b253ccd2fc2554c1b8e6f089bfe66b2b1aed6e90137d2"
+  },
+  {
+   "path": "任务归档/017_20261017_Graph重开设计Spike与Characterization准备/原始资料/P7X_Graph_Patch_Source_Investigation.md",
+   "bytes": 12384,
+   "sha256": "48aadee2f4c8a68019c6dc9a574211dfb026d01df9db8e78f349b71960fb2f71"
+  },
+  {
+   "path": "任务归档/017_20261017_Graph重开设计Spike与Characterization准备/原始资料/P7X_Graph_Prefix_Design.md",
+   "bytes": 4455,
+   "sha256": "03ac09e4d947d599aff222bf2adc07ebca33cd29d1a2c1a2e85b15c4973768c1"
+  },
+  {
+   "path": "任务归档/017_20261017_Graph重开设计Spike与Characterization准备/原始资料/P7X_Graph_Remaining_Work_Master_Analysis.md",
+   "bytes": 16956,
+   "sha256": "a267e1e0310bef69c74a3ffca3adcaf4f491a594993f86d7fc7f8b5f592c9d8e"
+  },
+  {
+   "path": "任务归档/017_20261017_Graph重开设计Spike与Characterization准备/原始资料/P7X_Graph_TP16_Design.md",
+   "bytes": 4169,
+   "sha256": "14e022abd192814bf3a29548f06e73072d87f7c37ad3aa57e5119eec316db63c"
+  },
+  {
+   "path": "任务归档/018_20261017_首次A3_G1到G5设备Characterization/00_任务说明.md",
+   "bytes": 2716,
+   "sha256": "d86403b8553213410d6f9366a6422be76ae5f3bca73a121945e1a37c63ba5892"
+  },
+  {
+   "path": "任务归档/018_20261017_首次A3_G1到G5设备Characterization/原始资料/P7X_Graph_G1_G5_Observability_Audit.md",
+   "bytes": 7508,
+   "sha256": "2bb0d9e124f5ec372f58707768a053b3259e19f4c71a67470b38f4056e4d2873"
+  },
+  {
+   "path": "任务归档/018_20261017_首次A3_G1到G5设备Characterization/原始资料/P7X_Graph_G1_G5_Rerun_Handoff.md",
+   "bytes": 9648,
+   "sha256": "d389afead6150a5e001f7be8e311c95fe2fa62301822f02bb008d65ec7a84cc4"
+  },
+  {
+   "path": "任务归档/018_20261017_首次A3_G1到G5设备Characterization/原始资料/P7X_Graph_Node101_A3_G1_G5_Server_Experiment_and_Evidence_Spec.md",
+   "bytes": 36665,
+   "sha256": "a9da0f4bfd69de77032037de4590f3ef08b7484c470a942ab7fbf5597aa3e458"
+  },
+  {
+   "path": "任务归档/018_20261017_首次A3_G1到G5设备Characterization/原始资料/g1-g5/G0_Fixture_Inventory_P7X_Graph_Base_G1_G5.md",
+   "bytes": 3329,
+   "sha256": "1df7b9413eb2fb45c022a10febeb144c5d8457ecaa2e7263f18250f3bbba08e0"
+  },
+  {
+   "path": "任务归档/018_20261017_首次A3_G1到G5设备Characterization/原始资料/g1-g5/P7X_Graph_Base_G1_G5_ARTIFACT_INDEX.md",
+   "bytes": 4466,
+   "sha256": "608795ffb36cc3dba3e84f0d210c18a294daa4a80de4c7affc95d018e5f46f76"
+  },
+  {
+   "path": "任务归档/018_20261017_首次A3_G1到G5设备Characterization/原始资料/g1-g5/P7X_Graph_Base_G1_G5_Ascend_A3_Device_Characterization.md",
+   "bytes": 14008,
+   "sha256": "42a812c9bf68ba6a30b2557d15f0dd6587284f99bcb4072bceaea05931e16594"
+  },
+  {
+   "path": "任务归档/018_20261017_首次A3_G1到G5设备Characterization/原始资料/g1-g5/P7X_Graph_Base_G1_G5_Ascend_A3_设备级架构裁决_中文总报告.md",
+   "bytes": 29246,
+   "sha256": "ab355d6b4f8ffafe1a064bd1a3328770ed6484c42a84ad985fe4aad249e6d4af"
+  },
+  {
+   "path": "任务归档/018_20261017_首次A3_G1到G5设备Characterization/原始资料/g1-g5/P7X_Graph_Base_G1_G5_Next_Action.md",
+   "bytes": 3529,
+   "sha256": "9f5232c7abd0c8d3ea6973901fff18c614c0ff73fc68891898e80ab84748e551"
+  },
+  {
+   "path": "任务归档/019_20261017_Repair1_A3别名契约修复与复测/00_任务说明.md",
+   "bytes": 1607,
+   "sha256": "eea004c2b3fb856fc02afe40c147ec400f3eaf0fae2602764acbad81a6014481"
+  },
+  {
+   "path": "任务归档/019_20261017_Repair1_A3别名契约修复与复测/原始资料/P7X_Graph_Base_A3_Failure_Root_Cause.md",
+   "bytes": 6554,
+   "sha256": "9b1774a4541ab0746be92652ff1424915cfeae4ae1268c1852ff4be30ec22329"
+  },
+  {
+   "path": "任务归档/019_20261017_Repair1_A3别名契约修复与复测/原始资料/P7X_Graph_Base_A3_Fix_Design.md",
+   "bytes": 5900,
+   "sha256": "c7d283d226ce03960b2c3137e5008b02a87a41ff4c9f930d22b5a4e4afd9ea15"
+  },
+  {
+   "path": "任务归档/019_20261017_Repair1_A3别名契约修复与复测/原始资料/P7X_Graph_Base_A3_Fix_GitHub_Publication_Audit.md",
+   "bytes": 6919,
+   "sha256": "eb66293215e8252341316cbed8918da3250b5bd1300bd074ec9a5bcc5219224a"
+  },
+  {
+   "path": "任务归档/019_20261017_Repair1_A3别名契约修复与复测/原始资料/P7X_Graph_Base_A3_Fix_Implementation_Report.md",
+   "bytes": 7350,
+   "sha256": "5ec898328179171d37bdea6a1ee8e253f1f503653e962b4b135747b2cd8cb0d1"
+  },
+  {
+   "path": "任务归档/019_20261017_Repair1_A3别名契约修复与复测/原始资料/P7X_Graph_Base_Fix_Test_Report.md",
+   "bytes": 5625,
+   "sha256": "d61a90e4b535190dd7e86735731439d48321d8f75a2b55c1eba92efb644c9411"
+  },
+  {
+   "path": "任务归档/019_20261017_Repair1_A3别名契约修复与复测/原始资料/g1-g5_repair1/P7X_A3_00_Return_Index.md",
+   "bytes": 11428,
+   "sha256": "ab2364425f54622bf0d9b1e45687157c04428f300b575139d16268b3c4f3c020"
+  },
+  {
+   "path": "任务归档/019_20261017_Repair1_A3别名契约修复与复测/原始资料/g1-g5_repair1/P7X_A3_01_Report_CN.md",
+   "bytes": 18414,
+   "sha256": "6894cf73cd6ce3461fa011908191160bdd64fc3a9a338a7a8a294275ed036f85"
+  },
+  {
+   "path": "任务归档/019_20261017_Repair1_A3别名契约修复与复测/原始资料/g1-g5_repair1/P7X_A3_02_Execution_Record.md",
+   "bytes": 49090,
+   "sha256": "1d1314997da382283d5f01cd45d021897ab784078df860f72f83b8f0f23d7f5f"
+  },
+  {
+   "path": "任务归档/019_20261017_Repair1_A3别名契约修复与复测/原始资料/g1-g5_repair1/P7X_A3_04_A0_A1_B_Record.md",
+   "bytes": 9211,
+   "sha256": "fa226e8b473a0bf3456c3cef9ee09ea5ea108c3102286d055993a726fee038f4"
+  },
+  {
+   "path": "任务归档/019_20261017_Repair1_A3别名契约修复与复测/原始资料/g1-g5_repair1/P7X_A3_05_G1_G5_Decisions.md",
+   "bytes": 14028,
+   "sha256": "8b5474e3672685d19f4edfc463a1f27ea8be38596596bddd2ac184ead98ba737"
+  },
+  {
+   "path": "任务归档/019_20261017_Repair1_A3别名契约修复与复测/原始资料/g1-g5_repair1/P7X_A3_07_Raw_Text_Evidence.md",
+   "bytes": 2913,
+   "sha256": "225a11ae0dda75e76988a08a0c909367d7e3df5e11450933fedebdf9b69742e9"
+  },
+  {
+   "path": "任务归档/019_20261017_Repair1_A3别名契约修复与复测/原始资料/g1-g5_repair1/P7X_A3_07_Raw_Text_Evidence.part001-006.md",
+   "bytes": 119598,
+   "sha256": "6a24817ffcb963fc5baeaab3526bdd1621f4bba495099cb8ab787b264eb449c2"
+  },
+  {
+   "path": "任务归档/019_20261017_Repair1_A3别名契约修复与复测/原始资料/g1-g5_repair1/P7X_A3_08_Failures_And_Limits.md",
+   "bytes": 9757,
+   "sha256": "9df4357fee8961d06c017c33500dc8b0fa4f43f5b6ae6667165ffbd27643de81"
+  },
+  {
+   "path": "任务归档/019_20261017_Repair1_A3别名契约修复与复测/原始资料/g1-g5_repair1/RETURN_TO_LOCAL_Graph_Mandatory_Gap_Report.md",
+   "bytes": 8025,
+   "sha256": "e719c047ec94da2b8161fecf9101a5fac4254f492d2e5f4bcb768e4064e4f022"
+  },
+  {
+   "path": "任务归档/020_20261019_Repair2共享Observer修复与证据工具/00_任务说明.md",
+   "bytes": 1311,
+   "sha256": "3e54894849ab18cc13b0e37c43998f152f6d2ad892a8828d780072eba23ad157"
+  },
+  {
+   "path": "任务归档/020_20261019_Repair2共享Observer修复与证据工具/原始资料/P7X_Graph_Base_A3_Repair2_Implementation_And_Readiness_Report.md",
+   "bytes": 63838,
+   "sha256": "b9f3a2144f606eb245afb0a4f252368ffd0f050c18c187a82a164c2a59faa1b7"
+  },
+  {
+   "path": "任务归档/020_20261019_Repair2共享Observer修复与证据工具/原始资料/P7X_Graph_Base_A3_Repair2_Server_Handoff.json",
+   "bytes": 2194,
+   "sha256": "a079a0fbb8da8486daa25d105a2a5b6b4742a459746b6478f7da7203b4229aa4"
+  },
+  {
+   "path": "任务归档/020_20261019_Repair2共享Observer修复与证据工具/原始资料/g1-g5_repair2_local/evidence/EVID-HOST-SUMMARY.part3.json",
+   "bytes": 322,
+   "sha256": "cc50c0903923aa2c4fe024c5bd7341fc4c980b4e88f1d2b512884367f4a11c82"
+  },
+  {
+   "path": "任务归档/020_20261019_Repair2共享Observer修复与证据工具/原始资料/g1-g5_repair2_local/fixture_manifest.json",
+   "bytes": 1781,
+   "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+  },
+  {
+   "path": "任务归档/021_20261019_Repair2审查修复与发布/00_任务说明.md",
+   "bytes": 2963,
+   "sha256": "fcf8234334e706e0e7aa207ef49a77dd32cbf5dca3ba662e185d483b986e38d9"
+  },
+  {
+   "path": "任务归档/021_20261019_Repair2审查修复与发布/原始资料/P7X_Graph_Base_A3_Repair2_Review_Fix_And_Publication_Report.md",
+   "bytes": 27239,
+   "sha256": "9aba7a7ebb0a266d54a28fc9e254bedda9837aacbf4f2eb16fc1d164ec728c74"
+  },
+  {
+   "path": "任务归档/022_20261020_Repair3被动Observer与Layer身份/00_任务说明.md",
+   "bytes": 1510,
+   "sha256": "0d6aa1f3cde7684b87a1d572b9bb08e2f39d9fc2109e9617a07a63ddd2aba427"
+  },
+  {
+   "path": "任务归档/022_20261020_Repair3被动Observer与Layer身份/原始资料/P7X_Graph_Base_A3_Repair3_Implementation_And_Readiness_Report.md",
+   "bytes": 33834,
+   "sha256": "40c0e86ae630ce77b4b5e85331aff223f6394960347557d7b6f24c1ada0bfc37"
+  },
+  {
+   "path": "任务归档/022_20261020_Repair3被动Observer与Layer身份/原始资料/P7X_Graph_Base_A3_Repair3_Server_Handoff.json",
+   "bytes": 4496,
+   "sha256": "808ad311388db8b9da2699a3db66652996b69c233ed05a9a864c5a0e6a49d65b"
+  },
+  {
+   "path": "任务归档/022_20261020_Repair3被动Observer与Layer身份/原始资料/Repair3_Local_Download_Manifest.json",
+   "bytes": 1016,
+   "sha256": "ddfd8c97305a34fd04ec8a988b6726ed5846865a38fa4c37505a4b4759c6c085"
+  },
+  {
+   "path": "任务归档/022_20261020_Repair3被动Observer与Layer身份/原始资料/g1-g5_repair3_local/ARTIFACT_INDEX.json",
+   "bytes": 11072,
+   "sha256": "e2ba6b48ace69e047fccd0bd87f9b0e4c0bb0247cd0099551413c2a5d5d5e906"
+  },
+  {
+   "path": "任务归档/022_20261020_Repair3被动Observer与Layer身份/原始资料/g1-g5_repair3_local/Evidence_Adjudication.md",
+   "bytes": 6885,
+   "sha256": "824c6cdbfc7abe87c46e92de811518940e4cada37632849b716cc310776f30fa"
+  },
+  {
+   "path": "任务归档/022_20261020_Repair3被动Observer与Layer身份/原始资料/g1-g5_repair3_local/P7X_Graph_Base_A3_Repair3_Implementation_And_Readiness_Report.md",
+   "bytes": 33834,
+   "sha256": "40c0e86ae630ce77b4b5e85331aff223f6394960347557d7b6f24c1ada0bfc37"
+  },
+  {
+   "path": "任务归档/022_20261020_Repair3被动Observer与Layer身份/原始资料/g1-g5_repair3_local/P7X_Graph_Base_A3_Repair3_Server_Handoff.json",
+   "bytes": 2489,
+   "sha256": "5f132248bc7fbbe021435675671761c1d79641f02434edc021f60e39436d0a18"
+  },
+  {
+   "path": "任务归档/022_20261020_Repair3被动Observer与Layer身份/原始资料/g1-g5_repair3_local/README.md",
+   "bytes": 934,
+   "sha256": "e8174d2a01effb8ba4b2dbfdf85784c711951f5def06563e5c4766300a857d59"
+  },
+  {
+   "path": "任务归档/022_20261020_Repair3被动Observer与Layer身份/原始资料/g1-g5_repair3_local/Repair3_Server_Commands.md",
+   "bytes": 11631,
+   "sha256": "e90f36c166916e17c82768801a79c4a75b4efc738ede87ced7c2c6b208a07a8d"
+  },
+  {
+   "path": "任务归档/022_20261020_Repair3被动Observer与Layer身份/原始资料/g1-g5_repair3_local/evidence_verification.json",
+   "bytes": 3369,
+   "sha256": "9ed3adf7420a9b3efcd106d643b07cf4d426ee97ec421066cdfe656ec51131d5"
+  },
+  {
+   "path": "任务归档/022_20261020_Repair3被动Observer与Layer身份/原始资料/g1-g5_repair3_local/historical_inputs/inputs/fixture_manifest.json",
+   "bytes": 1781,
+   "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+  },
+  {
+   "path": "任务归档/022_20261020_Repair3被动Observer与Layer身份/原始资料/g1-g5_repair3_local/test_coverage_and_substitutions.md",
+   "bytes": 1474,
+   "sha256": "5eaaf88de4787f707b0e51b9955bb2a038712ada8d50e0f2bb23e20ccb07ea1c"
+  },
+  {
+   "path": "任务归档/023_20261020_Repair3发布与服务器复测交接/00_任务说明.md",
+   "bytes": 1551,
+   "sha256": "2e6e1e7924c386b630f7ab9deb458cdcb3b67bb8be7d4dd04a7ab9213ee7cca4"
+  },
+  {
+   "path": "任务归档/023_20261020_Repair3发布与服务器复测交接/原始资料/P7X_Graph_Base_A3_Repair3_Publication_And_Server_Readiness_Report.md",
+   "bytes": 11546,
+   "sha256": "c8c0a90c7ef2fa3728644075d5d54ba90fb7b7d136ef2761f0dd906288d8816a"
+  },
+  {
+   "path": "任务归档/023_20261020_Repair3发布与服务器复测交接/原始资料/P7X_Graph_Base_A3_Repair3_Publication_Download_Manifest.json",
+   "bytes": 921,
+   "sha256": "f960efff10b7188b136a2c56328ff4c5a0a25f55ceb56708eceff318f66357e5"
+  },
+  {
+   "path": "任务归档/023_20261020_Repair3发布与服务器复测交接/原始资料/g1-g5_repair3_publication/COMMAND_LEDGER.md",
+   "bytes": 2957,
+   "sha256": "b397ffc074812902beb474f30669dba2c8fef23dacfe97ccb8279e2fac40b4f7"
+  },
+  {
+   "path": "任务归档/023_20261020_Repair3发布与服务器复测交接/原始资料/g1-g5_repair3_publication/P7X_Graph_Base_A3_Repair3_Publication_And_Server_Readiness_Report.md",
+   "bytes": 11546,
+   "sha256": "c8c0a90c7ef2fa3728644075d5d54ba90fb7b7d136ef2761f0dd906288d8816a"
+  },
+  {
+   "path": "任务归档/023_20261020_Repair3发布与服务器复测交接/原始资料/g1-g5_repair3_publication/P7X_Graph_Base_A3_Repair3_Server_Handoff.json",
+   "bytes": 4496,
+   "sha256": "808ad311388db8b9da2699a3db66652996b69c233ed05a9a864c5a0e6a49d65b"
+  },
+  {
+   "path": "任务归档/023_20261020_Repair3发布与服务器复测交接/原始资料/g1-g5_repair3_publication/PACKAGE_INDEX.json",
+   "bytes": 3686,
+   "sha256": "4557e3b8a341bc1834373040d21b49fe834883b99f5b0d780c68a61b472b9787"
+  },
+  {
+   "path": "任务归档/023_20261020_Repair3发布与服务器复测交接/原始资料/g1-g5_repair3_publication/historical-COMMAND_LEDGER.md",
+   "bytes": 1232,
+   "sha256": "6a8426cb2117f058c0b9253277216511c9652beea3cc9a11a5a26d834c5691c7"
+  },
+  {
+   "path": "任务归档/024_20261020_Repair4返回契约与完整Target工具/00_任务说明.md",
+   "bytes": 1575,
+   "sha256": "6d64a5ac6fd151726e663a125ebe0e451784ed569677f076ef1b263a90d9b19a"
+  },
+  {
+   "path": "任务归档/024_20261020_Repair4返回契约与完整Target工具/原始资料/P7X_Graph_Base_A3_Repair4_Download_Manifest.json",
+   "bytes": 1669,
+   "sha256": "65820166c98d2df6da2a67f5a465f56130ebf735da4bbdf0338301a006834cd2"
+  },
+  {
+   "path": "任务归档/024_20261020_Repair4返回契约与完整Target工具/原始资料/P7X_Graph_Base_A3_Repair4_Implementation_And_Readiness_Report.md",
+   "bytes": 28950,
+   "sha256": "55b6c9e39aae91151316f81e69162965c3942548b81dc548d9432406381bde1e"
+  },
+  {
+   "path": "任务归档/024_20261020_Repair4返回契约与完整Target工具/原始资料/P7X_Graph_Base_A3_Repair4_Server_Handoff.json",
+   "bytes": 9043,
+   "sha256": "6eba8c2a988bd0a125471ca4d6a6ad0c5324cd97a391fac58d9bfe6e387d66d0"
+  },
+  {
+   "path": "任务归档/024_20261020_Repair4返回契约与完整Target工具/原始资料/g1-g5_repair4_local/ACCEPTANCE_DECISIONS.md",
+   "bytes": 867,
+   "sha256": "600d72abb625f3a157bc22bd1d202c98de65a3ed328b26cd60c474776884f3d4"
+  },
+  {
+   "path": "任务归档/024_20261020_Repair4返回契约与完整Target工具/原始资料/g1-g5_repair4_local/ARTIFACT_INDEX.json",
+   "bytes": 9569,
+   "sha256": "d4ae055a55926170fd5d19b2e4a099a54c33f69b43426f8a04eb0257af83f0ae"
+  },
+  {
+   "path": "任务归档/024_20261020_Repair4返回契约与完整Target工具/原始资料/g1-g5_repair4_local/COMMANDS.md",
+   "bytes": 7567,
+   "sha256": "e4c91bc4b2fe6128d1e7e600cac188b0a0759069935d2ecc1e5e8d9b8be888fb"
+  },
+  {
+   "path": "任务归档/024_20261020_Repair4返回契约与完整Target工具/原始资料/g1-g5_repair4_local/EVIDENCE_SCHEMA.md",
+   "bytes": 1370,
+   "sha256": "88b307ca1731e70f52be7ff54bce30162bdb1fc50bc235b7f5e32d00ae32f2f4"
+  },
+  {
+   "path": "任务归档/024_20261020_Repair4返回契约与完整Target工具/原始资料/g1-g5_repair4_local/IMPLEMENTATION_GAP_MATRIX.json",
+   "bytes": 3739,
+   "sha256": "9e5d6029371e484ee6a6133719f329a08f948030ea72adce27bb56c6e3672e93"
+  },
+  {
+   "path": "任务归档/024_20261020_Repair4返回契约与完整Target工具/原始资料/g1-g5_repair4_local/P7X_Graph_Base_A3_Repair4_Implementation_And_Readiness_Report.md",
+   "bytes": 28950,
+   "sha256": "55b6c9e39aae91151316f81e69162965c3942548b81dc548d9432406381bde1e"
+  },
+  {
+   "path": "任务归档/024_20261020_Repair4返回契约与完整Target工具/原始资料/g1-g5_repair4_local/P7X_Graph_Base_A3_Repair4_Server_Handoff.json",
+   "bytes": 7768,
+   "sha256": "5e0291ac77e86ce0f7a5e7f155bd574eea05f309fee89e66468e9233c5ce4f3d"
+  },
+  {
+   "path": "任务归档/024_20261020_Repair4返回契约与完整Target工具/原始资料/g1-g5_repair4_local/case-matrix.json",
+   "bytes": 3739,
+   "sha256": "9e5d6029371e484ee6a6133719f329a08f948030ea72adce27bb56c6e3672e93"
+  },
+  {
+   "path": "任务归档/024_20261020_Repair4返回契约与完整Target工具/原始资料/g1-g5_repair4_local/evidence/verification.json",
+   "bytes": 334,
+   "sha256": "db4e613eba386aa6cfeda406ad831525e8034208c0ae19cfe0ae74a27ea29066"
+  },
+  {
+   "path": "任务归档/024_20261020_Repair4返回契约与完整Target工具/原始资料/g1-g5_repair4_local/fixture_manifest.json",
+   "bytes": 1781,
+   "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+  },
+  {
+   "path": "任务归档/024_20261020_Repair4返回契约与完整Target工具/原始资料/g1-g5_repair4_local/historical-input/Repair3-DOWNLOAD_MANIFEST.json",
+   "bytes": 2441,
+   "sha256": "17386de44f61a9a060ceeec0904bf4afce6a43cea591b0ed3e87089f5596349e"
+  },
+  {
+   "path": "任务归档/024_20261020_Repair4返回契约与完整Target工具/原始资料/g1-g5_repair4_local/historical-input/Repair3-VERIFICATION.json",
+   "bytes": 3077,
+   "sha256": "c667ab8d0f12fea21a0c608245c135301777a59cf85c5f8726123e5eb70ca45e"
+  },
+  {
+   "path": "任务归档/024_20261020_Repair4返回契约与完整Target工具/原始资料/g1-g5_repair4_local/historical-input/fixture_verification.json",
+   "bytes": 3517,
+   "sha256": "685ad93f2beb16dfc4bf79886136f625f7cb2ed59c2c1d70d724b368295cb396"
+  },
+  {
+   "path": "任务归档/025_20261020_Repair4审查修复发布与设备回传/00_任务说明.md",
+   "bytes": 1437,
+   "sha256": "ced1e3b4056f6349d6d463cbd4adb86711345d71eb5dab7b997eb5ffa6b9276d"
+  },
+  {
+   "path": "任务归档/025_20261020_Repair4审查修复发布与设备回传/原始资料/P7X_Graph_Base_A3_Repair4_Publication_Download_Manifest.json",
+   "bytes": 2486,
+   "sha256": "e2b32d161b247086f1cbcac8b2ebab5282158088dbef7dec4136d04b876cc2b2"
+  },
+  {
+   "path": "任务归档/025_20261020_Repair4审查修复发布与设备回传/原始资料/P7X_Graph_Base_A3_Repair4_Review_Fix_And_Publication_Report.md",
+   "bytes": 17935,
+   "sha256": "2d633e901128b6777a889e4d7dc36186dfbefbb2d9c7d7b08e3e5b41d4f65782"
+  },
+  {
+   "path": "任务归档/025_20261020_Repair4审查修复发布与设备回传/原始资料/Repair4_PRE_PUBLICATION_aaa463261/P7X_Graph_Base_A3_Repair4_Download_Manifest.json",
+   "bytes": 1669,
+   "sha256": "65820166c98d2df6da2a67f5a465f56130ebf735da4bbdf0338301a006834cd2"
+  },
+  {
+   "path": "任务归档/025_20261020_Repair4审查修复发布与设备回传/原始资料/Repair4_PRE_PUBLICATION_aaa463261/P7X_Graph_Base_A3_Repair4_Implementation_And_Readiness_Report.md",
+   "bytes": 28950,
+   "sha256": "55b6c9e39aae91151316f81e69162965c3942548b81dc548d9432406381bde1e"
+  },
+  {
+   "path": "任务归档/025_20261020_Repair4审查修复发布与设备回传/原始资料/Repair4_PRE_PUBLICATION_aaa463261/P7X_Graph_Base_A3_Repair4_Server_Handoff.json",
+   "bytes": 7768,
+   "sha256": "5e0291ac77e86ce0f7a5e7f155bd574eea05f309fee89e66468e9233c5ce4f3d"
+  },
+  {
+   "path": "任务归档/026_20261020_Repair5确定性Target生命周期与Profiling工具/00_任务说明.md",
+   "bytes": 1317,
+   "sha256": "f024e0fc5318390e1b3e1409cf3a9a529e18fa5aca65eaa4a363a032a44cef79"
+  },
+  {
+   "path": "任务归档/026_20261020_Repair5确定性Target生命周期与Profiling工具/原始资料/P7X_Graph_Base_A3_Repair5_Download_Manifest.json",
+   "bytes": 1838,
+   "sha256": "11c1eaa969085ad7664d1a69c4983476c950e97941526578aac784eeeadf176e"
+  },
+  {
+   "path": "任务归档/026_20261020_Repair5确定性Target生命周期与Profiling工具/原始资料/P7X_Graph_Base_A3_Repair5_Implementation_And_Readiness_Report.md",
+   "bytes": 30634,
+   "sha256": "7332154f84080c9bc96598ed41d819744d2c2aa304734c3309bd3197daf7beae"
+  },
+  {
+   "path": "任务归档/026_20261020_Repair5确定性Target生命周期与Profiling工具/原始资料/P7X_Graph_Base_A3_Repair5_Package_Verification.json",
+   "bytes": 881,
+   "sha256": "4873683ef37b3e4a5be23d2277d3d77f310a2d62da6fa365131e7841d6649671"
+  },
+  {
+   "path": "任务归档/026_20261020_Repair5确定性Target生命周期与Profiling工具/原始资料/P7X_Graph_Base_A3_Repair5_Server_Handoff.json",
+   "bytes": 142554,
+   "sha256": "f4ff8891fe44d08e89c851c4a3c985902f338e5997ca07912d83515c127efc90"
+  },
+  {
+   "path": "任务归档/027_20261020_Repair5审查修复与发布/00_任务说明.md",
+   "bytes": 2708,
+   "sha256": "e17dcad523ed1e4d1b2815c51397d5f37674d9f9dbde58f49293775ea2dd6e1d"
+  },
+  {
+   "path": "任务归档/027_20261020_Repair5审查修复与发布/原始资料/P7X_Graph_Base_A3_Repair5_Publication_Download_Manifest.json",
+   "bytes": 2027,
+   "sha256": "7715a1d521130778520450cfea8f05c993c3c1622428535029046b864092c1b4"
+  },
+  {
+   "path": "任务归档/027_20261020_Repair5审查修复与发布/原始资料/P7X_Graph_Base_A3_Repair5_Publication_Install_Receipt.json",
+   "bytes": 2196,
+   "sha256": "146e20f7008a1c222ef766fbf36d929b14a006ebd5d9863713daa09d5692f44d"
+  },
+  {
+   "path": "任务归档/027_20261020_Repair5审查修复与发布/原始资料/P7X_Graph_Base_A3_Repair5_Publication_Package_Verification.json",
+   "bytes": 1349,
+   "sha256": "ca296092e1773bc12f2f28c7b09e4de3455b57cf53305a84756a0d75c3ee71ac"
+  },
+  {
+   "path": "任务归档/027_20261020_Repair5审查修复与发布/原始资料/P7X_Graph_Base_A3_Repair5_Review_Fix_And_Publication_Report.md",
+   "bytes": 21550,
+   "sha256": "9a619e1108ddf08b866f386d599074c6ebbddbc9c6dda6994d3077fb508f8a48"
+  },
+  {
+   "path": "任务归档/027_20261020_Repair5审查修复与发布/原始资料/repair5_prepublication_3bdc413a/P7X_Graph_Base_A3_Repair5_Download_Manifest.json",
+   "bytes": 1838,
+   "sha256": "11c1eaa969085ad7664d1a69c4983476c950e97941526578aac784eeeadf176e"
+  },
+  {
+   "path": "任务归档/027_20261020_Repair5审查修复与发布/原始资料/repair5_prepublication_3bdc413a/P7X_Graph_Base_A3_Repair5_Server_Handoff.json",
+   "bytes": 100265,
+   "sha256": "cdce8f6ada7d8c6849520acee53b77c978905f5e7a6e0f6e744947b65a67b8d5"
+  },
+  {
+   "path": "任务归档/028_20261021_Repair5服务器验证原始回传/00_任务说明.md",
+   "bytes": 1610,
+   "sha256": "f33a90ef2bbb44fc5aa3af27210a81445d4f18adf6ef2e2365cabca30fdd26d7"
+  },
+  {
+   "path": "任务归档/028_20261021_Repair5服务器验证原始回传/原始资料/g1-g5_repair6_local/input/raw/ARTIFACT_INDEX.json",
+   "bytes": 224670,
+   "sha256": "d18e54788afae0b9d5bcd7dbb4f9fc1d21ca618a3bac73889ef9e44ea875db36"
+  },
+  {
+   "path": "任务归档/028_20261021_Repair5服务器验证原始回传/原始资料/g1-g5_repair6_local/input/raw/reports/P7X_Graph_Base_A3_Repair5_Server_Final_Report.md",
+   "bytes": 23913,
+   "sha256": "ca8a53619197cf76e941c984ea006e71de4b52956128d4c4d5c5b6ff20da52fe"
+  },
+  {
+   "path": "任务归档/028_20261021_Repair5服务器验证原始回传/原始资料/g1-g5_repair6_local/input/raw/reports/Repair5_Profiling_Report.md",
+   "bytes": 9149,
+   "sha256": "37052c66c171619f71752acdce9913e36f5b543e8e67715c7206f90ec0cfb41e"
+  },
+  {
+   "path": "任务归档/028_20261021_Repair5服务器验证原始回传/原始资料/g1-g5_repair6_local/input/raw/reports/Repair5_Profiling_Summary.json",
+   "bytes": 159519,
+   "sha256": "124c60eedc0ea6b7051bee2ff3b2862b23b196623115e0a9063e17c7bfbbb127"
+  },
+  {
+   "path": "任务归档/028_20261021_Repair5服务器验证原始回传/原始资料/g1-g5_repair6_local/input/raw/retry1/C2/manifest.json",
+   "bytes": 7896,
+   "sha256": "c026634d90008261654ddf129f6bf703c1c1d35f459939c1bc1d5f0e216fcf3b"
+  },
+  {
+   "path": "任务归档/028_20261021_Repair5服务器验证原始回传/原始资料/g1-g5_repair6_local/input/review/ARTIFACT_INDEX.json",
+   "bytes": 73058,
+   "sha256": "d9947e9a24d3dfd88af4be5516e5baa350c85a9d00c75b6ff6ee8cb369e0ddb4"
+  },
+  {
+   "path": "任务归档/028_20261021_Repair5服务器验证原始回传/原始资料/g1-g5_repair6_local/input/review/README_REVIEW.md",
+   "bytes": 768,
+   "sha256": "0b17755c5deeffb75f7e7a0b1bd27954f00c1e11500de9663e93fcb2d1c34e18"
+  },
+  {
+   "path": "任务归档/028_20261021_Repair5服务器验证原始回传/原始资料/g1-g5_repair6_local/input/review/cases/C2/manifest.json",
+   "bytes": 7896,
+   "sha256": "c026634d90008261654ddf129f6bf703c1c1d35f459939c1bc1d5f0e216fcf3b"
+  },
+  {
+   "path": "任务归档/028_20261021_Repair5服务器验证原始回传/原始资料/g1-g5_repair6_local/input/review/inputs/fixture_manifest.json",
+   "bytes": 1781,
+   "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+  },
+  {
+   "path": "任务归档/028_20261021_Repair5服务器验证原始回传/原始资料/g1-g5_repair6_local/input/review/reports/P7X_Graph_Base_A3_Repair5_Server_Final_Report.md",
+   "bytes": 23913,
+   "sha256": "ca8a53619197cf76e941c984ea006e71de4b52956128d4c4d5c5b6ff20da52fe"
+  },
+  {
+   "path": "任务归档/028_20261021_Repair5服务器验证原始回传/原始资料/g1-g5_repair6_local/input/review/reports/Repair5_Profiling_Report.md",
+   "bytes": 9149,
+   "sha256": "37052c66c171619f71752acdce9913e36f5b543e8e67715c7206f90ec0cfb41e"
+  },
+  {
+   "path": "任务归档/028_20261021_Repair5服务器验证原始回传/原始资料/g1-g5_repair6_local/input/review/reports/Repair5_Profiling_Summary.json",
+   "bytes": 159519,
+   "sha256": "124c60eedc0ea6b7051bee2ff3b2862b23b196623115e0a9063e17c7bfbbb127"
+  },
+  {
+   "path": "任务归档/028_20261021_Repair5服务器验证原始回传/原始资料/g1-g5_repair6_local/input/review/server_inputs/P7X_Graph_Base_A3_Repair5_Publication_Download_Manifest.json",
+   "bytes": 2027,
+   "sha256": "7715a1d521130778520450cfea8f05c993c3c1622428535029046b864092c1b4"
+  },
+  {
+   "path": "任务归档/028_20261021_Repair5服务器验证原始回传/原始资料/g1-g5_repair6_local/input/review/server_inputs/P7X_Graph_Base_A3_Repair5_Review_Fix_And_Publication_Report.md",
+   "bytes": 21550,
+   "sha256": "9a619e1108ddf08b866f386d599074c6ebbddbc9c6dda6994d3077fb508f8a48"
+  },
+  {
+   "path": "任务归档/028_20261021_Repair5服务器验证原始回传/原始资料/g1-g5_repair6_local/input/review/server_inputs/P7X_Graph_Base_A3_Repair5_Server_Handoff.json",
+   "bytes": 142554,
+   "sha256": "f4ff8891fe44d08e89c851c4a3c985902f338e5997ca07912d83515c127efc90"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/00_任务说明.md",
+   "bytes": 2665,
+   "sha256": "82c1d9c745dd4cbba7a63d8b1d7260b019452565341ffcb7d9b9704b2592072d"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/P7X_Graph_Base_A3_Repair6_Download_Manifest.json",
+   "bytes": 1581,
+   "sha256": "9bbbb3185166a1c359bcd6b9c522b8f652c2534cd391dd94c1d7de82e6b35952"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/P7X_Graph_Base_A3_Repair6_Implementation_And_Readiness_Report.md",
+   "bytes": 28558,
+   "sha256": "02f8654ca87f4543a0e6289896ffac049797ec5746f32984c8107f76a6dc8d74"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/P7X_Graph_Base_A3_Repair6_Package_Verification.json",
+   "bytes": 4991,
+   "sha256": "3cb8929dc56c32b457fc549df9763c02d4164888f29018cef22e98224b4a2bcc"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/P7X_Graph_Base_A3_Repair6_Server_Handoff.json",
+   "bytes": 276080,
+   "sha256": "9ed64f7f0788c4a15b7850f3d252d72f0ce5274703fe0688fab1ac4298442ef4"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/Delivery_CLI_Path_Verification.json",
+   "bytes": 585,
+   "sha256": "0b99f32f0dbd123eb474285d3377fa530e5d1d5091d23556b11d3332c40ef845"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/Graph_Release_Evidence_Decisions.md",
+   "bytes": 1886,
+   "sha256": "d372c577ae29f057f5f9275d7dc0fdf6493919aa54b502721cb498c098c8bea3"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/Implementation_Gap_Matrix.json",
+   "bytes": 974,
+   "sha256": "b02683f0667d4b81f6e5228d48693cb8e711705e08008f1bc2bca32a0461bc99"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/Raw_Index_Structure.json",
+   "bytes": 50,
+   "sha256": "bebd20dcf00a927c5a75c0087b4e2a68d94e3c25002ee1144ef28a60eefcfcf0"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/Raw_Reference_Index.json",
+   "bytes": 235135,
+   "sha256": "cb598033ece4720905fe6a3d51a7473d547ca6a9c42bf91bb6f890d994d30e06"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/Receiver_Verification.json",
+   "bytes": 2699,
+   "sha256": "484fd4b11791c2e3fa89594da64c8d370bc812d585cef10dc2064de1f0ef76d8"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/Repair5_Evidence_Corrections.md",
+   "bytes": 2865,
+   "sha256": "5de97fd2bb71f7fe745de2783605578d44dc22fc5f5501b58941d7ca534bb03f"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/Repair5_Profiling_Independent_Reanalysis.md",
+   "bytes": 2241,
+   "sha256": "8d3d97c197002b182b4fb6c69ed676eea2652983cb96d91c97ccafb4ec8c90af"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/Repair6_Normal_Lifecycle_Analysis.md",
+   "bytes": 2068,
+   "sha256": "292652ed600fd9865c65f3a822acc5c3fd0ad4bf7b8c4b90e2035285b6c3321f"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/Repair6_Numeric_Reference_Contract.md",
+   "bytes": 2591,
+   "sha256": "18cd6826d6fc6c9efaca2991ed9523860b641ac779fac3c48d78f0883fd5976d"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/Repair6_Server_Commands.md",
+   "bytes": 5389,
+   "sha256": "dba198561ad37c6de26057f049f0b3535ec044c87a83b4d74207c61a40ad159f"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/Repair6_Target_Budget_And_Storage.md",
+   "bytes": 2697,
+   "sha256": "097341609ef9fe4c139e66957e72ddddc9fce4c4508e6b59eed60616dbb17bb2"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/ARTIFACT_INDEX.json",
+   "bytes": 20094,
+   "sha256": "710980c7ced795ffc94b0cabada28f1c0fed5af6ba1684d1464a86ec38646ac0"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/Delivery_CLI_Path_Verification.json",
+   "bytes": 585,
+   "sha256": "0b99f32f0dbd123eb474285d3377fa530e5d1d5091d23556b11d3332c40ef845"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/Graph_Release_Evidence_Decisions.md",
+   "bytes": 1886,
+   "sha256": "d372c577ae29f057f5f9275d7dc0fdf6493919aa54b502721cb498c098c8bea3"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/Implementation_Gap_Matrix.json",
+   "bytes": 974,
+   "sha256": "b02683f0667d4b81f6e5228d48693cb8e711705e08008f1bc2bca32a0461bc99"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/REPORT.md",
+   "bytes": 28558,
+   "sha256": "02f8654ca87f4543a0e6289896ffac049797ec5746f32984c8107f76a6dc8d74"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/Raw_Index_Structure.json",
+   "bytes": 50,
+   "sha256": "bebd20dcf00a927c5a75c0087b4e2a68d94e3c25002ee1144ef28a60eefcfcf0"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/Raw_Reference_Index.json",
+   "bytes": 235135,
+   "sha256": "cb598033ece4720905fe6a3d51a7473d547ca6a9c42bf91bb6f890d994d30e06"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/Receiver_Verification.json",
+   "bytes": 2699,
+   "sha256": "484fd4b11791c2e3fa89594da64c8d370bc812d585cef10dc2064de1f0ef76d8"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/Repair5_Evidence_Corrections.md",
+   "bytes": 2865,
+   "sha256": "5de97fd2bb71f7fe745de2783605578d44dc22fc5f5501b58941d7ca534bb03f"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/Repair5_Profiling_Independent_Reanalysis.md",
+   "bytes": 2241,
+   "sha256": "8d3d97c197002b182b4fb6c69ed676eea2652983cb96d91c97ccafb4ec8c90af"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/Repair6_Normal_Lifecycle_Analysis.md",
+   "bytes": 2068,
+   "sha256": "292652ed600fd9865c65f3a822acc5c3fd0ad4bf7b8c4b90e2035285b6c3321f"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/Repair6_Numeric_Reference_Contract.md",
+   "bytes": 2591,
+   "sha256": "18cd6826d6fc6c9efaca2991ed9523860b641ac779fac3c48d78f0883fd5976d"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/Repair6_Server_Commands.md",
+   "bytes": 5389,
+   "sha256": "dba198561ad37c6de26057f049f0b3535ec044c87a83b4d74207c61a40ad159f"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/Repair6_Target_Budget_And_Storage.md",
+   "bytes": 2697,
+   "sha256": "097341609ef9fe4c139e66957e72ddddc9fce4c4508e6b59eed60616dbb17bb2"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/handoff.json",
+   "bytes": 132742,
+   "sha256": "23848a9e2d0404e7ec21b3d17a719907e9089aa45b9218d79124b9fa6754389c"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/historical/P7X_Graph_Base_A3_Repair5_Server_Final_Report.md",
+   "bytes": 23913,
+   "sha256": "ca8a53619197cf76e941c984ea006e71de4b52956128d4c4d5c5b6ff20da52fe"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/server_input/COMMANDS.md",
+   "bytes": 5389,
+   "sha256": "dba198561ad37c6de26057f049f0b3535ec044c87a83b4d74207c61a40ad159f"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/server_input/IMPLEMENTATION_REPORT.md",
+   "bytes": 28558,
+   "sha256": "02f8654ca87f4543a0e6289896ffac049797ec5746f32984c8107f76a6dc8d74"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/server_input/handoff.json",
+   "bytes": 132742,
+   "sha256": "23848a9e2d0404e7ec21b3d17a719907e9089aa45b9218d79124b9fa6754389c"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/review_package/server_input/inputs/fixture_manifest.json",
+   "bytes": 1781,
+   "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/server_input/ARTIFACT_INDEX.json",
+   "bytes": 2079,
+   "sha256": "b4bce794e9ac1d08130df0923abebbdc836beeb7a08f41fa9c92b8bdd3a398c4"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/server_input/COMMANDS.md",
+   "bytes": 5389,
+   "sha256": "dba198561ad37c6de26057f049f0b3535ec044c87a83b4d74207c61a40ad159f"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/server_input/IMPLEMENTATION_REPORT.md",
+   "bytes": 28558,
+   "sha256": "02f8654ca87f4543a0e6289896ffac049797ec5746f32984c8107f76a6dc8d74"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/server_input/handoff.json",
+   "bytes": 132742,
+   "sha256": "23848a9e2d0404e7ec21b3d17a719907e9089aa45b9218d79124b9fa6754389c"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/package_verify/server_input/inputs/fixture_manifest.json",
+   "bytes": 1781,
+   "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/review_package/Delivery_CLI_Path_Verification.json",
+   "bytes": 585,
+   "sha256": "0b99f32f0dbd123eb474285d3377fa530e5d1d5091d23556b11d3332c40ef845"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/review_package/Graph_Release_Evidence_Decisions.md",
+   "bytes": 1886,
+   "sha256": "d372c577ae29f057f5f9275d7dc0fdf6493919aa54b502721cb498c098c8bea3"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/review_package/Implementation_Gap_Matrix.json",
+   "bytes": 974,
+   "sha256": "b02683f0667d4b81f6e5228d48693cb8e711705e08008f1bc2bca32a0461bc99"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/review_package/REPORT.md",
+   "bytes": 28558,
+   "sha256": "02f8654ca87f4543a0e6289896ffac049797ec5746f32984c8107f76a6dc8d74"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/review_package/Raw_Index_Structure.json",
+   "bytes": 50,
+   "sha256": "bebd20dcf00a927c5a75c0087b4e2a68d94e3c25002ee1144ef28a60eefcfcf0"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/review_package/Raw_Reference_Index.json",
+   "bytes": 235135,
+   "sha256": "cb598033ece4720905fe6a3d51a7473d547ca6a9c42bf91bb6f890d994d30e06"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/review_package/Receiver_Verification.json",
+   "bytes": 2699,
+   "sha256": "484fd4b11791c2e3fa89594da64c8d370bc812d585cef10dc2064de1f0ef76d8"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/review_package/Repair5_Evidence_Corrections.md",
+   "bytes": 2865,
+   "sha256": "5de97fd2bb71f7fe745de2783605578d44dc22fc5f5501b58941d7ca534bb03f"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/review_package/Repair5_Profiling_Independent_Reanalysis.md",
+   "bytes": 2241,
+   "sha256": "8d3d97c197002b182b4fb6c69ed676eea2652983cb96d91c97ccafb4ec8c90af"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/review_package/Repair6_Normal_Lifecycle_Analysis.md",
+   "bytes": 2068,
+   "sha256": "292652ed600fd9865c65f3a822acc5c3fd0ad4bf7b8c4b90e2035285b6c3321f"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/review_package/Repair6_Numeric_Reference_Contract.md",
+   "bytes": 2591,
+   "sha256": "18cd6826d6fc6c9efaca2991ed9523860b641ac779fac3c48d78f0883fd5976d"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/review_package/Repair6_Server_Commands.md",
+   "bytes": 5389,
+   "sha256": "dba198561ad37c6de26057f049f0b3535ec044c87a83b4d74207c61a40ad159f"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/review_package/Repair6_Target_Budget_And_Storage.md",
+   "bytes": 2697,
+   "sha256": "097341609ef9fe4c139e66957e72ddddc9fce4c4508e6b59eed60616dbb17bb2"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/review_package/handoff.json",
+   "bytes": 132742,
+   "sha256": "23848a9e2d0404e7ec21b3d17a719907e9089aa45b9218d79124b9fa6754389c"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/review_package/historical/P7X_Graph_Base_A3_Repair5_Server_Final_Report.md",
+   "bytes": 23913,
+   "sha256": "ca8a53619197cf76e941c984ea006e71de4b52956128d4c4d5c5b6ff20da52fe"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/review_package/server_input/COMMANDS.md",
+   "bytes": 5389,
+   "sha256": "dba198561ad37c6de26057f049f0b3535ec044c87a83b4d74207c61a40ad159f"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/review_package/server_input/IMPLEMENTATION_REPORT.md",
+   "bytes": 28558,
+   "sha256": "02f8654ca87f4543a0e6289896ffac049797ec5746f32984c8107f76a6dc8d74"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/review_package/server_input/handoff.json",
+   "bytes": 132742,
+   "sha256": "23848a9e2d0404e7ec21b3d17a719907e9089aa45b9218d79124b9fa6754389c"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/review_package/server_input/inputs/fixture_manifest.json",
+   "bytes": 1781,
+   "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/server_input/COMMANDS.md",
+   "bytes": 5389,
+   "sha256": "dba198561ad37c6de26057f049f0b3535ec044c87a83b4d74207c61a40ad159f"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/server_input/IMPLEMENTATION_REPORT.md",
+   "bytes": 28558,
+   "sha256": "02f8654ca87f4543a0e6289896ffac049797ec5746f32984c8107f76a6dc8d74"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/server_input/handoff.json",
+   "bytes": 132742,
+   "sha256": "23848a9e2d0404e7ec21b3d17a719907e9089aa45b9218d79124b9fa6754389c"
+  },
+  {
+   "path": "任务归档/029_20261021_Repair6证据纠偏存储数值与生命周期实现/原始资料/g1-g5_repair6_local/server_input/inputs/fixture_manifest.json",
+   "bytes": 1781,
+   "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/00_任务说明.md",
+   "bytes": 2268,
+   "sha256": "b9b2678fb936bbebf36542ffce9008f050a569c0074c8421cb6491a5287dee6c"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/P7X_Graph_Base_A3_Repair6_Review_Fix_And_Readiness_Report.md",
+   "bytes": 15161,
+   "sha256": "04cf956700ea78252a174b81e9929c4c6b7508988d17ea0e7878febc5f1df72e"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/P7X_Graph_Base_A3_Repair6_Review_Fix_Download_Manifest.json",
+   "bytes": 1758,
+   "sha256": "5092b3fa427b23e8f671e9df5084e1c65046b2347b1e7eccec1ae3081f62300c"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/P7X_Graph_Base_A3_Repair6_Review_Fix_Package_Verification.json",
+   "bytes": 2666,
+   "sha256": "a4d94a453bb56951bf85bd312e134d3a3db482fd6b5fc18d72eed24695e04b07"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/Archive_Manifest.json",
+   "bytes": 2205,
+   "sha256": "c4724d87fb04eaa1d39f4b0c3baa9d7e883227ad3213b8d9df367fcf81443a7a"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/Continuous_Reference_Contract.md",
+   "bytes": 2280,
+   "sha256": "263c4051981f96acfd2fe24aecc4b459e9d5596906d0a91b4a21c2b1c0139154"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/Failure_Exit_And_Isolation_Contract.md",
+   "bytes": 1602,
+   "sha256": "ac0e2505b37f24a6ef2842619fc472e76eb55c186dd3feb1f63edc296f25e8a5"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/Graph_Release_Evidence_Decisions.md",
+   "bytes": 1479,
+   "sha256": "5830a5114c6a01028327fec4bf6ab651185fa858e617f506a9ee595acc63744a"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/Historical_Evidence_Index.json",
+   "bytes": 1484,
+   "sha256": "cddd30c29b7bf8b76d0d8651d49a6c8acd59f6f12b59b0c395d5ee1fea1c08c1"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/Normal_Lifecycle_Source_Audit.md",
+   "bytes": 3224,
+   "sha256": "f6c3a63885a4c241438247cac98cd61fa170cb8f3119411c2f89e206221f9dcb"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/Profiling_Coverage_Contract.md",
+   "bytes": 1317,
+   "sha256": "73c4f61540ad322703e8cbeb97ef3083243b4002b57a01db9487854ec61d5fe3"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/Red_Green_Reproduction.md",
+   "bytes": 1187,
+   "sha256": "fbee606aba01c6f4215cd96cc2dd7b9b309610102403fb4829706280e3bca693"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/Repair6_Review_Server_Commands.md",
+   "bytes": 2750,
+   "sha256": "99de7f3da5d044cc073ec9399ebeafb9ba8c1dd714096e2d2e4392139c71ecf8"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/Stage_Resource_Plan.md",
+   "bytes": 1287,
+   "sha256": "48282bcaa43c30bbe41a97edd2b658f9ed4833bf2108b6fd416f0e8fcbf0fa9f"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/archive_pre_review/P7X_Graph_Base_A3_Repair6_Download_Manifest.json",
+   "bytes": 1581,
+   "sha256": "9bbbb3185166a1c359bcd6b9c522b8f652c2534cd391dd94c1d7de82e6b35952"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/archive_pre_review/P7X_Graph_Base_A3_Repair6_Implementation_And_Readiness_Report.md",
+   "bytes": 28558,
+   "sha256": "02f8654ca87f4543a0e6289896ffac049797ec5746f32984c8107f76a6dc8d74"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/archive_pre_review/P7X_Graph_Base_A3_Repair6_Package_Verification.json",
+   "bytes": 4991,
+   "sha256": "3cb8929dc56c32b457fc549df9763c02d4164888f29018cef22e98224b4a2bcc"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/archive_pre_review/P7X_Graph_Base_A3_Repair6_Server_Handoff.json",
+   "bytes": 132742,
+   "sha256": "23848a9e2d0404e7ec21b3d17a719907e9089aa45b9218d79124b9fa6754389c"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/historical_reference/Receiver_Verification.json",
+   "bytes": 2699,
+   "sha256": "484fd4b11791c2e3fa89594da64c8d370bc812d585cef10dc2064de1f0ef76d8"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/historical_reference/Repair5_Evidence_Corrections.md",
+   "bytes": 2865,
+   "sha256": "5de97fd2bb71f7fe745de2783605578d44dc22fc5f5501b58941d7ca534bb03f"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/historical_reference/Repair5_Profiling_Independent_Reanalysis.md",
+   "bytes": 2241,
+   "sha256": "8d3d97c197002b182b4fb6c69ed676eea2652983cb96d91c97ccafb4ec8c90af"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/host_evidence/numeric_failure/numeric-summary.json",
+   "bytes": 1867,
+   "sha256": "4545b6b4978e9274bf6c643296b2f691bcff3f72ad159c0abd1df0a8103970c9"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/host_evidence/success/numeric-summary.json",
+   "bytes": 6595,
+   "sha256": "0d33072e8faa85d36a40dafabeedf82361f73ddccd415ed36d93542a27b5c21e"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/ACCEPTANCE.md",
+   "bytes": 1602,
+   "sha256": "ac0e2505b37f24a6ef2842619fc472e76eb55c186dd3feb1f63edc296f25e8a5"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/ARTIFACT_INDEX.json",
+   "bytes": 2542,
+   "sha256": "7225980b770f827cebf92002c0d30f803ada28e28074c420114b7a42d85ccb8d"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/COMMANDS.md",
+   "bytes": 2750,
+   "sha256": "99de7f3da5d044cc073ec9399ebeafb9ba8c1dd714096e2d2e4392139c71ecf8"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/NUMERIC_SCHEMA.md",
+   "bytes": 2280,
+   "sha256": "263c4051981f96acfd2fe24aecc4b459e9d5596906d0a91b4a21c2b1c0139154"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/REVIEW_FIX_REPORT.md",
+   "bytes": 15161,
+   "sha256": "04cf956700ea78252a174b81e9929c4c6b7508988d17ea0e7878febc5f1df72e"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/handoff.json",
+   "bytes": 271310,
+   "sha256": "6db541684037a18f3162ad5b9e41a3e22a771c65a18557cdb01b78e1ad6e76b1"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/inputs/fixture_manifest.json",
+   "bytes": 1781,
+   "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/g1-g5_repair6_review_fix_local/ARTIFACT_INDEX.json",
+   "bytes": 40917,
+   "sha256": "43e0b34c599db18f8e8014489d70f32e70dd4a9906dcbb425141104983506c33"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/g1-g5_repair6_review_fix_local/Archive_Manifest.json",
+   "bytes": 2205,
+   "sha256": "c4724d87fb04eaa1d39f4b0c3baa9d7e883227ad3213b8d9df367fcf81443a7a"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/g1-g5_repair6_review_fix_local/Continuous_Reference_Contract.md",
+   "bytes": 2280,
+   "sha256": "263c4051981f96acfd2fe24aecc4b459e9d5596906d0a91b4a21c2b1c0139154"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/g1-g5_repair6_review_fix_local/Failure_Exit_And_Isolation_Contract.md",
+   "bytes": 1602,
+   "sha256": "ac0e2505b37f24a6ef2842619fc472e76eb55c186dd3feb1f63edc296f25e8a5"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/g1-g5_repair6_review_fix_local/Graph_Release_Evidence_Decisions.md",
+   "bytes": 1479,
+   "sha256": "5830a5114c6a01028327fec4bf6ab651185fa858e617f506a9ee595acc63744a"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/g1-g5_repair6_review_fix_local/Historical_Evidence_Index.json",
+   "bytes": 1484,
+   "sha256": "cddd30c29b7bf8b76d0d8651d49a6c8acd59f6f12b59b0c395d5ee1fea1c08c1"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/g1-g5_repair6_review_fix_local/Normal_Lifecycle_Source_Audit.md",
+   "bytes": 3224,
+   "sha256": "f6c3a63885a4c241438247cac98cd61fa170cb8f3119411c2f89e206221f9dcb"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/g1-g5_repair6_review_fix_local/Profiling_Coverage_Contract.md",
+   "bytes": 1317,
+   "sha256": "73c4f61540ad322703e8cbeb97ef3083243b4002b57a01db9487854ec61d5fe3"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/g1-g5_repair6_review_fix_local/REPORT.md",
+   "bytes": 15161,
+   "sha256": "04cf956700ea78252a174b81e9929c4c6b7508988d17ea0e7878febc5f1df72e"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/g1-g5_repair6_review_fix_local/Red_Green_Reproduction.md",
+   "bytes": 1187,
+   "sha256": "fbee606aba01c6f4215cd96cc2dd7b9b309610102403fb4829706280e3bca693"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/g1-g5_repair6_review_fix_local/Repair6_Review_Server_Commands.md",
+   "bytes": 2750,
+   "sha256": "99de7f3da5d044cc073ec9399ebeafb9ba8c1dd714096e2d2e4392139c71ecf8"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/g1-g5_repair6_review_fix_local/Stage_Resource_Plan.md",
+   "bytes": 1287,
+   "sha256": "48282bcaa43c30bbe41a97edd2b658f9ed4833bf2108b6fd416f0e8fcbf0fa9f"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/g1-g5_repair6_review_fix_local/handoff.json",
+   "bytes": 271310,
+   "sha256": "6db541684037a18f3162ad5b9e41a3e22a771c65a18557cdb01b78e1ad6e76b1"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/g1-g5_repair6_review_fix_local/historical_reference/Receiver_Verification.json",
+   "bytes": 2699,
+   "sha256": "484fd4b11791c2e3fa89594da64c8d370bc812d585cef10dc2064de1f0ef76d8"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/g1-g5_repair6_review_fix_local/historical_reference/Repair5_Evidence_Corrections.md",
+   "bytes": 2865,
+   "sha256": "5de97fd2bb71f7fe745de2783605578d44dc22fc5f5501b58941d7ca534bb03f"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/g1-g5_repair6_review_fix_local/historical_reference/Repair5_Profiling_Independent_Reanalysis.md",
+   "bytes": 2241,
+   "sha256": "8d3d97c197002b182b4fb6c69ed676eea2652983cb96d91c97ccafb4ec8c90af"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/g1-g5_repair6_review_fix_local/host_evidence/numeric_failure/numeric-summary.json",
+   "bytes": 1867,
+   "sha256": "4545b6b4978e9274bf6c643296b2f691bcff3f72ad159c0abd1df0a8103970c9"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/receiver_extract/g1-g5_repair6_review_fix_local/host_evidence/success/numeric-summary.json",
+   "bytes": 6595,
+   "sha256": "0d33072e8faa85d36a40dafabeedf82361f73ddccd415ed36d93542a27b5c21e"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/review_stage/Archive_Manifest.json",
+   "bytes": 2205,
+   "sha256": "c4724d87fb04eaa1d39f4b0c3baa9d7e883227ad3213b8d9df367fcf81443a7a"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/review_stage/Continuous_Reference_Contract.md",
+   "bytes": 2280,
+   "sha256": "263c4051981f96acfd2fe24aecc4b459e9d5596906d0a91b4a21c2b1c0139154"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/review_stage/Failure_Exit_And_Isolation_Contract.md",
+   "bytes": 1602,
+   "sha256": "ac0e2505b37f24a6ef2842619fc472e76eb55c186dd3feb1f63edc296f25e8a5"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/review_stage/Graph_Release_Evidence_Decisions.md",
+   "bytes": 1479,
+   "sha256": "5830a5114c6a01028327fec4bf6ab651185fa858e617f506a9ee595acc63744a"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/review_stage/Historical_Evidence_Index.json",
+   "bytes": 1484,
+   "sha256": "cddd30c29b7bf8b76d0d8651d49a6c8acd59f6f12b59b0c395d5ee1fea1c08c1"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/review_stage/Normal_Lifecycle_Source_Audit.md",
+   "bytes": 3224,
+   "sha256": "f6c3a63885a4c241438247cac98cd61fa170cb8f3119411c2f89e206221f9dcb"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/review_stage/Profiling_Coverage_Contract.md",
+   "bytes": 1317,
+   "sha256": "73c4f61540ad322703e8cbeb97ef3083243b4002b57a01db9487854ec61d5fe3"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/review_stage/REPORT.md",
+   "bytes": 15161,
+   "sha256": "04cf956700ea78252a174b81e9929c4c6b7508988d17ea0e7878febc5f1df72e"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/review_stage/Red_Green_Reproduction.md",
+   "bytes": 1187,
+   "sha256": "fbee606aba01c6f4215cd96cc2dd7b9b309610102403fb4829706280e3bca693"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/review_stage/Repair6_Review_Server_Commands.md",
+   "bytes": 2750,
+   "sha256": "99de7f3da5d044cc073ec9399ebeafb9ba8c1dd714096e2d2e4392139c71ecf8"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/review_stage/Stage_Resource_Plan.md",
+   "bytes": 1287,
+   "sha256": "48282bcaa43c30bbe41a97edd2b658f9ed4833bf2108b6fd416f0e8fcbf0fa9f"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/review_stage/handoff.json",
+   "bytes": 271310,
+   "sha256": "6db541684037a18f3162ad5b9e41a3e22a771c65a18557cdb01b78e1ad6e76b1"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/review_stage/historical_reference/Receiver_Verification.json",
+   "bytes": 2699,
+   "sha256": "484fd4b11791c2e3fa89594da64c8d370bc812d585cef10dc2064de1f0ef76d8"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/review_stage/historical_reference/Repair5_Evidence_Corrections.md",
+   "bytes": 2865,
+   "sha256": "5de97fd2bb71f7fe745de2783605578d44dc22fc5f5501b58941d7ca534bb03f"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/review_stage/historical_reference/Repair5_Profiling_Independent_Reanalysis.md",
+   "bytes": 2241,
+   "sha256": "8d3d97c197002b182b4fb6c69ed676eea2652983cb96d91c97ccafb4ec8c90af"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/review_stage/host_evidence/numeric_failure/numeric-summary.json",
+   "bytes": 1867,
+   "sha256": "4545b6b4978e9274bf6c643296b2f691bcff3f72ad159c0abd1df0a8103970c9"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/review_stage/host_evidence/success/numeric-summary.json",
+   "bytes": 6595,
+   "sha256": "0d33072e8faa85d36a40dafabeedf82361f73ddccd415ed36d93542a27b5c21e"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/server_input/ACCEPTANCE.md",
+   "bytes": 1602,
+   "sha256": "ac0e2505b37f24a6ef2842619fc472e76eb55c186dd3feb1f63edc296f25e8a5"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/server_input/COMMANDS.md",
+   "bytes": 2750,
+   "sha256": "99de7f3da5d044cc073ec9399ebeafb9ba8c1dd714096e2d2e4392139c71ecf8"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/server_input/NUMERIC_SCHEMA.md",
+   "bytes": 2280,
+   "sha256": "263c4051981f96acfd2fe24aecc4b459e9d5596906d0a91b4a21c2b1c0139154"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/server_input/REVIEW_FIX_REPORT.md",
+   "bytes": 15161,
+   "sha256": "04cf956700ea78252a174b81e9929c4c6b7508988d17ea0e7878febc5f1df72e"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/server_input/handoff.json",
+   "bytes": 271310,
+   "sha256": "6db541684037a18f3162ad5b9e41a3e22a771c65a18557cdb01b78e1ad6e76b1"
+  },
+  {
+   "path": "任务归档/030_20261021_Repair6独立审查修复/原始资料/g1-g5_repair6_review_fix_local/server_input/inputs/fixture_manifest.json",
+   "bytes": 1781,
+   "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/00_任务说明.md",
+   "bytes": 2254,
+   "sha256": "265e9005ed469d42a80d53754e35e18185413ac2bcca3a102295d32746defaf5"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/P7X_Graph_Base_A3_Repair6_Publication_And_Server_Readiness_Report.md",
+   "bytes": 9166,
+   "sha256": "f66b82f20ebc228ee04e481dbb48dc25e00e4701bb3a7b51f1d4428d38697ac7"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/P7X_Graph_Base_A3_Repair6_Publication_Download_Manifest.json",
+   "bytes": 1997,
+   "sha256": "f41ceeea2a097433cccefab8dd90a815a0cb627a8af9692efcb0ffff340cf319"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/P7X_Graph_Base_A3_Repair6_Publication_Package_Verification.json",
+   "bytes": 2045,
+   "sha256": "05274473e970f69713da7600dd292815b7299ebd8d12b14857b42b59e696ca6e"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/P7X_Graph_Base_A3_Repair6_Publication_And_Server_Readiness_Report.md",
+   "bytes": 9166,
+   "sha256": "f66b82f20ebc228ee04e481dbb48dc25e00e4701bb3a7b51f1d4428d38697ac7"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/P7X_Graph_Base_A3_Repair6_Publication_Package_Verification.json",
+   "bytes": 2045,
+   "sha256": "05274473e970f69713da7600dd292815b7299ebd8d12b14857b42b59e696ca6e"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/Publication_Verification.json",
+   "bytes": 3667,
+   "sha256": "5da2453cecc94507961aabb376b914a7cb578f0fb1790d6587abcae055b6fee1"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/archive_pre_publication/P7X_Graph_Base_A3_Repair6_Review_Fix_And_Readiness_Report.md",
+   "bytes": 15161,
+   "sha256": "04cf956700ea78252a174b81e9929c4c6b7508988d17ea0e7878febc5f1df72e"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/archive_pre_publication/P7X_Graph_Base_A3_Repair6_Review_Fix_Download_Manifest.json",
+   "bytes": 1758,
+   "sha256": "5092b3fa427b23e8f671e9df5084e1c65046b2347b1e7eccec1ae3081f62300c"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/archive_pre_publication/P7X_Graph_Base_A3_Repair6_Review_Fix_Package_Verification.json",
+   "bytes": 2666,
+   "sha256": "a4d94a453bb56951bf85bd312e134d3a3db482fd6b5fc18d72eed24695e04b07"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/archive_pre_publication/P7X_Graph_Base_A3_Repair6_Server_Handoff.json",
+   "bytes": 271310,
+   "sha256": "6db541684037a18f3162ad5b9e41a3e22a771c65a18557cdb01b78e1ad6e76b1"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/publication_evidence/COMMANDS.md",
+   "bytes": 3816,
+   "sha256": "2e24d899f9a027c8b23f8f3d6f52435f1d4209dd4858b263656133a84771314a"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/publication_evidence/P7X_Graph_Base_A3_Repair6_Publication_And_Server_Readiness_Report.md",
+   "bytes": 9166,
+   "sha256": "f66b82f20ebc228ee04e481dbb48dc25e00e4701bb3a7b51f1d4428d38697ac7"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/publication_evidence/Publication_Verification.json",
+   "bytes": 3667,
+   "sha256": "5da2453cecc94507961aabb376b914a7cb578f0fb1790d6587abcae055b6fee1"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/publication_evidence/Red_Green_Reproduction.md",
+   "bytes": 1187,
+   "sha256": "fbee606aba01c6f4215cd96cc2dd7b9b309610102403fb4829706280e3bca693"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/publication_evidence/Server_Package_Verification.json",
+   "bytes": 548,
+   "sha256": "4e23896e41a0751816ffcd9874ed2b9b51d9ec3dd5d7df18efc5deec2f0cc82d"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/publication_evidence/handoff.json",
+   "bytes": 276080,
+   "sha256": "9ed64f7f0788c4a15b7850f3d252d72f0ce5274703fe0688fab1ac4298442ef4"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/ACCEPTANCE.md",
+   "bytes": 1602,
+   "sha256": "ac0e2505b37f24a6ef2842619fc472e76eb55c186dd3feb1f63edc296f25e8a5"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/ARTIFACT_INDEX.json",
+   "bytes": 3861,
+   "sha256": "a892c814bdf15d45d274eaa9e3688d6229da06965cbec6c8f6c4e92044010037"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/COMMANDS.md",
+   "bytes": 3816,
+   "sha256": "2e24d899f9a027c8b23f8f3d6f52435f1d4209dd4858b263656133a84771314a"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/Continuous_Reference_Contract.md",
+   "bytes": 2280,
+   "sha256": "263c4051981f96acfd2fe24aecc4b459e9d5596906d0a91b4a21c2b1c0139154"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/Failure_Exit_And_Isolation_Contract.md",
+   "bytes": 1602,
+   "sha256": "ac0e2505b37f24a6ef2842619fc472e76eb55c186dd3feb1f63edc296f25e8a5"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/Graph_Release_Evidence_Decisions.md",
+   "bytes": 1479,
+   "sha256": "5830a5114c6a01028327fec4bf6ab651185fa858e617f506a9ee595acc63744a"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/NUMERIC_SCHEMA.md",
+   "bytes": 2280,
+   "sha256": "263c4051981f96acfd2fe24aecc4b459e9d5596906d0a91b4a21c2b1c0139154"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/Normal_Lifecycle_Source_Audit.md",
+   "bytes": 3224,
+   "sha256": "f6c3a63885a4c241438247cac98cd61fa170cb8f3119411c2f89e206221f9dcb"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/PUBLICATION_REPORT.md",
+   "bytes": 9166,
+   "sha256": "f66b82f20ebc228ee04e481dbb48dc25e00e4701bb3a7b51f1d4428d38697ac7"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/Profiling_Coverage_Contract.md",
+   "bytes": 1317,
+   "sha256": "73c4f61540ad322703e8cbeb97ef3083243b4002b57a01db9487854ec61d5fe3"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/REVIEW_FIX_REPORT.md",
+   "bytes": 15161,
+   "sha256": "04cf956700ea78252a174b81e9929c4c6b7508988d17ea0e7878febc5f1df72e"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/Stage_Resource_Plan.md",
+   "bytes": 1287,
+   "sha256": "48282bcaa43c30bbe41a97edd2b658f9ed4833bf2108b6fd416f0e8fcbf0fa9f"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/handoff.json",
+   "bytes": 276080,
+   "sha256": "9ed64f7f0788c4a15b7850f3d252d72f0ce5274703fe0688fab1ac4298442ef4"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/inputs/fixture_manifest.json",
+   "bytes": 1781,
+   "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/P7X_Graph_Base_A3_Repair6_Server_Input_Pack/publication-verification.json",
+   "bytes": 3667,
+   "sha256": "5da2453cecc94507961aabb376b914a7cb578f0fb1790d6587abcae055b6fee1"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/g1-g5_repair6_publication/ARTIFACT_INDEX.json",
+   "bytes": 6219,
+   "sha256": "3741d9ea8e3b12cad9bb451b150c5a292d93b7c17c52d81e58454397453014d0"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/g1-g5_repair6_publication/COMMANDS.md",
+   "bytes": 3816,
+   "sha256": "2e24d899f9a027c8b23f8f3d6f52435f1d4209dd4858b263656133a84771314a"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/g1-g5_repair6_publication/P7X_Graph_Base_A3_Repair6_Publication_And_Server_Readiness_Report.md",
+   "bytes": 9166,
+   "sha256": "f66b82f20ebc228ee04e481dbb48dc25e00e4701bb3a7b51f1d4428d38697ac7"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/g1-g5_repair6_publication/Publication_Verification.json",
+   "bytes": 3667,
+   "sha256": "5da2453cecc94507961aabb376b914a7cb578f0fb1790d6587abcae055b6fee1"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/g1-g5_repair6_publication/Red_Green_Reproduction.md",
+   "bytes": 1187,
+   "sha256": "fbee606aba01c6f4215cd96cc2dd7b9b309610102403fb4829706280e3bca693"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/g1-g5_repair6_publication/Server_Package_Verification.json",
+   "bytes": 548,
+   "sha256": "4e23896e41a0751816ffcd9874ed2b9b51d9ec3dd5d7df18efc5deec2f0cc82d"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/receiver_extract/g1-g5_repair6_publication/handoff.json",
+   "bytes": 276080,
+   "sha256": "9ed64f7f0788c4a15b7850f3d252d72f0ce5274703fe0688fab1ac4298442ef4"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/server_input/ACCEPTANCE.md",
+   "bytes": 1602,
+   "sha256": "ac0e2505b37f24a6ef2842619fc472e76eb55c186dd3feb1f63edc296f25e8a5"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/server_input/COMMANDS.md",
+   "bytes": 3816,
+   "sha256": "2e24d899f9a027c8b23f8f3d6f52435f1d4209dd4858b263656133a84771314a"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/server_input/Continuous_Reference_Contract.md",
+   "bytes": 2280,
+   "sha256": "263c4051981f96acfd2fe24aecc4b459e9d5596906d0a91b4a21c2b1c0139154"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/server_input/Failure_Exit_And_Isolation_Contract.md",
+   "bytes": 1602,
+   "sha256": "ac0e2505b37f24a6ef2842619fc472e76eb55c186dd3feb1f63edc296f25e8a5"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/server_input/Graph_Release_Evidence_Decisions.md",
+   "bytes": 1479,
+   "sha256": "5830a5114c6a01028327fec4bf6ab651185fa858e617f506a9ee595acc63744a"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/server_input/NUMERIC_SCHEMA.md",
+   "bytes": 2280,
+   "sha256": "263c4051981f96acfd2fe24aecc4b459e9d5596906d0a91b4a21c2b1c0139154"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/server_input/Normal_Lifecycle_Source_Audit.md",
+   "bytes": 3224,
+   "sha256": "f6c3a63885a4c241438247cac98cd61fa170cb8f3119411c2f89e206221f9dcb"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/server_input/PUBLICATION_REPORT.md",
+   "bytes": 9166,
+   "sha256": "f66b82f20ebc228ee04e481dbb48dc25e00e4701bb3a7b51f1d4428d38697ac7"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/server_input/Profiling_Coverage_Contract.md",
+   "bytes": 1317,
+   "sha256": "73c4f61540ad322703e8cbeb97ef3083243b4002b57a01db9487854ec61d5fe3"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/server_input/REVIEW_FIX_REPORT.md",
+   "bytes": 15161,
+   "sha256": "04cf956700ea78252a174b81e9929c4c6b7508988d17ea0e7878febc5f1df72e"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/server_input/Stage_Resource_Plan.md",
+   "bytes": 1287,
+   "sha256": "48282bcaa43c30bbe41a97edd2b658f9ed4833bf2108b6fd416f0e8fcbf0fa9f"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/server_input/handoff.json",
+   "bytes": 276080,
+   "sha256": "9ed64f7f0788c4a15b7850f3d252d72f0ce5274703fe0688fab1ac4298442ef4"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/server_input/inputs/fixture_manifest.json",
+   "bytes": 1781,
+   "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+  },
+  {
+   "path": "任务归档/031_20261022_Repair6发布与服务器交接/原始资料/g1-g5_repair6_publication_local/server_input/publication-verification.json",
+   "bytes": 3667,
+   "sha256": "5da2453cecc94507961aabb376b914a7cb578f0fb1790d6587abcae055b6fee1"
+  },
+  {
+   "path": "任务归档/032_20261022_Repair6服务器验证回传/00_任务说明.md",
+   "bytes": 2358,
+   "sha256": "76e31c31d97a70bafbd5354702058b356fd4bc8507a72bec978fddaf2092e0a6"
+  },
+  {
+   "path": "任务归档/032_20261022_Repair6服务器验证回传/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/historical_reports/P7X_Graph_Base_A3_Repair6_Server_Final_Report.md",
+   "bytes": 12844,
+   "sha256": "6f5d90e2da390a27a418369faa854f748ec18492e5e5e04d640581ba154243ab"
+  },
+  {
+   "path": "任务归档/032_20261022_Repair6服务器验证回传/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/historical_reports/Repair6_Platform_Semantics_And_Release_Gaps.md",
+   "bytes": 6261,
+   "sha256": "2dde036ea30f45171d5f27eb25d17c8cddd8ff47b5a4b4ecc7ae13af30edfe82"
+  },
+  {
+   "path": "任务归档/032_20261022_Repair6服务器验证回传/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/historical_reports/Repair6_Profiling_Report.md",
+   "bytes": 3496,
+   "sha256": "6296885ffa4674995672f178ce4c75190232eb369e67f1f6b850641555187a09"
+  },
+  {
+   "path": "任务归档/032_20261022_Repair6服务器验证回传/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/historical_reports/Repair6_Profiling_Summary.json",
+   "bytes": 2577,
+   "sha256": "472f03c946909d5eebd738dfe5a3a5c04a8247d006be846ec74652202b16bc31"
+  },
+  {
+   "path": "任务归档/032_20261022_Repair6服务器验证回传/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/historical_reports/P7X_Graph_Base_A3_Repair6_Server_Final_Report.md",
+   "bytes": 12844,
+   "sha256": "6f5d90e2da390a27a418369faa854f748ec18492e5e5e04d640581ba154243ab"
+  },
+  {
+   "path": "任务归档/032_20261022_Repair6服务器验证回传/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/historical_reports/Repair6_Platform_Semantics_And_Release_Gaps.md",
+   "bytes": 6261,
+   "sha256": "2dde036ea30f45171d5f27eb25d17c8cddd8ff47b5a4b4ecc7ae13af30edfe82"
+  },
+  {
+   "path": "任务归档/032_20261022_Repair6服务器验证回传/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/historical_reports/Repair6_Profiling_Report.md",
+   "bytes": 3496,
+   "sha256": "6296885ffa4674995672f178ce4c75190232eb369e67f1f6b850641555187a09"
+  },
+  {
+   "path": "任务归档/032_20261022_Repair6服务器验证回传/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/historical_reports/Repair6_Profiling_Summary.json",
+   "bytes": 2577,
+   "sha256": "472f03c946909d5eebd738dfe5a3a5c04a8247d006be846ec74652202b16bc31"
+  },
+  {
+   "path": "任务归档/032_20261022_Repair6服务器验证回传/原始资料/g1-g5_repair7_local/raw_package/ARTIFACT_INDEX.json",
+   "bytes": 851577,
+   "sha256": "556925376b1a22ce0e80868fb2c39f3c7791c249158bb518ecbe89a20b504592"
+  },
+  {
+   "path": "任务归档/032_20261022_Repair6服务器验证回传/原始资料/g1-g5_repair7_local/raw_package/reports/Device_Reassignment_Report.md",
+   "bytes": 6107,
+   "sha256": "f6ebb549782ba654a4a3a56f2b87e1104ac6694e4548ade968a670ffd954229d"
+  },
+  {
+   "path": "任务归档/032_20261022_Repair6服务器验证回传/原始资料/g1-g5_repair7_local/raw_package/reports/P7X_Graph_Base_A3_Repair6_Server_Final_Report.md",
+   "bytes": 12844,
+   "sha256": "6f5d90e2da390a27a418369faa854f748ec18492e5e5e04d640581ba154243ab"
+  },
+  {
+   "path": "任务归档/032_20261022_Repair6服务器验证回传/原始资料/g1-g5_repair7_local/raw_package/reports/Repair6_Platform_Semantics_And_Release_Gaps.md",
+   "bytes": 6261,
+   "sha256": "2dde036ea30f45171d5f27eb25d17c8cddd8ff47b5a4b4ecc7ae13af30edfe82"
+  },
+  {
+   "path": "任务归档/032_20261022_Repair6服务器验证回传/原始资料/g1-g5_repair7_local/raw_package/reports/Repair6_Profiling_Report.md",
+   "bytes": 3496,
+   "sha256": "6296885ffa4674995672f178ce4c75190232eb369e67f1f6b850641555187a09"
+  },
+  {
+   "path": "任务归档/032_20261022_Repair6服务器验证回传/原始资料/g1-g5_repair7_local/raw_package/reports/Repair6_Profiling_Summary.json",
+   "bytes": 2577,
+   "sha256": "472f03c946909d5eebd738dfe5a3a5c04a8247d006be846ec74652202b16bc31"
+  },
+  {
+   "path": "任务归档/032_20261022_Repair6服务器验证回传/原始资料/g1-g5_repair7_local/review_input/historical_reports/P7X_Graph_Base_A3_Repair6_Server_Final_Report.md",
+   "bytes": 12844,
+   "sha256": "6f5d90e2da390a27a418369faa854f748ec18492e5e5e04d640581ba154243ab"
+  },
+  {
+   "path": "任务归档/032_20261022_Repair6服务器验证回传/原始资料/g1-g5_repair7_local/review_input/historical_reports/Repair6_Platform_Semantics_And_Release_Gaps.md",
+   "bytes": 6261,
+   "sha256": "2dde036ea30f45171d5f27eb25d17c8cddd8ff47b5a4b4ecc7ae13af30edfe82"
+  },
+  {
+   "path": "任务归档/032_20261022_Repair6服务器验证回传/原始资料/g1-g5_repair7_local/review_input/historical_reports/Repair6_Profiling_Report.md",
+   "bytes": 3496,
+   "sha256": "6296885ffa4674995672f178ce4c75190232eb369e67f1f6b850641555187a09"
+  },
+  {
+   "path": "任务归档/032_20261022_Repair6服务器验证回传/原始资料/g1-g5_repair7_local/review_input/historical_reports/Repair6_Profiling_Summary.json",
+   "bytes": 2577,
+   "sha256": "472f03c946909d5eebd738dfe5a3a5c04a8247d006be846ec74652202b16bc31"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/00_任务说明.md",
+   "bytes": 4561,
+   "sha256": "31d21cf8c37bf1d221d4942eeaa954ead8a49c0963ecd7563ea0fb67b52f4ba6"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/P7X_Graph_Base_A3_Repair7_Download_Manifest.json",
+   "bytes": 2297,
+   "sha256": "4791ec8a7801c9bd7b551cf99bd6f2594e3ce18ee56a08fa13f5148e936127d8"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/P7X_Graph_Base_A3_Repair7_Implementation_And_Readiness_Report.md",
+   "bytes": 26061,
+   "sha256": "3e81164fa1384b60d4371212a4b07d8bb6bb436d3ff14fd2821f3ca0d859ece0"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/P7X_Graph_Base_A3_Repair7_Independent_Review_Request.md",
+   "bytes": 2320,
+   "sha256": "ea3dfb9e3e2b3ce8a19d4d1f724f3354681896cc79d50fb6e2bb94e517da2a81"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/P7X_Graph_Base_A3_Repair7_Package_Verification.json",
+   "bytes": 3128,
+   "sha256": "dc08faa64eae2609c4853c61736a9b785cb75133d1b4933b3480cd7311d98a47"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/P7X_Graph_Base_A3_Repair7_Server_Handoff.json",
+   "bytes": 301809,
+   "sha256": "94a59d6f5f0b5d3654a6d4fc853e0ad5cb7974397723455d0b62ef1d41ae41d4"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/Config_Contract_Matrix.json",
+   "bytes": 42855,
+   "sha256": "23d2910ee01809b5d31cbf1e56b0e1a215070584f664f6eba750e7b7c3763400"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/Continuous_Numeric_Contract.md",
+   "bytes": 1648,
+   "sha256": "3fa25677b6a266b8403fb5677730439b1105d765337ed5f753dfd1a8c9d5d893"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/Device_Admission_Contract.md",
+   "bytes": 2045,
+   "sha256": "6900e22390f59b4d74c324d23c4a8f4103e83d844c03307f0973ae21ddf02410"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/Failure_And_Resume.md",
+   "bytes": 1443,
+   "sha256": "6edb07a7f4b2a1acbfe5845e99d9db1b8ec28c1b5d20964a9d7cb856fea8a9dd"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/Lifecycle_And_Release_Decisions.md",
+   "bytes": 2758,
+   "sha256": "26d9371913f7ef7ad1edf4ec5918beb6093a4ecac187052d36532e0fc164054e"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/Profiling_Contract.md",
+   "bytes": 1611,
+   "sha256": "00dda4e24fd1d1e4d0597e873405d352bef37429c777387b9923db59262b14dd"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/Raw_Sample_Index.json",
+   "bytes": 79999,
+   "sha256": "40622df60613ca47553ae771500b6fa857b5f8252f4b6736ad43bcedbdfb5aa7"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/Receiver_Verification.json",
+   "bytes": 657,
+   "sha256": "29a1143d34ee4caac0bda5f53d8aab452c9e2285bc65367e6bfa170329ba53b7"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/Repair6_Evidence_Corrections.md",
+   "bytes": 1350,
+   "sha256": "7430f8fba26b4c9e94bde733163c0a4ce4b1cbc089dd87ea6d825bb93b39a5e5"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/Repair7_Server_Commands.md",
+   "bytes": 3714,
+   "sha256": "250f5abd4f9535d6d05a91a5fc8f9193d6bdbb9730d416bd50c37087995719ba"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/P7X_Graph_Base_A3_Repair7_Server_Input_Pack/ARTIFACT_INDEX.json",
+   "bytes": 2522,
+   "sha256": "801d942a4dd69da1b72ab4fa6334d6535470df05d6cf525c4552f82ab92af146"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/P7X_Graph_Base_A3_Repair7_Server_Input_Pack/COMMANDS.md",
+   "bytes": 3714,
+   "sha256": "250f5abd4f9535d6d05a91a5fc8f9193d6bdbb9730d416bd50c37087995719ba"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/P7X_Graph_Base_A3_Repair7_Server_Input_Pack/CONTINUOUS_NUMERIC.md",
+   "bytes": 1648,
+   "sha256": "3fa25677b6a266b8403fb5677730439b1105d765337ed5f753dfd1a8c9d5d893"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/P7X_Graph_Base_A3_Repair7_Server_Input_Pack/DEVICE_ADMISSION.md",
+   "bytes": 2045,
+   "sha256": "6900e22390f59b4d74c324d23c4a8f4103e83d844c03307f0973ae21ddf02410"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/P7X_Graph_Base_A3_Repair7_Server_Input_Pack/FAILURE_AND_RESUME.md",
+   "bytes": 1443,
+   "sha256": "6edb07a7f4b2a1acbfe5845e99d9db1b8ec28c1b5d20964a9d7cb856fea8a9dd"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/P7X_Graph_Base_A3_Repair7_Server_Input_Pack/LIFECYCLE.md",
+   "bytes": 2758,
+   "sha256": "26d9371913f7ef7ad1edf4ec5918beb6093a4ecac187052d36532e0fc164054e"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/P7X_Graph_Base_A3_Repair7_Server_Input_Pack/PROFILING.md",
+   "bytes": 1611,
+   "sha256": "00dda4e24fd1d1e4d0597e873405d352bef37429c777387b9923db59262b14dd"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/P7X_Graph_Base_A3_Repair7_Server_Input_Pack/handoff.json",
+   "bytes": 301809,
+   "sha256": "94a59d6f5f0b5d3654a6d4fc853e0ad5cb7974397723455d0b62ef1d41ae41d4"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/P7X_Graph_Base_A3_Repair7_Server_Input_Pack/inputs/fixture_manifest.json",
+   "bytes": 1781,
+   "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/ARTIFACT_INDEX.json",
+   "bytes": 21192,
+   "sha256": "7df3e97eb54f332e9469d18b32e1f76791dd0024abf6f17f1ba37220ccebc2a0"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/P7X_Graph_Base_A3_Repair7_Implementation_And_Readiness_Report.md",
+   "bytes": 26061,
+   "sha256": "3e81164fa1384b60d4371212a4b07d8bb6bb436d3ff14fd2821f3ca0d859ece0"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/P7X_Graph_Base_A3_Repair7_Independent_Review_Request.md",
+   "bytes": 2320,
+   "sha256": "ea3dfb9e3e2b3ce8a19d4d1f724f3354681896cc79d50fb6e2bb94e517da2a81"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/P7X_Graph_Base_A3_Repair7_Server_Handoff.json",
+   "bytes": 301809,
+   "sha256": "94a59d6f5f0b5d3654a6d4fc853e0ad5cb7974397723455d0b62ef1d41ae41d4"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/README.md",
+   "bytes": 147,
+   "sha256": "a2cbaa8221cf7d37be67547951ca9db35f1d4e561d9a1a2f723599ce4424d4c7"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/contracts/Continuous_Numeric_Contract.md",
+   "bytes": 1648,
+   "sha256": "3fa25677b6a266b8403fb5677730439b1105d765337ed5f753dfd1a8c9d5d893"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/contracts/Device_Admission_Contract.md",
+   "bytes": 2045,
+   "sha256": "6900e22390f59b4d74c324d23c4a8f4103e83d844c03307f0973ae21ddf02410"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/contracts/Failure_And_Resume.md",
+   "bytes": 1443,
+   "sha256": "6edb07a7f4b2a1acbfe5845e99d9db1b8ec28c1b5d20964a9d7cb856fea8a9dd"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/contracts/Lifecycle_And_Release_Decisions.md",
+   "bytes": 2758,
+   "sha256": "26d9371913f7ef7ad1edf4ec5918beb6093a4ecac187052d36532e0fc164054e"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/contracts/Profiling_Contract.md",
+   "bytes": 1611,
+   "sha256": "00dda4e24fd1d1e4d0597e873405d352bef37429c777387b9923db59262b14dd"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/contracts/Repair6_Evidence_Corrections.md",
+   "bytes": 1350,
+   "sha256": "7430f8fba26b4c9e94bde733163c0a4ce4b1cbc089dd87ea6d825bb93b39a5e5"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/contracts/Repair7_Server_Commands.md",
+   "bytes": 3714,
+   "sha256": "250f5abd4f9535d6d05a91a5fc8f9193d6bdbb9730d416bd50c37087995719ba"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/evidence/Config_Contract_Matrix.json",
+   "bytes": 42855,
+   "sha256": "23d2910ee01809b5d31cbf1e56b0e1a215070584f664f6eba750e7b7c3763400"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/evidence/Original_Raw_ARTIFACT_INDEX.json",
+   "bytes": 851577,
+   "sha256": "556925376b1a22ce0e80868fb2c39f3c7791c249158bb518ecbe89a20b504592"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/evidence/Raw_Sample_Index.json",
+   "bytes": 79999,
+   "sha256": "40622df60613ca47553ae771500b6fa857b5f8252f4b6736ad43bcedbdfb5aa7"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/evidence/Receiver_Verification.json",
+   "bytes": 657,
+   "sha256": "29a1143d34ee4caac0bda5f53d8aab452c9e2285bc65367e6bfa170329ba53b7"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/historical_reports/Device_Reassignment_Report.md",
+   "bytes": 6107,
+   "sha256": "f6ebb549782ba654a4a3a56f2b87e1104ac6694e4548ade968a670ffd954229d"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/logs/config-matrix.json",
+   "bytes": 358,
+   "sha256": "387b31184c9aa75ff08f28a947826b6cc7a0f8cbd7d5304ccf3760697d25fc93"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/final_extracted_verification/g1-g5_repair7_local_review/logs/host-config-matrix.json",
+   "bytes": 130,
+   "sha256": "ba8ceeba1c9f724ada63e0e6cff319ec16500abfe24fcd72479b695c9926cab8"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/logs/config-matrix.json",
+   "bytes": 358,
+   "sha256": "387b31184c9aa75ff08f28a947826b6cc7a0f8cbd7d5304ccf3760697d25fc93"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/logs/host-config-matrix.json",
+   "bytes": 130,
+   "sha256": "ba8ceeba1c9f724ada63e0e6cff319ec16500abfe24fcd72479b695c9926cab8"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/P7X_Graph_Base_A3_Repair7_Server_Input_Pack/ARTIFACT_INDEX.json",
+   "bytes": 2522,
+   "sha256": "95b3f34468ca4e700bc59e575cfc6bd8cf5545d75f77f51cb0ad2c041a89c824"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/P7X_Graph_Base_A3_Repair7_Server_Input_Pack/COMMANDS.md",
+   "bytes": 3714,
+   "sha256": "250f5abd4f9535d6d05a91a5fc8f9193d6bdbb9730d416bd50c37087995719ba"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/P7X_Graph_Base_A3_Repair7_Server_Input_Pack/CONTINUOUS_NUMERIC.md",
+   "bytes": 1648,
+   "sha256": "3fa25677b6a266b8403fb5677730439b1105d765337ed5f753dfd1a8c9d5d893"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/P7X_Graph_Base_A3_Repair7_Server_Input_Pack/DEVICE_ADMISSION.md",
+   "bytes": 2045,
+   "sha256": "6900e22390f59b4d74c324d23c4a8f4103e83d844c03307f0973ae21ddf02410"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/P7X_Graph_Base_A3_Repair7_Server_Input_Pack/FAILURE_AND_RESUME.md",
+   "bytes": 1443,
+   "sha256": "6edb07a7f4b2a1acbfe5845e99d9db1b8ec28c1b5d20964a9d7cb856fea8a9dd"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/P7X_Graph_Base_A3_Repair7_Server_Input_Pack/LIFECYCLE.md",
+   "bytes": 2758,
+   "sha256": "26d9371913f7ef7ad1edf4ec5918beb6093a4ecac187052d36532e0fc164054e"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/P7X_Graph_Base_A3_Repair7_Server_Input_Pack/PROFILING.md",
+   "bytes": 1608,
+   "sha256": "d40100bf35545ae7311a824b18d7a088f0244f052aa406397704552302816c32"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/P7X_Graph_Base_A3_Repair7_Server_Input_Pack/handoff.json",
+   "bytes": 301809,
+   "sha256": "94a59d6f5f0b5d3654a6d4fc853e0ad5cb7974397723455d0b62ef1d41ae41d4"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/P7X_Graph_Base_A3_Repair7_Server_Input_Pack/inputs/fixture_manifest.json",
+   "bytes": 1781,
+   "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/ARTIFACT_INDEX.json",
+   "bytes": 21192,
+   "sha256": "c521844a60e0f0e87286916ace7c1359f49518f42a22e420c9c1d03c7231f174"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/P7X_Graph_Base_A3_Repair7_Implementation_And_Readiness_Report.md",
+   "bytes": 26058,
+   "sha256": "3cbd28bed288f7b97147b60f64acee12ccab2f1fc264a0f4d4aac90604901ad5"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/P7X_Graph_Base_A3_Repair7_Independent_Review_Request.md",
+   "bytes": 2320,
+   "sha256": "ea3dfb9e3e2b3ce8a19d4d1f724f3354681896cc79d50fb6e2bb94e517da2a81"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/P7X_Graph_Base_A3_Repair7_Server_Handoff.json",
+   "bytes": 301809,
+   "sha256": "94a59d6f5f0b5d3654a6d4fc853e0ad5cb7974397723455d0b62ef1d41ae41d4"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/README.md",
+   "bytes": 147,
+   "sha256": "a2cbaa8221cf7d37be67547951ca9db35f1d4e561d9a1a2f723599ce4424d4c7"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/contracts/Continuous_Numeric_Contract.md",
+   "bytes": 1648,
+   "sha256": "3fa25677b6a266b8403fb5677730439b1105d765337ed5f753dfd1a8c9d5d893"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/contracts/Device_Admission_Contract.md",
+   "bytes": 2045,
+   "sha256": "6900e22390f59b4d74c324d23c4a8f4103e83d844c03307f0973ae21ddf02410"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/contracts/Failure_And_Resume.md",
+   "bytes": 1443,
+   "sha256": "6edb07a7f4b2a1acbfe5845e99d9db1b8ec28c1b5d20964a9d7cb856fea8a9dd"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/contracts/Lifecycle_And_Release_Decisions.md",
+   "bytes": 2758,
+   "sha256": "26d9371913f7ef7ad1edf4ec5918beb6093a4ecac187052d36532e0fc164054e"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/contracts/Profiling_Contract.md",
+   "bytes": 1608,
+   "sha256": "d40100bf35545ae7311a824b18d7a088f0244f052aa406397704552302816c32"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/contracts/Repair6_Evidence_Corrections.md",
+   "bytes": 1350,
+   "sha256": "7430f8fba26b4c9e94bde733163c0a4ce4b1cbc089dd87ea6d825bb93b39a5e5"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/contracts/Repair7_Server_Commands.md",
+   "bytes": 3714,
+   "sha256": "250f5abd4f9535d6d05a91a5fc8f9193d6bdbb9730d416bd50c37087995719ba"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/evidence/Config_Contract_Matrix.json",
+   "bytes": 42855,
+   "sha256": "23d2910ee01809b5d31cbf1e56b0e1a215070584f664f6eba750e7b7c3763400"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/evidence/Original_Raw_ARTIFACT_INDEX.json",
+   "bytes": 851577,
+   "sha256": "556925376b1a22ce0e80868fb2c39f3c7791c249158bb518ecbe89a20b504592"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/evidence/Raw_Sample_Index.json",
+   "bytes": 79999,
+   "sha256": "40622df60613ca47553ae771500b6fa857b5f8252f4b6736ad43bcedbdfb5aa7"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/evidence/Receiver_Verification.json",
+   "bytes": 657,
+   "sha256": "29a1143d34ee4caac0bda5f53d8aab452c9e2285bc65367e6bfa170329ba53b7"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/historical_reports/Device_Reassignment_Report.md",
+   "bytes": 6107,
+   "sha256": "f6ebb549782ba654a4a3a56f2b87e1104ac6694e4548ade968a670ffd954229d"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/logs/config-matrix.json",
+   "bytes": 358,
+   "sha256": "387b31184c9aa75ff08f28a947826b6cc7a0f8cbd7d5304ccf3760697d25fc93"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/package_verification/g1-g5_repair7_local_review/logs/host-config-matrix.json",
+   "bytes": 130,
+   "sha256": "ba8ceeba1c9f724ada63e0e6cff319ec16500abfe24fcd72479b695c9926cab8"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_input/P7X_Graph_Base_A3_Repair7_Implementation_And_Readiness_Report.md",
+   "bytes": 26061,
+   "sha256": "3e81164fa1384b60d4371212a4b07d8bb6bb436d3ff14fd2821f3ca0d859ece0"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_input/P7X_Graph_Base_A3_Repair7_Independent_Review_Request.md",
+   "bytes": 2320,
+   "sha256": "ea3dfb9e3e2b3ce8a19d4d1f724f3354681896cc79d50fb6e2bb94e517da2a81"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_input/P7X_Graph_Base_A3_Repair7_Server_Handoff.json",
+   "bytes": 301809,
+   "sha256": "94a59d6f5f0b5d3654a6d4fc853e0ad5cb7974397723455d0b62ef1d41ae41d4"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_input/README.md",
+   "bytes": 147,
+   "sha256": "a2cbaa8221cf7d37be67547951ca9db35f1d4e561d9a1a2f723599ce4424d4c7"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_input/contracts/Continuous_Numeric_Contract.md",
+   "bytes": 1648,
+   "sha256": "3fa25677b6a266b8403fb5677730439b1105d765337ed5f753dfd1a8c9d5d893"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_input/contracts/Device_Admission_Contract.md",
+   "bytes": 2045,
+   "sha256": "6900e22390f59b4d74c324d23c4a8f4103e83d844c03307f0973ae21ddf02410"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_input/contracts/Failure_And_Resume.md",
+   "bytes": 1443,
+   "sha256": "6edb07a7f4b2a1acbfe5845e99d9db1b8ec28c1b5d20964a9d7cb856fea8a9dd"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_input/contracts/Lifecycle_And_Release_Decisions.md",
+   "bytes": 2758,
+   "sha256": "26d9371913f7ef7ad1edf4ec5918beb6093a4ecac187052d36532e0fc164054e"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_input/contracts/Profiling_Contract.md",
+   "bytes": 1611,
+   "sha256": "00dda4e24fd1d1e4d0597e873405d352bef37429c777387b9923db59262b14dd"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_input/contracts/Repair6_Evidence_Corrections.md",
+   "bytes": 1350,
+   "sha256": "7430f8fba26b4c9e94bde733163c0a4ce4b1cbc089dd87ea6d825bb93b39a5e5"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_input/contracts/Repair7_Server_Commands.md",
+   "bytes": 3714,
+   "sha256": "250f5abd4f9535d6d05a91a5fc8f9193d6bdbb9730d416bd50c37087995719ba"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_input/evidence/Config_Contract_Matrix.json",
+   "bytes": 42855,
+   "sha256": "23d2910ee01809b5d31cbf1e56b0e1a215070584f664f6eba750e7b7c3763400"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_input/evidence/Original_Raw_ARTIFACT_INDEX.json",
+   "bytes": 851577,
+   "sha256": "556925376b1a22ce0e80868fb2c39f3c7791c249158bb518ecbe89a20b504592"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_input/evidence/Raw_Sample_Index.json",
+   "bytes": 79999,
+   "sha256": "40622df60613ca47553ae771500b6fa857b5f8252f4b6736ad43bcedbdfb5aa7"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_input/evidence/Receiver_Verification.json",
+   "bytes": 657,
+   "sha256": "29a1143d34ee4caac0bda5f53d8aab452c9e2285bc65367e6bfa170329ba53b7"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_input/historical_reports/Device_Reassignment_Report.md",
+   "bytes": 6107,
+   "sha256": "f6ebb549782ba654a4a3a56f2b87e1104ac6694e4548ade968a670ffd954229d"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_input/logs/config-matrix.json",
+   "bytes": 358,
+   "sha256": "387b31184c9aa75ff08f28a947826b6cc7a0f8cbd7d5304ccf3760697d25fc93"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_input/logs/host-config-matrix.json",
+   "bytes": 130,
+   "sha256": "ba8ceeba1c9f724ada63e0e6cff319ec16500abfe24fcd72479b695c9926cab8"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_package/ARTIFACT_INDEX.json",
+   "bytes": 43608,
+   "sha256": "31b914f6bcd612911054af27320aeb74762448305c9522066e668a881be8afe3"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_package/README_REVIEW.md",
+   "bytes": 801,
+   "sha256": "a37b8a383a7f6ca554d9f9adb4a8bc241b5d7c9e1134d41bd129ebbbf33b2a36"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_package/inputs/ACCEPTANCE.md",
+   "bytes": 1602,
+   "sha256": "ac0e2505b37f24a6ef2842619fc472e76eb55c186dd3feb1f63edc296f25e8a5"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_package/inputs/COMMANDS.md",
+   "bytes": 3816,
+   "sha256": "2e24d899f9a027c8b23f8f3d6f52435f1d4209dd4858b263656133a84771314a"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_package/inputs/Continuous_Reference_Contract.md",
+   "bytes": 2280,
+   "sha256": "263c4051981f96acfd2fe24aecc4b459e9d5596906d0a91b4a21c2b1c0139154"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_package/inputs/Failure_Exit_And_Isolation_Contract.md",
+   "bytes": 1602,
+   "sha256": "ac0e2505b37f24a6ef2842619fc472e76eb55c186dd3feb1f63edc296f25e8a5"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_package/inputs/Graph_Release_Evidence_Decisions.md",
+   "bytes": 1479,
+   "sha256": "5830a5114c6a01028327fec4bf6ab651185fa858e617f506a9ee595acc63744a"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_package/inputs/NUMERIC_SCHEMA.md",
+   "bytes": 2280,
+   "sha256": "263c4051981f96acfd2fe24aecc4b459e9d5596906d0a91b4a21c2b1c0139154"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_package/inputs/Normal_Lifecycle_Source_Audit.md",
+   "bytes": 3224,
+   "sha256": "f6c3a63885a4c241438247cac98cd61fa170cb8f3119411c2f89e206221f9dcb"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_package/inputs/Profiling_Coverage_Contract.md",
+   "bytes": 1317,
+   "sha256": "73c4f61540ad322703e8cbeb97ef3083243b4002b57a01db9487854ec61d5fe3"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_package/inputs/REVIEW_FIX_REPORT.md",
+   "bytes": 15161,
+   "sha256": "04cf956700ea78252a174b81e9929c4c6b7508988d17ea0e7878febc5f1df72e"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_package/inputs/Stage_Resource_Plan.md",
+   "bytes": 1287,
+   "sha256": "48282bcaa43c30bbe41a97edd2b658f9ed4833bf2108b6fd416f0e8fcbf0fa9f"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_package/inputs/fixture_manifest.json",
+   "bytes": 1781,
+   "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_package/reports/Device_Reassignment_Report.md",
+   "bytes": 6107,
+   "sha256": "f6ebb549782ba654a4a3a56f2b87e1104ac6694e4548ade968a670ffd954229d"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_package/reports/P7X_Graph_Base_A3_Repair6_Server_Final_Report.md",
+   "bytes": 12844,
+   "sha256": "6f5d90e2da390a27a418369faa854f748ec18492e5e5e04d640581ba154243ab"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_package/reports/Repair6_Platform_Semantics_And_Release_Gaps.md",
+   "bytes": 6261,
+   "sha256": "2dde036ea30f45171d5f27eb25d17c8cddd8ff47b5a4b4ecc7ae13af30edfe82"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_package/reports/Repair6_Profiling_Report.md",
+   "bytes": 3496,
+   "sha256": "6296885ffa4674995672f178ce4c75190232eb369e67f1f6b850641555187a09"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/review_package/reports/Repair6_Profiling_Summary.json",
+   "bytes": 2577,
+   "sha256": "472f03c946909d5eebd738dfe5a3a5c04a8247d006be846ec74652202b16bc31"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/server_input/COMMANDS.md",
+   "bytes": 3714,
+   "sha256": "250f5abd4f9535d6d05a91a5fc8f9193d6bdbb9730d416bd50c37087995719ba"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/server_input/CONTINUOUS_NUMERIC.md",
+   "bytes": 1648,
+   "sha256": "3fa25677b6a266b8403fb5677730439b1105d765337ed5f753dfd1a8c9d5d893"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/server_input/DEVICE_ADMISSION.md",
+   "bytes": 2045,
+   "sha256": "6900e22390f59b4d74c324d23c4a8f4103e83d844c03307f0973ae21ddf02410"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/server_input/FAILURE_AND_RESUME.md",
+   "bytes": 1443,
+   "sha256": "6edb07a7f4b2a1acbfe5845e99d9db1b8ec28c1b5d20964a9d7cb856fea8a9dd"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/server_input/LIFECYCLE.md",
+   "bytes": 2758,
+   "sha256": "26d9371913f7ef7ad1edf4ec5918beb6093a4ecac187052d36532e0fc164054e"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/server_input/PROFILING.md",
+   "bytes": 1611,
+   "sha256": "00dda4e24fd1d1e4d0597e873405d352bef37429c777387b9923db59262b14dd"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/server_input/handoff.json",
+   "bytes": 301809,
+   "sha256": "94a59d6f5f0b5d3654a6d4fc853e0ad5cb7974397723455d0b62ef1d41ae41d4"
+  },
+  {
+   "path": "任务归档/033_20261022_Repair7配置数值Target与设备准入实现/原始资料/g1-g5_repair7_local/server_input/inputs/fixture_manifest.json",
+   "bytes": 1781,
+   "sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+  },
+  {
+   "path": "任务归档/034_20261022_Repair7发布与服务器接管准备/00_任务说明.md",
+   "bytes": 1319,
+   "sha256": "c6081ca307674b0b34e252b9da43606ee8ec5d0a984abb833973dcbb79c7ea36"
+  },
+  {
+   "path": "任务归档/034_20261022_Repair7发布与服务器接管准备/原始资料/P7X_Graph_Base_A3_Repair7_Publication_And_Server_Readiness_Report.md",
+   "bytes": 3739,
+   "sha256": "551973ae6068fb0f95085ec962b1c667c624028801f56cfcef9f69dbe8c40114"
+  },
+  {
+   "path": "任务归档/034_20261022_Repair7发布与服务器接管准备/原始资料/P7X_Graph_Base_A3_Repair7_Publication_Package_Verification.json",
+   "bytes": 815,
+   "sha256": "24c710bb8ce9a9f73155c08a2421f416cedfc3ba587e8c55161cfa817c95e6ef"
+  },
+  {
+   "path": "任务归档/034_20261022_Repair7发布与服务器接管准备/原始资料/P7X_Graph_Base_A3_Repair7_Server_Handoff_POST_PUBLICATION.json",
+   "bytes": 302527,
+   "sha256": "56d67a55b7f9c91ce010d1b90f3660eb2218e71d5569e1fae0f55828392d5147"
+  },
+  {
+   "path": "任务归档/034_20261022_Repair7发布与服务器接管准备/原始资料/P7X_Graph_Base_A3_Repair7_Server_Input_Pack_POST_PUBLICATION.zip",
+   "bytes": 44571,
+   "sha256": "09ec1b2be09816c42d0d5a466b4afa8e0931ba23d0665c8975745cd56d300b16"
+  },
+  {
+   "path": "任务归档/034_20261022_Repair7发布与服务器接管准备/原始资料/g1-g5_repair7_local/review_package/inputs/PUBLICATION_REPORT.md",
+   "bytes": 9166,
+   "sha256": "f66b82f20ebc228ee04e481dbb48dc25e00e4701bb3a7b51f1d4428d38697ac7"
+  },
+  {
+   "path": "任务归档/035_20261022_上一版服务器迁移归档记录/00_任务说明.md",
+   "bytes": 1521,
+   "sha256": "2be3ac653b2fda79f0d0d12059953ae22d7451dbe34d69dfc15f20c025b3c4a9"
+  },
+  {
+   "path": "任务归档/035_20261022_上一版服务器迁移归档记录/原始资料/MRV2_Server_Migration_Download_Manifest.json",
+   "bytes": 2456,
+   "sha256": "62867d3ac1b1ddfd7b07578fa6cb7e4c82d72923df47a4760cb92f4a149f2fdd"
+  },
+  {
+   "path": "任务归档/035_20261022_上一版服务器迁移归档记录/原始资料/MRV2_Server_Migration_Report.md",
+   "bytes": 4447,
+   "sha256": "4742a60627ec636b73a4fda3dd77677c908dbdb53abff4ae1ede1d9f3c3e1f99"
+  }
+ ]
+}

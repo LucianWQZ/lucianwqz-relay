@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-22T03:31:22.831134+08:00",
+  "files": [
+    {
+      "path": "MRV2_Server_Migration_Report.md",
+      "bytes": 4447,
+      "sha256": "4742a60627ec636b73a4fda3dd77677c908dbdb53abff4ae1ede1d9f3c3e1f99",
+      "purpose": "self-contained migration report"
+    },
+    {
+      "path": "MRV2_Server_Migration_Review.zip",
+      "bytes": 507033,
+      "sha256": "6a16b66eb3b803bbef7114799ff33f99080aa9ba4ce562f749ee6f5c18543c6f",
+      "purpose": "small online-review bundle"
+    },
+    {
+      "path": "private_transfer/MRV2_Server_Handoff_Essential.zip",
+      "bytes": 2117773,
+      "sha256": "f3548da32b4012e3c7e1e75d62c1bb786bdcdaf323af0f8a923e19bc27398c25",
+      "purpose": "minimum private server takeover archive"
+    },
+    {
+      "path": "private_transfer/MRV2_Server_Handoff_History.zip",
+      "bytes": 775506,
+      "sha256": "829eb72524bd622c3931595c1ebd46e835bfb44c02858623e9c31a54d8e68634",
+      "purpose": "selected byte-identical history archive"
+    },
+    {
+      "path": "current_handoff/P7X_Graph_Base_A3_Repair7_Publication_And_Server_Readiness_Report.md",
+      "bytes": 3739,
+      "sha256": "551973ae6068fb0f95085ec962b1c667c624028801f56cfcef9f69dbe8c40114",
+      "purpose": "Repair7 GitHub publication and server-readiness report"
+    },
+    {
+      "path": "current_handoff/P7X_Graph_Base_A3_Repair7_Server_Handoff_POST_PUBLICATION.json",
+      "bytes": 302527,
+      "sha256": "56d67a55b7f9c91ce010d1b90f3660eb2218e71d5569e1fae0f55828392d5147",
+      "purpose": "machine-readable post-publication handoff"
+    },
+    {
+      "path": "current_handoff/P7X_Graph_Base_A3_Repair7_Server_Input_Pack_POST_PUBLICATION.zip",
+      "bytes": 44571,
+      "sha256": "09ec1b2be09816c42d0d5a466b4afa8e0931ba23d0665c8975745cd56d300b16",
+      "purpose": "executable post-publication server input pack"
+    },
+    {
+      "path": "current_handoff/P7X_Graph_Base_A3_Repair7_Publication_Package_Verification.json",
+      "bytes": 815,
+      "sha256": "24c710bb8ce9a9f73155c08a2421f416cedfc3ba587e8c55161cfa817c95e6ef",
+      "purpose": "post-publication pack verification"
+    },
+    {
+      "path": "PACKAGE_VERIFY.log",
+      "bytes": 588,
+      "sha256": "680c97b2b48fdce998d49cadf8d6e2b08078d3a941d4583027f514183da99239",
+      "purpose": "migration archive verification log"
+    }
+  ],
+  "move_directory": "/Users/wenqingzhang/Desktop/中转/move/MRV2_Server_Handoff_20261022_031633_0800"
+}

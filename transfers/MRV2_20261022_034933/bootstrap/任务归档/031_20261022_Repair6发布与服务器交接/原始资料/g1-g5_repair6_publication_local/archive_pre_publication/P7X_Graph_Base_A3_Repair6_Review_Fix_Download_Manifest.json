@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "commit": "fd0716c59562f64262672de12e4ae26259908d0b",
+  "tree": "125b29bcb8fe501d69b53e185f9ec89075528310",
+  "publication": "NOT_PUBLISHED",
+  "files": [
+    {
+      "path": "P7X_Graph_Base_A3_Repair6_Review_Fix_And_Readiness_Report.md",
+      "bytes": 15161,
+      "sha256": "04cf956700ea78252a174b81e9929c4c6b7508988d17ea0e7878febc5f1df72e",
+      "purpose": "Review/report/handoff; PRE_PUBLICATION server inputs"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair6_Server_Handoff.json",
+      "bytes": 271310,
+      "sha256": "6db541684037a18f3162ad5b9e41a3e22a771c65a18557cdb01b78e1ad6e76b1",
+      "purpose": "Review/report/handoff; PRE_PUBLICATION server inputs"
+    },
+    {
+      "path": "g1-g5_repair6_review_fix_local.zip",
+      "bytes": 474384,
+      "sha256": "2eb904d39acb6a8d3bf8a01ae83c912b77d524bb78177a237b70d2f2b52865ef",
+      "purpose": "Review/report/handoff; PRE_PUBLICATION server inputs"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair6_Server_Input_Pack.zip",
+      "bytes": 56689,
+      "sha256": "9679d92a23a8a5db510af8a506dd147b38e98474b9874c274a6121e61d47da30",
+      "purpose": "Review/report/handoff; PRE_PUBLICATION server inputs"
+    },
+    {
+      "path": "P7X_Graph_Base_A3_Repair6_Review_Fix_Package_Verification.json",
+      "bytes": 2666,
+      "sha256": "a4d94a453bb56951bf85bd312e134d3a3db482fd6b5fc18d72eed24695e04b07",
+      "purpose": "Review/report/handoff; PRE_PUBLICATION server inputs"
+    }
+  ],
+  "minimum_review": [
+    "P7X_Graph_Base_A3_Repair6_Review_Fix_And_Readiness_Report.md",
+    "g1-g5_repair6_review_fix_local.zip"
+  ],
+  "raw_not_included": "Original Repair5 raw retained read-only; historical index in review ZIP",
+  "self_hash": "excluded to prevent cycle"
+}

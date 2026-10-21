@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "cases": 42,
+  "commands": [
+    {
+      "command": [
+        "PREPARE.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "output": "usage: PREPARE.py [-h] --repo REPO --vllm VLLM --output OUTPUT --run-id RUN_ID\n\nRepair6 post-publication preflight and plan materialization; no device run.\n\noptions:\n  -h, --help       show this help message and exit\n  --repo REPO\n  --vllm VLLM\n  --output OUTPUT\n  --run-id RUN_ID\n"
+    }
+  ],
+  "device_execution": "NOT_RUN",
+  "scope": "argv paths/identity/dependencies plus prior actual CLI --help tests"
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": "p7x-repair3-handoff-v2-publication-audit",
+  "repo_url": "https://github.com/LucianWQZ/vllm-ascend.git",
+  "branch": "fix/p7x-graph-base-a3-repair3",
+  "base_commit": "8198ab7a6df6a163316f5d4ed2126242bbeb4aa8",
+  "base_tree": "27eee84d06ec60461be7471d7c2ff941ad6d27ea",
+  "base_parent": "1870e0ba8a00eeeae16c27f877e81eb65b711080",
+  "commit": "10cbf4c014fc6cc48a6fea611bb605cecdd54cfd",
+  "actual_final_commit": "10cbf4c014fc6cc48a6fea611bb605cecdd54cfd",
+  "tree": "28dddd6d1fc19e67270ee71b7b9e7fcd410ab3c9",
+  "actual_final_tree": "28dddd6d1fc19e67270ee71b7b9e7fcd410ab3c9",
+  "parents": [
+    "8198ab7a6df6a163316f5d4ed2126242bbeb4aa8"
+  ],
+  "actual_final_parent": "8198ab7a6df6a163316f5d4ed2126242bbeb4aa8",
+  "commit_range": "8198ab7a6df6a163316f5d4ed2126242bbeb4aa8..10cbf4c014fc6cc48a6fea611bb605cecdd54cfd",
+  "changed_files": [
+    "tests/ut/spec_decode/test_draft_window_capture_observer.py",
+    "tests/ut/spec_decode/test_draft_window_graph_characterization.py",
+    "tests/ut/spec_decode/test_graph_repair2_campaign.py",
+    "tools/p7x_graph_repair2.py",
+    "vllm_ascend/attention/attention_v1.py",
+    "vllm_ascend/worker/v2/spec_decode/draft_window_graph_characterization.py"
+  ],
+  "source_clean": true,
+  "vllm_commit": "84030bbe3d74d99bad477a3d2e37a973ccd8865c",
+  "vllm_tree": "f3e320f8ae2e9a30e57a3c8dccfac94fcae93bee",
+  "vllm_clean": true,
+  "driver_relative_path": "tools/p7x_graph_repair2.py",
+  "driver_sha256": "7e6f2e5984430bc5231511960da2fdc9b073ddc58cfed8bfaed796498b70660d",
+  "fixture_manifest_sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+  "server_input_pack_sha256": null,
+  "publication_status": "VERIFIED",
+  "publication_verification": {
+    "github_cli_login": "LucianWQZ",
+    "repository": "LucianWQZ/vllm-ascend",
+    "viewer_permission": "ADMIN",
+    "ordinary_push": "SUCCESS",
+    "remote_branch": "EXACT_CANDIDATE",
+    "api_identity_and_permissions": "VERIFIED",
+    "api_exact_branch_identity": "VERIFIED",
+    "api_fallback": "ABORTED_BEFORE_REF_CREATION_DUE_TO_COMMIT_SHA_MISMATCH",
+    "clean_room_method": "https_proxy=http://127.0.0.1:15236 gh repo clone LucianWQZ/vllm-ascend <fresh-temp>/vllm-ascend -- --single-branch --branch fix/p7x-graph-base-a3-repair3",
+    "clean_room_result": "VERIFIED",
+    "verified_at_utc": "2026-10-19T18:40:47.670268+00:00"
+  },
+  "pr_created": false,
+  "production_modified_during_publication": false,
+  "findings_closed_locally": [
+    "R3-01 unsafe observer query",
+    "R3-02 device-free snapshot",
+    "R3-03 actual execution layer identity"
+  ],
+  "findings_still_device_required": [
+    "A3 SIGSEGV regression",
+    "G1 actual task operand",
+    "G2 device ABA",
+    "G3 physical read",
+    "G4 S>0/FULL_TARGET",
+    "G5 update/completion/reuse"
+  ],
+  "host_verification_status": "LOCAL_REPAIR_HOST_VERIFIED",
+  "ready_for_publication_review": true,
+  "ready_for_a3_smoke": true,
+  "ready_for_a3_smoke_after_publication": true,
+  "readiness_condition": "ordinary exact push plus API identity and independent GitHub clean-room clone verification",
+  "ready_for_all_g1_g5_closure": false,
+  "new_sha_device_verification": "NOT_RUN",
+  "public_graph_gate": "STILL_FROZEN",
+  "server_plan_relative_path": "Repair3_A3_Rerun_Plan.json",
+  "full_precommit": "ENVIRONMENT_BLOCKED_actionlint_dependency_network",
+  "host_tests_passed": 270,
+  "blocker": null,
+  "publication_attempts": [
+    {
+      "method": "ordinary_git_push",
+      "result": "FAILED",
+      "detail": "Failed to connect to github.com port 443 after 75003 ms"
+    },
+    {
+      "method": "github_git_data_api_safety_probe",
+      "result": "ABORTED_NO_REF_CREATED",
+      "detail": "API normalized commit timezone and returned f44d4f562154f4532a11b405dab31c61ec6e7f24 instead of exact 10cbf4c014fc6cc48a6fea611bb605cecdd54cfd"
+    },
+    {
+      "method": "ordinary_git_push_via_existing_system_http_proxy",
+      "result": "SUCCESS",
+      "ref": "refs/heads/fix/p7x-graph-base-a3-repair3"
+    }
+  ],
+  "server_input_pack_hash_reference": "P7X_Graph_Base_A3_Repair3_Publication_Download_Manifest.json",
+  "input_pack_hash_note": "External manifest contains ZIP hash; identical embedded/external handoff cannot contain its own containing ZIP hash.",
+  "verified_at_utc": "2026-10-19T18:40:47.670268+00:00",
+  "publication_history": [
+    {
+      "status": "BLOCKED",
+      "reason": "Git smart-HTTPS github.com:443 connection timeout; target remote branch remains absent"
+    }
+  ]
+}

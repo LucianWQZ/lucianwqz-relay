@@ -1,0 +1,8 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "../repair7_host_audit.py"
+  ],
+  "exit": 0,
+  "stdout_file": "host-config-matrix.log"
+}

@@ -1,0 +1,7 @@
+# 分阶段资源，不再用82GB阻断所有实验
+
+资源表由冻结实际几何生成于Stage_Resource_Plan.json。prefix1只预算实际第一样本；完整声明case未缩短。
+准备入口不再有全局full-target硬门。runner P0/轻量分支64MiB日志余量、profile2GiB trace预留（不是最大trace承诺）；Target在加载模型前读config估算、加载后用真实cache几何复核单臂；numeric额外4份Draft选定KV按实际geometry独立预算；tensor每块写前再查free，失败留下PREPARING和partial。
+比较只需chunk/JSON增量；已有两臂占用已反映在实时free，不再把它们重复要求为新增free。打包预检不依赖压缩比，按输入实bytes×1.01+16MiB+每成员4096字节估算新增空间。保留旧失败和原始Repair5回传，不自动清理或移动。
+全campaign同时保留所有profile/raw仍可能需要较大磁盘，这是资源事实；只有受影响分支BLOCKED_RESOURCE。可选独立证据盘需保留可解析引用并重新校验，不以删除case或减少KV解决。
+Host低disk反例验证prefix能运行而full被拒、写完首chunk后空间不足、manifest不冒充complete、其他独立分支可执行。mmap不是RSS上限；模型Host/HBM和真实trace大小仍需服务器记录。

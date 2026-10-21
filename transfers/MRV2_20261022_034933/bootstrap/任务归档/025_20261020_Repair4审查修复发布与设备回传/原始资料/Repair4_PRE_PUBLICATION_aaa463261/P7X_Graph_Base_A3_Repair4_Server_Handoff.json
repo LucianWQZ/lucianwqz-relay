@@ -1,0 +1,234 @@
+{
+  "schema_version": "p7x-repair4-handoff-v1",
+  "delivery_state": "PRE_PUBLICATION",
+  "repo": "https://github.com/LucianWQZ/vllm-ascend.git",
+  "branch": "fix/p7x-graph-base-a3-repair4",
+  "commit": "aaa4632612503adb34d90b55c36eedcaf0848979",
+  "tree": "d39adc3de6b98523680b918997469914ca3992e4",
+  "parent": "10cbf4c014fc6cc48a6fea611bb605cecdd54cfd",
+  "baseline": {
+    "commit": "10cbf4c014fc6cc48a6fea611bb605cecdd54cfd",
+    "tree": "28dddd6d1fc19e67270ee71b7b9e7fcd410ab3c9"
+  },
+  "vllm": {
+    "commit": "84030bbe3d74d99bad477a3d2e37a973ccd8865c",
+    "tree": "f3e320f8ae2e9a30e57a3c8dccfac94fcae93bee",
+    "mutation": "NONE"
+  },
+  "tools_sha256": {
+    "tools/p7x_graph_repair4_acceptance.py": "b4a840951a416bb4005b1067a4563f3b90ed8754935f766ba28b62d0295d7ede",
+    "tools/p7x_graph_repair4_campaign.py": "d6f780e31f6af8b3818dd27ffa17fbc925505efbec543ba5eb4f0dcd6955544d",
+    "tools/p7x_graph_repair4_fixture.py": "27c093010e18a80cafa78ccdd9ca4e62390da6758b8e27b978e7b8ff97a7f069",
+    "tools/p7x_graph_repair4_target.py": "ea21cd8fa88b4f4ebd64b5fd39ab01aca744445bf6e2ce5839794ed0f006e2d7",
+    "tools/p7x_graph_repair2.py": "c6723a4640bca3ae5fdf49f0061284fab90b9c339ca775f1e6d532285c71acda"
+  },
+  "fixture_manifest_sha256": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+  "publication_status": "NOT_PUBLISHED",
+  "new_sha_device_verification": "NOT_RUN",
+  "public_graph_gate": "STILL_FROZEN",
+  "local_tools_prepared": true,
+  "server_can_fetch_now": false,
+  "ready_for_publication_review": true,
+  "ready_for_a3_after_publication": "SCOPED_SMOKE_AND_DIAGNOSTICS",
+  "ready_for_all_g1_g5_closure": false,
+  "source_server_run": "20261019T185701Z_10cbf4c0",
+  "case_matrix": {
+    "P0": {
+      "entry": "tools/p7x_graph_repair4_campaign.py preflight",
+      "depends_on": [],
+      "ready": "LOCAL_READY",
+      "oracle": "exact SHA/tree/import/tool/model hashes + NPU availability; not device success"
+    },
+    "A0": {
+      "entry": "tools/p7x_graph_repair2.py run --case A0",
+      "depends_on": [
+        "P0"
+      ],
+      "ready": "LOCAL_READY",
+      "oracle": "startup, requests/outputs, normal launcher exit"
+    },
+    "A1": {
+      "entry": "tools/p7x_graph_repair2.py run --case A1",
+      "depends_on": [
+        "A0"
+      ],
+      "ready": "LOCAL_READY",
+      "oracle": "expected GRAPH_FROZEN only; resource failure is not expected gate"
+    },
+    "B0": {
+      "entry": "tools/p7x_graph_repair2.py run --case B",
+      "depends_on": [
+        "A0",
+        "A1"
+      ],
+      "ready": "LOCAL_READY",
+      "oracle": "actual replay(1,7)/(2,14)/(4,28), every real layer update, multi-generation retire, nonempty outputs, normal exit"
+    },
+    "B1": {
+      "entry": "tools/p7x_graph_repair2.py run --case B",
+      "depends_on": [
+        "B0"
+      ],
+      "ready": "LOCAL_READY",
+      "oracle": "runtime canonical S>0 + independent oracle + generation-associated output; token length alone insufficient"
+    },
+    "B2": {
+      "entry": "tools/p7x_graph_repair2.py run --case B",
+      "depends_on": [
+        "B0"
+      ],
+      "ready": "LOCAL_READY",
+      "oracle": "actual padded bucket + mixed lengths + complete outputs; no requested-count inference"
+    },
+    "O0/O1": {
+      "entry": "tools/p7x_graph_repair2.py run --case B-observer-off",
+      "depends_on": [
+        "A0"
+      ],
+      "ready": "LOCAL_READY",
+      "oracle": "experimental Graph remains on, observer disabled; complete functional results only"
+    },
+    "C2": {
+      "entry": "tools/p7x_graph_repair4_fixture.py run",
+      "depends_on": [
+        "P0",
+        "device_healthy"
+      ],
+      "ready": "LOCAL_READY_SCOPED",
+      "oracle": "private FullSource/P3/P6 + production FIA/task-update; numeric A/B/Aprime, backing stability, source lineage; NOT full MRV2"
+    },
+    "G4": {
+      "entry": "tools/p7x_graph_repair2.py run --target-probe",
+      "depends_on": [
+        "A0",
+        "B0"
+      ],
+      "ready": "LOCAL_READY_OBSERVATION",
+      "oracle": "canonical write/Target metadata + HEAD_ONLY tensors; paired state required"
+    },
+    "G4F": {
+      "entry": "tools/p7x_graph_repair2.py run --full-target-probe",
+      "depends_on": [
+        "A0",
+        "B0"
+      ],
+      "ready": "PARTIAL_ALIGNMENT_REQUIRED",
+      "oracle": "actual Target forward + complete declared mapped KV blocks; pair comparison implemented; deterministic pair generator/logical remap absent"
+    },
+    "T0/T1": {
+      "entry": "tools/p7x_graph_repair4_acceptance.py trace-fields",
+      "depends_on": [
+        "A0",
+        "B0_for_T1"
+      ],
+      "ready": "CAPABILITY_UNVERIFIED",
+      "oracle": "capture executable driver under supported msprof options, inspect actual fields; no task/physical proof by names"
+    },
+    "G5": {
+      "entry": "tools/p7x_graph_repair4_fixture.py run",
+      "depends_on": [
+        "P0",
+        "device_healthy"
+      ],
+      "ready": "LOCAL_READY_DIAGNOSTIC_ONLY",
+      "oracle": "ordinary last-consumer/update events + distinguishable generation results; no inference for unsynchronized serving"
+    },
+    "ABORT": {
+      "entry": "tools/p7x_graph_repair4_fixture.py run --abort-at",
+      "depends_on": [
+        "P0",
+        "device_healthy"
+      ],
+      "ready": "LOCAL_READY_DIAGNOSTIC_ONLY",
+      "oracle": "before/after replay/update/completion; no reuse if incomplete; process exit not completion"
+    },
+    "R0": {
+      "entry": "tools/p7x_graph_repair4_campaign.py pack / verify",
+      "depends_on": [
+        "all_executed_cases_have_raw_status"
+      ],
+      "ready": "LOCAL_READY",
+      "oracle": "ZIP CRC/member hash/JSON; no device correctness inference"
+    }
+  },
+  "gates": {
+    "G1": "OPEN_TASK_INTERNAL",
+    "G2": "NOT_RUN_NEW_SHA",
+    "G3": "OPEN_PHYSICAL_READ",
+    "G4": "OPEN_ALIGNED_TARGET_KV",
+    "G5": "OPEN_DEVICE_TIMELINE"
+  },
+  "frozen_recipe": {
+    "method": "dspark",
+    "K": 7,
+    "query_width": 7,
+    "sample_from_anchor": true,
+    "W": 1024,
+    "block_span": 128,
+    "capacity_tokens": 1151,
+    "max_model_len": 4096,
+    "max_num_batched_tokens": 4096,
+    "max_num_seqs": 4,
+    "seed": 0,
+    "max_tokens": 16,
+    "capture_sizes": [
+      7,
+      14,
+      28
+    ],
+    "graph_config": "FULL_DECODE_ONLY",
+    "runtime_graph": "FULL",
+    "TP_DP_PP_PCP_DCP": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "async_prefix_SP_DSACP_FlashComm": "OFF"
+  },
+  "completed": [
+    "legal None return handled without fictitious hash",
+    "true upstream Python return RED/GREEN",
+    "multi-generation scope retirement",
+    "private production P3/P6/FIA fixture",
+    "actual full Target forward checkpoint/strict comparison",
+    "layered evidence checker",
+    "source-aware plan/pack/verify"
+  ],
+  "incomplete": [
+    "deterministic FULL_TARGET OFF/ON pair generator",
+    "logical block remapping across different allocators",
+    "exact post4 native task timing proof",
+    "physical memory read trace",
+    "unsynchronized production lifetime/abort evidence",
+    "all new-SHA NPU execution"
+  ],
+  "after_publication_allowed": [
+    "P0",
+    "A0",
+    "A1",
+    "B0 then B1/B2",
+    "O0/O1",
+    "C2 scoped private fixture",
+    "G4 observation",
+    "G4F checkpoint attempts only",
+    "T0/T1 capability/trace",
+    "G5/ABORT diagnostic only",
+    "R0"
+  ],
+  "prohibited": [
+    "public Graph support",
+    "Batch A expansion",
+    "NPU claims from Host tests",
+    "applying uncommitted patch or bundle on server",
+    "using Repair3 OFF as new-SHA ON/OFF pair"
+  ],
+  "artifact_refs": {
+    "commands": "COMMANDS.md",
+    "fixture": "fixture_manifest.json",
+    "matrix": "case-matrix.json",
+    "schema": "EVIDENCE_SCHEMA.md",
+    "acceptance_questions": "ACCEPTANCE_DECISIONS.md"
+  }
+}

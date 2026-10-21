@@ -1,0 +1,369 @@
+{
+ "schema_version": 1,
+ "task_id": "MRV2_完整中文迁移_20261022_034933_0800",
+ "generated_at": "2026-10-22T04:54:35+0800",
+ "complete_set_rule_zh": "本清单 + Release 全部分片按序拼接构成完整迁移集合；bootstrap 与任何评审包都不能替代。",
+ "release": {
+  "repo": "LucianWQZ/private-file-relay",
+  "tag": "mrv2-transfer-20261022-034933",
+  "url": "https://github.com/LucianWQZ/private-file-relay/releases/tag/mrv2-transfer-20261022-034933",
+  "directory": "transfers/MRV2_20261022_034933",
+  "branch": "transfer/mrv2-adaption-20261022",
+  "asset_naming": "MRV2_full_archive.zip.part-NNN（0 起，三位补零）"
+ },
+ "archive": {
+  "filename": "MRV2_完整中文迁移包.zip",
+  "bytes": 29839300507,
+  "sha256": "cdea50597f7f7dc898fae79935d8fecfac5cba73b59aa23a15f867125f267f45",
+  "members": 7535,
+  "extracted_bytes": 29835867235
+ },
+ "sharding": {
+  "shard_size_bytes": 536870912,
+  "part_count": 56,
+  "concat_order_zh": "按 index 0..55 升序二进制拼接，不做任何重排或改写"
+ },
+ "identity_check": {
+  "bytes_match": true,
+  "sha_match": true,
+  "verify_method_zh": "切分时对整条字节流做单次 SHA256 累计，结果与原始 ZIP 独立计算的 SHA256 相同；未生成第二份 30GB 副本。"
+ },
+ "parts": [
+  {
+   "index": 0,
+   "name": "MRV2_full_archive.zip.part-000",
+   "bytes": 536870912,
+   "sha256": "c2c96bdcd24568fc12e788d4d2a8e642ce5a7565fc8447191656a2a05295825d"
+  },
+  {
+   "index": 1,
+   "name": "MRV2_full_archive.zip.part-001",
+   "bytes": 536870912,
+   "sha256": "029fee6bd61a88e806619454128e67db3c0de81205502ae5034569664ea4f980"
+  },
+  {
+   "index": 2,
+   "name": "MRV2_full_archive.zip.part-002",
+   "bytes": 536870912,
+   "sha256": "e2f4eabf13f966393f374edc88e9ea87f2347461b62b2c01327c964e9b2562f5"
+  },
+  {
+   "index": 3,
+   "name": "MRV2_full_archive.zip.part-003",
+   "bytes": 536870912,
+   "sha256": "e86248fa144dfb467b2175c476be6347b75f2080df1b7b686a0b6539cceff5c3"
+  },
+  {
+   "index": 4,
+   "name": "MRV2_full_archive.zip.part-004",
+   "bytes": 536870912,
+   "sha256": "11c297d34eb29fd49a3cddf882d88fb92cff9d0a9df23f7e9ccb652672ada4a0"
+  },
+  {
+   "index": 5,
+   "name": "MRV2_full_archive.zip.part-005",
+   "bytes": 536870912,
+   "sha256": "1af9f1dd8cce434aa82bd9ca24386dae0cec432b152e3d8ff63ad815db62ef40"
+  },
+  {
+   "index": 6,
+   "name": "MRV2_full_archive.zip.part-006",
+   "bytes": 536870912,
+   "sha256": "81a071d5ed57592d324c1aacae54aaa8810c9d84b73cc9b9f63355b2e5711720"
+  },
+  {
+   "index": 7,
+   "name": "MRV2_full_archive.zip.part-007",
+   "bytes": 536870912,
+   "sha256": "f42f178fc6a0cdb2c521e981b6975abaceeb64ab2018ebea96dd40a18eb2f66b"
+  },
+  {
+   "index": 8,
+   "name": "MRV2_full_archive.zip.part-008",
+   "bytes": 536870912,
+   "sha256": "b556dfe6f7e161df327655bbcd49f03335b1c8ddf1c38724f8d9174927a6ea11"
+  },
+  {
+   "index": 9,
+   "name": "MRV2_full_archive.zip.part-009",
+   "bytes": 536870912,
+   "sha256": "4673975372b87a05f1dc362126b21d5b936d6d84953c6a3c3753c6eb84424a4b"
+  },
+  {
+   "index": 10,
+   "name": "MRV2_full_archive.zip.part-010",
+   "bytes": 536870912,
+   "sha256": "db985cdceea98b5518fc1a15eeb2d78f2cd5ef1c011c94e0b1b736a0b6b0332c"
+  },
+  {
+   "index": 11,
+   "name": "MRV2_full_archive.zip.part-011",
+   "bytes": 536870912,
+   "sha256": "36361b95665e794fea4fac79d1011d111e46338c8fad8141c7835623509b57c3"
+  },
+  {
+   "index": 12,
+   "name": "MRV2_full_archive.zip.part-012",
+   "bytes": 536870912,
+   "sha256": "3eba4546b91dbd59f36c750997908e6650eeb0be7155b4bd75a305e46fe5f6fd"
+  },
+  {
+   "index": 13,
+   "name": "MRV2_full_archive.zip.part-013",
+   "bytes": 536870912,
+   "sha256": "ede4c1cbc6c28bee8a2ddbadfd9bf9234bc345010c0f13f6832d8aebd9ede259"
+  },
+  {
+   "index": 14,
+   "name": "MRV2_full_archive.zip.part-014",
+   "bytes": 536870912,
+   "sha256": "ca37fdf54ecd4e36ca1e61f375801585bba8afc9f398c913a390c99993155f4a"
+  },
+  {
+   "index": 15,
+   "name": "MRV2_full_archive.zip.part-015",
+   "bytes": 536870912,
+   "sha256": "8ab2e11340e5f9705be7b69b21f631aef407cc96ad824aa7198d375a2e1199cf"
+  },
+  {
+   "index": 16,
+   "name": "MRV2_full_archive.zip.part-016",
+   "bytes": 536870912,
+   "sha256": "585445a0a2309651b8651131b657ef1100c1861436338a2b2788813e1e80967a"
+  },
+  {
+   "index": 17,
+   "name": "MRV2_full_archive.zip.part-017",
+   "bytes": 536870912,
+   "sha256": "c6f96071e0a99f274e2f9e6e1c456d7dfd5abc4cf2ab15b554fce2ded0d0148a"
+  },
+  {
+   "index": 18,
+   "name": "MRV2_full_archive.zip.part-018",
+   "bytes": 536870912,
+   "sha256": "50ad3d8dd9f33b2753012e23bf828ed46fb8516b42e263f2fba6972e41b1918e"
+  },
+  {
+   "index": 19,
+   "name": "MRV2_full_archive.zip.part-019",
+   "bytes": 536870912,
+   "sha256": "59366e7ec2c1fec51c93baea8e28c7f92a41a3cbde893cd10b45a64a75914ad4"
+  },
+  {
+   "index": 20,
+   "name": "MRV2_full_archive.zip.part-020",
+   "bytes": 536870912,
+   "sha256": "7662b43a472167e9c86f33009a709601808846140a3b6559b6f26b967c2d5b91"
+  },
+  {
+   "index": 21,
+   "name": "MRV2_full_archive.zip.part-021",
+   "bytes": 536870912,
+   "sha256": "a3d197a64679ef1ebbca945c1eec6a57589064ca69a7e0527800522dd4f20ea0"
+  },
+  {
+   "index": 22,
+   "name": "MRV2_full_archive.zip.part-022",
+   "bytes": 536870912,
+   "sha256": "0c7b2115bdb2deab6acead67996f5e14e1f896d8b4b8c636a1803331db13687e"
+  },
+  {
+   "index": 23,
+   "name": "MRV2_full_archive.zip.part-023",
+   "bytes": 536870912,
+   "sha256": "a43ab010a2ab3f9897ae8f19a48f233af016de0d1a07759b9fdb9c99fa2cce0b"
+  },
+  {
+   "index": 24,
+   "name": "MRV2_full_archive.zip.part-024",
+   "bytes": 536870912,
+   "sha256": "c61df835e64d3cbe154a32ba2f5a6c02dcb543df8c2130b3d85d2a2ec0e943ef"
+  },
+  {
+   "index": 25,
+   "name": "MRV2_full_archive.zip.part-025",
+   "bytes": 536870912,
+   "sha256": "5676e9af7e5fc7402d0b8c9d50257dd9e540d5949e2b2b99290fcc4fc9fb677b"
+  },
+  {
+   "index": 26,
+   "name": "MRV2_full_archive.zip.part-026",
+   "bytes": 536870912,
+   "sha256": "3b07dbabaf7b39f92ac37f5f8c3f9da247ca37133444963a3a7d07cffa5c3144"
+  },
+  {
+   "index": 27,
+   "name": "MRV2_full_archive.zip.part-027",
+   "bytes": 536870912,
+   "sha256": "125d05ac342c833e78bf52b9376874ef09857b21d6a43813db88f811d2262b32"
+  },
+  {
+   "index": 28,
+   "name": "MRV2_full_archive.zip.part-028",
+   "bytes": 536870912,
+   "sha256": "9fb637214dc1885c9a1c0ccce7d2a4449b5d4a7835cbe6d40e84a32ab654c390"
+  },
+  {
+   "index": 29,
+   "name": "MRV2_full_archive.zip.part-029",
+   "bytes": 536870912,
+   "sha256": "aa66e5d6cca158916febdd8589f58bff608151bc494efcf5e91124638f89902d"
+  },
+  {
+   "index": 30,
+   "name": "MRV2_full_archive.zip.part-030",
+   "bytes": 536870912,
+   "sha256": "e8b4b47a08a4f7cd05a10f8deee51af3dc02651b4ba71d416dadcd9977332832"
+  },
+  {
+   "index": 31,
+   "name": "MRV2_full_archive.zip.part-031",
+   "bytes": 536870912,
+   "sha256": "0d798a912a1ecabc76f8078c5832235f79fb28f788ea539d527b9e0c41ad8e45"
+  },
+  {
+   "index": 32,
+   "name": "MRV2_full_archive.zip.part-032",
+   "bytes": 536870912,
+   "sha256": "201a1d393666ee7e88ab73aa1774796b4a8e0dfaf80734ac6ff59c0f252375d5"
+  },
+  {
+   "index": 33,
+   "name": "MRV2_full_archive.zip.part-033",
+   "bytes": 536870912,
+   "sha256": "e7bd6884c92d8356322f128c4b678529a24b2245f81dcccd21d808268268d598"
+  },
+  {
+   "index": 34,
+   "name": "MRV2_full_archive.zip.part-034",
+   "bytes": 536870912,
+   "sha256": "1d73180ead46e8e789c2b5669db99202977f3bf64d5882aa7920ff3bb13505c4"
+  },
+  {
+   "index": 35,
+   "name": "MRV2_full_archive.zip.part-035",
+   "bytes": 536870912,
+   "sha256": "50d21885992cf838a60eeab9e4b00f8d4eb78c1e479f65d49eb5a52635f469b9"
+  },
+  {
+   "index": 36,
+   "name": "MRV2_full_archive.zip.part-036",
+   "bytes": 536870912,
+   "sha256": "d93de8cbea668331c3829c3210fad125f050d4e8ca887d68eb8b9558ff2cb8ec"
+  },
+  {
+   "index": 37,
+   "name": "MRV2_full_archive.zip.part-037",
+   "bytes": 536870912,
+   "sha256": "d4622d96327873da328ebb304b8b96dfc4990b3756693b5005de3e78a31281e0"
+  },
+  {
+   "index": 38,
+   "name": "MRV2_full_archive.zip.part-038",
+   "bytes": 536870912,
+   "sha256": "19cee93326ec1506943652971b448d5707c508b082f28be62ca7dc97916fc71a"
+  },
+  {
+   "index": 39,
+   "name": "MRV2_full_archive.zip.part-039",
+   "bytes": 536870912,
+   "sha256": "16d1b401afd1dad6a16eeb05c1fc838ead337eaa8eae8a3cacce4019b77edf26"
+  },
+  {
+   "index": 40,
+   "name": "MRV2_full_archive.zip.part-040",
+   "bytes": 536870912,
+   "sha256": "40b5f9907db19343446ff6cc6e05ff3871609c0201d62dd383340219f9dfff09"
+  },
+  {
+   "index": 41,
+   "name": "MRV2_full_archive.zip.part-041",
+   "bytes": 536870912,
+   "sha256": "a354b213e51146e0de76caf7a3576203c9a6b602549ba7f86627088cf034f780"
+  },
+  {
+   "index": 42,
+   "name": "MRV2_full_archive.zip.part-042",
+   "bytes": 536870912,
+   "sha256": "e7a5f548e5dc09b3c3e991c5d684bc02bf56f09278ec5b1af19d5f48071644f8"
+  },
+  {
+   "index": 43,
+   "name": "MRV2_full_archive.zip.part-043",
+   "bytes": 536870912,
+   "sha256": "d958fe062bdbdd4a57161bd0dc2a131ad66f98faca1948ce7b54ce28ad8adbf5"
+  },
+  {
+   "index": 44,
+   "name": "MRV2_full_archive.zip.part-044",
+   "bytes": 536870912,
+   "sha256": "d1d944a7c826098af6b1fe6489836513ad2fa92f988e305790acd67c65d0baaa"
+  },
+  {
+   "index": 45,
+   "name": "MRV2_full_archive.zip.part-045",
+   "bytes": 536870912,
+   "sha256": "f637be247dadb86830c78a3ba2c727b02bbc072415c9094dd5f61df54212e4b0"
+  },
+  {
+   "index": 46,
+   "name": "MRV2_full_archive.zip.part-046",
+   "bytes": 536870912,
+   "sha256": "f5aa93a7eff424179ce080c9e1ff0ff9ca5e5be51fb0d629b52ad6be2875bda9"
+  },
+  {
+   "index": 47,
+   "name": "MRV2_full_archive.zip.part-047",
+   "bytes": 536870912,
+   "sha256": "bebd2e567d5596d15bf4d6b70b3f288ec7042e04e0628f739b099f6ec9e8f4ff"
+  },
+  {
+   "index": 48,
+   "name": "MRV2_full_archive.zip.part-048",
+   "bytes": 536870912,
+   "sha256": "9434c614e999182022a06119f1c48cebae46fb658901e37abc7b58fc19d18a06"
+  },
+  {
+   "index": 49,
+   "name": "MRV2_full_archive.zip.part-049",
+   "bytes": 536870912,
+   "sha256": "b4ae596575c5a06b866c201c7d5b446ebdd9fa57232f04ab79293820c74388bd"
+  },
+  {
+   "index": 50,
+   "name": "MRV2_full_archive.zip.part-050",
+   "bytes": 536870912,
+   "sha256": "6e316e113d09dc3ccf45ec1e8e94d66c84268717064c0d890d8322480bde92b8"
+  },
+  {
+   "index": 51,
+   "name": "MRV2_full_archive.zip.part-051",
+   "bytes": 536870912,
+   "sha256": "664cb5de9c04f3e5994546a5c30a72cda9335963005482cb86096bae89a4a715"
+  },
+  {
+   "index": 52,
+   "name": "MRV2_full_archive.zip.part-052",
+   "bytes": 536870912,
+   "sha256": "983154dbd667b4607e49b5076ac258e562a4ca6bdcea06216b77c02841843168"
+  },
+  {
+   "index": 53,
+   "name": "MRV2_full_archive.zip.part-053",
+   "bytes": 536870912,
+   "sha256": "a3648222bf0d43acd9fdcf01f89f7398df9918970a8c0b83b1c2a5d59c9c77bb"
+  },
+  {
+   "index": 54,
+   "name": "MRV2_full_archive.zip.part-054",
+   "bytes": 536870912,
+   "sha256": "295647dddfafad6483f7f24b3a9529869996051b0f15fe6e132ed746a5af8c97"
+  },
+  {
+   "index": 55,
+   "name": "MRV2_full_archive.zip.part-055",
+   "bytes": 311400347,
+   "sha256": "4774b11014eea14e5ca903e65bfa8bca33fb48028350c2193bad553e61a24d09"
+  }
+ ]
+}

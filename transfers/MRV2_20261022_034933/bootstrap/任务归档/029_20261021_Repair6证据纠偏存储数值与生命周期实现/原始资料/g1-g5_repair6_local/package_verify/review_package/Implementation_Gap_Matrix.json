@@ -1,0 +1,37 @@
+[
+  {
+    "item": "Target storage",
+    "state": "IMPLEMENTED_HOST_VERIFIED",
+    "limit": "完整tensor链通过，新设备全量待跑"
+  },
+  {
+    "item": "Partial recovery",
+    "state": "OFFLINE_VERIFIED_OLD_SHA",
+    "limit": "四臂前7；整组FAILED保留"
+  },
+  {
+    "item": "Continuous reference",
+    "state": "IMPLEMENTED_DIAGNOSTIC_SERIALIZED",
+    "limit": "真实pinned forward；NPU NOT_RUN"
+  },
+  {
+    "item": "Normal lifecycle",
+    "state": "IMPLEMENTED_OBSERVATIONAL",
+    "limit": "devicecopy+末尾drain；不证明reuse"
+  },
+  {
+    "item": "Normal controlled continuous UPDATE discriminator",
+    "state": "NOT_IMPLEMENTED",
+    "limit": "需隔离多代输出/KV合同及task语义"
+  },
+  {
+    "item": "Task/physical read",
+    "state": "CAPABILITY_GAP",
+    "limit": "不能由现有导出闭环"
+  },
+  {
+    "item": "Full hooks",
+    "state": "ENVIRONMENT_BLOCKED",
+    "limit": "actionlint下载截断；gitleaks本地不可用"
+  }
+]

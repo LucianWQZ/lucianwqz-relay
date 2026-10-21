@@ -1,0 +1,2856 @@
+[
+  {
+    "path": "/Users/wenqingzhang/Desktop/Note/MRV2/g1-g5_repair7_local/raw_package/attempt1/G4F_OFF/controlled-target.json",
+    "relative_raw_member": "attempt1/G4F_OFF/controlled-target.json",
+    "bytes": 17609,
+    "sha256": "9ef5b983809933de73fcc3ed38a0cb0da58d0b6f9a79f864c1c7860698cb4688",
+    "samples": [
+      {
+        "identity": {
+          "scenario": "A",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1144,
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 0,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-000.json",
+        "bytes": 3998862,
+        "sha256": "64ad75d99012778bb4208744494a4ab34e16332d5c8b88e472cac922a7598b99"
+      },
+      {
+        "identity": {
+          "scenario": "B",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1272,
+              1273,
+              1274,
+              1275,
+              1276,
+              1277,
+              1278,
+              1279
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 1,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-001.json",
+        "bytes": 4073751,
+        "sha256": "d66fb56aa133163fe777b71aae5ea245b3f5a770d50e5a3493ebb56983da81c2"
+      },
+      {
+        "identity": {
+          "scenario": "A_prime",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1144,
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 2,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-002.json",
+        "bytes": 3998870,
+        "sha256": "91f5d25b7d3b3d9dc0d41334289b5e7debc7436ff19af4caccbed5639df1626a"
+      },
+      {
+        "identity": {
+          "scenario": "short",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 3,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-003.json",
+        "bytes": 3407945,
+        "sha256": "0e1b1b0bb5ce6cdf4ae20dd79897ca9d68098b76279aa8250526bd5abe438a31"
+      },
+      {
+        "identity": {
+          "scenario": "long",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1144,
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 4,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-004.json",
+        "bytes": 3998862,
+        "sha256": "4b4d3aab172b462312dba219bc2643ca80cafde912fe75e005e2d4eca14ae048"
+      },
+      {
+        "identity": {
+          "scenario": "boundary",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1016,
+              1017,
+              1018,
+              1019,
+              1020,
+              1021,
+              1022,
+              1023
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 5,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-005.json",
+        "bytes": 3925060,
+        "sha256": "29ed03127161199ac9687f881c815f77750f88555586dcfafefdf023037ea802"
+      },
+      {
+        "identity": {
+          "scenario": "nonaligned",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151,
+              1152
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 6,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-006.json",
+        "bytes": 4073608,
+        "sha256": "dab43bbdf576cf06004674eef342741e41a33221e456f03261781b7fffc766df"
+      },
+      {
+        "identity": {
+          "scenario": "mixed",
+          "logical_requests": [
+            "row-0",
+            "row-1"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151,
+              1152
+            ]
+          ],
+          "query_layout": [
+            0,
+            8,
+            16
+          ],
+          "active": 2,
+          "padded": 2,
+          "step": 7,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-007.json",
+        "bytes": 4216791,
+        "sha256": "af0dfa80f7e17d1cdbd975f59818767fb45788cb27d4e8c817c67685ba20a477"
+      },
+      {
+        "identity": {
+          "scenario": "padding",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          ],
+          "query_layout": [
+            0,
+            8,
+            16
+          ],
+          "active": 1,
+          "padded": 2,
+          "step": 8,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-008.json",
+        "bytes": 3549544,
+        "sha256": "60dd4f399d50f59a7a1190fd456ebf1ac38aadef11998148e4aa7c8bdf48b610"
+      },
+      {
+        "identity": {
+          "scenario": "return-short",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 9,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-009.json",
+        "bytes": 3407953,
+        "sha256": "0313e80337805ccc8071801c25be00a11ce816fccb4dcfcf0f7b09f53e06581b"
+      },
+      {
+        "identity": {
+          "scenario": "three-active-four-padded",
+          "logical_requests": [
+            "row-0",
+            "row-1",
+            "row-2"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              1017,
+              1018,
+              1019,
+              1020,
+              1021,
+              1022,
+              1023,
+              1024
+            ],
+            [
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151,
+              1152
+            ]
+          ],
+          "query_layout": [
+            0,
+            8,
+            16,
+            24,
+            32
+          ],
+          "active": 3,
+          "padded": 4,
+          "step": 10,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "BLOCKED",
+        "path": "controlled-target-sample-010.json",
+        "bytes": 2447,
+        "sha256": "9274f2cd35db1e11f0a6913a4cbe00e6b6c24df62ef1e34d775e79a356d54d40"
+      }
+    ],
+    "header": {
+      "schema": "repair5-controlled-target-v1",
+      "capture_profile": "base",
+      "identity": {
+        "run_id": "20261021T071630Z_fd0716c5",
+        "case_id": "G4F_OFF",
+        "driver_mode": "A0",
+        "attempt_id": "1",
+        "source_sha": "fd0716c59562f64262672de12e4ae26259908d0b",
+        "source_tree": "125b29bcb8fe501d69b53e185f9ec89075528310",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c",
+        "engine_id": 281455284353808,
+        "process_id": 777412
+      },
+      "execution_device": "npu:0",
+      "arm": "OFF",
+      "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+      "inventory": {
+        "registered_layers": [
+          "model.layers.0.self_attn.attn",
+          "model.layers.1.self_attn.attn",
+          "model.layers.10.self_attn.attn",
+          "model.layers.11.self_attn.attn",
+          "model.layers.12.self_attn.attn",
+          "model.layers.13.self_attn.attn",
+          "model.layers.14.self_attn.attn",
+          "model.layers.15.self_attn.attn",
+          "model.layers.16.self_attn.attn",
+          "model.layers.17.self_attn.attn",
+          "model.layers.18.self_attn.attn",
+          "model.layers.19.self_attn.attn",
+          "model.layers.2.self_attn.attn",
+          "model.layers.20.self_attn.attn",
+          "model.layers.21.self_attn.attn",
+          "model.layers.22.self_attn.attn",
+          "model.layers.23.self_attn.attn",
+          "model.layers.24.self_attn.attn",
+          "model.layers.25.self_attn.attn",
+          "model.layers.26.self_attn.attn",
+          "model.layers.27.self_attn.attn",
+          "model.layers.28.self_attn.attn",
+          "model.layers.29.self_attn.attn",
+          "model.layers.3.self_attn.attn",
+          "model.layers.30.self_attn.attn",
+          "model.layers.31.self_attn.attn",
+          "model.layers.32.self_attn.attn",
+          "model.layers.33.self_attn.attn",
+          "model.layers.34.self_attn.attn",
+          "model.layers.35.self_attn.attn",
+          "model.layers.36.self_attn.attn",
+          "model.layers.37.self_attn.attn",
+          "model.layers.38.self_attn.attn",
+          "model.layers.39.self_attn.attn",
+          "model.layers.4.self_attn.attn",
+          "model.layers.40.self_attn.attn",
+          "model.layers.5.self_attn.attn",
+          "model.layers.6.self_attn.attn",
+          "model.layers.7.self_attn.attn",
+          "model.layers.8.self_attn.attn",
+          "model.layers.9.self_attn.attn"
+        ],
+        "configured_layers": [
+          "model.layers.0.self_attn.attn",
+          "model.layers.1.self_attn.attn",
+          "model.layers.10.self_attn.attn",
+          "model.layers.11.self_attn.attn",
+          "model.layers.12.self_attn.attn",
+          "model.layers.13.self_attn.attn",
+          "model.layers.14.self_attn.attn",
+          "model.layers.15.self_attn.attn",
+          "model.layers.16.self_attn.attn",
+          "model.layers.17.self_attn.attn",
+          "model.layers.18.self_attn.attn",
+          "model.layers.19.self_attn.attn",
+          "model.layers.2.self_attn.attn",
+          "model.layers.20.self_attn.attn",
+          "model.layers.21.self_attn.attn",
+          "model.layers.22.self_attn.attn",
+          "model.layers.23.self_attn.attn",
+          "model.layers.24.self_attn.attn",
+          "model.layers.25.self_attn.attn",
+          "model.layers.26.self_attn.attn",
+          "model.layers.27.self_attn.attn",
+          "model.layers.28.self_attn.attn",
+          "model.layers.29.self_attn.attn",
+          "model.layers.3.self_attn.attn",
+          "model.layers.30.self_attn.attn",
+          "model.layers.31.self_attn.attn",
+          "model.layers.32.self_attn.attn",
+          "model.layers.33.self_attn.attn",
+          "model.layers.34.self_attn.attn",
+          "model.layers.35.self_attn.attn",
+          "model.layers.36.self_attn.attn",
+          "model.layers.37.self_attn.attn",
+          "model.layers.38.self_attn.attn",
+          "model.layers.39.self_attn.attn",
+          "model.layers.4.self_attn.attn",
+          "model.layers.40.self_attn.attn",
+          "model.layers.5.self_attn.attn",
+          "model.layers.6.self_attn.attn",
+          "model.layers.7.self_attn.attn",
+          "model.layers.8.self_attn.attn",
+          "model.layers.9.self_attn.attn"
+        ],
+        "draft_layers": [
+          "model.layers.36.self_attn.attn",
+          "model.layers.37.self_attn.attn",
+          "model.layers.38.self_attn.attn",
+          "model.layers.39.self_attn.attn",
+          "model.layers.40.self_attn.attn"
+        ],
+        "target_layers": [
+          "model.layers.0.self_attn.attn",
+          "model.layers.1.self_attn.attn",
+          "model.layers.10.self_attn.attn",
+          "model.layers.11.self_attn.attn",
+          "model.layers.12.self_attn.attn",
+          "model.layers.13.self_attn.attn",
+          "model.layers.14.self_attn.attn",
+          "model.layers.15.self_attn.attn",
+          "model.layers.16.self_attn.attn",
+          "model.layers.17.self_attn.attn",
+          "model.layers.18.self_attn.attn",
+          "model.layers.19.self_attn.attn",
+          "model.layers.2.self_attn.attn",
+          "model.layers.20.self_attn.attn",
+          "model.layers.21.self_attn.attn",
+          "model.layers.22.self_attn.attn",
+          "model.layers.23.self_attn.attn",
+          "model.layers.24.self_attn.attn",
+          "model.layers.25.self_attn.attn",
+          "model.layers.26.self_attn.attn",
+          "model.layers.27.self_attn.attn",
+          "model.layers.28.self_attn.attn",
+          "model.layers.29.self_attn.attn",
+          "model.layers.3.self_attn.attn",
+          "model.layers.30.self_attn.attn",
+          "model.layers.31.self_attn.attn",
+          "model.layers.32.self_attn.attn",
+          "model.layers.33.self_attn.attn",
+          "model.layers.34.self_attn.attn",
+          "model.layers.35.self_attn.attn",
+          "model.layers.4.self_attn.attn",
+          "model.layers.5.self_attn.attn",
+          "model.layers.6.self_attn.attn",
+          "model.layers.7.self_attn.attn",
+          "model.layers.8.self_attn.attn",
+          "model.layers.9.self_attn.attn"
+        ],
+        "ownership_basis": "actual_target_model_module_identity"
+      },
+      "cases": [
+        {
+          "scenario": "A",
+          "step": 0,
+          "ends": [
+            1152
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "B",
+          "step": 1,
+          "ends": [
+            1280
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "A_prime",
+          "step": 2,
+          "ends": [
+            1152
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "short",
+          "step": 3,
+          "ends": [
+            32
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "long",
+          "step": 4,
+          "ends": [
+            1152
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "boundary",
+          "step": 5,
+          "ends": [
+            1024
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "nonaligned",
+          "step": 6,
+          "ends": [
+            1153
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "mixed",
+          "step": 7,
+          "ends": [
+            32,
+            1153
+          ],
+          "padded": 2,
+          "query_width": 8
+        },
+        {
+          "scenario": "padding",
+          "step": 8,
+          "ends": [
+            32
+          ],
+          "padded": 2,
+          "query_width": 8
+        },
+        {
+          "scenario": "return-short",
+          "step": 9,
+          "ends": [
+            32
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "three-active-four-padded",
+          "step": 10,
+          "ends": [
+            32,
+            1025,
+            1153
+          ],
+          "padded": 4,
+          "query_width": 8
+        }
+      ],
+      "tolerance": {
+        "atol": 0.0,
+        "rtol": 0.0,
+        "basis": "predeclared exact deterministic Target contract"
+      },
+      "scope": "actual Target Graph, synthetic logical pre-KV; disposable empty engine",
+      "impact": "stream synchronization, complete KV initialization and D2H; NOT PERFORMANCE REPRESENTATIVE",
+      "device_verification": "IN_PROGRESS"
+    }
+  },
+  {
+    "path": "/Users/wenqingzhang/Desktop/Note/MRV2/g1-g5_repair7_local/raw_package/attempt1/G4F_ON/controlled-target.json",
+    "relative_raw_member": "attempt1/G4F_ON/controlled-target.json",
+    "bytes": 17606,
+    "sha256": "1523d25b9125746218a7e0dc74e552e86f792a02c4b2e2cbc662dd2fa6dfbbbe",
+    "samples": [
+      {
+        "identity": {
+          "scenario": "A",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1144,
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 0,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-000.json",
+        "bytes": 4256035,
+        "sha256": "2c819496039c64547f936f2032eb2fc95a377af199901336c92903fb78141791"
+      },
+      {
+        "identity": {
+          "scenario": "B",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1272,
+              1273,
+              1274,
+              1275,
+              1276,
+              1277,
+              1278,
+              1279
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 1,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-001.json",
+        "bytes": 4454262,
+        "sha256": "d7ffe2ede1e5af50d0f0d879f0bb2f5798335562b47c03984f6a178f14cd4bd4"
+      },
+      {
+        "identity": {
+          "scenario": "A_prime",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1144,
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 2,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-002.json",
+        "bytes": 4502721,
+        "sha256": "45d4c757bb3861040dcbe9ef1f6a2dfa271206f38effa15e0d07dedc84c2b64c"
+      },
+      {
+        "identity": {
+          "scenario": "short",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 3,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-003.json",
+        "bytes": 4033111,
+        "sha256": "611cb878ffd5e58deaa26364a2bdc4168bff5a7e2add550d8ffa1e53ccc9513d"
+      },
+      {
+        "identity": {
+          "scenario": "long",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1144,
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 4,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-004.json",
+        "bytes": 4749144,
+        "sha256": "c9348d01eb1ee37633e785450c0986cacea8f350ed5d42054c165cfe9bbb9091"
+      },
+      {
+        "identity": {
+          "scenario": "boundary",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1016,
+              1017,
+              1018,
+              1019,
+              1020,
+              1021,
+              1022,
+              1023
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 5,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-005.json",
+        "bytes": 4798501,
+        "sha256": "de5ae9961af7f0dc4dd18de9bc2af2a41a115843abac18b435b2cd19b24d4cb7"
+      },
+      {
+        "identity": {
+          "scenario": "nonaligned",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151,
+              1152
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 6,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-006.json",
+        "bytes": 5070650,
+        "sha256": "cf907069e97ab5edc6b62d54fcfd3c1fe14771a6af7bbeaf69c99a32c86894da"
+      },
+      {
+        "identity": {
+          "scenario": "mixed",
+          "logical_requests": [
+            "row-0",
+            "row-1"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151,
+              1152
+            ]
+          ],
+          "query_layout": [
+            0,
+            8,
+            16
+          ],
+          "active": 2,
+          "padded": 2,
+          "step": 7,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-007.json",
+        "bytes": 5350906,
+        "sha256": "533b4f0adb4709af23dd768ed80128deadced4654dae342c259546b9b5d30227"
+      },
+      {
+        "identity": {
+          "scenario": "padding",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          ],
+          "query_layout": [
+            0,
+            8,
+            16
+          ],
+          "active": 1,
+          "padded": 2,
+          "step": 8,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-008.json",
+        "bytes": 4806510,
+        "sha256": "90ec8844c555bfb3174d00b30c59be0b8b783c6df9c3a5ac93646a9d9b27a0e9"
+      },
+      {
+        "identity": {
+          "scenario": "return-short",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 9,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-009.json",
+        "bytes": 4788012,
+        "sha256": "8b04cbf90b7fe4e17b488471c4f096b9c3f54bd25e6a11a57905b0eba489b3ba"
+      },
+      {
+        "identity": {
+          "scenario": "three-active-four-padded",
+          "logical_requests": [
+            "row-0",
+            "row-1",
+            "row-2"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              1017,
+              1018,
+              1019,
+              1020,
+              1021,
+              1022,
+              1023,
+              1024
+            ],
+            [
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151,
+              1152
+            ]
+          ],
+          "query_layout": [
+            0,
+            8,
+            16,
+            24,
+            32
+          ],
+          "active": 3,
+          "padded": 4,
+          "step": 10,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "BLOCKED",
+        "path": "controlled-target-sample-010.json",
+        "bytes": 2446,
+        "sha256": "2dfdba022546b084c9292106d8e66f6199153b1907672b57c21d5fdbc7840ebc"
+      }
+    ],
+    "header": {
+      "schema": "repair5-controlled-target-v1",
+      "capture_profile": "base",
+      "identity": {
+        "run_id": "20261021T071630Z_fd0716c5",
+        "case_id": "G4F_ON",
+        "driver_mode": "B",
+        "attempt_id": "1",
+        "source_sha": "fd0716c59562f64262672de12e4ae26259908d0b",
+        "source_tree": "125b29bcb8fe501d69b53e185f9ec89075528310",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c",
+        "engine_id": 281455185689680,
+        "process_id": 799436
+      },
+      "execution_device": "npu:0",
+      "arm": "ON",
+      "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+      "inventory": {
+        "registered_layers": [
+          "model.layers.0.self_attn.attn",
+          "model.layers.1.self_attn.attn",
+          "model.layers.10.self_attn.attn",
+          "model.layers.11.self_attn.attn",
+          "model.layers.12.self_attn.attn",
+          "model.layers.13.self_attn.attn",
+          "model.layers.14.self_attn.attn",
+          "model.layers.15.self_attn.attn",
+          "model.layers.16.self_attn.attn",
+          "model.layers.17.self_attn.attn",
+          "model.layers.18.self_attn.attn",
+          "model.layers.19.self_attn.attn",
+          "model.layers.2.self_attn.attn",
+          "model.layers.20.self_attn.attn",
+          "model.layers.21.self_attn.attn",
+          "model.layers.22.self_attn.attn",
+          "model.layers.23.self_attn.attn",
+          "model.layers.24.self_attn.attn",
+          "model.layers.25.self_attn.attn",
+          "model.layers.26.self_attn.attn",
+          "model.layers.27.self_attn.attn",
+          "model.layers.28.self_attn.attn",
+          "model.layers.29.self_attn.attn",
+          "model.layers.3.self_attn.attn",
+          "model.layers.30.self_attn.attn",
+          "model.layers.31.self_attn.attn",
+          "model.layers.32.self_attn.attn",
+          "model.layers.33.self_attn.attn",
+          "model.layers.34.self_attn.attn",
+          "model.layers.35.self_attn.attn",
+          "model.layers.36.self_attn.attn",
+          "model.layers.37.self_attn.attn",
+          "model.layers.38.self_attn.attn",
+          "model.layers.39.self_attn.attn",
+          "model.layers.4.self_attn.attn",
+          "model.layers.40.self_attn.attn",
+          "model.layers.5.self_attn.attn",
+          "model.layers.6.self_attn.attn",
+          "model.layers.7.self_attn.attn",
+          "model.layers.8.self_attn.attn",
+          "model.layers.9.self_attn.attn"
+        ],
+        "configured_layers": [
+          "model.layers.0.self_attn.attn",
+          "model.layers.1.self_attn.attn",
+          "model.layers.10.self_attn.attn",
+          "model.layers.11.self_attn.attn",
+          "model.layers.12.self_attn.attn",
+          "model.layers.13.self_attn.attn",
+          "model.layers.14.self_attn.attn",
+          "model.layers.15.self_attn.attn",
+          "model.layers.16.self_attn.attn",
+          "model.layers.17.self_attn.attn",
+          "model.layers.18.self_attn.attn",
+          "model.layers.19.self_attn.attn",
+          "model.layers.2.self_attn.attn",
+          "model.layers.20.self_attn.attn",
+          "model.layers.21.self_attn.attn",
+          "model.layers.22.self_attn.attn",
+          "model.layers.23.self_attn.attn",
+          "model.layers.24.self_attn.attn",
+          "model.layers.25.self_attn.attn",
+          "model.layers.26.self_attn.attn",
+          "model.layers.27.self_attn.attn",
+          "model.layers.28.self_attn.attn",
+          "model.layers.29.self_attn.attn",
+          "model.layers.3.self_attn.attn",
+          "model.layers.30.self_attn.attn",
+          "model.layers.31.self_attn.attn",
+          "model.layers.32.self_attn.attn",
+          "model.layers.33.self_attn.attn",
+          "model.layers.34.self_attn.attn",
+          "model.layers.35.self_attn.attn",
+          "model.layers.36.self_attn.attn",
+          "model.layers.37.self_attn.attn",
+          "model.layers.38.self_attn.attn",
+          "model.layers.39.self_attn.attn",
+          "model.layers.4.self_attn.attn",
+          "model.layers.40.self_attn.attn",
+          "model.layers.5.self_attn.attn",
+          "model.layers.6.self_attn.attn",
+          "model.layers.7.self_attn.attn",
+          "model.layers.8.self_attn.attn",
+          "model.layers.9.self_attn.attn"
+        ],
+        "draft_layers": [
+          "model.layers.36.self_attn.attn",
+          "model.layers.37.self_attn.attn",
+          "model.layers.38.self_attn.attn",
+          "model.layers.39.self_attn.attn",
+          "model.layers.40.self_attn.attn"
+        ],
+        "target_layers": [
+          "model.layers.0.self_attn.attn",
+          "model.layers.1.self_attn.attn",
+          "model.layers.10.self_attn.attn",
+          "model.layers.11.self_attn.attn",
+          "model.layers.12.self_attn.attn",
+          "model.layers.13.self_attn.attn",
+          "model.layers.14.self_attn.attn",
+          "model.layers.15.self_attn.attn",
+          "model.layers.16.self_attn.attn",
+          "model.layers.17.self_attn.attn",
+          "model.layers.18.self_attn.attn",
+          "model.layers.19.self_attn.attn",
+          "model.layers.2.self_attn.attn",
+          "model.layers.20.self_attn.attn",
+          "model.layers.21.self_attn.attn",
+          "model.layers.22.self_attn.attn",
+          "model.layers.23.self_attn.attn",
+          "model.layers.24.self_attn.attn",
+          "model.layers.25.self_attn.attn",
+          "model.layers.26.self_attn.attn",
+          "model.layers.27.self_attn.attn",
+          "model.layers.28.self_attn.attn",
+          "model.layers.29.self_attn.attn",
+          "model.layers.3.self_attn.attn",
+          "model.layers.30.self_attn.attn",
+          "model.layers.31.self_attn.attn",
+          "model.layers.32.self_attn.attn",
+          "model.layers.33.self_attn.attn",
+          "model.layers.34.self_attn.attn",
+          "model.layers.35.self_attn.attn",
+          "model.layers.4.self_attn.attn",
+          "model.layers.5.self_attn.attn",
+          "model.layers.6.self_attn.attn",
+          "model.layers.7.self_attn.attn",
+          "model.layers.8.self_attn.attn",
+          "model.layers.9.self_attn.attn"
+        ],
+        "ownership_basis": "actual_target_model_module_identity"
+      },
+      "cases": [
+        {
+          "scenario": "A",
+          "step": 0,
+          "ends": [
+            1152
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "B",
+          "step": 1,
+          "ends": [
+            1280
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "A_prime",
+          "step": 2,
+          "ends": [
+            1152
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "short",
+          "step": 3,
+          "ends": [
+            32
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "long",
+          "step": 4,
+          "ends": [
+            1152
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "boundary",
+          "step": 5,
+          "ends": [
+            1024
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "nonaligned",
+          "step": 6,
+          "ends": [
+            1153
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "mixed",
+          "step": 7,
+          "ends": [
+            32,
+            1153
+          ],
+          "padded": 2,
+          "query_width": 8
+        },
+        {
+          "scenario": "padding",
+          "step": 8,
+          "ends": [
+            32
+          ],
+          "padded": 2,
+          "query_width": 8
+        },
+        {
+          "scenario": "return-short",
+          "step": 9,
+          "ends": [
+            32
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "three-active-four-padded",
+          "step": 10,
+          "ends": [
+            32,
+            1025,
+            1153
+          ],
+          "padded": 4,
+          "query_width": 8
+        }
+      ],
+      "tolerance": {
+        "atol": 0.0,
+        "rtol": 0.0,
+        "basis": "predeclared exact deterministic Target contract"
+      },
+      "scope": "actual Target Graph, synthetic logical pre-KV; disposable empty engine",
+      "impact": "stream synchronization, complete KV initialization and D2H; NOT PERFORMANCE REPRESENTATIVE",
+      "device_verification": "IN_PROGRESS"
+    }
+  },
+  {
+    "path": "/Users/wenqingzhang/Desktop/Note/MRV2/g1-g5_repair7_local/raw_package/attempt1/TARGET4_OFF/controlled-target.json",
+    "relative_raw_member": "attempt1/TARGET4_OFF/controlled-target.json",
+    "bytes": 19224,
+    "sha256": "1b6e69010c5f0e2844b602b5f017c195c4669cab4142106e59e2eb0734505f3e",
+    "samples": [
+      {
+        "identity": {
+          "scenario": "A",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1144,
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 0,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-000.json",
+        "bytes": 3998862,
+        "sha256": "1d7e4d156d3b352cd56b4129a75254c9483fa57e3fd4f1125f5401a8c975db7f"
+      },
+      {
+        "identity": {
+          "scenario": "B",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1272,
+              1273,
+              1274,
+              1275,
+              1276,
+              1277,
+              1278,
+              1279
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 1,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-001.json",
+        "bytes": 4073753,
+        "sha256": "dc25a09d10bebeb65fd295f4d33825e784af1a764cae144fd968e7f2ebd25572"
+      },
+      {
+        "identity": {
+          "scenario": "A_prime",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1144,
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 2,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-002.json",
+        "bytes": 3998870,
+        "sha256": "da2088c55fee34a5b154efd5cb35bc215028e0363a2c8848192e861875f2464f"
+      },
+      {
+        "identity": {
+          "scenario": "short",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 3,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-003.json",
+        "bytes": 3407946,
+        "sha256": "eedf7fdf2d9dd701a5697bab26a45cf9a1a5d463666390cb5a3e255ceab52eab"
+      },
+      {
+        "identity": {
+          "scenario": "long",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1144,
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 4,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-004.json",
+        "bytes": 3998867,
+        "sha256": "b35789f83feca43c4aee49357982c9f2f62cbde7e5fb112c1f76d7556878e2ac"
+      },
+      {
+        "identity": {
+          "scenario": "boundary",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1016,
+              1017,
+              1018,
+              1019,
+              1020,
+              1021,
+              1022,
+              1023
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 5,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-005.json",
+        "bytes": 3925062,
+        "sha256": "d72b3c08c308a46865f460ef1a999d444a13656fac47f573c77a21f99021abb6"
+      },
+      {
+        "identity": {
+          "scenario": "nonaligned",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151,
+              1152
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 6,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-006.json",
+        "bytes": 4073608,
+        "sha256": "7ec8e1b012b97a171ba10a741a99233c3c21c55e9f73a02a4d0896e8423d6d75"
+      },
+      {
+        "identity": {
+          "scenario": "mixed",
+          "logical_requests": [
+            "row-0",
+            "row-1"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151,
+              1152
+            ]
+          ],
+          "query_layout": [
+            0,
+            8,
+            16
+          ],
+          "active": 2,
+          "padded": 2,
+          "step": 7,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-007.json",
+        "bytes": 4216797,
+        "sha256": "d24c05fba739dd93166279fedf9bc98c1e67a450784134ccaaa6fd2fb76c2458"
+      },
+      {
+        "identity": {
+          "scenario": "padding",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          ],
+          "query_layout": [
+            0,
+            8,
+            16
+          ],
+          "active": 1,
+          "padded": 2,
+          "step": 8,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-008.json",
+        "bytes": 3549543,
+        "sha256": "a2ac8354c8da0e7000e292aefdc05b0004ef87a9d7655a71fe8e72dd0cd822b8"
+      },
+      {
+        "identity": {
+          "scenario": "return-short",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 9,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-009.json",
+        "bytes": 3407952,
+        "sha256": "19e80fe1855d0b48e81eb8525c66c5acf1e9dc807ccb052fc7199720a016118d"
+      },
+      {
+        "identity": {
+          "scenario": "three-active-four-padded",
+          "logical_requests": [
+            "row-0",
+            "row-1",
+            "row-2"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              1017,
+              1018,
+              1019,
+              1020,
+              1021,
+              1022,
+              1023,
+              1024
+            ],
+            [
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151,
+              1152
+            ]
+          ],
+          "query_layout": [
+            0,
+            8,
+            16,
+            24,
+            32
+          ],
+          "active": 3,
+          "padded": 4,
+          "step": 10,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-010.json",
+        "bytes": 5093473,
+        "sha256": "d2a755ffa7af169850b321fab5158d7934181ff01640f3918e82187cc5988567"
+      },
+      {
+        "identity": {
+          "scenario": "four-active",
+          "logical_requests": [
+            "row-0",
+            "row-1",
+            "row-2",
+            "row-3"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              1016,
+              1017,
+              1018,
+              1019,
+              1020,
+              1021,
+              1022,
+              1023
+            ],
+            [
+              1144,
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151
+            ],
+            [
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151,
+              1152
+            ]
+          ],
+          "query_layout": [
+            0,
+            8,
+            16,
+            24,
+            32
+          ],
+          "active": 4,
+          "padded": 4,
+          "step": 11,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-011.json",
+        "bytes": 5613937,
+        "sha256": "edd02c3828ce4211a60446a67d70db60819d897e3c086b9065684ca95afaadf8"
+      }
+    ],
+    "header": {
+      "schema": "repair5-controlled-target-v1",
+      "capture_profile": "target4",
+      "identity": {
+        "run_id": "20261021T071630Z_fd0716c5",
+        "case_id": "TARGET4_OFF",
+        "driver_mode": "A0",
+        "attempt_id": "1",
+        "source_sha": "fd0716c59562f64262672de12e4ae26259908d0b",
+        "source_tree": "125b29bcb8fe501d69b53e185f9ec89075528310",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c",
+        "engine_id": 281454487370064,
+        "process_id": 825440
+      },
+      "execution_device": "npu:0",
+      "arm": "OFF",
+      "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+      "inventory": {
+        "registered_layers": [
+          "model.layers.0.self_attn.attn",
+          "model.layers.1.self_attn.attn",
+          "model.layers.10.self_attn.attn",
+          "model.layers.11.self_attn.attn",
+          "model.layers.12.self_attn.attn",
+          "model.layers.13.self_attn.attn",
+          "model.layers.14.self_attn.attn",
+          "model.layers.15.self_attn.attn",
+          "model.layers.16.self_attn.attn",
+          "model.layers.17.self_attn.attn",
+          "model.layers.18.self_attn.attn",
+          "model.layers.19.self_attn.attn",
+          "model.layers.2.self_attn.attn",
+          "model.layers.20.self_attn.attn",
+          "model.layers.21.self_attn.attn",
+          "model.layers.22.self_attn.attn",
+          "model.layers.23.self_attn.attn",
+          "model.layers.24.self_attn.attn",
+          "model.layers.25.self_attn.attn",
+          "model.layers.26.self_attn.attn",
+          "model.layers.27.self_attn.attn",
+          "model.layers.28.self_attn.attn",
+          "model.layers.29.self_attn.attn",
+          "model.layers.3.self_attn.attn",
+          "model.layers.30.self_attn.attn",
+          "model.layers.31.self_attn.attn",
+          "model.layers.32.self_attn.attn",
+          "model.layers.33.self_attn.attn",
+          "model.layers.34.self_attn.attn",
+          "model.layers.35.self_attn.attn",
+          "model.layers.36.self_attn.attn",
+          "model.layers.37.self_attn.attn",
+          "model.layers.38.self_attn.attn",
+          "model.layers.39.self_attn.attn",
+          "model.layers.4.self_attn.attn",
+          "model.layers.40.self_attn.attn",
+          "model.layers.5.self_attn.attn",
+          "model.layers.6.self_attn.attn",
+          "model.layers.7.self_attn.attn",
+          "model.layers.8.self_attn.attn",
+          "model.layers.9.self_attn.attn"
+        ],
+        "configured_layers": [
+          "model.layers.0.self_attn.attn",
+          "model.layers.1.self_attn.attn",
+          "model.layers.10.self_attn.attn",
+          "model.layers.11.self_attn.attn",
+          "model.layers.12.self_attn.attn",
+          "model.layers.13.self_attn.attn",
+          "model.layers.14.self_attn.attn",
+          "model.layers.15.self_attn.attn",
+          "model.layers.16.self_attn.attn",
+          "model.layers.17.self_attn.attn",
+          "model.layers.18.self_attn.attn",
+          "model.layers.19.self_attn.attn",
+          "model.layers.2.self_attn.attn",
+          "model.layers.20.self_attn.attn",
+          "model.layers.21.self_attn.attn",
+          "model.layers.22.self_attn.attn",
+          "model.layers.23.self_attn.attn",
+          "model.layers.24.self_attn.attn",
+          "model.layers.25.self_attn.attn",
+          "model.layers.26.self_attn.attn",
+          "model.layers.27.self_attn.attn",
+          "model.layers.28.self_attn.attn",
+          "model.layers.29.self_attn.attn",
+          "model.layers.3.self_attn.attn",
+          "model.layers.30.self_attn.attn",
+          "model.layers.31.self_attn.attn",
+          "model.layers.32.self_attn.attn",
+          "model.layers.33.self_attn.attn",
+          "model.layers.34.self_attn.attn",
+          "model.layers.35.self_attn.attn",
+          "model.layers.36.self_attn.attn",
+          "model.layers.37.self_attn.attn",
+          "model.layers.38.self_attn.attn",
+          "model.layers.39.self_attn.attn",
+          "model.layers.4.self_attn.attn",
+          "model.layers.40.self_attn.attn",
+          "model.layers.5.self_attn.attn",
+          "model.layers.6.self_attn.attn",
+          "model.layers.7.self_attn.attn",
+          "model.layers.8.self_attn.attn",
+          "model.layers.9.self_attn.attn"
+        ],
+        "draft_layers": [
+          "model.layers.36.self_attn.attn",
+          "model.layers.37.self_attn.attn",
+          "model.layers.38.self_attn.attn",
+          "model.layers.39.self_attn.attn",
+          "model.layers.40.self_attn.attn"
+        ],
+        "target_layers": [
+          "model.layers.0.self_attn.attn",
+          "model.layers.1.self_attn.attn",
+          "model.layers.10.self_attn.attn",
+          "model.layers.11.self_attn.attn",
+          "model.layers.12.self_attn.attn",
+          "model.layers.13.self_attn.attn",
+          "model.layers.14.self_attn.attn",
+          "model.layers.15.self_attn.attn",
+          "model.layers.16.self_attn.attn",
+          "model.layers.17.self_attn.attn",
+          "model.layers.18.self_attn.attn",
+          "model.layers.19.self_attn.attn",
+          "model.layers.2.self_attn.attn",
+          "model.layers.20.self_attn.attn",
+          "model.layers.21.self_attn.attn",
+          "model.layers.22.self_attn.attn",
+          "model.layers.23.self_attn.attn",
+          "model.layers.24.self_attn.attn",
+          "model.layers.25.self_attn.attn",
+          "model.layers.26.self_attn.attn",
+          "model.layers.27.self_attn.attn",
+          "model.layers.28.self_attn.attn",
+          "model.layers.29.self_attn.attn",
+          "model.layers.3.self_attn.attn",
+          "model.layers.30.self_attn.attn",
+          "model.layers.31.self_attn.attn",
+          "model.layers.32.self_attn.attn",
+          "model.layers.33.self_attn.attn",
+          "model.layers.34.self_attn.attn",
+          "model.layers.35.self_attn.attn",
+          "model.layers.4.self_attn.attn",
+          "model.layers.5.self_attn.attn",
+          "model.layers.6.self_attn.attn",
+          "model.layers.7.self_attn.attn",
+          "model.layers.8.self_attn.attn",
+          "model.layers.9.self_attn.attn"
+        ],
+        "ownership_basis": "actual_target_model_module_identity"
+      },
+      "cases": [
+        {
+          "scenario": "A",
+          "step": 0,
+          "ends": [
+            1152
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "B",
+          "step": 1,
+          "ends": [
+            1280
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "A_prime",
+          "step": 2,
+          "ends": [
+            1152
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "short",
+          "step": 3,
+          "ends": [
+            32
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "long",
+          "step": 4,
+          "ends": [
+            1152
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "boundary",
+          "step": 5,
+          "ends": [
+            1024
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "nonaligned",
+          "step": 6,
+          "ends": [
+            1153
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "mixed",
+          "step": 7,
+          "ends": [
+            32,
+            1153
+          ],
+          "padded": 2,
+          "query_width": 8
+        },
+        {
+          "scenario": "padding",
+          "step": 8,
+          "ends": [
+            32
+          ],
+          "padded": 2,
+          "query_width": 8
+        },
+        {
+          "scenario": "return-short",
+          "step": 9,
+          "ends": [
+            32
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "three-active-four-padded",
+          "step": 10,
+          "ends": [
+            32,
+            1025,
+            1153
+          ],
+          "padded": 4,
+          "query_width": 8
+        },
+        {
+          "scenario": "four-active",
+          "step": 11,
+          "ends": [
+            32,
+            1024,
+            1152,
+            1153
+          ],
+          "padded": 4,
+          "query_width": 8
+        }
+      ],
+      "tolerance": {
+        "atol": 0.0,
+        "rtol": 0.0,
+        "basis": "predeclared exact deterministic Target contract"
+      },
+      "scope": "actual Target Graph, synthetic logical pre-KV; disposable empty engine",
+      "impact": "stream synchronization, complete KV initialization and D2H; NOT PERFORMANCE REPRESENTATIVE",
+      "device_verification": "IN_PROGRESS"
+    }
+  },
+  {
+    "path": "/Users/wenqingzhang/Desktop/Note/MRV2/g1-g5_repair7_local/raw_package/attempt1/TARGET4_ON/controlled-target.json",
+    "relative_raw_member": "attempt1/TARGET4_ON/controlled-target.json",
+    "bytes": 19221,
+    "sha256": "40bd23ed2c1ec000b23878627943a046ec678151341913606592e1223977bb87",
+    "samples": [
+      {
+        "identity": {
+          "scenario": "A",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1144,
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 0,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-000.json",
+        "bytes": 4256034,
+        "sha256": "00630c238268cd86872f2529a43afe8140e8f27b0aa624278737890c4e6ed56b"
+      },
+      {
+        "identity": {
+          "scenario": "B",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1272,
+              1273,
+              1274,
+              1275,
+              1276,
+              1277,
+              1278,
+              1279
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 1,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-001.json",
+        "bytes": 4454265,
+        "sha256": "f5e543077278cb3750e91b021af24e8c57933256ba92cb669deb5128b1f5c29e"
+      },
+      {
+        "identity": {
+          "scenario": "A_prime",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1144,
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 2,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-002.json",
+        "bytes": 4502721,
+        "sha256": "3190281b3c9aedd8d534c95375afc72db59314b1e84b9d3d32c542315e2e8f27"
+      },
+      {
+        "identity": {
+          "scenario": "short",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 3,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-003.json",
+        "bytes": 4033113,
+        "sha256": "1a576e01135831973022bda0106817a86f368de2d2d412b650b2610480839e18"
+      },
+      {
+        "identity": {
+          "scenario": "long",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1144,
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 4,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-004.json",
+        "bytes": 4749141,
+        "sha256": "1510ba516a5d29b85d4c1af0ed68a8ee4d85f21a867fcb8397b831de2508e151"
+      },
+      {
+        "identity": {
+          "scenario": "boundary",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1016,
+              1017,
+              1018,
+              1019,
+              1020,
+              1021,
+              1022,
+              1023
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 5,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-005.json",
+        "bytes": 4798502,
+        "sha256": "c8b1e5d60547c20b50c83af16cff56d7e802fd23a94dd1436b6c690676279756"
+      },
+      {
+        "identity": {
+          "scenario": "nonaligned",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151,
+              1152
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 6,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-006.json",
+        "bytes": 5070650,
+        "sha256": "372e948393f4ce5f70008d7eb5c5f28d047b5c9be6b997cdb0fde116ffc85886"
+      },
+      {
+        "identity": {
+          "scenario": "mixed",
+          "logical_requests": [
+            "row-0",
+            "row-1"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151,
+              1152
+            ]
+          ],
+          "query_layout": [
+            0,
+            8,
+            16
+          ],
+          "active": 2,
+          "padded": 2,
+          "step": 7,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-007.json",
+        "bytes": 5350906,
+        "sha256": "66f1446d2d1a890d4c7a9e12fc339a4d5a058fef041db262581f018eb118b865"
+      },
+      {
+        "identity": {
+          "scenario": "padding",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          ],
+          "query_layout": [
+            0,
+            8,
+            16
+          ],
+          "active": 1,
+          "padded": 2,
+          "step": 8,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-008.json",
+        "bytes": 4806508,
+        "sha256": "6387a168cf4de9bbafc4b97af0f67682affee950d368619aad8579b64a93a6d4"
+      },
+      {
+        "identity": {
+          "scenario": "return-short",
+          "logical_requests": [
+            "row-0"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "active": 1,
+          "padded": 1,
+          "step": 9,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-009.json",
+        "bytes": 4788010,
+        "sha256": "09f0bd9393ef4684e6e5c0b362eb8a8e46635222482905cddd6b674ef84ee311"
+      },
+      {
+        "identity": {
+          "scenario": "three-active-four-padded",
+          "logical_requests": [
+            "row-0",
+            "row-1",
+            "row-2"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              1017,
+              1018,
+              1019,
+              1020,
+              1021,
+              1022,
+              1023,
+              1024
+            ],
+            [
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151,
+              1152
+            ]
+          ],
+          "query_layout": [
+            0,
+            8,
+            16,
+            24,
+            32
+          ],
+          "active": 3,
+          "padded": 4,
+          "step": 10,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-010.json",
+        "bytes": 6639615,
+        "sha256": "3a4b3deba885b3d507079ac7860eec83c5c056791d09594e04f7ac01a7a8c0ca"
+      },
+      {
+        "identity": {
+          "scenario": "four-active",
+          "logical_requests": [
+            "row-0",
+            "row-1",
+            "row-2",
+            "row-3"
+          ],
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              1016,
+              1017,
+              1018,
+              1019,
+              1020,
+              1021,
+              1022,
+              1023
+            ],
+            [
+              1144,
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151
+            ],
+            [
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151,
+              1152
+            ]
+          ],
+          "query_layout": [
+            0,
+            8,
+            16,
+            24,
+            32
+          ],
+          "active": 4,
+          "padded": 4,
+          "step": 11,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+        },
+        "status": "CAPTURED_COMPLETE",
+        "path": "controlled-target-sample-011.json",
+        "bytes": 7325130,
+        "sha256": "7faa32e7d0b5e9d1949a25a54e80c08e2ce5297e6d5e59e9a5fecca0194139fb"
+      }
+    ],
+    "header": {
+      "schema": "repair5-controlled-target-v1",
+      "capture_profile": "target4",
+      "identity": {
+        "run_id": "20261021T071630Z_fd0716c5",
+        "case_id": "TARGET4_ON",
+        "driver_mode": "B",
+        "attempt_id": "1",
+        "source_sha": "fd0716c59562f64262672de12e4ae26259908d0b",
+        "source_tree": "125b29bcb8fe501d69b53e185f9ec89075528310",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c",
+        "engine_id": 281454539850640,
+        "process_id": 847213
+      },
+      "execution_device": "npu:0",
+      "arm": "ON",
+      "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+      "inventory": {
+        "registered_layers": [
+          "model.layers.0.self_attn.attn",
+          "model.layers.1.self_attn.attn",
+          "model.layers.10.self_attn.attn",
+          "model.layers.11.self_attn.attn",
+          "model.layers.12.self_attn.attn",
+          "model.layers.13.self_attn.attn",
+          "model.layers.14.self_attn.attn",
+          "model.layers.15.self_attn.attn",
+          "model.layers.16.self_attn.attn",
+          "model.layers.17.self_attn.attn",
+          "model.layers.18.self_attn.attn",
+          "model.layers.19.self_attn.attn",
+          "model.layers.2.self_attn.attn",
+          "model.layers.20.self_attn.attn",
+          "model.layers.21.self_attn.attn",
+          "model.layers.22.self_attn.attn",
+          "model.layers.23.self_attn.attn",
+          "model.layers.24.self_attn.attn",
+          "model.layers.25.self_attn.attn",
+          "model.layers.26.self_attn.attn",
+          "model.layers.27.self_attn.attn",
+          "model.layers.28.self_attn.attn",
+          "model.layers.29.self_attn.attn",
+          "model.layers.3.self_attn.attn",
+          "model.layers.30.self_attn.attn",
+          "model.layers.31.self_attn.attn",
+          "model.layers.32.self_attn.attn",
+          "model.layers.33.self_attn.attn",
+          "model.layers.34.self_attn.attn",
+          "model.layers.35.self_attn.attn",
+          "model.layers.36.self_attn.attn",
+          "model.layers.37.self_attn.attn",
+          "model.layers.38.self_attn.attn",
+          "model.layers.39.self_attn.attn",
+          "model.layers.4.self_attn.attn",
+          "model.layers.40.self_attn.attn",
+          "model.layers.5.self_attn.attn",
+          "model.layers.6.self_attn.attn",
+          "model.layers.7.self_attn.attn",
+          "model.layers.8.self_attn.attn",
+          "model.layers.9.self_attn.attn"
+        ],
+        "configured_layers": [
+          "model.layers.0.self_attn.attn",
+          "model.layers.1.self_attn.attn",
+          "model.layers.10.self_attn.attn",
+          "model.layers.11.self_attn.attn",
+          "model.layers.12.self_attn.attn",
+          "model.layers.13.self_attn.attn",
+          "model.layers.14.self_attn.attn",
+          "model.layers.15.self_attn.attn",
+          "model.layers.16.self_attn.attn",
+          "model.layers.17.self_attn.attn",
+          "model.layers.18.self_attn.attn",
+          "model.layers.19.self_attn.attn",
+          "model.layers.2.self_attn.attn",
+          "model.layers.20.self_attn.attn",
+          "model.layers.21.self_attn.attn",
+          "model.layers.22.self_attn.attn",
+          "model.layers.23.self_attn.attn",
+          "model.layers.24.self_attn.attn",
+          "model.layers.25.self_attn.attn",
+          "model.layers.26.self_attn.attn",
+          "model.layers.27.self_attn.attn",
+          "model.layers.28.self_attn.attn",
+          "model.layers.29.self_attn.attn",
+          "model.layers.3.self_attn.attn",
+          "model.layers.30.self_attn.attn",
+          "model.layers.31.self_attn.attn",
+          "model.layers.32.self_attn.attn",
+          "model.layers.33.self_attn.attn",
+          "model.layers.34.self_attn.attn",
+          "model.layers.35.self_attn.attn",
+          "model.layers.36.self_attn.attn",
+          "model.layers.37.self_attn.attn",
+          "model.layers.38.self_attn.attn",
+          "model.layers.39.self_attn.attn",
+          "model.layers.4.self_attn.attn",
+          "model.layers.40.self_attn.attn",
+          "model.layers.5.self_attn.attn",
+          "model.layers.6.self_attn.attn",
+          "model.layers.7.self_attn.attn",
+          "model.layers.8.self_attn.attn",
+          "model.layers.9.self_attn.attn"
+        ],
+        "draft_layers": [
+          "model.layers.36.self_attn.attn",
+          "model.layers.37.self_attn.attn",
+          "model.layers.38.self_attn.attn",
+          "model.layers.39.self_attn.attn",
+          "model.layers.40.self_attn.attn"
+        ],
+        "target_layers": [
+          "model.layers.0.self_attn.attn",
+          "model.layers.1.self_attn.attn",
+          "model.layers.10.self_attn.attn",
+          "model.layers.11.self_attn.attn",
+          "model.layers.12.self_attn.attn",
+          "model.layers.13.self_attn.attn",
+          "model.layers.14.self_attn.attn",
+          "model.layers.15.self_attn.attn",
+          "model.layers.16.self_attn.attn",
+          "model.layers.17.self_attn.attn",
+          "model.layers.18.self_attn.attn",
+          "model.layers.19.self_attn.attn",
+          "model.layers.2.self_attn.attn",
+          "model.layers.20.self_attn.attn",
+          "model.layers.21.self_attn.attn",
+          "model.layers.22.self_attn.attn",
+          "model.layers.23.self_attn.attn",
+          "model.layers.24.self_attn.attn",
+          "model.layers.25.self_attn.attn",
+          "model.layers.26.self_attn.attn",
+          "model.layers.27.self_attn.attn",
+          "model.layers.28.self_attn.attn",
+          "model.layers.29.self_attn.attn",
+          "model.layers.3.self_attn.attn",
+          "model.layers.30.self_attn.attn",
+          "model.layers.31.self_attn.attn",
+          "model.layers.32.self_attn.attn",
+          "model.layers.33.self_attn.attn",
+          "model.layers.34.self_attn.attn",
+          "model.layers.35.self_attn.attn",
+          "model.layers.4.self_attn.attn",
+          "model.layers.5.self_attn.attn",
+          "model.layers.6.self_attn.attn",
+          "model.layers.7.self_attn.attn",
+          "model.layers.8.self_attn.attn",
+          "model.layers.9.self_attn.attn"
+        ],
+        "ownership_basis": "actual_target_model_module_identity"
+      },
+      "cases": [
+        {
+          "scenario": "A",
+          "step": 0,
+          "ends": [
+            1152
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "B",
+          "step": 1,
+          "ends": [
+            1280
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "A_prime",
+          "step": 2,
+          "ends": [
+            1152
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "short",
+          "step": 3,
+          "ends": [
+            32
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "long",
+          "step": 4,
+          "ends": [
+            1152
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "boundary",
+          "step": 5,
+          "ends": [
+            1024
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "nonaligned",
+          "step": 6,
+          "ends": [
+            1153
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "mixed",
+          "step": 7,
+          "ends": [
+            32,
+            1153
+          ],
+          "padded": 2,
+          "query_width": 8
+        },
+        {
+          "scenario": "padding",
+          "step": 8,
+          "ends": [
+            32
+          ],
+          "padded": 2,
+          "query_width": 8
+        },
+        {
+          "scenario": "return-short",
+          "step": 9,
+          "ends": [
+            32
+          ],
+          "padded": 1,
+          "query_width": 8
+        },
+        {
+          "scenario": "three-active-four-padded",
+          "step": 10,
+          "ends": [
+            32,
+            1025,
+            1153
+          ],
+          "padded": 4,
+          "query_width": 8
+        },
+        {
+          "scenario": "four-active",
+          "step": 11,
+          "ends": [
+            32,
+            1024,
+            1152,
+            1153
+          ],
+          "padded": 4,
+          "query_width": 8
+        }
+      ],
+      "tolerance": {
+        "atol": 0.0,
+        "rtol": 0.0,
+        "basis": "predeclared exact deterministic Target contract"
+      },
+      "scope": "actual Target Graph, synthetic logical pre-KV; disposable empty engine",
+      "impact": "stream synchronization, complete KV initialization and D2H; NOT PERFORMANCE REPRESENTATIVE",
+      "device_verification": "IN_PROGRESS"
+    }
+  }
+]
