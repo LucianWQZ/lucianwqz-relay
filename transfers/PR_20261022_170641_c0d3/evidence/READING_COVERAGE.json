@@ -1,0 +1,73 @@
+{
+  "all_entry_status_counts": {
+    "BINARY_OR_CONTAINER": 172,
+    "EXACT_DUPLICATE": 14,
+    "FULL": 33,
+    "METADATA_ONLY": 15727,
+    "PARTIAL": 7
+  },
+  "critical_chain_complete": true,
+  "critical_chain_definition": "Audit需求/开发图/迁移计划；LocalCloseout总览/来源/验证/最后handoff/文字campaign；b013发布事实；260架构总报告/A01-A06/最后handoff/文字campaign；诊断发布/授权/driver/A01探针/性能/quickstart。",
+  "critical_full_files": [
+    "MRV2_NonGraph_A3_DiagnosticRelease_20261021_165535/00_DIAGNOSTIC_READY.md",
+    "MRV2_NonGraph_A3_DiagnosticRelease_20261021_165535/A01_DEVICE_PROBE_GUIDE.md",
+    "MRV2_NonGraph_A3_DiagnosticRelease_20261021_165535/A01_DEVICE_PROBE_PLAN.json",
+    "MRV2_NonGraph_A3_DiagnosticRelease_20261021_165535/DIAGNOSTIC_PUBLICATION.json",
+    "MRV2_NonGraph_A3_DiagnosticRelease_20261021_165535/DIAGNOSTIC_SCOPE_OVERRIDE.json",
+    "MRV2_NonGraph_A3_DiagnosticRelease_20261021_165535/DIAGNOSTIC_SCOPE_OVERRIDE.md",
+    "MRV2_NonGraph_A3_DiagnosticRelease_20261021_165535/DRIVER_CAPABILITIES.md",
+    "MRV2_NonGraph_A3_DiagnosticRelease_20261021_165535/FUTURE_CHANGE_RULES.md",
+    "MRV2_NonGraph_A3_DiagnosticRelease_20261021_165535/PROFILING_AND_DIAGNOSTIC_PERFORMANCE.md",
+    "MRV2_NonGraph_A3_DiagnosticRelease_20261021_165535/SERVER_QUICKSTART.md",
+    "MRV2_NonGraph_ArchitectureReview_20261021_152046/00_REVIEW_REPORT.md",
+    "MRV2_NonGraph_ArchitectureReview_20261021_152046/A3_CAMPAIGN_PLAN.md",
+    "MRV2_NonGraph_ArchitectureReview_20261021_152046/ARCHITECTURE_FINDINGS.json",
+    "MRV2_NonGraph_ArchitectureReview_20261021_152046/FUTURE_CHANGE_RULES.md",
+    "MRV2_NonGraph_ArchitectureReview_20261021_152046/GITHUB_PUBLICATION.json",
+    "MRV2_NonGraph_ArchitectureReview_20261021_152046/NEXT_SESSION_HANDOFF.json",
+    "MRV2_NonGraph_ArchitectureReview_20261021_152046/evidence/A01.md",
+    "MRV2_NonGraph_ArchitectureReview_20261021_152046/evidence/A02_A03.md",
+    "MRV2_NonGraph_ArchitectureReview_20261021_152046/evidence/A04_A05.md",
+    "MRV2_NonGraph_ArchitectureReview_20261021_152046/evidence/A06.md",
+    "MRV2_NonGraph_ArchitectureReview_20261021_152046/evidence/INDEPENDENT_REVIEW.md",
+    "MRV2_NonGraph_Audit_20261020_2W0Wi3rU/00_README.md",
+    "MRV2_NonGraph_Audit_20261020_2W0Wi3rU/02_Requirements_and_Status.md",
+    "MRV2_NonGraph_Audit_20261020_2W0Wi3rU/03_Development_and_Code_Map.md",
+    "MRV2_NonGraph_Audit_20261020_2W0Wi3rU/04_PR_Migration_and_Review_Plan.md",
+    "MRV2_NonGraph_LocalCloseout_20261021_113749/00_README.md",
+    "MRV2_NonGraph_LocalCloseout_20261021_113749/01_SOURCE_AND_CHANGE_REVIEW.md",
+    "MRV2_NonGraph_LocalCloseout_20261021_113749/02_LOCAL_VALIDATION.md",
+    "MRV2_NonGraph_LocalCloseout_20261021_113749/A3_CAMPAIGN_PLAN.md",
+    "MRV2_NonGraph_LocalCloseout_20261021_113749/NEXT_SESSION_HANDOFF.json",
+    "MRV2_NonGraph_Publication_20261021_143532/00_PUBLICATION_README.md",
+    "MRV2_NonGraph_Publication_20261021_143532/GITHUB_PUBLICATION_RESULT.json",
+    "MRV2_NonGraph_Publication_20261021_143532/SERVER_SCOPE_ADDENDUM.md"
+  ],
+  "partial_files": {
+    "MRV2_NonGraph_A3_DiagnosticRelease_20261021_165535/DIAGNOSTIC_CASE_MATRIX.csv": "通过JSON同源矩阵与文件身份确认；未逐行独立重读228KB CSV。",
+    "MRV2_NonGraph_A3_DiagnosticRelease_20261021_165535/DIAGNOSTIC_CASE_MATRIX.json": "解析全部39个case ID、entry/result字段和首项完整对象；未逐字段阅读352KB全部对象。",
+    "MRV2_NonGraph_ArchitectureReview_20261021_152046/A3_CAMPAIGN_PLAN.json": "解析顶层结构、全部39个case ID和准备状态计数；以同源Markdown完整阅读主要语义。",
+    "MRV2_NonGraph_Audit_20261020_2W0Wi3rU/05_Next_Session_Handoff.json": "读取全部顶层字段、33需求/18 gap/12迁移步骤计数与关键状态；未逐项语义阅读106项source inventory及每个嵌套字段。",
+    "MRV2_NonGraph_Audit_20261020_2W0Wi3rU/evidence/gaps.csv": "以审计02/03引用和18项计数读取；未逐行重审。",
+    "MRV2_NonGraph_Audit_20261020_2W0Wi3rU/evidence/support_matrix.csv": "以审计02中的33项压缩表和结构身份读取；未逐行复核全部CSV字段。",
+    "MRV2_NonGraph_LocalCloseout_20261021_113749/A3_CAMPAIGN_PLAN.json": "解析顶层结构、全部34个case ID和准备状态计数；以同源Markdown完整阅读主要语义。"
+  },
+  "policy": {
+    "BINARY_OR_CONTAINER": "二进制/容器，注明结构检查",
+    "EXACT_DUPLICATE": "size和SHA256相同，指向已读源",
+    "FULL": "实际完整阅读正文",
+    "METADATA_ONLY": "仅身份盘点",
+    "PARTIAL": "实际读取明确范围并记录范围",
+    "UNREADABLE": "读取失败及原因"
+  },
+  "recorded_remainder": "其余日志、源码快照、测试输出和大矩阵多数为METADATA_ONLY；ZIP仅结构检查，未递归把成员都当成已读。",
+  "regular_file_status_counts": {
+    "BINARY_OR_CONTAINER": 172,
+    "EXACT_DUPLICATE": 14,
+    "FULL": 33,
+    "METADATA_ONLY": 13482,
+    "PARTIAL": 7
+  },
+  "scope": "/Users/wenqingzhang/Desktop/Note/滑动窗口MRV2适配/PR",
+  "unreadable_count": 0
+}

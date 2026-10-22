@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "catalog_records": 15953,
+  "counts": {
+    "EXCLUDED": 1,
+    "DIRECTORY_RECONSTRUCTED": 2236,
+    "COPIED_HASH_VERIFIED": 13705,
+    "COPIED_REDACTED": 2,
+    "COPIED_SYMLINK_PRESERVED": 8,
+    "EXCLUDED_EXTERNAL_SYMLINK": 1
+  },
+  "regular_source_bytes_checked": 768830404,
+  "errors": []
+}

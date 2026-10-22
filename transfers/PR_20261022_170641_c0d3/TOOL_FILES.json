@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-22T22:45:00+08:00",
+  "self_exclusion": "TOOL_FILES.json is excluded from this list",
+  "files": [
+    {
+      "path": "README_接收工具.md",
+      "bytes": 5180,
+      "sha256": "207e048e5f0517be4982445fe87b548b73b924f3e1a2a3013fa4f2db9a8a5e4b",
+      "mode": "0o644"
+    },
+    {
+      "path": "TEST_RESULTS.json",
+      "bytes": 2055,
+      "sha256": "a6adac75562fc304e0fef6e19b82f7b73c637b653626f0b79c937048e2db64a7",
+      "mode": "0o644"
+    },
+    {
+      "path": "pr_receiver_common.py",
+      "bytes": 27639,
+      "sha256": "1225c2f0b365a1d31e49be044f906da7024e75011e6999a97e9a84c2bd905e7c",
+      "mode": "0o644"
+    },
+    {
+      "path": "test_receiver_offline.py",
+      "bytes": 7559,
+      "sha256": "ca2c508f845c1ecae12351eb2d86e7c280e945f891f172e20f0f81ec5a894509",
+      "mode": "0o755"
+    },
+    {
+      "path": "下载并恢复PR资料.py",
+      "bytes": 7928,
+      "sha256": "f3364549a242c98d51d4fe578f506cf5179b1dc65ec8e6ac3435b4ba3caeb0fb",
+      "mode": "0o755"
+    },
+    {
+      "path": "验证PR接收资料.py",
+      "bytes": 5184,
+      "sha256": "f6c221add9827566c369cd2dcb397b50c967f5bbd04312e47fd644b8d54b7622",
+      "mode": "0o755"
+    }
+  ],
+  "summary": {
+    "files": 6,
+    "bytes": 55545
+  },
+  "required_runtime": {
+    "python_minimum": "3.9",
+    "gh_minimum_supported_by_this_handoff": "2.73.0 when --asset-dir is not used",
+    "python_dependencies": "standard library only"
+  }
+}

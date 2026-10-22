@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "sensitive_values_included": false,
+  "file_count": 19,
+  "total_bytes": 263775,
+  "files": [
+    {
+      "path": "PUBLISH_CONTENT_REVIEW.md",
+      "bytes": 4407,
+      "sha256": "7d72481a16f8d05ffe214853e1f62630f49905559bf1467fd9b265d557b37a08"
+    },
+    {
+      "path": "PUBLISH_CONTENT_REVIEW.json",
+      "bytes": 8900,
+      "sha256": "bc25160756163e821dff799baa6a4a525a79ae58252a1d9d1d02002a708aa85d"
+    },
+    {
+      "path": "PUBLISH_CONTENT_FINDINGS_REDACTED.json",
+      "bytes": 6218,
+      "sha256": "daf33e50949f7128a491228907498230c20eeea1750448ae8b16b69c800b3045"
+    },
+    {
+      "path": "nested_archive_inventory.json",
+      "bytes": 6214,
+      "sha256": "6e0462ce7bbcf343dfa465d5e1ed46ce712708e221538f692540fa2003cbad38"
+    },
+    {
+      "path": "container_pattern_scan_redacted.json",
+      "bytes": 2786,
+      "sha256": "78bf21d088fd5fc3e369760bf90ab7a79332d0be4dd179cd5903879917e892ec"
+    },
+    {
+      "path": "git_object_inventory.json",
+      "bytes": 5495,
+      "sha256": "a7b6a017d671827ba68d1eeb5983f2474bbc21328b1534453c26a245a5493758"
+    },
+    {
+      "path": "git_object_findings_redacted_summary.json",
+      "bytes": 32864,
+      "sha256": "429cee379a942ec64d3e7cba6365d8fc13c286668a95d6e641d8da3adb299a35"
+    },
+    {
+      "path": "gitleaks_full_zip_redacted.json",
+      "bytes": 112549,
+      "sha256": "d39131e77cd51fa567da923e310e08af3200f89ccf037994b9298da9d5098c83"
+    },
+    {
+      "path": "gitleaks_PR_REVIEW_RETURN_redacted.json",
+      "bytes": 3839,
+      "sha256": "4186c6957612c949836fe56e5ce0172e0a3b1ecc211cdfd7a463eb93f3911a0f"
+    },
+    {
+      "path": "gitleaks_HANDOFF_MANIFEST_redacted.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "gitleaks_git_objects_redacted.json",
+      "bytes": 56095,
+      "sha256": "fe715053de45223d39bbf08a0f09dd88aed87d864aa2eb1e48f961bc8e452e5c"
+    },
+    {
+      "path": "gitleaks_full_zip.stderr",
+      "bytes": 85,
+      "sha256": "7b3bfc52a97929b9cbf90e400a59eca26625627d1edbb3238c22a010a83605dc"
+    },
+    {
+      "path": "gitleaks_PR_REVIEW_RETURN.stderr",
+      "bytes": 81,
+      "sha256": "52144134681a48f44c6d907e226a0e052da64ead2c8d1b2b047763e196164995"
+    },
+    {
+      "path": "gitleaks_HANDOFF_MANIFEST.stderr",
+      "bytes": 77,
+      "sha256": "5c7a353adb30f2844d862e4603f7807c4229aac026e64a8561f6f5f2b44592fc"
+    },
+    {
+      "path": "gitleaks_git_objects.stderr",
+      "bytes": 84,
+      "sha256": "70bed2f641c9b79d78b6e46b8b14e13f8f96db7474fbde8d43907d458b7d027b"
+    },
+    {
+      "path": "inventory_nested_archives.py",
+      "bytes": 5612,
+      "sha256": "2d016256bdbaa0ae438a3c169484efa04a1570b3de21edffae2fc4f51b051176"
+    },
+    {
+      "path": "scan_container_patterns.py",
+      "bytes": 6766,
+      "sha256": "754fe64fe52b992a73e300e014135b3203c1aaae77c8aec5459e07078abf3f8a"
+    },
+    {
+      "path": "scan_git_objects.py",
+      "bytes": 8825,
+      "sha256": "2bdbe4335f81b231f668e1620b5cb0cef318a0f4bbec7c42a780594208b176c6"
+    },
+    {
+      "path": "map_git_findings.py",
+      "bytes": 2875,
+      "sha256": "922d08546dda618ca91f36e79c4a7cb35b08b763254ca2abaf65e343eca32148"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "status": "PASS_WITH_DECLARED_SCOPE",
+  "gitleaks": {
+    "full_zip": {
+      "bytes_reported_scanned": 835014594,
+      "archive_depth": 3,
+      "max_target_megabytes": 1024,
+      "timeout_seconds": 900,
+      "finding_count": 101,
+      "rule_counts": {
+        "generic-api-key": 100,
+        "curl-auth-header": 1
+      },
+      "outer_findings": 95,
+      "nested_findings": 6,
+      "prior_reviewed_findings": 91,
+      "classification": "91 prior-reviewed matches plus 4 generated candidate/base snapshot duplicates and 6 nested historical archive duplicates; all reviewed false positives/examples"
+    },
+    "review_zip": {
+      "finding_count": 4,
+      "rule_counts": {
+        "generic-api-key": 4
+      },
+      "classification": "four candidate/base speculator source identifier false positives"
+    },
+    "handoff_manifest": {
+      "finding_count": 0,
+      "rule_counts": {}
+    },
+    "git_object_text_blobs": {
+      "finding_count": 77,
+      "rule_counts": {
+        "generic-api-key": 76,
+        "curl-auth-header": 1
+      },
+      "classification": "all 77 content-deduplicated object matches map to public upstream source, test, CI, or documentation paths already represented in the working-tree review"
+    }
+  },
+  "archive_traversal": {
+    "status": "PASS",
+    "budgets": {
+      "max_depth": 3,
+      "max_nested_archive_bytes": 134217728,
+      "max_member_bytes": 268435456,
+      "max_total_declared_expanded_bytes": 4294967296,
+      "max_entries": 100000,
+      "max_seconds": 300
+    },
+    "totals": {
+      "entries": 14863,
+      "declared_uncompressed_bytes": 1165419461,
+      "archive_bytes_read": 268856673
+    },
+    "unique_archive_count": 9,
+    "archive_occurrence_count": 9,
+    "limits_hit": [],
+    "encrypted_member_count": 0,
+    "unsafe_member_name_count": 0,
+    "unreadable_archive_count": 0,
+    "normalized_case_collision_count": 0
+  },
+  "custom_pattern_scan": {
+    "status": "PASS",
+    "budgets": {
+      "max_depth": 3,
+      "max_member_bytes": 67108864,
+      "max_unique_text_bytes": 2147483648,
+      "max_seconds": 300
+    },
+    "stats": {
+      "archive_occurrences": 9,
+      "unique_archives": 9,
+      "member_occurrences": 14862,
+      "text_occurrences": 14655,
+      "unique_text_members": 12118,
+      "unique_text_bytes_scanned": 211643113,
+      "binary_or_nontext_occurrences": 199,
+      "oversized_occurrences": 0
+    },
+    "limits_hit": [],
+    "text_findings": {
+      "count": 3,
+      "classification": [
+        "one authorization-header documentation example",
+        "one authorization pattern in the already-redacted scanner report",
+        "one credential-shaped URL in a public upstream test using reserved example.com"
+      ]
+    },
+    "binary_pattern_findings": 0,
+    "private_key_pem_findings": 0,
+    "aws_access_key_shape_findings": 0,
+    "github_token_shape_findings": 0,
+    "git_configs": {
+      "count": 2,
+      "credential_bearing_urls": 0,
+      "sensitive_config_keys": 0,
+      "remote_host": "github.com"
+    },
+    "suspicious_filename_review": {
+      "count": 1,
+      "classification": "public upstream Helm secrets.yaml template, not a credential file"
+    }
+  },
+  "git_object_review": {
+    "status": "PASS",
+    "scope": "all locally stored blob objects in 3 unique bundles and 2 embedded Git object stores",
+    "unique_bundle_count": 3,
+    "bundle_occurrences": 16,
+    "direct_bundle_occurrences": 8,
+    "nested_bundle_occurrences": 8,
+    "unique_text_blobs": 11370,
+    "unique_text_bytes": 152323494,
+    "repository_stats": [
+      {
+        "label": "bundle:vllm",
+        "local_blob_objects": 7233,
+        "blob_bytes_declared": 123840351,
+        "oversized_blob_count": 0,
+        "binary_blob_count": 94,
+        "text_blob_occurrences": 7139,
+        "unique_text_blob_additions": 7139
+      },
+      {
+        "label": "bundle:ascend_b013719",
+        "local_blob_objects": 4260,
+        "blob_bytes_declared": 61789295,
+        "oversized_blob_count": 0,
+        "binary_blob_count": 39,
+        "text_blob_occurrences": 4221,
+        "unique_text_blob_additions": 4214
+      },
+      {
+        "label": "bundle:ascend_2604675",
+        "local_blob_objects": 4277,
+        "blob_bytes_declared": 62294135,
+        "oversized_blob_count": 0,
+        "binary_blob_count": 39,
+        "text_blob_occurrences": 4238,
+        "unique_text_blob_additions": 17
+      },
+      {
+        "label": "embedded:vllm-ascend",
+        "local_blob_objects": 4222,
+        "blob_bytes_declared": 61015072,
+        "oversized_blob_count": 0,
+        "binary_blob_count": 39,
+        "text_blob_occurrences": 4183,
+        "unique_text_blob_additions": 0
+      },
+      {
+        "label": "embedded:vllm",
+        "local_blob_objects": 7233,
+        "blob_bytes_declared": 123840351,
+        "oversized_blob_count": 0,
+        "binary_blob_count": 94,
+        "text_blob_occurrences": 7139,
+        "unique_text_blob_additions": 0
+      }
+    ],
+    "bundle_identities": [
+      {
+        "label": "vllm",
+        "sha256": "6a183cb3ebc435df49390cfe90ed8ad54be8dae15d7dd8f4c2de03b896f497bb",
+        "bytes": 47272654,
+        "restored_head": "a98247ab4db686ee03c66d5feb3c761e52a2f8ab",
+        "restored_tree": "7f2a24a827bbbb2f211e02031f9d4d0d556d536c"
+      },
+      {
+        "label": "ascend_b013719",
+        "sha256": "347fe1225cebf32dedbc3b9e54fbf8efe68e6435e0181122e1865fa1059e6469",
+        "bytes": 19531642,
+        "restored_head": "b013719f6f0db57025c35586279412cd51da4dc5",
+        "restored_tree": "4453ba56b906d11dd9d3f2f119552061754f9b58"
+      },
+      {
+        "label": "ascend_2604675",
+        "sha256": "920dbdd071e0ca5355608de156804dcc28fb1d74723a2cc8959d5fd9915c9e83",
+        "bytes": 19550081,
+        "restored_head": "2604675e520c23740c5225b6af8857eed8bd9391",
+        "restored_tree": "afbf69a93f1c7e761769baa9044577d8b83b7a35"
+      }
+    ],
+    "promisor_boundary": "The embedded vLLM repository advertises missing promisor objects; absent objects are not published bytes. The identical self-contained published bundle's 7,233 locally stored blobs were enumerated and scanned."
+  },
+  "blocking_findings": [],
+  "sensitive_values_in_evidence": false
+}

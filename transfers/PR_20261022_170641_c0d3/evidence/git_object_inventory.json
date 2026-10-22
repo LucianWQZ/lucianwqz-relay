@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "scope": "all locally stored blob objects in 3 unique bundles and 2 embedded Git object stores",
+  "bundle_rows": [
+    {
+      "label": "vllm",
+      "sha256": "6a183cb3ebc435df49390cfe90ed8ad54be8dae15d7dd8f4c2de03b896f497bb",
+      "bytes": 47272654,
+      "occurrences": [
+        "任务归档/002_20261021_非Graph迁移实现与Host验证/原始资料/MRV2_NonGraph_PR_20261021_004159/server_handoff/sources/vllm.bundle",
+        "任务归档/005_20261021_架构审查与2604675候选/原始资料/MRV2_NonGraph_ArchitectureReview_20261021_152046/server_handoff/sources/vllm.bundle",
+        "任务归档/003_20261021_候选冻结与本地收尾/原始资料/MRV2_NonGraph_LocalCloseout_20261021_113749/server_handoff/sources/vllm.bundle",
+        "代码恢复材料/bundles/vllm.bundle"
+      ],
+      "shallow_path": "任务归档/002_20261021_非Graph迁移实现与Host验证/原始资料/MRV2_NonGraph_PR_20261021_004159/server_handoff/sources/vllm.shallow",
+      "restored_head": "a98247ab4db686ee03c66d5feb3c761e52a2f8ab",
+      "restored_tree": "7f2a24a827bbbb2f211e02031f9d4d0d556d536c"
+    },
+    {
+      "label": "ascend_b013719",
+      "sha256": "347fe1225cebf32dedbc3b9e54fbf8efe68e6435e0181122e1865fa1059e6469",
+      "bytes": 19531642,
+      "occurrences": [
+        "任务归档/002_20261021_非Graph迁移实现与Host验证/原始资料/MRV2_NonGraph_PR_20261021_004159/server_handoff/sources/vllm-ascend.bundle",
+        "任务归档/003_20261021_候选冻结与本地收尾/原始资料/MRV2_NonGraph_LocalCloseout_20261021_113749/server_handoff/sources/vllm-ascend.bundle"
+      ],
+      "shallow_path": "任务归档/002_20261021_非Graph迁移实现与Host验证/原始资料/MRV2_NonGraph_PR_20261021_004159/server_handoff/sources/vllm-ascend.shallow",
+      "restored_head": "b013719f6f0db57025c35586279412cd51da4dc5",
+      "restored_tree": "4453ba56b906d11dd9d3f2f119552061754f9b58"
+    },
+    {
+      "label": "ascend_2604675",
+      "sha256": "920dbdd071e0ca5355608de156804dcc28fb1d74723a2cc8959d5fd9915c9e83",
+      "bytes": 19550081,
+      "occurrences": [
+        "任务归档/005_20261021_架构审查与2604675候选/原始资料/MRV2_NonGraph_ArchitectureReview_20261021_152046/server_handoff/sources/vllm-ascend.bundle",
+        "代码恢复材料/bundles/vllm-ascend.bundle"
+      ],
+      "shallow_path": "任务归档/005_20261021_架构审查与2604675候选/原始资料/MRV2_NonGraph_ArchitectureReview_20261021_152046/server_handoff/sources/vllm-ascend.shallow",
+      "restored_head": "2604675e520c23740c5225b6af8857eed8bd9391",
+      "restored_tree": "afbf69a93f1c7e761769baa9044577d8b83b7a35"
+    }
+  ],
+  "repositories": [
+    {
+      "label": "bundle:vllm",
+      "repository": "/private/tmp/pr_publish_content_scan/git_object_repos/vllm",
+      "local_blob_objects": 7233,
+      "blob_bytes_declared": 123840351,
+      "max_blob_bytes": 33554432,
+      "oversized_blob_count": 0,
+      "binary_blob_count": 94,
+      "text_blob_occurrences": 7139,
+      "unique_text_blob_additions": 7139,
+      "enumeration_stderr": ""
+    },
+    {
+      "label": "bundle:ascend_b013719",
+      "repository": "/private/tmp/pr_publish_content_scan/git_object_repos/ascend_b013719",
+      "local_blob_objects": 4260,
+      "blob_bytes_declared": 61789295,
+      "max_blob_bytes": 33554432,
+      "oversized_blob_count": 0,
+      "binary_blob_count": 39,
+      "text_blob_occurrences": 4221,
+      "unique_text_blob_additions": 4214,
+      "enumeration_stderr": ""
+    },
+    {
+      "label": "bundle:ascend_2604675",
+      "repository": "/private/tmp/pr_publish_content_scan/git_object_repos/ascend_2604675",
+      "local_blob_objects": 4277,
+      "blob_bytes_declared": 62294135,
+      "max_blob_bytes": 33554432,
+      "oversized_blob_count": 0,
+      "binary_blob_count": 39,
+      "text_blob_occurrences": 4238,
+      "unique_text_blob_additions": 17,
+      "enumeration_stderr": ""
+    },
+    {
+      "label": "embedded:vllm-ascend",
+      "repository": "/Users/wenqingzhang/Desktop/中转/move/PR_服务器开发交接_20261022_170641_0800_c0d3/任务归档/001_20261020_非Graph历史审计与需求证据/原始资料/MRV2_NonGraph_Audit_20261020_2W0Wi3rU/audit_clones/vllm-ascend",
+      "local_blob_objects": 4222,
+      "blob_bytes_declared": 61015072,
+      "max_blob_bytes": 33554432,
+      "oversized_blob_count": 0,
+      "binary_blob_count": 39,
+      "text_blob_occurrences": 4183,
+      "unique_text_blob_additions": 0,
+      "enumeration_stderr": ""
+    },
+    {
+      "label": "embedded:vllm",
+      "repository": "/Users/wenqingzhang/Desktop/中转/move/PR_服务器开发交接_20261022_170641_0800_c0d3/任务归档/001_20261020_非Graph历史审计与需求证据/原始资料/MRV2_NonGraph_Audit_20261020_2W0Wi3rU/audit_clones/vllm",
+      "local_blob_objects": 7233,
+      "blob_bytes_declared": 123840351,
+      "max_blob_bytes": 33554432,
+      "oversized_blob_count": 0,
+      "binary_blob_count": 94,
+      "text_blob_occurrences": 7139,
+      "unique_text_blob_additions": 0,
+      "enumeration_stderr": "warning: This repository uses promisor remotes. Some objects may not be loaded.\n"
+    }
+  ],
+  "unique_text_blobs": 11370,
+  "unique_text_bytes": 152323494,
+  "limitations": [
+    "Promisor objects absent from the payload are not scanned and are not published bytes.",
+    "Blobs larger than 32 MiB and binary blobs are inventory-counted, not treated as text-secret scan inputs."
+  ]
+}

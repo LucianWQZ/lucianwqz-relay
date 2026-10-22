@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "source": "/Users/wenqingzhang/Desktop/中转/move/PR_服务器开发交接_20261022_170641_0800_c0d3/package/PR_FULL_TRANSFER.zip",
+  "budgets": {
+    "max_depth": 3,
+    "max_nested_archive_bytes": 134217728,
+    "max_member_bytes": 268435456,
+    "max_total_declared_expanded_bytes": 4294967296,
+    "max_entries": 100000,
+    "max_seconds": 300
+  },
+  "totals": {
+    "entries": 14863,
+    "declared_uncompressed_bytes": 1165419461,
+    "archive_bytes_read": 268856673
+  },
+  "unique_archive_count": 9,
+  "archive_occurrence_count": 9,
+  "limits_hit": [],
+  "suspicious_filenames": [
+    {
+      "archive": "PR_FULL_TRANSFER.zip",
+      "member": "任务归档/001_20261020_非Graph历史审计与需求证据/原始资料/MRV2_NonGraph_Audit_20261020_2W0Wi3rU/audit_clones/vllm/examples/deployment/chart-helm/templates/secrets.yaml"
+    }
+  ],
+  "rows": [
+    {
+      "path": "PR_FULL_TRANSFER.zip",
+      "depth": 0,
+      "bytes": 696228223,
+      "sha256": "675237faf78efcd4f95642494437af2b09c29680f21eb8e9e460cad7ab6a953e",
+      "members": 13837,
+      "declared_uncompressed_bytes": 878361939,
+      "encrypted_members": 0,
+      "unsafe_member_names": 0,
+      "duplicate_member_names": 0,
+      "normalized_case_collisions": 0,
+      "oversized_members": 0,
+      "status": "STRUCTURE_READ"
+    },
+    {
+      "path": "PR_FULL_TRANSFER.zip!任务归档/001_20261020_非Graph历史审计与需求证据/原始资料/MRV2_NonGraph_Audit_20261020_2W0Wi3rU/package/MRV2_NonGraph_PR_Handoff.zip",
+      "depth": 1,
+      "bytes": 2982461,
+      "sha256": "8f41d2eae705c39d89343a8769edfdbcd323140bab7db898a2241f75f9b702a1",
+      "members": 251,
+      "declared_uncompressed_bytes": 11312557,
+      "encrypted_members": 0,
+      "unsafe_member_names": 0,
+      "duplicate_member_names": 0,
+      "normalized_case_collisions": 0,
+      "oversized_members": 0,
+      "status": "STRUCTURE_READ"
+    },
+    {
+      "path": "PR_FULL_TRANSFER.zip!任务归档/001_20261020_非Graph历史审计与需求证据/原始资料/MRV2_NonGraph_Audit_20261020_2W0Wi3rU/working.zip",
+      "depth": 1,
+      "bytes": 209769,
+      "sha256": "dd3742038a12f4b02d23d4d60878ea8a47b2f7c3179e5fbe04eebca4e62386bf",
+      "members": 22,
+      "declared_uncompressed_bytes": 1645768,
+      "encrypted_members": 0,
+      "unsafe_member_names": 0,
+      "duplicate_member_names": 0,
+      "normalized_case_collisions": 0,
+      "oversized_members": 0,
+      "status": "STRUCTURE_READ"
+    },
+    {
+      "path": "PR_FULL_TRANSFER.zip!任务归档/002_20261021_非Graph迁移实现与Host验证/原始资料/MRV2_NonGraph_PR_20261021_004159/package/MRV2_NonGraph_PR_Progress_Handoff.zip",
+      "depth": 1,
+      "bytes": 66283633,
+      "sha256": "072b2cee91d5f5a1e720daa0c8d1a7cd91e2f8f6796f04aa35a01cc854a7c10e",
+      "members": 158,
+      "declared_uncompressed_bytes": 68034711,
+      "encrypted_members": 0,
+      "unsafe_member_names": 0,
+      "duplicate_member_names": 0,
+      "normalized_case_collisions": 0,
+      "oversized_members": 0,
+      "status": "STRUCTURE_READ"
+    },
+    {
+      "path": "PR_FULL_TRANSFER.zip!任务归档/002_20261021_非Graph迁移实现与Host验证/原始资料/MRV2_NonGraph_PR_20261021_004159/package/MRV2_NonGraph_ServerInput_b013719f6f0d_20261021_103920.zip",
+      "depth": 1,
+      "bytes": 66400610,
+      "sha256": "85e0af7e54a077ba2df3961344d10d29cdedff8cfc9927a265d0e7e88ae2fc01",
+      "members": 176,
+      "declared_uncompressed_bytes": 68455495,
+      "encrypted_members": 0,
+      "unsafe_member_names": 0,
+      "duplicate_member_names": 0,
+      "normalized_case_collisions": 0,
+      "oversized_members": 0,
+      "status": "STRUCTURE_READ"
+    },
+    {
+      "path": "PR_FULL_TRANSFER.zip!任务归档/003_20261021_候选冻结与本地收尾/原始资料/MRV2_NonGraph_LocalCloseout_20261021_113749/package/MRV2_NonGraph_LocalCloseout_b013719f6f0d_20261021_115826.zip",
+      "depth": 1,
+      "bytes": 66440170,
+      "sha256": "9d1dd5f5ea99f289c4a5ce665d091bf81c37e0dd093f7017b5eded0a2f5226e5",
+      "members": 146,
+      "declared_uncompressed_bytes": 68604767,
+      "encrypted_members": 0,
+      "unsafe_member_names": 0,
+      "duplicate_member_names": 0,
+      "normalized_case_collisions": 0,
+      "oversized_members": 0,
+      "status": "STRUCTURE_READ"
+    },
+    {
+      "path": "PR_FULL_TRANSFER.zip!任务归档/004_20261021_b013719诊断发布/原始资料/MRV2_NonGraph_Publication_20261021_143532/MRV2_NonGraph_Publication_20261021_143532.zip",
+      "depth": 1,
+      "bytes": 40011,
+      "sha256": "48483ab7dc989919560063ce6c49181c77eec5325da5f5a1489381c2dcc7dceb",
+      "members": 49,
+      "declared_uncompressed_bytes": 76467,
+      "encrypted_members": 0,
+      "unsafe_member_names": 0,
+      "duplicate_member_names": 0,
+      "normalized_case_collisions": 0,
+      "oversized_members": 0,
+      "status": "STRUCTURE_READ"
+    },
+    {
+      "path": "PR_FULL_TRANSFER.zip!任务归档/005_20261021_架构审查与2604675候选/原始资料/MRV2_NonGraph_ArchitectureReview_20261021_152046/package/MRV2_NonGraph_ArchitectureReview_2604675e520c_20261021_154135.zip",
+      "depth": 1,
+      "bytes": 66322350,
+      "sha256": "382897750f1e986774880356d6939297b2eb82a0d3b54c789558dbc3f29e593b",
+      "members": 129,
+      "declared_uncompressed_bytes": 67994845,
+      "encrypted_members": 0,
+      "unsafe_member_names": 0,
+      "duplicate_member_names": 0,
+      "normalized_case_collisions": 0,
+      "oversized_members": 0,
+      "status": "STRUCTURE_READ"
+    },
+    {
+      "path": "PR_FULL_TRANSFER.zip!任务归档/006_20261021_诊断发布与服务器补充/原始资料/MRV2_NonGraph_A3_DiagnosticRelease_20261021_165535/DIAGNOSTIC_SERVER_SUPPLEMENT.zip",
+      "depth": 1,
+      "bytes": 177669,
+      "sha256": "fe4d54e51cdccbef049155d86d48220947634f23015db3ec56f11ba10fd49bb6",
+      "members": 95,
+      "declared_uncompressed_bytes": 932912,
+      "encrypted_members": 0,
+      "unsafe_member_names": 0,
+      "duplicate_member_names": 0,
+      "normalized_case_collisions": 0,
+      "oversized_members": 0,
+      "status": "STRUCTURE_READ"
+    }
+  ],
+  "elapsed_seconds": 0.484
+}

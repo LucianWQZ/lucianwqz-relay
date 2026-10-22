@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "repo": "/Users/wenqingzhang/Desktop/中转/move/PR_GitHub发布_20261022_200411_0800_c0d3/repo/private-file-relay",
+  "transfer": "/Users/wenqingzhang/Desktop/中转/move/PR_GitHub发布_20261022_200411_0800_c0d3/repo/private-file-relay/transfers/PR_20261022_170641_c0d3",
+  "checks": [
+    {
+      "name": "fixed:package/PR_FULL_TRANSFER.zip",
+      "status": "PASS",
+      "detail": {
+        "bytes": 696228223,
+        "sha256": "675237faf78efcd4f95642494437af2b09c29680f21eb8e9e460cad7ab6a953e"
+      }
+    },
+    {
+      "name": "fixed:package/PR_REVIEW_RETURN.zip",
+      "status": "PASS",
+      "detail": {
+        "bytes": 1771620,
+        "sha256": "71df7981a67a6643cf476e56d2d1e1a2795e431cb1ac271fed24a8e51391b470"
+      }
+    },
+    {
+      "name": "fixed:package/HANDOFF_MANIFEST.json",
+      "status": "PASS",
+      "detail": {
+        "bytes": 2680,
+        "sha256": "4606f83f060e3162296fc3b8207439420034d096980de0a9f0e31e24897720bc"
+      }
+    },
+    {
+      "name": "fixed:06_回传ChatGPT摘要.md",
+      "status": "PASS",
+      "detail": {
+        "bytes": 6911,
+        "sha256": "62ca1da7995e6283bf0917732f431d0d8e9c56b42aec7f8779abd72a6cec168d"
+      }
+    },
+    {
+      "name": "original_manifest_byte_copy",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "json_jsonl_parse",
+      "status": "PASS",
+      "detail": {
+        "files": 27
+      }
+    },
+    {
+      "name": "csv_parse",
+      "status": "PASS",
+      "detail": {
+        "files": 1
+      }
+    },
+    {
+      "name": "python_compile",
+      "status": "PASS",
+      "detail": {
+        "files": 4,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "receiver_offline_tests",
+      "status": "PASS",
+      "detail": {
+        "stdout_tail": "",
+        "stderr_tail": "test_dry_run_does_not_create_root (__main__.ReceiverOfflineTest) ... ok\ntest_offline_receive_and_independent_verify (__main__.ReceiverOfflineTest) ... ok\ntest_reject_casefold_collision (__main__.ReceiverOfflineTest) ... ok\ntest_reject_symlink_escape (__main__.ReceiverOfflineTest) ... ok\ntest_wrong_repo_is_rejected (__main__.ReceiverOfflineTest) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.461s\n\nOK\n"
+      }
+    },
+    {
+      "name": "dryrun_root_absent_before",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "receiver_dryrun",
+      "status": "PASS",
+      "detail": {
+        "stdout": {
+          "status": "DRY_RUN_PASS",
+          "dry_run": true,
+          "no_files_created": true,
+          "manifest": "/Users/wenqingzhang/Desktop/中转/move/PR_GitHub发布_20261022_200411_0800_c0d3/repo/private-file-relay/transfers/PR_20261022_170641_c0d3/RELAY_TRANSFER_MANIFEST.json",
+          "repository": "LucianWQZ/private-file-relay",
+          "tag": "pr-transfer-20261022-170641-c0d3",
+          "execution_site": "SERVER",
+          "layout": {
+            "root": "/private/tmp/preflight-dryrun-root-c0d3",
+            "archive": "/private/tmp/preflight-dryrun-root-c0d3/PR_服务器开发交接_20261022_170641_0800_c0d3",
+            "cache": "/private/tmp/preflight-dryrun-root-c0d3/发布附件缓存/PR_服务器开发交接_20261022_170641_0800_c0d3",
+            "supplement": "/private/tmp/preflight-dryrun-root-c0d3/发布补充/PR_服务器开发交接_20261022_170641_0800_c0d3",
+            "receipt": "/private/tmp/preflight-dryrun-root-c0d3/接收回执/PR_服务器开发交接_20261022_170641_0800_c0d3"
+          },
+          "assets": [
+            {
+              "role": "full",
+              "name": "PR_FULL_TRANSFER.zip",
+              "bytes": 696228223,
+              "sha256": "675237faf78efcd4f95642494437af2b09c29680f21eb8e9e460cad7ab6a953e"
+            },
+            {
+              "role": "review",
+              "name": "PR_REVIEW_RETURN.zip",
+              "bytes": 1771620,
+              "sha256": "71df7981a67a6643cf476e56d2d1e1a2795e431cb1ac271fed24a8e51391b470"
+            },
+            {
+              "role": "original_manifest",
+              "name": "HANDOFF_MANIFEST.json",
+              "bytes": 2680,
+              "sha256": "4606f83f060e3162296fc3b8207439420034d096980de0a9f0e31e24897720bc"
+            },
+            {
+              "role": "supplement",
+              "name": "PR_TRANSFER_SUPPLEMENT.zip",
+              "bytes": 33047,
+              "sha256": "ece3c6295a82693a92ca07d1267fd3f600cd1a82a5208cdffc88787851a58b7e"
+            }
+          ],
+          "disk_plan": {
+            "asset_bytes": 698035570,
+            "full_payload_bytes": 873310016,
+            "supplement_payload_bytes": 75446,
+            "space_margin_bytes": 1073741824,
+            "computed_peak_disk_bytes": 2645162856,
+            "declared_peak_disk_bytes": 2645162856,
+            "required_free_bytes": 2645162856,
+            "observed_free_bytes": 218886119424,
+            "sufficient": true
+          },
+          "asset_source": "GITHUB_RELEASE_VIA_GH"
+        },
+        "stderr": ""
+      }
+    },
+    {
+      "name": "supplement_zip_integrity",
+      "status": "PASS",
+      "detail": {
+        "archive": "/private/tmp/PR_TRANSFER_SUPPLEMENT.zip",
+        "archive_bytes": 33047,
+        "archive_sha256": "ece3c6295a82693a92ca07d1267fd3f600cd1a82a5208cdffc88787851a58b7e",
+        "internal_manifest_sha256": "aa4a6cc28ec6cec8b952536a5552d5ae019d72ed43c8b2270875adc72e2c4bd4",
+        "payload_entries": 13,
+        "payload_bytes": 75446,
+        "regular_files": 13,
+        "symlinks": 0,
+        "crc_checked": true,
+        "payload_hashes_checked": true
+      }
+    },
+    {
+      "name": "git_transfer_no_symlinks",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "git_transfer_bounded_size",
+      "status": "PASS",
+      "detail": {
+        "files": 55,
+        "bytes": 464513,
+        "largest": 112549
+      }
+    },
+    {
+      "name": "repo_only_transfer_untracked",
+      "status": "PASS",
+      "detail": [
+        "?? transfers/PR_20261022_170641_c0d3/"
+      ]
+    }
+  ]
+}

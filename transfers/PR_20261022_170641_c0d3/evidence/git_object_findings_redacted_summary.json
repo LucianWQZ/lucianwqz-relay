@@ -1,0 +1,1111 @@
+{
+  "status": "REDACTED_FINDING_INDEX",
+  "finding_count": 77,
+  "rule_counts": {
+    "generic-api-key": 76,
+    "curl-auth-header": 1
+  },
+  "mapped_path_count": 77,
+  "rows": [
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "040ee6cdf4d44d88703cbe03ed0de161ba354b357b78f060a76bc90210fe7d11",
+      "bytes": 7468,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/engine.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "040ee6cdf4d44d88703cbe03ed0de161ba354b357b78f060a76bc90210fe7d11",
+      "bytes": 7468,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/engine.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "040ee6cdf4d44d88703cbe03ed0de161ba354b357b78f060a76bc90210fe7d11",
+      "bytes": 7468,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/engine.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "041a33cff4a0225d377f9cc3120a32afd3537e7843273b85ca827256dacb23f1",
+      "bytes": 46262,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        "tests/v1/spec_decode/test_eagle.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "041a33cff4a0225d377f9cc3120a32afd3537e7843273b85ca827256dacb23f1",
+      "bytes": 46262,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        "tests/v1/spec_decode/test_eagle.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "1415515cbc57dba1adbda68de5658d13ca6ee8059da60384db0947021e27867f",
+      "bytes": 13539,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "csrc/attention/compressor_metadata/op_host/compressor_metadata_tiling.cpp"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "1415515cbc57dba1adbda68de5658d13ca6ee8059da60384db0947021e27867f",
+      "bytes": 13539,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "csrc/attention/compressor_metadata/op_host/compressor_metadata_tiling.cpp"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "16857e28304afe3fa70df364685298e4aa3e6b591a072c46ba95e91de54393c3",
+      "bytes": 30157,
+      "occurrence_count": 1,
+      "repository_labels": [
+        "bundle:ascend_2604675"
+      ],
+      "candidate_paths": [
+        "vllm_ascend/worker/v2/spec_decode/dspark/speculator.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "189636d11c1a5b5187f9a226f5dfa16903f2e0364c6cdc2b983a1380c591ef65",
+      "bytes": 14618,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/compile.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "189636d11c1a5b5187f9a226f5dfa16903f2e0364c6cdc2b983a1380c591ef65",
+      "bytes": 14618,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/compile.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "189636d11c1a5b5187f9a226f5dfa16903f2e0364c6cdc2b983a1380c591ef65",
+      "bytes": 14618,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/compile.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "1701898bff693114fbc85d306fa7c473713acc5ea88e18b7091983a5ab02ec51",
+      "bytes": 25166,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/misc.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "15ed2f9395cadaed9c5f2646d6e251d5e9e62992c80bb8593a188ba8fdebe8dc",
+      "bytes": 51448,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/lm_eval.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "15ed2f9395cadaed9c5f2646d6e251d5e9e62992c80bb8593a188ba8fdebe8dc",
+      "bytes": 51448,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/lm_eval.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "15ed2f9395cadaed9c5f2646d6e251d5e9e62992c80bb8593a188ba8fdebe8dc",
+      "bytes": 51448,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/lm_eval.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "15ed2f9395cadaed9c5f2646d6e251d5e9e62992c80bb8593a188ba8fdebe8dc",
+      "bytes": 51448,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/lm_eval.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "15ed2f9395cadaed9c5f2646d6e251d5e9e62992c80bb8593a188ba8fdebe8dc",
+      "bytes": 51448,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/lm_eval.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "15ed2f9395cadaed9c5f2646d6e251d5e9e62992c80bb8593a188ba8fdebe8dc",
+      "bytes": 51448,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/lm_eval.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "15ed2f9395cadaed9c5f2646d6e251d5e9e62992c80bb8593a188ba8fdebe8dc",
+      "bytes": 51448,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/lm_eval.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "15ed2f9395cadaed9c5f2646d6e251d5e9e62992c80bb8593a188ba8fdebe8dc",
+      "bytes": 51448,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/lm_eval.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "15ed2f9395cadaed9c5f2646d6e251d5e9e62992c80bb8593a188ba8fdebe8dc",
+      "bytes": 51448,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/lm_eval.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "15ed2f9395cadaed9c5f2646d6e251d5e9e62992c80bb8593a188ba8fdebe8dc",
+      "bytes": 51448,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/lm_eval.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "15ed2f9395cadaed9c5f2646d6e251d5e9e62992c80bb8593a188ba8fdebe8dc",
+      "bytes": 51448,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/lm_eval.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "15ed2f9395cadaed9c5f2646d6e251d5e9e62992c80bb8593a188ba8fdebe8dc",
+      "bytes": 51448,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/lm_eval.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "15ed2f9395cadaed9c5f2646d6e251d5e9e62992c80bb8593a188ba8fdebe8dc",
+      "bytes": 51448,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/lm_eval.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "15ed2f9395cadaed9c5f2646d6e251d5e9e62992c80bb8593a188ba8fdebe8dc",
+      "bytes": 51448,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/lm_eval.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "15ed2f9395cadaed9c5f2646d6e251d5e9e62992c80bb8593a188ba8fdebe8dc",
+      "bytes": 51448,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/lm_eval.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "15ed2f9395cadaed9c5f2646d6e251d5e9e62992c80bb8593a188ba8fdebe8dc",
+      "bytes": 51448,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/lm_eval.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "15ed2f9395cadaed9c5f2646d6e251d5e9e62992c80bb8593a188ba8fdebe8dc",
+      "bytes": 51448,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/lm_eval.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "2282955cf1612f0b46110368fdbcefce60e11bb36204ad5801da47940ca33741",
+      "bytes": 50892,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        "vllm/model_executor/layers/sparse_attn_indexer.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "3410e5fc1eeb37eb314fe2b3bf33999ac64c23b072c2d75249cdbfd88b737ad9",
+      "bytes": 27231,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "vllm_ascend/worker/v2/spec_decode/dspark/speculator.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "3754467288227b4b4f63f6018af56a5ee1a94966b802ca35c93be0e31f78823d",
+      "bytes": 14438,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "csrc/attention/quant_lightning_indexer_v2/torch_extension/csrc/quant_lightning_indexer.cpp"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "3b1ded0ac339a473c544e89f6c5e68cc6ae1530df54789d950221085d26f3849",
+      "bytes": 5197,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/hardware_tests/intel_xpu_ci/test-intel.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "444ef1fe197f92fbd548f9ce9f1fee804da647607e7872392b92f023be224027",
+      "bytes": 45762,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719"
+      ],
+      "candidate_paths": [
+        "vllm_ascend/worker/v2/spec_decode/autoregressive/speculator.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "4aebfef3d16d7ea2d9289647a606a1893bf5f8d5f518220aa8e165bed169c217",
+      "bytes": 25638,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        "vllm/models/inkling/nvidia/moe.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "51b9b1592d1844044b0749cd963be6b5896386fa2699f5e6140c85fba4779997",
+      "bytes": 2121,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/fault_tolerance.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "6172499fa50c3e2d787911e6c3d6a302361ce18619c4930ad8f5f3d5f1f114c6",
+      "bytes": 20615,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "tests/ut/ops/test_rotary_embedding.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "6367ae7d4b23c94bf459106f26d8c7e8d61c22df97bc4d57c9e5fc3bb29d8e48",
+      "bytes": 54073,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".github/workflows/scripts/test_run_ci_command.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "6faf92be73464d1e8fb8b347ccdecc3682dfdd81677f59b0def84fcf1eefec5c",
+      "bytes": 11069,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/intel_jobs/test-intel.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "7d650fea7643c62a1c26899588aa2a8a95876e89094989acd4baeb92f58c74c7",
+      "bytes": 8061,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "vllm_ascend/ops/triton/pcp_kv_cache.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "867d3a777e1bd9c4eff4f53d68a797302a4f039eede82b7c80a349a8d50d9c94",
+      "bytes": 1940,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        "tests/plugins_tests/bitsandbytes/test_transformers.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "867d3a777e1bd9c4eff4f53d68a797302a4f039eede82b7c80a349a8d50d9c94",
+      "bytes": 1940,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        "tests/plugins_tests/bitsandbytes/test_transformers.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "87eff2457adef5692438557229c34e06e3fef8ce5389e4c50a66c2686ed5165d",
+      "bytes": 43155,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "vllm_ascend/worker/v2/spec_decode/autoregressive/speculator.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "80d6f14973c99be431029e0fba4a6a784a428501bd6ba1726cff0879e0e1627f",
+      "bytes": 67833,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        "vllm/models/deepseek_v41/common/engram.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "8edc176f0fcb42d82fe7a14427b39a16c4f21333710e1423e1a32d118f381fc8",
+      "bytes": 12493,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "tests/e2e/nightly/single_node/ops/singlecard_ops/test_scatter_nd_update_sk.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "curl-auth-header",
+      "content_sha256": "90ff6e17fa93258009bbb3fcf8b1bc06fd6c19180e7a114d9aff50e0b02ec71c",
+      "bytes": 7711,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        "docs/serving/online_serving/speech_to_text.md"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "9dec73bc214f1488f5dc0a1b6987d89134b63204ccd91363fecc718afcb240c7",
+      "bytes": 5883,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/quantization.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "a3873fb9d54955485e963b22bf54289c24211ff963d170b6b4fb50dfa828ed30",
+      "bytes": 5301,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/intel_jobs/lora_intel.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "a9a71634ed138f590fbc3ad0de277a5f56a06451522fd091b2657d6daf6084b0",
+      "bytes": 9763,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "vllm_ascend/patch/worker/patch_qwen3_5.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "ac5ad4f6272b1ea49cecf9e689ce17b0e50d3674919d5eec05263ca8cf2c9515",
+      "bytes": 6221,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "csrc/attention/sparse_attention_score/op_kernel/sparse_attention_score.cpp"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "ac5ad4f6272b1ea49cecf9e689ce17b0e50d3674919d5eec05263ca8cf2c9515",
+      "bytes": 6221,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "csrc/attention/sparse_attention_score/op_kernel/sparse_attention_score.cpp"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "ac5ad4f6272b1ea49cecf9e689ce17b0e50d3674919d5eec05263ca8cf2c9515",
+      "bytes": 6221,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "csrc/attention/sparse_attention_score/op_kernel/sparse_attention_score.cpp"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "ac5ad4f6272b1ea49cecf9e689ce17b0e50d3674919d5eec05263ca8cf2c9515",
+      "bytes": 6221,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "csrc/attention/sparse_attention_score/op_kernel/sparse_attention_score.cpp"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "aac0da86974a8dd5dd10832ac7b0456159028e9315cbe2d4921d0d82d8a8d21c",
+      "bytes": 40751,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "csrc/attention/quant_lightning_indexer_v2/op_kernel/arch35/quant_lightning_indexer_v2_service_cube_arch35.h"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "b70116866390e9a63ecf5818dd410020e9f2be993aa64b27f1baa14bbaa92f69",
+      "bytes": 15282,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "tests/e2e/nightly/single_node/ops/singlecard_ops/triton/test_rope.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "b3cbd36482e07ed808f207e5ed21705ecbe82a023a8831f03d6ad91a372e5ff8",
+      "bytes": 65666,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "tests/ut/models/minimax_m3/test_msa_m3.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "c3fd08537e7aa5076c217ba8950f936a6e3c78af23c1476af5a2dd6f2795ff8d",
+      "bytes": 6504,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "tests/ut/ops/test_register_custom_ops.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "c460ce395d075ef4a95a7d16ed855b601cdd77c1bbeefde5d9a135e3b749191a",
+      "bytes": 10055,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "csrc/attention/inplace_partial_rotary_mul/op_host/rope_regbase_tiling_a_and_b.cpp"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "c460ce395d075ef4a95a7d16ed855b601cdd77c1bbeefde5d9a135e3b749191a",
+      "bytes": 10055,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "csrc/attention/inplace_partial_rotary_mul/op_host/rope_regbase_tiling_a_and_b.cpp"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "c41680b651c2d1f5f093525d19a39267e4dd36df1dbae6740e834583b1d634af",
+      "bytes": 27770,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        "tests/models/transformers/test_backend.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "c41680b651c2d1f5f093525d19a39267e4dd36df1dbae6740e834583b1d634af",
+      "bytes": 27770,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        "tests/models/transformers/test_backend.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "dd6c3fecbf4e8dda14264d248859dc6d3f237f9801ec44f45959fdba5c8c0d0c",
+      "bytes": 29391,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719"
+      ],
+      "candidate_paths": [
+        "vllm_ascend/worker/v2/spec_decode/dspark/speculator.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "dcdd77dffefb3e6ac10e24521323d07189416ab87fe9e20db486bc1e14822c48",
+      "bytes": 30515,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        "vllm/models/glm5next/amd/ops/kpool_compress.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "dcdd77dffefb3e6ac10e24521323d07189416ab87fe9e20db486bc1e14822c48",
+      "bytes": 30515,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        "vllm/models/glm5next/amd/ops/kpool_compress.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "e4ebf535fd9683ea00f59687021da6741c2c3e7689402b9ea5fb2589811a89f3",
+      "bytes": 22786,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        "tests/v1/structured_output/test_backend_xgrammar.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "e5d1baa2f8fac4e490cc2f22a5ca05f67d4dea03a420efdae05f3a2bbeb6616f",
+      "bytes": 32834,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        "vllm/models/glm5next/nvidia/ops/kpool_compress.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "e5d1baa2f8fac4e490cc2f22a5ca05f67d4dea03a420efdae05f3a2bbeb6616f",
+      "bytes": 32834,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        "vllm/models/glm5next/nvidia/ops/kpool_compress.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "ec3d33164cd6eb872cb1e522ccae9bb2735b48c9c667a437456d8113b15331f0",
+      "bytes": 10456,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "csrc/attention/inplace_partial_rotary_mul/op_host/rope_regbase_tiling_aba_and_ba.cpp"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "ec3d33164cd6eb872cb1e522ccae9bb2735b48c9c667a437456d8113b15331f0",
+      "bytes": 10456,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "csrc/attention/inplace_partial_rotary_mul/op_host/rope_regbase_tiling_aba_and_ba.cpp"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "ebc508693a7594a96e74c3e7354388625134e4284279220164ed826948a4c516",
+      "bytes": 46125,
+      "occurrence_count": 1,
+      "repository_labels": [
+        "bundle:ascend_2604675"
+      ],
+      "candidate_paths": [
+        "vllm_ascend/worker/v2/spec_decode/autoregressive/speculator.py"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "ef3ed461a1069fe6eeb553c2ce3be5a692a37182c973cd04d54607cc8b5be005",
+      "bytes": 10166,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "csrc/attention/kv_quant_sparse_flash_attention_vllm/op_kernel/kv_quant_sparse_flash_attention_vllm.cpp"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "ef3ed461a1069fe6eeb553c2ce3be5a692a37182c973cd04d54607cc8b5be005",
+      "bytes": 10166,
+      "occurrence_count": 3,
+      "repository_labels": [
+        "bundle:ascend_2604675",
+        "bundle:ascend_b013719",
+        "embedded:vllm-ascend"
+      ],
+      "candidate_paths": [
+        "csrc/attention/kv_quant_sparse_flash_attention_vllm/op_kernel/kv_quant_sparse_flash_attention_vllm.cpp"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "f70e70e71b610e0faa42a13d4bcc01cc4adf6365f3593da33b3267dcc43c4ef6",
+      "bytes": 29058,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/distributed.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "f70e70e71b610e0faa42a13d4bcc01cc4adf6365f3593da33b3267dcc43c4ef6",
+      "bytes": 29058,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/distributed.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "f70e70e71b610e0faa42a13d4bcc01cc4adf6365f3593da33b3267dcc43c4ef6",
+      "bytes": 29058,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/distributed.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "f70e70e71b610e0faa42a13d4bcc01cc4adf6365f3593da33b3267dcc43c4ef6",
+      "bytes": 29058,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/distributed.yaml"
+      ],
+      "path_mapping_complete": true
+    },
+    {
+      "rule_id": "generic-api-key",
+      "content_sha256": "f70e70e71b610e0faa42a13d4bcc01cc4adf6365f3593da33b3267dcc43c4ef6",
+      "bytes": 29058,
+      "occurrence_count": 2,
+      "repository_labels": [
+        "bundle:vllm",
+        "embedded:vllm"
+      ],
+      "candidate_paths": [
+        ".buildkite/test_areas/distributed.yaml"
+      ],
+      "path_mapping_complete": true
+    }
+  ],
+  "secret_values_included": false
+}

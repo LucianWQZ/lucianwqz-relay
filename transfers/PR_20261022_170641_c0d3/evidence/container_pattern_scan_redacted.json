@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "source": "/Users/wenqingzhang/Desktop/中转/move/PR_服务器开发交接_20261022_170641_0800_c0d3/package/PR_FULL_TRANSFER.zip",
+  "budgets": {
+    "max_depth": 3,
+    "max_member_bytes": 67108864,
+    "max_unique_text_bytes": 2147483648,
+    "max_seconds": 300
+  },
+  "stats": {
+    "archive_occurrences": 9,
+    "unique_archives": 9,
+    "member_occurrences": 14862,
+    "text_occurrences": 14655,
+    "unique_text_members": 12118,
+    "unique_text_bytes_scanned": 211643113,
+    "binary_or_nontext_occurrences": 199,
+    "oversized_occurrences": 0
+  },
+  "limits_hit": [],
+  "pattern_findings": [
+    {
+      "rule": "authorization_header",
+      "path": "任务归档/001_20261020_非Graph历史审计与需求证据/原始资料/MRV2_NonGraph_Audit_20261020_2W0Wi3rU/audit_clones/vllm/docs/serving/online_serving/speech_to_text.md",
+      "content_sha256": "90ff6e17fa93258009bbb3fcf8b1bc06fd6c19180e7a114d9aff50e0b02ec71c",
+      "count": 1,
+      "matched_value_included": false
+    },
+    {
+      "rule": "credential_url",
+      "path": "任务归档/001_20261020_非Graph历史审计与需求证据/原始资料/MRV2_NonGraph_Audit_20261020_2W0Wi3rU/audit_clones/vllm/tests/multimodal/media/test_connector.py",
+      "content_sha256": "7b801c2af8e1cd4d6f105e23b27a953850af586ccfb791786c211c99706323c3",
+      "count": 1,
+      "matched_value_included": false
+    },
+    {
+      "rule": "authorization_header",
+      "path": "校验结果/GITLEAKS_REDACTED_REPORT.json",
+      "content_sha256": "4f1f1a8052991b31e1096ac8bd12b7c24a2fe9a3290ebcea3070a03c07561531",
+      "count": 1,
+      "matched_value_included": false
+    }
+  ],
+  "binary_pattern_findings": [],
+  "git_configs": [
+    {
+      "path": "任务归档/001_20261020_非Graph历史审计与需求证据/原始资料/MRV2_NonGraph_Audit_20261020_2W0Wi3rU/audit_clones/vllm-ascend/.git/config",
+      "sha256": "df5c7f0c6084b8ab347d1e71091069bfa6d5ac0d6b012fae45c60c4967983ce2",
+      "urls": [
+        {
+          "scheme": "https",
+          "host": "github.com",
+          "userinfo_present": false,
+          "password_component_present": false
+        }
+      ],
+      "sensitive_config_key_count": 0
+    },
+    {
+      "path": "任务归档/001_20261020_非Graph历史审计与需求证据/原始资料/MRV2_NonGraph_Audit_20261020_2W0Wi3rU/audit_clones/vllm/.git/config",
+      "sha256": "06448530129e63def6ecbc3edc60da32a9f3fba698848d05f9c1f366048bfe0c",
+      "urls": [
+        {
+          "scheme": "https",
+          "host": "github.com",
+          "userinfo_present": false,
+          "password_component_present": false
+        }
+      ],
+      "sensitive_config_key_count": 0
+    }
+  ],
+  "matched_values_included": false,
+  "elapsed_seconds": 32.356
+}

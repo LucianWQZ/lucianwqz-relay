@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "tool": {
+    "name": "gitleaks",
+    "version": "8.30.1",
+    "binary_sha256": "ba52fb1bfabbcde42f032afad3d6e0b19dff8ed105229a16e7caa338bbc0e84f"
+  },
+  "redaction": "100 percent",
+  "targets": [
+    {
+      "label": "git_transfer",
+      "target": "/Users/wenqingzhang/Desktop/中转/move/PR_GitHub发布_20261022_200411_0800_c0d3/repo/private-file-relay/transfers/PR_20261022_170641_c0d3",
+      "returncode": 0,
+      "finding_count": 0,
+      "rule_counts": {},
+      "finding_paths": [],
+      "stderr_tail": "8:17PM INF scanned ~196516 bytes (196.52 KB) in 13.4ms\n8:17PM INF no leaks found\n"
+    },
+    {
+      "label": "supplement",
+      "target": "/private/tmp/PR_TRANSFER_SUPPLEMENT.zip",
+      "returncode": 0,
+      "finding_count": 0,
+      "rule_counts": {},
+      "finding_paths": [],
+      "stderr_tail": "8:17PM INF scanned ~78471 bytes (78.47 KB) in 9.75ms\n8:17PM INF no leaks found\n"
+    }
+  ]
+}

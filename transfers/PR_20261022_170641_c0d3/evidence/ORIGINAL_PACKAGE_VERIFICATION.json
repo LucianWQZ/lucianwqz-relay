@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-10-22T17:24:01+08:00",
+  "status": "PASS",
+  "packages": {
+    "review": {
+      "name": "PR_REVIEW_RETURN.zip",
+      "bytes": 1771620,
+      "sha256": "71df7981a67a6643cf476e56d2d1e1a2795e431cb1ac271fed24a8e51391b470",
+      "members": 151,
+      "payload_entries": 150,
+      "payload_bytes": 21018129,
+      "internal_manifest_sha256": "37fbf6314769bd777f68c8780abf1352d644191211ca6594345ff8cd27cbc921",
+      "safe_names": true,
+      "unique_names": true,
+      "crc": "PASS",
+      "payload_hashes": "PASS"
+    },
+    "full": {
+      "name": "PR_FULL_TRANSFER.zip",
+      "bytes": 696228223,
+      "sha256": "675237faf78efcd4f95642494437af2b09c29680f21eb8e9e460cad7ab6a953e",
+      "members": 13837,
+      "payload_entries": 13836,
+      "payload_bytes": 873310016,
+      "internal_manifest_sha256": "51bebc046c8bc56b0574fa740fbb780074dbcd5ab83ea04e0c01574a92014488",
+      "safe_names": true,
+      "unique_names": true,
+      "crc": "PASS",
+      "payload_hashes": "PASS"
+    }
+  },
+  "structured_files": {
+    "json": {
+      "TASK_INDEX.json": "PASS",
+      "PATH_MAP.json": "PASS",
+      "CODE_STATE.json": "PASS",
+      "NEXT_SESSION_HANDOFF.json": "PASS",
+      "EXTERNAL_DEPENDENCIES.json": "PASS",
+      "代码恢复材料/SOURCE_BINDING.json": "PASS",
+      "服务器恢复入口模板/RESOURCE_CONTRACT.template.json": "PASS"
+    },
+    "csv_rows": {
+      "REQUIREMENT_MATRIX.csv": 33
+    },
+    "catalog_jsonl_rows": 15953
+  },
+  "references": {
+    "required_paths": 15,
+    "status": "PASS"
+  },
+  "code_restore_from_actual_full_zip": {
+    "status": "PASS",
+    "temporary_root": "/private/tmp/mrv2-package-restore.qpnrcxtp",
+    "result": {
+      "status": "PASS",
+      "binding": {
+        "ascend": {
+          "candidate_sha": "2604675e520c23740c5225b6af8857eed8bd9391",
+          "tree": "afbf69a93f1c7e761769baa9044577d8b83b7a35",
+          "bundle": "bundles/vllm-ascend.bundle",
+          "bundle_sha256": "920dbdd071e0ca5355608de156804dcc28fb1d74723a2cc8959d5fd9915c9e83",
+          "shallow_file": "bundles/vllm-ascend.shallow",
+          "shallow_sha256": "b9e8723dd491eed25524493b2c4652376b4e0eca1d7a601bdf05f0f1fd14fcd3",
+          "ref": "refs/heads/review/mrv2-draft-window-architecture-20261021-152046",
+          "base_sha": "128f35ed1461ecb34bc8b87583a67a66bc4bd1d6"
+        },
+        "vllm": {
+          "sha": "a98247ab4db686ee03c66d5feb3c761e52a2f8ab",
+          "tree": "7f2a24a827bbbb2f211e02031f9d4d0d556d536c",
+          "bundle": "bundles/vllm.bundle",
+          "bundle_sha256": "6a183cb3ebc435df49390cfe90ed8ad54be8dae15d7dd8f4c2de03b896f497bb",
+          "shallow_file": "bundles/vllm.shallow",
+          "shallow_sha256": "189ab526fda267dafaf230ba7599722a4f2d878f08a4dc94857c9bdce92986b0",
+          "ref": "HEAD"
+        }
+      },
+      "sources": {
+        "vllm": {
+          "path": "/private/tmp/mrv2-package-restore.qpnrcxtp/restored/src/vllm",
+          "sha": "a98247ab4db686ee03c66d5feb3c761e52a2f8ab",
+          "tree": "7f2a24a827bbbb2f211e02031f9d4d0d556d536c",
+          "clean": true,
+          "alternates": false
+        },
+        "ascend": {
+          "path": "/private/tmp/mrv2-package-restore.qpnrcxtp/restored/src/vllm-ascend",
+          "sha": "2604675e520c23740c5225b6af8857eed8bd9391",
+          "tree": "afbf69a93f1c7e761769baa9044577d8b83b7a35",
+          "clean": true,
+          "alternates": false
+        }
+      }
+    }
+  },
+  "limitations": [
+    "Historical raw JSON/CSV fixtures and logs are hash-preserved evidence; only authored top-level contracts are schema/parse gates.",
+    "Container payloads are hash/CRC verified but not all nested documents were semantically read.",
+    "Code restore verifies source identity only; NPU runtime, native ABI, models and device behavior remain external."
+  ]
+}

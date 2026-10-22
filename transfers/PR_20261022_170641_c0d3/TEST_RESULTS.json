@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-22T20:10:54+08:00",
+  "status": "PASS",
+  "runtime": {
+    "python": "3.9.6",
+    "platform": "macOS-26.3.1-arm64-arm-64bit",
+    "gh_version_first_line": "gh version 2.73.0 (2025-05-19)",
+    "gh_required_flags_observed": true
+  },
+  "syntax_compile": {
+    "status": "PASS",
+    "files": [
+      "pr_receiver_common.py",
+      "test_receiver_offline.py",
+      "下载并恢复PR资料.py",
+      "验证PR接收资料.py"
+    ]
+  },
+  "offline_tests": {
+    "status": "PASS",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_dry_run_does_not_create_root (__main__.ReceiverOfflineTest) ... ok\ntest_offline_receive_and_independent_verify (__main__.ReceiverOfflineTest) ... ok\ntest_reject_casefold_collision (__main__.ReceiverOfflineTest) ... ok\ntest_reject_symlink_escape (__main__.ReceiverOfflineTest) ... ok\ntest_wrong_repo_is_rejected (__main__.ReceiverOfflineTest) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.181s\n\nOK\n"
+  },
+  "help_preflight": {
+    "下载并恢复PR资料.py": {
+      "returncode": 0,
+      "contains_usage": true,
+      "stderr": ""
+    },
+    "验证PR接收资料.py": {
+      "returncode": 0,
+      "contains_usage": true,
+      "stderr": ""
+    }
+  },
+  "actual_frozen_full_archive_readonly_check": {
+    "archive": "/Users/wenqingzhang/Desktop/中转/move/PR_服务器开发交接_20261022_170641_0800_c0d3/package/PR_FULL_TRANSFER.zip",
+    "archive_bytes": 696228223,
+    "archive_sha256": "675237faf78efcd4f95642494437af2b09c29680f21eb8e9e460cad7ab6a953e",
+    "internal_manifest_sha256": "51bebc046c8bc56b0574fa740fbb780074dbcd5ab83ea04e0c01574a92014488",
+    "payload_entries": 13836,
+    "payload_bytes": 873310016,
+    "regular_files": 13828,
+    "symlinks": 8,
+    "crc_checked": true,
+    "payload_hashes_checked": true
+  },
+  "scope": [
+    "未连接 GitHub 或服务器",
+    "未创建服务器目录",
+    "未修改冻结 ZIP",
+    "未执行生产代码、NPU 或性能测试"
+  ]
+}

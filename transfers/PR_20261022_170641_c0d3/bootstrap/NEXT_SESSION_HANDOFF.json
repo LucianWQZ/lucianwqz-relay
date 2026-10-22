@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "task": "MRV2 Draft Sliding Window non-Graph server development handoff",
+  "generated_date_asia_shanghai": "2026-10-22",
+  "status": {
+    "local_handoff": "COMPLETE",
+    "code_start_decision": "CONTINUE_WITH_TARGETED_REWORK",
+    "architecture_status": "BLOCKED_A01_EXACT_LENGTH_ASYNC_CONTRACT",
+    "a3_validation": "NOT_RUN_FOR_RECOMMENDED_SHA",
+    "performance_validation": "NOT_RUN_FOR_RECOMMENDED_SHA",
+    "full_nongraph_scope_validated": false,
+    "document_inventory": "COMPLETE",
+    "semantic_reading": "CRITICAL_CHAIN_COMPLETE_WITH_RECORDED_REMAINDER",
+    "code_restore": "VERIFIED",
+    "package_integrity": "SEE_EXTERNAL_HANDOFF_MANIFEST"
+  },
+  "source_binding": {
+    "ascend": {
+      "sha": "2604675e520c23740c5225b6af8857eed8bd9391",
+      "tree": "afbf69a93f1c7e761769baa9044577d8b83b7a35",
+      "base_sha": "128f35ed1461ecb34bc8b87583a67a66bc4bd1d6",
+      "expected_patch_state": "CLEAN"
+    },
+    "vllm": {
+      "sha": "a98247ab4db686ee03c66d5feb3c761e52a2f8ab",
+      "tree": "7f2a24a827bbbb2f211e02031f9d4d0d556d536c",
+      "expected_patch_state": "CLEAN"
+    }
+  },
+  "server_layout": {
+    "root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2",
+    "reference_adaption": "reference/adaption",
+    "reference_pr": "reference/pr/PR_服务器开发交接_20261022_170641_0800_c0d3",
+    "ascend_dev": "dev/pr/src/vllm-ascend",
+    "vllm_dev": "dev/pr/src/vllm",
+    "environment": "dev/pr/env",
+    "state": "dev/pr/state",
+    "runs": "dev/pr/runs",
+    "handoff": "dev/pr/handoff"
+  },
+  "must_read_in_order": [
+    "00_先读这里.md",
+    "01_最终需求与验收范围.md",
+    "REQUIREMENT_MATRIX.csv",
+    "03_代码起点裁决.md",
+    "CODE_STATE.json",
+    "04_架构兼容与待解决问题.md",
+    "服务器恢复入口模板/CURRENT_STATE.md",
+    "服务器恢复入口模板/TASK_QUEUE.md",
+    "服务器恢复入口模板/OPEN_QUESTIONS.md",
+    "服务器恢复入口模板/DECISIONS.md",
+    "repository AGENTS.md and fixed-version design/testing docs"
+  ],
+  "first_bounded_problem": {
+    "id": "DW-A01",
+    "title": "exact-length consumers and hot-path D2H contract",
+    "reason": "No post-2604675 implementation exists; fixed MRV2 async-first design and final source review confirm the blocker outside the proven DSpark/no-DCP/ordinary-MLA subpath.",
+    "entry_files": [
+      "vllm_ascend/worker/v2/spec_decode/draft_window_runtime.py",
+      "vllm_ascend/worker/v2/spec_decode/draft_window_plan.py",
+      "vllm_ascend/worker/v2/spec_decode/draft_window_read.py",
+      "actual GQA/MLA/DSA/SFA builders",
+      "Eagle3/DFlash/DSpark speculators"
+    ],
+    "device_needed": "YES_FOR_SCHEMA_MINIMAL_NATIVE_CALL_DYNAMIC_LENGTH_AND_TRACE",
+    "host_work_allowed_before_resource": "source callgraph, consumer table, design alternatives, targeted CPU contracts",
+    "completion": "A reviewed minimal design/implementation with exact semantics, no unsupported new sync, preserved OFF/Full-write/positions/Target, a new SHA/tree, and correctly rebound evidence."
+  },
+  "resource_contract": "服务器恢复入口模板/RESOURCE_CONTRACT.template.json",
+  "resource_status": "NOT_AUTHORIZED_NOT_BOUND",
+  "historical_directive_scope": "Old freeze/RETURN_TO_LOCAL/no-production directives remain evidence for their original candidate/campaign. They are not global bans after a future explicit server-development authorization. Version-bound findings and requirements remain valid.",
+  "forbidden_inferences": [
+    "Host PASS is not A3 PASS",
+    "remote fetch is not functional CI or device validation",
+    "historical device/performance reports are not PASS for 2604675",
+    "PCP does not satisfy legacy DSA-CP",
+    "Target DSA architecture does not prove Draft DSA backend",
+    "upper is not exact",
+    "idle devices or the phrase first 8 cards is not authorization",
+    "TP16 may not be silently reduced",
+    "a hotpatched frozen worktree cannot retain the old candidate identity"
+  ],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.json",
+  "next_action": "Restore both repos and exact identities; create dev/pr state; resolve DW-A01 facts and resource binding before NPU execution.",
+  "task_directory": "PR_服务器开发交接_20261022_170641_0800_c0d3"
+}

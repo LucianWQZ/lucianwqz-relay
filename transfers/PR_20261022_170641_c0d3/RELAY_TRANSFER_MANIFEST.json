@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "task_id": "PR_服务器开发交接_20261022_170641_0800_c0d3",
+  "generated_at": "2026-10-22T22:47:00+08:00",
+  "campaign_role": "pr-handoff-publication",
+  "relay": {
+    "repository": "LucianWQZ/lucianwqz-relay",
+    "repository_url": "https://github.com/LucianWQZ/lucianwqz-relay",
+    "branch": "transfer/pr-handoff-20261022-c0d3-r2",
+    "tag": "pr-transfer-20261022-170641-c0d3-r2",
+    "transfer_directory": "transfers/PR_20261022_170641_c0d3",
+    "commit_binding": "RECORDED_AFTER_COMMIT_IN_EXTERNAL_PUBLICATION_RESULT",
+    "release_binding": "RECORDED_AFTER_RELEASE_IN_EXTERNAL_PUBLICATION_RESULT",
+    "forbid_latest": true
+  },
+  "release_assets": [
+    {
+      "role": "full",
+      "name": "PR_FULL_TRANSFER.zip",
+      "bytes": 696228223,
+      "sha256": "675237faf78efcd4f95642494437af2b09c29680f21eb8e9e460cad7ab6a953e",
+      "payload_entries": 13836,
+      "payload_bytes": 873310016,
+      "internal_manifest_sha256": "51bebc046c8bc56b0574fa740fbb780074dbcd5ab83ea04e0c01574a92014488"
+    },
+    {
+      "role": "review",
+      "name": "PR_REVIEW_RETURN.zip",
+      "bytes": 1771620,
+      "sha256": "71df7981a67a6643cf476e56d2d1e1a2795e431cb1ac271fed24a8e51391b470",
+      "payload_entries": 150,
+      "payload_bytes": 21018129,
+      "internal_manifest_sha256": "37fbf6314769bd777f68c8780abf1352d644191211ca6594345ff8cd27cbc921"
+    },
+    {
+      "role": "original_manifest",
+      "name": "HANDOFF_MANIFEST.json",
+      "bytes": 2680,
+      "sha256": "4606f83f060e3162296fc3b8207439420034d096980de0a9f0e31e24897720bc"
+    },
+    {
+      "role": "supplement",
+      "name": "PR_TRANSFER_SUPPLEMENT.zip",
+      "bytes": 35115,
+      "sha256": "ebd16538554593ae67a31fdc087b8c3ef3bab493b44f540e47b3eadea6b583a8",
+      "payload_entries": 14,
+      "payload_bytes": 78685,
+      "internal_manifest_sha256": "1be697bcf7a38894778aaa4eb5c8593266dcccee14597a9353446ec2f07f2be2"
+    }
+  ],
+  "original_handoff_manifest": {
+    "release_asset": "HANDOFF_MANIFEST.json",
+    "sha256": "4606f83f060e3162296fc3b8207439420034d096980de0a9f0e31e24897720bc",
+    "preserved_byte_for_byte": true
+  },
+  "target": {
+    "reference_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/reference/pr",
+    "task_directory_name": "PR_服务器开发交接_20261022_170641_0800_c0d3",
+    "archive_directory": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/reference/pr/PR_服务器开发交接_20261022_170641_0800_c0d3",
+    "cache_relative": "发布附件缓存/PR_服务器开发交接_20261022_170641_0800_c0d3",
+    "supplement_relative": "发布补充/PR_服务器开发交接_20261022_170641_0800_c0d3",
+    "receipt_relative": "接收回执/PR_服务器开发交接_20261022_170641_0800_c0d3",
+    "full_payload_bytes": 873310016,
+    "space_margin_bytes": 1073741824,
+    "peak_disk_bytes": 2645168163
+  },
+  "source_binding": {
+    "ascend_sha": "2604675e520c23740c5225b6af8857eed8bd9391",
+    "ascend_tree": "afbf69a93f1c7e761769baa9044577d8b83b7a35",
+    "vllm_sha": "a98247ab4db686ee03c66d5feb3c761e52a2f8ab",
+    "vllm_tree": "7f2a24a827bbbb2f211e02031f9d4d0d556d536c",
+    "architecture_status": "BLOCKED_A01_EXACT_LENGTH_ASYNC_CONTRACT",
+    "a3_validation_status": "NOT_RUN",
+    "performance_validation_status": "NOT_RUN",
+    "full_nongraph_scope_validated": false
+  },
+  "copy_facts": {
+    "byte_identical_regular_files": 13705,
+    "redacted_template_copies": 2,
+    "preserved_internal_symlinks": 8,
+    "excluded_root_ds_store": 1,
+    "excluded_external_node_modules_symlink": 1
+  },
+  "external_dependencies": [
+    {
+      "kind": "mrv2_archive",
+      "task_id": "MRV2_完整中文迁移_20261022_034933_0800",
+      "relay_commit": "6693bdedf1f984eb3551c35c5ffaaad94b7a1c79",
+      "tag": "mrv2-transfer-20261022-034933",
+      "archive_sha256": "cdea50597f7f7dc898fae79935d8fecfac5cba73b59aa23a15f867125f267f45",
+      "server_location": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/reference/adaption/MRV2_完整中文迁移_20261022_034933_0800",
+      "receipt_status": "USER_REPORTED"
+    },
+    {
+      "kind": "catlass",
+      "sha": "41bf90da655bba3c66d0acd7e00abe33960ecfd6",
+      "included": false
+    },
+    {
+      "kind": "runtime_native_models_team_tools_and_device_resources",
+      "included": false,
+      "binding_required_on_server": true
+    }
+  ],
+  "git_bootstrap_scope": {
+    "contains": "navigation, receiver tools, bounded evidence, and transfer manifest",
+    "does_not_contain": [
+      "PR_FULL_TRANSFER.zip",
+      "PR_REVIEW_RETURN.zip",
+      "models",
+      "runtime environments",
+      "full source bundles"
+    ]
+  },
+  "non_recursive_hash_rule": "This manifest records Release assets including the pre-frozen supplement. It does not hash itself or record its enclosing Git commit. Final commit/tree/tag object/Release URL are external publication results.",
+  "repository_rename": {
+    "renamed_from": "LucianWQZ/private-file-relay",
+    "renamed_to": "LucianWQZ/lucianwqz-relay",
+    "note_zh": "旧地址 301 跳转；本清单只使用新名称。bootstrap 中的旧名为冻结快照。"
+  }
+}

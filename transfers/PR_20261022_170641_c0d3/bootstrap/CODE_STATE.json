@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-22T17:11:27+08:00",
+  "capture_scope": "read-only code-start and restoration audit",
+  "decision": "CONTINUE_WITH_TARGETED_REWORK",
+  "current_head": {
+    "repository": "vllm-ascend",
+    "path": "/Users/wenqingzhang/Desktop/vllm-pr/mrv2-nongraph/src/vllm-ascend",
+    "realpath": "/Users/wenqingzhang/Desktop/vllm-pr/mrv2-nongraph/src/vllm-ascend",
+    "sha": "2604675e520c23740c5225b6af8857eed8bd9391",
+    "tree": "afbf69a93f1c7e761769baa9044577d8b83b7a35",
+    "branch": "review/mrv2-draft-window-architecture-20261021-152046",
+    "status": "CLEAN",
+    "staged_changes": false,
+    "unstaged_changes": false,
+    "untracked_changes": false,
+    "shallow": true,
+    "shallow_boundaries": [
+      "128f35ed1461ecb34bc8b87583a67a66bc4bd1d6"
+    ],
+    "alternates_present": false,
+    "partial_clone": false,
+    "promisor_remote": false,
+    "lfs_tracked_content_detected": false,
+    "submodules": [
+      {
+        "path": "csrc/third_party/catlass",
+        "url": "https://gitcode.com/cann/catlass.git",
+        "sha": "41bf90da655bba3c66d0acd7e00abe33960ecfd6",
+        "initialized_in_source_checkout": false,
+        "included_in_git_bundle": false,
+        "classification": "EXTERNAL_DEPENDENCY"
+      }
+    ],
+    "remotes": {
+      "origin": "https://github.com/LucianWQZ/vllm-ascend.git",
+      "upstream": "https://github.com/vllm-project/vllm-ascend.git"
+    }
+  },
+  "paired_vllm": {
+    "repository": "vllm",
+    "path": "/Users/wenqingzhang/Desktop/vllm-pr/mrv2-nongraph/src/vllm",
+    "realpath": "/Users/wenqingzhang/Desktop/vllm-pr/mrv2-nongraph/src/vllm",
+    "sha": "a98247ab4db686ee03c66d5feb3c761e52a2f8ab",
+    "tree": "7f2a24a827bbbb2f211e02031f9d4d0d556d536c",
+    "branch": null,
+    "detached_head": true,
+    "status": "CLEAN",
+    "staged_changes": false,
+    "unstaged_changes": false,
+    "untracked_changes": false,
+    "shallow": true,
+    "shallow_boundaries": [
+      "a98247ab4db686ee03c66d5feb3c761e52a2f8ab"
+    ],
+    "alternates_present": false,
+    "partial_clone": false,
+    "promisor_remote": false,
+    "lfs_tracked_content_detected": false,
+    "submodules": [],
+    "remotes": {
+      "upstream": "https://github.com/vllm-project/vllm.git"
+    }
+  },
+  "official_ascend_base": {
+    "sha": "128f35ed1461ecb34bc8b87583a67a66bc4bd1d6",
+    "tree": "13b2dfee7fd350925c48b528e6a2f7f6948fac1c",
+    "relationship_to_current": "ancestor and declared shallow boundary",
+    "main_advanced_by_this_task": false
+  },
+  "candidate_chain": [
+    {
+      "sha": "b013719f6f0db57025c35586279412cd51da4dc5",
+      "tree": "4453ba56b906d11dd9d3f2f119552061754f9b58",
+      "relationship": "ancestor of current; four commits after fixed base",
+      "role": "previous stable migration candidate",
+      "recommendation": "do not regress to it; later commits fix confirmed DSpark and Eagle/metadata issues"
+    },
+    {
+      "sha": "104186926df3e2c4fbb19eabfa6042d5aa21f8d8",
+      "tree": "9dcac4fc6b6ae30cae4a599aad6f9585ab328524",
+      "relationship": "child of b013719",
+      "role": "DSpark K/K+1 capacity fix"
+    },
+    {
+      "sha": "a6e37c57a89f2b4b68b957371458871e6998a52f",
+      "tree": "818ca600707acd4946f7b8fc97859f44cbe03be0",
+      "relationship": "child of 1041869",
+      "role": "last production and repository-test change; prepared exact ownership, Eagle step-0 fix, legacy DSA-CP contraction"
+    },
+    {
+      "sha": "2604675e520c23740c5225b6af8857eed8bd9391",
+      "tree": "afbf69a93f1c7e761769baa9044577d8b83b7a35",
+      "relationship": "child of a6e37c5",
+      "role": "current and recommended start; public architecture documentation only"
+    }
+  ],
+  "historical_semantic_sources": [
+    {
+      "sha": "c1c2129aa49ee1de381130729de73124a6ec893a",
+      "tree": "384af8a0466f6aea2e73d6217f9802415b5ccd40",
+      "subject": "fix(spec-decode): address P7-X review findings",
+      "present_in_current_shallow_clone": false,
+      "verified_in_read_only_historical_repo": true
+    },
+    {
+      "sha": "1b7215c37d1e3c9d1edac1fc20bcad26917ca251",
+      "tree": "9a6c38c0e92853b462cd1f05aa5f70244f82a72f",
+      "subject": "perf(spec-decode): reduce MRV2 draft window hot-path overhead",
+      "parent": "c1c2129aa49ee1de381130729de73124a6ec893a",
+      "present_in_current_shallow_clone": false,
+      "verified_in_read_only_historical_repo": true,
+      "relationship_note": "contains c1c2129; never apply both as independent cumulative patches"
+    }
+  ],
+  "state_labels": {
+    "CURRENT_HEAD": "2604675e520c23740c5225b6af8857eed8bd9391",
+    "RECOMMENDED_START": "2604675e520c23740c5225b6af8857eed8bd9391",
+    "LAST_DEVICE_TESTED": {
+      "sha": "1b7215c37d1e3c9d1edac1fc20bcad26917ca251",
+      "scope": "historical non-Graph A3 GLM5.2 DSpark TP16/DP1/EP Async report",
+      "evidence_level": "REPORT_ONLY",
+      "not_transferable_to_recommended_start": true
+    },
+    "LAST_PERFORMANCE_TESTED": {
+      "sha": "1b7215c37d1e3c9d1edac1fc20bcad26917ca251",
+      "scope": "historical A3 Phase2 16K/32K/64K/128K OFF versus W1024",
+      "evidence_level": "REPORT_ONLY",
+      "result": "-6.96%, +12.96%, +52.67%, +74.18%; no current-candidate inheritance"
+    },
+    "LATEST_REMOTE_VERIFIED": {
+      "sha": "2604675e520c23740c5225b6af8857eed8bd9391",
+      "tree": "afbf69a93f1c7e761769baa9044577d8b83b7a35",
+      "branch": "test/mrv2-draft-window-nongraph-a3-diagnostic-20261021-2604675e520c",
+      "verification": "existing independent fetch evidence PASS on 2026-10-21",
+      "live_requery_in_this_subtask": false
+    }
+  },
+  "validation_binding": {
+    "recommended_start_a3": "NOT_RUN",
+    "recommended_start_performance": "NOT_RUN",
+    "recommended_start_prepush": "PASS per diagnostic release evidence",
+    "architecture_local_review": "BLOCKED",
+    "full_nongraph_scope_validated": false
+  },
+  "recovery": {
+    "source_package": "/Users/wenqingzhang/Desktop/Note/滑动窗口MRV2适配/PR/MRV2_NonGraph_ArchitectureReview_20261021_152046/package/MRV2_NonGraph_ArchitectureReview_2604675e520c_20261021_154135.zip",
+    "source_package_sha256": "382897750f1e986774880356d6939297b2eb82a0d3b54c789558dbc3f29e593b",
+    "ascend_bundle": "server_handoff/sources/vllm-ascend.bundle",
+    "ascend_bundle_sha256": "920dbdd071e0ca5355608de156804dcc28fb1d74723a2cc8959d5fd9915c9e83",
+    "ascend_shallow_sha256": "b9e8723dd491eed25524493b2c4652376b4e0eca1d7a601bdf05f0f1fd14fcd3",
+    "vllm_bundle": "server_handoff/sources/vllm.bundle",
+    "vllm_bundle_sha256": "6a183cb3ebc435df49390cfe90ed8ad54be8dae15d7dd8f4c2de03b896f497bb",
+    "vllm_shallow_sha256": "189ab526fda267dafaf230ba7599722a4f2d878f08a4dc94857c9bdce92986b0",
+    "restore_script": "server_handoff/restore_sources.py",
+    "restore_script_sha256": "6396723bf139025a59e18b3a93185f5f3f779920cd5f2851f0ce4e4f22ea660c",
+    "restore_script_dependency": "server_handoff/server_preflight.py",
+    "independent_restore_this_task": {
+      "status": "PASS",
+      "path": "/private/tmp/mrv2_pr_code_agent/restore.4SXI9v/restored",
+      "ascend_sha": "2604675e520c23740c5225b6af8857eed8bd9391",
+      "ascend_tree": "afbf69a93f1c7e761769baa9044577d8b83b7a35",
+      "vllm_sha": "a98247ab4db686ee03c66d5feb3c761e52a2f8ab",
+      "vllm_tree": "7f2a24a827bbbb2f211e02031f9d4d0d556d536c",
+      "clean": true,
+      "fsck": "PASS_WITH_DECLARED_SHALLOW_BOUNDARIES",
+      "alternates_present": false
+    },
+    "sufficiency": "SUFFICIENT_FOR_EXACT_SOURCE_CHECKOUTS",
+    "limitations": [
+      "catlass submodule objects are not embedded",
+      "native extensions, CANN, torch_npu, models and Python environments are external",
+      "history before the declared shallow boundaries is intentionally unavailable",
+      "restore_sources.py must be accompanied by server_preflight.py and the binding JSON"
+    ],
+    "handoff_direct_binding": "代码恢复材料/SOURCE_BINDING.json",
+    "handoff_direct_ascend_bundle": "代码恢复材料/bundles/vllm-ascend.bundle",
+    "handoff_direct_vllm_bundle": "代码恢复材料/bundles/vllm.bundle",
+    "handoff_direct_restore_script": "代码恢复材料/tools/restore_sources.py",
+    "handoff_direct_restore_dependency": "代码恢复材料/tools/server_preflight.py",
+    "direct_handoff_restore_this_task": {
+      "status": "PASS",
+      "result": "校验结果/DIRECT_CODE_RECOVERY_RESULT.json",
+      "ascend_sha": "2604675e520c23740c5225b6af8857eed8bd9391",
+      "ascend_tree": "afbf69a93f1c7e761769baa9044577d8b83b7a35",
+      "vllm_sha": "a98247ab4db686ee03c66d5feb3c761e52a2f8ab",
+      "vllm_tree": "7f2a24a827bbbb2f211e02031f9d4d0d556d536c"
+    }
+  },
+  "source_worktrees_modified_by_this_subtask": false
+}

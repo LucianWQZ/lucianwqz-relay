@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "generated_date_asia_shanghai": "2026-10-22",
+  "dependencies": [
+    {
+      "id": "DEP-MRV2-ARCHIVE",
+      "kind": "historical_archive",
+      "task_id": "MRV2_完整中文迁移_20261022_034933_0800",
+      "local_source": "/Users/wenqingzhang/Desktop/中转/Move/MRV2_完整中文迁移_20261022_034933_0800",
+      "server_restore": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/reference/adaption/MRV2_完整中文迁移_20261022_034933_0800",
+      "repository": "LucianWQZ/private-file-relay",
+      "branch": "transfer/mrv2-adaption-20261022",
+      "commit": "6693bdedf1f984eb3551c35c5ffaaad94b7a1c79",
+      "tag": "mrv2-transfer-20261022-034933",
+      "relative_directory": "transfers/MRV2_20261022_034933",
+      "archive_bytes": 29839300507,
+      "archive_sha256": "cdea50597f7f7dc898fae79935d8fecfac5cba73b59aa23a15f867125f267f45",
+      "shard_count": 56,
+      "included_in_this_transfer": false,
+      "availability": "USER_REPORTED_RECEIVED_AND_VERIFIED",
+      "verification_needed": "Read server receipt in a later receiving task before upgrading the status."
+    },
+    {
+      "id": "DEP-ASCEND-SOURCE",
+      "kind": "git_source",
+      "sha": "2604675e520c23740c5225b6af8857eed8bd9391",
+      "tree": "afbf69a93f1c7e761769baa9044577d8b83b7a35",
+      "expected_transfer_location": "代码恢复材料/bundles/vllm-ascend.bundle",
+      "included_by_root_packager": true,
+      "availability": "INCLUDED_HASH_VERIFIED"
+    },
+    {
+      "id": "DEP-VLLM-SOURCE",
+      "kind": "git_source",
+      "sha": "a98247ab4db686ee03c66d5feb3c761e52a2f8ab",
+      "tree": "7f2a24a827bbbb2f211e02031f9d4d0d556d536c",
+      "expected_transfer_location": "代码恢复材料/bundles/vllm.bundle",
+      "included_by_root_packager": true,
+      "availability": "INCLUDED_HASH_VERIFIED"
+    },
+    {
+      "id": "DEP-NPU-RUNTIME",
+      "kind": "runtime",
+      "included_in_this_transfer": false,
+      "availability": "SITE_BINDING_REQUIRED",
+      "required": [
+        "CANN",
+        "driver",
+        "Python",
+        "torch",
+        "torch_npu",
+        "triton-ascend",
+        "catlass/native build and hash"
+      ]
+    },
+    {
+      "id": "DEP-MODELS",
+      "kind": "model_assets",
+      "included_in_this_transfer": false,
+      "availability": "SITE_BINDING_REQUIRED",
+      "required": [
+        "GLM5.2 DSpark",
+        "Qwen DSpark",
+        "Eagle3",
+        "DFlash",
+        "MTP",
+        "co-trained DeepSeek-V4 DSpark",
+        "required multi-gid/backend models"
+      ],
+      "note": "No weights are packaged. Record checkpoint/config/revision/hash and actual runtime class."
+    },
+    {
+      "id": "DEP-PERF-TEAM-TOOL",
+      "kind": "team_skill_or_cli",
+      "name": "sw-dspark-perf-matrix",
+      "included_in_this_transfer": false,
+      "availability": "SITE_DISCOVERY_REQUIRED",
+      "note": "Do not invent CLI; record path/hash/argv after reading it on server."
+    },
+    {
+      "id": "DEP-A3-RESOURCE",
+      "kind": "device_allocation",
+      "included_in_this_transfer": false,
+      "availability": "NOT_AUTHORIZED_NOT_BOUND",
+      "contract": "服务器恢复入口模板/RESOURCE_CONTRACT.template.json"
+    },
+    {
+      "id": "DEP-CATLASS",
+      "kind": "git_submodule",
+      "repository": "https://gitcode.com/cann/catlass.git",
+      "sha": "41bf90da655bba3c66d0acd7e00abe33960ecfd6",
+      "included_in_this_transfer": false,
+      "availability": "SITE_FETCH_OR_PREEXISTING_MIRROR_REQUIRED"
+    }
+  ],
+  "visibility_note": {
+    "repository": "LucianWQZ/private-file-relay",
+    "observed_date": "2026-10-22",
+    "status": "READ_ONLY_GITHUB_API_CONFIRMED_PUBLIC",
+    "rule": "Recheck before any later upload; repository name is not visibility evidence."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "verified_at": "2026-10-22T20:04:11+08:00",
+  "source_root": "/Users/wenqingzhang/Desktop/中转/move/PR_服务器开发交接_20261022_170641_0800_c0d3",
+  "move_alias_same_device_inode": true,
+  "files": {
+    "package/PR_FULL_TRANSFER.zip": {"bytes": 696228223, "sha256": "675237faf78efcd4f95642494437af2b09c29680f21eb8e9e460cad7ab6a953e"},
+    "package/PR_REVIEW_RETURN.zip": {"bytes": 1771620, "sha256": "71df7981a67a6643cf476e56d2d1e1a2795e431cb1ac271fed24a8e51391b470"},
+    "package/HANDOFF_MANIFEST.json": {"bytes": 2680, "sha256": "4606f83f060e3162296fc3b8207439420034d096980de0a9f0e31e24897720bc"},
+    "06_回传ChatGPT摘要.md": {"bytes": 6911, "sha256": "62ca1da7995e6283bf0917732f431d0d8e9c56b42aec7f8779abd72a6cec168d"}
+  },
+  "source_binding": {
+    "ascend_sha": "2604675e520c23740c5225b6af8857eed8bd9391",
+    "ascend_tree": "afbf69a93f1c7e761769baa9044577d8b83b7a35",
+    "vllm_sha": "a98247ab4db686ee03c66d5feb3c761e52a2f8ab",
+    "vllm_tree": "7f2a24a827bbbb2f211e02031f9d4d0d556d536c"
+  },
+  "status": "PASS"
+}

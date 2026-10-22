@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "source_root": "/Users/wenqingzhang/Desktop/Note/滑动窗口MRV2适配/PR",
+  "ordering_principle": "文内任务时间、Git关系、handoff引用和结果优先；birthtime/mtime只用于初聚类，不单独证明因果。",
+  "tasks": [
+    {
+      "task_id": "T01",
+      "source_top": "MRV2_NonGraph_Audit_20261020_2W0Wi3rU",
+      "archive_dir": "001_20261020_非Graph历史审计与需求证据",
+      "date": "2026-10-20",
+      "title": "非Graph历史审计与迁移输入",
+      "date_basis": "审计报告内部时间、官方快照时间及包名；birthtime/mtime仅辅助",
+      "confidence": "高",
+      "inputs": [
+        "原Graph只读仓、历史c1c2129/1b7215c、原始需求与聊天可见档案"
+      ],
+      "outputs": [
+        "33 REQ、18 GAP、来源/处置图、官方快照128f35e+a98247a、迁移计划"
+      ],
+      "binding": "审计，不是代码候选；Graph HEAD d0a3fc3只作历史上下文",
+      "superseded_by": [
+        "T02"
+      ],
+      "conclusion": "证明可从c1c review-fix及其后继1b最终函数迁移；当前Graph树不可整包当非Graph PR。",
+      "rule_scope": "“到此停止、下一会话迁移”只约束审计轮次；需求ID、来源和证据等级继续有效。",
+      "sequence": 1,
+      "source_relative_root": "MRV2_NonGraph_Audit_20261020_2W0Wi3rU",
+      "recommended_archive_directory": "任务归档/001_20261020_非Graph历史审计与需求证据",
+      "source_regular_files": 13072,
+      "source_bytes": 296601546,
+      "source_directories": 2197,
+      "source_symlinks": 9,
+      "previous_task_id": null,
+      "next_task_id": "T02"
+    },
+    {
+      "task_id": "T02",
+      "source_top": "MRV2_NonGraph_PR_20261021_004159",
+      "archive_dir": "002_20261021_非Graph迁移实现与Host验证",
+      "date": "2026-10-21",
+      "title": "非Graph迁移实现与首版服务器输入",
+      "date_basis": "目录时间、提交/冻结材料与报告内部状态",
+      "confidence": "高",
+      "inputs": [
+        "T01审计",
+        "固定Ascend base 128f35e",
+        "paired vLLM a98247a"
+      ],
+      "outputs": [
+        "隔离双仓实现",
+        "b013719候选",
+        "Host测试与初版server_handoff",
+        "冻结包"
+      ],
+      "binding": "候选b013719f6f0d / tree4453ba56；后续被2604675代码替代",
+      "superseded_by": [
+        "T03",
+        "T05"
+      ],
+      "conclusion": "首次形成可恢复非Graph候选及较完整Host/服务器框架；完整设备与范围未验收。",
+      "rule_scope": "P1–P8旧阶段暂停不再是全局开发禁令；其测试仍只绑定相应SHA。",
+      "sequence": 2,
+      "source_relative_root": "MRV2_NonGraph_PR_20261021_004159",
+      "recommended_archive_directory": "任务归档/002_20261021_非Graph迁移实现与Host验证",
+      "source_regular_files": 197,
+      "source_bytes": 201508833,
+      "source_directories": 14,
+      "source_symlinks": 0,
+      "previous_task_id": "T01",
+      "next_task_id": "T03"
+    },
+    {
+      "task_id": "T03",
+      "source_top": "MRV2_NonGraph_LocalCloseout_20261021_113749",
+      "archive_dir": "003_20261021_候选冻结与本地收尾",
+      "date": "2026-10-21",
+      "title": "b013719候选冻结与本地收尾",
+      "date_basis": "freeze_id 20261021_115826和报告内部时间",
+      "confidence": "高",
+      "inputs": [
+        "T02 b013719源码与server_handoff"
+      ],
+      "outputs": [
+        "来源核对",
+        "Scoped Host结果",
+        "34-case S0–S5计划",
+        "双仓bundle+shallow",
+        "旧66MB完整包"
+      ],
+      "binding": "b013719f6f0d / tree4453ba56 + vLLM a98247a",
+      "superseded_by": [
+        "T04",
+        "T05"
+      ],
+      "conclusion": "服务器preflight READY_WITH_GAPS；legacy DSA-CP/engine Async/复杂provider等仍OPEN。",
+      "rule_scope": "“冻结/等待服务器”只约束b013收尾轮；后续架构复核已获新授权，不能把该暂停当永久禁令。",
+      "sequence": 3,
+      "source_relative_root": "MRV2_NonGraph_LocalCloseout_20261021_113749",
+      "recommended_archive_directory": "任务归档/003_20261021_候选冻结与本地收尾",
+      "source_regular_files": 155,
+      "source_bytes": 135093746,
+      "source_directories": 9,
+      "source_symlinks": 0,
+      "previous_task_id": "T02",
+      "next_task_id": "T04"
+    },
+    {
+      "task_id": "T04",
+      "source_top": "MRV2_NonGraph_Publication_20261021_143532",
+      "archive_dir": "004_20261021_b013719诊断发布",
+      "date": "2026-10-21",
+      "title": "b013719固定候选发布",
+      "date_basis": "publication created_at和独立fetch记录",
+      "confidence": "高",
+      "inputs": [
+        "T03固定候选与完整包"
+      ],
+      "outputs": [
+        "个人fork测试分支",
+        "独立fetch/fsck",
+        "SERVER_SCOPE_ADDENDUM"
+      ],
+      "binding": "远端已验证b013719；CI当时未触发",
+      "superseded_by": [
+        "T05",
+        "T06"
+      ],
+      "conclusion": "只证明b013719远端发布身份，不证明CI/A3或当前推荐代码。",
+      "rule_scope": "只发布固定b013的限制属于该发布任务；不得将其远端PASS赋给2604675。",
+      "sequence": 4,
+      "source_relative_root": "MRV2_NonGraph_Publication_20261021_143532",
+      "recommended_archive_directory": "任务归档/004_20261021_b013719诊断发布",
+      "source_regular_files": 51,
+      "source_bytes": 126142,
+      "source_directories": 2,
+      "source_symlinks": 0,
+      "previous_task_id": "T03",
+      "next_task_id": "T05"
+    },
+    {
+      "task_id": "T05",
+      "source_top": "MRV2_NonGraph_ArchitectureReview_20261021_152046",
+      "archive_dir": "005_20261021_架构审查与2604675候选",
+      "date": "2026-10-21",
+      "title": "2604675架构复核与定向修复",
+      "date_basis": "审查目录时间、三个review-fix提交和报告内部状态",
+      "confidence": "高",
+      "inputs": [
+        "T03/T04 b013719候选",
+        "固定官方规范与paired vLLM"
+      ],
+      "outputs": [
+        "A01–A06裁决",
+        "DSpark K/K+1修复",
+        "Eagle replicated PCP step0修复",
+        "DSpark MLA局部exact复用",
+        "legacy CP差异收敛",
+        "39-case计划",
+        "新双仓bundle"
+      ],
+      "binding": "2604675e520c / treeafbf69a9 + vLLM a98247a",
+      "superseded_by": [
+        "T06"
+      ],
+      "conclusion": "推荐主体保留但需定向重做A01等；ARCHITECTURE_LOCAL_REVIEW=BLOCKED。",
+      "rule_scope": "当时“不push/不上机”由下一任务仅对诊断发布与诊断执行有限覆盖；A01 BLOCKED和正式验收限制未被覆盖。",
+      "sequence": 5,
+      "source_relative_root": "MRV2_NonGraph_ArchitectureReview_20261021_152046",
+      "recommended_archive_directory": "任务归档/005_20261021_架构审查与2604675候选",
+      "source_regular_files": 134,
+      "source_bytes": 134354776,
+      "source_directories": 7,
+      "source_symlinks": 0,
+      "previous_task_id": "T04",
+      "next_task_id": "T06"
+    },
+    {
+      "task_id": "T06",
+      "source_top": "MRV2_NonGraph_A3_DiagnosticRelease_20261021_165535",
+      "archive_dir": "006_20261021_诊断发布与服务器补充",
+      "date": "2026-10-21",
+      "title": "2604675诊断发布与服务器补充",
+      "date_basis": "诊断发布目录、远端fetch及prepush证据",
+      "confidence": "高",
+      "inputs": [
+        "T05完整架构包",
+        "用户诊断授权sidecar"
+      ],
+      "outputs": [
+        "2604675诊断分支",
+        "完整format.sh ci PASS",
+        "独立fetch",
+        "39-case映射",
+        "A01 probe和性能诊断补充"
+      ],
+      "binding": "远端已验证2604675e520c / treeafbf69a9；paired vLLM a98247a",
+      "superseded_by": [],
+      "conclusion": "当前最新有效交接；诊断输入READY_WITH_GAPS，架构仍BLOCKED，A3和性能NOT_RUN。",
+      "rule_scope": "“本轮不继续生产开发”只约束诊断发布轮。未来服务器在新的明确开发授权下可在dev/pr迭代，但不能改写A01、旧结果版本绑定或资源门禁。",
+      "sequence": 6,
+      "source_relative_root": "MRV2_NonGraph_A3_DiagnosticRelease_20261021_165535",
+      "recommended_archive_directory": "任务归档/006_20261021_诊断发布与服务器补充",
+      "source_regular_files": 98,
+      "source_bytes": 1145361,
+      "source_directories": 7,
+      "source_symlinks": 0,
+      "previous_task_id": "T05",
+      "next_task_id": null
+    }
+  ],
+  "generated_for": "PR_服务器开发交接_20261022_170641_0800_c0d3",
+  "source_stability": "STABLE_DURING_TWO_PASSES"
+}

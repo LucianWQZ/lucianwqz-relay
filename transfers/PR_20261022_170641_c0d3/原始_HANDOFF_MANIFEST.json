@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "task_directory": "PR_服务器开发交接_20261022_170641_0800_c0d3",
+  "generated_at": "2026-10-22T17:23:46+08:00",
+  "source_freeze": {
+    "source": "/Users/wenqingzhang/Desktop/Note/滑动窗口MRV2适配/PR",
+    "scan_started": "2026-10-22T17:09:49+08:00",
+    "scan_finished": "2026-10-22T17:09:56+08:00",
+    "stability": "STABLE_TWO_PASS",
+    "regular_files": 13708,
+    "regular_file_bytes": 768840648,
+    "copied_regular_files": 13707,
+    "excluded_root_ds_store": 1,
+    "internal_symlinks_preserved": 8,
+    "external_symlink_excluded": 1
+  },
+  "packages": {
+    "review": {
+      "path": "/Users/wenqingzhang/Desktop/中转/move/PR_服务器开发交接_20261022_170641_0800_c0d3/package/PR_REVIEW_RETURN.zip",
+      "name": "PR_REVIEW_RETURN.zip",
+      "bytes": 1771620,
+      "sha256": "71df7981a67a6643cf476e56d2d1e1a2795e431cb1ac271fed24a8e51391b470",
+      "payload_entries": 150,
+      "payload_bytes": 21018129,
+      "internal_manifest_sha256": "37fbf6314769bd777f68c8780abf1352d644191211ca6594345ff8cd27cbc921",
+      "elapsed_seconds": 0.1
+    },
+    "full": {
+      "path": "/Users/wenqingzhang/Desktop/中转/move/PR_服务器开发交接_20261022_170641_0800_c0d3/package/PR_FULL_TRANSFER.zip",
+      "name": "PR_FULL_TRANSFER.zip",
+      "bytes": 696228223,
+      "sha256": "675237faf78efcd4f95642494437af2b09c29680f21eb8e9e460cad7ab6a953e",
+      "payload_entries": 13836,
+      "payload_bytes": 873310016,
+      "internal_manifest_sha256": "51bebc046c8bc56b0574fa740fbb780074dbcd5ab83ea04e0c01574a92014488",
+      "elapsed_seconds": 3.82
+    }
+  },
+  "external_dependencies": {
+    "mrv2_archive_task_id": "MRV2_完整中文迁移_20261022_034933_0800",
+    "mrv2_archive_sha256": "cdea50597f7f7dc898fae79935d8fecfac5cba73b59aa23a15f867125f267f45",
+    "mrv2_archive_included": false,
+    "server_receipt": "USER_REPORTED_RECEIVED_AND_VERIFIED",
+    "catlass_sha": "41bf90da655bba3c66d0acd7e00abe33960ecfd6",
+    "catlass_included": false,
+    "models_runtime_environment_included": false
+  },
+  "source_binding": {
+    "ascend_sha": "2604675e520c23740c5225b6af8857eed8bd9391",
+    "ascend_tree": "afbf69a93f1c7e761769baa9044577d8b83b7a35",
+    "vllm_sha": "a98247ab4db686ee03c66d5feb3c761e52a2f8ab",
+    "vllm_tree": "7f2a24a827bbbb2f211e02031f9d4d0d556d536c"
+  },
+  "validation": {
+    "status": "PASS",
+    "verified_at": "2026-10-22T17:24:01+08:00",
+    "result": "校验结果/PACKAGE_VERIFICATION.json",
+    "code_restore_from_full_zip": "PASS"
+  },
+  "non_recursive_hash_rule": "ZIPs include an internal FILES_MANIFEST that excludes itself; this external manifest hashes ZIPs and is not inside either ZIP."
+}
