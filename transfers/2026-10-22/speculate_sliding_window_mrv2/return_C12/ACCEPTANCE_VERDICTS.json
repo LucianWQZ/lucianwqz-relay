@@ -1,0 +1,186 @@
+{
+  "updated_at": "2026-10-22T10:07:36.220312+00:00",
+  "raw_root": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery",
+  "verdicts": [
+    {
+      "item": "REFERENCE_INTEGRITY",
+      "status": "PASS_RECEIVE_ADAPTER_ORIGINAL_PUBLICATION_LAYOUT_FAIL_RETAINED",
+      "source_sha": null,
+      "profile": "REFERENCE",
+      "device_segment": "NOT_DEVICE",
+      "evidence": "state/RECEIVE_AUDIT.json;reports/01_接收与源码身份复核.md",
+      "note": "外置manifest关联和路径集合完成；原发布校验器布局FAIL保留"
+    },
+    {
+      "item": "SOURCE_AND_IMPORT",
+      "status": "PASS_SCOPED_FIXED_C8_WORKER_AND_C10_CHECKER",
+      "source_sha": "2c550f267484360802578f340429f95f95299e33;checker=c8f9a4bbddf33bc4cc02fdfe39f6aad75c6cad4a",
+      "profile": "base / target4",
+      "device_segment": "node-39-101 / host Phy0 / logical npu:0 / TP1",
+      "evidence": "state/C8_WORKER_LIVE_PROVENANCE.json;state/C2_CANDIDATE.json",
+      "note": "固定Python源码、实际worker maps、既有native donor分别记录；C10无新NPU"
+    },
+    {
+      "item": "DEVICE_AUTHORIZATION_AND_MAPPING",
+      "status": "PASS_PHY0_THIS_SESSION_ONLY",
+      "source_sha": "2c550f267484360802578f340429f95f95299e33",
+      "profile": "TP1",
+      "device_segment": "node-39-101 / host Phy0 / logical npu:0 / TP1",
+      "evidence": "state/USER_AUTHORIZATION_RECORD.json;/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/probe_phy0_01",
+      "note": "用户授权与真实机器映射分开；截止2026-10-22T10:04:38Z，不自动续期"
+    },
+    {
+      "item": "REAL_CONFIG_STARTUP",
+      "status": "PASS_SCOPED",
+      "source_sha": "2c550f267484360802578f340429f95f95299e33",
+      "profile": "base",
+      "device_segment": "node-39-101 / host Phy0 / logical npu:0 / TP1",
+      "evidence": "C8_prepare_01/Config_Contract_Matrix.json;C8_campaign_01/A0/runner-result.json",
+      "note": "39行真实EngineArgs/platform/factory；A0/B0另有实际模型启动"
+    },
+    {
+      "item": "REQUEST_EXECUTION",
+      "status": "PASS_A0_A1_B0_SCOPED",
+      "source_sha": "2c550f267484360802578f340429f95f95299e33",
+      "profile": "base",
+      "device_segment": "node-39-101 / host Phy0 / logical npu:0 / TP1",
+      "evidence": "C8_prepare_01/A0;C8_prepare_01/A1;C8_prepare_01/B0",
+      "note": "A1仅预期GRAPH_FROZEN；B0需看(1,7)/(2,14)/(4,28)逐层多代记录"
+    },
+    {
+      "item": "FULL_TARGET_BASE",
+      "status": "NOT_RUN_NEW_SOURCE_KNOWN_MISSING_TARGET_4_32",
+      "source_sha": "2c550f267484360802578f340429f95f95299e33",
+      "profile": "base_[7,14,28]",
+      "device_segment": "node-39-101 / host Phy0 / logical npu:0 / TP1",
+      "evidence": "reports/正常生命周期源码审计.md",
+      "note": "不将Target4独立profile或旧Repair6 Base10对升级为本轮Base通过"
+    },
+    {
+      "item": "FULL_TARGET_TARGET4",
+      "status": "SCOPED_TARGET_EXECUTION_AND_NUMERIC_VALID",
+      "source_sha": "2c550f267484360802578f340429f95f95299e33;checker=c8f9a4bbddf33bc4cc02fdfe39f6aad75c6cad4a",
+      "profile": "target4_[7,14,28,32]",
+      "device_segment": "node-39-101 / host Phy0 / logical npu:0 / TP1",
+      "evidence": "reports/reanalysis_C10_target4_01/target-join.json",
+      "note": "OFF=TARGET4_OFF；ON=NUMERIC_TARGET4受控全量，保留原case及序列化reference影响；设备准入独立核对"
+    },
+    {
+      "item": "REAL_DRAFT_CONTINUOUS_NUMERIC",
+      "status": "PASS_DIAGNOSTIC_CONTINUOUS_REFERENCE",
+      "source_sha": "2c550f267484360802578f340429f95f95299e33;checker=c8f9a4bbddf33bc4cc02fdfe39f6aad75c6cad4a",
+      "profile": "target4 / serialized diagnostic",
+      "device_segment": "node-39-101 / host Phy0 / logical npu:0 / TP1",
+      "evidence": "reports/reanalysis_C10_full_01/numeric-joint.json;execution.json",
+      "note": "12真实样本；原C8失败保留，C10只读联合复核；不冒充新C10设备运行"
+    },
+    {
+      "item": "ABA_DISCRIMINATION",
+      "status": "PASS_SCOPED",
+      "source_sha": "2c550f267484360802578f340429f95f95299e33;checker=c8f9a4bbddf33bc4cc02fdfe39f6aad75c6cad4a",
+      "profile": "target4 / A-B-Aprime",
+      "device_segment": "node-39-101 / host Phy0 / logical npu:0 / TP1",
+      "evidence": "reports/reanalysis_C10_full_01/numeric-joint.json:samples,aba",
+      "note": "B输出与A可区分、Aprime恢复；不是greedy token等价"
+    },
+    {
+      "item": "DIAGNOSTIC_COMPLETION",
+      "status": "NOT_RUN_C2_PREREQUISITE_FAILED",
+      "source_sha": "d15a510c2afba62b8a0e37aa574550852079fd13",
+      "profile": "base / serialized LIFE",
+      "device_segment": "node-39-101 / host Phy0 / logical npu:0 / TP1",
+      "evidence": "C11_prepare_01/LIFE;C11_campaign_01/LIFE/runner-result.json",
+      "note": "ordinary Event明确同步的诊断完成，不能替代正常重叠"
+    },
+    {
+      "item": "NORMAL_UPDATE_GENERATION",
+      "status": "OPEN_PLATFORM_CONTRACT",
+      "source_sha": "2c550f267484360802578f340429f95f95299e33",
+      "profile": "normal Graph",
+      "device_segment": "node-39-101 / host Phy0 / logical npu:0 / TP1",
+      "evidence": "reports/正常生命周期源码审计.md;reports/DECISION_QUEUE.md",
+      "note": "Host return/UPDATE return/父flow不证明生效代际"
+    },
+    {
+      "item": "NORMAL_BACKING_REUSE",
+      "status": "OPEN_LAST_NATIVE_CONSUMER",
+      "source_sha": "2c550f267484360802578f340429f95f95299e33",
+      "profile": "normal Graph",
+      "device_segment": "node-39-101 / host Phy0 / logical npu:0 / TP1",
+      "evidence": "reports/正常生命周期源码审计.md;reports/DECISION_QUEUE.md",
+      "note": "lease/Host retirement不等于最后设备reader完成"
+    },
+    {
+      "item": "ABORT_ISOLATION",
+      "status": "NOT_RUN_C2_PREREQUISITE_FAILED",
+      "source_sha": "d15a510c2afba62b8a0e37aa574550852079fd13",
+      "profile": "base / independent disposable children",
+      "device_segment": "node-39-101 / host Phy0 / logical npu:0 / TP1",
+      "evidence": "C11_prepare_01/ABORT_*;C11_campaign_01/ABORT_*",
+      "note": "故障点/PID/generation/backing/partial/checker联合；不冒充C1 unwind真设备覆盖或完成证明"
+    },
+    {
+      "item": "PROFILING_COLLECTION",
+      "status": "PASS_SCOPED_4_NORMAL_PLUS_4_CONTROL",
+      "source_sha": "1c920c3669b76f301ff9472650ceb0e842ccf03c",
+      "profile": "OFF/ON x short/long / base",
+      "device_segment": "node-39-101 / host Phy0 / logical npu:0 / TP1",
+      "evidence": "reports/MRV2_Profiling_Summary.json;C6_prepare_04b/PROFILE_*",
+      "note": "正常关闭重型观察与诊断同步；ON-long runtime S>0"
+    },
+    {
+      "item": "PROFILING_ANALYSIS",
+      "status": "DONE_WITH_EXPLICIT_NOT_AVAILABLE",
+      "source_sha": "1c920c3669b76f301ff9472650ceb0e842ccf03c",
+      "profile": "normal Graph",
+      "device_segment": "node-39-101 / host Phy0 / logical npu:0 / TP1",
+      "evidence": "reports/MRV2_Profiling分析.md;reports/profiling_C6_short",
+      "note": "实际ID/flow/stream时间域分析；不同工作量与单次波动不作加速率"
+    },
+    {
+      "item": "MULTI_DEVICE_EXTENSION",
+      "status": "NOT_RUN",
+      "source_sha": null,
+      "profile": "TP8 / TP16 / other feature stacks",
+      "device_segment": "NOT_DEVICE",
+      "evidence": "reports/MRV2_持续开发阶段总结.md",
+      "note": "本轮主线TP1；不外推Eagle3/DFlash/Prefix/Async/多卡"
+    },
+    {
+      "item": "TASK_INTERNAL_OPERAND",
+      "status": "OPEN_NOT_AVAILABLE",
+      "source_sha": "1c920c3669b76f301ff9472650ceb0e842ccf03c",
+      "profile": "normal trace",
+      "device_segment": "node-39-101 / host Phy0 / logical npu:0 / TP1",
+      "evidence": "reports/MRV2_Profiling分析.md;reports/DECISION_QUEUE.md",
+      "note": "当前导出缺native operand地址"
+    },
+    {
+      "item": "PHYSICAL_READ",
+      "status": "OPEN_NOT_AVAILABLE",
+      "source_sha": "1c920c3669b76f301ff9472650ceb0e842ccf03c",
+      "profile": "normal trace",
+      "device_segment": "node-39-101 / host Phy0 / logical npu:0 / TP1",
+      "evidence": "reports/MRV2_Profiling分析.md;reports/DECISION_QUEUE.md",
+      "note": "当前导出无物理KV读取集合"
+    },
+    {
+      "item": "PRODUCTION_GRAPH_READINESS",
+      "status": "NOT_READY_FOR_FORMAL_SUPPORT_APPROVAL",
+      "source_sha": "d15a510c2afba62b8a0e37aa574550852079fd13",
+      "profile": "DSpark TP1 scoped candidate",
+      "device_segment": "node-39-101 / host Phy0 / logical npu:0 / TP1",
+      "evidence": "reports/DECISION_QUEUE.md",
+      "note": "数值/受控Target/诊断与正常代际/复用/物理证据分别裁决"
+    },
+    {
+      "item": "PUBLIC_GRAPH_GATE",
+      "status": "STILL_FROZEN",
+      "source_sha": "d15a510c2afba62b8a0e37aa574550852079fd13",
+      "profile": "public",
+      "device_segment": "node-39-101 / host Phy0 / logical npu:0 / TP1",
+      "evidence": "reports/DECISION_QUEUE.md",
+      "note": "未降低标准、未push/merge/解冻"
+    }
+  ]
+}

@@ -1,0 +1,441 @@
+{
+  "updated_at": "2026-10-22T10:03:11.916658+00:00",
+  "completed_attempt_records": 44,
+  "formal_model_campaigns": 24,
+  "campaigns": [
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "A0",
+        "driver_mode": "A0",
+        "engine_id": null,
+        "process_id": 85846,
+        "run_id": "c6-phy0-20261022T0715Z-r3",
+        "source_sha": "1c920c3669b76f301ff9472650ceb0e842ccf03c",
+        "source_tree": "065417b4a6fed743e81323f3510d619c1da4d67a",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "EXCEPTION",
+      "startup_complete": false,
+      "exception_type": "RuntimeError",
+      "exception_message": "aclnnAddRmsNormBias or aclnnAddRmsNormBiasGetWorkspaceSize not in libopapi.so, or libopapi.sonot found.",
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C6_prepare_03/A0/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "A0",
+        "driver_mode": "A0",
+        "engine_id": null,
+        "process_id": 79195,
+        "run_id": "c6-phy0-20261022T0708Z-r2",
+        "source_sha": "1c920c3669b76f301ff9472650ceb0e842ccf03c",
+        "source_tree": "065417b4a6fed743e81323f3510d619c1da4d67a",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "EXCEPTION",
+      "startup_complete": false,
+      "exception_type": "ModuleNotFoundError",
+      "exception_message": "No module named 'acl'",
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C6_prepare_02/A0/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "A1",
+        "driver_mode": "A1",
+        "engine_id": null,
+        "process_id": 181481,
+        "run_id": "c11-phy0-20261022T0955Z",
+        "source_sha": "8bdc2e2f20ac8d71aecacfe8567ae695681a797b",
+        "source_tree": "ab35b6d9a738210f2e48ec3ab4ed509437094000",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "EXCEPTION",
+      "startup_complete": false,
+      "exception_type": "NotImplementedError",
+      "exception_message": "MRV2 Draft Window P7-X route rejected before materialization: status=GRAPH_FROZEN; Graph mode FULL_DECODE_ONLY belongs to the frozen Graph Track",
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C11_prepare_01/A1/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "A0",
+        "driver_mode": "A0",
+        "engine_id": 281455917749264,
+        "process_id": 179004,
+        "run_id": "c11-phy0-20261022T0955Z",
+        "source_sha": "8bdc2e2f20ac8d71aecacfe8567ae695681a797b",
+        "source_tree": "ab35b6d9a738210f2e48ec3ab4ed509437094000",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "OK",
+      "startup_complete": true,
+      "exception_type": null,
+      "exception_message": null,
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C11_prepare_01/A0/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "NUMERIC_SENTINEL",
+        "driver_mode": "B",
+        "engine_id": 281455406150416,
+        "process_id": 151681,
+        "run_id": "c8-phy0-20261022T0840Z",
+        "source_sha": "2c550f267484360802578f340429f95f95299e33",
+        "source_tree": "30191207bc958686794e9b63bf06eb347e5551dc",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "OK",
+      "startup_complete": true,
+      "exception_type": null,
+      "exception_message": null,
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C8_prepare_01/NUMERIC_SENTINEL/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "NUMERIC_TARGET4",
+        "driver_mode": "B",
+        "engine_id": 281454929047760,
+        "process_id": 153809,
+        "run_id": "c8-phy0-20261022T0840Z",
+        "source_sha": "2c550f267484360802578f340429f95f95299e33",
+        "source_tree": "30191207bc958686794e9b63bf06eb347e5551dc",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "OK",
+      "startup_complete": true,
+      "exception_type": null,
+      "exception_message": null,
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C8_prepare_01/NUMERIC_TARGET4/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "PREFIX_OFF",
+        "driver_mode": "A0",
+        "engine_id": 281455205870288,
+        "process_id": 167550,
+        "run_id": "c8-phy0-20261022T0840Z",
+        "source_sha": "2c550f267484360802578f340429f95f95299e33",
+        "source_tree": "30191207bc958686794e9b63bf06eb347e5551dc",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "OK",
+      "startup_complete": true,
+      "exception_type": null,
+      "exception_message": null,
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C8_prepare_01/PREFIX_OFF/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "NORMAL_ORDER",
+        "driver_mode": "B-observer-off",
+        "engine_id": 281455617892368,
+        "process_id": 173892,
+        "run_id": "c8-phy0-20261022T0840Z",
+        "source_sha": "2c550f267484360802578f340429f95f95299e33",
+        "source_tree": "30191207bc958686794e9b63bf06eb347e5551dc",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "OK",
+      "startup_complete": true,
+      "exception_type": null,
+      "exception_message": null,
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C8_prepare_01/NORMAL_ORDER/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "A1",
+        "driver_mode": "A1",
+        "engine_id": null,
+        "process_id": 149171,
+        "run_id": "c8-phy0-20261022T0840Z",
+        "source_sha": "2c550f267484360802578f340429f95f95299e33",
+        "source_tree": "30191207bc958686794e9b63bf06eb347e5551dc",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "EXCEPTION",
+      "startup_complete": false,
+      "exception_type": "NotImplementedError",
+      "exception_message": "MRV2 Draft Window P7-X route rejected before materialization: status=GRAPH_FROZEN; Graph mode FULL_DECODE_ONLY belongs to the frozen Graph Track",
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C8_prepare_01/A1/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "A0",
+        "driver_mode": "A0",
+        "engine_id": 281455540274896,
+        "process_id": 147531,
+        "run_id": "c8-phy0-20261022T0840Z",
+        "source_sha": "2c550f267484360802578f340429f95f95299e33",
+        "source_tree": "30191207bc958686794e9b63bf06eb347e5551dc",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "OK",
+      "startup_complete": true,
+      "exception_type": null,
+      "exception_message": null,
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C8_prepare_01/A0/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "B0",
+        "driver_mode": "B",
+        "engine_id": 281456037874576,
+        "process_id": 150079,
+        "run_id": "c8-phy0-20261022T0840Z",
+        "source_sha": "2c550f267484360802578f340429f95f95299e33",
+        "source_tree": "30191207bc958686794e9b63bf06eb347e5551dc",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "OK",
+      "startup_complete": true,
+      "exception_type": null,
+      "exception_message": null,
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C8_prepare_01/B0/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "TARGET4_OFF",
+        "driver_mode": "A0",
+        "engine_id": 281454804267600,
+        "process_id": 169599,
+        "run_id": "c8-phy0-20261022T0840Z",
+        "source_sha": "2c550f267484360802578f340429f95f95299e33",
+        "source_tree": "30191207bc958686794e9b63bf06eb347e5551dc",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "OK",
+      "startup_complete": true,
+      "exception_type": null,
+      "exception_message": null,
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C8_prepare_01/TARGET4_OFF/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "NUMERIC_SENTINEL",
+        "driver_mode": "B",
+        "engine_id": 281454633348240,
+        "process_id": 120713,
+        "run_id": "c6-phy0-20261022T0733Z-r4",
+        "source_sha": "1c920c3669b76f301ff9472650ceb0e842ccf03c",
+        "source_tree": "065417b4a6fed743e81323f3510d619c1da4d67a",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "OK",
+      "startup_complete": true,
+      "exception_type": null,
+      "exception_message": null,
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C6_prepare_04b/NUMERIC_SENTINEL/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "PROFILE_ON_short_normal",
+        "driver_mode": "B-observer-off",
+        "engine_id": 281455949723728,
+        "process_id": 144163,
+        "run_id": "c6-phy0-20261022T0733Z-r4",
+        "source_sha": "1c920c3669b76f301ff9472650ceb0e842ccf03c",
+        "source_tree": "065417b4a6fed743e81323f3510d619c1da4d67a",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "OK",
+      "startup_complete": true,
+      "exception_type": null,
+      "exception_message": null,
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C6_prepare_04b/PROFILE_ON_short_normal/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "PROFILE_ON_short_control",
+        "driver_mode": "B-observer-off",
+        "engine_id": 281456357030224,
+        "process_id": 142082,
+        "run_id": "c6-phy0-20261022T0733Z-r4",
+        "source_sha": "1c920c3669b76f301ff9472650ceb0e842ccf03c",
+        "source_tree": "065417b4a6fed743e81323f3510d619c1da4d67a",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "OK",
+      "startup_complete": true,
+      "exception_type": null,
+      "exception_message": null,
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C6_prepare_04b/PROFILE_ON_short_control/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "PROFILE_OFF_long_control",
+        "driver_mode": "A0",
+        "engine_id": 281455709535248,
+        "process_id": 158679,
+        "run_id": "c6-phy0-20261022T0733Z-r4",
+        "source_sha": "1c920c3669b76f301ff9472650ceb0e842ccf03c",
+        "source_tree": "065417b4a6fed743e81323f3510d619c1da4d67a",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "OK",
+      "startup_complete": true,
+      "exception_type": null,
+      "exception_message": null,
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C6_prepare_04b/PROFILE_OFF_long_control/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "PROFILE_OFF_short_normal",
+        "driver_mode": "A0",
+        "engine_id": 281455859400080,
+        "process_id": 139000,
+        "run_id": "c6-phy0-20261022T0733Z-r4",
+        "source_sha": "1c920c3669b76f301ff9472650ceb0e842ccf03c",
+        "source_tree": "065417b4a6fed743e81323f3510d619c1da4d67a",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "OK",
+      "startup_complete": true,
+      "exception_type": null,
+      "exception_message": null,
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C6_prepare_04b/PROFILE_OFF_short_normal/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "PROFILE_OFF_short_control",
+        "driver_mode": "A0",
+        "engine_id": 281455572924816,
+        "process_id": 137173,
+        "run_id": "c6-phy0-20261022T0733Z-r4",
+        "source_sha": "1c920c3669b76f301ff9472650ceb0e842ccf03c",
+        "source_tree": "065417b4a6fed743e81323f3510d619c1da4d67a",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "OK",
+      "startup_complete": true,
+      "exception_type": null,
+      "exception_message": null,
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C6_prepare_04b/PROFILE_OFF_short_control/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "PROFILE_ON_long_control",
+        "driver_mode": "B-observer-off",
+        "engine_id": 281456163060176,
+        "process_id": 163757,
+        "run_id": "c6-phy0-20261022T0733Z-r4",
+        "source_sha": "1c920c3669b76f301ff9472650ceb0e842ccf03c",
+        "source_tree": "065417b4a6fed743e81323f3510d619c1da4d67a",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "OK",
+      "startup_complete": true,
+      "exception_type": null,
+      "exception_message": null,
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C6_prepare_04b/PROFILE_ON_long_control/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "PROFILE_ON_long_normal",
+        "driver_mode": "B-observer-off",
+        "engine_id": 281456277752208,
+        "process_id": 165479,
+        "run_id": "c6-phy0-20261022T0733Z-r4",
+        "source_sha": "1c920c3669b76f301ff9472650ceb0e842ccf03c",
+        "source_tree": "065417b4a6fed743e81323f3510d619c1da4d67a",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "OK",
+      "startup_complete": true,
+      "exception_type": null,
+      "exception_message": null,
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C6_prepare_04b/PROFILE_ON_long_normal/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "A1",
+        "driver_mode": "A1",
+        "engine_id": null,
+        "process_id": 111568,
+        "run_id": "c6-phy0-20261022T0733Z-r4",
+        "source_sha": "1c920c3669b76f301ff9472650ceb0e842ccf03c",
+        "source_tree": "065417b4a6fed743e81323f3510d619c1da4d67a",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "EXCEPTION",
+      "startup_complete": false,
+      "exception_type": "NotImplementedError",
+      "exception_message": "MRV2 Draft Window P7-X route rejected before materialization: status=GRAPH_FROZEN; Graph mode FULL_DECODE_ONLY belongs to the frozen Graph Track",
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C6_prepare_04b/A1/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "A0",
+        "driver_mode": "A0",
+        "engine_id": 281455985185232,
+        "process_id": 103750,
+        "run_id": "c6-phy0-20261022T0733Z-r4",
+        "source_sha": "1c920c3669b76f301ff9472650ceb0e842ccf03c",
+        "source_tree": "065417b4a6fed743e81323f3510d619c1da4d67a",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "OK",
+      "startup_complete": true,
+      "exception_type": null,
+      "exception_message": null,
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C6_prepare_04b/A0/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "B0",
+        "driver_mode": "B",
+        "engine_id": 281455691061136,
+        "process_id": 115103,
+        "run_id": "c6-phy0-20261022T0733Z-r4",
+        "source_sha": "1c920c3669b76f301ff9472650ceb0e842ccf03c",
+        "source_tree": "065417b4a6fed743e81323f3510d619c1da4d67a",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "OK",
+      "startup_complete": true,
+      "exception_type": null,
+      "exception_message": null,
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C6_prepare_04b/B0/campaign.json"
+    },
+    {
+      "identity": {
+        "attempt_id": "1",
+        "case_id": "PROFILE_OFF_long_normal",
+        "driver_mode": "A0",
+        "engine_id": 281455941784016,
+        "process_id": 161543,
+        "run_id": "c6-phy0-20261022T0733Z-r4",
+        "source_sha": "1c920c3669b76f301ff9472650ceb0e842ccf03c",
+        "source_tree": "065417b4a6fed743e81323f3510d619c1da4d67a",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "status": "OK",
+      "startup_complete": true,
+      "exception_type": null,
+      "exception_message": null,
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C6_prepare_04b/PROFILE_OFF_long_normal/campaign.json"
+    }
+  ],
+  "source_run_root": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery",
+  "scope": "Model process created; expected A1 rejection is counted as a startup attempt, never as successful initialization"
+}

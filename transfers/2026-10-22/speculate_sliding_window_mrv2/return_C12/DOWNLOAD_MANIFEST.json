@@ -1,0 +1,169 @@
+{
+  "generated_at": "2026-10-22T10:07:38.391108+00:00",
+  "server_self_check_only": true,
+  "delivery_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return",
+  "files": [
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/MRV2_持续开发阶段总结.md",
+      "bytes": 6310,
+      "sha256": "5f99f136e879c1ebad3e43be48c8531369ce444888db1bef4c436f5dae9f73f6",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/MRV2_五小时开发总结.md",
+      "bytes": 6310,
+      "sha256": "5f99f136e879c1ebad3e43be48c8531369ce444888db1bef4c436f5dae9f73f6",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/MRV2_实验矩阵与结论.csv",
+      "bytes": 25254,
+      "sha256": "89389c62314c4f5f748cbee135562c7b74c59842f8c1aedf2c1691f0d0ec602a",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/MRV2_Profiling分析.md",
+      "bytes": 10512,
+      "sha256": "01167956553bc7b4bec9610d8e59a27e55fb1bc2b83130b580dd4673236abddb",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/MRV2_Profiling_Summary.json",
+      "bytes": 163916,
+      "sha256": "576885a1a7fc832aa991e99ec39758cfaa3adf38409d5b74a7c7386ae9e841ea",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/NEXT_SESSION_HANDOFF.json",
+      "bytes": 14862,
+      "sha256": "b7cbee9be644d0364d809f697b6d11f5b86db087d0de80ed316c5e6efbfb9234",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/RESUME.md",
+      "bytes": 3132,
+      "sha256": "046c2b64a966f00b5b50cad87ef9933c8692fb7cc1ddfd61b63f4b66c549b42f",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/DECISION_QUEUE.md",
+      "bytes": 3108,
+      "sha256": "66cfc6483a7c4aed692c99ed8e2280e348e79962bae2cf201d0a95a6327dc978",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/ACCEPTANCE_VERDICTS.json",
+      "bytes": 9001,
+      "sha256": "f28eeaba554df897519cd8a660a5445badc28b713a9177d88a6f3c99f5071d5e",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/ACCEPTANCE_VERDICTS.csv",
+      "bytes": 5815,
+      "sha256": "2066b30ec2185c1a0e12d8c3fd50772c1655f95d7f4498a88d9bbc21879146eb",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/MODEL_CAMPAIGN_INDEX.json",
+      "bytes": 17324,
+      "sha256": "0c311d416cf47d0fe485a73089d5317def61f88cab98cb63a4e2cc24711775b5",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/REFERENCE_VALIDATION.json",
+      "bytes": 1047,
+      "sha256": "313de2f850c29084c9a20e99ec98ae54baa4128badcd520fddf21b333356d0ee",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/执行环境恢复说明.md",
+      "bytes": 2928,
+      "sha256": "7860674067d3a4d6cc04f1c4e7a3c9e81e05bf0088a4849a607ec6c9af035b00",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/存储与运行路径说明.md",
+      "bytes": 1876,
+      "sha256": "984c6ee1204455aa18b0f6f86a99de33e83ecabed4367737757afd825bdf2c4c",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/C7_dtype修复与复核.md",
+      "bytes": 1581,
+      "sha256": "a8974576e7607aca07dcad7595986d141be5eca68dbbe9c57ea86a366c06868f",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/C10_真实padding合同与复核.md",
+      "bytes": 2278,
+      "sha256": "4c37858c74bda8ed9d2d5fd9a526f442d44ec7d605e9e664db92235ad1ac0d4f",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/正常生命周期源码审计.md",
+      "bytes": 3022,
+      "sha256": "1f5e52a48872af6839f6886a51e7dad1ab472e2d7afcbc687cdb6e1ce02aec00",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/04_提交与Bundle恢复_持续开发.md",
+      "bytes": 1406,
+      "sha256": "d7a42c94dc2672b7d0d24b5aa7e992b10a4c1a317efbd04ffc34a85789f1e893",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/01_接收与源码身份复核.md",
+      "bytes": 3325,
+      "sha256": "c24fd3c42615ba0eeef0cadc995fd0365c0ff2b7c56b54e840ca4a1d37de56e2",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/STORAGE_BINDING.json",
+      "bytes": 1236,
+      "sha256": "19ec04c07a9a67dcc67cc2d09b4021ddda2038306903527ee48c9cfdba1e9434",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/RAW_ARTIFACT_INDEX.json",
+      "bytes": 1087263,
+      "sha256": "92e96b073c9fa0d04ee45dd84eb8eb56081d3d1b1a0d7f7b83e1fab490940d6f",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/MRV2_C12_local_commits.bundle",
+      "bytes": 25100,
+      "sha256": "70a071630e52a092e9ac37a9e7b17f6889aaf5d2fe15ab87370bb9609a3ef030",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/COMMIT_LIST.txt",
+      "bytes": 1216,
+      "sha256": "e556b077ca93f14a77103f3232135c1a145e3851b4a4df1a5d02540ccab397a5",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/C12_vs_Repair7.patch",
+      "bytes": 58699,
+      "sha256": "fc1ee581475bd72dfa818e7bb074689b95ba206362d1e4e372563a9e0387f769",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/MRV2_Server_Dev_review.zip",
+      "bytes": 1943809,
+      "sha256": "9224e2280e8e7958f79b6e5cac4b80afaa5fc517857636c10eb4b6e51aa5d421",
+      "transfer_scope": "CHAT_SUITABLE"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/REVIEW_ZIP_VALIDATION.json",
+      "bytes": 486,
+      "sha256": "759fa2b9cc01c9058d6e6a9cb85d4b886afd96287d916f13cbac6400ccdc375e",
+      "transfer_scope": "CHAT_SUITABLE"
+    }
+  ],
+  "server_only": {
+    "raw_root": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery",
+    "index": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/RAW_ARTIFACT_INDEX.json",
+    "excluded": "tensor chunks, profiler raw/trace/DB/CSV, full flow association tables, runtime binaries, models, old archive"
+  },
+  "no_credentials_or_models_in_package": true
+}

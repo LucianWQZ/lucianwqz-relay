@@ -1,0 +1,1135 @@
+diff --git a/tests/ut/spec_decode/test_draft_window_graph_carrier.py b/tests/ut/spec_decode/test_draft_window_graph_carrier.py
+index 17813604b..976b2f7e5 100644
+--- a/tests/ut/spec_decode/test_draft_window_graph_carrier.py
++++ b/tests/ut/spec_decode/test_draft_window_graph_carrier.py
+@@ -116,6 +116,7 @@ def _runtime_fixture(
+     row_width: int = 8,
+     block_size: int = 64,
+     window_size: int = 128,
++    causal: bool = True,
+ ) -> tuple[Any, Any, SimpleNamespace]:
+     canonical_counts = torch.full((1, max_num_reqs), row_width, dtype=torch.int32)
+     canonical_table = torch.arange(
+@@ -145,7 +146,7 @@ def _runtime_fixture(
+         logical_block_size=block_size,
+         kernel_block_size=block_size,
+         block_span_tokens=block_size,
+-        causal=True,
++        causal=causal,
+         layout_category=DraftWindowLayoutCategory.DENSE_GQA_DIRECT_PREFIX,
+         capability_failures=(),
+     )
+diff --git a/tests/ut/spec_decode/test_draft_window_graph_characterization.py b/tests/ut/spec_decode/test_draft_window_graph_characterization.py
+index 48e38586a..1af7c1a82 100644
+--- a/tests/ut/spec_decode/test_draft_window_graph_characterization.py
++++ b/tests/ut/spec_decode/test_draft_window_graph_characterization.py
+@@ -118,8 +118,8 @@ def _descriptor() -> BatchExecutionDescriptor:
+     )
+ 
+ 
+-def _characterization_owner(*, method: str = "dflash", **geometry) -> tuple[Any, Any]:
+-    runtime, capability, block_tables = _runtime_fixture(method=method, **geometry)
++def _characterization_owner(*, method: str = "dflash", causal: bool = True, **geometry) -> tuple[Any, Any]:
++    runtime, capability, block_tables = _runtime_fixture(method=method, causal=causal, **geometry)
+     descriptor = _descriptor()
+     input_buffers = InputBuffers(8, 64, torch.device("cpu"))
+     input_buffers.query_start_loc[:5].copy_(torch.tensor([0, 2, 4, 6, 8], dtype=torch.int32))
+@@ -139,7 +139,7 @@ def _characterization_owner(*, method: str = "dflash", **geometry) -> tuple[Any,
+         model_state=SimpleNamespace(attn_metadata=_target_metadata()),
+         attn_backends={"draft.layers.0.self_attn": AscendAttentionBackend},
+         speculative_config=SimpleNamespace(num_speculative_tokens=1),
+-        _group_causal=True,
++        _group_causal=causal,
+     )
+     return owner, descriptor
+ 
+diff --git a/tests/ut/spec_decode/test_graph_repair4_integration.py b/tests/ut/spec_decode/test_graph_repair4_integration.py
+index 6dba8355a..700fc4877 100644
+--- a/tests/ut/spec_decode/test_graph_repair4_integration.py
++++ b/tests/ut/spec_decode/test_graph_repair4_integration.py
+@@ -153,7 +153,7 @@ def _lifetime_fixture(monkeypatch, **geometry):
+                 owner.kv_cache_config,
+                 512,
+                 False,
+-                True,
++                owner._group_causal,
+             )
+             assert state.attn_metadata[LAYER].block_tables.shape[0] == desc.num_reqs
+     tables.slot_mappings.copy_(torch.arange(tables.slot_mappings.numel(), dtype=torch.int32).reshape(1, -1))
+diff --git a/tests/ut/spec_decode/test_graph_repair5_producers.py b/tests/ut/spec_decode/test_graph_repair5_producers.py
+index 581bd02b7..d1f479dd5 100644
+--- a/tests/ut/spec_decode/test_graph_repair5_producers.py
++++ b/tests/ut/spec_decode/test_graph_repair5_producers.py
+@@ -27,7 +27,7 @@ def context(*args, **kwargs):
+     yield
+ 
+ 
+-def controlled_runner(monkeypatch):
++def controlled_runner(monkeypatch, padded_sizes=(1, 2)):
+     import vllm_ascend.attention.attention_v1 as backend
+     import vllm_ascend.ops.rotary_embedding as rotary
+     import vllm_ascend.worker.v2.aclgraph_utils as graph
+@@ -68,7 +68,7 @@ def controlled_runner(monkeypatch):
+     monkeypatch.setattr(graph, "update_full_graph_params", lambda *a, **kw: None)
+     runner.speculative_config = None
+     manager.graphs = {}
+-    for n in (1, 2):
++    for n in padded_sizes:
+         desc = BatchExecutionDescriptor(CUDAGraphMode.FULL, num_tokens=n * 8, num_reqs=n, uniform_token_count=8)
+ 
+         def replay(n=n):
+diff --git a/tests/ut/spec_decode/test_graph_repair6_capture_chain.py b/tests/ut/spec_decode/test_graph_repair6_capture_chain.py
+index 89f1fbd5c..692649e3a 100644
+--- a/tests/ut/spec_decode/test_graph_repair6_capture_chain.py
++++ b/tests/ut/spec_decode/test_graph_repair6_capture_chain.py
+@@ -25,7 +25,7 @@ def capture_owner(monkeypatch, enabled=True):
+     from vllm_ascend.worker.v2.spec_decode.dflash.capture import ascend_prepare_dflash_inputs_to_capture
+ 
+     owner, session, manager, descs, calls = _lifetime_fixture(
+-        monkeypatch, block_size=128, window_size=1024, row_width=32, method="dspark"
++        monkeypatch, block_size=128, window_size=1024, row_width=32, method="dspark", causal=False
+     )
+     owner.__class__ = AscendDSparkSpeculator
+     del owner.build_draft_attn_metadatas
+@@ -44,7 +44,7 @@ def capture_owner(monkeypatch, enabled=True):
+     owner.enable_adaptive_verification = False
+     owner._anchor_idx = torch.zeros(8, dtype=torch.int64)
+     owner._sample_logits = lambda logits, *a: logits.argmax(-1)
+-    owner.input_buffers.input_ids = torch.zeros(64, dtype=torch.int64)
++    owner.input_buffers.input_ids = torch.zeros(64, dtype=torch.int32)
+     for name in ("sample_indices", "sample_pos", "sample_idx_mapping", "sample_col"):
+         setattr(owner, name, torch.zeros(56, dtype=torch.int64))
+     owner.temperature = owner.seeds = torch.zeros(8)
+diff --git a/tests/ut/spec_decode/test_graph_repair6_driver_quarantine.py b/tests/ut/spec_decode/test_graph_repair6_driver_quarantine.py
+index b0d775215..0a16768d1 100644
+--- a/tests/ut/spec_decode/test_graph_repair6_driver_quarantine.py
++++ b/tests/ut/spec_decode/test_graph_repair6_driver_quarantine.py
+@@ -13,7 +13,7 @@ from tests.ut.spec_decode.test_graph_repair5_contracts import load
+ from tests.ut.spec_decode.test_graph_repair6_capture_chain import capture_owner
+ 
+ 
+-def driver_native_failure(monkeypatch, tmp_path, driver):
++def driver_native_failure(monkeypatch, tmp_path, driver, *, normal_probe=True):
+     import vllm
+ 
+     for key in (
+@@ -26,7 +26,12 @@ def driver_native_failure(monkeypatch, tmp_path, driver):
+         monkeypatch.setenv(key, os.environ.get(key, ""))
+     monkeypatch.setenv("VLLM_ASCEND_EXPERIMENTAL_DRAFT_WINDOW_GRAPH_OBSERVE", "1")
+     owner, session, manager, descs, _ = capture_owner(monkeypatch)
+-    manager.run_fullgraph = lambda _: (_ for _ in ()).throw(RuntimeError("native submission uncertain"))
++    def fail_after_submit(_):
++        if not normal_probe:
++            owner._draft_window_graph_submission_uncertain = True
++        raise RuntimeError("native submission uncertain")
++
++    manager.run_fullgraph = fail_after_submit
+     runner_type = type("NPUModelRunner", (), {"__module__": "vllm_ascend.worker.v2.model_runner"})
+     runner = runner_type()
+     runner.speculator, runner.cudagraph_manager = owner, manager
+@@ -77,7 +82,7 @@ def driver_native_failure(monkeypatch, tmp_path, driver):
+         repair5_controlled_target=False,
+         repair5_controlled_mrv2=False,
+         repair5_lifecycle=False,
+-        repair6_normal_lifecycle=True,
++        repair6_normal_lifecycle=normal_probe,
+     )
+     exited = []
+ 
+@@ -98,3 +103,12 @@ def test_actual_driver_finally_quarantines_normal_probe(monkeypatch, tmp_path):
+     assert rc == 74 and exited == [74] and not shutdown, campaign
+     assert campaign["exception_message"] == "native submission uncertain"
+     assert campaign["diagnostic_quarantine"] == "PROCESS_EXIT_74_NO_REUSE"
++
++
++def test_actual_driver_quarantines_graph_failure_without_diagnostic_probe(monkeypatch, tmp_path):
++    rc, shutdown, exited, campaign = driver_native_failure(
++        monkeypatch, tmp_path, load("p7x_graph_repair2"), normal_probe=False
++    )
++    assert rc == 74 and exited == [74] and not shutdown, campaign
++    assert campaign["graph_submission_uncertain"] is True
++    assert campaign["diagnostic_quarantine"] == "PROCESS_EXIT_74_NO_REUSE"
+diff --git a/tests/ut/spec_decode/test_graph_repair6_numeric_pipeline.py b/tests/ut/spec_decode/test_graph_repair6_numeric_pipeline.py
+index 4ee91ae98..27d48a67c 100644
+--- a/tests/ut/spec_decode/test_graph_repair6_numeric_pipeline.py
++++ b/tests/ut/spec_decode/test_graph_repair6_numeric_pipeline.py
+@@ -124,7 +124,7 @@ def produce(monkeypatch, directory, fault=None, sample_limit=None):
+                 owner.block_tables.slot_mappings[0, row * 7 : (row + 1) * 7] = full[pos // 128] * 128 + pos % 128
+             for component, c in enumerate(caches):
+                 c.copy_(torch.arange(c.shape[0], dtype=torch.bfloat16).view(-1, 1, 1, 1).expand_as(c) / 128 + component)
+-            owner.input_buffers.query_start_loc[: padded + 1] = torch.arange(padded + 1) * 7
++            owner.input_buffers.query_start_loc[: padded + 1] = torch.arange(padded + 1).clamp(max=active) * 7
+             with owner._draft_window_proposal_scope(owner.input_batch, dummy_run=False, is_profile=False):
+                 scope = owner._draft_window_proposal_context
+                 lens = torch.tensor(
+@@ -171,6 +171,7 @@ def test_full_geometry_actual_capture_to_multigeneration_store_checker(monkeypat
+     padded = reader.record(8)
+     assert padded["target_descriptor"] == [2, 16] and padded["descriptor"] == [1, 7]
+     assert len(reader.samples) == 12 and reader.record(10)["descriptor"] == [4, 28]
++    assert reader.record(10)["inputs"]["query_start_loc"].tolist() == [0, 7, 14, 21, 21]
+     assert not torch.equal(reader.record(0)["graph"], reader.record(1)["graph"])
+ 
+ 
+@@ -184,9 +185,12 @@ def test_full_geometry_actual_capture_to_multigeneration_store_checker(monkeypat
+         "missing_kv",
+         "string_kv",
+         "dtype",
++        "input_dtype",
++        "causal",
+         "hidden_width",
+         "positions",
+         "query",
++        "padded_query_both_arms",
+         "epoch",
+         "padding",
+         "scenario",
+@@ -208,7 +212,7 @@ def test_real_producer_artifact_mutations_never_pass(monkeypatch, tmp_path, dama
+     writer = CollectionWriter(target, copy.deepcopy(reader.header))
+     for i in range(len(reader.samples) - (1 if damage == "truncated" else 0)):
+         r = reader.record(i)
+-        if i == (10 if damage == "padding" else 1):
++        if i == (10 if damage in ("padding", "padded_query_both_arms") else 1):
+             if damage == "exact":
+                 r["exact"][0] = -1
+             if damage in ("actual_table", "reference_table"):
+@@ -221,12 +225,22 @@ def test_real_producer_artifact_mutations_never_pass(monkeypatch, tmp_path, dama
+                 r["pre_kv"] = {k: "placeholder" for k in r["pre_kv"]}
+             if damage == "dtype":
+                 r["pre_kv"][LAYER + "/0"] = r["pre_kv"][LAYER + "/0"].float()
++            if damage == "input_dtype":
++                # Equal values on both arms must not hide the wrong ABI dtype.
++                r["inputs"]["input_ids"] = r["inputs"]["input_ids"].long()
++                r["reference_inputs"]["input_ids"] = r["reference_inputs"]["input_ids"].long()
++            if damage == "causal":
++                for metadata in (r["actual_metadata"], r["reference_metadata"]):
++                    metadata[LAYER]["causal"] = True
+             if damage == "hidden_width":
+                 r["graph"] = r["graph"][:, :1].contiguous()
+             if damage == "positions":
+                 r["inputs"]["positions"][0] += 1
+             if damage == "query":
+                 r["inputs"]["query_start_loc"][-1] -= 1
++            if damage == "padded_query_both_arms":
++                for field in ("inputs", "reference_inputs"):
++                    r[field]["query_start_loc"][-1] = 28
+             if damage == "epoch":
+                 r["epoch"] = 0
+             if damage == "padding":
+diff --git a/tests/ut/spec_decode/test_graph_repair7.py b/tests/ut/spec_decode/test_graph_repair7.py
+index 541bd375c..a5b251e16 100644
+--- a/tests/ut/spec_decode/test_graph_repair7.py
++++ b/tests/ut/spec_decode/test_graph_repair7.py
+@@ -104,6 +104,66 @@ def test_string_false_capture_does_not_install_sink(monkeypatch):
+     assert not hasattr(owner, "_draft_graph_output_references")
+ 
+ 
++def test_graph_failure_after_replay_keeps_backing_quarantined(monkeypatch):
++    """A possibly submitted Graph reader must not see abort-time backing writes."""
++    import torch
++
++    from tests.ut.spec_decode import test_graph_repair4_integration as integration
++
++    owner, _, manager, descriptors, _ = integration._lifetime_fixture(monkeypatch)
++    integration._batch(owner, 1)
++    with pytest.raises(RuntimeError, match="native submission uncertain"):
++        with owner._draft_window_proposal_scope(owner.input_batch, dummy_run=False, is_profile=False):
++            inputs = integration._publish_in_scope(owner, descriptors[1])
++            assert manager.run_fullgraph(descriptors[1]) is None
++            before = owner._draft_window_runtime_state.workspace.window_block_table.clone()
++            assert torch.count_nonzero(before)
++            raise RuntimeError("native submission uncertain")
++
++    state = owner._draft_window_runtime_state
++    assert state.workspace.bound_identity == inputs.identity
++    torch.testing.assert_close(state.workspace.window_block_table, before)
++    assert state.quarantined_identity == inputs.identity
++    assert owner._draft_window_graph_submission_uncertain is True
++    assert owner._draft_window_live_inputs is None
++    integration._batch(owner, 1)
++    with pytest.raises(RuntimeError, match="quarantined"):
++        with owner._draft_window_proposal_scope(owner.input_batch, dummy_run=False, is_profile=False):
++            integration._publish_in_scope(owner, descriptors[1])
++
++
++def test_local_candidate_runner_requires_manifest_before_any_launch(tmp_path):
++    from tools.p7x_graph_repair6_runner import run_case
++
++    plan = {
++        "schema": "repair7-case-plan-v1",
++        "publication_status": "LOCAL_COMMITTED_CANDIDATE",
++        "remote_publication": "NOT_PERFORMED",
++        "cases": {"CONFIG": {"argv": ["python", "-c", "raise AssertionError('launched')"]}},
++    }
++    with pytest.raises(ValueError, match="local candidate manifest missing"):
++        run_case(plan, "CONFIG", tmp_path / "out")
++    assert not (tmp_path / "out").exists()
++
++
++def test_local_candidate_runner_rejects_changed_manifest(tmp_path):
++    from tools.p7x_graph_repair6_runner import run_case
++
++    manifest = tmp_path / "local-candidate-manifest.json"
++    manifest.write_text('{"schema":"repair7-local-candidate-v1"}\n')
++    plan = {
++        "schema": "repair7-case-plan-v1",
++        "publication_status": "LOCAL_COMMITTED_CANDIDATE",
++        "remote_publication": "NOT_PERFORMED",
++        "local_candidate_manifest": str(manifest),
++        "local_candidate_manifest_sha256": "0" * 64,
++        "cases": {"CONFIG": {"argv": ["python", "-c", "raise AssertionError('launched')"]}},
++    }
++    with pytest.raises(ValueError, match="local candidate manifest changed"):
++        run_case(plan, "CONFIG", tmp_path / "out")
++    assert not (tmp_path / "out").exists()
++
++
+ def test_real_numeric_sentinel_is_not_full_matrix(monkeypatch, tmp_path):
+     from tests.ut.spec_decode.test_graph_repair6_numeric_pipeline import joined, produce
+     from tools.p7x_graph_repair6 import joint
+@@ -271,3 +331,56 @@ def test_target_final_join_real_controlled_producer(monkeypatch, tmp_path, damag
+         assert result["status"] == "INVALID_EVIDENCE", result
+     else:
+         assert result["comparison"]["complete_pairs"] == 1, result
++
++
++def test_target4_join_explicit_numeric_arm_keeps_original_execution(monkeypatch, tmp_path):
++    import copy
++
++    from tests.ut.spec_decode.test_graph_repair4_target import tool as base
++    from tests.ut.spec_decode.test_graph_repair5_contracts import load
++    from tests.ut.spec_decode.test_graph_repair5_producers import controlled_runner
++    from tests.ut.spec_decode.test_graph_repair6_review import execution
++    from tools.p7x_graph_repair6_storage import CollectionReader, atomic_json
++    from tools.p7x_graph_repair7 import target_join
++
++    tool = load("p7x_graph_repair5_target")
++    monkeypatch.setattr(tool, "_base", lambda: base)
++    plan = dict(run_id="r", commit="a" * 40, cases={})
++    for arm, mode, name in (("OFF", "A0", "TARGET4_OFF"), ("ON", "B", "NUMERIC_TARGET4")):
++        identity = dict(run_id="r", case_id=name, attempt_id="1", source_sha="a" * 40,
++                        source_tree="b" * 40, process_id=7, engine_id=8, driver_mode=mode)
++        runner = controlled_runner(monkeypatch, padded_sizes=(1, 2, 4))
++        runner.model.config = SimpleNamespace(hidden_size=2, vocab_size=4)
++        runner.model_state.attn_metadata = {}
++        fixture = tool.ControlledTarget(runner, fixture_id="host", arm=arm,
++                                        scheduler=SimpleNamespace(requests={}, running=[], waiting=[]),
++                                        identity=identity, profile="target4", bounded_store=True)
++        artifact = tmp_path / name / "controlled-target.json"
++        artifact.parent.mkdir()
++        fixture.execute(artifact)
++        campaign, launcher, expected = execution(artifact, CollectionReader(artifact).header["identity"])
++        if arm == "ON":
++            expected["argv"] += ["--repair6-numeric-reference", "--repair6-target-store"]
++            expected["launch_argv"] = ["launch", "--", *expected["argv"]]
++            launcher["argv"] = expected["argv"]
++        plan["cases"][name] = expected
++        atomic_json(tmp_path / name / "campaign.json", campaign)
++        atomic_json(tmp_path / "launchers" / name / "launcher.json", launcher)
++    result = target_join(tmp_path, plan, "TARGET4", {}, on_case="NUMERIC_TARGET4")
++    assert result["status"] == "SCOPED_TARGET_EXECUTION_AND_NUMERIC_VALID", result
++    assert result["comparison"]["complete_pairs"] == 12
++    assert result["execution"][1]["case_id"] == "NUMERIC_TARGET4"
++    assert result["authorized_device_acceptance"] is False
++    for damage in ("prefix", "profile", "mode", "missing_numeric_flag"):
++        bad = copy.deepcopy(plan)
++        selected = bad["cases"]["NUMERIC_TARGET4"]
++        if damage == "prefix":
++            selected["argv"] += ["--repair6-target-prefix", "3"]
++        if damage == "profile":
++            selected["capture_profile"] = "base"
++        if damage == "mode":
++            selected["acceptance_identity"]["driver_mode"] = "A0"
++        if damage == "missing_numeric_flag":
++            selected["argv"].remove("--repair6-numeric-reference")
++        rejected = target_join(tmp_path, bad, "TARGET4", {}, on_case="NUMERIC_TARGET4")
++        assert rejected["status"] == "INVALID_EVIDENCE", rejected
+diff --git a/tests/ut/spec_decode/test_graph_runner_entrypoint.py b/tests/ut/spec_decode/test_graph_runner_entrypoint.py
+new file mode 100644
+index 000000000..0f440424b
+--- /dev/null
++++ b/tests/ut/spec_decode/test_graph_runner_entrypoint.py
+@@ -0,0 +1,44 @@
++"""The committed runner must boot from its script path without shadowing stdlib."""
++
++import json
++import os
++import subprocess
++import sys
++from pathlib import Path
++
++
++def test_direct_runner_imports_torch_and_executes_host_case(tmp_path):
++    source = Path(__file__).resolve().parents[3]
++    plan = tmp_path / "plan.json"
++    plan.write_text(
++        json.dumps(
++            {
++                "schema": "host-entrypoint-fixture",
++                "publication_status": "VERIFIED",
++                "run_id": "host-bootstrap",
++                "commit": "host",
++                "tree": "host",
++                "cases": {
++                    "P0": {
++                        "argv": [sys.executable, "-c", "print('host bootstrap ok')"],
++                        "timeout_seconds": 10,
++                        "resource_policy": {"minimum_launch_free_bytes": 0},
++                    }
++                },
++            }
++        )
++    )
++    env = os.environ.copy()
++    env["TORCH_DEVICE_BACKEND_AUTOLOAD"] = "0"
++    result = subprocess.run(
++        [sys.executable, str(source / "tools/p7x_graph_repair6_runner.py"),
++         "--plan", str(plan), "--case-id", "P0", "--output", str(tmp_path / "out")],
++        env=env,
++        cwd=tmp_path,
++        capture_output=True,
++        text=True,
++        timeout=90,
++    )
++    assert result.returncode == 0, result.stderr
++    record = json.loads((tmp_path / "out/P0/runner-result.json").read_text())
++    assert record["status"] == "SCOPED_COMMANDS_ACCEPTED"
+diff --git a/tests/ut/spec_decode/test_graph_user_admission.py b/tests/ut/spec_decode/test_graph_user_admission.py
+new file mode 100644
+index 000000000..f219c2e68
+--- /dev/null
++++ b/tests/ut/spec_decode/test_graph_user_admission.py
+@@ -0,0 +1,107 @@
++"""Host checks for the user authorized, machine observed TP1 admission path."""
++
++import copy
++import json
++from types import SimpleNamespace
++
++import pytest
++
++
++@pytest.mark.parametrize(
++    "damage",
++    [None, "owner_claim", "visibility", "mapping", "stale", "expired", "occupied"],
++)
++def test_user_admission_keeps_authorization_and_mapping_separate(tmp_path, monkeypatch, damage):
++    from tools.p7x_graph_repair5_evidence import file_sha
++    from tools.p7x_graph_repair7_device import validate_receipt
++
++    authorization = tmp_path / "user-authorization.json"
++    authorization.write_text(
++        json.dumps(
++            dict(
++                schema="mrv2-user-device-authorization-v1",
++                authority="USER_INSTRUCTION_NO_ADMIN_SIGNATURE",
++                host_phy_ids=list(range(8)),
++                deadline_epoch_seconds=100,
++            )
++        )
++    )
++    mapping = tmp_path / "mapping.txt"
++    mapping.write_text("0 0 0 0 Ascend910\n")
++    resources = tmp_path / "resources.txt"
++    resources.write_text("No running processes found in NPU 0\n")
++    probe = tmp_path / "probe.json"
++    probe.write_text(
++        json.dumps(
++            dict(
++                pid=42,
++                rc=0,
++                visibility="0",
++                stdout='{"value": 1024.0, "logical_device": 0}',
++                observations=[dict(smi_mentions_pid=True)],
++            )
++        )
++    )
++    process = tmp_path / "process.txt"
++    process.write_text("| 0       0 | 42 | probe | 123 | 42 |\n")
++
++    def evidence(path):
++        return dict(path=str(path), sha256=file_sha(path))
++
++    state = dict(
++        namespace="mnt:test",
++        boot_id="host",
++        visibility={"ASCEND_RT_VISIBLE_DEVICES": "0", "ASCEND_VISIBLE_DEVICES": None},
++        nodes={"/dev/davinci0": dict(major=234, minor=0)},
++        mapping_command=dict(rc=0, stdout=mapping.read_text()),
++    )
++    receipt = dict(
++        schema="repair7-user-authorized-device-v1",
++        run_id="r",
++        user_authorization=evidence(authorization),
++        issued_at=1,
++        expires_at=99,
++        host_phy_id=0,
++        tp=1,
++        allocated_nodes=state["nodes"],
++        namespace=state["namespace"],
++        boot_id=state["boot_id"],
++        visibility=state["visibility"],
++        mapping_evidence=[evidence(mapping)],
++        resource_evidence=[evidence(resources)],
++        resource_observed_at=10,
++        probe=dict(
++            host_pid=42,
++            container_pid=42,
++            command=["probe"],
++            start_ns=1,
++            end_ns=2,
++            host_phy_id=0,
++            status="EXITED",
++            returncode=0,
++            host_process_evidence=evidence(process),
++            pid_namespace_evidence=evidence(probe),
++        ),
++    )
++    receipt, state = copy.deepcopy(receipt), copy.deepcopy(state)
++    live = resources.read_text() if damage != "occupied" else "Process id 999 in NPU 0"
++    monkeypatch.setattr(
++        "tools.p7x_graph_repair7_device.subprocess.run",
++        lambda *args, **kwargs: SimpleNamespace(returncode=0, stdout=live),
++    )
++    if damage == "owner_claim":
++        receipt["allocation_owner"] = "fake admin"
++    elif damage == "visibility":
++        state["visibility"]["ASCEND_RT_VISIBLE_DEVICES"] = "1"
++    elif damage == "mapping":
++        state["mapping_command"]["stdout"] = "0 0 1 1 Ascend910"
++    elif damage == "stale":
++        receipt["resource_observed_at"] = -100
++    elif damage == "expired":
++        receipt["expires_at"] = 101
++    if damage:
++        with pytest.raises(ValueError):
++            validate_receipt(receipt, state, "r", now=50)
++    else:
++        result = validate_receipt(receipt, state, "r", now=50)
++        assert result["status"] == "ADMITTED_BY_USER_AUTHORIZATION_AND_MACHINE_EVIDENCE"
+diff --git a/tools/p7x_graph_local_candidate.py b/tools/p7x_graph_local_candidate.py
+new file mode 100644
+index 000000000..ee9e2a37e
+--- /dev/null
++++ b/tools/p7x_graph_local_candidate.py
+@@ -0,0 +1,231 @@
++#!/usr/bin/env python3
++# SPDX-License-Identifier: Apache-2.0
++"""Audited local-commit plan and per-case device binding for Repair7 descendants.
++
++This path never represents a local commit as a verified remote publication.
++Preparation is Host only. Binding still requires the committed device receipt
++validator and a fresh receipt for the selected case.
++"""
++
++from __future__ import annotations
++
++import argparse
++import hashlib
++import json
++import subprocess
++import sys
++from pathlib import Path
++
++if __name__ == "__main__":
++    sys.path[:] = [p for p in sys.path if Path(p or ".").resolve() != Path(__file__).parent.resolve()]
++    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
++
++BASE_SHA = "7a9f4aae1ebe5c5f3d4876ec9b49926949dfae14"
++VLLM_SHA = "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
++VLLM_TREE = "f3e320f8ae2e9a30e57a3c8dccfac94fcae93bee"
++FIXTURE_SHA = "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
++STATUS = "LOCAL_COMMITTED_CANDIDATE"
++
++
++def digest(path: Path) -> str:
++    sha = hashlib.sha256()
++    with path.open("rb") as stream:
++        for block in iter(lambda: stream.read(4 << 20), b""):
++            sha.update(block)
++    return sha.hexdigest()
++
++
++def _git(repo: Path, *args: str) -> str:
++    return subprocess.check_output(["git", "-C", str(repo), *args], text=True).strip()
++
++
++def _identity(repo: Path, sha: str, tree: str, *, ancestor: str | None = None) -> None:
++    if _git(repo, "rev-parse", "HEAD") != sha or _git(repo, "rev-parse", "HEAD^{tree}") != tree:
++        raise ValueError("local candidate commit/tree mismatch")
++    if _git(repo, "status", "--porcelain", "--untracked-files=all"):
++        raise ValueError("local candidate checkout is dirty")
++    if ancestor is not None:
++        subprocess.run(["git", "-C", str(repo), "merge-base", "--is-ancestor", ancestor, sha], check=True)
++
++
++def _cases_sha(plan: dict) -> str:
++    return hashlib.sha256(json.dumps(plan["cases"], sort_keys=True, separators=(",", ":")).encode()).hexdigest()
++
++
++def validate_local_plan(plan: dict) -> dict:
++    if plan.get("publication_status") != STATUS or plan.get("remote_publication") != "NOT_PERFORMED":
++        raise ValueError("not a local committed candidate plan")
++    if plan.get("schema") != "repair7-case-plan-v1":
++        raise ValueError("local candidate requires Repair7 case schema")
++    if not plan.get("local_candidate_manifest") or not plan.get("local_candidate_manifest_sha256"):
++        raise ValueError("local candidate manifest missing")
++    path = Path(plan["local_candidate_manifest"])
++    if digest(path) != plan["local_candidate_manifest_sha256"]:
++        raise ValueError("local candidate manifest changed")
++    manifest = json.loads(path.read_text())
++    if manifest.get("schema") != "repair7-local-candidate-v1":
++        raise ValueError("unknown local candidate manifest")
++    if (manifest.get("source_sha"), manifest.get("source_tree"), manifest.get("run_id")) != (
++        plan["commit"], plan["tree"], plan["run_id"]
++    ):
++        raise ValueError("local manifest/source/run mismatch")
++    if manifest.get("baseline_sha") != BASE_SHA or manifest.get("cases_sha256") != _cases_sha(plan):
++        raise ValueError("local baseline or cases changed")
++    repo = Path(manifest["source_checkout"])
++    vllm = Path(manifest["vllm_checkout"])
++    _identity(repo, plan["commit"], plan["tree"], ancestor=BASE_SHA)
++    _identity(vllm, VLLM_SHA, VLLM_TREE)
++    if manifest.get("vllm_sha") != VLLM_SHA or manifest.get("vllm_tree") != VLLM_TREE:
++        raise ValueError("vLLM pin changed")
++    for rel, expected in manifest["source_files_sha256"].items():
++        if digest(repo / rel) != expected:
++            raise ValueError("local source file changed: " + rel)
++    fixture = Path(manifest["fixture_manifest"])
++    if digest(fixture) != FIXTURE_SHA:
++        raise ValueError("fixture manifest changed")
++    expected_files = json.loads(fixture.read_text())["files"]
++    verified_files = manifest.get("fixture_files", [])
++    if len(expected_files) != len(verified_files):
++        raise ValueError("fixture verification count changed")
++    for expected, verified in zip(expected_files, verified_files):
++        path = Path(expected["path"])
++        stat = path.stat()
++        if (verified.get("path"), verified.get("sha256"), verified.get("size"), verified.get("mtime_ns")) != (
++            str(path), expected["sha256"], stat.st_size, stat.st_mtime_ns
++        ):
++            raise ValueError("fixture changed since prepare: " + str(path))
++    config_path = Path(manifest["config_report"])
++    if digest(config_path) != manifest["config_report_sha256"]:
++        raise ValueError("local config report changed")
++    config = json.loads(config_path.read_text())
++    if config.get("status") != "CONFIGS_VALID" or not config.get("rows") or any(
++        row.get("status") != "SCHEMA_VALID_NOT_FRAMEWORK_PASS" for row in config["rows"]
++    ):
++        raise ValueError("local schema check did not pass")
++    if {row.get("numeric_enabled") for row in config["rows"]} != {False, True}:
++        raise ValueError("local schema check lacks enabled and disabled diagnostic cases")
++    evidence = manifest.get("host_evidence", [])
++    if not evidence or any(
++        row.get("status") != "PASS" or digest(Path(row["path"])) != row["sha256"] for row in evidence
++    ):
++        raise ValueError("local Host test evidence missing or changed")
++    if {row.get("label") for row in evidence} < {"graph_quarantine", "local_admission"}:
++        raise ValueError("local Host test coverage missing")
++    return {
++        "status": STATUS,
++        "source_sha": plan["commit"],
++        "source_tree": plan["tree"],
++        "device_validation": "NOT_INFERRED",
++    }
++
++
++def prepare(args: argparse.Namespace) -> None:
++    from tools.p7x_graph_repair7 import config_matrix
++    from tools.p7x_graph_repair7_campaign import build_plan
++
++    if args.output.exists():
++        raise ValueError("new local candidate output directory required")
++    sha, tree = _git(args.repo, "rev-parse", "HEAD"), _git(args.repo, "rev-parse", "HEAD^{tree}")
++    _identity(args.repo, sha, tree, ancestor=BASE_SHA)
++    _identity(args.vllm, VLLM_SHA, VLLM_TREE)
++    fixture = args.inputs / "fixture_manifest.json"
++    if digest(fixture) != FIXTURE_SHA:
++        raise ValueError("fixture manifest mismatch")
++    verified_files = []
++    for row in json.loads(fixture.read_text())["files"]:
++        path = Path(row["path"])
++        stat = path.stat()
++        if digest(path) != row["sha256"]:
++            raise ValueError("fixture file changed: " + str(path))
++        verified_files.append(
++            {"path": str(path), "sha256": row["sha256"], "size": stat.st_size, "mtime_ns": stat.st_mtime_ns}
++        )
++    host_evidence = json.loads(args.host_evidence.read_text())
++    if not host_evidence or any(
++        row.get("status") != "PASS" or digest(Path(row["path"])) != row["sha256"] for row in host_evidence
++    ):
++        raise ValueError("Host evidence missing or changed")
++    if {row.get("label") for row in host_evidence} < {"graph_quarantine", "local_admission"}:
++        raise ValueError("Host evidence coverage missing")
++    plan = build_plan(args.repo, args.inputs, args.output, args.vllm, sys.executable, sha, tree, args.run_id)
++    config = config_matrix(plan, framework=False)
++    if config.get("status") != "CONFIGS_VALID":
++        raise ValueError("local schema configuration failed: " + config.get("status", "UNKNOWN"))
++    args.output.mkdir(parents=True)
++    config_path = args.output / "config-schema.json"
++    config_path.write_text(json.dumps(config, indent=2) + "\n")
++    source_files = [
++        "tools/p7x_graph_local_candidate.py",
++        "tools/p7x_graph_repair6_runner.py",
++        "tools/p7x_graph_repair7_device.py",
++        "tools/p7x_graph_repair7_campaign.py",
++        "tools/p7x_graph_repair7.py",
++        "tools/p7x_graph_repair2.py",
++        "vllm_ascend/worker/v2/spec_decode/draft_window.py",
++        "vllm_ascend/worker/v2/spec_decode/draft_window_eager.py",
++    ]
++    manifest = {
++        "schema": "repair7-local-candidate-v1",
++        "source_checkout": str(args.repo.resolve()),
++        "source_sha": sha,
++        "source_tree": tree,
++        "baseline_sha": BASE_SHA,
++        "vllm_checkout": str(args.vllm.resolve()),
++        "vllm_sha": VLLM_SHA,
++        "vllm_tree": VLLM_TREE,
++        "run_id": args.run_id,
++        "cases_sha256": _cases_sha(plan),
++        "source_files_sha256": {rel: digest(args.repo / rel) for rel in source_files},
++        "fixture_manifest": str(fixture.resolve()),
++        "fixture_files": verified_files,
++        "config_report": str(config_path.resolve()),
++        "config_report_sha256": digest(config_path),
++        "host_evidence": host_evidence,
++        "remote_publication": "NOT_PERFORMED",
++        "device_validation": "NOT_RUN",
++    }
++    manifest_path = args.output / "local-candidate-manifest.json"
++    manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
++    plan.update(
++        publication_status=STATUS,
++        remote_publication="NOT_PERFORMED",
++        local_candidate_manifest=str(manifest_path.resolve()),
++        local_candidate_manifest_sha256=digest(manifest_path),
++        readiness="HOST_PREPARED; fresh per-case device receipt still required",
++    )
++    plan_path = args.output / "case-plan.json"
++    plan_path.write_text(json.dumps(plan, indent=2) + "\n")
++    validate_local_plan(plan)
++
++
++def bind(args: argparse.Namespace) -> None:
++    from tools.p7x_graph_repair7_device import validate_admission
++
++    if args.output.exists():
++        raise ValueError("new admitted plan output required")
++    plan = json.loads(args.plan.read_text())
++    validate_local_plan(plan)
++    if args.case_id not in plan["cases"] or not plan["cases"][args.case_id].get("requires_device_admission"):
++        raise ValueError("case does not require device binding")
++    plan.update(device_admission_receipt=str(args.receipt.resolve()), device_admission_sha256=digest(args.receipt))
++    validate_admission(plan, args.case_id)
++    args.output.write_text(json.dumps(plan, indent=2) + "\n")
++
++
++def main() -> None:
++    parser = argparse.ArgumentParser(description=__doc__)
++    sub = parser.add_subparsers(dest="command", required=True)
++    p = sub.add_parser("prepare")
++    for name in ("repo", "vllm", "inputs", "output", "host-evidence"):
++        p.add_argument("--" + name, type=Path, required=True)
++    p.add_argument("--run-id", required=True)
++    b = sub.add_parser("bind")
++    for name in ("plan", "receipt", "output"):
++        b.add_argument("--" + name, type=Path, required=True)
++    b.add_argument("--case-id", required=True)
++    args = parser.parse_args()
++    (prepare if args.command == "prepare" else bind)(args)
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/tools/p7x_graph_repair2.py b/tools/p7x_graph_repair2.py
+index e2203eae7..91939b00d 100644
+--- a/tools/p7x_graph_repair2.py
++++ b/tools/p7x_graph_repair2.py
+@@ -1035,6 +1035,7 @@ def run_case(args):
+     llm = session = target_probe = full_target_probe = lifecycle_probe = profile_probe = numeric_probe = (
+         normal_probe
+     ) = None
++    spec = None
+     profile_mode = getattr(args, "repair5_profile", "none")
+     capture_profile = getattr(args, "repair5_capture_profile", "base")
+     config = build_llm_kwargs(args)
+@@ -1269,7 +1270,9 @@ def run_case(args):
+     finally:
+         from tools.p7x_graph_repair6_submission import needs_quarantine
+ 
+-        uncertain = needs_quarantine(lifecycle_probe, numeric_probe, normal_probe)
++        graph_uncertain = bool(getattr(spec, "_draft_window_graph_submission_uncertain", False))
++        record["graph_submission_uncertain"] = graph_uncertain
++        uncertain = graph_uncertain or needs_quarantine(lifecycle_probe, numeric_probe, normal_probe)
+         if profile_probe is not None and not uncertain:
+             try:
+                 profile_probe.__exit__(None, None, None)
+@@ -1283,10 +1286,12 @@ def run_case(args):
+                     record[name + "_error"] = repr(error)
+         if lifecycle_probe is not None:
+             try:
++                if graph_uncertain:
++                    lifecycle_probe.poisoned = True
+                 lifecycle_probe.__exit__(None, None, None)
+             except Exception as error:
+                 record["lifecycle_probe_error"] = repr(error)
+-        uncertain = needs_quarantine(lifecycle_probe, numeric_probe, normal_probe)
++        uncertain = graph_uncertain or needs_quarantine(lifecycle_probe, numeric_probe, normal_probe)
+         if full_target_probe is not None and not uncertain:
+             try:
+                 full_target_probe.__exit__(None, None, None)
+@@ -1337,7 +1342,7 @@ def run_case(args):
+         except OSError as error:
+             record["diagnostic_artifact_error"] = repr(error)
+         _write(output / "campaign.json", record)
+-        if needs_quarantine(lifecycle_probe, numeric_probe, normal_probe):
++        if graph_uncertain or needs_quarantine(lifecycle_probe, numeric_probe, normal_probe):
+             # Diagnostic child only: uncertain submission is never reused or
+             # fed to normal engine teardown. External launch/watchdog owns it.
+             record["diagnostic_quarantine"] = "PROCESS_EXIT_74_NO_REUSE"
+diff --git a/tools/p7x_graph_repair4_fixture.py b/tools/p7x_graph_repair4_fixture.py
+index d37d2fa1c..adeeb64ce 100644
+--- a/tools/p7x_graph_repair4_fixture.py
++++ b/tools/p7x_graph_repair4_fixture.py
+@@ -898,6 +898,11 @@ def device_worker(manifest_path: Path, output: Path) -> int:
+         sys.path.insert(0, str(ROOT))
+         import torch
+         import torch_npu
++
++        # Match model-worker bootstrap: register Ascend ops before attention
++        # imports device_op, whose Triton imports otherwise re-enter ops.
++        import vllm_ascend.ops  # noqa: F401
++        import vllm.v1.worker.gpu.spec_decode.speculator  # noqa: F401
+         from vllm.config import VllmConfig, set_current_vllm_config
+         from vllm.config.compilation import CompilationConfig, CUDAGraphMode
+         from vllm.forward_context import ForwardContext, override_forward_context
+diff --git a/tools/p7x_graph_repair6_numeric_check.py b/tools/p7x_graph_repair6_numeric_check.py
+index b4aeb771c..dd14e706d 100644
+--- a/tools/p7x_graph_repair6_numeric_check.py
++++ b/tools/p7x_graph_repair6_numeric_check.py
+@@ -140,11 +140,14 @@ def validate_sample(r, header, case):
+         all(torch.equal(tensor(inputs[k]), tensor(r["reference_inputs"][k])) for k in inputs),
+         "Graph/reference input mismatch",
+     )
+-    ids = tensor(inputs["input_ids"], [tokens], "torch.int64")
++    # Pinned vLLM InputBuffers stores token IDs as int32; positions stay int64.
++    ids = tensor(inputs["input_ids"], [tokens], "torch.int32")
+     positions = tensor(inputs["positions"], [tokens], "torch.int64")
+     slots = tensor(inputs["slot_mapping"], [tokens])
+     query = tensor(inputs["query_start_loc"], [padded + 1])
+-    require(query.tolist() == [i * 7 for i in range(padded + 1)], "query layout mismatch")
++    # The real DSpark input kernel clamps cumulative query offsets after
++    # active rows; FIA metadata separately describes every padded query row.
++    require(query.tolist() == [min(i, active) * 7 for i in range(padded + 1)], "query layout mismatch")
+     require(bool((ids[: active * 7] >= 0).all()), "invalid input token")
+     for row, e in enumerate(r["exact"]):
+         expected_positions = list(range(e - 7, e))
+@@ -176,7 +179,9 @@ def validate_sample(r, header, case):
+                 "actual/reference lengths mismatch",
+             )
+             require(
+-                m["query"] == [i * 7 for i in range(1, padded + 1)] and m["causal"] is True, "query/causal mismatch"
++                # Frozen DSpark fixture: all draft layers use full, non-causal attention.
++                m["query"] == [i * 7 for i in range(1, padded + 1)] and m["causal"] is False,
++                "query/causal mismatch",
+             )
+             require(torch.equal(tensor(m["slot"], [tokens]), slots), "metadata write identity values mismatch")
+     backing = r["backing"]
+diff --git a/tools/p7x_graph_repair6_runner.py b/tools/p7x_graph_repair6_runner.py
+index a45f220f9..11320cd3b 100644
+--- a/tools/p7x_graph_repair6_runner.py
++++ b/tools/p7x_graph_repair6_runner.py
+@@ -18,6 +18,8 @@ import time
+ from pathlib import Path
+ 
+ if __name__ == "__main__":
++    # Direct script execution otherwise exposes tools/bisect as stdlib bisect.
++    sys.path[:] = [p for p in sys.path if Path(p or ".").resolve() != Path(__file__).parent.resolve()]
+     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+ 
+ from tools.p7x_graph_repair6_watchdog import stop_owned_tree
+@@ -57,7 +59,11 @@ def execute(argv, directory, timeout):
+ 
+ def run_case(plan, case_id, root):
+     case = plan["cases"][case_id]
+-    if plan.get("publication_status") != "VERIFIED":
++    if plan.get("publication_status") == "LOCAL_COMMITTED_CANDIDATE":
++        from tools.p7x_graph_local_candidate import validate_local_plan
++
++        validate_local_plan(plan)
++    elif plan.get("publication_status") != "VERIFIED":
+         raise ValueError("PRE_PUBLICATION plan cannot execute; verify published source and regenerate")
+     if plan.get("schema") == "repair7-case-plan-v1" and case.get("requires_device_admission"):
+         from tools.p7x_graph_repair7_device import validate_admission
+diff --git a/tools/p7x_graph_repair7.py b/tools/p7x_graph_repair7.py
+index 52fefec73..5ca484b2d 100644
+--- a/tools/p7x_graph_repair7.py
++++ b/tools/p7x_graph_repair7.py
+@@ -62,7 +62,7 @@ def config_matrix(plan, *, framework=False):
+     )
+ 
+ 
+-def target_join(root, plan, prefix, device):
++def target_join(root, plan, prefix, device, *, on_case=None):
+     """Recompute tensors and external execution; never trust a prior PASS JSON.
+ 
+     Relocation changes only the local evidence path check, not frozen argv or
+@@ -75,10 +75,25 @@ def target_join(root, plan, prefix, device):
+     result = dict(status="INVALID_EVIDENCE", execution=[], device=device, authorization="NOT_VERIFIED")
+     try:
+         require(prefix in ("G4F", "TARGET4"), "unknown profile")
++        if on_case is not None:
++            require(prefix == "TARGET4" and on_case == "NUMERIC_TARGET4", "unsupported Target arm reuse")
++            selected = plan["cases"][on_case]
++            require(
++                selected.get("capture_profile") == "target4"
++                and "--repair6-numeric-reference" in selected["argv"]
++                and "--repair6-target-store" in selected["argv"]
++                and "--repair6-target-prefix" not in selected["argv"]
++                and selected.get("numeric_samples") is None,
++                "reused Target arm must declare the full numeric Target4 producer",
++            )
++        result["arm_case_ids"] = {"OFF": prefix + "_OFF", "ON": on_case or prefix + "_ON"}
++        result["on_arm_scope"] = (
++            "CONTROLLED_TARGET_WITH_SERIALIZED_CONTINUOUS_REFERENCE" if on_case else "DECLARED_TARGET_ARM"
++        )
+         paths = []
+         arm_identities = []
+         for arm, mode in (("OFF", "A0"), ("ON", "B")):
+-            name = prefix + "_" + arm
++            name = result["arm_case_ids"][arm]
+             expected = copy.deepcopy(plan["cases"][name])
+             require(expected["acceptance_identity"]["driver_mode"] == mode, "arm substitution")
+             artifact = root / name / "controlled-target.json"
+@@ -140,6 +155,7 @@ def main():
+     for name in ("root", "plan", "device", "output"):
+         j.add_argument("--" + name, type=Path, required=True)
+     j.add_argument("--profile", choices=("G4F", "TARGET4"), required=True)
++    j.add_argument("--on-case", choices=("NUMERIC_TARGET4",), help="Explicitly reuse its complete controlled Target arm")
+     a = parser.parse_args()
+     plan = json.loads(a.plan.read_text())
+     if a.command == "config-check":
+@@ -148,7 +164,7 @@ def main():
+         import torch
+ 
+         torch.set_num_threads(2)
+-        result = target_join(a.root, plan, a.profile, json.loads(a.device.read_text()))
++        result = target_join(a.root, plan, a.profile, json.loads(a.device.read_text()), on_case=a.on_case)
+     atomic_json(a.output, result)
+     return 0 if result["status"] in ("CONFIGS_VALID", "SCOPED_TARGET_EXECUTION_AND_NUMERIC_VALID") else 2
+ 
+diff --git a/tools/p7x_graph_repair7_device.py b/tools/p7x_graph_repair7_device.py
+index 59f3ebe54..6825cf9b8 100644
+--- a/tools/p7x_graph_repair7_device.py
++++ b/tools/p7x_graph_repair7_device.py
+@@ -1,10 +1,11 @@
+ #!/usr/bin/env python3
+ # SPDX-License-Identifier: Apache-2.0
+-"""Fail-closed, administrator-assisted physical device admission.
++"""Fail-closed physical device admission with distinct authorization sources.
+ 
+-inspect never initializes torch/NPU. A mapping receipt must be supplied by the
+-host/container allocation owner, with raw evidence hashes. This is not automatic
+-discovery of host physical IDs from container logical numbers.
++inspect never initializes torch/NPU. The original owner receipt remains valid.
++The user-authorized path requires a bounded reservation record, live mapping,
++fresh resource evidence and an observed probe PID; it does not claim an admin
++signature or infer a physical ID merely from process logical npu:0.
+ """
+ 
+ import argparse
+@@ -59,8 +60,37 @@ def inspect():
+ 
+ def validate_receipt(receipt, current, run_id, *, now=None, require_probe=True):
+     now = time.time() if now is None else now
+-    require(receipt["schema"] == "repair7-device-receipt-v1", "unknown receipt schema")
+-    require(receipt["run_id"] == run_id and receipt["allocation_owner"].strip(), "allocation identity")
++    user_authorized = receipt.get("schema") == "repair7-user-authorized-device-v1"
++    require(user_authorized or receipt.get("schema") == "repair7-device-receipt-v1", "unknown receipt schema")
++    require(receipt["run_id"] == run_id, "run identity")
++    if user_authorized:
++        require("allocation_owner" not in receipt, "user instruction is not an owner receipt")
++        record = receipt["user_authorization"]
++        require(digest(record["path"]) == record["sha256"], "changed user authorization record")
++        authorization = json.loads(Path(record["path"]).read_text())
++        require(authorization.get("schema") == "mrv2-user-device-authorization-v1", "authorization schema")
++        require(authorization.get("authority") == "USER_INSTRUCTION_NO_ADMIN_SIGNATURE", "authorization provenance")
++        require(authorization.get("host_phy_ids") == list(range(8)), "authorization scope")
++        require(now < authorization["deadline_epoch_seconds"], "user reservation expired")
++        require(receipt["expires_at"] <= authorization["deadline_epoch_seconds"], "receipt exceeds reservation")
++        require(current["visibility"] == {"ASCEND_RT_VISIBLE_DEVICES": str(receipt["host_phy_id"]), "ASCEND_VISIBLE_DEVICES": None}, "unrestricted or ambiguous visibility")
++        mapping = current.get("mapping_command", {})
++        require(mapping.get("rc") == 0, "live physical mapping unavailable")
++        physical = receipt["host_phy_id"]
++        mapped = any(
++            len(parts) >= 5 and parts[2:4] == [str(physical), str(physical)] and parts[4] == "Ascend910"
++            for parts in (line.split() for line in mapping["stdout"].splitlines())
++        )
++        require(mapped, "live npu-smi does not map selected logical/physical chip")
++        require(set(receipt["allocated_nodes"]) == {f"/dev/davinci{physical}"}, "selected node mismatch")
++        require(now - receipt["resource_observed_at"] <= 120 and now >= receipt["resource_observed_at"], "stale resource evidence")
++        resource_text = Path(receipt["resource_evidence"][0]["path"]).read_text()
++        require(f"No running processes found in NPU {physical // 2}" in resource_text, "selected NPU has another process")
++        live_resources = subprocess.run(["npu-smi", "info"], capture_output=True, text=True, timeout=15)
++        require(live_resources.returncode == 0, "live resource query failed")
++        require(f"No running processes found in NPU {physical // 2}" in live_resources.stdout, "selected NPU is occupied now")
++    else:
++        require(receipt["allocation_owner"].strip(), "allocation identity")
+     require(receipt["issued_at"] <= now < receipt["expires_at"] <= receipt["issued_at"] + 3600, "expired receipt")
+     require(type(receipt["host_phy_id"]) is int and 0 <= receipt["host_phy_id"] <= 7, "unauthorized physical device")
+     require(receipt["tp"] == 1 and len(receipt["allocated_nodes"]) == 1, "TP1 requires one allocated chip")
+@@ -69,7 +99,7 @@ def validate_receipt(receipt, current, run_id, *, now=None, require_probe=True):
+         require(receipt[key] == current[key], "mapping changed: " + key)
+     for node, geometry in receipt["allocated_nodes"].items():
+         require(current["nodes"].get(node) == geometry, "device node changed")
+-    require(receipt["mapping_evidence"] and receipt["resource_evidence"], "missing owner mapping/resource evidence")
++    require(receipt["mapping_evidence"] and receipt["resource_evidence"], "missing mapping/resource evidence")
+     for row in receipt["mapping_evidence"] + receipt["resource_evidence"]:
+         require(digest(row["path"]) == row["sha256"], "changed admission evidence")
+     if require_probe:
+@@ -80,10 +110,29 @@ def validate_receipt(receipt, current, run_id, *, now=None, require_probe=True):
+         require(probe["host_process_evidence"] and probe["pid_namespace_evidence"], "cannot link probe to host PID")
+         for row in (probe["host_process_evidence"], probe["pid_namespace_evidence"]):
+             require(digest(row["path"]) == row["sha256"], "probe evidence changed")
++        if user_authorized:
++            probe_result = json.loads(Path(probe["pid_namespace_evidence"]["path"]).read_text())
++            require(probe_result["pid"] == probe["container_pid"] and probe_result["rc"] == 0, "probe process mismatch")
++            require(probe_result["visibility"] == str(receipt["host_phy_id"]), "probe visibility mismatch")
++            require('"value": 1024.0' in probe_result["stdout"] and '"logical_device": 0' in probe_result["stdout"], "probe computation missing")
++            require(any(row["smi_mentions_pid"] for row in probe_result["observations"]), "probe PID not observed on NPU")
++            require(
++                any(
++                    len(fields) >= 5
++                    and fields[0].split() == [str(receipt["host_phy_id"] // 2), str(receipt["host_phy_id"] % 2)]
++                    and fields[1] == str(probe["host_pid"])
++                    and fields[4] == str(probe["container_pid"])
++                    for fields in (
++                        [field.strip() for field in line.strip().strip("|").split("|")]
++                        for line in Path(probe["host_process_evidence"]["path"]).read_text().splitlines()
++                    )
++                ),
++                "probe host/container PID not on selected physical chip",
++            )
+     return dict(
+-        status="ADMITTED_BY_OWNER_MAPPING_RECEIPT",
++        status="ADMITTED_BY_USER_AUTHORIZATION_AND_MACHINE_EVIDENCE" if user_authorized else "ADMITTED_BY_OWNER_MAPPING_RECEIPT",
+         physical_id=receipt["host_phy_id"],
+-        proof_boundary="owner supplied mapping/PID evidence; not independently inferred from logical ID",
++        proof_boundary="user reservation plus live npu-smi and observed probe PID; no administrator signature" if user_authorized else "owner supplied mapping/PID evidence; not independently inferred from logical ID",
+     )
+ 
+ 
+diff --git a/vllm_ascend/worker/v2/spec_decode/draft_window.py b/vllm_ascend/worker/v2/spec_decode/draft_window.py
+index c486631ed..67f86ea4f 100644
+--- a/vllm_ascend/worker/v2/spec_decode/draft_window.py
++++ b/vllm_ascend/worker/v2/spec_decode/draft_window.py
+@@ -2187,6 +2187,24 @@ class DraftWindowRuntimeState:
+         self._next_generation_id = 0
+         self._last_retired_identity: DraftWindowGenerationIdentity | None = None
+         self._pending_retirement_identity: DraftWindowGenerationIdentity | None = None
++        self._quarantined_identity: DraftWindowGenerationIdentity | None = None
++
++    @property
++    def quarantined_identity(self) -> DraftWindowGenerationIdentity | None:
++        return self._quarantined_identity
++
++    def quarantine_generation(self, expected_identity: DraftWindowGenerationIdentity) -> None:
++        """Keep possibly submitted Graph backing intact until process isolation.
++
++        Unknown native partial submission cannot justify another device write
++        or a completion claim. The live lease intentionally blocks reuse.
++        """
++        inputs = self._active_inputs
++        if inputs is None:
++            raise RuntimeError("cannot quarantine a generation without live inputs")
++        inputs.validate_for(expected_identity)
++        self.metadata_store.discard_for_abort(expected_identity)
++        self._quarantined_identity = expected_identity
+ 
+     def materialize(
+         self,
+@@ -2212,6 +2230,8 @@ class DraftWindowRuntimeState:
+         must advance it whenever that mapping generation changes; a pointer,
+         object identity, or unrelated counter is not a valid substitute.
+         """
++        if self._quarantined_identity is not None:
++            raise RuntimeError("draft-window backing is quarantined after uncertain Graph submission")
+         _require_nonnegative_python_int(mapping_epoch, "mapping epoch")
+         if mapping_epoch <= self._last_mapping_epoch:
+             raise ValueError(
+@@ -2417,6 +2437,8 @@ class DraftWindowRuntimeState:
+             raise
+ 
+     def retire_generation(self, expected_identity: DraftWindowGenerationIdentity) -> None:
++        if self._quarantined_identity is not None:
++            raise RuntimeError("cannot retire quarantined draft-window backing")
+         inputs = self._active_inputs
+         if inputs is None:
+             raise RuntimeError("cannot use a retired lease")
+@@ -2427,6 +2449,8 @@ class DraftWindowRuntimeState:
+         expected_identity: DraftWindowGenerationIdentity,
+     ) -> bool:
+         """Poll an explicitly retired reader without allowing early reuse."""
++        if self._quarantined_identity is not None:
++            raise RuntimeError("cannot poll quarantined draft-window backing")
+         if self._last_retired_identity == expected_identity:
+             return True
+         inputs = self._active_inputs
+@@ -2449,6 +2473,8 @@ class DraftWindowRuntimeState:
+         return True
+ 
+     def abort_generation(self, expected_identity: DraftWindowGenerationIdentity) -> None:
++        if self._quarantined_identity is not None:
++            raise RuntimeError("cannot abort quarantined draft-window backing")
+         inputs = self._active_inputs
+         if inputs is None:
+             raise RuntimeError("cannot use a retired lease")
+@@ -2460,6 +2486,8 @@ class DraftWindowRuntimeState:
+         lease: DraftWindowLease,
+         expected_identity: DraftWindowGenerationIdentity,
+     ) -> None:
++        if self._quarantined_identity is not None:
++            raise RuntimeError("cannot retire quarantined draft-window backing")
+         inputs = self._active_inputs
+         if inputs is None or inputs.lease is not lease:
+             raise RuntimeError("cannot use a retired lease")
+@@ -2475,6 +2503,8 @@ class DraftWindowRuntimeState:
+             self._pending_retirement_identity = expected_identity
+ 
+     def _abort_active(self, identity: DraftWindowGenerationIdentity) -> None:
++        if self._quarantined_identity is not None:
++            raise RuntimeError("cannot clean up quarantined draft-window backing")
+         inputs = self._active_inputs
+         if inputs is None:
+             return
+diff --git a/vllm_ascend/worker/v2/spec_decode/draft_window_eager.py b/vllm_ascend/worker/v2/spec_decode/draft_window_eager.py
+index 266953c65..9cccd5fec 100644
+--- a/vllm_ascend/worker/v2/spec_decode/draft_window_eager.py
++++ b/vllm_ascend/worker/v2/spec_decode/draft_window_eager.py
+@@ -298,6 +298,8 @@ class DraftWindowEagerMixin:
+         if epoch_source is None:
+             yield
+             return
++        if self._draft_window_runtime_state.quarantined_identity is not None:
++            raise RuntimeError("draft-window backing is quarantined after uncertain Graph submission")
+         bypass_for_prefill = False
+         if not dummy_run and not is_profile:
+             bypass_for_prefill = _requires_prefill_baseline_bypass(input_batch)
+@@ -364,7 +366,14 @@ class DraftWindowEagerMixin:
+ 
+                             record_parallel_graph_retirement(self, live_inputs)
+                     else:
+-                        self._draft_window_runtime_state.abort_generation(live_inputs.identity)
++                        if hasattr(self, "_draft_window_graph_characterization"):
++                            # A native Graph replay or UPDATE can have submitted
++                            # device work before raising. Never zero or reuse its
++                            # read backing during exception unwinding.
++                            self._draft_window_graph_submission_uncertain = True
++                            self._draft_window_runtime_state.quarantine_generation(live_inputs.identity)
++                        else:
++                            self._draft_window_runtime_state.abort_generation(live_inputs.identity)
+                 elif succeeded:
+                     raise RuntimeError("eligible P4a proposal completed without consuming Draft Window inputs")
+             finally:

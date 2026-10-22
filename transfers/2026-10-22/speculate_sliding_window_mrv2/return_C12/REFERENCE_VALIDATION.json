@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-10-22T10:07:36.759729+00:00",
+  "raw_index_paths_and_sizes": 3927,
+  "collections": [
+    {
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C8_prepare_01/NUMERIC_TARGET4/numeric-reference.json",
+      "samples": 12,
+      "all_paths_exist": true
+    },
+    {
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C8_prepare_01/NUMERIC_TARGET4/controlled-target.json",
+      "samples": 12,
+      "all_paths_exist": true
+    },
+    {
+      "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C8_prepare_01/TARGET4_OFF/controlled-target.json",
+      "samples": 12,
+      "all_paths_exist": true
+    }
+  ],
+  "critical_references": [
+    "state/FINAL_PROCESS_AUDIT.json",
+    "state/BUNDLE_VERIFY_C12.json",
+    "reports/reanalysis_C10_full_01/numeric-joint.json",
+    "reports/reanalysis_C10_target4_01/target-join.json",
+    "reports/MRV2_Profiling_Summary.json",
+    "reports/RESUME.md"
+  ],
+  "status": "SERVER_REFERENCE_CHECK_PASS_NOT_USER_RECEIPT"
+}

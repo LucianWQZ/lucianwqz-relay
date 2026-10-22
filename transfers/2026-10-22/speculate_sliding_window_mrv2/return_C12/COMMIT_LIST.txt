@@ -1,0 +1,12 @@
+949afbd07c21133cd76cef43365a700cb46de3fb Quarantine Draft Window backing after uncertain Graph submission
+303ef7fe117d372d5f9463d3d79b90e56b9e695d Admit auditable local Graph candidates without publication claim
+9c73b0a8e0221db0e2a167d387594f61413e352d Admit user-reserved TP1 device with live mapping evidence
+331294578a572ba3a7e53cc29a4cc075ed86ab87 Bind probe host and container PIDs to selected chip
+931a2c5e81b1162cebdb33d25cc601c5ddbd7a90 Parse actual npu-smi combined NPU and chip process column
+1c920c3669b76f301ff9472650ceb0e842ccf03c Prevent tools bisect from shadowing stdlib in direct runner
+810b85a5b1d494fe83a686951ef1b6ecc5288c6d fix: validate continuous token IDs against pinned int32 contract
+2c550f267484360802578f340429f95f95299e33 fix: enforce frozen DSpark noncausal numeric metadata
+f3f5b3466aa0c0a92b9963589624c38c99e0bdf3 Allow audited Target4 ON reuse from full numeric producer
+c8f9a4bbddf33bc4cc02fdfe39f6aad75c6cad4a Match numeric input query padding to DSpark kernel contract
+8bdc2e2f20ac8d71aecacfe8567ae695681a797b Bootstrap Ascend ops before private FIA fixture attention imports
+d15a510c2afba62b8a0e37aa574550852079fd13 Load pinned speculator module before private FIA graph capture

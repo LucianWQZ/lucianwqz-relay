@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-22T10:07:38.331431+00:00",
+  "status": "SERVER_SELF_CHECK_PASSED_NOT_USER_RECEIPT",
+  "zip": {
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/MRV2_Server_Dev_review.zip",
+    "bytes": 1943809,
+    "sha256": "9224e2280e8e7958f79b6e5cac4b80afaa5fc517857636c10eb4b6e51aa5d421",
+    "transfer_scope": "CHAT_SUITABLE"
+  },
+  "members": 805,
+  "crc": "PASS",
+  "required_json": "PARSED",
+  "member_hashes_verified": true
+}

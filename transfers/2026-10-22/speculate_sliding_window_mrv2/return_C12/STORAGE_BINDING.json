@@ -1,0 +1,20 @@
+{
+  "schema": "mrv2-storage-binding-v1",
+  "recorded_utc": "2026-10-22T06:48:33.696681+00:00",
+  "code_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend",
+  "candidate_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates",
+  "run_root": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery",
+  "raw_root": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery",
+  "state_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/state",
+  "review_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return",
+  "run_filesystem": "ext4 /dev/mapper/openeuler-root mounted /mnt",
+  "share_filesystem": "nfs4 172.27.1.1:/Share",
+  "weight_filesystem": "nfs4 172.27.1.1:/Weight",
+  "run_write_flush_read_delete": "PASS",
+  "run_free_bytes": 22381031424,
+  "run_free_inodes": 31468438,
+  "weight_task_directory": "NOT_PRESENT_NOT_ASSIGNED",
+  "share_free_bytes": 1298508808192,
+  "quota": "NOT_AVAILABLE",
+  "selection_reason": "Previously authorized new /mnt/wenqing task directory; /mnt/share free space highly constrained; /mnt/weight/z00937950 absent. Small cases only pending per-case budget."
+}
