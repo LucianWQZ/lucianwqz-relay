@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "task_id": "PR_服务器开发交接_20261022_170641_0800_c0d3",
-  "generated_at": "2026-10-22T22:47:00+08:00",
+  "generated_at": "2026-10-22T23:18:14+0800",
   "campaign_role": "pr-handoff-publication",
   "relay": {
     "repository": "LucianWQZ/lucianwqz-relay",
     "repository_url": "https://github.com/LucianWQZ/lucianwqz-relay",
     "branch": "transfer/pr-handoff-20261022-c0d3-r2",
-    "tag": "pr-transfer-20261022-170641-c0d3-r2",
+    "tag": "pr-transfer-20261022-170641-c0d3-r3",
     "transfer_directory": "transfers/PR_20261022_170641_c0d3",
     "commit_binding": "RECORDED_AFTER_COMMIT_IN_EXTERNAL_PUBLICATION_RESULT",
     "release_binding": "RECORDED_AFTER_RELEASE_IN_EXTERNAL_PUBLICATION_RESULT",
@@ -41,11 +41,11 @@
     {
       "role": "supplement",
       "name": "PR_TRANSFER_SUPPLEMENT.zip",
-      "bytes": 35115,
-      "sha256": "ebd16538554593ae67a31fdc087b8c3ef3bab493b44f540e47b3eadea6b583a8",
+      "bytes": 35484,
+      "sha256": "4828ee66118fd384689c4b07a13570221f8308e9471cb2d842ff5ae820c8819e",
       "payload_entries": 14,
-      "payload_bytes": 78685,
-      "internal_manifest_sha256": "1be697bcf7a38894778aaa4eb5c8593266dcccee14597a9353446ec2f07f2be2"
+      "payload_bytes": 79134,
+      "internal_manifest_sha256": "06f885d6cf6d9b54b1d0328e31b75bfc2b8f8f11035ae795b015397a942624f4"
     }
   ],
   "original_handoff_manifest": {
@@ -62,7 +62,7 @@
     "receipt_relative": "接收回执/PR_服务器开发交接_20261022_170641_0800_c0d3",
     "full_payload_bytes": 873310016,
     "space_margin_bytes": 1073741824,
-    "peak_disk_bytes": 2645168163
+    "peak_disk_bytes": 2645168981
   },
   "source_binding": {
     "ascend_sha": "2604675e520c23740c5225b6af8857eed8bd9391",
@@ -117,5 +117,9 @@
     "renamed_from": "LucianWQZ/private-file-relay",
     "renamed_to": "LucianWQZ/lucianwqz-relay",
     "note_zh": "旧地址 301 跳转；本清单只使用新名称。bootstrap 中的旧名为冻结快照。"
+  },
+  "superseded_attempts": {
+    "r2": "pr-transfer-20261022-170641-c0d3-r2 (supplement 内部 manifest schema 错误，已由 r3 取代)",
+    "attempt1": "pr-transfer-20261022-170641-c0d3 (从未形成远端 ref)"
   }
 }

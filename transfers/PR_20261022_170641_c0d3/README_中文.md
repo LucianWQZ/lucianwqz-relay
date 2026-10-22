@@ -37,8 +37,8 @@
 
 建议身份如下，发布主流程必须先做冲突检查，再以实际结果为准：
 
-- branch：transfer/pr-handoff-20261022-c0d3-r2
-- tag：pr-transfer-20261022-170641-c0d3-r2
+- branch：transfer/pr-handoff-20261022-c0d3-r3
+- tag：pr-transfer-20261022-170641-c0d3-r3
 - Git 目录：transfers/PR_20261022_170641_c0d3
 
 本文件不记录其所在 Git 提交的最终 SHA，以避免自引用。实际 relay commit/tree、tag object、peeled commit、Release URL 和资产 ID 应写入发布完成后生成的外置 GITHUB_PUBLICATION_RESULT.json 与 SERVER_RECEIVER_HANDOFF.json。

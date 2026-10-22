@@ -82,8 +82,8 @@ GitHub 资料发布、远端字节校验和本地接收演练均不能把这些�
 因此本轮（r2）的实际身份为：
 
 - repository：LucianWQZ/lucianwqz-relay（public，默认分支 main）
-- branch：transfer/pr-handoff-20261022-c0d3-r2
-- tag：pr-transfer-20261022-170641-c0d3-r2
+- branch：transfer/pr-handoff-20261022-c0d3-r3
+- tag：pr-transfer-20261022-170641-c0d3-r3
 - transfer directory：transfers/PR_20261022_170641_c0d3
 
 冻结的 bootstrap/06_回传ChatGPT摘要.md、bootstrap/EXTERNAL_DEPENDENCIES.json 中出现的旧仓库名属于冻结历史，不为改名回写；改名事实只记录在本补充说明与新生成的 REPOSITORY_RENAME_ADDENDUM.md 中。

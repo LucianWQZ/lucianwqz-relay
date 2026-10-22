@@ -19,7 +19,7 @@
 接收工具必须显式指定资料仓与固定 tag，不得使用 latest：
 
 - repository：LucianWQZ/lucianwqz-relay
-- 推荐 tag：pr-transfer-20261022-170641-c0d3-r2（以最终 SERVER_RECEIVER_HANDOFF.json 为准）
+- 推荐 tag：pr-transfer-20261022-170641-c0d3-r3（以最终 SERVER_RECEIVER_HANDOFF.json 为准）
 - transfer directory：transfers/PR_20261022_170641_c0d3
 
 Release 白名单只有：PR_FULL_TRANSFER.zip、PR_REVIEW_RETURN.zip、HANDOFF_MANIFEST.json、PR_TRANSFER_SUPPLEMENT.zip。GitHub 自动生成的 Source code.zip/Source code.tar.gz 不在白名单内。

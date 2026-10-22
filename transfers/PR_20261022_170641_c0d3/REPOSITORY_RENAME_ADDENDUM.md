@@ -34,3 +34,7 @@ attempt1 计划建立在改名前的仓库身份和旧 main 基线上，且其 G
 - tag：pr-transfer-20261022-170641-c0d3
 - tag object：91f53eb98fc00f4fabdd5bca2593a8468f783519
 - 远端发布：否（只读核对确认 refs 不存在）
+
+## r2 -> r3
+
+r2 的首次发布尝试已在远端建立 branch/tag，但其补充包内部 FILES_MANIFEST.json 使用了错误的字段名（bytes 而非 receiver 合约要求的 size），导致接收工具在补充包校验阶段失败。为遵守“不 force push、不移动已有 tag”的约束，r2 保留为历史对象，最终身份改用 r3：内容与 r2 相同，仅修正补充包内部清单 schema 与随之更新的 hash 绑定。

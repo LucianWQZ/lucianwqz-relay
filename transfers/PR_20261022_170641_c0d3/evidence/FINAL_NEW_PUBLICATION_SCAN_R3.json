@@ -1,20 +1,19 @@
 {
  "schema_version": 1,
- "generated_at": "2026-10-22T22:46:34+0800",
+ "generated_at": "2026-10-22T23:18:34+0800",
+ "attempt": "r3",
  "scope": {
-  "git_staged_files": 56,
-  "unique_blobs_scanned": 39,
-  "skipped_non_files": 16,
+  "git_transfer_files": 59,
+  "unique_blobs_scanned": 58,
   "supplement_entries_scanned": 15,
   "not_scanned": [
-   "PR_FULL_TRANSFER.zip 内部（复用 2026-10-22 gitleaks 8.30.1 冻结评审结论，未重扫）",
-   "PR_REVIEW_RETURN.zip 内部（同上）",
-   "bootstrap 冻结快照（未改动）"
+   "PR_FULL_TRANSFER.zip 内部（复用 2026-10-22 gitleaks 8.30.1 冻结评审 PASS_WITH_DECLARED_SCOPE）",
+   "PR_REVIEW_RETURN.zip 内部（同上）"
   ]
  },
  "tool": {
   "name": "python3 bounded regex scan",
-  "version": "local 1.0",
+  "version": "local 1.1",
   "patterns": [
    "private_key_block",
    "github_token",
