@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "role": "receive-validation",
+  "status": "PASS",
+  "verified_at": "2026-10-23T01:16:38+08:00",
+  "repository": "LucianWQZ/lucianwqz-relay",
+  "tag": "pr-transfer-20261022-170641-c0d3-r3",
+  "root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/reference/pr",
+  "assets": [
+    {
+      "name": "PR_FULL_TRANSFER.zip",
+      "bytes": 696228223,
+      "sha256": "675237faf78efcd4f95642494437af2b09c29680f21eb8e9e460cad7ab6a953e",
+      "status": "PASS"
+    },
+    {
+      "name": "PR_REVIEW_RETURN.zip",
+      "bytes": 1771620,
+      "sha256": "71df7981a67a6643cf476e56d2d1e1a2795e431cb1ac271fed24a8e51391b470",
+      "status": "PASS"
+    },
+    {
+      "name": "HANDOFF_MANIFEST.json",
+      "bytes": 2680,
+      "sha256": "4606f83f060e3162296fc3b8207439420034d096980de0a9f0e31e24897720bc",
+      "status": "PASS"
+    },
+    {
+      "name": "PR_TRANSFER_SUPPLEMENT.zip",
+      "bytes": 35484,
+      "sha256": "4828ee66118fd384689c4b07a13570221f8308e9471cb2d842ff5ae820c8819e",
+      "status": "PASS"
+    }
+  ],
+  "original_handoff_binding": {
+    "status": "PASS",
+    "manifest": "HANDOFF_MANIFEST.json",
+    "full_asset": "PR_FULL_TRANSFER.zip",
+    "internal_manifest_sha256": "51bebc046c8bc56b0574fa740fbb780074dbcd5ab83ea04e0c01574a92014488",
+    "payload_entries": 13836,
+    "payload_bytes": 873310016
+  },
+  "full_archive": {
+    "archive": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/reference/pr/发布附件缓存/PR_服务器开发交接_20261022_170641_0800_c0d3/PR_FULL_TRANSFER.zip",
+    "archive_bytes": 696228223,
+    "archive_sha256": "675237faf78efcd4f95642494437af2b09c29680f21eb8e9e460cad7ab6a953e",
+    "internal_manifest_sha256": "51bebc046c8bc56b0574fa740fbb780074dbcd5ab83ea04e0c01574a92014488",
+    "payload_entries": 13836,
+    "payload_bytes": 873310016,
+    "regular_files": 13828,
+    "symlinks": 8,
+    "crc_checked": true,
+    "payload_hashes_checked": true
+  },
+  "full_directory": {
+    "status": "PASS",
+    "root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/reference/pr/PR_服务器开发交接_20261022_170641_0800_c0d3",
+    "payload_entries": 13836,
+    "regular_files": 13828,
+    "symlinks": 8,
+    "payload_bytes": 873310016
+  },
+  "supplement_archive": {
+    "archive": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/reference/pr/发布附件缓存/PR_服务器开发交接_20261022_170641_0800_c0d3/PR_TRANSFER_SUPPLEMENT.zip",
+    "archive_bytes": 35484,
+    "archive_sha256": "4828ee66118fd384689c4b07a13570221f8308e9471cb2d842ff5ae820c8819e",
+    "internal_manifest_sha256": "06f885d6cf6d9b54b1d0328e31b75bfc2b8f8f11035ae795b015397a942624f4",
+    "payload_entries": 14,
+    "payload_bytes": 79134,
+    "regular_files": 14,
+    "symlinks": 0,
+    "crc_checked": true,
+    "payload_hashes_checked": true
+  },
+  "supplement_directory": {
+    "status": "PASS",
+    "root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/reference/pr/发布补充/PR_服务器开发交接_20261022_170641_0800_c0d3",
+    "payload_entries": 14,
+    "regular_files": 14,
+    "symlinks": 0,
+    "payload_bytes": 79134
+  },
+  "receipt": {
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/reference/pr/接收回执/PR_服务器开发交接_20261022_170641_0800_c0d3/RECEIVE_RECEIPT.json",
+    "status": "RECEIVED_AND_VERIFIED",
+    "execution_site": "SERVER"
+  },
+  "scope": "传输与内容完整性；不代表 A3、性能或完整非 Graph 验收。"
+}
