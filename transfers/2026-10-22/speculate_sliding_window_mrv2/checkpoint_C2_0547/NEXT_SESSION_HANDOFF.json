@@ -1,0 +1,58 @@
+{
+  "schema": "mrv2-next-session-handoff-v1",
+  "session_id": "20261022T050438Z",
+  "generated_utc": "2026-10-22T05:46:25.119483+00:00",
+  "original_t_start_utc": "2026-10-22T05:04:38Z",
+  "original_deadline_utc": "2026-10-22T10:04:38Z",
+  "authorization_note": "Only valid within original resource window; do not reset time on resume. Host Phy-ID 0-15 from user instruction, preferred 0-7; mapping unknown in current container.",
+  "root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt",
+  "development_checkout": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend",
+  "development_head": "303ef7fe117d372d5f9463d3d79b90e56b9e695d",
+  "latest_candidate": {
+    "name": "C2_303ef7fe",
+    "source_checkout": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm-ascend",
+    "source_sha": "303ef7fe117d372d5f9463d3d79b90e56b9e695d",
+    "source_tree": "a8cdb7a4793022e880bce1e7c591dd30b79f7a94",
+    "vllm_checkout": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm",
+    "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c",
+    "publication": "NOT_PERFORMED",
+    "device_validation": "NOT_RUN_NO_DEVICE_MAPPING",
+    "manifest": "state/C2_CANDIDATE.json",
+    "host_plan": "runs/C2_303ef7fe/local_prepare_01/case-plan.json"
+  },
+  "last_key_device_pass_this_session": null,
+  "historical_repair6_scope": "Base 10 pairs, Target4 12 pairs; old source SHA/old Phy-ID8 only",
+  "run_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs",
+  "device_mapping": "UNKNOWN_NOT_ADMITTED",
+  "resource_watermark": "NFS_BELOW_500_GIB_AT_EXIT_FREE_217755680768_BYTES",
+  "public_graph_gate": "FROZEN",
+  "production_graph_readiness": "NOT_READY",
+  "host_checks": {
+    "c1_related": "950 passed; 2 preexisting AST drift guard failures",
+    "c2_development": "55 passed",
+    "c2_fixed_quarantine": "3 passed",
+    "c2_fixed_local_admission": "3 passed",
+    "c2_schema": "39 rows, 5 configs, schema only",
+    "c2_negative_admission": "BLOCKED_DEVICE_MAPPING; device_started=false"
+  },
+  "no_model_or_profiler_process_started": true,
+  "next_actions": [
+    "recheck deadline/resource allocation and current device nodes/mapping/occupancy",
+    "recheck NFS free/inodes and tensor/trace/HBM budget",
+    "verify C2 clean source, ignored binary overlay hash, worker import provenance",
+    "committed inspect/probe/check then fresh local bind for CONFIG",
+    "run CONFIG/P0/A0/A1/B0 and NUMERIC_SENTINEL, continue dependent and independent branches",
+    "collect normal four-cell profiling and control groups if admission/resources permit"
+  ],
+  "decision_queue": "journal/DECISION_QUEUE.md",
+  "primary_reports": [
+    "reports/MRV2_五小时开发总结.md",
+    "reports/MRV2_实验矩阵与结论.csv",
+    "reports/MRV2_Profiling分析.md"
+  ],
+  "resume": "reports/RESUME.md",
+  "bundle": "return/MRV2_C2_from_Repair6.bundle",
+  "bundle_verification": "state/BUNDLE_VERIFY_C2.json",
+  "actual_stop_utc": "2026-10-22T05:50:02Z",
+  "actual_elapsed_seconds": 2724
+}

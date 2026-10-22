@@ -1,0 +1,176 @@
+{
+  "schema": "mrv2-download-manifest-v1",
+  "generated_utc": "2026-10-22T05:50:16.699510+00:00",
+  "session_id": "20261022T050438Z",
+  "candidate_sha": "303ef7fe117d372d5f9463d3d79b90e56b9e695d",
+  "items": [
+    {
+      "name": "01_接收与源码身份复核.md",
+      "absolute_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/01_接收与源码身份复核.md",
+      "relative_path": "return/01_接收与源码身份复核.md",
+      "bytes": 3324,
+      "sha256": "053dc841b8a48d115ffb8f2e4428eef4125ea42cc15955f58dc5efe65b6bfade",
+      "chat_upload": "YES_PRIVATE_CHAT",
+      "public_relay_upload": "NO",
+      "kind": "report"
+    },
+    {
+      "name": "02_Graph异常路径修复与剩余合同.md",
+      "absolute_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/02_Graph异常路径修复与剩余合同.md",
+      "relative_path": "return/02_Graph异常路径修复与剩余合同.md",
+      "bytes": 3415,
+      "sha256": "7752d38c8c8f6bdf60322f7c0a21d6fda9868e5d724544a9e4b5828d2e73ec68",
+      "chat_upload": "YES_PRIVATE_CHAT",
+      "public_relay_upload": "NO",
+      "kind": "report"
+    },
+    {
+      "name": "03_环境准入与本地候选.md",
+      "absolute_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/03_环境准入与本地候选.md",
+      "relative_path": "return/03_环境准入与本地候选.md",
+      "bytes": 4494,
+      "sha256": "d78c69d4750d65066cd9f0415a469913e5fd3bec33000747e62ce97b742f6470",
+      "chat_upload": "YES_PRIVATE_CHAT",
+      "public_relay_upload": "NO",
+      "kind": "report"
+    },
+    {
+      "name": "04_提交与Bundle恢复.md",
+      "absolute_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/04_提交与Bundle恢复.md",
+      "relative_path": "return/04_提交与Bundle恢复.md",
+      "bytes": 1923,
+      "sha256": "9f26d4866aa548fdb73fc3637ee326e34ad34275bf1ee71a178ee15bcad39cde",
+      "chat_upload": "YES_PRIVATE_CHAT",
+      "public_relay_upload": "NO",
+      "kind": "report"
+    },
+    {
+      "name": "C1_quarantine_change.patch",
+      "absolute_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/C1_quarantine_change.patch",
+      "relative_path": "return/C1_quarantine_change.patch",
+      "bytes": 13182,
+      "sha256": "f13af8f40423574f4724808b3208b13bdf513b9d4bd505a669d9bcd8afb157c5",
+      "chat_upload": "YES_PRIVATE_CHAT",
+      "public_relay_upload": "NO",
+      "kind": "report"
+    },
+    {
+      "name": "C2_local_admission_change.patch",
+      "absolute_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/C2_local_admission_change.patch",
+      "relative_path": "return/C2_local_admission_change.patch",
+      "bytes": 13961,
+      "sha256": "0b947cbf6947b99bf49d529c31ae88ba32f34bc8378345fffe3d9f475e8ff788",
+      "chat_upload": "YES_PRIVATE_CHAT",
+      "public_relay_upload": "NO",
+      "kind": "report"
+    },
+    {
+      "name": "MRV2_C1_from_Repair6.bundle",
+      "absolute_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/MRV2_C1_from_Repair6.bundle",
+      "relative_path": "return/MRV2_C1_from_Repair6.bundle",
+      "bytes": 18080,
+      "sha256": "80be1f59b74d9e8cf90eab911fcb3d82925e2eee5745823aa2f615bdd57a0c9b",
+      "chat_upload": "YES_PRIVATE_CHAT",
+      "public_relay_upload": "NO",
+      "kind": "bundle"
+    },
+    {
+      "name": "MRV2_C2_from_Repair6.bundle",
+      "absolute_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/MRV2_C2_from_Repair6.bundle",
+      "relative_path": "return/MRV2_C2_from_Repair6.bundle",
+      "bytes": 22375,
+      "sha256": "370bd2aa1b7211549974da9467233131e56508c1560695f23659b52eb7f657f9",
+      "chat_upload": "YES_PRIVATE_CHAT",
+      "public_relay_upload": "NO",
+      "kind": "bundle"
+    },
+    {
+      "name": "MRV2_Profiling_Summary.json",
+      "absolute_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/MRV2_Profiling_Summary.json",
+      "relative_path": "return/MRV2_Profiling_Summary.json",
+      "bytes": 1978,
+      "sha256": "d4795716d076f35e736876d05c3498fb2a164ce13b03224793ec1d272f9abe18",
+      "chat_upload": "YES_PRIVATE_CHAT",
+      "public_relay_upload": "NO",
+      "kind": "report"
+    },
+    {
+      "name": "MRV2_Profiling分析.md",
+      "absolute_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/MRV2_Profiling分析.md",
+      "relative_path": "return/MRV2_Profiling分析.md",
+      "bytes": 4246,
+      "sha256": "9230d9f8e551ce55fc4df90b1b3ab744b534b22fb77b13e88328a78eeae002f8",
+      "chat_upload": "YES_PRIVATE_CHAT",
+      "public_relay_upload": "NO",
+      "kind": "report"
+    },
+    {
+      "name": "MRV2_Server_Dev_review.zip",
+      "absolute_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/MRV2_Server_Dev_review.zip",
+      "relative_path": "return/MRV2_Server_Dev_review.zip",
+      "bytes": 131058,
+      "sha256": "e5a11f39dfa0bdd9f4d88b80363b3742e57b9c5ac1e29ca0081ed9f1756b868c",
+      "chat_upload": "YES_PRIVATE_CHAT",
+      "public_relay_upload": "NO",
+      "kind": "review_zip"
+    },
+    {
+      "name": "MRV2_五小时开发总结.md",
+      "absolute_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/MRV2_五小时开发总结.md",
+      "relative_path": "return/MRV2_五小时开发总结.md",
+      "bytes": 6709,
+      "sha256": "205138a24c6eab1b876cbc04a9540d83afdb9f4325c08b3678ea90338fb8d9a2",
+      "chat_upload": "YES_PRIVATE_CHAT",
+      "public_relay_upload": "NO",
+      "kind": "report"
+    },
+    {
+      "name": "MRV2_实验矩阵与结论.csv",
+      "absolute_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/MRV2_实验矩阵与结论.csv",
+      "relative_path": "return/MRV2_实验矩阵与结论.csv",
+      "bytes": 4237,
+      "sha256": "56c05b6731e5abaaa618ed902717acf716c20c98ed99bcc17ffc97b148f1f8ff",
+      "chat_upload": "YES_PRIVATE_CHAT",
+      "public_relay_upload": "NO",
+      "kind": "report"
+    },
+    {
+      "name": "NEXT_SESSION_HANDOFF.json",
+      "absolute_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/NEXT_SESSION_HANDOFF.json",
+      "relative_path": "return/NEXT_SESSION_HANDOFF.json",
+      "bytes": 3147,
+      "sha256": "df81017ffc8de5365a444635153d82b3555846ebc44f969d9d75bd78025bf0da",
+      "chat_upload": "YES_PRIVATE_CHAT",
+      "public_relay_upload": "NO",
+      "kind": "report"
+    },
+    {
+      "name": "RESUME.md",
+      "absolute_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/RESUME.md",
+      "relative_path": "return/RESUME.md",
+      "bytes": 5369,
+      "sha256": "279b0714426ccd02c9f1e38981e61a86adeaf2cba8aba79af8c68bbc83e27db0",
+      "chat_upload": "YES_PRIVATE_CHAT",
+      "public_relay_upload": "NO",
+      "kind": "report"
+    },
+    {
+      "name": "REVIEW_ZIP_VALIDATION.json",
+      "absolute_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/REVIEW_ZIP_VALIDATION.json",
+      "relative_path": "return/REVIEW_ZIP_VALIDATION.json",
+      "bytes": 407,
+      "sha256": "88fdd535a823455fbd43921e493b62b01a3c129d93e0f85f7b369b6defbe5016",
+      "chat_upload": "YES_PRIVATE_CHAT",
+      "public_relay_upload": "NO",
+      "kind": "report"
+    }
+  ],
+  "server_only_not_packaged": [
+    "runs large raw/tensor/profiler directories",
+    "candidate source checkouts",
+    "model weights",
+    "historical 30 GB archive"
+  ],
+  "review_zip_validation": "reports/REVIEW_ZIP_VALIDATION.json",
+  "note": "Server ZIP CRC/hash/JSON self-check passed; receiver-side verification not performed. No files uploaded to public relay."
+}
