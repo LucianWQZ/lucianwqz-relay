@@ -1,0 +1,11 @@
+{
+  "status": "INVALID_EVIDENCE",
+  "task_operand": "UNPROVEN",
+  "physical_read": "UNPROVEN",
+  "execution": {
+    "status": "EXECUTION_ASSOCIATED",
+    "numeric_status": "NOT_ASSESSED",
+    "artifact_sha256": "7e60ae283accea8b7b4f2f015be03d40bfb3f0bbc4cae7134de8d46762778723"
+  },
+  "error": "native export incomplete"
+}

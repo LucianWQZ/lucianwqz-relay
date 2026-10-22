@@ -1,0 +1,10 @@
+{
+  "clock_tool": "2026-10-22 16:06:19 UTC",
+  "web_time_utc": "2026-10-22 16:05:05 UTC",
+  "web_time_beijing": "2026-10-23 00:05:05 +08:00",
+  "host_audit": "reports/20261022T132626Z_R2/执行时间交叉核验_审批拒绝后.json",
+  "conclusion": "All actual UTC clocks are Oct22; host timezone CST crossed to Oct23. Original UTC deadline unchanged; no new authorization inferred.",
+  "rejected_action": "C16 committed probe03 on Phy0",
+  "rejection_reason": "automatic reviewer treated environment date Oct23 as UTC reservation expiry",
+  "probe_started": false
+}

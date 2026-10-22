@@ -1,0 +1,17 @@
+{
+  "name": "op-plugin",
+  "path": "third_party/op-plugin",
+  "sha": "8b9c8534fa41eff367a41c155843daa530ab3a08",
+  "size": 0,
+  "url": "https://api.github.com/repos/Ascend/pytorch/contents/third_party/op-plugin?ref=5dd8ef3f9b375b5ae4a83538d5785754148c3302",
+  "html_url": null,
+  "git_url": null,
+  "download_url": null,
+  "type": "submodule",
+  "submodule_git_url": "https://gitcode.com/ascend/op-plugin.git",
+  "_links": {
+    "self": "https://api.github.com/repos/Ascend/pytorch/contents/third_party/op-plugin?ref=5dd8ef3f9b375b5ae4a83538d5785754148c3302",
+    "git": null,
+    "html": null
+  }
+}

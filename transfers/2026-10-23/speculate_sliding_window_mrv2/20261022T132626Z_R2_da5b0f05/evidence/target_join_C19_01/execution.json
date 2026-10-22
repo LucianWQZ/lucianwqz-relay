@@ -1,0 +1,29 @@
+{
+  "argv": [
+    "/usr/local/python3.11.10/bin/python",
+    "-m",
+    "tools.p7x_graph_repair7",
+    "target-join",
+    "--root",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01",
+    "--plan",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/case-plan.json",
+    "--device",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/target_join_C19_01/device-statement.json",
+    "--profile",
+    "TARGET4",
+    "--on-case",
+    "NUMERIC_TARGET4",
+    "--output",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/target_join_C19_01/target-join.json"
+  ],
+  "pid": 3,
+  "source_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+  "checker_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+  "start_ns": 1792691270171882570,
+  "end_ns": 1792691381834556520,
+  "returncode": 0,
+  "timeout_seconds": 1800,
+  "status": "SCOPED_TARGET_EXECUTION_AND_NUMERIC_VALID",
+  "scope": "read-only C19 actual NPU data comparison; not new device execution"
+}

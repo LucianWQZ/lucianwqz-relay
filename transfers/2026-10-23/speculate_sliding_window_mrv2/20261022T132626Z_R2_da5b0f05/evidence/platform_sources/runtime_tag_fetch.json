@@ -1,0 +1,54 @@
+{
+  "official_origin": "https://gitcode.com/cann/runtime.git",
+  "requested_tag": "v9.1.0",
+  "remote_tag_sha": "0b4af8a31c75a1f1f43638a8f75b9e3c6182e031",
+  "repo": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/inputs/platform_runtime_v9_1_0.git",
+  "steps": [
+    {
+      "argv": [
+        "git",
+        "init",
+        "--bare",
+        "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/inputs/platform_runtime_v9_1_0.git"
+      ],
+      "returncode": 0,
+      "start_ns": 1792683070930849620,
+      "end_ns": 1792683071011461180,
+      "log": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime_tag_fetch_00.log"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/inputs/platform_runtime_v9_1_0.git",
+        "remote",
+        "add",
+        "origin",
+        "https://gitcode.com/cann/runtime.git"
+      ],
+      "returncode": 0,
+      "start_ns": 1792683071011464820,
+      "end_ns": 1792683071030227230,
+      "log": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime_tag_fetch_01.log"
+    },
+    {
+      "argv": [
+        "timeout",
+        "90",
+        "git",
+        "-C",
+        "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/inputs/platform_runtime_v9_1_0.git",
+        "fetch",
+        "--depth=1",
+        "--filter=blob:none",
+        "origin",
+        "refs/tags/v9.1.0:refs/tags/v9.1.0"
+      ],
+      "returncode": 0,
+      "start_ns": 1792683071030230380,
+      "end_ns": 1792683077261449350,
+      "log": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime_tag_fetch_02.log"
+    }
+  ],
+  "scope": "read-only versioned source analysis, not installed build provenance"
+}

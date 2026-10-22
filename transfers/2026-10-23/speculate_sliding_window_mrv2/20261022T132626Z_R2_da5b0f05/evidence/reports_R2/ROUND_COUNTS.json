@@ -1,0 +1,20 @@
+{
+  "observed_at": "2026-10-22T18:00:32.285220+00:00",
+  "counts": {
+    "model_starts": 72,
+    "expected_graph_frozen": 5,
+    "model_producer_exit0": 39,
+    "expected_abort_exits": 16,
+    "python_unwind_exits": 12,
+    "other_model_failures": 0,
+    "private_fixtures": 5,
+    "probes": 4,
+    "profiler_collections": 5,
+    "offline_reanalyses": 7,
+    "model_runner_accepted": 67,
+    "model_acceptance_failed": 5
+  },
+  "count_scope": "round2 completed admission records only; starts are actual launcher children, not startup success; active case counted live in current_status until its execution record closes",
+  "elapsed_clock": "runner wall UTC start + recorded monotonic elapsed; launcher Host ns are separate monotonic domain",
+  "rows": 98
+}

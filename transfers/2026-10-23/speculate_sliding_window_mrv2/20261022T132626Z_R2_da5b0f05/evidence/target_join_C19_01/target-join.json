@@ -1,0 +1,868 @@
+{
+  "status": "SCOPED_TARGET_EXECUTION_AND_NUMERIC_VALID",
+  "execution": [
+    {
+      "status": "EXECUTION_ASSOCIATED",
+      "numeric_status": "NOT_ASSESSED",
+      "artifact_sha256": "2b08430256abaae05da365c384c9e65ba6530e33c91ccfb14334ab65942128da",
+      "case_id": "TARGET4_OFF",
+      "original_output": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/TARGET4_OFF",
+      "relocated_output": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/TARGET4_OFF"
+    },
+    {
+      "status": "EXECUTION_ASSOCIATED",
+      "numeric_status": "NOT_ASSESSED",
+      "artifact_sha256": "43e76648c6f642739afe70bcb5d3b0c671b31cbc77d32a61b615c785c704af53",
+      "case_id": "NUMERIC_TARGET4",
+      "original_output": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4",
+      "relocated_output": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4"
+    }
+  ],
+  "device": {
+    "device_segment": "node-39-101 / Phy0 / visible0 / logical npu:0 / TP1",
+    "current_attempt_admission_records": [
+      {
+        "case_id": "NUMERIC_TARGET4",
+        "check": {
+          "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/NUMERIC_TARGET4/attempt01/check.json",
+          "bytes": 199,
+          "sha256": "ed8ee3dfb72153460b209f2851b5307ca5e065ea68c510a707cc260dafed1f9d"
+        },
+        "receipt": {
+          "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/NUMERIC_TARGET4/attempt01/user-machine-receipt.json",
+          "bytes": 3212,
+          "sha256": "a369672119214da5257df3a29749f2ac5ad4f02286754506c95820a68106c7b5"
+        },
+        "execution": {
+          "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/NUMERIC_TARGET4/attempt01/execution.json",
+          "bytes": 6595,
+          "sha256": "53f5cca5c87564c9f6e762926e363ce1c363906211f0789e9ab3fbfccd053f18"
+        },
+        "source_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+        "host_phy_id": 0,
+        "logical_npu": 0,
+        "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+        "runner_dependency_satisfied": true,
+        "scope": "fresh committed admission at actual case launch; not reissued or extended at comparison time"
+      },
+      {
+        "case_id": "TARGET4_OFF",
+        "check": {
+          "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/TARGET4_OFF/attempt01/check.json",
+          "bytes": 199,
+          "sha256": "ed8ee3dfb72153460b209f2851b5307ca5e065ea68c510a707cc260dafed1f9d"
+        },
+        "receipt": {
+          "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/TARGET4_OFF/attempt01/user-machine-receipt.json",
+          "bytes": 3201,
+          "sha256": "92925b49aedf07f961736f4c623700158db3efb057d44547eba834c133310ae3"
+        },
+        "execution": {
+          "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/TARGET4_OFF/attempt01/execution.json",
+          "bytes": 6515,
+          "sha256": "955eef97ba4caf6f5e714174281450e1ae86623b39be54b4310c17e18bcd16a6"
+        },
+        "source_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+        "host_phy_id": 0,
+        "logical_npu": 0,
+        "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+        "runner_dependency_satisfied": true,
+        "scope": "fresh committed admission at actual case launch; not reissued or extended at comparison time"
+      }
+    ],
+    "authority": "USER_INSTRUCTION_NO_ADMIN_SIGNATURE",
+    "scope": "External provenance records supplied for review; target-join itself does not validate reservation"
+  },
+  "authorization": "NOT_VERIFIED",
+  "arm_case_ids": {
+    "OFF": "TARGET4_OFF",
+    "ON": "NUMERIC_TARGET4"
+  },
+  "on_arm_scope": "CONTROLLED_TARGET_WITH_SERIALIZED_CONTINUOUS_REFERENCE",
+  "comparison": {
+    "status": "SAMPLE_COMPLETE",
+    "pairs": [
+      {
+        "identity": {
+          "active": 1,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+          "logical_requests": [
+            "row-0"
+          ],
+          "padded": 1,
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1144,
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "scenario": "A",
+          "step": 0
+        },
+        "status": "PASS",
+        "errors": [],
+        "metrics": {
+          "hidden": {
+            "shape": [
+              8,
+              4096
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          },
+          "logits": {
+            "shape": [
+              8,
+              151936
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          }
+        }
+      },
+      {
+        "identity": {
+          "active": 1,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+          "logical_requests": [
+            "row-0"
+          ],
+          "padded": 1,
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1272,
+              1273,
+              1274,
+              1275,
+              1276,
+              1277,
+              1278,
+              1279
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "scenario": "B",
+          "step": 1
+        },
+        "status": "PASS",
+        "errors": [],
+        "metrics": {
+          "hidden": {
+            "shape": [
+              8,
+              4096
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          },
+          "logits": {
+            "shape": [
+              8,
+              151936
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          }
+        }
+      },
+      {
+        "identity": {
+          "active": 1,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+          "logical_requests": [
+            "row-0"
+          ],
+          "padded": 1,
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1144,
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "scenario": "A_prime",
+          "step": 2
+        },
+        "status": "PASS",
+        "errors": [],
+        "metrics": {
+          "hidden": {
+            "shape": [
+              8,
+              4096
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          },
+          "logits": {
+            "shape": [
+              8,
+              151936
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          }
+        }
+      },
+      {
+        "identity": {
+          "active": 1,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+          "logical_requests": [
+            "row-0"
+          ],
+          "padded": 1,
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "scenario": "short",
+          "step": 3
+        },
+        "status": "PASS",
+        "errors": [],
+        "metrics": {
+          "hidden": {
+            "shape": [
+              8,
+              4096
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          },
+          "logits": {
+            "shape": [
+              8,
+              151936
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          }
+        }
+      },
+      {
+        "identity": {
+          "active": 1,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+          "logical_requests": [
+            "row-0"
+          ],
+          "padded": 1,
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1144,
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "scenario": "long",
+          "step": 4
+        },
+        "status": "PASS",
+        "errors": [],
+        "metrics": {
+          "hidden": {
+            "shape": [
+              8,
+              4096
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          },
+          "logits": {
+            "shape": [
+              8,
+              151936
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          }
+        }
+      },
+      {
+        "identity": {
+          "active": 1,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+          "logical_requests": [
+            "row-0"
+          ],
+          "padded": 1,
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1016,
+              1017,
+              1018,
+              1019,
+              1020,
+              1021,
+              1022,
+              1023
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "scenario": "boundary",
+          "step": 5
+        },
+        "status": "PASS",
+        "errors": [],
+        "metrics": {
+          "hidden": {
+            "shape": [
+              8,
+              4096
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          },
+          "logits": {
+            "shape": [
+              8,
+              151936
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          }
+        }
+      },
+      {
+        "identity": {
+          "active": 1,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+          "logical_requests": [
+            "row-0"
+          ],
+          "padded": 1,
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151,
+              1152
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "scenario": "nonaligned",
+          "step": 6
+        },
+        "status": "PASS",
+        "errors": [],
+        "metrics": {
+          "hidden": {
+            "shape": [
+              8,
+              4096
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          },
+          "logits": {
+            "shape": [
+              8,
+              151936
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          }
+        }
+      },
+      {
+        "identity": {
+          "active": 2,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+          "logical_requests": [
+            "row-0",
+            "row-1"
+          ],
+          "padded": 2,
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151,
+              1152
+            ]
+          ],
+          "query_layout": [
+            0,
+            8,
+            16
+          ],
+          "scenario": "mixed",
+          "step": 7
+        },
+        "status": "PASS",
+        "errors": [],
+        "metrics": {
+          "hidden": {
+            "shape": [
+              16,
+              4096
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          },
+          "logits": {
+            "shape": [
+              16,
+              151936
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          }
+        }
+      },
+      {
+        "identity": {
+          "active": 1,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+          "logical_requests": [
+            "row-0"
+          ],
+          "padded": 2,
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          ],
+          "query_layout": [
+            0,
+            8,
+            16
+          ],
+          "scenario": "padding",
+          "step": 8
+        },
+        "status": "PASS",
+        "errors": [],
+        "metrics": {
+          "hidden": {
+            "shape": [
+              8,
+              4096
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          },
+          "logits": {
+            "shape": [
+              8,
+              151936
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          }
+        }
+      },
+      {
+        "identity": {
+          "active": 1,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+          "logical_requests": [
+            "row-0"
+          ],
+          "padded": 1,
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          ],
+          "query_layout": [
+            0,
+            8
+          ],
+          "scenario": "return-short",
+          "step": 9
+        },
+        "status": "PASS",
+        "errors": [],
+        "metrics": {
+          "hidden": {
+            "shape": [
+              8,
+              4096
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          },
+          "logits": {
+            "shape": [
+              8,
+              151936
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          }
+        }
+      },
+      {
+        "identity": {
+          "active": 3,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+          "logical_requests": [
+            "row-0",
+            "row-1",
+            "row-2"
+          ],
+          "padded": 4,
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              1017,
+              1018,
+              1019,
+              1020,
+              1021,
+              1022,
+              1023,
+              1024
+            ],
+            [
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151,
+              1152
+            ]
+          ],
+          "query_layout": [
+            0,
+            8,
+            16,
+            24,
+            32
+          ],
+          "scenario": "three-active-four-padded",
+          "step": 10
+        },
+        "status": "PASS",
+        "errors": [],
+        "metrics": {
+          "hidden": {
+            "shape": [
+              24,
+              4096
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          },
+          "logits": {
+            "shape": [
+              24,
+              151936
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          }
+        }
+      },
+      {
+        "identity": {
+          "active": 4,
+          "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+          "logical_requests": [
+            "row-0",
+            "row-1",
+            "row-2",
+            "row-3"
+          ],
+          "padded": 4,
+          "phase": "CONTROLLED_DECODE_SYNTHETIC_PRE_KV",
+          "positions": [
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              1016,
+              1017,
+              1018,
+              1019,
+              1020,
+              1021,
+              1022,
+              1023
+            ],
+            [
+              1144,
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151
+            ],
+            [
+              1145,
+              1146,
+              1147,
+              1148,
+              1149,
+              1150,
+              1151,
+              1152
+            ]
+          ],
+          "query_layout": [
+            0,
+            8,
+            16,
+            24,
+            32
+          ],
+          "scenario": "four-active",
+          "step": 11
+        },
+        "status": "PASS",
+        "errors": [],
+        "metrics": {
+          "hidden": {
+            "shape": [
+              32,
+              4096
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          },
+          "logits": {
+            "shape": [
+              32,
+              151936
+            ],
+            "dtype": "torch.bfloat16",
+            "finite": true,
+            "max_abs": 0.0,
+            "max_rel": 0.0,
+            "atol": 0.0,
+            "rtol": 0.0
+          }
+        }
+      }
+    ],
+    "execution": [
+      "EXECUTED_SCOPED_NOT_GATE_CLOSURE",
+      "EXECUTED_SCOPED_NOT_GATE_CLOSURE"
+    ],
+    "numerical_scope": "CONTROLLED_FULL_TARGET",
+    "completion": "UNPROVEN",
+    "physical_read": "OPEN",
+    "campaign": "REQUIRES_EXTERNAL_EXECUTION_JOIN",
+    "complete_pairs": 12,
+    "elapsed_seconds": 109.81585891998839
+  },
+  "artifact_sha256": [
+    "2b08430256abaae05da365c384c9e65ba6530e33c91ccfb14334ab65942128da",
+    "43e76648c6f642739afe70bcb5d3b0c671b31cbc77d32a61b615c785c704af53"
+  ],
+  "source_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+  "authorized_device_acceptance": false,
+  "authorization_reason": "Requires current attempt device admission; historical segment not transferable",
+  "remaining": [
+    "normal reuse",
+    "UPDATE generation",
+    "task operand",
+    "physical read"
+  ]
+}

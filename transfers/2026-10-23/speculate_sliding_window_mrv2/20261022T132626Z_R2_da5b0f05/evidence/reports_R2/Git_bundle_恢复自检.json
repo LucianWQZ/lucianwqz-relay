@@ -1,0 +1,73 @@
+{
+  "created_ns": 1792680295204027870,
+  "base": "7a9f4aae1ebe5c5f3d4876ec9b49926949dfae14",
+  "bundle": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/MRV2_1e88c820_from_Repair7.bundle",
+  "temporary_bare_repo": "/tmp/mrv2-bundle-verify-20261022T132626Z_R2-1e88c820",
+  "restored_exact": true,
+  "steps": [
+    {
+      "argv": [
+        "git",
+        "init",
+        "--bare",
+        "/tmp/mrv2-bundle-verify-20261022T132626Z_R2-1e88c820"
+      ],
+      "returncode": 0,
+      "stdout": "Initialized empty Git repository in /tmp/mrv2-bundle-verify-20261022T132626Z_R2-1e88c820/\n",
+      "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: will change to \"main\" in Git 3.0. To configure the initial branch name\nhint: to use in all of your new repositories, which will suppress this warning,\nhint: call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\nhint:\nhint: Disable this message with \"git config set advice.defaultBranchName false\"\n"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/tmp/mrv2-bundle-verify-20261022T132626Z_R2-1e88c820",
+        "fetch",
+        "--depth=1",
+        "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend",
+        "7a9f4aae1ebe5c5f3d4876ec9b49926949dfae14"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "From /mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend\n * branch            7a9f4aae1ebe5c5f3d4876ec9b49926949dfae14 -> FETCH_HEAD\n"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/tmp/mrv2-bundle-verify-20261022T132626Z_R2-1e88c820",
+        "bundle",
+        "verify",
+        "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/MRV2_1e88c820_from_Repair7.bundle"
+      ],
+      "returncode": 0,
+      "stdout": "The bundle contains this ref:\n1e88c8208670518f63043552b530b1ed3e2f2677 HEAD\nThe bundle requires this ref:\n7a9f4aae1ebe5c5f3d4876ec9b49926949dfae14 \nThe bundle uses this hash algorithm: sha1\n",
+      "stderr": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/MRV2_1e88c820_from_Repair7.bundle is okay\n"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/tmp/mrv2-bundle-verify-20261022T132626Z_R2-1e88c820",
+        "fetch",
+        "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/MRV2_1e88c820_from_Repair7.bundle",
+        "HEAD:refs/heads/restored"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "From /mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/MRV2_1e88c820_from_Repair7.bundle\n * [new ref]         HEAD       -> restored\n"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/tmp/mrv2-bundle-verify-20261022T132626Z_R2-1e88c820",
+        "rev-parse",
+        "restored",
+        "restored^{tree}"
+      ],
+      "returncode": 0,
+      "stdout": "1e88c8208670518f63043552b530b1ed3e2f2677\n8a233dc2fd99abdafcb793e484f1317c1af7ddc2\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,1674 @@
+diff --git a/tests/ut/spec_decode/test_graph_local_candidate_host_evidence.py b/tests/ut/spec_decode/test_graph_local_candidate_host_evidence.py
+new file mode 100644
+index 000000000..6c021c558
+--- /dev/null
++++ b/tests/ut/spec_decode/test_graph_local_candidate_host_evidence.py
+@@ -0,0 +1,42 @@
++# SPDX-License-Identifier: Apache-2.0
++"""Reject incomplete Host evidence even when extra labels make sets incomparable."""
++
++import pytest
++
++from tools.p7x_graph_local_candidate import _validate_host_evidence, digest
++
++
++def records(tmp_path, labels):
++    log = tmp_path / "host.log"
++    log.write_text("scoped Host checks passed\n")
++    return [dict(label=label, status="PASS", path=str(log), sha256=digest(log)) for label in labels]
++
++
++@pytest.mark.parametrize(
++    "labels",
++    [
++        [],
++        ["native_binding"],
++        ["graph_quarantine", "native_binding"],
++        ["local_admission", "native_binding"],
++        ["graph_quarantine", "graph_quarantine"],
++    ],
++)
++def test_missing_required_coverage_is_rejected(tmp_path, labels):
++    with pytest.raises(ValueError, match="Host evidence"):
++        _validate_host_evidence(records(tmp_path, labels))
++
++
++def test_complete_coverage_allows_additional_diagnostics(tmp_path):
++    _validate_host_evidence(records(tmp_path, ["native_binding", "local_admission", "graph_quarantine"]))
++
++
++@pytest.mark.parametrize("damage", ["bytes", "status"])
++def test_complete_labels_cannot_hide_changed_or_failed_evidence(tmp_path, damage):
++    evidence = records(tmp_path, ["local_admission", "graph_quarantine"])
++    if damage == "bytes":
++        (tmp_path / "host.log").write_text("changed after validation\n")
++    else:
++        evidence[0]["status"] = "FAIL"
++    with pytest.raises(ValueError, match="Host evidence missing or changed"):
++        _validate_host_evidence(evidence)
+diff --git a/tests/ut/spec_decode/test_graph_repair7.py b/tests/ut/spec_decode/test_graph_repair7.py
+index a5b251e16..2643dcf0e 100644
+--- a/tests/ut/spec_decode/test_graph_repair7.py
++++ b/tests/ut/spec_decode/test_graph_repair7.py
+@@ -61,8 +61,17 @@ def test_all_plan_configuration_contracts(monkeypatch, tmp_path):
+     plan = build_plan(ROOT, tmp_path, tmp_path / "out", tmp_path / "vllm", sys.executable, "a" * 40, "b" * 40, "r")
+     matrix = config_matrix(plan)
+     assert matrix["status"] == "CONFIGS_VALID", matrix
+-    assert len(matrix["rows"]) == 39
++    assert len(matrix["rows"]) == 52  # Original 39, four unwind, six controls, materialize, native dump and binding.
++    assert {row["case_id"] for row in matrix["rows"] if row["case_id"].startswith("UNWIND_")} == {
++        "UNWIND_before_replay", "UNWIND_after_replay", "UNWIND_after_update", "UNWIND_after_completion"
++    }
+     assert plan["cases"]["NUMERIC_TARGET4"]["dependencies"] == ["CONFIG", "NUMERIC_SENTINEL"]
++    for arm in ("OFF", "ON"):
++        for repeat in range(1, 4):
++            entry = plan["cases"][f"PERF_{arm}_long_{repeat:02}"]
++            assert entry["performance_repetition"] == repeat
++            assert entry["argv"][entry["argv"].index("--repair5-profile") + 1] == "control"
++            assert entry["requests_sha256"] == plan["cases"][f"PROFILE_{arm}_long_control"]["requests_sha256"]
+     for case in plan["cases"].values():
+         if "launch_argv" in case:
+             assert case["launch_argv"][case["launch_argv"].index("--") + 1 :] == case["argv"]
+diff --git a/tests/ut/spec_decode/test_graph_repair8_materialize_profile.py b/tests/ut/spec_decode/test_graph_repair8_materialize_profile.py
+new file mode 100644
+index 000000000..fe451afb9
+--- /dev/null
++++ b/tests/ut/spec_decode/test_graph_repair8_materialize_profile.py
+@@ -0,0 +1,50 @@
++# SPDX-License-Identifier: Apache-2.0
++"""Profile existing materialization on CPU without adding a device operation."""
++
++import json
++from types import SimpleNamespace
++
++import pytest
++import torch
++
++from tests.ut.spec_decode.test_draft_window_eager import _harness
++from tools.p7x_graph_repair5_profile import RequestProfiler
++
++
++@pytest.mark.parametrize("nested", [False, True])
++def test_exact_materialize_ranges_and_restore(monkeypatch, tmp_path, nested):
++    owner, batch = _harness(query_width=7)
++    owner.propose = lambda: None
++    manager = SimpleNamespace(graphs={}, run_fullgraph=lambda desc: None, _update_full_graph_params=lambda: None)
++    owner.query_cudagraph_manager = manager
++    runner = SimpleNamespace(speculator=owner, cudagraph_manager=SimpleNamespace(graphs={}, run_fullgraph=lambda: None))
++    monkeypatch.setattr(torch.npu, "Event", lambda: pytest.fail("profiling must not add a completion event"))
++    path = tmp_path / "profile.json"
++    probe = RequestProfiler(runner, tmp_path, {}, enabled=False, materialize_ranges=nested)
++    pointer = owner._draft_window_runtime_state.workspace.storage_pointers
++    with probe:
++        probe.begin_active()
++        with owner._draft_window_proposal_scope(batch, dummy_run=False, is_profile=False):
++            inputs = owner._materialize_draft_window_read_inputs(num_reqs=2, num_reqs_padded=4)
++            owner._draft_window_live_inputs = inputs
++    result = json.loads(path.read_text())
++    assert result["materialize_subranges"] is nested
++    assert owner._draft_window_runtime_state.workspace.storage_pointers == pointer
++    assert not probe.saved and not probe.call_stack
++    assert "_snapshot_prepared_draft_seq_lens" not in vars(owner)
++    total = next(c for c in result["calls"] if c["label"] == "Draft_materialize")
++    children = [c for c in result["calls"] if c["label"].startswith("Draft_materialize_")]
++    if nested:
++        assert {c["label"] for c in children} == {
++            "Draft_materialize_exact_length_snapshot", "Draft_materialize_epoch_validate",
++            "Draft_materialize_runtime", "Draft_materialize_workspace", "Draft_materialize_build_inputs"
++        }
++        assert len({c["call_id"] for c in result["calls"]}) == len(result["calls"])
++        assert all(total["start_ns"] <= c["start_ns"] < c["end_ns"] <= total["end_ns"] for c in children)
++        assert all(c["proposal_context_id"] == total["proposal_context_id"] for c in children)
++        assert all(c["proposal_mapping_epoch"] == total["proposal_mapping_epoch"] for c in children)
++        runtime = next(c for c in children if c["label"] == "Draft_materialize_runtime")
++        workspace = next(c for c in children if c["label"] == "Draft_materialize_workspace")
++        assert workspace["parent_call_id"] == runtime["call_id"]
++    else:
++        assert not children and "call_id" not in total
+diff --git a/tests/ut/spec_decode/test_graph_repair8_native_binding.py b/tests/ut/spec_decode/test_graph_repair8_native_binding.py
+new file mode 100644
+index 000000000..3cb11bf45
+--- /dev/null
++++ b/tests/ut/spec_decode/test_graph_repair8_native_binding.py
+@@ -0,0 +1,238 @@
++# SPDX-License-Identifier: Apache-2.0
++"""CANN9.1 observed folded-layout contract; synthetic addresses, no device.
++
++The relocation positions/list header are taken from the C15 native JSON format.
++These tests do not assert that synthetic layer labels were observed on an NPU.
++"""
++import json
++from types import SimpleNamespace
++
++import pytest
++
++from tools import p7x_graph_repair8_task_dump as tool
++
++
++def native(requests=1, key=0x30000, value=0x40000):
++    words = [0] * (368 + 2 * requests)
++    data = {0: 37, 1: 353, 2: 359, 3: 365, 4: 365 + requests}
++    addr = {0: 35, 1: 2, 2: 3, 3: 6, 4: 7}
++    labels = {}
++    for i in data:
++        words[addr[i]] = 0x900000 + data[i] * 8
++        labels[addr[i]], labels[data[i]] = f"(placeHolderAddr{i})", f"(placeHolderData{i})"
++    words[1], words[15], words[32] = 0x10000, 0x20000, 0x50000
++    words[353:359] = [40, 0x100000003, 8, 128, 1024, key]
++    words[359:365] = [40, 0x100000003, 8, 128, 1024, value]
++    words[365:365 + requests] = [7 * (i + 1) for i in range(requests)]
++    words[365 + requests:365 + 2 * requests] = [28] * requests
++    return dict(name=tool.FIA_KERNEL, pid="123 aclGraph", args={
++        "Kernel Args": " ".join(labels.get(i, "") + f"0x{v:016x}" for i, v in enumerate(words)),
++        "Task Type": "KERNEL_MIX_AIC", "Kernel Args Size": len(words) * 8, "Model Id": 45, "Stream Id": 9, "Task Id": 16})
++
++
++@pytest.mark.parametrize("requests", [1, 2, 4])
++def test_observed_relocation_and_list_layout(requests):
++    d = tool.decode_native_fia(native(requests), requests)
++    assert d["argument_block_base"] == 0x900000
++    assert d["key"] == dict(data_ptr=0x30000, shape=[8, 128, 1024])
++    assert d["value"]["data_ptr"] == 0x40000
++    assert d["table_ptr"] == 0x20000
++    assert d["query_lengths"] == [7 * (i + 1) for i in range(requests)]
++    assert d["kv_lengths"] == [28] * requests
++
++
++@pytest.mark.parametrize("damage", ["size", "extra_bytes", "duplicate_label", "relocation", "kernel", "list_header"])
++def test_native_layout_damage_rejected(damage):
++    e = native()
++    if damage == "size":
++        e["args"]["Kernel Args Size"] += 8
++    elif damage == "extra_bytes":
++        e["args"]["Kernel Args"] += " corrupted"
++    elif damage == "duplicate_label":
++        e["args"]["Kernel Args"] += " (placeHolderData0)0x0000000000000000"
++    elif damage == "relocation":
++        e["args"]["Kernel Args"] = e["args"]["Kernel Args"].replace("0x0000000000900128", "0x0000000000900130")
++    elif damage == "kernel":
++        e["name"] = "OtherKernel"
++    else:
++        e["args"]["Kernel Args"] = e["args"]["Kernel Args"].replace("(placeHolderData1)0x0000000000000028", "(placeHolderData1)0x0000000000000020")
++    with pytest.raises(ValueError):
++        tool.decode_native_fia(e, 1)
++
++
++class MetadataOnlyTensor:
++    def __init__(self, pointer, shape, dtype="torch.bfloat16"):
++        self.pointer, self.shape, self.dtype, self.device = pointer, shape, dtype, "npu:0"
++
++    def data_ptr(self):
++        return self.pointer
++
++    def __getitem__(self, key):
++        raise AssertionError("must not index device tensor")
++
++    def __len__(self):
++        raise AssertionError("must not treat device tensor as a sequence")
++
++    def __iter__(self):
++        raise AssertionError("must not iterate device tensor")
++
++    def to(self, *args, **kwargs):
++        raise AssertionError("must not copy/synchronize device tensor")
++
++
++def binding_fixture():
++    handle, event = object(), object()
++    param = [None] * 22
++    param[0] = MetadataOnlyTensor(0x10000, [7, 32, 128])
++    # Match full_graph_fia + pinned weak_ref_tensors: retain single Tensors.
++    param[1] = MetadataOnlyTensor(0x30000, [8, 128, 1024])
++    param[2] = MetadataOnlyTensor(0x40000, [8, 128, 1024])
++    param[3] = MetadataOnlyTensor(0x20000, [1, 32], "torch.int32")
++    param[6], param[7] = [1151], [7]
++    param[11] = MetadataOnlyTensor(0x50000, [7, 32, 128])
++    # Generic DSpark capture tuple has no layer-aware name; use explicit IDs.
++    params = SimpleNamespace(attn_params={7: [tuple(param)]}, handles={7: [handle]}, events={7: [event]})
++    observed = dict(stage="capture_operator", num_tokens=7, handle_identity=id(handle),
++                    event_identity=id(event), layer_name="layer0", actual_table_address=0x20000,
++                    length_values=[1151])
++    return SimpleNamespace(draft_attn_layer_names={"layer0"}), params, observed
++
++
++@pytest.mark.parametrize("container", [None, list, tuple])
++def test_host_capture_uses_real_handle_event_not_list_order(container):
++    spec, params, observed = binding_fixture()
++    if container is not None:
++        param = list(params.attn_params[7][0])
++        param[1], param[2] = container([param[1]]), container([param[2]])
++        params.attn_params[7] = [tuple(param)]
++    result = tool.capture_fia_bindings(spec, SimpleNamespace(num_tokens=7), params, [observed])
++    assert result[0]["layer_name"] == "layer0"
++    assert result[0]["key"][0]["data_ptr"] == 0x30000
++    assert result[0]["key_parameter_form"] == ("SINGLE_TENSOR" if container is None else "TENSOR_SEQUENCE")
++    bad = dict(observed, event_identity=0)
++    with pytest.raises(ValueError):
++        tool.capture_fia_bindings(spec, SimpleNamespace(num_tokens=7), params, [bad])
++
++
++@pytest.mark.parametrize("count", [0, 2])
++def test_host_capture_rejects_other_tensor_list_sizes(count):
++    spec, params, observed = binding_fixture()
++    param = list(params.attn_params[7][0])
++    param[1] = [param[1]] * count
++    params.attn_params[7] = [tuple(param)]
++    with pytest.raises(ValueError, match="only one K/V tensor"):
++        tool.capture_fia_bindings(spec, SimpleNamespace(num_tokens=7), params, [observed])
++
++
++@pytest.mark.parametrize("damage", [None, "kv_pointer", "last_generation", "native_length", "capture_handle", "process", "same_as_capture", "repeated_generation"])
++def test_join_requires_pointer_layer_and_distinct_generation(tmp_path, damage):
++    spec, params, capture = binding_fixture()
++    binding = tool.capture_fia_bindings(spec, SimpleNamespace(num_tokens=7), params, [capture])[0]
++    binding["host_observed_ns"] = 2
++    update = dict(capture, stage="update_operator", generation_id=6, mapping_epoch=6, length_values=[28])
++    life = dict(draft_layer_names=["layer0"], recorder=dict(operand_events=[capture, update]))
++    event = native()
++    if damage == "kv_pointer":
++        event = native(key=0x30008)
++    elif damage == "last_generation":
++        update["generation_id"] = 5
++    elif damage == "native_length":
++        event["args"]["Kernel Args"] = event["args"]["Kernel Args"].replace("(placeHolderData4)0x000000000000001c", "(placeHolderData4)0x000000000000001b")
++    elif damage == "capture_handle":
++        binding["handle_identity"] = 0
++    elif damage == "process":
++        event["pid"] = "999 aclGraph"
++    elif damage == "same_as_capture":
++        capture["length_values"] = [28]
++        binding["retained_capture_kv_lengths"] = [28]
++    elif damage == "repeated_generation":
++        life["recorder"]["operand_events"].append(dict(update, generation_id=5, mapping_epoch=5))
++    path = tmp_path / "native.json"
++    path.write_text(json.dumps([event]))
++    doc = dict(schema="repair8-native-graph-json-v2", host_binding_scope="AFTER_SUCCESSFUL_LIFE_DRAINS_METADATA_ONLY",
++               identity=dict(process_id=123), records=[dict(descriptor=[1, 7], captured_fia_bindings=[binding],
++               path=path.name, last_life_generation=6, last_life_epoch=6, start_ns=1, end_ns=3)])
++    if damage in (None, "same_as_capture", "repeated_generation"):
++        result = tool.native_parameter_bindings(doc, life, tmp_path / "task-dump-index.json")
++        assert result["tasks"][0]["parameter_values_match_host_generation"] == 6
++        if damage is None:
++            assert result["tasks"][0]["capture_values_distinguishable"]
++            assert result["status"] == "DIAGNOSTIC_POST_DRAIN_NATIVE_PARAMETER_BINDING"
++        else:
++            assert result["status"] == "OPEN_NATIVE_GENERATION_NOT_DISTINGUISHABLE"
++        assert result["execution_occurrence_generation"] == "UNPROVEN"
++    else:
++        with pytest.raises(ValueError):
++            tool.native_parameter_bindings(doc, life, tmp_path / "task-dump-index.json")
++
++
++def test_deep_binding_failure_cannot_retain_collection_pass(monkeypatch, tmp_path):
++    from tools.p7x_graph_repair6_storage import digest
++    import tools.p7x_graph_repair5_evidence as evidence
++
++    monkeypatch.setattr(evidence, "audit_execution", lambda *a, **kw: dict(status="EXECUTION_ASSOCIATED"))
++    records, graphs = [], {}
++    from typing import NamedTuple
++
++    class Descriptor(NamedTuple):
++        num_reqs: int
++        num_tokens: int
++
++    for n in (1, 2, 4):
++        def dump(path):
++            from pathlib import Path
++            Path(path).write_text("{}")
++        graphs[Descriptor(n, n * 7)] = SimpleNamespace(debug_dump=dump)
++        records.append(dict(descriptor=[n, n * 7], completion="DIAGNOSTIC_COMPLETE", retired=True,
++                            generation=n, epoch=n, backing={}, complete_ns=1))
++    spec = SimpleNamespace(query_cudagraph_manager=SimpleNamespace(graphs=graphs))
++    life = SimpleNamespace(records=records, poisoned=False)
++    path = tmp_path / "task-dump-index.json"
++    doc = tool.completed_graph_dump(spec, life, path, dict(process_id=123))
++    saved = tmp_path / "mrv2-lifecycle.json"
++    saved.write_text(json.dumps(dict(identity=doc["identity"], records=records)))
++    campaign = dict(diagnostic_artifacts={saved.name: dict(bytes=saved.stat().st_size, sha256=digest(saved))})
++    launcher = dict(host_start_ns=0, host_end_ns=10**30)
++    assert tool.check(doc, campaign, launcher, {}, path)["status"] == "PASS_SCOPED_NATIVE_JSON_COLLECTION"
++    assert tool.check(doc, campaign, launcher, {}, path, native_bindings=True)["status"] == "INVALID_EVIDENCE"
++
++
++def test_poisoned_life_never_reads_capture_parameters(monkeypatch, tmp_path):
++    def forbidden():
++        raise AssertionError("must not inspect uncertain native/capture state")
++
++    monkeypatch.setattr(tool, "_captured_parameters", forbidden)
++    with pytest.raises(ValueError):
++        tool.completed_graph_dump(SimpleNamespace(), SimpleNamespace(poisoned=True),
++                                  tmp_path / "task-dump-index.json", {}, host_bindings=True)
++    assert not list(tmp_path.iterdir())
++
++
++@pytest.mark.parametrize("ambiguous", [False, True])
++def test_native_layer_match_is_by_kv_pair_not_task_order(tmp_path, ambiguous):
++    spec, params, capture = binding_fixture()
++    a = tool.capture_fia_bindings(spec, SimpleNamespace(num_tokens=7), params, [capture])[0]
++    import copy
++    b = copy.deepcopy(a)
++    b.update(layer_name="layer1", handle_identity=a["handle_identity"] + 1, event_identity=a["event_identity"] + 1)
++    b["key"][0]["data_ptr"] += 8
++    b["value"][0]["data_ptr"] += 8
++    for x in (a, b):
++        x["host_observed_ns"] = 2
++    cap_b = dict(capture, layer_name="layer1", handle_identity=b["handle_identity"], event_identity=b["event_identity"])
++    updates = [dict(x, stage="update_operator", generation_id=6, mapping_epoch=6, length_values=[28]) for x in (capture, cap_b)]
++    life = dict(draft_layer_names=["layer0", "layer1"], recorder=dict(operand_events=[capture, cap_b, *updates]))
++    second = native(key=0x30008, value=0x40008)
++    second["args"]["Task Id"] = 36
++    path = tmp_path / "native.json"
++    path.write_text(json.dumps([second, native()]))
++    doc = dict(schema="repair8-native-graph-json-v2", host_binding_scope="AFTER_SUCCESSFUL_LIFE_DRAINS_METADATA_ONLY",
++               identity=dict(process_id=123), records=[dict(descriptor=[1, 7], captured_fia_bindings=[a, b],
++               path=path.name, last_life_generation=6, last_life_epoch=6, start_ns=1, end_ns=3)])
++    if ambiguous:
++        b["key"], b["value"] = a["key"], a["value"]
++        with pytest.raises(ValueError):
++            tool.native_parameter_bindings(doc, life, tmp_path / "index.json")
++    else:
++        result = tool.native_parameter_bindings(doc, life, tmp_path / "index.json")
++        assert [r["layer_name"] for r in result["tasks"]] == ["layer1", "layer0"]
+diff --git a/tests/ut/spec_decode/test_graph_repair8_task_dump.py b/tests/ut/spec_decode/test_graph_repair8_task_dump.py
+new file mode 100644
+index 000000000..e7f2a31bd
+--- /dev/null
++++ b/tests/ut/spec_decode/test_graph_repair8_task_dump.py
+@@ -0,0 +1,88 @@
++# SPDX-License-Identifier: Apache-2.0
++"""Native export safety gates, immutable index, corruption rejection; CPU only."""
++
++import json
++from types import SimpleNamespace
++from typing import NamedTuple
++
++import pytest
++
++from tools import p7x_graph_repair8_task_dump as tool
++from tools.p7x_graph_repair6_storage import digest
++
++
++class Descriptor(NamedTuple):
++    num_reqs: int
++    num_tokens: int
++
++
++def fixture(tmp_path):
++    calls, records, graphs = [], [], {}
++    for requests in (1, 2, 4):
++        desc = Descriptor(requests, requests * 7)
++
++        def dump(path, desc=desc):
++            calls.append(desc)
++            from pathlib import Path
++
++            Path(path).write_text(json.dumps(dict(tasks=[dict(task_id=desc.num_tokens)])))
++
++        graphs[desc] = SimpleNamespace(debug_dump=dump)
++        records.append(dict(descriptor=list(desc), completion="DIAGNOSTIC_COMPLETE", retired=True,
++                            generation=requests, epoch=requests, backing=dict(owner_id=42), complete_ns=1))
++    lifecycle = SimpleNamespace(poisoned=False, records=records)
++    spec = SimpleNamespace(query_cudagraph_manager=SimpleNamespace(graphs=graphs))
++    return spec, lifecycle, calls, tmp_path / "task-dump-index.json"
++
++
++@pytest.mark.parametrize("unsafe", ["quarantine", "no_record", "pending", "not_retired", "uncertain"])
++def test_no_native_call_or_output_for_unsafe_life(tmp_path, unsafe):
++    spec, life, calls, path = fixture(tmp_path)
++    if unsafe == "quarantine":
++        life.poisoned = True
++    elif unsafe == "no_record":
++        life.records = []
++    elif unsafe == "pending":
++        life.records[0]["completion"] = "UNPROVEN"
++    elif unsafe == "not_retired":
++        life.records[0]["retired"] = False
++    else:
++        spec._draft_window_graph_submission_uncertain = True
++    with pytest.raises(ValueError):
++        tool.completed_graph_dump(spec, life, path, {})
++    assert not calls and not path.exists() and not (tmp_path / "native-graph-json").exists()
++
++
++@pytest.mark.parametrize("damage", [None, "native_hash", "life_hash", "generation", "descriptor"])
++def test_export_index_and_reject_corrupted_joins(monkeypatch, tmp_path, damage):
++    import tools.p7x_graph_repair5_evidence as evidence
++
++    # External association is tested independently; here exercise native/LIFE
++    # joins using bytes actually written by the exporter and real hash checks.
++    monkeypatch.setattr(evidence, "audit_execution", lambda *a, **kw: dict(status="EXECUTION_ASSOCIATED"))
++    spec, life, calls, path = fixture(tmp_path)
++    doc = tool.completed_graph_dump(spec, life, path, dict(process_id=123))
++    assert len(calls) == 3 and doc["task_operand"] == "UNPROVEN_PENDING_FIELD_ANALYSIS"
++    life_path = tmp_path / "mrv2-lifecycle.json"
++    life_path.write_text(json.dumps(dict(identity=doc["identity"], records=life.records)))
++    campaign = dict(diagnostic_artifacts={life_path.name: dict(bytes=life_path.stat().st_size, sha256=digest(life_path))})
++    if damage == "native_hash":
++        (tmp_path / doc["records"][0]["path"]).write_text("{}")
++    elif damage == "life_hash":
++        life_path.write_text("{}")
++    elif damage == "generation":
++        doc["records"][0]["last_life_generation"] += 1
++    elif damage == "descriptor":
++        doc["records"][0]["descriptor"] = [4, 32]
++    launcher = dict(host_start_ns=0, host_end_ns=10**30)
++    result = tool.check(doc, campaign, launcher, {}, path)
++    assert (result["status"] == "PASS_SCOPED_NATIVE_JSON_COLLECTION") is (damage is None), result
++
++
++def test_oversized_export_is_preserved_and_stops_more_exports(monkeypatch, tmp_path):
++    spec, life, calls, path = fixture(tmp_path)
++    monkeypatch.setattr(tool, "MAX_EXPORT_BYTES", 1)
++    result = tool.completed_graph_dump(spec, life, path, {})
++    assert result["status"] == "EXPORT_FAILED" and len(calls) == 1
++    assert (tmp_path / result["records"][0]["path"]).is_file()
++    assert json.loads(path.read_text())["records"][0]["status"] == "EXPORT_FAILED"
+diff --git a/tests/ut/spec_decode/test_graph_repair8_unwind.py b/tests/ut/spec_decode/test_graph_repair8_unwind.py
+new file mode 100644
+index 000000000..2d88fe79a
+--- /dev/null
++++ b/tests/ut/spec_decode/test_graph_repair8_unwind.py
+@@ -0,0 +1,147 @@
++# SPDX-License-Identifier: Apache-2.0
++"""Real C1 finally + runtime quarantine; native Graph/Event calls replaced."""
++
++import hashlib
++import json
++import os
++from types import SimpleNamespace
++
++import pytest
++import torch
++from vllm.config.compilation import CUDAGraphMode
++
++from tests.ut.spec_decode.test_graph_repair4_integration import _batch, _lifetime_fixture, _publish_in_scope
++from tools.p7x_graph_repair6_runner import adjudicate_records, run_case
++from tools.p7x_graph_repair8_unwind import InjectedGraphUnwindError, POINTS, ProposalUnwindProbe
++
++
++def host_unwind(monkeypatch, tmp_path, point):
++    owner, session, manager, descriptors, _ = _lifetime_fixture(monkeypatch)
++    owner.query_cudagraph_manager = manager
++    manager.max_num_reqs = 8
++    manager._capture_descs = {CUDAGraphMode.FULL: list(descriptors.values())}
++    session.recorder.enabled = False
++    events = []
++
++    class Event:
++        def record(self, stream):
++            events.append("record")
++
++        def synchronize(self):
++            events.append("sync")
++
++        def query(self):
++            pytest.fail("no query allowed")
++
++    monkeypatch.setattr(torch.npu, "Event", Event if point == "after_completion" else
++                        lambda: pytest.fail("uncertain branch must not drain"))
++    monkeypatch.setattr(torch.npu, "current_stream", lambda: SimpleNamespace(npu_stream=1))
++    path = tmp_path / "unwind.json"
++    probe = ProposalUnwindProbe(owner, path, {}, point)
++    _batch(owner, 1)
++    with pytest.raises(InjectedGraphUnwindError), probe:
++        with owner._draft_window_proposal_scope(owner.input_batch, dummy_run=False, is_profile=False):
++            _publish_in_scope(owner, descriptors[1])
++            manager.run_fullgraph(descriptors[1])
++    document = json.loads(path.read_text())
++    return owner, probe, document, events
++
++
++@pytest.mark.parametrize("point", POINTS)
++def test_real_c1_exception_unwinding_preserves_backing_and_rejects_next_use(monkeypatch, tmp_path, point):
++    owner, probe, document, events = host_unwind(monkeypatch, tmp_path, point)
++    state, record, guard = document["state"], document["record"], document["next_scope_guard"]
++    assert state["quarantined_identity"] == record["generation_identity"]
++    assert state["active_backing_retained"] and state["live_inputs_cleared"] and state["proposal_context_cleared"]
++    assert state["graph_submission_uncertain"] and len(record["quarantine_calls"]) == 1
++    assert guard["rejected"] and not guard["body_entered"] and "backing is quarantined" in guard["exception"]
++    assert events == (["record", "record", "sync", "sync"] if point == "after_completion" else [])
++    assert probe.poisoned and not probe.saved
++    assert "quarantine_generation" not in vars(owner._draft_window_runtime_state)
++    # The next entry was rejected before epoch.begin or a second materialize.
++    assert owner._draft_window_runtime_state._next_generation_id == 1
++
++
++def outcomes():
++    return [dict(argv=["python", "launch"], returncode=73, timeout=False, kind="launch", status="EXECUTION_FAILED"),
++            dict(argv=["python", "/fixed/tools/p7x_graph_repair5.py", "check-diagnostic", "--kind", "abort"],
++                 returncode=0, timeout=False, kind="read_only_acceptance", status="COMMAND_COMPLETED_NOT_GATE_PASS")]
++
++
++@pytest.mark.parametrize("bad", [None, "wrong_kind", "no_checker", "timeout", "signal", "wrong_exit", "bad_evidence"])
++def test_published_abort_checker_contract_and_negative_outcomes(bad):
++    records = outcomes()
++    if bad == "wrong_kind":
++        records[1]["argv"][-1] = "lifecycle"
++    elif bad == "no_checker":
++        records.pop()
++    elif bad == "timeout":
++        records[0]["timeout"] = True
++    elif bad == "signal":
++        records[0]["returncode"] = -9
++    elif bad == "wrong_exit":
++        records[0]["returncode"] = 74
++    elif bad == "bad_evidence":
++        records[1]["returncode"] = 4
++    result = adjudicate_records(dict(cases={"ABORT_before_replay": {}}), "ABORT_before_replay", records)
++    assert result["dependency_satisfied"] is (bad is None)
++
++
++def test_existing_attempt_result_cannot_be_reassociated_after_dependency_failure(tmp_path):
++    directory = tmp_path / "A0"
++    directory.mkdir()
++    original = b'{"dependency_satisfied": true, "source_identity": ["old"]}'
++    (directory / "runner-result.json").write_bytes(original)
++    with pytest.raises(ValueError, match="output already exists"):
++        run_case(dict(cases={"A0": dict(dependencies=["CONFIG"])}), "A0", tmp_path)
++    assert (directory / "runner-result.json").read_bytes() == original
++
++
++def test_unwind_plan_and_driver_default_off():
++    from tools.p7x_graph_repair2 import parse_args
++
++    args = parse_args(["run", "--case", "B-observer-off", "--run-id", "r", "--attempt", "1",
++                       "--expected-sha", "a" * 40, "--vllm-repo", "/pin", "--target-model", "/target",
++                       "--draft-model", "/draft", "--fixture-manifest", "/fixture", "--output", "/output"])
++    assert args.repair8_unwind_at == "none"
++
++
++@pytest.mark.parametrize("damage", [None, "pid", "point", "guard", "quarantine", "completion", "signal", "exit"])
++def test_joint_requires_real_c1_state_and_external_execution(monkeypatch, tmp_path, damage):
++    from tools.p7x_graph_repair8_unwind import check
++
++    _, _, doc, _ = host_unwind(monkeypatch, tmp_path, "after_replay")
++    identity = dict(run_id="host-r", case_id="UNWIND_after_replay", attempt_id="1",
++                    source_sha="a" * 40, source_tree="b" * 40, driver_mode="B-observer-off",
++                    process_id=os.getpid(), engine_id=123)
++    doc["identity"] = identity
++    argv = ["python", "/fixed/tools/p7x_graph_repair2.py", "run", "--case-id", identity["case_id"]]
++    expected = dict(acceptance_identity=identity, argv=argv, launch_argv=["launch", "--", *argv],
++                    outputs=str(tmp_path), requests_sha256="c" * 64, unwind_point="after_replay")
++    launcher = dict(identity, pid=os.getpid(), argv=argv, requests_sha256="c" * 64,
++                    host_start_ns=doc["record"]["before_replay_ns"] - 1000,
++                    host_end_ns=doc["next_scope_guard"]["ns"] + 1000,
++                    status="EXITED", signal=None, timeout=False, returncode=74)
++    campaign = dict(identity=identity, startup_complete=True, status="EXCEPTION",
++                    exception_type="InjectedGraphUnwindError", exception_message="REPAIR8_PYTHON_UNWIND:after_replay",
++                    request_manifest=dict(sha256="c" * 64), diagnostic_quarantine="PROCESS_EXIT_74_NO_REUSE")
++    if damage == "pid":
++        launcher["pid"] += 1
++    elif damage == "point":
++        doc["record"]["injected_point"] = "before_replay"
++    elif damage == "guard":
++        doc["next_scope_guard"]["body_entered"] = True
++    elif damage == "quarantine":
++        doc["record"]["quarantine_calls"] = []
++    elif damage == "completion":
++        doc["record"]["completion"] = "DIAGNOSTIC_STREAM_DRAIN_BEFORE_EXCEPTION"
++    elif damage == "signal":
++        launcher["signal"] = 9
++    elif damage == "exit":
++        launcher["returncode"] = 0
++    path = tmp_path / "python-unwind.json"
++    path.write_text(json.dumps(doc))
++    campaign["diagnostic_artifacts"] = {path.name: dict(
++        bytes=path.stat().st_size, sha256=hashlib.sha256(path.read_bytes()).hexdigest())}
++    result = check(doc, campaign, launcher, expected, path)
++    assert (result["status"] == "PASS_SCOPED_PYTHON_UNWIND_ISOLATION") is (damage is None), result
+diff --git a/tools/p7x_graph_local_candidate.py b/tools/p7x_graph_local_candidate.py
+index ee9e2a37e..49db71af1 100644
+--- a/tools/p7x_graph_local_candidate.py
++++ b/tools/p7x_graph_local_candidate.py
+@@ -52,6 +52,16 @@ def _cases_sha(plan: dict) -> str:
+     return hashlib.sha256(json.dumps(plan["cases"], sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+ 
+ 
++def _validate_host_evidence(evidence: list[dict]) -> None:
++    if not evidence or any(
++        row.get("status") != "PASS" or digest(Path(row["path"])) != row["sha256"] for row in evidence
++    ):
++        raise ValueError("Host evidence missing or changed")
++    required = {"graph_quarantine", "local_admission"}
++    if not required.issubset({row.get("label") for row in evidence}):
++        raise ValueError("Host evidence coverage missing")
++
++
+ def validate_local_plan(plan: dict) -> dict:
+     if plan.get("publication_status") != STATUS or plan.get("remote_publication") != "NOT_PERFORMED":
+         raise ValueError("not a local committed candidate plan")
+@@ -105,12 +115,7 @@ def validate_local_plan(plan: dict) -> dict:
+     if {row.get("numeric_enabled") for row in config["rows"]} != {False, True}:
+         raise ValueError("local schema check lacks enabled and disabled diagnostic cases")
+     evidence = manifest.get("host_evidence", [])
+-    if not evidence or any(
+-        row.get("status") != "PASS" or digest(Path(row["path"])) != row["sha256"] for row in evidence
+-    ):
+-        raise ValueError("local Host test evidence missing or changed")
+-    if {row.get("label") for row in evidence} < {"graph_quarantine", "local_admission"}:
+-        raise ValueError("local Host test coverage missing")
++    _validate_host_evidence(evidence)
+     return {
+         "status": STATUS,
+         "source_sha": plan["commit"],
+@@ -141,12 +146,7 @@ def prepare(args: argparse.Namespace) -> None:
+             {"path": str(path), "sha256": row["sha256"], "size": stat.st_size, "mtime_ns": stat.st_mtime_ns}
+         )
+     host_evidence = json.loads(args.host_evidence.read_text())
+-    if not host_evidence or any(
+-        row.get("status") != "PASS" or digest(Path(row["path"])) != row["sha256"] for row in host_evidence
+-    ):
+-        raise ValueError("Host evidence missing or changed")
+-    if {row.get("label") for row in host_evidence} < {"graph_quarantine", "local_admission"}:
+-        raise ValueError("Host evidence coverage missing")
++    _validate_host_evidence(host_evidence)
+     plan = build_plan(args.repo, args.inputs, args.output, args.vllm, sys.executable, sha, tree, args.run_id)
+     config = config_matrix(plan, framework=False)
+     if config.get("status") != "CONFIGS_VALID":
+@@ -159,6 +159,10 @@ def prepare(args: argparse.Namespace) -> None:
+         "tools/p7x_graph_repair6_runner.py",
+         "tools/p7x_graph_repair7_device.py",
+         "tools/p7x_graph_repair7_campaign.py",
++        "tools/p7x_graph_repair8_unwind.py",
++        "tools/p7x_graph_repair8_task_dump.py",
++        "tools/p7x_graph_repair5_profile.py",
++        "tools/p7x_graph_repair5_evidence.py",
+         "tools/p7x_graph_repair7.py",
+         "tools/p7x_graph_repair2.py",
+         "vllm_ascend/worker/v2/spec_decode/draft_window.py",
+diff --git a/tools/p7x_graph_repair2.py b/tools/p7x_graph_repair2.py
+index 91939b00d..dcea2e23e 100644
+--- a/tools/p7x_graph_repair2.py
++++ b/tools/p7x_graph_repair2.py
+@@ -1035,6 +1035,7 @@ def run_case(args):
+     llm = session = target_probe = full_target_probe = lifecycle_probe = profile_probe = numeric_probe = (
+         normal_probe
+     ) = None
++    unwind_probe = None
+     spec = None
+     profile_mode = getattr(args, "repair5_profile", "none")
+     capture_profile = getattr(args, "repair5_capture_profile", "base")
+@@ -1118,6 +1119,12 @@ def run_case(args):
+         )
+         session = getattr(spec, "_draft_window_graph_characterization", None)
+         record["provider_installed"] = hasattr(spec, "_draft_window_graph_binding_provider")
++        record["observer_installation"] = dict(
++            legacy_observer_enabled_meaning="driver mode requested observer; not proof of installation or execution",
++            recorder_installed=session is not None,
++            recorder_enabled=bool(session.recorder.enabled) if session is not None else False,
++            provider_installed=record["provider_installed"],
++        )
+         if args.case == "A0" and (session is not None or record["provider_installed"]):
+             raise RuntimeError("OFF allocated Window state")
+         if args.case.startswith("B"):
+@@ -1186,6 +1193,11 @@ def run_case(args):
+ 
+             normal_probe = NormalOrderProbe(spec, output / "normal-lifecycle.json", identity)
+             normal_probe.__enter__()
++        if getattr(args, "repair8_unwind_at", "none") != "none":
++            from tools.p7x_graph_repair8_unwind import ProposalUnwindProbe
++
++            unwind_probe = ProposalUnwindProbe(spec, output / "python-unwind.json", identity, args.repair8_unwind_at)
++            unwind_probe.__enter__()
+         if getattr(args, "full_target_probe", False):
+             adapter_spec = importlib.util.spec_from_file_location(
+                 "_repair4_full_target", ROOT / "tools/p7x_graph_repair4_target.py"
+@@ -1217,6 +1229,7 @@ def run_case(args):
+                 enabled=profile_mode != "control",
+                 diagnostic=profile_mode == "life",
+                 detailed=getattr(args, "repair6_profile_detail", False),
++                materialize_ranges=getattr(args, "repair8_materialize_ranges", False),
+             )
+             profile_probe.__enter__()
+             request = requests[0]
+@@ -1272,7 +1285,13 @@ def run_case(args):
+ 
+         graph_uncertain = bool(getattr(spec, "_draft_window_graph_submission_uncertain", False))
+         record["graph_submission_uncertain"] = graph_uncertain
+-        uncertain = graph_uncertain or needs_quarantine(lifecycle_probe, numeric_probe, normal_probe)
++        uncertain = graph_uncertain or needs_quarantine(lifecycle_probe, numeric_probe, normal_probe, unwind_probe)
++        if unwind_probe is not None:
++            try:
++                unwind_probe.__exit__(RuntimeError if record["status"] == "EXCEPTION" else None, None, None)
++            except Exception as error:
++                record["unwind_probe_error"] = repr(error)
++                unwind_probe.poisoned = True
+         if profile_probe is not None and not uncertain:
+             try:
+                 profile_probe.__exit__(None, None, None)
+@@ -1291,7 +1310,15 @@ def run_case(args):
+                 lifecycle_probe.__exit__(None, None, None)
+             except Exception as error:
+                 record["lifecycle_probe_error"] = repr(error)
+-        uncertain = graph_uncertain or needs_quarantine(lifecycle_probe, numeric_probe, normal_probe)
++        uncertain = graph_uncertain or needs_quarantine(lifecycle_probe, numeric_probe, normal_probe, unwind_probe)
++        if getattr(args, "repair8_task_dump", False) and record["status"] == "OK" and not uncertain:
++            try:
++                from tools.p7x_graph_repair8_task_dump import completed_graph_dump
++
++                completed_graph_dump(spec, lifecycle_probe, output / "task-dump-index.json", identity,
++                                     host_bindings=getattr(args, "repair8_task_bindings", False))
++            except Exception as error:
++                record["native_task_dump_error"] = repr(error)
+         if full_target_probe is not None and not uncertain:
+             try:
+                 full_target_probe.__exit__(None, None, None)
+@@ -1336,13 +1363,15 @@ def run_case(args):
+                     output / "normal-lifecycle.json",
+                     output / "mrv2-lifecycle.json",
+                     output / "profile.json",
++                    output / "python-unwind.json",
++                    output / "task-dump-index.json",
+                 )
+                 if p.is_file()
+             }
+         except OSError as error:
+             record["diagnostic_artifact_error"] = repr(error)
+         _write(output / "campaign.json", record)
+-        if graph_uncertain or needs_quarantine(lifecycle_probe, numeric_probe, normal_probe):
++        if graph_uncertain or needs_quarantine(lifecycle_probe, numeric_probe, normal_probe, unwind_probe):
+             # Diagnostic child only: uncertain submission is never reused or
+             # fed to normal engine teardown. External launch/watchdog owns it.
+             record["diagnostic_quarantine"] = "PROCESS_EXIT_74_NO_REUSE"
+@@ -1451,6 +1480,10 @@ def parse_args(argv=None):
+     )
+     run.add_argument("--repair6-target-prefix", type=int, help="partial preflight; never full coverage PASS")
+     run.add_argument("--repair6-profile-detail", action="store_true", help="separate shapes/stack diagnostic profile")
++    run.add_argument(
++        "--repair8-materialize-ranges", action="store_true",
++        help="additional Host-only nested materialize ranges; no new device copies or waits",
++    )
+     run.add_argument(
+         "--repair6-numeric-reference", action="store_true", help="exclusive serialized same-Window backbone reference"
+     )
+@@ -1485,6 +1518,17 @@ def parse_args(argv=None):
+         default="none",
+         choices=("none", "before_replay", "after_replay", "after_update", "after_completion"),
+     )
++    run.add_argument(
++        "--repair8-unwind-at", default="none",
++        choices=("none", "before_replay", "after_replay", "after_update", "after_completion"),
++        help="isolated Python exception through real C1 finally; observer OFF; no post-fault device recovery",
++    )
++    run.add_argument(
++        "--repair8-task-dump", action="store_true",
++        help="bounded native Graph JSON only AFTER successful serialized LIFE; no operand proof implied",
++    )
++    run.add_argument("--repair8-task-bindings", action="store_true",
++                     help="Host capture metadata after drained LIFE; requires native task dump")
+     run.add_argument(
+         "--full-target-probe", action="store_true", help="actual target FULL forward/KV checkpoints after capture"
+     )
+@@ -1494,6 +1538,21 @@ def parse_args(argv=None):
+     )
+     args = parser.parse_args(argv)
+     if args.command == "run":
++        if args.repair8_task_bindings and not args.repair8_task_dump:
++            parser.error("native bindings require standalone LIFE native task dump")
++        if args.repair8_task_dump and (
++            not args.repair5_lifecycle or args.repair5_abort_at != "none" or args.repair8_unwind_at != "none"
++            or args.repair5_controlled_target or args.repair5_profile != "none"
++        ):
++            parser.error("native task dump requires successful standalone LIFE without abort, unwind or profiling")
++        if args.repair8_materialize_ranges and args.repair5_profile not in ("normal", "control"):
++            parser.error("materialize ranges require normal profiling or its uncollected control")
++        if args.repair8_unwind_at != "none" and (
++            args.case != "B-observer-off" or args.repair5_lifecycle or args.repair5_controlled_target
++            or args.repair6_normal_lifecycle or args.repair5_profile != "none"
++            or args.target_probe or args.full_target_probe
++        ):
++            parser.error("Python unwind requires disposable observer-OFF without other diagnostic probes")
+         if args.repair6_target_prefix is not None and not (
+             args.repair6_target_store and args.repair6_target_prefix > 0
+         ):
+diff --git a/tools/p7x_graph_repair5_evidence.py b/tools/p7x_graph_repair5_evidence.py
+index 150569f2a..b8da47f9c 100644
+--- a/tools/p7x_graph_repair5_evidence.py
++++ b/tools/p7x_graph_repair5_evidence.py
+@@ -19,7 +19,7 @@ def require(ok, message):
+         raise ValueError(message)
+ 
+ 
+-def audit_execution(document, campaign, launcher, expected, artifact, *, abort=False):
++def audit_execution(document, campaign, launcher, expected, artifact, *, abort=False, unwind=False):
+     """Join a producer artifact to the frozen argv and external child outcome.
+ 
+     Source labels are necessary but insufficient: file bytes, child PID, complete
+@@ -27,6 +27,7 @@ def audit_execution(document, campaign, launcher, expected, artifact, *, abort=F
+     """
+     result = {"status": "INVALID_EVIDENCE", "numeric_status": "NOT_ASSESSED"}
+     try:
++        require(not (abort and unwind), "abort and Python unwind are separate outcomes")
+         fields = ("run_id", "case_id", "attempt_id", "source_sha", "source_tree", "driver_mode")
+         identity = document["identity"]
+         frozen = expected["acceptance_identity"]
+@@ -86,12 +87,14 @@ def audit_execution(document, campaign, launcher, expected, artifact, *, abort=F
+             launcher["status"] == "EXITED"
+             and launcher["signal"] is None
+             and launcher["timeout"] is False
+-            and launcher["returncode"] == (73 if abort else 0),
++            and launcher["returncode"] == (73 if abort else 74 if unwind else 0),
+             "child failed/timed out/signalled",
+         )
+         require(campaign["startup_complete"] is True, "startup incomplete")
+         if not abort:
+-            require(campaign["status"] == "OK", "campaign failed")
++            require(campaign["status"] == ("EXCEPTION" if unwind else "OK"), "campaign outcome mismatch")
++            if unwind:
++                require(campaign.get("diagnostic_quarantine") == "PROCESS_EXIT_74_NO_REUSE", "unwind not isolated")
+             require(
+                 not any(
+                     campaign.get(k)
+@@ -105,6 +108,7 @@ def audit_execution(document, campaign, launcher, expected, artifact, *, abort=F
+                         "diagnostic_artifact_error",
+                         "numeric_probe_error",
+                         "normal_probe_error",
++                        "unwind_probe_error",
+                     )
+                 ),
+                 "campaign cleanup/export failure",
+diff --git a/tools/p7x_graph_repair5_profile.py b/tools/p7x_graph_repair5_profile.py
+index d139d720b..08d51060b 100644
+--- a/tools/p7x_graph_repair5_profile.py
++++ b/tools/p7x_graph_repair5_profile.py
+@@ -48,7 +48,7 @@ def preflight(torch_npu):
+ 
+ 
+ class RequestProfiler:
+-    def __init__(self, runner, output, identity, *, enabled, diagnostic=False, detailed=False):
++    def __init__(self, runner, output, identity, *, enabled, diagnostic=False, detailed=False, materialize_ranges=False):
+         import torch
+ 
+         self.torch, self.runner, self.output = torch, runner, Path(output)
+@@ -56,6 +56,10 @@ class RequestProfiler:
+         if detailed and (not enabled or diagnostic):
+             raise ValueError("detailed profile requires a separate enabled normal-path experiment")
+         self.detailed = detailed
++        if materialize_ranges and diagnostic:
++            raise ValueError("materialize subranges require a normal-path experiment")
++        self.materialize_ranges = materialize_ranges
++        self.call_stack, self.next_call_id = [], 0
+         self.saved, self.calls, self.groups = [], [], []
+         self.profiler = None
+         self.active = False
+@@ -73,8 +77,18 @@ class RequestProfiler:
+         def wrapped(_self, *args, **kwargs):
+             start = time.monotonic_ns()
+             live_before = getattr(probe.runner.speculator, "_draft_window_live_inputs", None)
+-            with probe.torch.profiler.record_function("repair5/" + label):
+-                result = original(*args, **kwargs)
++            context = getattr(probe.runner.speculator, "_draft_window_proposal_context", None)
++            call_id = parent_id = None
++            if probe.materialize_ranges:
++                call_id, parent_id = probe.next_call_id, probe.call_stack[-1] if probe.call_stack else None
++                probe.next_call_id += 1
++                probe.call_stack.append(call_id)
++            try:
++                with probe.torch.profiler.record_function("repair5/" + label):
++                    result = original(*args, **kwargs)
++            finally:
++                if probe.materialize_ranges:
++                    probe.call_stack.pop()
+             # CPU-only record AFTER the wrapped operation. No device tensor read.
+             probe.calls.append(
+                 dict(
+@@ -89,6 +103,11 @@ class RequestProfiler:
+                 )
+             )
+             identity = getattr(result, "identity", None) or getattr(live_before, "identity", None)
++            if probe.materialize_ranges:
++                probe.calls[-1].update(call_id=call_id, parent_call_id=parent_id,
++                                       proposal_context_id=id(context) if context is not None else None,
++                                       proposal_mapping_epoch=getattr(context, "mapping_epoch", None))
++                identity = identity or kwargs.get("identity")
+             if identity is None and label == "Draft_retire_host" and args:
+                 identity = args[0]
+             if identity is not None and hasattr(identity, "generation_id"):
+@@ -129,6 +148,15 @@ class RequestProfiler:
+             runtime = getattr(spec, "_draft_window_runtime_state", None)
+             if runtime is not None:
+                 self._wrap(runtime, "retire_generation", "Draft_retire_host")
++                if self.materialize_ranges:
++                    for owner, method, label in (
++                        (spec, "_snapshot_prepared_draft_seq_lens", "Draft_materialize_exact_length_snapshot"),
++                        (spec._draft_window_epoch_source, "validate", "Draft_materialize_epoch_validate"),
++                        (runtime, "materialize", "Draft_materialize_runtime"),
++                        (runtime.workspace, "materialize", "Draft_materialize_workspace"),
++                        (runtime.workspace, "build_inputs", "Draft_materialize_build_inputs"),
++                    ):
++                        self._wrap(owner, method, label)
+             for name, manager in (("Target", self.runner.cudagraph_manager), ("Draft", spec.query_cudagraph_manager)):
+                 self._wrap(manager, "run_fullgraph", name + "_REPLAY_PLUS_UPDATE")
+                 for desc, graph in manager.graphs.items():
+@@ -198,6 +226,16 @@ class RequestProfiler:
+                 profiler_enabled=self.enabled,
+                 profile_configuration=dict(record_shapes=self.detailed, with_stack=self.detailed, profile_memory=False),
+                 detailed_diagnostic=self.detailed,
++                materialize_subranges=self.materialize_ranges,
++                materialize_timing_contract={
++                    "snapshot": "existing exact seq_lens.to(cpu, copy=True); includes possible wait and CPU copy",
++                    "epoch_validate": "Host epoch validation; calls outside materialize also retained",
++                    "runtime": "identity/lease/source binding and nested workspace construction",
++                    "workspace": "existing validation, table preparation/copies and length backing operations",
++                    "residual": "CPU upper/resident/phase plan and uninstrumented Host work; no single-op attribution",
++                    "association": "explicit same-thread call_id/parent_call_id + proposal context/epoch; not device flow",
++                    "impact": "additional Host record_function ranges and bookkeeping; no new device sync/copy/query",
++                } if self.materialize_ranges else None,
+                 capability=getattr(self, "capability", None),
+                 groups=self.groups,
+                 calls=self.calls,
+diff --git a/tools/p7x_graph_repair6_runner.py b/tools/p7x_graph_repair6_runner.py
+index 11320cd3b..8b0c15128 100644
+--- a/tools/p7x_graph_repair6_runner.py
++++ b/tools/p7x_graph_repair6_runner.py
+@@ -58,6 +58,10 @@ def execute(argv, directory, timeout):
+ 
+ 
+ def run_case(plan, case_id, root):
++    # Never let an earlier accepted result at this path masquerade as this
++    # invocation after a dependency/admission failure. Attempts are immutable.
++    if (root / case_id).exists():
++        raise ValueError("case output already exists; use an independent attempt directory")
+     case = plan["cases"][case_id]
+     if plan.get("publication_status") == "LOCAL_COMMITTED_CANDIDATE":
+         from tools.p7x_graph_local_candidate import validate_local_plan
+@@ -128,14 +132,34 @@ def run_case(plan, case_id, root):
+         # read-only comparator still runs; normal dependent execution stops.
+         if (row["timeout"] or row.get("interrupted")) and command["kind"] == "launch":
+             break
+-    expected_launch = 73 if case_id.startswith("ABORT_") else 0
++    result = adjudicate_records(plan, case_id, records)
++    (root / case_id / "runner-result.json").write_text(json.dumps(result, indent=2) + "\n")
++    return result
++
++
++def adjudicate_records(plan, case_id, records):
++    """Read-only verdict over immutable command outcomes; no device work."""
++    if not records:
++        raise ValueError("command outcomes missing")
++    case = plan["cases"][case_id]
++    is_unwind = case_id.startswith("UNWIND_") and case.get("unwind_point") in (
++        "before_replay", "after_replay", "after_update", "after_completion"
++    )
++    expected_launch = 73 if case_id.startswith("ABORT_") else 74 if is_unwind else 0
+     # An expected abort is accepted only together with its dedicated external
+     # lifecycle checker. Never ignore arbitrary nonzero producer return codes.
+     ok = bool(records) and all(
+         r["returncode"] == (expected_launch if i == 0 else 0) and not r["timeout"] for i, r in enumerate(records)
+     )
+     if expected_launch:
+-        ok = ok and len(records) > 1 and any("check-abort" in r["argv"] for r in records[1:])
++        def dedicated(argv):
++            if is_unwind:
++                return any(Path(a).name == "p7x_graph_repair8_unwind.py" for a in argv)
++            return (any(Path(a).name == "p7x_graph_repair5.py" for a in argv)
++                    and "check-diagnostic" in argv and "--kind" in argv
++                    and argv[argv.index("--kind") + 1:argv.index("--kind") + 2] == ["abort"])
++
++        ok = ok and len(records) > 1 and any(dedicated(r["argv"]) for r in records[1:])
+     result = dict(
+         case_id=case_id,
+         records=records,
+@@ -187,7 +211,6 @@ def run_case(plan, case_id, root):
+         dependency_status="SATISFIED" if ok else "BLOCKED",
+         source_identity=[plan.get("run_id"), plan.get("commit"), plan.get("tree")],
+     )
+-    (root / case_id / "runner-result.json").write_text(json.dumps(result, indent=2) + "\n")
+     return result
+ 
+ 
+diff --git a/tools/p7x_graph_repair7_campaign.py b/tools/p7x_graph_repair7_campaign.py
+index 8c86e5e8b..3e1351baa 100644
+--- a/tools/p7x_graph_repair7_campaign.py
++++ b/tools/p7x_graph_repair7_campaign.py
+@@ -35,6 +35,87 @@ def build_plan(repo, inputs, output, vllm, python, sha, tree, run_id):
+     sentinel["resource_policy"]["geometry_preflight"] = "THREE_SAMPLE_TARGET_PLUS_DRAFT"
+     cases["NUMERIC_SENTINEL"] = sentinel
+     cases["NUMERIC_TARGET4"]["dependencies"] = ["NUMERIC_SENTINEL"]
++    name = "LIFE_TASK_DUMP"
++    case = copy.deepcopy(cases["LIFE"])
++    for field in ("argv", "launch_argv"):
++        case[field] = [v.replace("LIFE", name) for v in case[field]] + ["--repair8-task-dump"]
++    for command in case["validation_commands"]:
++        command["argv"] = [v.replace("LIFE", name) for v in command["argv"]]
++    case.update(case_id=name, outputs=str(output / name), selection="BOUNDED_NATIVE_JSON_AFTER_SERIALIZED_LIFE")
++    case["acceptance_identity"]["case_id"] = name
++    case["validation_commands"].append(dict(kind="read_only_acceptance", timeout=120, argv=[
++        python, str(repo / "tools/p7x_graph_repair8_task_dump.py"),
++        "--artifact", str(output / name / "task-dump-index.json"),
++        "--campaign", str(output / name / "campaign.json"),
++        "--launcher", str(output / "launchers" / name / "launcher.json"),
++        "--plan", str(output / "case-plan.json"), "--case-id", name,
++        "--output", str(output / name / "task-dump-joint.json"),
++    ]))
++    case.pop("check_argv", None)
++    case.pop("additional_checks", None)
++    cases[name] = case
++    name = "LIFE_TASK_BIND"
++    case = copy.deepcopy(cases["LIFE_TASK_DUMP"])
++    for field in ("argv", "launch_argv"):
++        case[field] = [v.replace("LIFE_TASK_DUMP", name) for v in case[field]] + ["--repair8-task-bindings"]
++    for command in case["validation_commands"]:
++        command["argv"] = [v.replace("LIFE_TASK_DUMP", name) for v in command["argv"]]
++    command = copy.deepcopy(case["validation_commands"][-1])
++    command["argv"] = [v.replace("task-dump-joint.json", "native-bindings-joint.json") for v in command["argv"]]
++    command["argv"].append("--native-bindings")
++    case["validation_commands"].append(command)
++    case.update(case_id=name, outputs=str(output / name), selection="POST_DRAIN_HOST_TO_NATIVE_PARAMETER_BINDING")
++    case["acceptance_identity"]["case_id"] = name
++    cases[name] = case
++    # Finite, predeclared OFF/ON control repetitions. No retrospective fastest
++    # sample selection; each entry retains its own source/config/launcher.
++    for arm in ("OFF", "ON"):
++        source = "PROFILE_" + arm + "_long_control"
++        for repetition in range(1, 4):
++            name = f"PERF_{arm}_long_{repetition:02}"
++            case = copy.deepcopy(cases[source])
++            for field in ("argv", "launch_argv"):
++                case[field] = [v.replace(source, name) for v in case[field]]
++            for command in case["validation_commands"]:
++                command["argv"] = [v.replace(source, name) for v in command["argv"]]
++            case.update(case_id=name, outputs=str(output / name), performance_repetition=repetition,
++                        selection="FINITE_UNCOLLECTED_CONTROL_NOT_SPEEDUP_PROOF")
++            case["acceptance_identity"]["case_id"] = name
++            case.pop("check_argv", None)
++            case.pop("additional_checks", None)
++            cases[name] = case
++    name, source = "PROFILE_ON_long_materialize", "PROFILE_ON_long_normal"
++    case = copy.deepcopy(cases[source])
++    for field in ("argv", "launch_argv"):
++        case[field] = [v.replace(source, name) for v in case[field]] + ["--repair8-materialize-ranges"]
++    for command in case["validation_commands"]:
++        command["argv"] = [v.replace(source, name) for v in command["argv"]]
++    case.update(case_id=name, outputs=str(output / name), selection="BOUNDED_NORMAL_MATERIALIZE_HOST_RANGES")
++    case["acceptance_identity"]["case_id"] = name
++    case.pop("check_argv", None)
++    case.pop("additional_checks", None)
++    cases[name] = case
++    # Explicit Python exceptions exercise the real C1 finally; unlike ABORT's
++    # os._exit, these must export quarantine + next-scope Host guard evidence.
++    for point in ("before_replay", "after_replay", "after_update", "after_completion"):
++        name = "UNWIND_" + point
++        case = copy.deepcopy(cases["O0"])
++        for field in ("argv", "launch_argv"):
++            case[field] = [v.replace("O0", name) for v in case[field]] + ["--repair8-unwind-at", point]
++        case.update(case_id=name, outputs=str(output / name), unwind_point=point,
++                    dependencies=["CONFIG", "B0", "C2"], selection="REQUIRED_REAL_C1_PYTHON_UNWIND")
++        case["acceptance_identity"]["case_id"] = name
++        case["validation_commands"] = [dict(kind="read_only_acceptance", timeout=120, argv=[
++            python, str(repo / "tools/p7x_graph_repair8_unwind.py"),
++            "--artifact", str(output / name / "python-unwind.json"),
++            "--campaign", str(output / name / "campaign.json"),
++            "--launcher", str(output / "launchers" / name / "launcher.json"),
++            "--plan", str(output / "case-plan.json"), "--case-id", name,
++            "--output", str(output / name / "unwind-joint.json"),
++        ])]
++        case.pop("check_argv", None)
++        case.pop("additional_checks", None)
++        cases[name] = case
+     config_argv = [
+         python,
+         str(repo / "tools/p7x_graph_repair7.py"),
+diff --git a/tools/p7x_graph_repair8_task_dump.py b/tools/p7x_graph_repair8_task_dump.py
+new file mode 100644
+index 000000000..8f4aaf181
+--- /dev/null
++++ b/tools/p7x_graph_repair8_task_dump.py
+@@ -0,0 +1,321 @@
++# SPDX-License-Identifier: Apache-2.0
++"""Bounded native Graph JSON after successful, explicitly drained MRV2 LIFE.
++
++Uses the installed NPUGraph.debug_dump API (CANN verbose flag 1), whose
++version-matched Runtime source copies DEVICE kernel argument blocks to Host.
++This native D2H observation is restricted to the already drained diagnostic
++path. Added capture association reads existing Host tensor metadata only. No
++private handles or Python tensor copies/synchronization/query are introduced;
++normal completion, execution occurrence and physical KV reads remain unproven.
++"""
++
++from __future__ import annotations
++
++import argparse
++import json
++import time
++import sys
++from pathlib import Path
++
++if __name__ == "__main__":
++    sys.path[:] = [p for p in sys.path if Path(p or ".").resolve() != Path(__file__).parent.resolve()]
++    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
++
++from tools.p7x_graph_repair6_storage import atomic_json, digest, require, require_space
++
++MAX_EXPORT_BYTES = 32 << 20
++
++
++FIA_KERNEL = "FusedInferAttentionScore_3b093497fc536d61a77a7a3293a524da_5000000000010200200"
++
++
++def _captured_parameters():
++    from vllm_ascend.compilation.acl_graph import get_draft_graph_params
++
++    return get_draft_graph_params()
++
++
++def _host_tensor(tensor):
++    # Metadata only: no indexing, CPU copy, device query or synchronization.
++    return dict(data_ptr=tensor.data_ptr(), shape=list(tensor.shape),
++                dtype=str(tensor.dtype), device=str(tensor.device))
++
++
++def _host_fia_tensor_list(parameter):
++    # full_graph_fia retains weak_ref_tensors(key/value), which preserves a
++    # single Tensor. Only serialize its metadata as the native one-item list;
++    # never iterate/index a Tensor or replace the production parameter.
++    tensors = parameter if isinstance(parameter, (list, tuple)) else (parameter,)
++    require(len(tensors) == 1, "only one K/V tensor per FIA list supported")
++    return [_host_tensor(tensor) for tensor in tensors]
++
++
++def capture_fia_bindings(spec, desc, parameters, capture_events):
++    tokens = desc.num_tokens
++    params, handles, events = (getattr(parameters, name)[tokens]
++                               for name in ("attn_params", "handles", "events"))
++    require(len(params) == len(handles) == len(events) == len(spec.draft_attn_layer_names),
++            "captured FIA parameter/handle/event/layer inventory")
++    result = []
++    for param, handle, event in zip(params, handles, events):
++        require(isinstance(param, tuple) and len(param) == 22, "only frozen FIA.out capture tuple supported")
++        observed = [r for r in capture_events if r["stage"] == "capture_operator"
++                    and r["num_tokens"] == tokens and r["handle_identity"] == id(handle)
++                    and r["event_identity"] == id(event)]
++        require(len(observed) == 1, "capture handle/event has no unique executing layer")
++        captured = observed[0]
++        name = captured["layer_name"]
++        require(name in spec.draft_attn_layer_names and param[-1] in (None, name), "capture layer identity")
++        row = dict(layer_name=name, handle_identity=id(handle), event_identity=id(event),
++                   query=_host_tensor(param[0]), key=_host_fia_tensor_list(param[1]),
++                   value=_host_fia_tensor_list(param[2]), table=_host_tensor(param[3]),
++                   key_parameter_form="TENSOR_SEQUENCE" if isinstance(param[1], (list, tuple)) else "SINGLE_TENSOR",
++                   value_parameter_form="TENSOR_SEQUENCE" if isinstance(param[2], (list, tuple)) else "SINGLE_TENSOR",
++                   output=_host_tensor(param[11]), retained_capture_kv_lengths=list(param[6]),
++                   retained_capture_query_lengths=list(param[7]), host_observed_ns=time.monotonic_ns(),
++                   layer_source="executing capture operator joined by handle_identity AND event_identity",
++                   parameter_source="get_draft_graph_params.attn_params; existing tensor metadata only")
++        require(row["table"]["data_ptr"] == captured["actual_table_address"], "capture table changed")
++        result.append(row)
++    require({r["layer_name"] for r in result} == set(spec.draft_attn_layer_names), "duplicate/missing captured layer")
++    return result
++
++
++def decode_native_fia(event, requests):
++    """Decode the observed CANN9.1 folded ABI, fail closed for other layouts.
++
++    Addr/Data relocation labels establish the argument block base. K/V list
++    offsets follow installed AscendC ListTensorDescImpl; only rank3/list1 is
++    admitted. Pointer roles are subsequently corroborated against captured Q,
++    K, V, table and output, not inferred from task order.
++    """
++    import re
++
++    require(event["name"] == FIA_KERNEL, "unsupported FIA kernel/tiling ABI")
++    a = event["args"]
++    require(requests in (1, 2, 4) and a["Task Type"] == "KERNEL_MIX_AIC", "unsupported native task geometry/type")
++    text = a["Kernel Args"]
++    pattern = re.compile(r"(?:\(placeHolder(Addr|Data)(\d+)\))?(0x[0-9a-fA-F]{16})")
++    tokens = list(pattern.finditer(text))
++    cursor, words, labels = 0, [], {}
++    for match in tokens:
++        require(not text[cursor:match.start()].strip(), "unparsed native argument bytes")
++        if match.group(1):
++            key = (match.group(1), int(match.group(2)))
++            require(key not in labels, "duplicate native relocation label")
++            labels[key] = len(words)
++        words.append(int(match.group(3), 16))
++        cursor = match.end()
++    require(not text[cursor:].strip() and len(words) * 8 == a["Kernel Args Size"], "native argument size/grammar")
++    require(set(labels) == {(kind, i) for kind in ("Addr", "Data") for i in range(5)}, "native relocation inventory")
++    bases = {words[labels[("Addr", i)]] - labels[("Data", i)] * 8 for i in range(5)}
++    require(len(bases) == 1 and next(iter(bases)) > 0 and next(iter(bases)) % 8 == 0,
++            "inconsistent native relocation base")
++    require([labels[("Addr", i)] for i in (0, 1, 2, 3, 4)] == [35, 2, 3, 6, 7],
++            "unsupported native pointer prefix/layout")
++
++    def tensor_list(index):
++        start = labels[("Data", index)]
++        offset = words[start]
++        require(start + 6 <= len(words) and offset == 40 and words[start + 1] == 0x100000003,
++                "unsupported native K/V list layout")
++        return dict(data_ptr=words[start + offset // 8], shape=words[start + 2:start + 5])
++
++    q, kv = labels[("Data", 3)], labels[("Data", 4)]
++    require(q + requests <= kv and kv + requests <= len(words), "native length array bounds")
++    return dict(model_id=a["Model Id"], stream_id=a["Stream Id"], task_id=a["Task Id"],
++                argument_block_base=next(iter(bases)), query_ptr=words[1], table_ptr=words[15],
++                output_ptr=words[32], key=tensor_list(1), value=tensor_list(2),
++                query_lengths=words[q:q + requests], kv_lengths=words[kv:kv + requests])
++
++
++def native_parameter_bindings(document, life, artifact):
++    require(document["schema"] == "repair8-native-graph-json-v2", "native binding needs v2 producer")
++    require(document["host_binding_scope"] == "AFTER_SUCCESSFUL_LIFE_DRAINS_METADATA_ONLY", "binding observation phase")
++    captures = life["recorder"]["operand_events"]
++    names = set(life["draft_layer_names"])
++    rows = []
++    for record in document["records"]:
++        requests, tokens = record["descriptor"]
++        bindings = record["captured_fia_bindings"]
++        require(len(bindings) == len(names) and {b["layer_name"] for b in bindings} == names,
++                "native binding layer inventory")
++        require(all(isinstance(b["key"], list) and isinstance(b["value"], list)
++                    and len(b["key"]) == len(b["value"]) == 1 for b in bindings), "Host K/V binding list inventory")
++        by_pair = {(b["key"][0]["data_ptr"], b["value"][0]["data_ptr"]): b for b in bindings}
++        require(len(by_pair) == len(bindings), "ambiguous K/V pointer pair across layers")
++        native = json.loads((Path(artifact).parent / record["path"]).read_text())
++        require(isinstance(native, list), "unsupported native JSON container")
++        tasks = [e for e in native if e.get("name", "").startswith("FusedInferAttentionScore_")]
++        require(len(tasks) == len(names), "native FIA task inventory")
++        seen = set()
++        task_ids = set()
++        for event in tasks:
++            require(event["pid"] == str(document["identity"]["process_id"]) + " aclGraph", "native process mismatch")
++            decoded = decode_native_fia(event, requests)
++            pair = (decoded["key"]["data_ptr"], decoded["value"]["data_ptr"])
++            require(pair in by_pair, "native K/V pointers not in captured parameters")
++            binding = by_pair[pair]
++            name = binding["layer_name"]
++            require(name not in seen, "native layer consumed twice")
++            seen.add(name)
++            task_key = tuple(decoded[k] for k in ("model_id", "stream_id", "task_id"))
++            require(task_key not in task_ids, "duplicate native task context")
++            task_ids.add(task_key)
++            capture = [r for r in captures if r["stage"] == "capture_operator" and r["num_tokens"] == tokens
++                       and r["layer_name"] == name and r["handle_identity"] == binding["handle_identity"]
++                       and r["event_identity"] == binding["event_identity"]]
++            require(len(capture) == 1, "capture layer/handle/event association")
++            capture = capture[0]
++            update = [r for r in captures if r["stage"] == "update_operator" and r["num_tokens"] == tokens
++                      and r["layer_name"] == name and r["generation_id"] == record["last_life_generation"]]
++            require(len(update) == 1 and update[0]["mapping_epoch"] == record["last_life_epoch"], "last UPDATE layer/generation")
++            update = update[0]
++            require(record["start_ns"] <= binding["host_observed_ns"] < record["end_ns"], "Host binding interval")
++            for field, pointer in (("query", "query_ptr"), ("table", "table_ptr"), ("output", "output_ptr")):
++                require(binding[field]["device"] == "npu:0", "Host binding logical device")
++                require(binding[field]["data_ptr"] == decoded[pointer], "native " + field + " pointer mismatch")
++            require(decoded["table_ptr"] == capture["actual_table_address"] == update["actual_table_address"], "native/operator table")
++            require(binding["table"]["shape"] == [requests, 32] and binding["table"]["dtype"] == "torch.int32", "frozen table geometry")
++            for field in ("key", "value"):
++                require(len(binding[field]) == 1 and binding[field][0]["shape"] == decoded[field]["shape"]
++                        and binding[field][0]["dtype"] == "torch.bfloat16"
++                        and binding[field][0]["device"] == "npu:0", "native K/V geometry/dtype/device")
++            require(decoded["query_lengths"] == binding["retained_capture_query_lengths"]
++                    == [7 * (i + 1) for i in range(requests)], "native query lengths")
++            require(binding["retained_capture_kv_lengths"] == capture["length_values"], "capture KV length provenance")
++            require(decoded["kv_lengths"] == update["length_values"], "native lengths differ from last UPDATE")
++            candidates = sorted({r["generation_id"] for r in captures if r["stage"] == "update_operator"
++                                 and r["num_tokens"] == tokens and r["layer_name"] == name
++                                 and r["length_values"] == decoded["kv_lengths"]})
++            rows.append(dict(descriptor=record["descriptor"], layer_name=name, native=decoded,
++                             parameter_values_match_host_generation=record["last_life_generation"],
++                             capture_values_distinguishable=decoded["kv_lengths"] != capture["length_values"],
++                             parameter_generation_candidates=candidates,
++                             task_execution_occurrence="UNPROVEN_POST_DRAIN_EXPORT_ONLY"))
++        require(seen == names, "missing native layer")
++    distinguishable = all(r["capture_values_distinguishable"]
++                          and r["parameter_generation_candidates"] == [r["parameter_values_match_host_generation"]] for r in rows)
++    return dict(status="DIAGNOSTIC_POST_DRAIN_NATIVE_PARAMETER_BINDING" if distinguishable
++                else "OPEN_NATIVE_GENERATION_NOT_DISTINGUISHABLE", tasks=rows,
++                execution_occurrence_generation="UNPROVEN", physical_read="UNPROVEN",
++                normal_backing_reuse="UNPROVEN")
++
++
++def completed_graph_dump(spec, lifecycle, output, identity, *, host_bindings=False):
++    require(lifecycle is not None and not lifecycle.poisoned, "native dump requires successful LIFE")
++    require(lifecycle.records and all(r.get("completion") == "DIAGNOSTIC_COMPLETE"
++                                    and r.get("retired") for r in lifecycle.records), "LIFE not drained/retired")
++    require(not getattr(spec, "_draft_window_graph_submission_uncertain", False), "uncertain Graph cannot be inspected")
++    output = Path(output)
++    directory = output.parent / "native-graph-json"
++    directory.mkdir(exist_ok=False)
++    require_space(directory, 128 << 20)
++    records = []
++    document = dict(schema="repair8-native-graph-json-v1", identity=identity, records=records,
++                    status="PREPARING", source="NPUGraph.debug_dump -> aclmdlRIDebugJsonPrint(flags=1)",
++                    collection_phase="AFTER_ALL_DIAGNOSTIC_LIFE_DRAINS_AND_RETIREMENT",
++                    normal_timing="NOT_REPRESENTATIVE", native_parameter_version="UNRESOLVED_CAPTURE_VS_LAST_UPDATE",
++                    task_operand="UNPROVEN_PENDING_FIELD_ANALYSIS", physical_read="UNPROVEN",
++                    native_observation=dict(
++                        kernel_argument_d2h="SYNCHRONOUS_DEVICE_TO_HOST_IN_CANN_VERBOSE_API",
++                        source_contract="official Runtime v9.1.0 Stream::SetTraceKernelArgs -> Driver::MemCopySync",
++                        timing_scope="AFTER_ALL_LIFE_DRAINS; NOT_NORMAL_PATH_OR_DEVICE_COMPLETION_PROOF",
++                        additional_host_capture_metadata="NO_PYTHON_TENSOR_COPY_SYNC_OR_QUERY",
++                        native_json_ts_dur="SYNTHETIC_LAYOUT_NOT_MEASURED_DEVICE_TIME"))
++    atomic_json(output, document)
++    if host_bindings:
++        document.update(schema="repair8-native-graph-json-v2",
++                        host_binding_scope="AFTER_SUCCESSFUL_LIFE_DRAINS_METADATA_ONLY")
++        capture_events = json.loads(lifecycle.output.read_text())["recorder"]["operand_events"]
++        parameters = _captured_parameters()
++    total = 0
++    for desc, graph in sorted(spec.query_cudagraph_manager.graphs.items(), key=lambda item: item[0].num_tokens):
++        matching = [r for r in lifecycle.records if r["descriptor"] == [desc.num_reqs, desc.num_tokens]]
++        require(matching, "no completed LIFE observation for captured descriptor")
++        path = directory / f"draft-{desc.num_reqs}-{desc.num_tokens}.json"
++        row = dict(descriptor=[desc.num_reqs, desc.num_tokens], path=str(path.relative_to(output.parent)),
++                   last_life_generation=matching[-1]["generation"], last_life_epoch=matching[-1]["epoch"],
++                   backing=matching[-1]["backing"], status="PREPARING", start_ns=time.monotonic_ns())
++        records.append(row)
++        atomic_json(output, document)
++        try:
++            if host_bindings:
++                row["captured_fia_bindings"] = capture_fia_bindings(spec, desc, parameters, capture_events)
++            graph.debug_dump(str(path))  # Native argument D2H is allowed only after the explicit LIFE drains.
++            require(path.is_file(), "native JSON not produced")
++            size = path.stat().st_size
++            total += size
++            require(0 < size and total <= MAX_EXPORT_BYTES, "native JSON exceeds bounded review budget")
++            parsed = json.loads(path.read_text())
++            require(isinstance(parsed, (dict, list)), "native JSON root type")
++            row.update(status="EXPORTED_JSON_NOT_OPERAND_PROOF", bytes=size, sha256=digest(path),
++                       end_ns=time.monotonic_ns(), root_type=type(parsed).__name__)
++        except Exception as error:
++            row.update(status="EXPORT_FAILED", error=repr(error), end_ns=time.monotonic_ns())
++            document["status"] = "EXPORT_FAILED"
++            atomic_json(output, document)
++            return document
++        atomic_json(output, document)
++    document.update(status="COLLECTED_NO_OPERAND_CLAIM", total_bytes=total)
++    atomic_json(output, document)
++    return document
++
++
++def check(document, campaign, launcher, expected, artifact, *, native_bindings=False):
++    from tools.p7x_graph_repair5_evidence import audit_execution
++
++    result = dict(status="INVALID_EVIDENCE", task_operand="UNPROVEN", physical_read="UNPROVEN")
++    try:
++        result["execution"] = audit_execution(document, campaign, launcher, expected, artifact)
++        require(result["execution"]["status"] == "EXECUTION_ASSOCIATED", "native export execution not associated")
++        require(document["status"] == "COLLECTED_NO_OPERAND_CLAIM", "native export incomplete")
++        records = document["records"]
++        require({tuple(r["descriptor"]) for r in records} == {(1, 7), (2, 14), (4, 28)}
++                and len(records) == 3, "native descriptor inventory")
++        life_path = Path(artifact).parent / "mrv2-lifecycle.json"
++        life = json.loads(life_path.read_text())
++        indexed = campaign["diagnostic_artifacts"][life_path.name]
++        require(digest(life_path) == indexed["sha256"] and life_path.stat().st_size == indexed["bytes"], "LIFE hash")
++        require(life["identity"] == document["identity"], "native/LIFE identity")
++        for row in records:
++            path = Path(artifact).parent / row["path"]
++            require(path.resolve().is_relative_to(Path(artifact).parent.resolve()), "export outside artifact root")
++            require(row["status"] == "EXPORTED_JSON_NOT_OPERAND_PROOF" and digest(path) == row["sha256"]
++                    and path.stat().st_size == row["bytes"] > 0, "native JSON bytes/hash/status")
++            require(launcher["host_start_ns"] <= row["start_ns"] < row["end_ns"] <= launcher["host_end_ns"], "export interval")
++            matching = [r for r in life["records"] if r["descriptor"] == row["descriptor"]]
++            require(matching and all(r["completion"] == "DIAGNOSTIC_COMPLETE" and r["retired"] for r in matching), "LIFE completion")
++            last = matching[-1]
++            require(last["generation"] == row["last_life_generation"] and last["epoch"] == row["last_life_epoch"]
++                    and last["backing"] == row["backing"] and last["complete_ns"] < row["start_ns"], "last LIFE/export join")
++            json.loads(path.read_text())
++        require(sum(r["bytes"] for r in records) == document["total_bytes"] <= MAX_EXPORT_BYTES, "export total budget")
++        result.update(status="PASS_SCOPED_NATIVE_JSON_COLLECTION", files=len(records), bytes=document["total_bytes"])
++        if native_bindings:
++            result["binding"] = native_parameter_bindings(document, life, artifact)
++            result.update(status="PASS_DIAGNOSTIC_NATIVE_PARAMETER_BINDING"
++                          if result["binding"]["status"] == "DIAGNOSTIC_POST_DRAIN_NATIVE_PARAMETER_BINDING"
++                          else "OPEN_NATIVE_GENERATION_NOT_DISTINGUISHABLE",
++                          task_operand="POST_DRAIN_EXPORTED_PARAMETERS_ONLY")
++    except (KeyError, ValueError, TypeError, OSError, IndexError, AttributeError) as error:
++        result.update(status="INVALID_EVIDENCE", error=str(error))
++    return result
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    for name in ("artifact", "campaign", "launcher", "plan", "output"):
++        parser.add_argument("--" + name, required=True, type=Path)
++    parser.add_argument("--case-id", required=True)
++    parser.add_argument("--native-bindings", action="store_true")
++    args = parser.parse_args()
++    result = check(json.loads(args.artifact.read_text()), json.loads(args.campaign.read_text()),
++                   json.loads(args.launcher.read_text()), json.loads(args.plan.read_text())["cases"][args.case_id],
++                   args.artifact, native_bindings=args.native_bindings)
++    atomic_json(args.output, result)
++    return 0 if result["status"] in ("PASS_SCOPED_NATIVE_JSON_COLLECTION", "PASS_DIAGNOSTIC_NATIVE_PARAMETER_BINDING") else 4
++
++
++if __name__ == "__main__":
++    raise SystemExit(main())
+diff --git a/tools/p7x_graph_repair8_unwind.py b/tools/p7x_graph_repair8_unwind.py
+new file mode 100644
+index 000000000..6bd1949b3
+--- /dev/null
++++ b/tools/p7x_graph_repair8_unwind.py
+@@ -0,0 +1,230 @@
++# SPDX-License-Identifier: Apache-2.0
++"""Opt-in Python exception injection through the real C1 proposal finally.
++
++Unknown submission branches perform Host inspection only. The completed branch
++explicitly drains ordinary events BEFORE raising and is diagnostic only. No
++ExternalEvent query, capture callback I/O, or post-fault device operation.
++"""
++
++from __future__ import annotations
++
++import argparse
++import json
++import sys
++import time
++from dataclasses import asdict
++from pathlib import Path
++from types import MethodType
++
++if __name__ == "__main__":
++    sys.path[:] = [p for p in sys.path if Path(p or ".").resolve() != Path(__file__).parent.resolve()]
++    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
++
++from tools.p7x_graph_repair6_storage import atomic_json, require
++
++POINTS = ("before_replay", "after_replay", "after_update", "after_completion")
++
++
++class InjectedGraphUnwindError(RuntimeError):
++    """Deliberate Python exception, never an assertion of native failure."""
++
++
++class ProposalUnwindProbe:
++    def __init__(self, spec, output, identity, point):
++        require(point in POINTS, "unknown Python unwind point")
++        self.spec, self.manager = spec, spec.query_cudagraph_manager
++        self.output, self.identity, self.point = output, identity, point
++        self.saved, self.record = [], None
++        self.quarantine_calls = []
++        self.poisoned = False
++
++    def _wrap(self, owner, name, function):
++        self.saved.append((owner, name, name in vars(owner), vars(owner).get(name)))
++        setattr(owner, name, MethodType(function, owner))
++
++    def _raise(self):
++        self.record["injected_ns"] = time.monotonic_ns()
++        self.record["injected_point"] = self.point
++        self.poisoned = True
++        raise InjectedGraphUnwindError("REPAIR8_PYTHON_UNWIND:" + self.point)
++
++    def __enter__(self):
++        from vllm_ascend.worker.v2.spec_decode.draft_window_graph_characterization import _json_safe
++
++        session = self.spec._draft_window_graph_characterization
++        require(not session.recorder.enabled, "Python unwind requires observer-OFF")
++        probe = self
++        try:
++            for desc, graph in self.manager.graphs.items():
++                original = graph.replay
++
++                def replay(_graph, original=original, desc=desc):
++                    require(probe.record is None, "unwind must inject on the first real replay")
++                    live = probe.spec._draft_window_live_inputs
++                    carriers = session.provider.submitted_carriers
++                    require(live is not None and len(carriers) == 1, "missing real generation/carrier")
++                    binding = carriers[0].runtime_identity
++                    require(binding is not None and binding.generation_id == live.identity.generation_id
++                            and binding.mapping_epoch == live.identity.mapping_epoch, "live/carrier generation mismatch")
++                    probe.record = dict(
++                        generation=live.identity.generation_id,
++                        epoch=live.identity.mapping_epoch,
++                        generation_identity=_json_safe(live.identity),
++                        carrier_binding=_json_safe(binding),
++                        descriptor=[desc.num_reqs, desc.num_tokens],
++                        backing=asdict(carriers[0].capture_identity.backing_identity),
++                        replay_called=False,
++                        replay_returned=False,
++                        update_returned=False,
++                        completion="UNPROVEN",
++                        quarantine_calls=probe.quarantine_calls,
++                        before_replay_ns=time.monotonic_ns(),
++                    )
++                    if probe.point == "before_replay":
++                        probe._raise()
++                    probe.record["replay_called"] = True
++                    original()
++                    probe.record.update(replay_returned=True, replay_return_ns=time.monotonic_ns())
++                    if probe.point == "after_replay":
++                        probe._raise()
++
++                self._wrap(graph, "replay", replay)
++            original_run = self.manager.run_fullgraph
++
++            def run(_manager, desc):
++                result = original_run(desc)
++                require(probe.record is not None, "no real Graph replay")
++                probe.record.update(update_returned=True, update_return_ns=time.monotonic_ns())
++                if probe.point == "after_update":
++                    probe._raise()
++                if probe.point == "after_completion":
++                    import torch
++
++                    update, consumer = torch.npu.Event(), torch.npu.Event()
++                    update.record(probe.manager.update_stream)
++                    consumer.record(torch.npu.current_stream())
++                    update.synchronize()
++                    consumer.synchronize()
++                    probe.record.update(
++                        completion="DIAGNOSTIC_STREAM_DRAIN_BEFORE_EXCEPTION",
++                        complete_ns=time.monotonic_ns(),
++                        completion_events=[id(update), id(consumer)],
++                        completion_impact="two ordinary events and explicit stream drains BEFORE injected error",
++                    )
++                    probe._raise()
++                return result
++
++            self._wrap(self.manager, "run_fullgraph", run)
++            runtime = self.spec._draft_window_runtime_state
++            quarantine = runtime.quarantine_generation
++
++            def quarantine_generation(_runtime, identity):
++                probe.quarantine_calls.append(dict(identity=_json_safe(identity), ns=time.monotonic_ns()))
++                return quarantine(identity)  # Actual production C1 code retains the backing.
++
++            self._wrap(runtime, "quarantine_generation", quarantine_generation)
++            return self
++        except BaseException:
++            self._restore()
++            raise
++
++    def _restore(self):
++        for owner, name, existed, old in reversed(self.saved):
++            if existed:
++                setattr(owner, name, old)
++            else:
++                delattr(owner, name)
++        self.saved.clear()
++
++    def __exit__(self, kind, *_):
++        from vllm_ascend.worker.v2.spec_decode.draft_window_graph_characterization import _json_safe
++
++        # Called after the real proposal scope has already unwound. Host only.
++        self.poisoned = self.poisoned or kind is not None
++        try:
++            runtime = self.spec._draft_window_runtime_state
++            state = dict(
++                quarantined_identity=_json_safe(runtime.quarantined_identity)
++                if runtime.quarantined_identity is not None else None,
++                active_backing_retained=runtime._active_inputs is not None,
++                live_inputs_cleared=self.spec._draft_window_live_inputs is None,
++                proposal_context_cleared=self.spec._draft_window_proposal_context is None,
++                graph_submission_uncertain=bool(getattr(self.spec, "_draft_window_graph_submission_uncertain", False)),
++            )
++            # The actual production scope checks quarantine BEFORE epoch.begin,
++            # any materialize or device work. Never submit a second use.
++            guard = dict(rejected=False, body_entered=False)
++            if runtime.quarantined_identity is not None:
++                try:
++                    with self.spec._draft_window_proposal_scope(
++                        self.spec.input_batch, dummy_run=False, is_profile=False
++                    ):
++                        guard["body_entered"] = True
++                except RuntimeError as error:
++                    guard.update(rejected=True, exception=str(error), ns=time.monotonic_ns())
++            atomic_json(self.output, dict(
++                schema="repair8-python-unwind-v1", identity=self.identity, point=self.point,
++                record=self.record, state=state, next_scope_guard=guard,
++                status="HOST_EXPORTED_ISOLATION_REQUIRED", isolated_exit_required=74,
++                scope="real C1 exception unwinding; no native partial-submit claim or recovery",
++                post_fault_device_operations="NONE_BY_THIS_PROBE",
++            ))
++        finally:
++            self._restore()
++
++
++def check(document, campaign, launcher, expected, artifact):
++    from tools.p7x_graph_repair5_evidence import audit_execution
++
++    result = dict(status="INVALID_EVIDENCE", normal_reuse="UNPROVEN", native_partial_submission="NOT_SIMULATED")
++    try:
++        result["execution"] = audit_execution(document, campaign, launcher, expected, artifact, unwind=True)
++        require(result["execution"]["status"] == "EXECUTION_ASSOCIATED", "unwind execution not associated")
++        point = expected["unwind_point"]
++        require(document["schema"] == "repair8-python-unwind-v1" and document["point"] == point, "point/schema")
++        record, state, guard = document["record"], document["state"], document["next_scope_guard"]
++        require(record["injected_point"] == point, "injection point missing")
++        require(campaign["exception_type"] == "InjectedGraphUnwindError", "unexpected original exception")
++        require(campaign["exception_message"] == "REPAIR8_PYTHON_UNWIND:" + point, "exception mismatch")
++        require(launcher["host_start_ns"] <= record["before_replay_ns"] <= record["injected_ns"]
++                < guard["ns"] <= launcher["host_end_ns"], "unwind clock/launcher interval")
++        require(record["descriptor"] in [[1, 7], [2, 14], [4, 28]], "not frozen real Draft descriptor")
++        require(record["generation_identity"]["generation_id"] == record["generation"]
++                and record["generation_identity"]["mapping_epoch"] == record["epoch"], "generation/epoch")
++        require(state["quarantined_identity"] == record["generation_identity"], "quarantine identity")
++        require(len(record["quarantine_calls"]) == 1
++                and record["quarantine_calls"][0]["identity"] == record["generation_identity"], "actual C1 quarantine call")
++        require(state["active_backing_retained"] and state["live_inputs_cleared"]
++                and state["proposal_context_cleared"] and state["graph_submission_uncertain"], "C1 state")
++        require(guard["rejected"] and not guard["body_entered"]
++                and "backing is quarantined" in guard["exception"], "next use not rejected at Host guard")
++        require(document["post_fault_device_operations"] == "NONE_BY_THIS_PROBE", "post-fault device operations")
++        require(record["replay_called"] is (point != "before_replay")
++                and record["replay_returned"] is (point != "before_replay")
++                and record["update_returned"] is (point in ["after_update", "after_completion"]), "submit branch")
++        if point == "after_completion":
++            require(record["completion"] == "DIAGNOSTIC_STREAM_DRAIN_BEFORE_EXCEPTION"
++                    and record["update_return_ns"] <= record["complete_ns"] < record["injected_ns"], "diagnostic drain")
++        else:
++            require(record["completion"] == "UNPROVEN" and "complete_ns" not in record, "unexpected completion claim")
++        result.update(status="PASS_SCOPED_PYTHON_UNWIND_ISOLATION", point=point, generation=record["generation"])
++    except (ValueError, KeyError, TypeError, OSError) as error:
++        result["error"] = str(error)
++    return result
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    for name in ("artifact", "campaign", "launcher", "plan", "output"):
++        parser.add_argument("--" + name, type=Path, required=True)
++    parser.add_argument("--case-id", required=True)
++    args = parser.parse_args()
++    result = check(json.loads(args.artifact.read_text()), json.loads(args.campaign.read_text()),
++                   json.loads(args.launcher.read_text()), json.loads(args.plan.read_text())["cases"][args.case_id],
++                   args.artifact)
++    atomic_json(args.output, result)
++    return 0 if result["status"] == "PASS_SCOPED_PYTHON_UNWIND_ISOLATION" else 4
++
++
++if __name__ == "__main__":
++    raise SystemExit(main())

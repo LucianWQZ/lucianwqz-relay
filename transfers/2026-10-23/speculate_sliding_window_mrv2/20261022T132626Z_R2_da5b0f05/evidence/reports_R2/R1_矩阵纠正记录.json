@@ -1,0 +1,9 @@
+{
+  "original": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/R1_实验矩阵_原件.csv",
+  "corrected_reference": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/R1_实验矩阵_纠正引用.csv",
+  "affected_evidence": [
+    "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/admission_c6_attempt04/A0/attempt01/execution.json",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/reanalysis_C10_full_01/numeric-joint.json"
+  ],
+  "scope": "Metadata correction only; original R1 evidence and verdict files preserved"
+}

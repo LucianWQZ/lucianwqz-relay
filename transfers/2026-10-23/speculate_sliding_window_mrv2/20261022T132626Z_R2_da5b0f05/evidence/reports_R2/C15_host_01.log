@@ -1,0 +1,13 @@
+....................................................................     [100%]
+=============================== warnings summary ===============================
+../../candidates/C2_303ef7fe/vllm/vllm/__init__.py:7
+  /mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+  No module named 'vllm._version'
+    from .version import __version__, __version_tuple__  # isort:skip
+
+../../../../../../../../../usr/local/python3.11.10/lib/python3.11/site-packages/torch/jit/_script.py:362: 14 warnings
+  /usr/local/python3.11.10/lib/python3.11/site-packages/torch/jit/_script.py:362: DeprecationWarning: `torch.jit.script_method` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+68 passed, 15 warnings in 2.66s

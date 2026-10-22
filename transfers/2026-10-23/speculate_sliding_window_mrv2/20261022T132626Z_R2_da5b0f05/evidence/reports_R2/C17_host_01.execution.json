@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/usr/local/python3.11.10/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/ut/spec_decode/test_graph_repair8_task_dump.py",
+    "tests/ut/spec_decode/test_graph_repair8_native_binding.py"
+  ],
+  "cwd": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend",
+  "returncode": 0,
+  "start_ns": 1792685737112838370,
+  "end_ns": 1792685771470976630,
+  "env_overrides": {
+    "TORCH_DEVICE_BACKEND_AUTOLOAD": "0",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend:/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm",
+    "VLLM_VERSION": "0.28.1"
+  },
+  "scope": "Native observation disclosure metadata only; targeted existing safety/layout checks, no new device action"
+}

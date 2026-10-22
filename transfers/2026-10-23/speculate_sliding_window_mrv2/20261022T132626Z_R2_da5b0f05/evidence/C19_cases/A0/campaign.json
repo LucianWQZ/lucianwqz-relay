@@ -1,0 +1,477 @@
+{
+  "argv": [
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C19_native_tensor/vllm-ascend/tools/p7x_graph_repair2.py",
+    "run",
+    "--case",
+    "A0",
+    "--case-id",
+    "A0",
+    "--run-id",
+    "r2-c19-phy0-20261022T132626Z",
+    "--attempt",
+    "1",
+    "--expected-sha",
+    "da5b0f054c4b94362ff3539de911b26b4074052a",
+    "--vllm-repo",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm",
+    "--target-model",
+    "/mnt/share/wql/Qwen3-8B",
+    "--draft-model",
+    "/mnt/share/dspark_qwen3_8b_block7",
+    "--fixture-manifest",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/inputs/inputs/fixture_manifest.json",
+    "--requests",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/inputs/inputs/requests/smoke.json",
+    "--output",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/A0"
+  ],
+  "capture_profile": "base",
+  "config_sha256": "4e35f5df16a64cedfee73b72371019f1549bba7798115f1bc483fcee4df55e0c",
+  "controlled_target_numeric": null,
+  "diagnostic_artifacts": {},
+  "draft_graph_keys": [
+    [
+      4,
+      28
+    ],
+    [
+      2,
+      14
+    ],
+    [
+      1,
+      7
+    ]
+  ],
+  "draft_inventory": {
+    "descriptors": [
+      {
+        "mode": "FULL",
+        "num_reqs": 4,
+        "num_tokens": 28,
+        "uniform_token_count": 7
+      },
+      {
+        "mode": "FULL",
+        "num_reqs": 2,
+        "num_tokens": 14,
+        "uniform_token_count": 7
+      },
+      {
+        "mode": "FULL",
+        "num_reqs": 1,
+        "num_tokens": 7,
+        "uniform_token_count": 7
+      }
+    ],
+    "graphs": [
+      {
+        "mode": "FULL",
+        "num_reqs": 4,
+        "num_tokens": 28,
+        "uniform_token_count": 7
+      },
+      {
+        "mode": "FULL",
+        "num_reqs": 2,
+        "num_tokens": 14,
+        "uniform_token_count": 7
+      },
+      {
+        "mode": "FULL",
+        "num_reqs": 1,
+        "num_tokens": 7,
+        "uniform_token_count": 7
+      }
+    ]
+  },
+  "draft_layer_names": [
+    "model.layers.39.self_attn.attn",
+    "model.layers.38.self_attn.attn",
+    "model.layers.37.self_attn.attn",
+    "model.layers.36.self_attn.attn",
+    "model.layers.40.self_attn.attn"
+  ],
+  "fixture_manifest": {
+    "files": [
+      {
+        "path": "/mnt/share/wql/Qwen3-8B/config.json",
+        "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30"
+      },
+      {
+        "path": "/mnt/share/wql/Qwen3-8B/model.safetensors.index.json",
+        "sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc"
+      },
+      {
+        "path": "/mnt/share/wql/Qwen3-8B/tokenizer.json",
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+      },
+      {
+        "path": "/mnt/share/dspark_qwen3_8b_block7/config.json",
+        "sha256": "e470e70a553616f0dce8f783f42cfd25b7bd7dfdcd57ead680a0623040725611"
+      },
+      {
+        "path": "/mnt/share/dspark_qwen3_8b_block7/model.safetensors",
+        "sha256": "5c922d1f96c8d18dbdf005c40ea99878d9133d70eaa3be4bd1077ee5f2afc1e5"
+      },
+      {
+        "path": "/mnt/share/wql/Qwen3-8B/model-00001-of-00005.safetensors",
+        "sha256": "31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f"
+      },
+      {
+        "path": "/mnt/share/wql/Qwen3-8B/model-00002-of-00005.safetensors",
+        "sha256": "5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282"
+      },
+      {
+        "path": "/mnt/share/wql/Qwen3-8B/model-00003-of-00005.safetensors",
+        "sha256": "c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836"
+      },
+      {
+        "path": "/mnt/share/wql/Qwen3-8B/model-00004-of-00005.safetensors",
+        "sha256": "b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a"
+      },
+      {
+        "path": "/mnt/share/wql/Qwen3-8B/model-00005-of-00005.safetensors",
+        "sha256": "20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff"
+      }
+    ],
+    "origin_run_id": "20261019_055109_13373fff",
+    "scope": "Exact previously accepted fixture; no model files included"
+  },
+  "graph_submission_uncertain": false,
+  "identity": {
+    "attempt_id": "1",
+    "case_id": "A0",
+    "driver_mode": "A0",
+    "engine_id": 281455443042064,
+    "process_id": 316362,
+    "run_id": "r2-c19-phy0-20261022T132626Z",
+    "source_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+    "source_tree": "af4519a635d6ccd70646f77195fde18368bdf22b",
+    "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+  },
+  "imports": {
+    "vllm": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm/vllm/__init__.py",
+    "vllm_ascend": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C19_native_tensor/vllm-ascend/vllm_ascend/__init__.py"
+  },
+  "initialization_seconds": 42.71170451998478,
+  "llm_kwargs": {
+    "additional_config": {},
+    "async_scheduling": false,
+    "compilation_config": {
+      "cudagraph_capture_sizes": [
+        7,
+        14,
+        28
+      ],
+      "cudagraph_mode": "FULL_DECODE_ONLY"
+    },
+    "disable_log_stats": true,
+    "enable_prefix_caching": false,
+    "enforce_eager": false,
+    "gpu_memory_utilization": 0.8,
+    "max_model_len": 4096,
+    "max_num_batched_tokens": 4096,
+    "max_num_seqs": 4,
+    "model": "/mnt/share/wql/Qwen3-8B",
+    "seed": 0,
+    "speculative_config": {
+      "enable_adaptive_verification": false,
+      "method": "dspark",
+      "model": "/mnt/share/dspark_qwen3_8b_block7",
+      "num_speculative_tokens": 7
+    }
+  },
+  "model_runner": "vllm_ascend.worker.v2.model_runner.NPUModelRunner",
+  "observer_enabled": true,
+  "observer_installation": {
+    "legacy_observer_enabled_meaning": "driver mode requested observer; not proof of installation or execution",
+    "provider_installed": false,
+    "recorder_enabled": false,
+    "recorder_installed": false
+  },
+  "outputs": [
+    {
+      "host_end_ns": 310917670225620,
+      "host_start_ns": 310917296658530,
+      "label": "smoke-1",
+      "prompt_token_ids": [
+        [
+          9707,
+          11,
+          847,
+          829,
+          374
+        ]
+      ],
+      "prompts": [
+        "Hello, my name is"
+      ],
+      "token_ids": [
+        [
+          8515,
+          11,
+          323,
+          358,
+          1079,
+          264,
+          220,
+          17,
+          18,
+          4666,
+          6284,
+          5458,
+          13,
+          358,
+          614,
+          1012
+        ]
+      ]
+    },
+    {
+      "host_end_ns": 310917845552990,
+      "host_start_ns": 310917673038710,
+      "label": "smoke-2",
+      "prompt_token_ids": [
+        [
+          9707,
+          11,
+          847,
+          829,
+          374
+        ],
+        [
+          9707,
+          11,
+          847,
+          829,
+          374
+        ]
+      ],
+      "prompts": [
+        "Hello, my name is",
+        "Hello, my name is"
+      ],
+      "token_ids": [
+        [
+          8515,
+          11,
+          323,
+          358,
+          1079,
+          264,
+          220,
+          17,
+          18,
+          4666,
+          6284,
+          5458,
+          13,
+          358,
+          614,
+          1012
+        ],
+        [
+          8515,
+          11,
+          323,
+          358,
+          1079,
+          264,
+          220,
+          17,
+          18,
+          4666,
+          6284,
+          5458,
+          13,
+          358,
+          614,
+          1012
+        ]
+      ]
+    },
+    {
+      "host_end_ns": 310918138554700,
+      "host_start_ns": 310917848644860,
+      "label": "smoke-4",
+      "prompt_token_ids": [
+        [
+          9707,
+          11,
+          847,
+          829,
+          374
+        ],
+        [
+          9707,
+          11,
+          847,
+          829,
+          374
+        ],
+        [
+          9707,
+          11,
+          847,
+          829,
+          374
+        ],
+        [
+          9707,
+          11,
+          847,
+          829,
+          374
+        ]
+      ],
+      "prompts": [
+        "Hello, my name is",
+        "Hello, my name is",
+        "Hello, my name is",
+        "Hello, my name is"
+      ],
+      "token_ids": [
+        [
+          8515,
+          11,
+          323,
+          358,
+          1079,
+          264,
+          220,
+          17,
+          18,
+          4666,
+          6284,
+          5458,
+          13,
+          358,
+          614,
+          1012
+        ],
+        [
+          8515,
+          11,
+          323,
+          358,
+          1079,
+          264,
+          220,
+          17,
+          18,
+          4666,
+          6284,
+          5458,
+          13,
+          358,
+          614,
+          1012
+        ],
+        [
+          8515,
+          11,
+          323,
+          358,
+          1079,
+          264,
+          220,
+          17,
+          18,
+          4666,
+          6284,
+          5458,
+          13,
+          358,
+          614,
+          1012
+        ],
+        [
+          8515,
+          11,
+          323,
+          358,
+          1079,
+          264,
+          220,
+          17,
+          18,
+          4666,
+          6284,
+          5458,
+          13,
+          358,
+          614,
+          1012
+        ]
+      ]
+    }
+  ],
+  "physical_read_trace": null,
+  "provider_installed": false,
+  "request_manifest": {
+    "entries": [
+      {
+        "label": "smoke-1",
+        "max_tokens": 16,
+        "prompts": [
+          "Hello, my name is"
+        ]
+      },
+      {
+        "label": "smoke-2",
+        "max_tokens": 16,
+        "prompts": [
+          "Hello, my name is",
+          "Hello, my name is"
+        ]
+      },
+      {
+        "label": "smoke-4",
+        "max_tokens": 16,
+        "prompts": [
+          "Hello, my name is",
+          "Hello, my name is",
+          "Hello, my name is",
+          "Hello, my name is"
+        ]
+      }
+    ],
+    "sha256": "f4239cd07ac597c32ec29d6209fcbb3926b6649dbbb5b3e249c7e4fea3ce6daa"
+  },
+  "schema": "p7x-repair2-campaign-v1",
+  "speculator": "vllm_ascend.worker.v2.spec_decode.dspark.speculator.AscendDSparkSpeculator",
+  "startup_complete": true,
+  "status": "OK",
+  "target_inventory": {
+    "descriptors": [
+      {
+        "mode": "FULL",
+        "num_reqs": 2,
+        "num_tokens": 16,
+        "uniform_token_count": 8
+      },
+      {
+        "mode": "FULL",
+        "num_reqs": 1,
+        "num_tokens": 8,
+        "uniform_token_count": 8
+      }
+    ],
+    "graphs": [
+      {
+        "mode": "FULL",
+        "num_reqs": 2,
+        "num_tokens": 16,
+        "uniform_token_count": 8
+      },
+      {
+        "mode": "FULL",
+        "num_reqs": 1,
+        "num_tokens": 8,
+        "uniform_token_count": 8
+      }
+    ]
+  },
+  "task_trace": null
+}

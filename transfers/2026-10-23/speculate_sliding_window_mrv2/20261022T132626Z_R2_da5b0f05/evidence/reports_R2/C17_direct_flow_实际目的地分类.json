@@ -1,0 +1,2051 @@
+{
+  "PROFILE_ON_short_normal": {
+    "original_parser_coverage": {
+      "total_replays": 21,
+      "direct_matched": 0
+    },
+    "classified_counts": {
+      "ranges_with_any_flow": 0,
+      "ranges_with_model_execute_flow": 0
+    },
+    "replay_ranges": 21,
+    "replays": [
+      {
+        "replay_event_index": 4909,
+        "flows": []
+      },
+      {
+        "replay_event_index": 6002,
+        "flows": []
+      },
+      {
+        "replay_event_index": 7095,
+        "flows": []
+      },
+      {
+        "replay_event_index": 8188,
+        "flows": []
+      },
+      {
+        "replay_event_index": 9281,
+        "flows": []
+      },
+      {
+        "replay_event_index": 10374,
+        "flows": []
+      },
+      {
+        "replay_event_index": 11467,
+        "flows": []
+      },
+      {
+        "replay_event_index": 16467,
+        "flows": []
+      },
+      {
+        "replay_event_index": 17598,
+        "flows": []
+      },
+      {
+        "replay_event_index": 18729,
+        "flows": []
+      },
+      {
+        "replay_event_index": 19860,
+        "flows": []
+      },
+      {
+        "replay_event_index": 20991,
+        "flows": []
+      },
+      {
+        "replay_event_index": 22122,
+        "flows": []
+      },
+      {
+        "replay_event_index": 23253,
+        "flows": []
+      },
+      {
+        "replay_event_index": 28348,
+        "flows": []
+      },
+      {
+        "replay_event_index": 33255,
+        "flows": []
+      },
+      {
+        "replay_event_index": 38162,
+        "flows": []
+      },
+      {
+        "replay_event_index": 43069,
+        "flows": []
+      },
+      {
+        "replay_event_index": 47976,
+        "flows": []
+      },
+      {
+        "replay_event_index": 52883,
+        "flows": []
+      },
+      {
+        "replay_event_index": 57790,
+        "flows": []
+      }
+    ],
+    "source_trace": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C17_prepare_02/PROFILE_ON_short_normal/trace/node-39-101_310389_20261023004828312_ascend_pt/ASCEND_PROFILER_OUTPUT/trace_view.json",
+    "source_flow": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/profile_analysis_C17/PROFILE_ON_short_normal/flow-analysis-module.json",
+    "scope": "Explicit existing flow endpoints; range containment alone is not model/kernel association; no new NPU or replay generation claim"
+  },
+  "PROFILE_LIFE": {
+    "original_parser_coverage": {
+      "total_replays": 21,
+      "direct_matched": 21
+    },
+    "classified_counts": {
+      "flow_to_other": 63,
+      "ranges_with_any_flow": 21,
+      "ranges_with_model_execute_flow": 0
+    },
+    "replay_ranges": 21,
+    "replays": [
+      {
+        "replay_event_index": 5066,
+        "flows": [
+          {
+            "flow_index": 560,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "6426",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              63841,
+              78693
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 63840,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 6426
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 561,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "6427",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              63843,
+              78695
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 63842,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 6427
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 14490,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687817749003680",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              155516,
+              155517
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 115484,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 3149,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 13290
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 6362,
+        "flows": [
+          {
+            "flow_index": 752,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "6618",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              64225,
+              79077
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 64224,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 6618
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 753,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "6619",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              64227,
+              79079
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 64226,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 6619
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 14640,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687818445387340",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              155816,
+              155817
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 117087,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 3250,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 14307
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 7658,
+        "flows": [
+          {
+            "flow_index": 944,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "6810",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              64609,
+              79461
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 64608,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 6810
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 945,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "6811",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              64611,
+              79463
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 64610,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 6811
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 14790,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687819207418660",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              156116,
+              156117
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 118690,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 3351,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 15324
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 8954,
+        "flows": [
+          {
+            "flow_index": 1136,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "7002",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              64993,
+              79845
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 64992,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 7002
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 1137,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "7003",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              64995,
+              79847
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 64994,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 7003
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 14940,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687820017706680",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              156416,
+              156417
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 120293,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 3452,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 16341
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 10250,
+        "flows": [
+          {
+            "flow_index": 1328,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "7194",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              65377,
+              80229
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 65376,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 7194
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 1329,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "7195",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              65379,
+              80231
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 65378,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 7195
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 15090,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687820905788920",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              156716,
+              156717
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 121896,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 3553,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 17358
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 11546,
+        "flows": [
+          {
+            "flow_index": 1520,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "7386",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              65761,
+              80613
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 65760,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 7386
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 1521,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "7387",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              65763,
+              80615
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 65762,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 7387
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 15240,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687821857572180",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              157016,
+              157017
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 123499,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 3654,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 18375
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 12842,
+        "flows": [
+          {
+            "flow_index": 1712,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "7578",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              66145,
+              80997
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 66144,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 7578
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 1713,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "7579",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              66147,
+              80999
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 66146,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 7579
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 15390,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687822870512460",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              157316,
+              157317
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 125102,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 3755,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 19392
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 18067,
+        "flows": [
+          {
+            "flow_index": 2297,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "8163",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              67315,
+              82167
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 67314,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 8163
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 2298,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "8164",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              67317,
+              82169
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 67316,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 8164
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 15934,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687824006590200",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              158404,
+              158405
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 126280,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 4285,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 22972
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 19423,
+        "flows": [
+          {
+            "flow_index": 2490,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "8356",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              67701,
+              82553
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 67700,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 8356
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 2491,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "8357",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              67703,
+              82555
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 67702,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 8357
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 16084,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687825188770100",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              158704,
+              158705
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 127911,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 4386,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 24073
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 20779,
+        "flows": [
+          {
+            "flow_index": 2683,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "8549",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              68087,
+              82939
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 68086,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 8549
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 2684,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "8550",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              68089,
+              82941
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 68088,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 8550
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 16234,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687826448537600",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              159004,
+              159005
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 129540,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 4487,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 25095
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 22135,
+        "flows": [
+          {
+            "flow_index": 2876,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "8742",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              68473,
+              83325
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 68472,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 8742
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 2877,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "8743",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              68475,
+              83327
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 68474,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 8743
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 16384,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687827789989380",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              159304,
+              159305
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 131169,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 4588,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 26117
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 23491,
+        "flows": [
+          {
+            "flow_index": 3069,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "8935",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              68859,
+              83711
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 68858,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 8935
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 3070,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "8936",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              68861,
+              83713
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 68860,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 8936
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 16534,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687829188997740",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              159604,
+              159605
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 132798,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 4689,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 27139
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 24847,
+        "flows": [
+          {
+            "flow_index": 3262,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "9128",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              69245,
+              84097
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 69244,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 9128
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 3263,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "9129",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              69247,
+              84099
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 69246,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 9129
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 16684,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687830679895580",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              159904,
+              159905
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 134427,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 4790,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 28161
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 26203,
+        "flows": [
+          {
+            "flow_index": 3455,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "9321",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              69631,
+              84483
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 69630,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 9321
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 3456,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "9322",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              69633,
+              84485
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 69632,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 9322
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 16834,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687832247530880",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              160204,
+              160205
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 136056,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 4891,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 29183
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 31567,
+        "flows": [
+          {
+            "flow_index": 4044,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "9910",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              70809,
+              85661
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 70808,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 9910
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 4045,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "9911",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              70811,
+              85663
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 70810,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 9911
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 17381,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687833933730960",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              161298,
+              161299
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 137236,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 5424,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 32767
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 36743,
+        "flows": [
+          {
+            "flow_index": 4604,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "10470",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              71929,
+              86781
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 71928,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 10470
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 4605,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "10471",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              71931,
+              86783
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 71930,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 10471
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 17899,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687835725575380",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              162334,
+              162335
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 138390,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 5928,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 36321
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 41919,
+        "flows": [
+          {
+            "flow_index": 5164,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "11030",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              73049,
+              87901
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 73048,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 11030
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 5165,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "11031",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              73051,
+              87903
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 73050,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 11031
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 18417,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687837648721020",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              163370,
+              163371
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 139544,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 6432,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 39761
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 47095,
+        "flows": [
+          {
+            "flow_index": 5724,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "11590",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              74169,
+              89021
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 74168,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 11590
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 5725,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "11591",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              74171,
+              89023
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 74170,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 11591
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 18935,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687839669246820",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              164406,
+              164407
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 140698,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 6936,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 43201
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 52271,
+        "flows": [
+          {
+            "flow_index": 6284,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "12150",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              75289,
+              90141
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 75288,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 12150
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 6285,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "12151",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              75291,
+              90143
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 75290,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 12151
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 19453,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687841808954120",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              165442,
+              165443
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 141852,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 7440,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 46641
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 57447,
+        "flows": [
+          {
+            "flow_index": 6844,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "12710",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              76409,
+              91261
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 76408,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 12710
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 6845,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "12711",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              76411,
+              91263
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 76410,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 12711
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 19971,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687844048282860",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              166478,
+              166479
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 143006,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 7944,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 50081
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      },
+      {
+        "replay_event_index": 62623,
+        "flows": [
+          {
+            "flow_index": 7404,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "13270",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              77529,
+              92381
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 77528,
+                "name": "Dequeue@destroy_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 13270
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 7405,
+            "key": [
+              "async_task_queue",
+              "enqueue_to_dequeue",
+              "13271",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              77531,
+              92383
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 77530,
+                "name": "Dequeue@record_event",
+                "category": "dequeue",
+                "pid": 312397,
+                "tid": 312763,
+                "args": {
+                  "correlation_id": 13271
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          },
+          {
+            "flow_index": 20489,
+            "key": [
+              "async_npu",
+              "torch_to_npu",
+              "1792687846395344900",
+              null,
+              null
+            ],
+            "original_event_indices": [
+              167514,
+              167515
+            ],
+            "destination_intervals": [
+              {
+                "event_index": 144160,
+                "name": "EVENT_RECORD",
+                "category": null,
+                "pid": 319894976,
+                "tid": 47,
+                "args": {
+                  "Model Id": 4294967295,
+                  "Task Type": "EVENT_RECORD",
+                  "Physic Stream Id": 47,
+                  "Task Id": 8448,
+                  "Batch Id": 0,
+                  "Subtask Id": 4294967295,
+                  "connection_id": 53521
+                }
+              }
+            ],
+            "is_model_execute_edge": false
+          }
+        ]
+      }
+    ],
+    "source_trace": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C17_prepare_02/PROFILE_LIFE/trace/node-39-101_312397_20261023005017200_ascend_pt/ASCEND_PROFILER_OUTPUT/trace_view.json",
+    "source_flow": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/profile_analysis_C17/PROFILE_LIFE/flow-analysis-module.json",
+    "scope": "Explicit existing flow endpoints; range containment alone is not model/kernel association; no new NPU or replay generation claim"
+  }
+}

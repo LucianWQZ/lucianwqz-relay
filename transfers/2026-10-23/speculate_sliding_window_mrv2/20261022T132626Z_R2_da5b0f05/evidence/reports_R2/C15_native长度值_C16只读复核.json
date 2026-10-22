@@ -1,0 +1,750 @@
+{
+  "producer_commit": "1e88c8208670518f63043552b530b1ed3e2f2677",
+  "checker_commit": "154f33d99d6b3c6bf373fcfb1af347ae49b915d5",
+  "source_run": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C15_prepare_01/LIFE_TASK_DUMP",
+  "result_scope": "旧C15 NPU产物的新C16代码只读解码；不是C16 NPU执行",
+  "new_device_execution": false,
+  "status": "FIFTEEN_NATIVE_PARAMETER_ARRAYS_DISTINGUISH_CAPTURE_AND_LAST_UPDATE_VALUES",
+  "tasks": [
+    {
+      "descriptor": [
+        1,
+        7
+      ],
+      "native": {
+        "model_id": 45,
+        "stream_id": 9,
+        "task_id": 16,
+        "argument_block_base": 20620159778816,
+        "query_ptr": 20645826061312,
+        "table_ptr": 20618011333632,
+        "output_ptr": 20645826119168,
+        "key": {
+          "data_ptr": 20682415013888,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "value": {
+          "data_ptr": 20682821861376,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "query_lengths": [
+          7
+        ],
+        "kv_lengths": [
+          28
+        ]
+      },
+      "matching_host_generation_values": [
+        6
+      ],
+      "capture_lengths": [
+        1151
+      ],
+      "layer_name": "NOT_AVAILABLE_C15_DID_NOT_SAVE_CAPTURED_KV_POINTERS",
+      "execution_occurrence_generation": "UNPROVEN"
+    },
+    {
+      "descriptor": [
+        1,
+        7
+      ],
+      "native": {
+        "model_id": 45,
+        "stream_id": 9,
+        "task_id": 36,
+        "argument_block_base": 20620159782912,
+        "query_ptr": 20645826002944,
+        "table_ptr": 20618011333632,
+        "output_ptr": 20645826119168,
+        "key": {
+          "data_ptr": 20683488755712,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "value": {
+          "data_ptr": 20683895603200,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "query_lengths": [
+          7
+        ],
+        "kv_lengths": [
+          28
+        ]
+      },
+      "matching_host_generation_values": [
+        6
+      ],
+      "capture_lengths": [
+        1151
+      ],
+      "layer_name": "NOT_AVAILABLE_C15_DID_NOT_SAVE_CAPTURED_KV_POINTERS",
+      "execution_occurrence_generation": "UNPROVEN"
+    },
+    {
+      "descriptor": [
+        1,
+        7
+      ],
+      "native": {
+        "model_id": 45,
+        "stream_id": 9,
+        "task_id": 56,
+        "argument_block_base": 20620159787008,
+        "query_ptr": 20645826002944,
+        "table_ptr": 20618011333632,
+        "output_ptr": 20645826119168,
+        "key": {
+          "data_ptr": 20684562497536,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "value": {
+          "data_ptr": 20684969345024,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "query_lengths": [
+          7
+        ],
+        "kv_lengths": [
+          28
+        ]
+      },
+      "matching_host_generation_values": [
+        6
+      ],
+      "capture_lengths": [
+        1151
+      ],
+      "layer_name": "NOT_AVAILABLE_C15_DID_NOT_SAVE_CAPTURED_KV_POINTERS",
+      "execution_occurrence_generation": "UNPROVEN"
+    },
+    {
+      "descriptor": [
+        1,
+        7
+      ],
+      "native": {
+        "model_id": 45,
+        "stream_id": 9,
+        "task_id": 76,
+        "argument_block_base": 20620159791104,
+        "query_ptr": 20645826002944,
+        "table_ptr": 20618011333632,
+        "output_ptr": 20645826119168,
+        "key": {
+          "data_ptr": 20685636239360,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "value": {
+          "data_ptr": 20686043086848,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "query_lengths": [
+          7
+        ],
+        "kv_lengths": [
+          28
+        ]
+      },
+      "matching_host_generation_values": [
+        6
+      ],
+      "capture_lengths": [
+        1151
+      ],
+      "layer_name": "NOT_AVAILABLE_C15_DID_NOT_SAVE_CAPTURED_KV_POINTERS",
+      "execution_occurrence_generation": "UNPROVEN"
+    },
+    {
+      "descriptor": [
+        1,
+        7
+      ],
+      "native": {
+        "model_id": 45,
+        "stream_id": 9,
+        "task_id": 96,
+        "argument_block_base": 20620159795200,
+        "query_ptr": 20645826002944,
+        "table_ptr": 20618011333632,
+        "output_ptr": 20645826119168,
+        "key": {
+          "data_ptr": 20686709981184,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "value": {
+          "data_ptr": 20687116828672,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "query_lengths": [
+          7
+        ],
+        "kv_lengths": [
+          28
+        ]
+      },
+      "matching_host_generation_values": [
+        6
+      ],
+      "capture_lengths": [
+        1151
+      ],
+      "layer_name": "NOT_AVAILABLE_C15_DID_NOT_SAVE_CAPTURED_KV_POINTERS",
+      "execution_occurrence_generation": "UNPROVEN"
+    },
+    {
+      "descriptor": [
+        2,
+        14
+      ],
+      "native": {
+        "model_id": 46,
+        "stream_id": 10,
+        "task_id": 16,
+        "argument_block_base": 20620160270336,
+        "query_ptr": 20645826118656,
+        "table_ptr": 20618011332096,
+        "output_ptr": 20645826233856,
+        "key": {
+          "data_ptr": 20682415013888,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "value": {
+          "data_ptr": 20682821861376,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "query_lengths": [
+          7,
+          14
+        ],
+        "kv_lengths": [
+          28,
+          28
+        ]
+      },
+      "matching_host_generation_values": [
+        13
+      ],
+      "capture_lengths": [
+        1151,
+        1151
+      ],
+      "layer_name": "NOT_AVAILABLE_C15_DID_NOT_SAVE_CAPTURED_KV_POINTERS",
+      "execution_occurrence_generation": "UNPROVEN"
+    },
+    {
+      "descriptor": [
+        2,
+        14
+      ],
+      "native": {
+        "model_id": 46,
+        "stream_id": 10,
+        "task_id": 36,
+        "argument_block_base": 20620160274432,
+        "query_ptr": 20645826002944,
+        "table_ptr": 20618011332096,
+        "output_ptr": 20645826233856,
+        "key": {
+          "data_ptr": 20683488755712,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "value": {
+          "data_ptr": 20683895603200,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "query_lengths": [
+          7,
+          14
+        ],
+        "kv_lengths": [
+          28,
+          28
+        ]
+      },
+      "matching_host_generation_values": [
+        13
+      ],
+      "capture_lengths": [
+        1151,
+        1151
+      ],
+      "layer_name": "NOT_AVAILABLE_C15_DID_NOT_SAVE_CAPTURED_KV_POINTERS",
+      "execution_occurrence_generation": "UNPROVEN"
+    },
+    {
+      "descriptor": [
+        2,
+        14
+      ],
+      "native": {
+        "model_id": 46,
+        "stream_id": 10,
+        "task_id": 56,
+        "argument_block_base": 20620160446464,
+        "query_ptr": 20645826002944,
+        "table_ptr": 20618011332096,
+        "output_ptr": 20645826233856,
+        "key": {
+          "data_ptr": 20684562497536,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "value": {
+          "data_ptr": 20684969345024,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "query_lengths": [
+          7,
+          14
+        ],
+        "kv_lengths": [
+          28,
+          28
+        ]
+      },
+      "matching_host_generation_values": [
+        13
+      ],
+      "capture_lengths": [
+        1151,
+        1151
+      ],
+      "layer_name": "NOT_AVAILABLE_C15_DID_NOT_SAVE_CAPTURED_KV_POINTERS",
+      "execution_occurrence_generation": "UNPROVEN"
+    },
+    {
+      "descriptor": [
+        2,
+        14
+      ],
+      "native": {
+        "model_id": 46,
+        "stream_id": 10,
+        "task_id": 76,
+        "argument_block_base": 20620160450560,
+        "query_ptr": 20645826002944,
+        "table_ptr": 20618011332096,
+        "output_ptr": 20645826233856,
+        "key": {
+          "data_ptr": 20685636239360,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "value": {
+          "data_ptr": 20686043086848,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "query_lengths": [
+          7,
+          14
+        ],
+        "kv_lengths": [
+          28,
+          28
+        ]
+      },
+      "matching_host_generation_values": [
+        13
+      ],
+      "capture_lengths": [
+        1151,
+        1151
+      ],
+      "layer_name": "NOT_AVAILABLE_C15_DID_NOT_SAVE_CAPTURED_KV_POINTERS",
+      "execution_occurrence_generation": "UNPROVEN"
+    },
+    {
+      "descriptor": [
+        2,
+        14
+      ],
+      "native": {
+        "model_id": 46,
+        "stream_id": 10,
+        "task_id": 96,
+        "argument_block_base": 20620160454656,
+        "query_ptr": 20645826002944,
+        "table_ptr": 20618011332096,
+        "output_ptr": 20645826233856,
+        "key": {
+          "data_ptr": 20686709981184,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "value": {
+          "data_ptr": 20687116828672,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "query_lengths": [
+          7,
+          14
+        ],
+        "kv_lengths": [
+          28,
+          28
+        ]
+      },
+      "matching_host_generation_values": [
+        13
+      ],
+      "capture_lengths": [
+        1151,
+        1151
+      ],
+      "layer_name": "NOT_AVAILABLE_C15_DID_NOT_SAVE_CAPTURED_KV_POINTERS",
+      "execution_occurrence_generation": "UNPROVEN"
+    },
+    {
+      "descriptor": [
+        4,
+        28
+      ],
+      "native": {
+        "model_id": 47,
+        "stream_id": 11,
+        "task_id": 16,
+        "argument_block_base": 20620160282624,
+        "query_ptr": 20645826233344,
+        "table_ptr": 20618011330048,
+        "output_ptr": 20645826463232,
+        "key": {
+          "data_ptr": 20682415013888,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "value": {
+          "data_ptr": 20682821861376,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "query_lengths": [
+          7,
+          14,
+          21,
+          28
+        ],
+        "kv_lengths": [
+          28,
+          28,
+          28,
+          28
+        ]
+      },
+      "matching_host_generation_values": [
+        20
+      ],
+      "capture_lengths": [
+        1151,
+        1151,
+        1151,
+        1151
+      ],
+      "layer_name": "NOT_AVAILABLE_C15_DID_NOT_SAVE_CAPTURED_KV_POINTERS",
+      "execution_occurrence_generation": "UNPROVEN"
+    },
+    {
+      "descriptor": [
+        4,
+        28
+      ],
+      "native": {
+        "model_id": 47,
+        "stream_id": 11,
+        "task_id": 36,
+        "argument_block_base": 20620160286720,
+        "query_ptr": 20645826002944,
+        "table_ptr": 20618011330048,
+        "output_ptr": 20645826463232,
+        "key": {
+          "data_ptr": 20683488755712,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "value": {
+          "data_ptr": 20683895603200,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "query_lengths": [
+          7,
+          14,
+          21,
+          28
+        ],
+        "kv_lengths": [
+          28,
+          28,
+          28,
+          28
+        ]
+      },
+      "matching_host_generation_values": [
+        20
+      ],
+      "capture_lengths": [
+        1151,
+        1151,
+        1151,
+        1151
+      ],
+      "layer_name": "NOT_AVAILABLE_C15_DID_NOT_SAVE_CAPTURED_KV_POINTERS",
+      "execution_occurrence_generation": "UNPROVEN"
+    },
+    {
+      "descriptor": [
+        4,
+        28
+      ],
+      "native": {
+        "model_id": 47,
+        "stream_id": 11,
+        "task_id": 56,
+        "argument_block_base": 20620160290816,
+        "query_ptr": 20645826002944,
+        "table_ptr": 20618011330048,
+        "output_ptr": 20645826463232,
+        "key": {
+          "data_ptr": 20684562497536,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "value": {
+          "data_ptr": 20684969345024,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "query_lengths": [
+          7,
+          14,
+          21,
+          28
+        ],
+        "kv_lengths": [
+          28,
+          28,
+          28,
+          28
+        ]
+      },
+      "matching_host_generation_values": [
+        20
+      ],
+      "capture_lengths": [
+        1151,
+        1151,
+        1151,
+        1151
+      ],
+      "layer_name": "NOT_AVAILABLE_C15_DID_NOT_SAVE_CAPTURED_KV_POINTERS",
+      "execution_occurrence_generation": "UNPROVEN"
+    },
+    {
+      "descriptor": [
+        4,
+        28
+      ],
+      "native": {
+        "model_id": 47,
+        "stream_id": 11,
+        "task_id": 76,
+        "argument_block_base": 20620160294912,
+        "query_ptr": 20645826002944,
+        "table_ptr": 20618011330048,
+        "output_ptr": 20645826463232,
+        "key": {
+          "data_ptr": 20685636239360,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "value": {
+          "data_ptr": 20686043086848,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "query_lengths": [
+          7,
+          14,
+          21,
+          28
+        ],
+        "kv_lengths": [
+          28,
+          28,
+          28,
+          28
+        ]
+      },
+      "matching_host_generation_values": [
+        20
+      ],
+      "capture_lengths": [
+        1151,
+        1151,
+        1151,
+        1151
+      ],
+      "layer_name": "NOT_AVAILABLE_C15_DID_NOT_SAVE_CAPTURED_KV_POINTERS",
+      "execution_occurrence_generation": "UNPROVEN"
+    },
+    {
+      "descriptor": [
+        4,
+        28
+      ],
+      "native": {
+        "model_id": 47,
+        "stream_id": 11,
+        "task_id": 96,
+        "argument_block_base": 20620160475136,
+        "query_ptr": 20645826002944,
+        "table_ptr": 20618011330048,
+        "output_ptr": 20645826463232,
+        "key": {
+          "data_ptr": 20686709981184,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "value": {
+          "data_ptr": 20687116828672,
+          "shape": [
+            1546,
+            128,
+            1024
+          ]
+        },
+        "query_lengths": [
+          7,
+          14,
+          21,
+          28
+        ],
+        "kv_lengths": [
+          28,
+          28,
+          28,
+          28
+        ]
+      },
+      "matching_host_generation_values": [
+        20
+      ],
+      "capture_lengths": [
+        1151,
+        1151,
+        1151,
+        1151
+      ],
+      "layer_name": "NOT_AVAILABLE_C15_DID_NOT_SAVE_CAPTURED_KV_POINTERS",
+      "execution_occurrence_generation": "UNPROVEN"
+    }
+  ],
+  "task_execution_occurrence": "UNPROVEN",
+  "normal_update_generation": "UNPROVEN",
+  "normal_backing_reuse": "UNPROVEN",
+  "physical_read": "UNPROVEN",
+  "decoder_sha256": "ea69db7fdfcf8465b7e5c0f0cd1c40515094db36298f8bc9120a8b4b89477309"
+}

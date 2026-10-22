@@ -1,0 +1,34 @@
+{
+  "tag": "v9.1.0",
+  "commit": "0b4af8a31c75a1f1f43638a8f75b9e3c6182e031",
+  "files": [
+    {
+      "path": "src/runtime/core/src/stream/stream.cc",
+      "returncode": 0,
+      "saved": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime910__src__runtime__core__src__stream__stream.cc",
+      "bytes": 225639,
+      "sha256": "d1e810ffd5ee6cc22d1cfc99b637c4a29032f804ab3171646894ae7c46dc8a66"
+    },
+    {
+      "path": "src/runtime/core/src/task/task_info/model/model_update_task.cc",
+      "returncode": 0,
+      "saved": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime910__src__runtime__core__src__task__task_info__model__model_update_task.cc",
+      "bytes": 7592,
+      "sha256": "23f1135eefc4ad07cae8f16714b17919170bc79276178ffc8828ced5698f7b2a"
+    },
+    {
+      "path": "src/runtime/core/src/task/task_info/model/model_update_task_v100.cc",
+      "returncode": 0,
+      "saved": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime910__src__runtime__core__src__task__task_info__model__model_update_task_v100.cc",
+      "bytes": 2595,
+      "sha256": "1912248b55999a0cda9b46cb60825c881cca888bdad36d09e0162e6f9a6760f7"
+    },
+    {
+      "path": "src/runtime/core/src/task/task_info/model/model_execute_task_v100.cc",
+      "returncode": 0,
+      "saved": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime910__src__runtime__core__src__task__task_info__model__model_execute_task_v100.cc",
+      "bytes": 3209,
+      "sha256": "0497169a69e969ad8baec065360c5c18ebe61d0f54882ba7b1b56b5ec06760c2"
+    }
+  ]
+}

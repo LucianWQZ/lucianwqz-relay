@@ -1,0 +1,67 @@
+{
+  "scope": "Independent CPU recomputation of retained output numeric metrics and A/B/A-prime only; full KV/metadata/launcher joint acceptance requires original server artifacts",
+  "producer_commit": "da5b0f054c4b94362ff3539de911b26b4074052a",
+  "source_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_SENTINEL",
+  "tensor_root": "tensors",
+  "records": [
+    {
+      "path": "sample-000.json",
+      "sha256": "e9044ed5ca8f5c3eb97c16b15fd6e099b7267f10c08725f4094b4a6ee046733d",
+      "source_manifest": "numeric-reference-sample-000.json",
+      "source_manifest_sha256": "1560053c7afd60fb6acfae9077929ab206232d2b640af5d399a2e0edd756928a",
+      "identity": {
+        "run_id": "r2-c19-phy0-20261022T132626Z",
+        "case_id": "NUMERIC_SENTINEL",
+        "driver_mode": "B",
+        "attempt_id": "1",
+        "source_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+        "source_tree": "af4519a635d6ccd70646f77195fde18368bdf22b",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c",
+        "engine_id": 281454657454032,
+        "process_id": 322131,
+        "generation": 0,
+        "epoch": 0
+      }
+    },
+    {
+      "path": "sample-001.json",
+      "sha256": "73fc6951ea18a9f3237ad51f14d3968c9be751cc9d551a8c67c8c5760fcb6597",
+      "source_manifest": "numeric-reference-sample-001.json",
+      "source_manifest_sha256": "ff47d9f77011f2a7be01d225dd9cc1920754d38ab4e14864db627349e0ddccb4",
+      "identity": {
+        "run_id": "r2-c19-phy0-20261022T132626Z",
+        "case_id": "NUMERIC_SENTINEL",
+        "driver_mode": "B",
+        "attempt_id": "1",
+        "source_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+        "source_tree": "af4519a635d6ccd70646f77195fde18368bdf22b",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c",
+        "engine_id": 281454657454032,
+        "process_id": 322131,
+        "generation": 1,
+        "epoch": 1
+      }
+    },
+    {
+      "path": "sample-002.json",
+      "sha256": "eeeafc28fb035d2b09fd5bbceb9a4fc0c4c9098d07f0cc0a87831d98095de2bc",
+      "source_manifest": "numeric-reference-sample-002.json",
+      "source_manifest_sha256": "885dfe6f77274873a2343626e3d0077fe321ccd3f9ccb0c0949ab0e8cf93bd2f",
+      "identity": {
+        "run_id": "r2-c19-phy0-20261022T132626Z",
+        "case_id": "NUMERIC_SENTINEL",
+        "driver_mode": "B",
+        "attempt_id": "1",
+        "source_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+        "source_tree": "af4519a635d6ccd70646f77195fde18368bdf22b",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c",
+        "engine_id": 281454657454032,
+        "process_id": 322131,
+        "generation": 2,
+        "epoch": 2
+      }
+    }
+  ],
+  "omitted": "Full pre/post KV checkpoints and full runtime metadata, intentionally not in compact packet",
+  "original_joint_sha256": "1726c85259ceacb0b95ca90275d79e2f9d1061b09ec0dd7cd522a1c93d895ab0"
+}

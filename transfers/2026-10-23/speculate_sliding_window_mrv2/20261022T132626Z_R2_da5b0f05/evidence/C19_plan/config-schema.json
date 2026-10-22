@@ -1,0 +1,1856 @@
+{
+  "status": "CONFIGS_VALID",
+  "rows": [
+    {
+      "case_id": "A0",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {},
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "4e35f5df16a64cedfee73b72371019f1549bba7798115f1bc483fcee4df55e0c",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "A1",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "B0",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "G4_OFF_short",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {},
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "4e35f5df16a64cedfee73b72371019f1549bba7798115f1bc483fcee4df55e0c",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "G4_OFF_long1",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {},
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "4e35f5df16a64cedfee73b72371019f1549bba7798115f1bc483fcee4df55e0c",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "G4_OFF_long2",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {},
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "4e35f5df16a64cedfee73b72371019f1549bba7798115f1bc483fcee4df55e0c",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "G4_OFF_mixed",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {},
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "4e35f5df16a64cedfee73b72371019f1549bba7798115f1bc483fcee4df55e0c",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "PREFIX_OFF",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {},
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "4e35f5df16a64cedfee73b72371019f1549bba7798115f1bc483fcee4df55e0c",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "G4F_OFF",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {},
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "4e35f5df16a64cedfee73b72371019f1549bba7798115f1bc483fcee4df55e0c",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "TARGET4_OFF",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {},
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28,
+            32
+          ]
+        }
+      },
+      "config_sha256": "4e3f590fa54f4c4c6d76bef3a820d2d25ed50e42e22a5e7f2c3b967514c4bb32",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "B1",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "B2",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "O0",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "O1",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "G4_ON_short",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "G4_ON_long1",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "G4_ON_long2",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "G4_ON_mixed",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "LIFE",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "PROFILE_OFF_short_control",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {},
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "4e35f5df16a64cedfee73b72371019f1549bba7798115f1bc483fcee4df55e0c",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "PROFILE_OFF_short_normal",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {},
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "4e35f5df16a64cedfee73b72371019f1549bba7798115f1bc483fcee4df55e0c",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "PROFILE_OFF_long_control",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {},
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "4e35f5df16a64cedfee73b72371019f1549bba7798115f1bc483fcee4df55e0c",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "PROFILE_OFF_long_normal",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {},
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "4e35f5df16a64cedfee73b72371019f1549bba7798115f1bc483fcee4df55e0c",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "PROFILE_ON_short_control",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "PROFILE_ON_short_normal",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "PROFILE_ON_long_control",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "PROFILE_ON_long_normal",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "PREFIX_ON",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "NORMAL_ORDER",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "NUMERIC_SENTINEL",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024,
+          "draft_window_graph_numeric_diagnostic": true
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28,
+            32
+          ]
+        }
+      },
+      "config_sha256": "b25498192decee98f90a7f651877a95beed46d086b4df55894565c9c7d53e025",
+      "numeric_enabled": true
+    },
+    {
+      "case_id": "LIFE_TASK_DUMP",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "LIFE_TASK_BIND",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "PERF_OFF_long_01",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {},
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "4e35f5df16a64cedfee73b72371019f1549bba7798115f1bc483fcee4df55e0c",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "PERF_OFF_long_02",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {},
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "4e35f5df16a64cedfee73b72371019f1549bba7798115f1bc483fcee4df55e0c",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "PERF_OFF_long_03",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {},
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "4e35f5df16a64cedfee73b72371019f1549bba7798115f1bc483fcee4df55e0c",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "PERF_ON_long_01",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "PERF_ON_long_02",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "PERF_ON_long_03",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "PROFILE_ON_long_materialize",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "UNWIND_before_replay",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "UNWIND_after_replay",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "UNWIND_after_update",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "UNWIND_after_completion",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "G4F_ON",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "TARGET4_ON",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28,
+            32
+          ]
+        }
+      },
+      "config_sha256": "e0162f2dab15f279c001ec95aef6d197b3f8b4ee5ed73987483c9fcf248ef0d0",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "ABORT_before_replay",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "ABORT_after_replay",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "ABORT_after_update",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "ABORT_after_completion",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "PROFILE_LIFE",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    },
+    {
+      "case_id": "NUMERIC_TARGET4",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024,
+          "draft_window_graph_numeric_diagnostic": true
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28,
+            32
+          ]
+        }
+      },
+      "config_sha256": "b25498192decee98f90a7f651877a95beed46d086b4df55894565c9c7d53e025",
+      "numeric_enabled": true
+    },
+    {
+      "case_id": "PROFILE_ON_long_detailed",
+      "status": "SCHEMA_VALID_NOT_FRAMEWORK_PASS",
+      "framework": "NOT_RUN",
+      "kwargs": {
+        "model": "/mnt/share/wql/Qwen3-8B",
+        "max_model_len": 4096,
+        "enforce_eager": false,
+        "async_scheduling": false,
+        "enable_prefix_caching": false,
+        "gpu_memory_utilization": 0.8,
+        "max_num_seqs": 4,
+        "max_num_batched_tokens": 4096,
+        "seed": 0,
+        "speculative_config": {
+          "model": "/mnt/share/dspark_qwen3_8b_block7",
+          "method": "dspark",
+          "num_speculative_tokens": 7,
+          "enable_adaptive_verification": false
+        },
+        "additional_config": {
+          "draft_window_size": 1024
+        },
+        "disable_log_stats": true,
+        "compilation_config": {
+          "cudagraph_mode": "FULL_DECODE_ONLY",
+          "cudagraph_capture_sizes": [
+            7,
+            14,
+            28
+          ]
+        }
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "numeric_enabled": false
+    }
+  ],
+  "unique_configurations": 5,
+  "boundary": "real CLI / kwargs / Ascend schema; EngineArgs + factory only when --framework",
+  "device_execution": "NOT_RUN"
+}

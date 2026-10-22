@@ -1,0 +1,104 @@
+{
+  "case": "LIFE_TASK_BIND",
+  "source_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+  "source_tree": "af4519a635d6ccd70646f77195fde18368bdf22b",
+  "receipt": {
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/LIFE_TASK_BIND/attempt01/user-machine-receipt.json",
+    "sha256": "1472327cb21c7aef260798dfd7c32fe6bb62dc5db11da2173c8456c97b9ddda1"
+  },
+  "environment": {
+    "ASCEND_RT_VISIBLE_DEVICES": "0",
+    "PYTHONPATH": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C19_native_tensor/vllm-ascend:/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm:/usr/local/Ascend/ascend-toolkit/latest/python/site-packages:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe",
+    "VLLM_USE_V2_MODEL_RUNNER": "1",
+    "VLLM_VERSION": "0.28.1",
+    "VLLM_ENABLE_V1_MULTIPROCESSING": "0",
+    "VLLM_CACHE_ROOT": "/mnt/wenqing/mrv2_graph_server_dev/20261022T132626Z_R2/cache/vllm",
+    "TORCH_NPU_CACHE_DIR": "/mnt/wenqing/mrv2_graph_server_dev/20261022T132626Z_R2/cache/torch_npu",
+    "ASCEND_CACHE_PATH": "/mnt/wenqing/mrv2_graph_server_dev/20261022T132626Z_R2/cache/ascend",
+    "HF_HOME": "/mnt/wenqing/mrv2_graph_server_dev/20261022T132626Z_R2/cache/hf",
+    "TMPDIR": "/mnt/wenqing/mrv2_graph_server_dev/20261022T132626Z_R2/tmp"
+  },
+  "inspect": {
+    "argv": [
+      "/usr/local/python3.11.10/bin/python",
+      "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C19_native_tensor/vllm-ascend/tools/p7x_graph_repair7_device.py",
+      "inspect",
+      "--output",
+      "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/LIFE_TASK_BIND/attempt01/inspect.json"
+    ],
+    "pid_parent": 319985,
+    "start_ns": 1792688295193990060,
+    "end_ns": 1792688295791543380,
+    "returncode": 0,
+    "stdout": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/LIFE_TASK_BIND/attempt01/inspect.stdout.log",
+    "stderr": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/LIFE_TASK_BIND/attempt01/inspect.stderr.log"
+  },
+  "check": {
+    "argv": [
+      "/usr/local/python3.11.10/bin/python",
+      "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C19_native_tensor/vllm-ascend/tools/p7x_graph_repair7_device.py",
+      "check",
+      "--run-id",
+      "r2-c19-phy0-20261022T132626Z",
+      "--receipt",
+      "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/LIFE_TASK_BIND/attempt01/user-machine-receipt.json",
+      "--output",
+      "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/LIFE_TASK_BIND/attempt01/check.json"
+    ],
+    "pid_parent": 319985,
+    "start_ns": 1792688297376533750,
+    "end_ns": 1792688299556382960,
+    "returncode": 0,
+    "stdout": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/LIFE_TASK_BIND/attempt01/check.stdout.log",
+    "stderr": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/LIFE_TASK_BIND/attempt01/check.stderr.log"
+  },
+  "bind": {
+    "argv": [
+      "/usr/local/python3.11.10/bin/python",
+      "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C19_native_tensor/vllm-ascend/tools/p7x_graph_local_candidate.py",
+      "bind",
+      "--plan",
+      "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/case-plan.json",
+      "--receipt",
+      "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/LIFE_TASK_BIND/attempt01/user-machine-receipt.json",
+      "--output",
+      "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/LIFE_TASK_BIND/attempt01/admitted-plan.json",
+      "--case-id",
+      "LIFE_TASK_BIND"
+    ],
+    "pid_parent": 319985,
+    "start_ns": 1792688299556446060,
+    "end_ns": 1792688302652302080,
+    "returncode": 0,
+    "stdout": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/LIFE_TASK_BIND/attempt01/bind.stdout.log",
+    "stderr": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/LIFE_TASK_BIND/attempt01/bind.stderr.log"
+  },
+  "runner": {
+    "argv": [
+      "/usr/local/python3.11.10/bin/python",
+      "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C19_native_tensor/vllm-ascend/tools/p7x_graph_repair6_runner.py",
+      "--plan",
+      "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/LIFE_TASK_BIND/attempt01/admitted-plan.json",
+      "--case-id",
+      "LIFE_TASK_BIND",
+      "--output",
+      "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_campaign_01"
+    ],
+    "pid": 320096,
+    "start_ns": 1792688303097266250,
+    "end_ns": 1792688419794782790,
+    "returncode": 0,
+    "stdout": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/LIFE_TASK_BIND/attempt01/runner.stdout.log",
+    "stderr": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/LIFE_TASK_BIND/attempt01/runner.stderr.log",
+    "timeout_seconds": 2100,
+    "elapsed_seconds": 114.87793192,
+    "runner_result": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_campaign_01/LIFE_TASK_BIND/runner-result.json"
+  },
+  "runner_result": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_campaign_01/LIFE_TASK_BIND/runner-result.json",
+  "recording_rc": 0,
+  "runner_process_rc": 0,
+  "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+  "dependency_satisfied": true,
+  "orchestrator_rc": 0,
+  "supervisor_sha256": "1ecd46717e424bbae6ea8430ccd0520dae036e98988c7149eb25d83652ac43dd"
+}

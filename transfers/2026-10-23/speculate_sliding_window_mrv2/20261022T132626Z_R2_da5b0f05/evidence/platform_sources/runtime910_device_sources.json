@@ -1,0 +1,48 @@
+{
+  "observed_utc": "2026-10-22T16:44:44.675823+00:00",
+  "official_repository": "https://gitcode.com/cann/runtime.git",
+  "commit": "0b4af8a31c75a1f1f43638a8f75b9e3c6182e031",
+  "scope": "public version-matched source only; no build/install/native/device execution",
+  "files": [
+    {
+      "source": "src/runtime/core/src/device/device.hpp",
+      "returncode": 0,
+      "stderr": "",
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime910__src__runtime__core__src__device__device.hpp",
+      "bytes": 22685,
+      "sha256": "c4e7482d5ba5c9c9914b693aed91173678800f21033d02d0bd681ec0212bd9bd"
+    },
+    {
+      "source": "src/runtime/core/src/device/device.cc",
+      "returncode": 0,
+      "stderr": "",
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime910__src__runtime__core__src__device__device.cc",
+      "bytes": 9042,
+      "sha256": "bf83418a66a0bc7320e0486c693e25a2ef89992763d51119e454e5a83043d91a"
+    },
+    {
+      "source": "src/runtime/config/910_B_93/dev_info_reg.cc",
+      "returncode": 0,
+      "stderr": "",
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime910__src__runtime__config__910_B_93__dev_info_reg.cc",
+      "bytes": 14828,
+      "sha256": "e0496c8d8c6b6bbcc5ba6ad44c5688558a61fadec33c8240960c916bdd48f6e5"
+    },
+    {
+      "source": "src/runtime/core/inc/device/device_properties.h",
+      "returncode": 0,
+      "stderr": "",
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime910__src__runtime__core__inc__device__device_properties.h",
+      "bytes": 11906,
+      "sha256": "4ccb3d6ad94f3ccd58e0c230f55be961d7a474fcdcd1e4326167da4454f5ad14"
+    },
+    {
+      "source": "src/runtime/core/inc/soc/soc_define.hpp",
+      "returncode": 0,
+      "stderr": "",
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime910__src__runtime__core__inc__soc__soc_define.hpp",
+      "bytes": 2262,
+      "sha256": "abf0769186af4b4a57ecb14222ec644b33e64e4386e43374365bcf05e3c2e9ca"
+    }
+  ]
+}

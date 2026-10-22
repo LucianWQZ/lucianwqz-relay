@@ -1,0 +1,29 @@
+[
+  {
+    "name": "CANN91_UpdateEnd_en",
+    "url": "https://www.hiascend.com/doc_center/source/en/CANNCommunityEdition/910/API/runtimeapi/aclcppdevg_03_1826.html",
+    "status": 200,
+    "path": "reports/20261022T132626Z_R2/platform_sources/CANN91_UpdateEnd_en.html",
+    "bytes": 10310,
+    "sha256": "9778ad7e65ceaa41172e6acbe200a2ca9575dcb2dd29af1b22b65573a185894e",
+    "retrieved_ns": 1792680690219507550
+  },
+  {
+    "name": "CANN91_DebugJson_en",
+    "url": "https://www.hiascend.com/doc_center/source/en/CANNCommunityEdition/910/API/runtimeapi/aclcppdevg_03_1988.html",
+    "status": 200,
+    "path": "reports/20261022T132626Z_R2/platform_sources/CANN91_DebugJson_en.html",
+    "bytes": 12885,
+    "sha256": "93fbb1d9ee239563d9a7f584e695077ec6435ddcc1af21e9215a15b14d3d7ca0",
+    "retrieved_ns": 1792680692108768190
+  },
+  {
+    "name": "CANN91_TaskUpdate_en",
+    "url": "https://www.hiascend.com/doc_center/source/en/CANNCommunityEdition/910/others/acldevg/runtime_doc_dev_0032.html",
+    "status": 200,
+    "path": "reports/20261022T132626Z_R2/platform_sources/CANN91_TaskUpdate_en.html",
+    "bytes": 57671,
+    "sha256": "70b4f6bb82cbd310a684ee0b63af77b04310b0af3ad2f14375027087259fe2f7",
+    "retrieved_ns": 1792680694779562840
+  }
+]

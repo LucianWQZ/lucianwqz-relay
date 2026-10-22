@@ -1,0 +1,18 @@
+{
+  "status": "EXPECTED_QUARANTINE_OBSERVED",
+  "execution": {
+    "status": "EXECUTION_ASSOCIATED",
+    "numeric_status": "NOT_ASSESSED",
+    "artifact_sha256": "26685ef54befcc7b2adbc096adcb00b17206d45281c908da729a0dec6716c37a"
+  },
+  "diagnostic": {
+    "status": "EXPECTED_QUARANTINE_OBSERVED",
+    "device_completion": "UNPROVEN",
+    "reuse": "FORBIDDEN",
+    "point": "after_replay"
+  },
+  "association": {
+    "status": "PARTIAL_RECORDER_ASSOCIATED",
+    "device_completion": "UNPROVEN"
+  }
+}

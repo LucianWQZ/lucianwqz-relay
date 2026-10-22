@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/usr/local/python3.11.10/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/ut/spec_decode/test_graph_repair7.py",
+    "tests/ut/spec_decode/test_graph_repair8_materialize_profile.py",
+    "tests/ut/spec_decode/test_graph_repair8_native_binding.py",
+    "tests/ut/spec_decode/test_graph_repair8_task_dump.py",
+    "tests/ut/spec_decode/test_graph_repair8_unwind.py"
+  ],
+  "cwd": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend",
+  "returncode": 0,
+  "start_ns": 1792684508693618750,
+  "end_ns": 1792684545061587660,
+  "env_overrides": {
+    "TORCH_DEVICE_BACKEND_AUTOLOAD": "0",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend:/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm",
+    "VLLM_VERSION": "0.28.1"
+  },
+  "scope": "targeted CPU-only checks; VLLM_VERSION compatibility selector, not release assertion"
+}

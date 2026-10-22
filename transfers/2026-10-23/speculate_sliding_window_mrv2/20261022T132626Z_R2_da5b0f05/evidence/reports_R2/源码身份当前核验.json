@@ -1,0 +1,41 @@
+{
+  "observed_utc": "2026-10-22T17:18:46.644818+00:00",
+  "repositories": {
+    "development": {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend",
+      "sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+      "tree": "af4519a635d6ccd70646f77195fde18368bdf22b",
+      "parents": [
+        "52c3d487bb3c302d7170087aaaa79e34e3de7846"
+      ],
+      "dirty": false,
+      "remote_origin": "https://github.com/LucianWQZ/vllm-ascend.git",
+      "approved_Repair7_ancestor": true
+    },
+    "fixed_C19": {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C19_native_tensor/vllm-ascend",
+      "sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+      "tree": "af4519a635d6ccd70646f77195fde18368bdf22b",
+      "parents": [
+        "52c3d487bb3c302d7170087aaaa79e34e3de7846"
+      ],
+      "dirty": false,
+      "remote_origin": "https://github.com/LucianWQZ/vllm-ascend.git",
+      "approved_Repair7_ancestor": true
+    },
+    "pinned_vllm": {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm",
+      "sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c",
+      "tree": "f3e320f8ae2e9a30e57a3c8dccfac94fcae93bee",
+      "parents": [
+        "5b6cf93e8e229aa0901e8c152eba4511a6195d28"
+      ],
+      "dirty": false,
+      "remote_origin": "https://github.com/vllm-project/vllm.git"
+    }
+  },
+  "local_candidate_status": "LOCAL_COMMITTED_CANDIDATE",
+  "remote_publication": "NOT_PERFORMED",
+  "worker_provenance": "runs/20261022T132626Z_R2/environment/C19_actual_worker_provenance_complete.json",
+  "scope": "exact Git identity and actual C19 worker binary/module provenance; imported vLLM pin unchanged"
+}

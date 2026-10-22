@@ -1,0 +1,10 @@
+{
+  "pid": 314466,
+  "watched_chain_pid": 314465,
+  "watched_start_ticks": "31072684",
+  "maximum_deadline_epoch": 1792711586.0,
+  "start_utc": "2026-10-22T16:51:49.915156+00:00",
+  "scope": "Markdown snapshot only; heartbeat not business progress",
+  "end_utc": "2026-10-22T17:58:54.329932+00:00",
+  "exit": "WATCHED_CHAIN_EXIT_OR_DEADLINE"
+}

@@ -1,0 +1,103 @@
+{
+  "schema": "repair7-local-candidate-v1",
+  "source_checkout": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C17_native_disclosure/vllm-ascend",
+  "source_sha": "057b8e0300967e68e3f2a78c5910c8877521674e",
+  "source_tree": "90584c0d92d99c447534d081e16fc05e76e2647e",
+  "baseline_sha": "7a9f4aae1ebe5c5f3d4876ec9b49926949dfae14",
+  "vllm_checkout": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm",
+  "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c",
+  "vllm_tree": "f3e320f8ae2e9a30e57a3c8dccfac94fcae93bee",
+  "run_id": "r2-c17-phy0-20261022T132626Z",
+  "cases_sha256": "0c5b08f2545358276da41c2c246af5eacfc82f6004bf85aa475508a7d1ba13d9",
+  "source_files_sha256": {
+    "tools/p7x_graph_local_candidate.py": "ffca9cb561b73e4fc4fd2ca7f41807192c145d984f23b969ad2f8aa75bdee507",
+    "tools/p7x_graph_repair6_runner.py": "4dd39590a69eb057c1ea77a957f5c00be6ea0427acbcc7dfa1bb6df1d9269f7e",
+    "tools/p7x_graph_repair7_device.py": "2c3598bec17c437a6e0e28f918fb1f292fb33352d3f1337b06b080eaf26b92ff",
+    "tools/p7x_graph_repair7_campaign.py": "4cbd730b7bf9d2004c9a081c225ccae43b7b5ceec74462fd50bcb46b9140a4f4",
+    "tools/p7x_graph_repair8_unwind.py": "e6bc7da2828d97106094e783451c02c495baacfe69d15676ffd1cd7e01fee711",
+    "tools/p7x_graph_repair8_task_dump.py": "d1d7417a9f23029e6cc29022764a683175d6b2c83169b03cb677bc107393768d",
+    "tools/p7x_graph_repair5_profile.py": "f3d2246445daa51e1d725ab7f423a703c2501c5356b8ca77595cf508fc191fe7",
+    "tools/p7x_graph_repair5_evidence.py": "deb5c341ad4927e2b8f00032a03494dd9dbc052220787c361384e17e3aea4ae3",
+    "tools/p7x_graph_repair7.py": "26b434d76f5201924f6de1109f6f7b5cb140cf159032de02c130be79959ce314",
+    "tools/p7x_graph_repair2.py": "d4094dcf29598d43efd80ab64fb5cbc55e45cc7c382c6f4701da2fafc65b73c0",
+    "vllm_ascend/worker/v2/spec_decode/draft_window.py": "6daa649633feb8cc220dc7b7839b6bb0a254da483d8585cbfbd3045bd1163215",
+    "vllm_ascend/worker/v2/spec_decode/draft_window_eager.py": "fc2a63dcb71cb72ef6de6071afa08ac0dd55eb1d773c22b3e1da3096f757eca5"
+  },
+  "fixture_manifest": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/inputs/inputs/fixture_manifest.json",
+  "fixture_files": [
+    {
+      "path": "/mnt/share/wql/Qwen3-8B/config.json",
+      "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+      "size": 728,
+      "mtime_ns": 1781235465559211690
+    },
+    {
+      "path": "/mnt/share/wql/Qwen3-8B/model.safetensors.index.json",
+      "sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc",
+      "size": 32878,
+      "mtime_ns": 1781235466068456690
+    },
+    {
+      "path": "/mnt/share/wql/Qwen3-8B/tokenizer.json",
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "size": 11422654,
+      "mtime_ns": 1781235482508083670
+    },
+    {
+      "path": "/mnt/share/dspark_qwen3_8b_block7/config.json",
+      "sha256": "e470e70a553616f0dce8f783f42cfd25b7bd7dfdcd57ead680a0623040725611",
+      "size": 1201,
+      "mtime_ns": 1787207307075063310
+    },
+    {
+      "path": "/mnt/share/dspark_qwen3_8b_block7/model.safetensors",
+      "sha256": "5c922d1f96c8d18dbdf005c40ea99878d9133d70eaa3be4bd1077ee5f2afc1e5",
+      "size": 4742170330,
+      "mtime_ns": 1787207307060149450
+    },
+    {
+      "path": "/mnt/share/wql/Qwen3-8B/model-00001-of-00005.safetensors",
+      "sha256": "31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f",
+      "size": 3996250744,
+      "mtime_ns": 1781239257717057820
+    },
+    {
+      "path": "/mnt/share/wql/Qwen3-8B/model-00002-of-00005.safetensors",
+      "sha256": "5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282",
+      "size": 3993160032,
+      "mtime_ns": 1781239495815045370
+    },
+    {
+      "path": "/mnt/share/wql/Qwen3-8B/model-00003-of-00005.safetensors",
+      "sha256": "c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836",
+      "size": 3959604768,
+      "mtime_ns": 1781239613919778110
+    },
+    {
+      "path": "/mnt/share/wql/Qwen3-8B/model-00004-of-00005.safetensors",
+      "sha256": "b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a",
+      "size": 3187841392,
+      "mtime_ns": 1781238625441951150
+    },
+    {
+      "path": "/mnt/share/wql/Qwen3-8B/model-00005-of-00005.safetensors",
+      "sha256": "20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff",
+      "size": 1244659840,
+      "mtime_ns": 1781236832184879470
+    }
+  ],
+  "config_report": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C17_prepare_02/config-schema.json",
+  "config_report_sha256": "a777747ec9161f23c6c34673dd07e0f3c0314100fdb00fd18d38cbb963e75b64",
+  "host_evidence": [
+    {
+      "label": "native_fia_binding_safety_and_cli",
+      "status": "PASS",
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/C17_host_01.log",
+      "sha256": "d946e992ed6e4d9e1c9f3731026e45f87d17157d528734ef63dae71213f05ecf",
+      "source_sha": "057b8e0300967e68e3f2a78c5910c8877521674e",
+      "scope": "33 affected Host checks; C16 broader88 historical; disclosure/manifest delta only"
+    }
+  ],
+  "remote_publication": "NOT_PERFORMED",
+  "device_validation": "NOT_RUN"
+}

@@ -1,0 +1,36 @@
+{
+  "files": [
+    {
+      "path": "/usr/local/python3.11.10/lib/python3.11/site-packages/torch_npu/version.py",
+      "bytes": 86,
+      "sha256": "f11e02e3acade31a81657136784872a1d70e2f232cab0ef19d3a605aec47424d"
+    },
+    {
+      "path": "/usr/local/python3.11.10/lib/python3.11/site-packages/torch_npu/lib/libtorch_npu.so",
+      "bytes": 82494777,
+      "sha256": "3b43f9530ba124efd1f9cc8ea9f93088171d4493bfd8da9152b9ca547399a68a"
+    },
+    {
+      "path": "/usr/local/python3.11.10/lib/python3.11/site-packages/torch_npu/include/torch_npu/csrc/core/npu/NPUStream.h",
+      "bytes": 4726,
+      "sha256": "4d0b32e2bffeda7a69713a5e679e1298015dcde35c3c07ac48823f26a649d21c"
+    },
+    {
+      "path": "/usr/local/python3.11.10/lib/python3.11/site-packages/torch_npu/include/third_party/op-plugin/op_plugin/utils/op_api_common.h",
+      "bytes": 63600,
+      "sha256": "6849b4417a97df8fc349d02c8668a6a05c1b8d31dbc93d769e8ddf28181f5484"
+    },
+    {
+      "path": "/usr/local/python3.11.10/lib/python3.11/site-packages/torch_npu/include/third_party/op-plugin/op_plugin/utils/op_api_common_base.h",
+      "bytes": 30712,
+      "sha256": "f84e255ffe6f98d63f05a7b9cde71d00ce94ea78f861e7f2297046f16d8e2bc7"
+    }
+  ],
+  "symbols": [
+    "0000000001907870 T c10_npu::graph_task_update_end(c10_npu::NPUStream)",
+    "0000000001906bc4 T c10_npu::graph_task_update_begin(c10_npu::NPUStream, c10_npu::NPUTaskGroupHandle)",
+    "00000000019390c0 T c10_npu::NPUStream::stream(bool) const",
+    "0000000001938d10 T c10_npu::NPUStream::stream() const"
+  ],
+  "binary_build_reproducibility": "NOT_VERIFIED; version.py git metadata and exported symbols are separate evidence"
+}

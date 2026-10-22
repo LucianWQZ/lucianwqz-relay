@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/Ascend/pytorch/5dd8ef3f9b375b5ae4a83538d5785754148c3302/torch_npu/csrc/core/npu/NPUGraph.cpp",
+    "revision": "5dd8ef3f9b375b5ae4a83538d5785754148c3302",
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/torch_npu__csrc__core__npu__NPUGraph.cpp",
+    "bytes": 14856,
+    "sha256": "dd24abdcce96f81b54f0fc95909c38b9de5925fa8070ac77393c8c5991ebb3d7",
+    "installed_path": null,
+    "installed_sha256": null
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Ascend/pytorch/5dd8ef3f9b375b5ae4a83538d5785754148c3302/torch_npu/csrc/npu/Graph.cpp",
+    "revision": "5dd8ef3f9b375b5ae4a83538d5785754148c3302",
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/torch_npu__csrc__npu__Graph.cpp",
+    "bytes": 35189,
+    "sha256": "5738d7df63be5c1796abd22abee85ab7675e647307fda6803c14ac34098b7786",
+    "installed_path": null,
+    "installed_sha256": null
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Ascend/pytorch/5dd8ef3f9b375b5ae4a83538d5785754148c3302/torch_npu/npu/streams.py",
+    "revision": "5dd8ef3f9b375b5ae4a83538d5785754148c3302",
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/torch_npu__npu__streams.py",
+    "bytes": 12623,
+    "sha256": "241741b356db5006797dbec119007afb33b73b0e1753bfb06ab27c989c5bfac4",
+    "installed_path": "/usr/local/python3.11.10/lib/python3.11/site-packages/torch_npu/npu/streams.py",
+    "installed_sha256": "241741b356db5006797dbec119007afb33b73b0e1753bfb06ab27c989c5bfac4"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Ascend/pytorch/5dd8ef3f9b375b5ae4a83538d5785754148c3302/torch_npu/npu/graphs.py",
+    "revision": "5dd8ef3f9b375b5ae4a83538d5785754148c3302",
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/torch_npu__npu__graphs.py",
+    "bytes": 51214,
+    "sha256": "eb11cac181087766e8489cf3a1da0c0fa150933b7e74454dba4a47db6114164e",
+    "installed_path": "/usr/local/python3.11.10/lib/python3.11/site-packages/torch_npu/npu/graphs.py",
+    "installed_sha256": "eb11cac181087766e8489cf3a1da0c0fa150933b7e74454dba4a47db6114164e"
+  }
+]

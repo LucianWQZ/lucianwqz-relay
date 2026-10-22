@@ -1,0 +1,101 @@
+{
+  "case": "PROFILE_ON_long_materialize",
+  "source_trace": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C15_prepare_01/PROFILE_ON_long_materialize/trace/node-39-101_261705_20261022230753190_ascend_pt/ASCEND_PROFILER_OUTPUT/trace_view.json",
+  "source_flow_table": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/profile_analysis_C15/PROFILE_ON_long_materialize/flow-analysis-module.json",
+  "snapshot_count": 47,
+  "same_thread_nested_statistics": {
+    "aten::to": {
+      "count": 47,
+      "sum_us": 475336.06999999995,
+      "p50_us": 7867.87,
+      "max_us": 84600.76
+    },
+    "aten::_to_copy": {
+      "count": 47,
+      "sum_us": 475258.29,
+      "p50_us": 7866.16,
+      "max_us": 84598.75
+    },
+    "aten::copy_": {
+      "count": 47,
+      "sum_us": 474872.48000000004,
+      "p50_us": 7857.14,
+      "max_us": 84589.17
+    },
+    "aten::slice": {
+      "count": 47,
+      "sum_us": 479.3700000000001,
+      "p50_us": 10.59,
+      "max_us": 14.94
+    },
+    "aten::as_strided": {
+      "count": 47,
+      "sum_us": 197.62,
+      "p50_us": 4.25,
+      "max_us": 6.78
+    },
+    "aten::empty_strided": {
+      "count": 47,
+      "sum_us": 170.07,
+      "p50_us": 3.8,
+      "max_us": 4.59
+    }
+  },
+  "matched_flow_count": 0,
+  "matched_destination_counts": {},
+  "longest_snapshot": {
+    "index": 106695,
+    "event": {
+      "ph": "X",
+      "name": "repair5/Draft_materialize_exact_length_snapshot",
+      "pid": 261705,
+      "tid": 261705,
+      "ts": "1792681674973110.940",
+      "dur": 84682.31,
+      "cat": "cpu_op",
+      "args": {
+        "Sequence number": -1,
+        "Fwd thread id": 0
+      }
+    },
+    "children": [
+      {
+        "index": 106694,
+        "name": "aten::to",
+        "cat": "cpu_op",
+        "duration_us": 84600.76
+      },
+      {
+        "index": 106693,
+        "name": "aten::_to_copy",
+        "cat": "cpu_op",
+        "duration_us": 84598.75
+      },
+      {
+        "index": 106692,
+        "name": "aten::copy_",
+        "cat": "cpu_op",
+        "duration_us": 84589.17
+      },
+      {
+        "index": 106690,
+        "name": "aten::slice",
+        "cat": "cpu_op",
+        "duration_us": 10.79
+      },
+      {
+        "index": 106689,
+        "name": "aten::as_strided",
+        "cat": "cpu_op",
+        "duration_us": 4.28
+      },
+      {
+        "index": 106691,
+        "name": "aten::empty_strided",
+        "cat": "cpu_op",
+        "duration_us": 3.75
+      }
+    ]
+  },
+  "interpretation": "nested durations are not additive; original snapshot includes existing synchronization/backlog plus copy; no Host monotonic ns subtraction, no kernel-name/adjacency generation inference"
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "mrv2-current-status-v3",
+  "session_id": "20261022T132626Z_R2",
+  "status": "CHECKING",
+  "current_action": "C19全部设备case已结束，正在交付自检；NPU当前未使用",
+  "development": {
+    "sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+    "tree": "af4519a635d6ccd70646f77195fde18368bdf22b",
+    "dirty": false,
+    "observed_at": "2026-10-22T18:05:27.909160+00:00"
+  },
+  "running_candidate": null,
+  "current_case": null,
+  "runner_pid": null,
+  "model_worker_pids": [],
+  "worker_pids": [],
+  "monitor_pid": null,
+  "model_worker_profiler_active": false,
+  "last_device_candidate": {
+    "sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+    "case": "UNWIND_after_completion",
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED"
+  },
+  "last_key_correctness_candidate": {
+    "sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+    "scope": "numeric12/ABA+Target4 paired12+LIFE/native15/fourABORT/fourPythonUNWIND; no formal Graph support"
+  },
+  "last_completed_case": "C19/UNWIND_after_completion",
+  "last_agent_update": "2026-10-22T18:05:27.909160+00:00",
+  "last_model_progress": "2026-10-22T17:58:18.588375+00:00",
+  "last_monitor_check": "2026-10-22T18:00:40.421613+00:00",
+  "npu_observation": "NPU0_NO_RUNNING_PROCESSES_AT_RELEASE_CHECK",
+  "npu_observed_at": "2026-10-22T18:00:40.421613+00:00",
+  "release_evidence": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/environment/final_release_check/snapshot.json",
+  "round_counts": {
+    "formal_model_starts": 72,
+    "npu_probes": 4,
+    "private_fixture_attempts": 5,
+    "profiler_collections": 5,
+    "offline_reanalyses": 7
+  },
+  "deadline_utc": "2026-10-22T23:26:26+00:00",
+  "resource_reservation_until": "2026-10-23T02:00:00+00:00",
+  "device_branch_state": "FINISHED",
+  "run_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw",
+  "current_blocker": "正式Graph支持剩余平台多代合同/物理证据与验收owner决定；public Gate冻结",
+  "next_action": "审查包自检后交付，后续按平台问题单处理，不重复采相同trace"
+}

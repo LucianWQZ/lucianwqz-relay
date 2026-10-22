@@ -1,0 +1,29 @@
+{
+  "schema": "mrv2-user-device-authorization-v1",
+  "authority": "USER_INSTRUCTION_NO_ADMIN_SIGNATURE",
+  "source": "Latest round2 user section 4: ten-hour window, Phy0-7 reserved; Phy8-15 conditional only",
+  "host_phy_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "conditional_phy_ids": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "deadline_utc": "2026-10-22T23:26:26+00:00",
+  "deadline_epoch_seconds": 1792711586.0,
+  "session_id": "20261022T132626Z_R2",
+  "limits": "TP1; at most two assigned idle chips for independent cases; normal profiling alone; no reset or unrelated process kill"
+}

@@ -1,0 +1,25 @@
+{
+  "observed_utc": "2026-10-22T17:27:04.552806+00:00",
+  "mounts": {
+    "work": {
+      "target": "/mnt/share/z00937950",
+      "source": "172.27.1.1:/Share/z00937950",
+      "fstype": "nfs4",
+      "avail": "3.3T",
+      "size": "180T",
+      "available_bytes": 3581506486272,
+      "device_id": 139
+    },
+    "cache": {
+      "target": "/mnt",
+      "source": "/dev/mapper/openeuler-root[/mnt]",
+      "fstype": "ext4",
+      "avail": "13.4G",
+      "size": "491G",
+      "available_bytes": 14437351424,
+      "device_id": 64768
+    }
+  },
+  "quota": "NOT_AVAILABLE",
+  "scope": "read-only current mount/statvfs; initial write/fsync/read/delete evidence retained in STORAGE_BINDING"
+}

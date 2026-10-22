@@ -1,0 +1,7393 @@
+{
+  "argv": [
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C19_native_tensor/vllm-ascend/tools/p7x_graph_repair2.py",
+    "run",
+    "--case",
+    "B",
+    "--case-id",
+    "NUMERIC_SENTINEL",
+    "--run-id",
+    "r2-c19-phy0-20261022T132626Z",
+    "--attempt",
+    "1",
+    "--expected-sha",
+    "da5b0f054c4b94362ff3539de911b26b4074052a",
+    "--vllm-repo",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm",
+    "--target-model",
+    "/mnt/share/wql/Qwen3-8B",
+    "--draft-model",
+    "/mnt/share/dspark_qwen3_8b_block7",
+    "--fixture-manifest",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/inputs/inputs/fixture_manifest.json",
+    "--requests",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/inputs/inputs/requests/smoke.json",
+    "--output",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_SENTINEL",
+    "--repair5-controlled-target",
+    "--repair5-controlled-mrv2",
+    "--repair5-lifecycle",
+    "--repair5-capture-profile",
+    "target4",
+    "--repair6-target-store",
+    "--repair6-numeric-reference",
+    "--repair6-target-prefix",
+    "3"
+  ],
+  "capture_profile": "target4",
+  "config_sha256": "b25498192decee98f90a7f651877a95beed46d086b4df55894565c9c7d53e025",
+  "controlled_target_numeric": {
+    "artifact": "controlled-target.json",
+    "kind": "FULL_TARGET_CONTROLLED_SYNTHETIC_KV",
+    "status": "EXECUTED_SCOPED_NOT_GATE_CLOSURE"
+  },
+  "diagnostic_artifacts": {
+    "controlled-target.json": {
+      "bytes": 10912,
+      "sha256": "fa246e0bbe1e6ec87c90bf50e25ec9a9b4e08f9f8f5a20d7ce8525d62ba307ea"
+    },
+    "mrv2-lifecycle.json": {
+      "bytes": 180590,
+      "sha256": "9a9c7aea3539e653c7648f1d93c3775d86571a2a6aebd18703b163ea755d71eb"
+    },
+    "numeric-reference.json": {
+      "bytes": 5431,
+      "sha256": "a5f543e2552c83068e601d898353c6e8844139ad9caba0c28eb3512ef82b48a4"
+    },
+    "numeric-summary.json": {
+      "bytes": 2260,
+      "sha256": "f98f659e67d681c522d2bfe66883993f18d6d6a3507e8afc1091586150396941"
+    }
+  },
+  "draft_graph_keys": [
+    [
+      4,
+      28
+    ],
+    [
+      2,
+      14
+    ],
+    [
+      1,
+      7
+    ]
+  ],
+  "draft_inventory": {
+    "descriptors": [
+      {
+        "mode": "FULL",
+        "num_reqs": 4,
+        "num_tokens": 28,
+        "uniform_token_count": 7
+      },
+      {
+        "mode": "FULL",
+        "num_reqs": 2,
+        "num_tokens": 14,
+        "uniform_token_count": 7
+      },
+      {
+        "mode": "FULL",
+        "num_reqs": 1,
+        "num_tokens": 7,
+        "uniform_token_count": 7
+      }
+    ],
+    "graphs": [
+      {
+        "mode": "FULL",
+        "num_reqs": 4,
+        "num_tokens": 28,
+        "uniform_token_count": 7
+      },
+      {
+        "mode": "FULL",
+        "num_reqs": 2,
+        "num_tokens": 14,
+        "uniform_token_count": 7
+      },
+      {
+        "mode": "FULL",
+        "num_reqs": 1,
+        "num_tokens": 7,
+        "uniform_token_count": 7
+      }
+    ]
+  },
+  "draft_layer_names": [
+    "model.layers.38.self_attn.attn",
+    "model.layers.40.self_attn.attn",
+    "model.layers.36.self_attn.attn",
+    "model.layers.39.self_attn.attn",
+    "model.layers.37.self_attn.attn"
+  ],
+  "fixture_manifest": {
+    "files": [
+      {
+        "path": "/mnt/share/wql/Qwen3-8B/config.json",
+        "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30"
+      },
+      {
+        "path": "/mnt/share/wql/Qwen3-8B/model.safetensors.index.json",
+        "sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc"
+      },
+      {
+        "path": "/mnt/share/wql/Qwen3-8B/tokenizer.json",
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+      },
+      {
+        "path": "/mnt/share/dspark_qwen3_8b_block7/config.json",
+        "sha256": "e470e70a553616f0dce8f783f42cfd25b7bd7dfdcd57ead680a0623040725611"
+      },
+      {
+        "path": "/mnt/share/dspark_qwen3_8b_block7/model.safetensors",
+        "sha256": "5c922d1f96c8d18dbdf005c40ea99878d9133d70eaa3be4bd1077ee5f2afc1e5"
+      },
+      {
+        "path": "/mnt/share/wql/Qwen3-8B/model-00001-of-00005.safetensors",
+        "sha256": "31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f"
+      },
+      {
+        "path": "/mnt/share/wql/Qwen3-8B/model-00002-of-00005.safetensors",
+        "sha256": "5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282"
+      },
+      {
+        "path": "/mnt/share/wql/Qwen3-8B/model-00003-of-00005.safetensors",
+        "sha256": "c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836"
+      },
+      {
+        "path": "/mnt/share/wql/Qwen3-8B/model-00004-of-00005.safetensors",
+        "sha256": "b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a"
+      },
+      {
+        "path": "/mnt/share/wql/Qwen3-8B/model-00005-of-00005.safetensors",
+        "sha256": "20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff"
+      }
+    ],
+    "origin_run_id": "20261019_055109_13373fff",
+    "scope": "Exact previously accepted fixture; no model files included"
+  },
+  "graph_submission_uncertain": false,
+  "identity": {
+    "attempt_id": "1",
+    "case_id": "NUMERIC_SENTINEL",
+    "driver_mode": "B",
+    "engine_id": 281454657454032,
+    "process_id": 322131,
+    "run_id": "r2-c19-phy0-20261022T132626Z",
+    "source_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+    "source_tree": "af4519a635d6ccd70646f77195fde18368bdf22b",
+    "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+  },
+  "imports": {
+    "vllm": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm/vllm/__init__.py",
+    "vllm_ascend": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C19_native_tensor/vllm-ascend/vllm_ascend/__init__.py"
+  },
+  "initialization_seconds": 40.80888511001831,
+  "llm_kwargs": {
+    "additional_config": {
+      "draft_window_graph_numeric_diagnostic": true,
+      "draft_window_size": 1024
+    },
+    "async_scheduling": false,
+    "compilation_config": {
+      "cudagraph_capture_sizes": [
+        7,
+        14,
+        28,
+        32
+      ],
+      "cudagraph_mode": "FULL_DECODE_ONLY"
+    },
+    "disable_log_stats": true,
+    "enable_prefix_caching": false,
+    "enforce_eager": false,
+    "gpu_memory_utilization": 0.8,
+    "max_model_len": 4096,
+    "max_num_batched_tokens": 4096,
+    "max_num_seqs": 4,
+    "model": "/mnt/share/wql/Qwen3-8B",
+    "seed": 0,
+    "speculative_config": {
+      "enable_adaptive_verification": false,
+      "method": "dspark",
+      "model": "/mnt/share/dspark_qwen3_8b_block7",
+      "num_speculative_tokens": 7
+    }
+  },
+  "model_runner": "vllm_ascend.worker.v2.model_runner.NPUModelRunner",
+  "numeric_contract": {
+    "config_sha256": "b25498192decee98f90a7f651877a95beed46d086b4df55894565c9c7d53e025",
+    "draft_layers": [
+      "model.layers.36.self_attn.attn",
+      "model.layers.37.self_attn.attn",
+      "model.layers.38.self_attn.attn",
+      "model.layers.39.self_attn.attn",
+      "model.layers.40.self_attn.attn"
+    ],
+    "fixture_id": "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4",
+    "hidden_contract": {
+      "dtype": "torch.bfloat16",
+      "width": 4096
+    },
+    "kv_inventory": {
+      "model.layers.36.self_attn.attn/0": {
+        "dtype": "torch.bfloat16",
+        "shape": [
+          1546,
+          128,
+          8,
+          128
+        ]
+      },
+      "model.layers.36.self_attn.attn/1": {
+        "dtype": "torch.bfloat16",
+        "shape": [
+          1546,
+          128,
+          8,
+          128
+        ]
+      },
+      "model.layers.37.self_attn.attn/0": {
+        "dtype": "torch.bfloat16",
+        "shape": [
+          1546,
+          128,
+          8,
+          128
+        ]
+      },
+      "model.layers.37.self_attn.attn/1": {
+        "dtype": "torch.bfloat16",
+        "shape": [
+          1546,
+          128,
+          8,
+          128
+        ]
+      },
+      "model.layers.38.self_attn.attn/0": {
+        "dtype": "torch.bfloat16",
+        "shape": [
+          1546,
+          128,
+          8,
+          128
+        ]
+      },
+      "model.layers.38.self_attn.attn/1": {
+        "dtype": "torch.bfloat16",
+        "shape": [
+          1546,
+          128,
+          8,
+          128
+        ]
+      },
+      "model.layers.39.self_attn.attn/0": {
+        "dtype": "torch.bfloat16",
+        "shape": [
+          1546,
+          128,
+          8,
+          128
+        ]
+      },
+      "model.layers.39.self_attn.attn/1": {
+        "dtype": "torch.bfloat16",
+        "shape": [
+          1546,
+          128,
+          8,
+          128
+        ]
+      },
+      "model.layers.40.self_attn.attn/0": {
+        "dtype": "torch.bfloat16",
+        "shape": [
+          1546,
+          128,
+          8,
+          128
+        ]
+      },
+      "model.layers.40.self_attn.attn/1": {
+        "dtype": "torch.bfloat16",
+        "shape": [
+          1546,
+          128,
+          8,
+          128
+        ]
+      }
+    },
+    "profile": "target4",
+    "sample_limit": 3
+  },
+  "observer_enabled": true,
+  "observer_installation": {
+    "legacy_observer_enabled_meaning": "driver mode requested observer; not proof of installation or execution",
+    "provider_installed": true,
+    "recorder_enabled": true,
+    "recorder_installed": true
+  },
+  "outputs": [],
+  "physical_read_trace": null,
+  "provider_installed": true,
+  "request_manifest": {
+    "entries": [
+      {
+        "label": "smoke-1",
+        "max_tokens": 16,
+        "prompts": [
+          "Hello, my name is"
+        ]
+      },
+      {
+        "label": "smoke-2",
+        "max_tokens": 16,
+        "prompts": [
+          "Hello, my name is",
+          "Hello, my name is"
+        ]
+      },
+      {
+        "label": "smoke-4",
+        "max_tokens": 16,
+        "prompts": [
+          "Hello, my name is",
+          "Hello, my name is",
+          "Hello, my name is",
+          "Hello, my name is"
+        ]
+      }
+    ],
+    "sha256": "f4239cd07ac597c32ec29d6209fcbb3926b6649dbbb5b3e249c7e4fea3ce6daa"
+  },
+  "schema": "p7x-repair2-campaign-v1",
+  "snapshot": {
+    "artifact_errors": [],
+    "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+    "events": [
+      {
+        "backing_table_address": 20618011330048,
+        "capture_descriptor": "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1151,
+          1151,
+          1151,
+          1151
+        ],
+        "generation_id": null,
+        "layer_metadata_ids": [
+          [
+            "model.layers.38.self_attn.attn",
+            281453023038800
+          ],
+          [
+            "model.layers.40.self_attn.attn",
+            281453023038800
+          ],
+          [
+            "model.layers.36.self_attn.attn",
+            281453023038800
+          ],
+          [
+            "model.layers.39.self_attn.attn",
+            281453023038800
+          ],
+          [
+            "model.layers.37.self_attn.attn",
+            281453023038800
+          ]
+        ],
+        "mapping_epoch": null,
+        "position_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7,
+          14,
+          21,
+          28
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 0,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "stage": "capture",
+        "table_values": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1151,
+          1151,
+          1151,
+          1151
+        ],
+        "values_sampled_at_sequence": null
+      },
+      {
+        "backing_table_address": 20618011330048,
+        "capture_descriptor": "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1151,
+          1151,
+          1151,
+          1151
+        ],
+        "generation_id": null,
+        "layer_metadata_ids": [
+          [
+            "model.layers.38.self_attn.attn",
+            281453023025680
+          ],
+          [
+            "model.layers.40.self_attn.attn",
+            281453023025680
+          ],
+          [
+            "model.layers.36.self_attn.attn",
+            281453023025680
+          ],
+          [
+            "model.layers.39.self_attn.attn",
+            281453023025680
+          ],
+          [
+            "model.layers.37.self_attn.attn",
+            281453023025680
+          ]
+        ],
+        "mapping_epoch": null,
+        "position_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7,
+          14,
+          21,
+          28
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 1,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "stage": "capture",
+        "table_values": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1151,
+          1151,
+          1151,
+          1151
+        ],
+        "values_sampled_at_sequence": null
+      },
+      {
+        "backing_table_address": 20618011332096,
+        "capture_descriptor": "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1151,
+          1151
+        ],
+        "generation_id": null,
+        "layer_metadata_ids": [
+          [
+            "model.layers.38.self_attn.attn",
+            281453022944912
+          ],
+          [
+            "model.layers.40.self_attn.attn",
+            281453022944912
+          ],
+          [
+            "model.layers.36.self_attn.attn",
+            281453022944912
+          ],
+          [
+            "model.layers.39.self_attn.attn",
+            281453022944912
+          ],
+          [
+            "model.layers.37.self_attn.attn",
+            281453022944912
+          ]
+        ],
+        "mapping_epoch": null,
+        "position_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7,
+          14
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 7,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "stage": "capture",
+        "table_values": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1151,
+          1151
+        ],
+        "values_sampled_at_sequence": null
+      },
+      {
+        "backing_table_address": 20618011332096,
+        "capture_descriptor": "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1151,
+          1151
+        ],
+        "generation_id": null,
+        "layer_metadata_ids": [
+          [
+            "model.layers.38.self_attn.attn",
+            281453026129104
+          ],
+          [
+            "model.layers.40.self_attn.attn",
+            281453026129104
+          ],
+          [
+            "model.layers.36.self_attn.attn",
+            281453026129104
+          ],
+          [
+            "model.layers.39.self_attn.attn",
+            281453026129104
+          ],
+          [
+            "model.layers.37.self_attn.attn",
+            281453026129104
+          ]
+        ],
+        "mapping_epoch": null,
+        "position_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7,
+          14
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 8,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "stage": "capture",
+        "table_values": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1151,
+          1151
+        ],
+        "values_sampled_at_sequence": null
+      },
+      {
+        "backing_table_address": 20618011333632,
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1151
+        ],
+        "generation_id": null,
+        "layer_metadata_ids": [
+          [
+            "model.layers.38.self_attn.attn",
+            281453026128400
+          ],
+          [
+            "model.layers.40.self_attn.attn",
+            281453026128400
+          ],
+          [
+            "model.layers.36.self_attn.attn",
+            281453026128400
+          ],
+          [
+            "model.layers.39.self_attn.attn",
+            281453026128400
+          ],
+          [
+            "model.layers.37.self_attn.attn",
+            281453026128400
+          ]
+        ],
+        "mapping_epoch": null,
+        "position_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 14,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "stage": "capture",
+        "table_values": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1151
+        ],
+        "values_sampled_at_sequence": null
+      },
+      {
+        "backing_table_address": 20618011333632,
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1151
+        ],
+        "generation_id": null,
+        "layer_metadata_ids": [
+          [
+            "model.layers.38.self_attn.attn",
+            281453024991696
+          ],
+          [
+            "model.layers.40.self_attn.attn",
+            281453024991696
+          ],
+          [
+            "model.layers.36.self_attn.attn",
+            281453024991696
+          ],
+          [
+            "model.layers.39.self_attn.attn",
+            281453024991696
+          ],
+          [
+            "model.layers.37.self_attn.attn",
+            281453024991696
+          ]
+        ],
+        "mapping_epoch": null,
+        "position_values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 15,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "stage": "capture",
+        "table_values": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1151
+        ],
+        "values_sampled_at_sequence": null
+      },
+      {
+        "backing_table_address": 20618011328000,
+        "capture_descriptor": null,
+        "exact_lengths": [
+          1031
+        ],
+        "generation_id": 0,
+        "layer_metadata_ids": [],
+        "mapping_epoch": 0,
+        "position_values": [],
+        "positions_address": null,
+        "query_layout_address": null,
+        "query_layout_values": [],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 21,
+        "slot_mapping_address": null,
+        "slot_mapping_values": [],
+        "stage": "materialized",
+        "table_values": [
+          [
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1031
+        ],
+        "values_sampled_at_sequence": null
+      },
+      {
+        "backing_table_address": 20618011333632,
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1031
+        ],
+        "generation_id": 0,
+        "layer_metadata_ids": [],
+        "mapping_epoch": 0,
+        "position_values": [
+          1152,
+          1153,
+          1154,
+          1155,
+          1156,
+          1157,
+          1158
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 22,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          9472,
+          9473,
+          9474,
+          9475,
+          9476,
+          9477,
+          9478
+        ],
+        "stage": "bound",
+        "table_values": [
+          [
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1031
+        ],
+        "values_sampled_at_sequence": null
+      },
+      {
+        "backing_table_address": 20618011333632,
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1031
+        ],
+        "generation_id": 0,
+        "layer_metadata_ids": [],
+        "mapping_epoch": 0,
+        "position_values": [
+          1152,
+          1153,
+          1154,
+          1155,
+          1156,
+          1157,
+          1158
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 24,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          9472,
+          9473,
+          9474,
+          9475,
+          9476,
+          9477,
+          9478
+        ],
+        "stage": "live",
+        "table_values": [
+          [
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1031
+        ],
+        "values_sampled_at_sequence": 22
+      },
+      {
+        "backing_table_address": 20618011333632,
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1031
+        ],
+        "generation_id": 0,
+        "layer_metadata_ids": [],
+        "mapping_epoch": 0,
+        "position_values": [
+          1152,
+          1153,
+          1154,
+          1155,
+          1156,
+          1157,
+          1158
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 25,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          9472,
+          9473,
+          9474,
+          9475,
+          9476,
+          9477,
+          9478
+        ],
+        "stage": "replay",
+        "table_values": [
+          [
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1031
+        ],
+        "values_sampled_at_sequence": 22
+      },
+      {
+        "backing_table_address": 20618011333632,
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1031
+        ],
+        "generation_id": 0,
+        "layer_metadata_ids": [],
+        "mapping_epoch": 0,
+        "position_values": [
+          1152,
+          1153,
+          1154,
+          1155,
+          1156,
+          1157,
+          1158
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 27,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          9472,
+          9473,
+          9474,
+          9475,
+          9476,
+          9477,
+          9478
+        ],
+        "stage": "consumer",
+        "table_values": [
+          [
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1031
+        ],
+        "values_sampled_at_sequence": 22
+      },
+      {
+        "backing_table_address": 20618011333632,
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1031
+        ],
+        "generation_id": 0,
+        "layer_metadata_ids": [],
+        "mapping_epoch": 0,
+        "position_values": [
+          1152,
+          1153,
+          1154,
+          1155,
+          1156,
+          1157,
+          1158
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 28,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          9472,
+          9473,
+          9474,
+          9475,
+          9476,
+          9477,
+          9478
+        ],
+        "stage": "update",
+        "table_values": [
+          [
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1031
+        ],
+        "values_sampled_at_sequence": 22
+      },
+      {
+        "backing_table_address": 20618011328000,
+        "capture_descriptor": null,
+        "exact_lengths": [
+          1031
+        ],
+        "generation_id": 1,
+        "layer_metadata_ids": [],
+        "mapping_epoch": 1,
+        "position_values": [],
+        "positions_address": null,
+        "query_layout_address": null,
+        "query_layout_values": [],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 40,
+        "slot_mapping_address": null,
+        "slot_mapping_values": [],
+        "stage": "materialized",
+        "table_values": [
+          [
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1031
+        ],
+        "values_sampled_at_sequence": null
+      },
+      {
+        "backing_table_address": 20618011333632,
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1031
+        ],
+        "generation_id": 1,
+        "layer_metadata_ids": [],
+        "mapping_epoch": 1,
+        "position_values": [
+          1280,
+          1281,
+          1282,
+          1283,
+          1284,
+          1285,
+          1286
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 41,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          9600,
+          9601,
+          9602,
+          9603,
+          9604,
+          9605,
+          9606
+        ],
+        "stage": "bound",
+        "table_values": [
+          [
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1031
+        ],
+        "values_sampled_at_sequence": null
+      },
+      {
+        "backing_table_address": 20618011333632,
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1031
+        ],
+        "generation_id": 1,
+        "layer_metadata_ids": [],
+        "mapping_epoch": 1,
+        "position_values": [
+          1280,
+          1281,
+          1282,
+          1283,
+          1284,
+          1285,
+          1286
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 43,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          9600,
+          9601,
+          9602,
+          9603,
+          9604,
+          9605,
+          9606
+        ],
+        "stage": "live",
+        "table_values": [
+          [
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1031
+        ],
+        "values_sampled_at_sequence": 41
+      },
+      {
+        "backing_table_address": 20618011333632,
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1031
+        ],
+        "generation_id": 1,
+        "layer_metadata_ids": [],
+        "mapping_epoch": 1,
+        "position_values": [
+          1280,
+          1281,
+          1282,
+          1283,
+          1284,
+          1285,
+          1286
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 44,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          9600,
+          9601,
+          9602,
+          9603,
+          9604,
+          9605,
+          9606
+        ],
+        "stage": "replay",
+        "table_values": [
+          [
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1031
+        ],
+        "values_sampled_at_sequence": 41
+      },
+      {
+        "backing_table_address": 20618011333632,
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1031
+        ],
+        "generation_id": 1,
+        "layer_metadata_ids": [],
+        "mapping_epoch": 1,
+        "position_values": [
+          1280,
+          1281,
+          1282,
+          1283,
+          1284,
+          1285,
+          1286
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 46,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          9600,
+          9601,
+          9602,
+          9603,
+          9604,
+          9605,
+          9606
+        ],
+        "stage": "consumer",
+        "table_values": [
+          [
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1031
+        ],
+        "values_sampled_at_sequence": 41
+      },
+      {
+        "backing_table_address": 20618011333632,
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1031
+        ],
+        "generation_id": 1,
+        "layer_metadata_ids": [],
+        "mapping_epoch": 1,
+        "position_values": [
+          1280,
+          1281,
+          1282,
+          1283,
+          1284,
+          1285,
+          1286
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 47,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          9600,
+          9601,
+          9602,
+          9603,
+          9604,
+          9605,
+          9606
+        ],
+        "stage": "update",
+        "table_values": [
+          [
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1031
+        ],
+        "values_sampled_at_sequence": 41
+      },
+      {
+        "backing_table_address": 20618011328000,
+        "capture_descriptor": null,
+        "exact_lengths": [
+          1031
+        ],
+        "generation_id": 2,
+        "layer_metadata_ids": [],
+        "mapping_epoch": 2,
+        "position_values": [],
+        "positions_address": null,
+        "query_layout_address": null,
+        "query_layout_values": [],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 59,
+        "slot_mapping_address": null,
+        "slot_mapping_values": [],
+        "stage": "materialized",
+        "table_values": [
+          [
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1031
+        ],
+        "values_sampled_at_sequence": null
+      },
+      {
+        "backing_table_address": 20618011333632,
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1031
+        ],
+        "generation_id": 2,
+        "layer_metadata_ids": [],
+        "mapping_epoch": 2,
+        "position_values": [
+          1152,
+          1153,
+          1154,
+          1155,
+          1156,
+          1157,
+          1158
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 60,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          9472,
+          9473,
+          9474,
+          9475,
+          9476,
+          9477,
+          9478
+        ],
+        "stage": "bound",
+        "table_values": [
+          [
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1031
+        ],
+        "values_sampled_at_sequence": null
+      },
+      {
+        "backing_table_address": 20618011333632,
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1031
+        ],
+        "generation_id": 2,
+        "layer_metadata_ids": [],
+        "mapping_epoch": 2,
+        "position_values": [
+          1152,
+          1153,
+          1154,
+          1155,
+          1156,
+          1157,
+          1158
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 62,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          9472,
+          9473,
+          9474,
+          9475,
+          9476,
+          9477,
+          9478
+        ],
+        "stage": "live",
+        "table_values": [
+          [
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1031
+        ],
+        "values_sampled_at_sequence": 60
+      },
+      {
+        "backing_table_address": 20618011333632,
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1031
+        ],
+        "generation_id": 2,
+        "layer_metadata_ids": [],
+        "mapping_epoch": 2,
+        "position_values": [
+          1152,
+          1153,
+          1154,
+          1155,
+          1156,
+          1157,
+          1158
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 63,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          9472,
+          9473,
+          9474,
+          9475,
+          9476,
+          9477,
+          9478
+        ],
+        "stage": "replay",
+        "table_values": [
+          [
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1031
+        ],
+        "values_sampled_at_sequence": 60
+      },
+      {
+        "backing_table_address": 20618011333632,
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1031
+        ],
+        "generation_id": 2,
+        "layer_metadata_ids": [],
+        "mapping_epoch": 2,
+        "position_values": [
+          1152,
+          1153,
+          1154,
+          1155,
+          1156,
+          1157,
+          1158
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 65,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          9472,
+          9473,
+          9474,
+          9475,
+          9476,
+          9477,
+          9478
+        ],
+        "stage": "consumer",
+        "table_values": [
+          [
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1031
+        ],
+        "values_sampled_at_sequence": 60
+      },
+      {
+        "backing_table_address": 20618011333632,
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "exact_lengths": [
+          1031
+        ],
+        "generation_id": 2,
+        "layer_metadata_ids": [],
+        "mapping_epoch": 2,
+        "position_values": [
+          1152,
+          1153,
+          1154,
+          1155,
+          1156,
+          1157,
+          1158
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 66,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          9472,
+          9473,
+          9474,
+          9475,
+          9476,
+          9477,
+          9478
+        ],
+        "stage": "update",
+        "table_values": [
+          [
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_lengths": [
+          1031
+        ],
+        "values_sampled_at_sequence": 60
+      }
+    ],
+    "evidence_boundary": {
+      "operand_events": "HOST_OPERATOR_BOUNDARY_FACT",
+      "physical_memory_transaction": "NOT_PROVEN_REQUIRES_DEVICE_TOOL",
+      "update_effective_generation": "NOT_PROVEN_REQUIRES_NPU_TIMELINE"
+    },
+    "g4_records": [
+      {
+        "canonical_table_address": 20618011310080,
+        "canonical_table_values": [
+          [
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "draft_output_hash": null,
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "generation_id": 0,
+        "mapping_epoch": 0,
+        "position_values": [
+          1152,
+          1153,
+          1154,
+          1155,
+          1156,
+          1157,
+          1158
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "runtime_oracle_inputs": {
+          "block_span_tokens": 128,
+          "full_exact": [
+            1159
+          ],
+          "full_upper": [
+            1159
+          ],
+          "horizon_rule": "H=full_exact; parallel future_offset=0",
+          "legacy_block_size": 128,
+          "mapping": [
+            0
+          ],
+          "missing_policy": "null is not an oracle PASS",
+          "query_width": 7,
+          "request_ids": [
+            "row-0"
+          ],
+          "row_phases": [
+            "pure_decode"
+          ],
+          "source_identity": {
+            "block_tables_owner_id": 281453030235664,
+            "idx_mapping_ptr": 20618011335168,
+            "input_block_table_ptrs": [
+              20618011310080
+            ],
+            "persistent_num_blocks_ptr": 4278894797952
+          },
+          "valid_counts": [
+            10
+          ],
+          "window_size": 1024
+        },
+        "sequence": 23,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          9472,
+          9473,
+          9474,
+          9475,
+          9476,
+          9477,
+          9478
+        ],
+        "target_layer_identities": [
+          [
+            "model.layers.0.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.1.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.2.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.3.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.4.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.5.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.6.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.7.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.8.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.9.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.10.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.11.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.12.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.13.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.14.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.15.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.16.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.17.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.18.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.19.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.20.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.21.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.22.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.23.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.24.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.25.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.26.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.27.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.28.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.29.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.30.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.31.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.32.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.33.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.34.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.35.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.36.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.37.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.38.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.39.self_attn.attn",
+            281454292154192
+          ],
+          [
+            "model.layers.40.self_attn.attn",
+            281454292154192
+          ]
+        ],
+        "target_length_values": [
+          [
+            "model.layers.0.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.1.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.2.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.3.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.4.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.5.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.6.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.7.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.8.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.9.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.10.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.11.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.12.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.13.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.14.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.15.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.16.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.17.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.18.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.19.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.20.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.21.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.22.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.23.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.24.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.25.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.26.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.27.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.28.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.29.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.30.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.31.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.32.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.33.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.34.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.35.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.36.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.37.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.38.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.39.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.40.self_attn.attn",
+            [
+              1152
+            ]
+          ]
+        ],
+        "target_metadata_identity": 281453021921344,
+        "target_output_hash": null,
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_table_addresses": [
+          [
+            "model.layers.0.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.1.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.2.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.3.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.4.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.5.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.6.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.7.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.8.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.9.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.10.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.11.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.12.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.13.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.14.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.15.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.16.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.17.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.18.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.19.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.20.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.21.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.22.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.23.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.24.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.25.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.26.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.27.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.28.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.29.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.30.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.31.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.32.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.33.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.34.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.35.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.36.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.37.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.38.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.39.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.40.self_attn.attn",
+            20618011310080
+          ]
+        ],
+        "window_table_address": 20618011333632,
+        "window_table_values": [
+          [
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "canonical_table_address": 20618011310080,
+        "canonical_table_values": [
+          [
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "draft_output_hash": null,
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "generation_id": 1,
+        "mapping_epoch": 1,
+        "position_values": [
+          1280,
+          1281,
+          1282,
+          1283,
+          1284,
+          1285,
+          1286
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "runtime_oracle_inputs": {
+          "block_span_tokens": 128,
+          "full_exact": [
+            1287
+          ],
+          "full_upper": [
+            1287
+          ],
+          "horizon_rule": "H=full_exact; parallel future_offset=0",
+          "legacy_block_size": 128,
+          "mapping": [
+            0
+          ],
+          "missing_policy": "null is not an oracle PASS",
+          "query_width": 7,
+          "request_ids": [
+            "row-0"
+          ],
+          "row_phases": [
+            "pure_decode"
+          ],
+          "source_identity": {
+            "block_tables_owner_id": 281453030235664,
+            "idx_mapping_ptr": 20618011302912,
+            "input_block_table_ptrs": [
+              20618011310080
+            ],
+            "persistent_num_blocks_ptr": 4278894797952
+          },
+          "valid_counts": [
+            11
+          ],
+          "window_size": 1024
+        },
+        "sequence": 42,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          9600,
+          9601,
+          9602,
+          9603,
+          9604,
+          9605,
+          9606
+        ],
+        "target_layer_identities": [
+          [
+            "model.layers.0.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.1.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.2.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.3.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.4.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.5.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.6.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.7.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.8.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.9.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.10.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.11.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.12.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.13.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.14.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.15.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.16.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.17.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.18.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.19.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.20.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.21.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.22.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.23.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.24.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.25.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.26.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.27.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.28.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.29.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.30.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.31.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.32.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.33.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.34.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.35.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.36.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.37.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.38.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.39.self_attn.attn",
+            281453114151312
+          ],
+          [
+            "model.layers.40.self_attn.attn",
+            281453114151312
+          ]
+        ],
+        "target_length_values": [
+          [
+            "model.layers.0.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.1.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.2.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.3.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.4.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.5.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.6.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.7.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.8.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.9.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.10.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.11.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.12.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.13.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.14.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.15.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.16.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.17.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.18.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.19.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.20.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.21.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.22.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.23.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.24.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.25.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.26.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.27.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.28.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.29.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.30.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.31.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.32.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.33.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.34.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.35.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.36.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.37.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.38.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.39.self_attn.attn",
+            [
+              1280
+            ]
+          ],
+          [
+            "model.layers.40.self_attn.attn",
+            [
+              1280
+            ]
+          ]
+        ],
+        "target_metadata_identity": 281452032402368,
+        "target_output_hash": null,
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_table_addresses": [
+          [
+            "model.layers.0.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.1.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.2.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.3.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.4.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.5.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.6.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.7.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.8.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.9.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.10.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.11.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.12.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.13.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.14.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.15.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.16.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.17.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.18.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.19.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.20.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.21.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.22.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.23.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.24.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.25.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.26.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.27.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.28.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.29.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.30.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.31.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.32.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.33.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.34.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.35.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.36.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.37.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.38.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.39.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.40.self_attn.attn",
+            20618011310080
+          ]
+        ],
+        "window_table_address": 20618011333632,
+        "window_table_values": [
+          [
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "canonical_table_address": 20618011310080,
+        "canonical_table_values": [
+          [
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "draft_output_hash": null,
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "generation_id": 2,
+        "mapping_epoch": 2,
+        "position_values": [
+          1152,
+          1153,
+          1154,
+          1155,
+          1156,
+          1157,
+          1158
+        ],
+        "positions_address": 20618009395712,
+        "query_layout_address": 20618009433600,
+        "query_layout_values": [
+          0,
+          7
+        ],
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "runtime_oracle_inputs": {
+          "block_span_tokens": 128,
+          "full_exact": [
+            1159
+          ],
+          "full_upper": [
+            1159
+          ],
+          "horizon_rule": "H=full_exact; parallel future_offset=0",
+          "legacy_block_size": 128,
+          "mapping": [
+            0
+          ],
+          "missing_policy": "null is not an oracle PASS",
+          "query_width": 7,
+          "request_ids": [
+            "row-0"
+          ],
+          "row_phases": [
+            "pure_decode"
+          ],
+          "source_identity": {
+            "block_tables_owner_id": 281453030235664,
+            "idx_mapping_ptr": 20618011335168,
+            "input_block_table_ptrs": [
+              20618011310080
+            ],
+            "persistent_num_blocks_ptr": 4278894797952
+          },
+          "valid_counts": [
+            10
+          ],
+          "window_size": 1024
+        },
+        "sequence": 61,
+        "slot_mapping_address": 20618011311104,
+        "slot_mapping_values": [
+          9472,
+          9473,
+          9474,
+          9475,
+          9476,
+          9477,
+          9478
+        ],
+        "target_layer_identities": [
+          [
+            "model.layers.0.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.1.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.2.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.3.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.4.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.5.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.6.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.7.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.8.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.9.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.10.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.11.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.12.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.13.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.14.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.15.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.16.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.17.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.18.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.19.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.20.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.21.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.22.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.23.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.24.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.25.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.26.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.27.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.28.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.29.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.30.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.31.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.32.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.33.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.34.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.35.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.36.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.37.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.38.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.39.self_attn.attn",
+            281453301453904
+          ],
+          [
+            "model.layers.40.self_attn.attn",
+            281453301453904
+          ]
+        ],
+        "target_length_values": [
+          [
+            "model.layers.0.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.1.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.2.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.3.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.4.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.5.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.6.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.7.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.8.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.9.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.10.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.11.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.12.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.13.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.14.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.15.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.16.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.17.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.18.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.19.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.20.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.21.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.22.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.23.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.24.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.25.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.26.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.27.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.28.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.29.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.30.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.31.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.32.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.33.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.34.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.35.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.36.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.37.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.38.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.39.self_attn.attn",
+            [
+              1152
+            ]
+          ],
+          [
+            "model.layers.40.self_attn.attn",
+            [
+              1152
+            ]
+          ]
+        ],
+        "target_metadata_identity": 281452031641280,
+        "target_output_hash": null,
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_table_addresses": [
+          [
+            "model.layers.0.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.1.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.2.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.3.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.4.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.5.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.6.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.7.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.8.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.9.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.10.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.11.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.12.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.13.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.14.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.15.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.16.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.17.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.18.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.19.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.20.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.21.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.22.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.23.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.24.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.25.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.26.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.27.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.28.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.29.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.30.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.31.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.32.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.33.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.34.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.35.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.36.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.37.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.38.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.39.self_attn.attn",
+            20618011310080
+          ],
+          [
+            "model.layers.40.self_attn.attn",
+            20618011310080
+          ]
+        ],
+        "window_table_address": 20618011333632,
+        "window_table_values": [
+          [
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    ],
+    "host_observation_times_ns": {
+      "0": 311317470862250,
+      "1": 311317509081300,
+      "2": 311317519659480,
+      "3": 311317521674420,
+      "4": 311317523151280,
+      "5": 311317524622540,
+      "6": 311317526065600,
+      "7": 311317529882370,
+      "8": 311317611199890,
+      "9": 311317624518540,
+      "10": 311317626316710,
+      "11": 311317627797600,
+      "12": 311317629296370,
+      "13": 311317630751130,
+      "14": 311317634688280,
+      "15": 311317652362150,
+      "16": 311317666602590,
+      "17": 311317668440870,
+      "18": 311317669945630,
+      "19": 311317671382280,
+      "20": 311317672849140,
+      "21": 311373541132350,
+      "22": 311373556076360,
+      "23": 311373566252570,
+      "24": 311373579339510,
+      "25": 311373591655270,
+      "26": 311373593323320,
+      "27": 311373605663140,
+      "28": 311373606254170,
+      "29": 311373606744410,
+      "30": 311373606783530,
+      "31": 311373619978980,
+      "32": 311373620041100,
+      "33": 311373633763830,
+      "34": 311373633799680,
+      "35": 311373647480070,
+      "36": 311373647515820,
+      "37": 311373661716610,
+      "38": 311373661751640,
+      "39": 311375024159230,
+      "40": 311451507435460,
+      "41": 311451525784590,
+      "42": 311451541041630,
+      "43": 311451559261500,
+      "44": 311451577148160,
+      "45": 311451577470150,
+      "46": 311451596728000,
+      "47": 311451597304600,
+      "48": 311451597724820,
+      "49": 311451597759730,
+      "50": 311451616494670,
+      "51": 311451616532410,
+      "52": 311451635642710,
+      "53": 311451635676480,
+      "54": 311451654345640,
+      "55": 311451654376810,
+      "56": 311451672774050,
+      "57": 311451672805010,
+      "58": 311453036426210,
+      "59": 311527574280100,
+      "60": 311527598675080,
+      "61": 311527620884770,
+      "62": 311527642897320,
+      "63": 311527664717040,
+      "64": 311527665014100,
+      "65": 311527687897030,
+      "66": 311527688486970,
+      "67": 311527688904010,
+      "68": 311527688935660,
+      "69": 311527712061140,
+      "70": 311527712096900,
+      "71": 311527735028810,
+      "72": 311527735058430,
+      "73": 311527758404730,
+      "74": 311527758433800,
+      "75": 311527782137100,
+      "76": 311527782167290,
+      "77": 311529191708920
+    },
+    "lifecycle_events": [
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": null,
+        "event_type": null,
+        "generation_id": 0,
+        "host_monotonic_ns": 311373593336910,
+        "lease_state": null,
+        "mapping_epoch": 0,
+        "note": "host replay submission only; no completion event created or sampled",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 26,
+        "stage": "replay_submitted",
+        "stream_identity": 281446304853120
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": 281453026431184,
+        "event_type": "torch_npu.npu.streams.ExternalEvent",
+        "generation_id": 0,
+        "host_monotonic_ns": 311373606791400,
+        "lease_state": null,
+        "mapping_epoch": 0,
+        "note": "existing backend ExternalEvent recorded after graph task update",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 30,
+        "stage": "update_event_recorded",
+        "stream_identity": 281454265388960
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": 281453026433616,
+        "event_type": "torch_npu.npu.streams.ExternalEvent",
+        "generation_id": 0,
+        "host_monotonic_ns": 311373620047380,
+        "lease_state": null,
+        "mapping_epoch": 0,
+        "note": "existing backend ExternalEvent recorded after graph task update",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 32,
+        "stage": "update_event_recorded",
+        "stream_identity": 281454265388960
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": 281453023677648,
+        "event_type": "torch_npu.npu.streams.ExternalEvent",
+        "generation_id": 0,
+        "host_monotonic_ns": 311373633806220,
+        "lease_state": null,
+        "mapping_epoch": 0,
+        "note": "existing backend ExternalEvent recorded after graph task update",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 34,
+        "stage": "update_event_recorded",
+        "stream_identity": 281454265388960
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": 281453023677520,
+        "event_type": "torch_npu.npu.streams.ExternalEvent",
+        "generation_id": 0,
+        "host_monotonic_ns": 311373647521770,
+        "lease_state": null,
+        "mapping_epoch": 0,
+        "note": "existing backend ExternalEvent recorded after graph task update",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 36,
+        "stage": "update_event_recorded",
+        "stream_identity": 281454265388960
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": 281453026432720,
+        "event_type": "torch_npu.npu.streams.ExternalEvent",
+        "generation_id": 0,
+        "host_monotonic_ns": 311373661757990,
+        "lease_state": null,
+        "mapping_epoch": 0,
+        "note": "existing backend ExternalEvent recorded after graph task update",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 38,
+        "stage": "update_event_recorded",
+        "stream_identity": 281454265388960
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": null,
+        "event_type": null,
+        "generation_id": 0,
+        "host_monotonic_ns": 311375024170050,
+        "lease_state": "retired",
+        "mapping_epoch": 0,
+        "note": "host proposal owner retired the P3 lease; this is not device completion proof",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 39,
+        "stage": "proposal_retired",
+        "stream_identity": null
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": null,
+        "event_type": null,
+        "generation_id": 1,
+        "host_monotonic_ns": 311451577479040,
+        "lease_state": null,
+        "mapping_epoch": 1,
+        "note": "host replay submission only; no completion event created or sampled",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 45,
+        "stage": "replay_submitted",
+        "stream_identity": 281446304853120
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": 281453026431184,
+        "event_type": "torch_npu.npu.streams.ExternalEvent",
+        "generation_id": 1,
+        "host_monotonic_ns": 311451597768550,
+        "lease_state": null,
+        "mapping_epoch": 1,
+        "note": "existing backend ExternalEvent recorded after graph task update",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 49,
+        "stage": "update_event_recorded",
+        "stream_identity": 281454265388960
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": 281453026433616,
+        "event_type": "torch_npu.npu.streams.ExternalEvent",
+        "generation_id": 1,
+        "host_monotonic_ns": 311451616538420,
+        "lease_state": null,
+        "mapping_epoch": 1,
+        "note": "existing backend ExternalEvent recorded after graph task update",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 51,
+        "stage": "update_event_recorded",
+        "stream_identity": 281454265388960
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": 281453023677648,
+        "event_type": "torch_npu.npu.streams.ExternalEvent",
+        "generation_id": 1,
+        "host_monotonic_ns": 311451635682250,
+        "lease_state": null,
+        "mapping_epoch": 1,
+        "note": "existing backend ExternalEvent recorded after graph task update",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 53,
+        "stage": "update_event_recorded",
+        "stream_identity": 281454265388960
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": 281453023677520,
+        "event_type": "torch_npu.npu.streams.ExternalEvent",
+        "generation_id": 1,
+        "host_monotonic_ns": 311451654383240,
+        "lease_state": null,
+        "mapping_epoch": 1,
+        "note": "existing backend ExternalEvent recorded after graph task update",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 55,
+        "stage": "update_event_recorded",
+        "stream_identity": 281454265388960
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": 281453026432720,
+        "event_type": "torch_npu.npu.streams.ExternalEvent",
+        "generation_id": 1,
+        "host_monotonic_ns": 311451672810950,
+        "lease_state": null,
+        "mapping_epoch": 1,
+        "note": "existing backend ExternalEvent recorded after graph task update",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 57,
+        "stage": "update_event_recorded",
+        "stream_identity": 281454265388960
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": null,
+        "event_type": null,
+        "generation_id": 1,
+        "host_monotonic_ns": 311453036436050,
+        "lease_state": "retired",
+        "mapping_epoch": 1,
+        "note": "host proposal owner retired the P3 lease; this is not device completion proof",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 58,
+        "stage": "proposal_retired",
+        "stream_identity": null
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": null,
+        "event_type": null,
+        "generation_id": 2,
+        "host_monotonic_ns": 311527665021480,
+        "lease_state": null,
+        "mapping_epoch": 2,
+        "note": "host replay submission only; no completion event created or sampled",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 64,
+        "stage": "replay_submitted",
+        "stream_identity": 281446304853120
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": 281453026431184,
+        "event_type": "torch_npu.npu.streams.ExternalEvent",
+        "generation_id": 2,
+        "host_monotonic_ns": 311527688943600,
+        "lease_state": null,
+        "mapping_epoch": 2,
+        "note": "existing backend ExternalEvent recorded after graph task update",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 68,
+        "stage": "update_event_recorded",
+        "stream_identity": 281454265388960
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": 281453026433616,
+        "event_type": "torch_npu.npu.streams.ExternalEvent",
+        "generation_id": 2,
+        "host_monotonic_ns": 311527712103140,
+        "lease_state": null,
+        "mapping_epoch": 2,
+        "note": "existing backend ExternalEvent recorded after graph task update",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 70,
+        "stage": "update_event_recorded",
+        "stream_identity": 281454265388960
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": 281453023677648,
+        "event_type": "torch_npu.npu.streams.ExternalEvent",
+        "generation_id": 2,
+        "host_monotonic_ns": 311527735064490,
+        "lease_state": null,
+        "mapping_epoch": 2,
+        "note": "existing backend ExternalEvent recorded after graph task update",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 72,
+        "stage": "update_event_recorded",
+        "stream_identity": 281454265388960
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": 281453023677520,
+        "event_type": "torch_npu.npu.streams.ExternalEvent",
+        "generation_id": 2,
+        "host_monotonic_ns": 311527758440300,
+        "lease_state": null,
+        "mapping_epoch": 2,
+        "note": "existing backend ExternalEvent recorded after graph task update",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 74,
+        "stage": "update_event_recorded",
+        "stream_identity": 281454265388960
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": 281453026432720,
+        "event_type": "torch_npu.npu.streams.ExternalEvent",
+        "generation_id": 2,
+        "host_monotonic_ns": 311527782173360,
+        "lease_state": null,
+        "mapping_epoch": 2,
+        "note": "existing backend ExternalEvent recorded after graph task update",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 76,
+        "stage": "update_event_recorded",
+        "stream_identity": 281454265388960
+      },
+      {
+        "clock_domain": "process_monotonic_ns_NOT_DEVICE_TIME",
+        "completion_source": null,
+        "completion_status": "UNPROVEN",
+        "event_complete": null,
+        "event_identity": null,
+        "event_type": null,
+        "generation_id": 2,
+        "host_monotonic_ns": 311529191718810,
+        "lease_state": "retired",
+        "mapping_epoch": 2,
+        "note": "host proposal owner retired the P3 lease; this is not device completion proof",
+        "query_host_monotonic_ns": null,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "sequence": 77,
+        "stage": "proposal_retired",
+        "stream_identity": null
+      }
+    ],
+    "max_events": 16384,
+    "observer_enabled": true,
+    "operand_events": [
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011330048,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011330048,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1151,
+          1151,
+          1151,
+          1151
+        ],
+        "cpu_upper": [
+          1151,
+          1151,
+          1151,
+          1151
+        ],
+        "event_identity": 281453026533328,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011330048,
+        "generation_id": null,
+        "global_group_id": 0,
+        "handle_identity": 281453022869488,
+        "host_monotonic_ns": 311317519679580,
+        "layer_name": "model.layers.36.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1151,
+          1151,
+          1151,
+          1151
+        ],
+        "mapping_epoch": null,
+        "num_tokens": 28,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 2,
+        "stage": "capture_operator",
+        "stream_identity": 281453028986784,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          4,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011330048,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011330048,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1151,
+          1151,
+          1151,
+          1151
+        ],
+        "cpu_upper": [
+          1151,
+          1151,
+          1151,
+          1151
+        ],
+        "event_identity": 281453026439504,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011330048,
+        "generation_id": null,
+        "global_group_id": 0,
+        "handle_identity": 281453022860656,
+        "host_monotonic_ns": 311317521690190,
+        "layer_name": "model.layers.37.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1151,
+          1151,
+          1151,
+          1151
+        ],
+        "mapping_epoch": null,
+        "num_tokens": 28,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 3,
+        "stage": "capture_operator",
+        "stream_identity": 281453028986784,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          4,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011330048,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011330048,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1151,
+          1151,
+          1151,
+          1151
+        ],
+        "cpu_upper": [
+          1151,
+          1151,
+          1151,
+          1151
+        ],
+        "event_identity": 281453026532560,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011330048,
+        "generation_id": null,
+        "global_group_id": 0,
+        "handle_identity": 281453022868976,
+        "host_monotonic_ns": 311317523165590,
+        "layer_name": "model.layers.38.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1151,
+          1151,
+          1151,
+          1151
+        ],
+        "mapping_epoch": null,
+        "num_tokens": 28,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 4,
+        "stage": "capture_operator",
+        "stream_identity": 281453028986784,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          4,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011330048,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011330048,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1151,
+          1151,
+          1151,
+          1151
+        ],
+        "cpu_upper": [
+          1151,
+          1151,
+          1151,
+          1151
+        ],
+        "event_identity": 281453026532944,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011330048,
+        "generation_id": null,
+        "global_group_id": 0,
+        "handle_identity": 281453022891440,
+        "host_monotonic_ns": 311317524637340,
+        "layer_name": "model.layers.39.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1151,
+          1151,
+          1151,
+          1151
+        ],
+        "mapping_epoch": null,
+        "num_tokens": 28,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 5,
+        "stage": "capture_operator",
+        "stream_identity": 281453028986784,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          4,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011330048,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011330048,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1151,
+          1151,
+          1151,
+          1151
+        ],
+        "cpu_upper": [
+          1151,
+          1151,
+          1151,
+          1151
+        ],
+        "event_identity": 281453026433744,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011330048,
+        "generation_id": null,
+        "global_group_id": 0,
+        "handle_identity": 281453023045104,
+        "host_monotonic_ns": 311317526079410,
+        "layer_name": "model.layers.40.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1151,
+          1151,
+          1151,
+          1151
+        ],
+        "mapping_epoch": null,
+        "num_tokens": 28,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 6,
+        "stage": "capture_operator",
+        "stream_identity": 281453028986784,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          4,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011332096,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011332096,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1151,
+          1151
+        ],
+        "cpu_upper": [
+          1151,
+          1151
+        ],
+        "event_identity": 281453023678160,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011332096,
+        "generation_id": null,
+        "global_group_id": 0,
+        "handle_identity": 281453023040688,
+        "host_monotonic_ns": 311317624533620,
+        "layer_name": "model.layers.36.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1151,
+          1151
+        ],
+        "mapping_epoch": null,
+        "num_tokens": 14,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 9,
+        "stage": "capture_operator",
+        "stream_identity": 281453028984544,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          2,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011332096,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011332096,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1151,
+          1151
+        ],
+        "cpu_upper": [
+          1151,
+          1151
+        ],
+        "event_identity": 281453026433360,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011332096,
+        "generation_id": null,
+        "global_group_id": 0,
+        "handle_identity": 281453024987376,
+        "host_monotonic_ns": 311317626331220,
+        "layer_name": "model.layers.37.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1151,
+          1151
+        ],
+        "mapping_epoch": null,
+        "num_tokens": 14,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 10,
+        "stage": "capture_operator",
+        "stream_identity": 281453028984544,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          2,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011332096,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011332096,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1151,
+          1151
+        ],
+        "cpu_upper": [
+          1151,
+          1151
+        ],
+        "event_identity": 281453023678544,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011332096,
+        "generation_id": null,
+        "global_group_id": 0,
+        "handle_identity": 281453024988464,
+        "host_monotonic_ns": 311317627812500,
+        "layer_name": "model.layers.38.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1151,
+          1151
+        ],
+        "mapping_epoch": null,
+        "num_tokens": 14,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 11,
+        "stage": "capture_operator",
+        "stream_identity": 281453028984544,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          2,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011332096,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011332096,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1151,
+          1151
+        ],
+        "cpu_upper": [
+          1151,
+          1151
+        ],
+        "event_identity": 281453023677392,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011332096,
+        "generation_id": null,
+        "global_group_id": 0,
+        "handle_identity": 281453022864560,
+        "host_monotonic_ns": 311317629309000,
+        "layer_name": "model.layers.39.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1151,
+          1151
+        ],
+        "mapping_epoch": null,
+        "num_tokens": 14,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 12,
+        "stage": "capture_operator",
+        "stream_identity": 281453028984544,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          2,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011332096,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011332096,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1151,
+          1151
+        ],
+        "cpu_upper": [
+          1151,
+          1151
+        ],
+        "event_identity": 281453026433104,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011332096,
+        "generation_id": null,
+        "global_group_id": 0,
+        "handle_identity": 281453026743856,
+        "host_monotonic_ns": 311317630763420,
+        "layer_name": "model.layers.40.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1151,
+          1151
+        ],
+        "mapping_epoch": null,
+        "num_tokens": 14,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 13,
+        "stage": "capture_operator",
+        "stream_identity": 281453028984544,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          2,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1151
+        ],
+        "cpu_upper": [
+          1151
+        ],
+        "event_identity": 281453026431184,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": null,
+        "global_group_id": 0,
+        "handle_identity": 281453021737200,
+        "host_monotonic_ns": 311317666615430,
+        "layer_name": "model.layers.36.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1151
+        ],
+        "mapping_epoch": null,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 16,
+        "stage": "capture_operator",
+        "stream_identity": 281453028986784,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1151
+        ],
+        "cpu_upper": [
+          1151
+        ],
+        "event_identity": 281453026433616,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": null,
+        "global_group_id": 0,
+        "handle_identity": 281453022937584,
+        "host_monotonic_ns": 311317668453290,
+        "layer_name": "model.layers.37.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1151
+        ],
+        "mapping_epoch": null,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 17,
+        "stage": "capture_operator",
+        "stream_identity": 281453028986784,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1151
+        ],
+        "cpu_upper": [
+          1151
+        ],
+        "event_identity": 281453023677648,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": null,
+        "global_group_id": 0,
+        "handle_identity": 281453026119216,
+        "host_monotonic_ns": 311317669957940,
+        "layer_name": "model.layers.38.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1151
+        ],
+        "mapping_epoch": null,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 18,
+        "stage": "capture_operator",
+        "stream_identity": 281453028986784,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1151
+        ],
+        "cpu_upper": [
+          1151
+        ],
+        "event_identity": 281453023677520,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": null,
+        "global_group_id": 0,
+        "handle_identity": 281453026129584,
+        "host_monotonic_ns": 311317671393970,
+        "layer_name": "model.layers.39.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1151
+        ],
+        "mapping_epoch": null,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 19,
+        "stage": "capture_operator",
+        "stream_identity": 281453028986784,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1151
+        ],
+        "cpu_upper": [
+          1151
+        ],
+        "event_identity": 281453026432720,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": null,
+        "global_group_id": 0,
+        "handle_identity": 281453023457776,
+        "host_monotonic_ns": 311317672860960,
+        "layer_name": "model.layers.40.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1151
+        ],
+        "mapping_epoch": null,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 20,
+        "stage": "capture_operator",
+        "stream_identity": 281453028986784,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1031
+        ],
+        "cpu_upper": [
+          1031
+        ],
+        "event_identity": 281453026431184,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": 0,
+        "global_group_id": 0,
+        "handle_identity": 281453021737200,
+        "host_monotonic_ns": 311373606767330,
+        "layer_name": "model.layers.38.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1031
+        ],
+        "mapping_epoch": 0,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 29,
+        "stage": "update_operator",
+        "stream_identity": 281454265388960,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1031
+        ],
+        "cpu_upper": [
+          1031
+        ],
+        "event_identity": 281453026433616,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": 0,
+        "global_group_id": 0,
+        "handle_identity": 281453022937584,
+        "host_monotonic_ns": 311373620023870,
+        "layer_name": "model.layers.40.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1031
+        ],
+        "mapping_epoch": 0,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 31,
+        "stage": "update_operator",
+        "stream_identity": 281454265388960,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1031
+        ],
+        "cpu_upper": [
+          1031
+        ],
+        "event_identity": 281453023677648,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": 0,
+        "global_group_id": 0,
+        "handle_identity": 281453026119216,
+        "host_monotonic_ns": 311373633786050,
+        "layer_name": "model.layers.36.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1031
+        ],
+        "mapping_epoch": 0,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 33,
+        "stage": "update_operator",
+        "stream_identity": 281454265388960,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1031
+        ],
+        "cpu_upper": [
+          1031
+        ],
+        "event_identity": 281453023677520,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": 0,
+        "global_group_id": 0,
+        "handle_identity": 281453026129584,
+        "host_monotonic_ns": 311373647502220,
+        "layer_name": "model.layers.39.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1031
+        ],
+        "mapping_epoch": 0,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 35,
+        "stage": "update_operator",
+        "stream_identity": 281454265388960,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1031
+        ],
+        "cpu_upper": [
+          1031
+        ],
+        "event_identity": 281453026432720,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": 0,
+        "global_group_id": 0,
+        "handle_identity": 281453023457776,
+        "host_monotonic_ns": 311373661738500,
+        "layer_name": "model.layers.37.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1031
+        ],
+        "mapping_epoch": 0,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 37,
+        "stage": "update_operator",
+        "stream_identity": 281454265388960,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1031
+        ],
+        "cpu_upper": [
+          1031
+        ],
+        "event_identity": 281453026431184,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": 1,
+        "global_group_id": 0,
+        "handle_identity": 281453021737200,
+        "host_monotonic_ns": 311451597743940,
+        "layer_name": "model.layers.38.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1031
+        ],
+        "mapping_epoch": 1,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 48,
+        "stage": "update_operator",
+        "stream_identity": 281454265388960,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1031
+        ],
+        "cpu_upper": [
+          1031
+        ],
+        "event_identity": 281453026433616,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": 1,
+        "global_group_id": 0,
+        "handle_identity": 281453022937584,
+        "host_monotonic_ns": 311451616518760,
+        "layer_name": "model.layers.40.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1031
+        ],
+        "mapping_epoch": 1,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 50,
+        "stage": "update_operator",
+        "stream_identity": 281454265388960,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1031
+        ],
+        "cpu_upper": [
+          1031
+        ],
+        "event_identity": 281453023677648,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": 1,
+        "global_group_id": 0,
+        "handle_identity": 281453026119216,
+        "host_monotonic_ns": 311451635662920,
+        "layer_name": "model.layers.36.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1031
+        ],
+        "mapping_epoch": 1,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 52,
+        "stage": "update_operator",
+        "stream_identity": 281454265388960,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1031
+        ],
+        "cpu_upper": [
+          1031
+        ],
+        "event_identity": 281453023677520,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": 1,
+        "global_group_id": 0,
+        "handle_identity": 281453026129584,
+        "host_monotonic_ns": 311451654363380,
+        "layer_name": "model.layers.39.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1031
+        ],
+        "mapping_epoch": 1,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 54,
+        "stage": "update_operator",
+        "stream_identity": 281454265388960,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1031
+        ],
+        "cpu_upper": [
+          1031
+        ],
+        "event_identity": 281453026432720,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": 1,
+        "global_group_id": 0,
+        "handle_identity": 281453023457776,
+        "host_monotonic_ns": 311451672791610,
+        "layer_name": "model.layers.37.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1031
+        ],
+        "mapping_epoch": 1,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 56,
+        "stage": "update_operator",
+        "stream_identity": 281454265388960,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1031
+        ],
+        "cpu_upper": [
+          1031
+        ],
+        "event_identity": 281453026431184,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": 2,
+        "global_group_id": 0,
+        "handle_identity": 281453021737200,
+        "host_monotonic_ns": 311527688920010,
+        "layer_name": "model.layers.38.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1031
+        ],
+        "mapping_epoch": 2,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 67,
+        "stage": "update_operator",
+        "stream_identity": 281454265388960,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1031
+        ],
+        "cpu_upper": [
+          1031
+        ],
+        "event_identity": 281453026433616,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": 2,
+        "global_group_id": 0,
+        "handle_identity": 281453022937584,
+        "host_monotonic_ns": 311527712083930,
+        "layer_name": "model.layers.40.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1031
+        ],
+        "mapping_epoch": 2,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 69,
+        "stage": "update_operator",
+        "stream_identity": 281454265388960,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1031
+        ],
+        "cpu_upper": [
+          1031
+        ],
+        "event_identity": 281453023677648,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": 2,
+        "global_group_id": 0,
+        "handle_identity": 281453026119216,
+        "host_monotonic_ns": 311527735045730,
+        "layer_name": "model.layers.36.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1031
+        ],
+        "mapping_epoch": 2,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 71,
+        "stage": "update_operator",
+        "stream_identity": 281454265388960,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1031
+        ],
+        "cpu_upper": [
+          1031
+        ],
+        "event_identity": 281453023677520,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": 2,
+        "global_group_id": 0,
+        "handle_identity": 281453026129584,
+        "host_monotonic_ns": 311527758421390,
+        "layer_name": "model.layers.39.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1031
+        ],
+        "mapping_epoch": 2,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 73,
+        "stage": "update_operator",
+        "stream_identity": 281454265388960,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "actual_memory_read_set": null,
+        "actual_table_address": 20618011333632,
+        "actual_task_table_address": null,
+        "backend_impl": "vllm_ascend.attention.attention_v1.AscendAttentionBackendImpl",
+        "capture_descriptor": "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1",
+        "captured_table_address": 20618011333632,
+        "consumer": "npu_fused_infer_attention_score.out",
+        "cpu_exact": [
+          1031
+        ],
+        "cpu_upper": [
+          1031
+        ],
+        "event_identity": 281453026432720,
+        "evidence_level": "HOST_OPERATOR_BOUNDARY_FACT",
+        "expected_table_address": 20618011333632,
+        "generation_id": 2,
+        "global_group_id": 0,
+        "handle_identity": 281453023457776,
+        "host_monotonic_ns": 311527782154360,
+        "layer_name": "model.layers.37.self_attn.attn",
+        "length_address": null,
+        "length_kind": "host_sequence",
+        "length_values": [
+          1031
+        ],
+        "mapping_epoch": 2,
+        "num_tokens": 7,
+        "provider_identity": 281453022010064,
+        "record_scope": {
+          "process_id": 322131,
+          "provider_identity": 281453022010064,
+          "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba"
+        },
+        "route": "dspark",
+        "sequence": 75,
+        "stage": "update_operator",
+        "stream_identity": 281454265388960,
+        "table_device": "npu:0",
+        "table_dtype": "torch.int32",
+        "table_shape": [
+          1,
+          32
+        ]
+      }
+    ],
+    "process_id": 322131,
+    "provider_identity": 281453022010064,
+    "recorder_id": "84d43670a32b4efb98ae8df0788ff4ba",
+    "recorder_revision": "repair3-passive",
+    "schema": "mrv2-draft-window-graph-characterization-v2"
+  },
+  "speculator": "vllm_ascend.worker.v2.spec_decode.dspark.speculator.AscendDSparkSpeculator",
+  "startup_complete": true,
+  "status": "OK",
+  "target_inventory": {
+    "descriptors": [
+      {
+        "mode": "FULL",
+        "num_reqs": 4,
+        "num_tokens": 32,
+        "uniform_token_count": 8
+      },
+      {
+        "mode": "FULL",
+        "num_reqs": 2,
+        "num_tokens": 16,
+        "uniform_token_count": 8
+      },
+      {
+        "mode": "FULL",
+        "num_reqs": 1,
+        "num_tokens": 8,
+        "uniform_token_count": 8
+      }
+    ],
+    "graphs": [
+      {
+        "mode": "FULL",
+        "num_reqs": 4,
+        "num_tokens": 32,
+        "uniform_token_count": 8
+      },
+      {
+        "mode": "FULL",
+        "num_reqs": 2,
+        "num_tokens": 16,
+        "uniform_token_count": 8
+      },
+      {
+        "mode": "FULL",
+        "num_reqs": 1,
+        "num_tokens": 8,
+        "uniform_token_count": 8
+      }
+    ]
+  },
+  "task_trace": null
+}

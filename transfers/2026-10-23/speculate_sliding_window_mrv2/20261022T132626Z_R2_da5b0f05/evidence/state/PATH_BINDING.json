@@ -1,0 +1,38 @@
+{
+  "schema": "mrv2-live-path-binding-v3",
+  "session_id": "20261022T132626Z_R2",
+  "updated_utc": "2026-10-22T17:27:04.552806+00:00",
+  "code_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend",
+  "vllm_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm",
+  "candidate_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates",
+  "fixed_current_candidate": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C19_native_tensor/vllm-ascend",
+  "run_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw",
+  "state_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/state",
+  "review_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return",
+  "cache_root": "/mnt/wenqing/mrv2_graph_server_dev/20261022T132626Z_R2",
+  "actual_mounts": {
+    "work": {
+      "target": "/mnt/share/z00937950",
+      "source": "172.27.1.1:/Share/z00937950",
+      "fstype": "nfs4",
+      "avail": "3.3T",
+      "size": "180T",
+      "available_bytes": 3581506486272,
+      "device_id": 139
+    },
+    "cache": {
+      "target": "/mnt",
+      "source": "/dev/mapper/openeuler-root[/mnt]",
+      "fstype": "ext4",
+      "avail": "13.4G",
+      "size": "491G",
+      "available_bytes": 14437351424,
+      "device_id": 64768
+    }
+  },
+  "quota": "NOT_AVAILABLE",
+  "selection_reason": "raw在已验证可写NFS、cache在不同实际ext4；换目录不等于释放空间",
+  "budget_policy": "实测C15全部产物5.5GiB；未来新增预算32GiB；大产物64GiB可用余量，非管理员硬线；旧500GiB估算不再适用",
+  "historical_binding": "reports/20261022T132626Z_R2/history/PATH_BINDING_第一轮原件.json",
+  "storage_binding": "state/STORAGE_BINDING.json"
+}

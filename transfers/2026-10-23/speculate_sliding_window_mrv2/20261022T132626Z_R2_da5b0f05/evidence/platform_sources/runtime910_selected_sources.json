@@ -1,0 +1,37 @@
+{
+  "official_origin": "https://gitcode.com/cann/runtime.git",
+  "tag": "v9.1.0",
+  "commit": "0b4af8a31c75a1f1f43638a8f75b9e3c6182e031",
+  "installed_version_info": "Version=9.1.0\nversion_dir=cann\ntimestamp=20260730_231653901\n",
+  "files": [
+    {
+      "path": "src/runtime/core/src/context/context.cc",
+      "returncode": 0,
+      "saved": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime910__src__runtime__core__src__context__context.cc",
+      "bytes": 125289,
+      "sha256": "5564950ae992aff4f9c80d7d509641192ccb7245d83a81cca2ead11d49331988"
+    },
+    {
+      "path": "src/runtime/feature/aclgraph/capture_model.cc",
+      "returncode": 0,
+      "saved": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime910__src__runtime__feature__aclgraph__capture_model.cc",
+      "bytes": 60682,
+      "sha256": "2569ea8a7607f12bbf9c6771dc816c1b95da3a121257644b0da5e6686e4a85c2"
+    },
+    {
+      "path": "src/runtime/feature/model/model.cc",
+      "returncode": 0,
+      "saved": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime910__src__runtime__feature__model__model.cc",
+      "bytes": 94534,
+      "sha256": "0c552a6196809f968c67389b78894d31bd29376b321d6efbae20da8440a434cc"
+    },
+    {
+      "path": "include/external/acl/acl_rt.h",
+      "returncode": 0,
+      "saved": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime910__include__external__acl__acl_rt.h",
+      "bytes": 203764,
+      "sha256": "22c603cb80ab582006d4f26697ceb14c059d7f3613cf13b3c72aeb0d3d36e3c1"
+    }
+  ],
+  "scope": "release-tag source; not full installed binary reproducible-build claim"
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS_DIAGNOSTIC_SERIALIZED",
+  "execution": {
+    "status": "EXECUTION_ASSOCIATED",
+    "numeric_status": "NOT_ASSESSED",
+    "artifact_sha256": "54876059945b8702ee4d5cd7853343367e256c431e022c39d0ce3c376be6753e"
+  },
+  "diagnostic": {
+    "status": "STRUCTURE_VALID_NOT_EXECUTION_ACCEPTED",
+    "normal_overlap": "UNPROVEN",
+    "update_effective_generation": "UNPROVEN",
+    "generations": 21
+  },
+  "requests": {
+    "schema": "repair4-joint-acceptance-v1",
+    "status": "PASS",
+    "acceptance_kind": "NORMAL_REQUESTS",
+    "scope": "external execution/request completion; B0 additionally checks its graph contracts",
+    "errors": [],
+    "numeric_gates": "OPEN"
+  },
+  "association": {
+    "status": "RECORDER_ASSOCIATED",
+    "generations": 21
+  }
+}

@@ -1,0 +1,459 @@
+FFFF...........                                                          [100%]
+=================================== FAILURES ===================================
+_ test_real_c1_exception_unwinding_preserves_backing_and_rejects_next_use[before_replay] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0xfffbf816c1d0>
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-25/test_real_c1_exception_unwindi0')
+point = 'before_replay'
+
+    @pytest.mark.parametrize("point", POINTS)
+    def test_real_c1_exception_unwinding_preserves_backing_and_rejects_next_use(monkeypatch, tmp_path, point):
+        owner, session, manager, descriptors, _ = _lifetime_fixture(monkeypatch)
+        owner.query_cudagraph_manager = manager
+        session.recorder.enabled = False
+        events = []
+    
+        class Event:
+            def record(self, stream):
+                events.append("record")
+    
+            def synchronize(self):
+                events.append("sync")
+    
+            def query(self):
+                pytest.fail("no query allowed")
+    
+        monkeypatch.setattr(torch.npu, "Event", Event if point == "after_completion" else
+                            lambda: pytest.fail("uncertain branch must not drain"))
+        monkeypatch.setattr(torch.npu, "current_stream", lambda: SimpleNamespace(npu_stream=1))
+        path = tmp_path / "unwind.json"
+        probe = ProposalUnwindProbe(owner, path, {}, point)
+        _batch(owner, 1)
+        with pytest.raises(InjectedGraphUnwindError), probe:
+            with owner._draft_window_proposal_scope(owner.input_batch, dummy_run=False, is_profile=False):
+                _publish_in_scope(owner, descriptors[1])
+>               manager.run_fullgraph(descriptors[1])
+
+tests/ut/spec_decode/test_graph_repair8_unwind.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tools/p7x_graph_repair8_unwind.py:94: in run
+    result = original_run(desc)
+vllm_ascend/worker/v2/spec_decode/dflash/aclgraph.py:111: in run_fullgraph
+    prepare_parallel_draft_window_graph_characterization(
+vllm_ascend/worker/v2/spec_decode/draft_window_graph_characterization.py:1032: in prepare_parallel_draft_window_graph_characterization
+    capture_identity = session.resolve_capture_identity(descriptor)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = DraftWindowGraphCharacterizationSession(owner=<vllm_ascend.worker.v2.spec_decode.dflash.speculator.AscendDFlashSpecula...=False, flashcomm=False, prefix_caching=False, tensor_parallel_rank=0), route=<DraftWindowGraphRoute.DFLASH: 'dflash'>)
+descriptor = BatchExecutionDescriptor(cg_mode=<CUDAGraphMode.FULL: 2>, num_tokens=7, num_reqs=1, uniform_token_count=7, max_query_len=None, num_active_loras=0, num_ubatches=1)
+
+    def resolve_capture_identity(
+        self,
+        descriptor: BatchExecutionDescriptor,
+    ) -> DraftWindowGraphCaptureIdentity:
+        manager = self.owner.query_cudagraph_manager
+        descriptor_text = format_dflash_capture_descriptor(
+            descriptor,
+>           max_num_reqs=int(manager.max_num_reqs),
+        )
+E       AttributeError: 'DFlashAclGraphManager' object has no attribute 'max_num_reqs'
+
+vllm_ascend/worker/v2/spec_decode/draft_window_graph_characterization.py:787: AttributeError
+
+During handling of the above exception, another exception occurred:
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0xfffbf816c1d0>
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-25/test_real_c1_exception_unwindi0')
+point = 'before_replay'
+
+    @pytest.mark.parametrize("point", POINTS)
+    def test_real_c1_exception_unwinding_preserves_backing_and_rejects_next_use(monkeypatch, tmp_path, point):
+        owner, session, manager, descriptors, _ = _lifetime_fixture(monkeypatch)
+        owner.query_cudagraph_manager = manager
+        session.recorder.enabled = False
+        events = []
+    
+        class Event:
+            def record(self, stream):
+                events.append("record")
+    
+            def synchronize(self):
+                events.append("sync")
+    
+            def query(self):
+                pytest.fail("no query allowed")
+    
+        monkeypatch.setattr(torch.npu, "Event", Event if point == "after_completion" else
+                            lambda: pytest.fail("uncertain branch must not drain"))
+        monkeypatch.setattr(torch.npu, "current_stream", lambda: SimpleNamespace(npu_stream=1))
+        path = tmp_path / "unwind.json"
+        probe = ProposalUnwindProbe(owner, path, {}, point)
+        _batch(owner, 1)
+        with pytest.raises(InjectedGraphUnwindError), probe:
+>           with owner._draft_window_proposal_scope(owner.input_batch, dummy_run=False, is_profile=False):
+
+tests/ut/spec_decode/test_graph_repair8_unwind.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/local/python3.11.10/lib/python3.11/contextlib.py:158: in __exit__
+    self.gen.throw(typ, value, traceback)
+vllm_ascend/worker/v2/spec_decode/draft_window_eager.py:374: in _draft_window_proposal_scope
+    self._draft_window_runtime_state.quarantine_generation(live_inputs.identity)
+tools/p7x_graph_repair8_unwind.py:121: in quarantine_generation
+    require(probe.record is not None, "quarantine before injected generation")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ok = False, message = 'quarantine before injected generation'
+
+    def require(ok, message):
+        if not ok:
+>           raise ValueError(message)
+E           ValueError: quarantine before injected generation
+
+tools/p7x_graph_repair6_storage.py:29: ValueError
+_ test_real_c1_exception_unwinding_preserves_backing_and_rejects_next_use[after_replay] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0xfffbf7f1c790>
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-25/test_real_c1_exception_unwindi1')
+point = 'after_replay'
+
+    @pytest.mark.parametrize("point", POINTS)
+    def test_real_c1_exception_unwinding_preserves_backing_and_rejects_next_use(monkeypatch, tmp_path, point):
+        owner, session, manager, descriptors, _ = _lifetime_fixture(monkeypatch)
+        owner.query_cudagraph_manager = manager
+        session.recorder.enabled = False
+        events = []
+    
+        class Event:
+            def record(self, stream):
+                events.append("record")
+    
+            def synchronize(self):
+                events.append("sync")
+    
+            def query(self):
+                pytest.fail("no query allowed")
+    
+        monkeypatch.setattr(torch.npu, "Event", Event if point == "after_completion" else
+                            lambda: pytest.fail("uncertain branch must not drain"))
+        monkeypatch.setattr(torch.npu, "current_stream", lambda: SimpleNamespace(npu_stream=1))
+        path = tmp_path / "unwind.json"
+        probe = ProposalUnwindProbe(owner, path, {}, point)
+        _batch(owner, 1)
+        with pytest.raises(InjectedGraphUnwindError), probe:
+            with owner._draft_window_proposal_scope(owner.input_batch, dummy_run=False, is_profile=False):
+                _publish_in_scope(owner, descriptors[1])
+>               manager.run_fullgraph(descriptors[1])
+
+tests/ut/spec_decode/test_graph_repair8_unwind.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tools/p7x_graph_repair8_unwind.py:94: in run
+    result = original_run(desc)
+vllm_ascend/worker/v2/spec_decode/dflash/aclgraph.py:111: in run_fullgraph
+    prepare_parallel_draft_window_graph_characterization(
+vllm_ascend/worker/v2/spec_decode/draft_window_graph_characterization.py:1032: in prepare_parallel_draft_window_graph_characterization
+    capture_identity = session.resolve_capture_identity(descriptor)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = DraftWindowGraphCharacterizationSession(owner=<vllm_ascend.worker.v2.spec_decode.dflash.speculator.AscendDFlashSpecula...=False, flashcomm=False, prefix_caching=False, tensor_parallel_rank=0), route=<DraftWindowGraphRoute.DFLASH: 'dflash'>)
+descriptor = BatchExecutionDescriptor(cg_mode=<CUDAGraphMode.FULL: 2>, num_tokens=7, num_reqs=1, uniform_token_count=7, max_query_len=None, num_active_loras=0, num_ubatches=1)
+
+    def resolve_capture_identity(
+        self,
+        descriptor: BatchExecutionDescriptor,
+    ) -> DraftWindowGraphCaptureIdentity:
+        manager = self.owner.query_cudagraph_manager
+        descriptor_text = format_dflash_capture_descriptor(
+            descriptor,
+>           max_num_reqs=int(manager.max_num_reqs),
+        )
+E       AttributeError: 'DFlashAclGraphManager' object has no attribute 'max_num_reqs'
+
+vllm_ascend/worker/v2/spec_decode/draft_window_graph_characterization.py:787: AttributeError
+
+During handling of the above exception, another exception occurred:
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0xfffbf7f1c790>
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-25/test_real_c1_exception_unwindi1')
+point = 'after_replay'
+
+    @pytest.mark.parametrize("point", POINTS)
+    def test_real_c1_exception_unwinding_preserves_backing_and_rejects_next_use(monkeypatch, tmp_path, point):
+        owner, session, manager, descriptors, _ = _lifetime_fixture(monkeypatch)
+        owner.query_cudagraph_manager = manager
+        session.recorder.enabled = False
+        events = []
+    
+        class Event:
+            def record(self, stream):
+                events.append("record")
+    
+            def synchronize(self):
+                events.append("sync")
+    
+            def query(self):
+                pytest.fail("no query allowed")
+    
+        monkeypatch.setattr(torch.npu, "Event", Event if point == "after_completion" else
+                            lambda: pytest.fail("uncertain branch must not drain"))
+        monkeypatch.setattr(torch.npu, "current_stream", lambda: SimpleNamespace(npu_stream=1))
+        path = tmp_path / "unwind.json"
+        probe = ProposalUnwindProbe(owner, path, {}, point)
+        _batch(owner, 1)
+        with pytest.raises(InjectedGraphUnwindError), probe:
+>           with owner._draft_window_proposal_scope(owner.input_batch, dummy_run=False, is_profile=False):
+
+tests/ut/spec_decode/test_graph_repair8_unwind.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/local/python3.11.10/lib/python3.11/contextlib.py:158: in __exit__
+    self.gen.throw(typ, value, traceback)
+vllm_ascend/worker/v2/spec_decode/draft_window_eager.py:374: in _draft_window_proposal_scope
+    self._draft_window_runtime_state.quarantine_generation(live_inputs.identity)
+tools/p7x_graph_repair8_unwind.py:121: in quarantine_generation
+    require(probe.record is not None, "quarantine before injected generation")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ok = False, message = 'quarantine before injected generation'
+
+    def require(ok, message):
+        if not ok:
+>           raise ValueError(message)
+E           ValueError: quarantine before injected generation
+
+tools/p7x_graph_repair6_storage.py:29: ValueError
+_ test_real_c1_exception_unwinding_preserves_backing_and_rejects_next_use[after_update] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0xfffbf802b950>
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-25/test_real_c1_exception_unwindi2')
+point = 'after_update'
+
+    @pytest.mark.parametrize("point", POINTS)
+    def test_real_c1_exception_unwinding_preserves_backing_and_rejects_next_use(monkeypatch, tmp_path, point):
+        owner, session, manager, descriptors, _ = _lifetime_fixture(monkeypatch)
+        owner.query_cudagraph_manager = manager
+        session.recorder.enabled = False
+        events = []
+    
+        class Event:
+            def record(self, stream):
+                events.append("record")
+    
+            def synchronize(self):
+                events.append("sync")
+    
+            def query(self):
+                pytest.fail("no query allowed")
+    
+        monkeypatch.setattr(torch.npu, "Event", Event if point == "after_completion" else
+                            lambda: pytest.fail("uncertain branch must not drain"))
+        monkeypatch.setattr(torch.npu, "current_stream", lambda: SimpleNamespace(npu_stream=1))
+        path = tmp_path / "unwind.json"
+        probe = ProposalUnwindProbe(owner, path, {}, point)
+        _batch(owner, 1)
+        with pytest.raises(InjectedGraphUnwindError), probe:
+            with owner._draft_window_proposal_scope(owner.input_batch, dummy_run=False, is_profile=False):
+                _publish_in_scope(owner, descriptors[1])
+>               manager.run_fullgraph(descriptors[1])
+
+tests/ut/spec_decode/test_graph_repair8_unwind.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tools/p7x_graph_repair8_unwind.py:94: in run
+    result = original_run(desc)
+vllm_ascend/worker/v2/spec_decode/dflash/aclgraph.py:111: in run_fullgraph
+    prepare_parallel_draft_window_graph_characterization(
+vllm_ascend/worker/v2/spec_decode/draft_window_graph_characterization.py:1032: in prepare_parallel_draft_window_graph_characterization
+    capture_identity = session.resolve_capture_identity(descriptor)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = DraftWindowGraphCharacterizationSession(owner=<vllm_ascend.worker.v2.spec_decode.dflash.speculator.AscendDFlashSpecula...=False, flashcomm=False, prefix_caching=False, tensor_parallel_rank=0), route=<DraftWindowGraphRoute.DFLASH: 'dflash'>)
+descriptor = BatchExecutionDescriptor(cg_mode=<CUDAGraphMode.FULL: 2>, num_tokens=7, num_reqs=1, uniform_token_count=7, max_query_len=None, num_active_loras=0, num_ubatches=1)
+
+    def resolve_capture_identity(
+        self,
+        descriptor: BatchExecutionDescriptor,
+    ) -> DraftWindowGraphCaptureIdentity:
+        manager = self.owner.query_cudagraph_manager
+        descriptor_text = format_dflash_capture_descriptor(
+            descriptor,
+>           max_num_reqs=int(manager.max_num_reqs),
+        )
+E       AttributeError: 'DFlashAclGraphManager' object has no attribute 'max_num_reqs'
+
+vllm_ascend/worker/v2/spec_decode/draft_window_graph_characterization.py:787: AttributeError
+
+During handling of the above exception, another exception occurred:
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0xfffbf802b950>
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-25/test_real_c1_exception_unwindi2')
+point = 'after_update'
+
+    @pytest.mark.parametrize("point", POINTS)
+    def test_real_c1_exception_unwinding_preserves_backing_and_rejects_next_use(monkeypatch, tmp_path, point):
+        owner, session, manager, descriptors, _ = _lifetime_fixture(monkeypatch)
+        owner.query_cudagraph_manager = manager
+        session.recorder.enabled = False
+        events = []
+    
+        class Event:
+            def record(self, stream):
+                events.append("record")
+    
+            def synchronize(self):
+                events.append("sync")
+    
+            def query(self):
+                pytest.fail("no query allowed")
+    
+        monkeypatch.setattr(torch.npu, "Event", Event if point == "after_completion" else
+                            lambda: pytest.fail("uncertain branch must not drain"))
+        monkeypatch.setattr(torch.npu, "current_stream", lambda: SimpleNamespace(npu_stream=1))
+        path = tmp_path / "unwind.json"
+        probe = ProposalUnwindProbe(owner, path, {}, point)
+        _batch(owner, 1)
+        with pytest.raises(InjectedGraphUnwindError), probe:
+>           with owner._draft_window_proposal_scope(owner.input_batch, dummy_run=False, is_profile=False):
+
+tests/ut/spec_decode/test_graph_repair8_unwind.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/local/python3.11.10/lib/python3.11/contextlib.py:158: in __exit__
+    self.gen.throw(typ, value, traceback)
+vllm_ascend/worker/v2/spec_decode/draft_window_eager.py:374: in _draft_window_proposal_scope
+    self._draft_window_runtime_state.quarantine_generation(live_inputs.identity)
+tools/p7x_graph_repair8_unwind.py:121: in quarantine_generation
+    require(probe.record is not None, "quarantine before injected generation")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ok = False, message = 'quarantine before injected generation'
+
+    def require(ok, message):
+        if not ok:
+>           raise ValueError(message)
+E           ValueError: quarantine before injected generation
+
+tools/p7x_graph_repair6_storage.py:29: ValueError
+_ test_real_c1_exception_unwinding_preserves_backing_and_rejects_next_use[after_completion] _
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0xfffbf8001890>
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-25/test_real_c1_exception_unwindi3')
+point = 'after_completion'
+
+    @pytest.mark.parametrize("point", POINTS)
+    def test_real_c1_exception_unwinding_preserves_backing_and_rejects_next_use(monkeypatch, tmp_path, point):
+        owner, session, manager, descriptors, _ = _lifetime_fixture(monkeypatch)
+        owner.query_cudagraph_manager = manager
+        session.recorder.enabled = False
+        events = []
+    
+        class Event:
+            def record(self, stream):
+                events.append("record")
+    
+            def synchronize(self):
+                events.append("sync")
+    
+            def query(self):
+                pytest.fail("no query allowed")
+    
+        monkeypatch.setattr(torch.npu, "Event", Event if point == "after_completion" else
+                            lambda: pytest.fail("uncertain branch must not drain"))
+        monkeypatch.setattr(torch.npu, "current_stream", lambda: SimpleNamespace(npu_stream=1))
+        path = tmp_path / "unwind.json"
+        probe = ProposalUnwindProbe(owner, path, {}, point)
+        _batch(owner, 1)
+        with pytest.raises(InjectedGraphUnwindError), probe:
+            with owner._draft_window_proposal_scope(owner.input_batch, dummy_run=False, is_profile=False):
+                _publish_in_scope(owner, descriptors[1])
+>               manager.run_fullgraph(descriptors[1])
+
+tests/ut/spec_decode/test_graph_repair8_unwind.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tools/p7x_graph_repair8_unwind.py:94: in run
+    result = original_run(desc)
+vllm_ascend/worker/v2/spec_decode/dflash/aclgraph.py:111: in run_fullgraph
+    prepare_parallel_draft_window_graph_characterization(
+vllm_ascend/worker/v2/spec_decode/draft_window_graph_characterization.py:1032: in prepare_parallel_draft_window_graph_characterization
+    capture_identity = session.resolve_capture_identity(descriptor)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = DraftWindowGraphCharacterizationSession(owner=<vllm_ascend.worker.v2.spec_decode.dflash.speculator.AscendDFlashSpecula...=False, flashcomm=False, prefix_caching=False, tensor_parallel_rank=0), route=<DraftWindowGraphRoute.DFLASH: 'dflash'>)
+descriptor = BatchExecutionDescriptor(cg_mode=<CUDAGraphMode.FULL: 2>, num_tokens=7, num_reqs=1, uniform_token_count=7, max_query_len=None, num_active_loras=0, num_ubatches=1)
+
+    def resolve_capture_identity(
+        self,
+        descriptor: BatchExecutionDescriptor,
+    ) -> DraftWindowGraphCaptureIdentity:
+        manager = self.owner.query_cudagraph_manager
+        descriptor_text = format_dflash_capture_descriptor(
+            descriptor,
+>           max_num_reqs=int(manager.max_num_reqs),
+        )
+E       AttributeError: 'DFlashAclGraphManager' object has no attribute 'max_num_reqs'
+
+vllm_ascend/worker/v2/spec_decode/draft_window_graph_characterization.py:787: AttributeError
+
+During handling of the above exception, another exception occurred:
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0xfffbf8001890>
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-25/test_real_c1_exception_unwindi3')
+point = 'after_completion'
+
+    @pytest.mark.parametrize("point", POINTS)
+    def test_real_c1_exception_unwinding_preserves_backing_and_rejects_next_use(monkeypatch, tmp_path, point):
+        owner, session, manager, descriptors, _ = _lifetime_fixture(monkeypatch)
+        owner.query_cudagraph_manager = manager
+        session.recorder.enabled = False
+        events = []
+    
+        class Event:
+            def record(self, stream):
+                events.append("record")
+    
+            def synchronize(self):
+                events.append("sync")
+    
+            def query(self):
+                pytest.fail("no query allowed")
+    
+        monkeypatch.setattr(torch.npu, "Event", Event if point == "after_completion" else
+                            lambda: pytest.fail("uncertain branch must not drain"))
+        monkeypatch.setattr(torch.npu, "current_stream", lambda: SimpleNamespace(npu_stream=1))
+        path = tmp_path / "unwind.json"
+        probe = ProposalUnwindProbe(owner, path, {}, point)
+        _batch(owner, 1)
+        with pytest.raises(InjectedGraphUnwindError), probe:
+>           with owner._draft_window_proposal_scope(owner.input_batch, dummy_run=False, is_profile=False):
+
+tests/ut/spec_decode/test_graph_repair8_unwind.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/local/python3.11.10/lib/python3.11/contextlib.py:158: in __exit__
+    self.gen.throw(typ, value, traceback)
+vllm_ascend/worker/v2/spec_decode/draft_window_eager.py:374: in _draft_window_proposal_scope
+    self._draft_window_runtime_state.quarantine_generation(live_inputs.identity)
+tools/p7x_graph_repair8_unwind.py:121: in quarantine_generation
+    require(probe.record is not None, "quarantine before injected generation")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ok = False, message = 'quarantine before injected generation'
+
+    def require(ok, message):
+        if not ok:
+>           raise ValueError(message)
+E           ValueError: quarantine before injected generation
+
+tools/p7x_graph_repair6_storage.py:29: ValueError
+=============================== warnings summary ===============================
+../../candidates/C2_303ef7fe/vllm/vllm/__init__.py:7
+  /mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+  No module named 'vllm._version'
+    from .version import __version__, __version_tuple__  # isort:skip
+
+../../../../../../../../../usr/local/python3.11.10/lib/python3.11/site-packages/torch/jit/_script.py:362: 14 warnings
+  /usr/local/python3.11.10/lib/python3.11/site-packages/torch/jit/_script.py:362: DeprecationWarning: `torch.jit.script_method` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/ut/spec_decode/test_graph_repair8_unwind.py::test_real_c1_exception_unwinding_preserves_backing_and_rejects_next_use[before_replay]
+FAILED tests/ut/spec_decode/test_graph_repair8_unwind.py::test_real_c1_exception_unwinding_preserves_backing_and_rejects_next_use[after_replay]
+FAILED tests/ut/spec_decode/test_graph_repair8_unwind.py::test_real_c1_exception_unwinding_preserves_backing_and_rejects_next_use[after_update]
+FAILED tests/ut/spec_decode/test_graph_repair8_unwind.py::test_real_c1_exception_unwinding_preserves_backing_and_rejects_next_use[after_completion]
+4 failed, 11 passed, 15 warnings in 1.32s

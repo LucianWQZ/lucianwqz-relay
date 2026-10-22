@@ -1,0 +1,58 @@
+[
+  {
+    "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/admission_c6_attempt04/A0/attempt01/execution.json",
+    "sha256": "cdded3e9553799a88a75a3ee00889e1c17db4f4736a886a336c41972f5aa8408",
+    "runner": {
+      "argv": [
+        "/usr/local/python3.11.10/bin/python",
+        "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C6_1c920c36/vllm-ascend/tools/p7x_graph_repair6_runner.py",
+        "--plan",
+        "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/admission_c6_attempt04/A0/attempt01/admitted-plan.json",
+        "--case-id",
+        "A0",
+        "--output",
+        "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C6_campaign_04"
+      ],
+      "pid": 100175,
+      "start_ns": 1792654499024078050,
+      "end_ns": 1792654503362803550,
+      "returncode": 1,
+      "stdout": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/admission_c6_attempt04/A0/attempt01/runner.stdout.log",
+      "stderr": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/admission_c6_attempt04/A0/attempt01/runner.stderr.log",
+      "timeout_seconds": 2100,
+      "elapsed_seconds": 2.72732969,
+      "runner_result": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C6_campaign_04/A0/runner-result.json"
+    },
+    "stderr": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/admission_c6_attempt04/A0/attempt01/runner.stderr.log",
+    "stderr_sha256": "dd1700389a4a1c3bff1c0afb94bb93921210222470d6a6ce9138037a63c8da1a",
+    "stderr_excerpt": "Traceback (most recent call last):\n  File \"/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C6_1c920c36/vllm-ascend/tools/p7x_graph_repair6_runner.py\", line 207, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C6_1c920c36/vllm-ascend/tools/p7x_graph_repair6_runner.py\", line 200, in main\n    r = run_case(json.loads(a.plan.read_text()), a.case_id, a.output)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C6_1c920c36/vllm-ascend/tools/p7x_graph_repair6_runner.py\", line 91, in run_case\n    raise ValueError(\"dependency not accepted: \" + dependency)\nValueError: dependency not accepted: CONFIG\n"
+  },
+  {
+    "path": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/admission_c6_attempt05/A0/attempt01/execution.json",
+    "sha256": "6f762d0c53ebe7a5f0540bcead9e15bc27f138112facf22635c2fa251459adfb",
+    "runner": {
+      "argv": [
+        "/usr/local/python3.11.10/bin/python",
+        "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C6_1c920c36/vllm-ascend/tools/p7x_graph_repair6_runner.py",
+        "--plan",
+        "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/admission_c6_attempt05/A0/attempt01/admitted-plan.json",
+        "--case-id",
+        "A0",
+        "--output",
+        "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C6_campaign_04"
+      ],
+      "pid": 103617,
+      "start_ns": 1792654690260559550,
+      "end_ns": 1792654924401001000,
+      "returncode": 0,
+      "stdout": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/admission_c6_attempt05/A0/attempt01/runner.stdout.log",
+      "stderr": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/admission_c6_attempt05/A0/attempt01/runner.stderr.log",
+      "timeout_seconds": 2100,
+      "elapsed_seconds": 232.21773159,
+      "runner_result": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/C6_campaign_04/A0/runner-result.json"
+    },
+    "stderr": "/mnt/wenqing/mrv2_graph_server_dev/20261022T0640Z_C2_recovery/admission_c6_attempt05/A0/attempt01/runner.stderr.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_excerpt": ""
+  }
+]

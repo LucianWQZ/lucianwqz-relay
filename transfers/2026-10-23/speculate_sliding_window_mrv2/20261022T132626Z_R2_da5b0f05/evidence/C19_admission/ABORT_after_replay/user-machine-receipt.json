@@ -1,0 +1,62 @@
+{
+  "schema": "repair7-user-authorized-device-v1",
+  "run_id": "r2-c19-phy0-20261022T132626Z",
+  "source_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+  "source_tree": "af4519a635d6ccd70646f77195fde18368bdf22b",
+  "case_id": "ABORT_after_replay",
+  "user_authorization": {
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/state/ROUND2_USER_AUTHORIZATION_RECORD.json",
+    "sha256": "f3da19555d285305f16db93ee02ce10ad45f24d7b6b8dc8c1db277340522e47a"
+  },
+  "issued_at": 1792691320.569848,
+  "expires_at": 1792693120.569848,
+  "host_phy_id": 0,
+  "tp": 1,
+  "allocated_nodes": {
+    "/dev/davinci0": {
+      "major": 234,
+      "minor": 0
+    }
+  },
+  "namespace": "mnt:[4026565820]",
+  "boot_id": "f464cb09-421b-4de5-8f63-3406a46d262d",
+  "visibility": {
+    "ASCEND_RT_VISIBLE_DEVICES": "0",
+    "ASCEND_VISIBLE_DEVICES": null
+  },
+  "mapping_evidence": [
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/ABORT_after_replay/attempt01/inspect.json",
+      "sha256": "bace97a93baaf80f5144c0bb9331ccec47dece89f3ec36c834b576a012b874c1"
+    }
+  ],
+  "resource_evidence": [
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/ABORT_after_replay/attempt01/npu-smi-info.txt",
+      "sha256": "5ed5db97db3c056699375f6fd515e200b824717b97fe4240571a44fa5b8d93a1"
+    }
+  ],
+  "resource_observed_at": 1792691320.5678425,
+  "probe": {
+    "host_pid": 3928612,
+    "container_pid": 314276,
+    "command": [
+      "/usr/local/python3.11.10/bin/python",
+      "-c",
+      "import runpy,sys,time,json,torch;sys.argv=['/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C19_native_tensor/vllm-ascend/tools/p7x_graph_repair7_device.py', 'probe', '--receipt', '/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/probe_phy0_04/receipt.json', '--run-id', 'r2-c19-phy0-20261022T132626Z', '--output', '/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/probe_phy0_04/committed-probe.json'];runpy.run_path(sys.argv[0],run_name='__main__');d=json.load(open('/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/probe_phy0_04/committed-probe.json'));print(json.dumps(dict(value=d['value'],logical_device=torch.npu.current_device())),flush=True);time.sleep(10)"
+    ],
+    "start_ns": 1792687888148069840,
+    "end_ns": 1792687909835519310,
+    "host_phy_id": 0,
+    "status": "EXITED",
+    "returncode": 0,
+    "host_process_evidence": {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/probe_phy0_04/probe_observed_npu_smi.txt",
+      "sha256": "123aff98c381307237689b827bd8d3d77b704f08c15a056dadf9d8439cce269c"
+    },
+    "pid_namespace_evidence": {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/probe_phy0_04/probe_result.json",
+      "sha256": "eef17e687385ad5edda908a0076a5cc9c25ec8bfd23f0f42bdbb32dc4eb81bf5"
+    }
+  }
+}

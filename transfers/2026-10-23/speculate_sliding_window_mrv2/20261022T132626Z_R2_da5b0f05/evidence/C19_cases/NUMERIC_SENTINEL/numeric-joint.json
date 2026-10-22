@@ -1,0 +1,80 @@
+{
+  "status": "PASS_NUMERIC_SENTINEL_ONLY",
+  "normal_reuse": "UNPROVEN",
+  "effective_generation": "UNPROVEN",
+  "execution": {
+    "status": "EXECUTION_ASSOCIATED",
+    "numeric_status": "NOT_ASSESSED",
+    "artifact_sha256": "a5f543e2552c83068e601d898353c6e8844139ad9caba0c28eb3512ef82b48a4"
+  },
+  "samples": [
+    {
+      "generation": 0,
+      "epoch": 0,
+      "scenario": "A",
+      "status": "PASS",
+      "metrics": {
+        "shape": [
+          7,
+          4096
+        ],
+        "dtype": "torch.bfloat16",
+        "finite": true,
+        "max_abs": 0.0,
+        "max_rel": 0.0,
+        "atol": 0.0,
+        "rtol": 0.0
+      },
+      "kv_equal": true,
+      "current_match": true
+    },
+    {
+      "generation": 1,
+      "epoch": 1,
+      "scenario": "B",
+      "status": "PASS",
+      "metrics": {
+        "shape": [
+          7,
+          4096
+        ],
+        "dtype": "torch.bfloat16",
+        "finite": true,
+        "max_abs": 0.0,
+        "max_rel": 0.0,
+        "atol": 0.0,
+        "rtol": 0.0
+      },
+      "kv_equal": true,
+      "current_match": true,
+      "previous_match": false,
+      "references_distinguishable": true
+    },
+    {
+      "generation": 2,
+      "epoch": 2,
+      "scenario": "A_prime",
+      "status": "PASS",
+      "metrics": {
+        "shape": [
+          7,
+          4096
+        ],
+        "dtype": "torch.bfloat16",
+        "finite": true,
+        "max_abs": 0.0,
+        "max_rel": 0.0,
+        "atol": 0.0,
+        "rtol": 0.0
+      },
+      "kv_equal": true,
+      "current_match": true,
+      "previous_match": false,
+      "references_distinguishable": true
+    }
+  ],
+  "evidence_errors": [],
+  "aba": "PASS_SCOPED",
+  "task_update_effective_generation": "UNPROVEN",
+  "retained_state": "current KV + A/previous output summaries only"
+}

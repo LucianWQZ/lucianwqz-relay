@@ -1,0 +1,39 @@
+{
+  "observed_utc": "2026-10-22T16:50:11.297692+00:00",
+  "filesystems": [
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt",
+      "device": 139,
+      "available_bytes": 4021937242112,
+      "total_bytes": 197912092999680,
+      "inode_available": 772981063309
+    },
+    {
+      "path": "/mnt/wenqing",
+      "device": 64768,
+      "available_bytes": 14765740032,
+      "total_bytes": 527194734592,
+      "inode_available": 31463023
+    },
+    {
+      "path": "/dev/shm",
+      "device": 1048599,
+      "available_bytes": 1622093791232,
+      "total_bytes": 1622093791232,
+      "inode_available": 396018977
+    }
+  ],
+  "measured_C15_all_cases_allocated_bytes_approx": 5905580032,
+  "measured_C17_partial_allocated_bytes_approx": 597688320,
+  "quota": "NOT_AVAILABLE_NOT_UNLIMITED",
+  "planned_increment_ceiling_bytes": 34359738368,
+  "large_artifact_pause_policy": {
+    "minimum_available_bytes": 68719476736,
+    "reason": "task-specific conservative headroom relative to real C15 full campaign5.5GiB and <=32GiB future allowance; not administrator mandate or500GiB threshold",
+    "action": "pause large Target/trace branch only; keep small safe checks"
+  },
+  "shared_growth": "NFS available decreased from approximately5TiB to3.7TiB while task C15 output5.5GiB; shared activity dominates, snapshots are not a stable growth-rate estimate",
+  "ram_available": "2.6TiB from current free -h",
+  "shm_available": "1.5TiB separate from disk/HBM",
+  "local_cache_available": "14GiB; no raw tensor/trace target there"
+}

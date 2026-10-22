@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/Ascend/pytorch/5dd8ef3f9b375b5ae4a83538d5785754148c3302/torch_npu/csrc/core/npu/interface/AclInterface.cpp",
+    "revision": "5dd8ef3f9b375b5ae4a83538d5785754148c3302",
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/torch_npu__csrc__core__npu__interface__AclInterface.cpp",
+    "bytes": 81179,
+    "sha256": "eb159364fa8e7119e8f982aaa14386f6c5a18946870aa5043a850d395468bcab"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Ascend/pytorch/5dd8ef3f9b375b5ae4a83538d5785754148c3302/torch_npu/csrc/core/npu/NPUStream.cpp",
+    "revision": "5dd8ef3f9b375b5ae4a83538d5785754148c3302",
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/torch_npu__csrc__core__npu__NPUStream.cpp",
+    "bytes": 35455,
+    "sha256": "cdb8042a4cf8e680d2f0d0ed03944a63401d46a6bbaf6696c7f262aee03c4df1"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Ascend/pytorch/5dd8ef3f9b375b5ae4a83538d5785754148c3302/.gitmodules",
+    "revision": "5dd8ef3f9b375b5ae4a83538d5785754148c3302",
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/.gitmodules",
+    "bytes": 1373,
+    "sha256": "71b08423eb601710351924d732cd5130b23cf8721a65c4ad4f66385fb13f8cc2"
+  }
+]

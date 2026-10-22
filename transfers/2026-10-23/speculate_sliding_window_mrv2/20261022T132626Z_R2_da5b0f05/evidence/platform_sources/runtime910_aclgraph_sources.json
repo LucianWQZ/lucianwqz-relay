@@ -1,0 +1,34 @@
+{
+  "tag": "v9.1.0",
+  "commit": "0b4af8a31c75a1f1f43638a8f75b9e3c6182e031",
+  "files": [
+    {
+      "path": "src/runtime/feature/aclgraph/context_aclgraph.cc",
+      "returncode": 0,
+      "saved": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime910__src__runtime__feature__aclgraph__context_aclgraph.cc",
+      "bytes": 41685,
+      "sha256": "d5d67ed74361724ee16e088a19e1d70bd2c6f3803aaedb38ae637705a502cbc1"
+    },
+    {
+      "path": "src/runtime/feature/aclgraph/stream_capture.cc",
+      "returncode": 0,
+      "saved": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime910__src__runtime__feature__aclgraph__stream_capture.cc",
+      "bytes": 7531,
+      "sha256": "42d6586948b302095c2a82b1888b3399de4ccb4401f6b944486d194bca05f7e3"
+    },
+    {
+      "path": "src/runtime/feature/aclgraph/capture_model_utils.cc",
+      "returncode": 0,
+      "saved": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime910__src__runtime__feature__aclgraph__capture_model_utils.cc",
+      "bytes": 16267,
+      "sha256": "0a8862597eb1871757b908afefeb96286c81f93c6a53f4a090778f37f60957b5"
+    },
+    {
+      "path": "src/runtime/feature/aclgraph/model_aclgraph.cc",
+      "returncode": 0,
+      "saved": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/runtime910__src__runtime__feature__aclgraph__model_aclgraph.cc",
+      "bytes": 3045,
+      "sha256": "077d6a8f6197a8366ff273e6f1d330b3b843a267fd1c3e32772ef8e4a2fb0c48"
+    }
+  ]
+}

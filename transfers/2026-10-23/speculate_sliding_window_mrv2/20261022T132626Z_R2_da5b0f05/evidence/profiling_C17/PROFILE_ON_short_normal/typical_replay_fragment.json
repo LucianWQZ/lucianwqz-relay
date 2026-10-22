@@ -1,0 +1,800 @@
+{
+  "flow_counts": {
+    "MATCHED": 20334,
+    "UNMATCHED": 1,
+    "AMBIGUOUS": 1
+  },
+  "coverage": {
+    "total_replays": 21,
+    "direct_matched": 0
+  },
+  "replays": [
+    {
+      "event_index": 4909,
+      "manager_indices": [
+        4931
+      ],
+      "direct_flow_indices": [],
+      "replay_plus_update_flow_indices": [
+        551,
+        552,
+        553,
+        554,
+        555,
+        556,
+        557,
+        558,
+        559,
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569,
+        14356,
+        14357,
+        14358,
+        14359,
+        14360,
+        14361,
+        14362,
+        14363,
+        14364,
+        14365,
+        14366,
+        14367,
+        14368
+      ],
+      "status": "UNRESOLVED_ASSOCIATION",
+      "update_vs_replay_kernel_split": "UNRESOLVED"
+    },
+    {
+      "event_index": 6002,
+      "manager_indices": [
+        6024
+      ],
+      "direct_flow_indices": [],
+      "replay_plus_update_flow_indices": [
+        739,
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        750,
+        751,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        14504,
+        14505,
+        14506,
+        14507,
+        14508,
+        14509,
+        14510,
+        14511,
+        14512,
+        14513,
+        14514,
+        14515,
+        14516
+      ],
+      "status": "UNRESOLVED_ASSOCIATION",
+      "update_vs_replay_kernel_split": "UNRESOLVED"
+    }
+  ],
+  "full_table_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/profile_analysis_C17/PROFILE_ON_short_normal/flow-analysis-module.json",
+  "source_trace": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C17_prepare_02/PROFILE_ON_short_normal/trace/node-39-101_310389_20261023004828312_ascend_pt/ASCEND_PROFILER_OUTPUT/trace_view.json",
+  "scope": "actual flow ids and containment; no adjacency/layer/physical-read inference",
+  "referenced_flows": [
+    {
+      "index": 551,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6390",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          58944,
+          73628
+        ],
+        "source_intervals": [
+          73627,
+          4819,
+          4820,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_intervals": [
+          58943
+        ],
+        "host_ranges": [
+          4931,
+          4943,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    },
+    {
+      "index": 552,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6391",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          58946,
+          73630
+        ],
+        "source_intervals": [
+          73629,
+          4821,
+          4822,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_intervals": [
+          58945
+        ],
+        "host_ranges": [
+          4931,
+          4943,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    },
+    {
+      "index": 553,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6392",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          58948,
+          73632
+        ],
+        "source_intervals": [
+          73631,
+          4823,
+          4824,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_intervals": [
+          58947
+        ],
+        "host_ranges": [
+          4931,
+          4943,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    },
+    {
+      "index": 554,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6393",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          58950,
+          73634
+        ],
+        "source_intervals": [
+          73633,
+          4878,
+          4879,
+          4880,
+          4881,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_intervals": [
+          58949
+        ],
+        "host_ranges": [
+          4931,
+          4943,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    },
+    {
+      "index": 555,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6394",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          58952,
+          73636
+        ],
+        "source_intervals": [
+          73635,
+          4882,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_intervals": [
+          58951
+        ],
+        "host_ranges": [
+          4931,
+          4943,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    },
+    {
+      "index": 556,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6395",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          58954,
+          73638
+        ],
+        "source_intervals": [
+          73637,
+          4896,
+          4897,
+          4898,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_intervals": [
+          58953
+        ],
+        "host_ranges": [
+          4931,
+          4943,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    },
+    {
+      "index": 557,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6396",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          58956,
+          73640
+        ],
+        "source_intervals": [
+          73639,
+          4904,
+          4905,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_intervals": [
+          58955
+        ],
+        "host_ranges": [
+          4931,
+          4943,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    },
+    {
+      "index": 558,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6397",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          58958,
+          73642
+        ],
+        "source_intervals": [
+          73641,
+          4906,
+          4907,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_intervals": [
+          58957
+        ],
+        "host_ranges": [
+          4931,
+          4943,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    },
+    {
+      "index": 559,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6398",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          58960,
+          73644
+        ],
+        "source_intervals": [
+          73643,
+          4908,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_intervals": [
+          58959
+        ],
+        "host_ranges": [
+          4931,
+          4943,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    },
+    {
+      "index": 560,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6399",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          58962,
+          73646
+        ],
+        "source_intervals": [
+          73645,
+          4915,
+          4916,
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_intervals": [
+          58961
+        ],
+        "host_ranges": [
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    },
+    {
+      "index": 561,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6400",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          58964,
+          73648
+        ],
+        "source_intervals": [
+          73647,
+          4917,
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_intervals": [
+          58963
+        ],
+        "host_ranges": [
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    },
+    {
+      "index": 562,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6401",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          58966,
+          73650
+        ],
+        "source_intervals": [
+          73649,
+          4918,
+          4919,
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_intervals": [
+          58965
+        ],
+        "host_ranges": [
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    },
+    {
+      "index": 563,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6402",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          58968,
+          73652
+        ],
+        "source_intervals": [
+          73651,
+          4920,
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_intervals": [
+          58967
+        ],
+        "host_ranges": [
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    },
+    {
+      "index": 564,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6403",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          58970,
+          73654
+        ],
+        "source_intervals": [
+          73653,
+          4921,
+          4922,
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_intervals": [
+          58969
+        ],
+        "host_ranges": [
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    },
+    {
+      "index": 565,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6404",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          58972,
+          73656
+        ],
+        "source_intervals": [
+          73655,
+          4923,
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_intervals": [
+          58971
+        ],
+        "host_ranges": [
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    },
+    {
+      "index": 566,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6405",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          58974,
+          73658
+        ],
+        "source_intervals": [
+          73657,
+          4924,
+          4925,
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_intervals": [
+          58973
+        ],
+        "host_ranges": [
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    },
+    {
+      "index": 567,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6406",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          58976,
+          73660
+        ],
+        "source_intervals": [
+          73659,
+          4926,
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_intervals": [
+          58975
+        ],
+        "host_ranges": [
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    },
+    {
+      "index": 568,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6407",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          58978,
+          73662
+        ],
+        "source_intervals": [
+          73661,
+          4927,
+          4928,
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_intervals": [
+          58977
+        ],
+        "host_ranges": [
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    },
+    {
+      "index": 569,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6408",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          58980,
+          73664
+        ],
+        "source_intervals": [
+          73663,
+          4929,
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_intervals": [
+          58979
+        ],
+        "host_ranges": [
+          4930,
+          4931,
+          4943,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    },
+    {
+      "index": 739,
+      "flow": {
+        "key": [
+          "async_task_queue",
+          "enqueue_to_dequeue",
+          "6578",
+          null,
+          null
+        ],
+        "status": "MATCHED",
+        "event_indices": [
+          59320,
+          74004
+        ],
+        "source_intervals": [
+          74003,
+          5912,
+          5913,
+          6024,
+          6036,
+          11518
+        ],
+        "destination_intervals": [
+          59319
+        ],
+        "host_ranges": [
+          6024,
+          6036,
+          11518
+        ],
+        "destination_ranges": []
+      }
+    }
+  ]
+}

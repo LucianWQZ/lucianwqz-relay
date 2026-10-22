@@ -1,0 +1,15 @@
+{
+  "identity": {
+    "attempt_id": "1",
+    "case_id": "LIFE_TASK_BIND",
+    "driver_mode": "B",
+    "engine_id": 281455378802768,
+    "process_id": 301679,
+    "run_id": "r2-c17-phy0-20261022T132626Z",
+    "source_sha": "057b8e0300967e68e3f2a78c5910c8877521674e",
+    "source_tree": "90584c0d92d99c447534d081e16fc05e76e2647e",
+    "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+  },
+  "phase": "AFTER_GENERATE",
+  "request": "smoke-4"
+}

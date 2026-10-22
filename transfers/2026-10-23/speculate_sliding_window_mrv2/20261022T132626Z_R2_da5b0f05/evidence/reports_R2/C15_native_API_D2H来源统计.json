@@ -1,0 +1,24 @@
+{
+  "scope": "Source-explained argument-block D2H counts; not profiler measured durations or physical KV read-set",
+  "runtime_source": "platform_sources/runtime910__src__runtime__core__src__stream__stream.cc:Stream::SetTraceKernelArgs",
+  "files": [
+    {
+      "file": "runs/20261022T132626Z_R2/raw/C15_prepare_01/LIFE_TASK_DUMP/native-graph-json/draft-1-7.json",
+      "kernel_argument_blocks": 93,
+      "argument_bytes": 31336
+    },
+    {
+      "file": "runs/20261022T132626Z_R2/raw/C15_prepare_01/LIFE_TASK_DUMP/native-graph-json/draft-2-14.json",
+      "kernel_argument_blocks": 107,
+      "argument_bytes": 37296
+    },
+    {
+      "file": "runs/20261022T132626Z_R2/raw/C15_prepare_01/LIFE_TASK_DUMP/native-graph-json/draft-4-28.json",
+      "kernel_argument_blocks": 107,
+      "argument_bytes": 37456
+    }
+  ],
+  "total_blocks": 307,
+  "total_bytes": 106088,
+  "native_ts_dur": "SYNTHETIC_LAYOUT_CONSTANTS_FROM_SOURCE"
+}

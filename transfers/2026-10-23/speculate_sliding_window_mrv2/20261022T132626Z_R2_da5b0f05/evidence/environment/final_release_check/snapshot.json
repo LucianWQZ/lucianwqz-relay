@@ -1,0 +1,11 @@
+{
+  "observed_utc": "2026-10-22T18:00:40.421613+00:00",
+  "hostname": "node-39-101",
+  "boot_id": "f464cb09-421b-4de5-8f63-3406a46d262d",
+  "known_task_pid_count": 164,
+  "task_processes": [],
+  "reused_or_unrelated_pid_count": 0,
+  "npu_smi_rc": 0,
+  "npu0_no_running_process_statement": true,
+  "scope": "process/management release observation only; not a device completion or physical-read proof; no process killed or reset"
+}

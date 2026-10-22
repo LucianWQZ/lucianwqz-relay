@@ -1,0 +1,2415 @@
+{
+  "producer_sha": "057b8e0300967e68e3f2a78c5910c8877521674e",
+  "cases": {
+    "PROFILE_ON_short_control": {
+      "case_id": "PROFILE_ON_short_control",
+      "evidence_relative_path": "C17_prepare_02/PROFILE_ON_short_control",
+      "source": {
+        "attempt_id": "1",
+        "case_id": "PROFILE_ON_short_control",
+        "driver_mode": "B-observer-off",
+        "engine_id": 281456011971344,
+        "process_id": 308707,
+        "run_id": "r2-c17-phy0-20261022T132626Z",
+        "source_sha": "057b8e0300967e68e3f2a78c5910c8877521674e",
+        "source_tree": "90584c0d92d99c447534d081e16fc05e76e2647e",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "request_sha256": "f4239cd07ac597c32ec29d6209fcbb3926b6649dbbb5b3e249c7e4fea3ce6daa",
+      "capture_profile": "base",
+      "profiler_enabled": false,
+      "profiler_scope": "NORMAL_OBSERVER_OFF",
+      "configuration": {
+        "record_shapes": false,
+        "with_stack": false,
+        "profile_memory": false
+      },
+      "observer_enabled": false,
+      "diagnostic_artifacts": {
+        "profile.json": {
+          "bytes": 101906,
+          "sha256": "a313b34d0de8f13dd6c842377d92b17b58aac0f4d6da1b3dde94314649ad1ed9"
+        }
+      },
+      "initialization_seconds": 31.980400700005703,
+      "active_groups": 3,
+      "completed_requests": 7,
+      "generated_tokens": 112,
+      "prompt_token_lengths": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "active_group_elapsed_ms": 669.66383,
+      "per_generated_token_ms": 5.979141339285714,
+      "group_times": [
+        {
+          "label": "smoke-1",
+          "elapsed_ms": 176.97688
+        },
+        {
+          "label": "smoke-2",
+          "elapsed_ms": 192.92822
+        },
+        {
+          "label": "smoke-4",
+          "elapsed_ms": 299.75873
+        }
+      ],
+      "observed_draft_graph_replays": 21,
+      "observed_target_graph_replays": 12,
+      "target_verifications_total": "NOT_AVAILABLE: Target Graph calls do not cover all eager/prefill verification work",
+      "acceptance": "NOT_AVAILABLE: no acceptance telemetry in frozen profile artifact",
+      "descriptors": {
+        "[1, 7]": 7,
+        "[2, 14]": 7,
+        "[4, 28]": 7
+      },
+      "runtime_window_descriptors": [
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        }
+      ],
+      "actual_window_crop": {
+        "observed": false,
+        "max_source_start_column": 0,
+        "scope": "runtime descriptor evidence, not prompt length"
+      },
+      "host_statistics": {
+        "Draft_materialize": {
+          "samples": 21,
+          "sum_ms": 124.15824,
+          "mean_ms": 5.912297142857144,
+          "p50_ms": 9.8965,
+          "p95_ms": 10.88348,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Draft_metadata_bind": {
+          "samples": 21,
+          "sum_ms": 1.6134300000000001,
+          "mean_ms": 0.07683000000000001,
+          "p50_ms": 0.07501,
+          "p95_ms": 0.08038,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Draft_REPLAY_SUBMIT": {
+          "samples": 21,
+          "sum_ms": 3.6652099999999996,
+          "mean_ms": 0.1745338095238095,
+          "p50_ms": 0.06378,
+          "p95_ms": 1.23037,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Draft_UPDATE_CALL": {
+          "samples": 21,
+          "sum_ms": 19.6712,
+          "mean_ms": 0.9367238095238095,
+          "p50_ms": 0.92621,
+          "p95_ms": 1.00241,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Draft_REPLAY_PLUS_UPDATE": {
+          "samples": 21,
+          "sum_ms": 57.16477,
+          "mean_ms": 2.7221319047619046,
+          "p50_ms": 2.5615,
+          "p95_ms": 3.75297,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Draft_retire_host": {
+          "samples": 21,
+          "sum_ms": 1.63177,
+          "mean_ms": 0.07770333333333333,
+          "p50_ms": 0.07751,
+          "p95_ms": 0.08068,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Draft_propose": {
+          "samples": 21,
+          "sum_ms": 237.63378,
+          "mean_ms": 11.315894285714286,
+          "p50_ms": 14.87028,
+          "p95_ms": 16.07232,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Target_REPLAY_SUBMIT": {
+          "samples": 12,
+          "sum_ms": 5.17152,
+          "mean_ms": 0.43096,
+          "p50_ms": 0.06983,
+          "p95_ms": 4.40241,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Target_REPLAY_PLUS_UPDATE": {
+          "samples": 12,
+          "sum_ms": 48.34856,
+          "mean_ms": 4.029046666666667,
+          "p50_ms": 3.55874,
+          "p95_ms": 8.94775,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        }
+      },
+      "host_subrange_coverage": {
+        "Draft_materialize": {
+          "installed": true,
+          "method": "_materialize_draft_window_read_inputs",
+          "owner": "AscendDSparkSpeculator",
+          "expected_minimum": 21,
+          "actual": 21,
+          "missing_generations": [],
+          "status": "OBSERVED",
+          "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+          "timing_scope": "nested host ranges; do not sum as device elapsed"
+        },
+        "Draft_metadata_bind": {
+          "installed": true,
+          "method": "build_draft_attn_metadatas",
+          "owner": "AscendDSparkSpeculator",
+          "expected_minimum": 21,
+          "actual": 21,
+          "missing_generations": [],
+          "status": "OBSERVED",
+          "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+          "timing_scope": "nested host ranges; do not sum as device elapsed"
+        },
+        "Draft_UPDATE_CALL": {
+          "installed": true,
+          "method": "_update_full_graph_params",
+          "owner": "DFlashAclGraphManager",
+          "expected_minimum": 21,
+          "actual": 21,
+          "missing_generations": [],
+          "status": "OBSERVED",
+          "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+          "timing_scope": "nested host ranges; do not sum as device elapsed"
+        },
+        "Draft_retire_host": {
+          "installed": true,
+          "method": "retire_generation",
+          "owner": "DraftWindowRuntimeState",
+          "expected_minimum": 21,
+          "actual": 21,
+          "missing_generations": [],
+          "status": "OBSERVED",
+          "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+          "timing_scope": "nested host ranges; do not sum as device elapsed"
+        }
+      },
+      "joint": {
+        "status": "PASS_SCOPED_PROFILING",
+        "execution": {
+          "status": "EXECUTION_ASSOCIATED",
+          "numeric_status": "NOT_ASSESSED",
+          "artifact_sha256": "a313b34d0de8f13dd6c842377d92b17b58aac0f4d6da1b3dde94314649ad1ed9"
+        },
+        "requests": {
+          "schema": "repair4-joint-acceptance-v1",
+          "status": "PASS",
+          "acceptance_kind": "NORMAL_REQUESTS",
+          "scope": "external execution/request completion; B0 additionally checks its graph contracts",
+          "errors": [],
+          "numeric_gates": "OPEN"
+        },
+        "host_subrange_coverage": {
+          "Draft_materialize": {
+            "installed": true,
+            "method": "_materialize_draft_window_read_inputs",
+            "owner": "AscendDSparkSpeculator",
+            "expected_minimum": 21,
+            "actual": 21,
+            "missing_generations": [],
+            "status": "OBSERVED",
+            "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+            "timing_scope": "nested host ranges; do not sum as device elapsed"
+          },
+          "Draft_metadata_bind": {
+            "installed": true,
+            "method": "build_draft_attn_metadatas",
+            "owner": "AscendDSparkSpeculator",
+            "expected_minimum": 21,
+            "actual": 21,
+            "missing_generations": [],
+            "status": "OBSERVED",
+            "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+            "timing_scope": "nested host ranges; do not sum as device elapsed"
+          },
+          "Draft_UPDATE_CALL": {
+            "installed": true,
+            "method": "_update_full_graph_params",
+            "owner": "DFlashAclGraphManager",
+            "expected_minimum": 21,
+            "actual": 21,
+            "missing_generations": [],
+            "status": "OBSERVED",
+            "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+            "timing_scope": "nested host ranges; do not sum as device elapsed"
+          },
+          "Draft_retire_host": {
+            "installed": true,
+            "method": "retire_generation",
+            "owner": "DraftWindowRuntimeState",
+            "expected_minimum": 21,
+            "actual": 21,
+            "missing_generations": [],
+            "status": "OBSERVED",
+            "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+            "timing_scope": "nested host ranges; do not sum as device elapsed"
+          }
+        },
+        "physical_read": "OPEN"
+      },
+      "trace": {
+        "status": "CONTROL_NO_PROFILER"
+      },
+      "observer_installation": {
+        "legacy_observer_enabled_meaning": "driver mode requested observer; not proof of installation or execution",
+        "provider_installed": true,
+        "recorder_enabled": false,
+        "recorder_installed": true
+      }
+    },
+    "PROFILE_ON_short_normal": {
+      "case_id": "PROFILE_ON_short_normal",
+      "evidence_relative_path": "C17_prepare_02/PROFILE_ON_short_normal",
+      "source": {
+        "attempt_id": "1",
+        "case_id": "PROFILE_ON_short_normal",
+        "driver_mode": "B-observer-off",
+        "engine_id": 281456281783120,
+        "process_id": 310389,
+        "run_id": "r2-c17-phy0-20261022T132626Z",
+        "source_sha": "057b8e0300967e68e3f2a78c5910c8877521674e",
+        "source_tree": "90584c0d92d99c447534d081e16fc05e76e2647e",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "request_sha256": "f4239cd07ac597c32ec29d6209fcbb3926b6649dbbb5b3e249c7e4fea3ce6daa",
+      "capture_profile": "base",
+      "profiler_enabled": true,
+      "profiler_scope": "NORMAL_OBSERVER_OFF",
+      "configuration": {
+        "record_shapes": false,
+        "with_stack": false,
+        "profile_memory": false
+      },
+      "observer_enabled": false,
+      "diagnostic_artifacts": {
+        "profile.json": {
+          "bytes": 125787,
+          "sha256": "d528964511c86b35b7273d52dc1775174c04261465d525d86624d06a3563c9c2"
+        }
+      },
+      "initialization_seconds": 28.65162144001806,
+      "active_groups": 3,
+      "completed_requests": 7,
+      "generated_tokens": 112,
+      "prompt_token_lengths": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "active_group_elapsed_ms": 763.09376,
+      "per_generated_token_ms": 6.813337142857143,
+      "group_times": [
+        {
+          "label": "smoke-1",
+          "elapsed_ms": 193.43188
+        },
+        {
+          "label": "smoke-2",
+          "elapsed_ms": 212.56684
+        },
+        {
+          "label": "smoke-4",
+          "elapsed_ms": 357.09504
+        }
+      ],
+      "observed_draft_graph_replays": 21,
+      "observed_target_graph_replays": 12,
+      "target_verifications_total": "NOT_AVAILABLE: Target Graph calls do not cover all eager/prefill verification work",
+      "acceptance": "NOT_AVAILABLE: no acceptance telemetry in frozen profile artifact",
+      "descriptors": {
+        "[1, 7]": 7,
+        "[2, 14]": 7,
+        "[4, 28]": 7
+      },
+      "runtime_window_descriptors": [
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        }
+      ],
+      "actual_window_crop": {
+        "observed": false,
+        "max_source_start_column": 0,
+        "scope": "runtime descriptor evidence, not prompt length"
+      },
+      "host_statistics": {
+        "Draft_materialize": {
+          "samples": 21,
+          "sum_ms": 110.42946,
+          "mean_ms": 5.258545714285715,
+          "p50_ms": 8.05905,
+          "p95_ms": 9.50883,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Draft_metadata_bind": {
+          "samples": 21,
+          "sum_ms": 1.7725099999999996,
+          "mean_ms": 0.08440523809523807,
+          "p50_ms": 0.08233,
+          "p95_ms": 0.09122,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Draft_REPLAY_SUBMIT": {
+          "samples": 21,
+          "sum_ms": 4.08824,
+          "mean_ms": 0.19467809523809523,
+          "p50_ms": 0.05777,
+          "p95_ms": 1.36793,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Draft_UPDATE_CALL": {
+          "samples": 21,
+          "sum_ms": 22.91897000000001,
+          "mean_ms": 1.0913795238095243,
+          "p50_ms": 1.06305,
+          "p95_ms": 1.36407,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Draft_REPLAY_PLUS_UPDATE": {
+          "samples": 21,
+          "sum_ms": 66.52485999999999,
+          "mean_ms": 3.1678504761904756,
+          "p50_ms": 2.95299,
+          "p95_ms": 4.33701,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Draft_retire_host": {
+          "samples": 21,
+          "sum_ms": 1.9786799999999998,
+          "mean_ms": 0.09422285714285714,
+          "p50_ms": 0.09312,
+          "p95_ms": 0.1055,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Draft_propose": {
+          "samples": 21,
+          "sum_ms": 245.60292999999996,
+          "mean_ms": 11.695377619047617,
+          "p50_ms": 14.13124,
+          "p95_ms": 15.61382,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Target_REPLAY_SUBMIT": {
+          "samples": 12,
+          "sum_ms": 6.050969999999999,
+          "mean_ms": 0.5042474999999998,
+          "p50_ms": 0.06045,
+          "p95_ms": 4.94042,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Target_REPLAY_PLUS_UPDATE": {
+          "samples": 12,
+          "sum_ms": 59.17757999999999,
+          "mean_ms": 4.931464999999999,
+          "p50_ms": 4.37003,
+          "p95_ms": 10.11157,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        }
+      },
+      "host_subrange_coverage": {
+        "Draft_materialize": {
+          "installed": true,
+          "method": "_materialize_draft_window_read_inputs",
+          "owner": "AscendDSparkSpeculator",
+          "expected_minimum": 21,
+          "actual": 21,
+          "missing_generations": [],
+          "status": "OBSERVED",
+          "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+          "timing_scope": "nested host ranges; do not sum as device elapsed"
+        },
+        "Draft_metadata_bind": {
+          "installed": true,
+          "method": "build_draft_attn_metadatas",
+          "owner": "AscendDSparkSpeculator",
+          "expected_minimum": 21,
+          "actual": 21,
+          "missing_generations": [],
+          "status": "OBSERVED",
+          "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+          "timing_scope": "nested host ranges; do not sum as device elapsed"
+        },
+        "Draft_UPDATE_CALL": {
+          "installed": true,
+          "method": "_update_full_graph_params",
+          "owner": "DFlashAclGraphManager",
+          "expected_minimum": 21,
+          "actual": 21,
+          "missing_generations": [],
+          "status": "OBSERVED",
+          "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+          "timing_scope": "nested host ranges; do not sum as device elapsed"
+        },
+        "Draft_retire_host": {
+          "installed": true,
+          "method": "retire_generation",
+          "owner": "DraftWindowRuntimeState",
+          "expected_minimum": 21,
+          "actual": 21,
+          "missing_generations": [],
+          "status": "OBSERVED",
+          "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+          "timing_scope": "nested host ranges; do not sum as device elapsed"
+        }
+      },
+      "joint": {
+        "status": "PASS_SCOPED_PROFILING",
+        "execution": {
+          "status": "EXECUTION_ASSOCIATED",
+          "numeric_status": "NOT_ASSESSED",
+          "artifact_sha256": "d528964511c86b35b7273d52dc1775174c04261465d525d86624d06a3563c9c2"
+        },
+        "requests": {
+          "schema": "repair4-joint-acceptance-v1",
+          "status": "PASS",
+          "acceptance_kind": "NORMAL_REQUESTS",
+          "scope": "external execution/request completion; B0 additionally checks its graph contracts",
+          "errors": [],
+          "numeric_gates": "OPEN"
+        },
+        "host_subrange_coverage": {
+          "Draft_materialize": {
+            "installed": true,
+            "method": "_materialize_draft_window_read_inputs",
+            "owner": "AscendDSparkSpeculator",
+            "expected_minimum": 21,
+            "actual": 21,
+            "missing_generations": [],
+            "status": "OBSERVED",
+            "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+            "timing_scope": "nested host ranges; do not sum as device elapsed"
+          },
+          "Draft_metadata_bind": {
+            "installed": true,
+            "method": "build_draft_attn_metadatas",
+            "owner": "AscendDSparkSpeculator",
+            "expected_minimum": 21,
+            "actual": 21,
+            "missing_generations": [],
+            "status": "OBSERVED",
+            "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+            "timing_scope": "nested host ranges; do not sum as device elapsed"
+          },
+          "Draft_UPDATE_CALL": {
+            "installed": true,
+            "method": "_update_full_graph_params",
+            "owner": "DFlashAclGraphManager",
+            "expected_minimum": 21,
+            "actual": 21,
+            "missing_generations": [],
+            "status": "OBSERVED",
+            "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+            "timing_scope": "nested host ranges; do not sum as device elapsed"
+          },
+          "Draft_retire_host": {
+            "installed": true,
+            "method": "retire_generation",
+            "owner": "DraftWindowRuntimeState",
+            "expected_minimum": 21,
+            "actual": 21,
+            "missing_generations": [],
+            "status": "OBSERVED",
+            "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+            "timing_scope": "nested host ranges; do not sum as device elapsed"
+          }
+        },
+        "physical_read": "OPEN"
+      },
+      "trace": {
+        "status": "ANALYZED",
+        "source_trace": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C17_prepare_02/PROFILE_ON_short_normal/trace/node-39-101_310389_20261023004828312_ascend_pt/ASCEND_PROFILER_OUTPUT/trace_view.json",
+        "trace_bytes": 28844127,
+        "trace_sha256": "ac56fb601a1a34f6788bfd5e286e2d5e180240034e4f80a8450526420dce96bd",
+        "event_count": 162120,
+        "selected_event_statistics": {
+          "acl_memcpy_host_to_device": {
+            "count": 513,
+            "summed_duration_us": 2780.1500000000005,
+            "median_duration_us": 4.01
+          },
+          "Event::synchronize": {
+            "count": 42,
+            "summed_duration_us": 1850.64,
+            "median_duration_us": 43.955
+          },
+          "Event::wait": {
+            "count": 75,
+            "summed_duration_us": 2255.8500000000004,
+            "median_duration_us": 28.29
+          },
+          "acl_memcpy_device_to_host": {
+            "count": 63,
+            "summed_duration_us": 259.38,
+            "median_duration_us": 3.79
+          },
+          "EVENT_WAIT": {
+            "count": 75,
+            "summed_duration_us": 212689.97999999984,
+            "median_duration_us": 0.02
+          },
+          "MODEL_EXECUTE": {
+            "count": 33,
+            "summed_duration_us": 664.1600000000001,
+            "median_duration_us": 3.08
+          },
+          "NOTIFY_WAIT": {
+            "count": 33,
+            "summed_duration_us": 255075.58,
+            "median_duration_us": 4204.2
+          },
+          "MEM_WAIT_VALUE": {
+            "count": 1611,
+            "summed_duration_us": 904.5399999999952,
+            "median_duration_us": 0.14
+          },
+          "MEMCPY_ASYNC": {
+            "count": 1859,
+            "summed_duration_us": 3782.6400000000185,
+            "median_duration_us": 2.8
+          },
+          "acl_memcpy_device_to_device": "NOT_AVAILABLE: no explicit direction label in this export"
+        },
+        "nested_same_thread_copy_sync": {
+          "Draft_materialize": {
+            "parent_count": 21,
+            "children": {}
+          },
+          "Draft_metadata_bind": {
+            "parent_count": 21,
+            "children": {}
+          },
+          "Draft_UPDATE_CALL": {
+            "parent_count": 21,
+            "children": {}
+          },
+          "Draft_retire_host": {
+            "parent_count": 21,
+            "children": {}
+          }
+        },
+        "task_table": {
+          "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C17_prepare_02/PROFILE_ON_short_normal/trace/node-39-101_310389_20261023004828312_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv",
+          "rows": 20269,
+          "duplicate_device_stream_task_keys": 11226,
+          "streams": {
+            "47": 5804,
+            "45": 126,
+            "42": 63,
+            "43": 1107,
+            "9": 1127,
+            "12": 4842,
+            "48": 6,
+            "10": 1176,
+            "13": 4842,
+            "11": 1176
+          },
+          "named_kernel_count": 10956,
+          "fia_named_kernel_count": 861,
+          "summed_named_kernel_duration_us": 410691.94000000303,
+          "named_kernel_interval_union_us": 410691.94,
+          "named_kernel_span_us": 772775.36,
+          "task_internal_operand": "NOT_AVAILABLE",
+          "physical_read_set": "NOT_AVAILABLE",
+          "attribution": "Kernel name identifies FIA family only; no Target/Draft/layer/generation inference"
+        },
+        "flow_analysis": {
+          "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/profile_analysis_C17/PROFILE_ON_short_normal/flow-analysis-module.json",
+          "counts": {
+            "MATCHED": 20334,
+            "UNMATCHED": 1,
+            "AMBIGUOUS": 1
+          },
+          "coverage": {
+            "total_replays": 21,
+            "direct_matched": 0
+          },
+          "manager_flow_counts": [
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32,
+            32
+          ],
+          "split": "UNRESOLVED: replay and UPDATE device tasks cannot be split from these flows"
+        },
+        "clock_contract": "Trace exported timestamps only; never subtract Host monotonic_ns from trace timestamps",
+        "device_idle": "NOT_AVAILABLE: gaps between named kernels are not whole-device idle"
+      },
+      "observer_installation": {
+        "legacy_observer_enabled_meaning": "driver mode requested observer; not proof of installation or execution",
+        "provider_installed": true,
+        "recorder_enabled": false,
+        "recorder_installed": true
+      }
+    },
+    "PROFILE_LIFE": {
+      "case_id": "PROFILE_LIFE",
+      "evidence_relative_path": "C17_prepare_02/PROFILE_LIFE",
+      "source": {
+        "attempt_id": "1",
+        "case_id": "PROFILE_LIFE",
+        "driver_mode": "B",
+        "engine_id": 281454503350864,
+        "process_id": 312397,
+        "run_id": "r2-c17-phy0-20261022T132626Z",
+        "source_sha": "057b8e0300967e68e3f2a78c5910c8877521674e",
+        "source_tree": "90584c0d92d99c447534d081e16fc05e76e2647e",
+        "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+      },
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "request_sha256": "f4239cd07ac597c32ec29d6209fcbb3926b6649dbbb5b3e249c7e4fea3ce6daa",
+      "capture_profile": "base",
+      "profiler_enabled": true,
+      "profiler_scope": "DIAGNOSTIC_SERIALIZED",
+      "configuration": {
+        "record_shapes": false,
+        "with_stack": false,
+        "profile_memory": false
+      },
+      "observer_enabled": true,
+      "diagnostic_artifacts": {
+        "mrv2-lifecycle.json": {
+          "bytes": 1467191,
+          "sha256": "5e53738fab2faf007c19fce875a63292b743eaa47715936b2b3cd306cb3685a9"
+        },
+        "profile.json": {
+          "bytes": 121326,
+          "sha256": "e6924e123b1608aaa3ecb206c9aad3014d3997f74ff19a97458a420b97683c4f"
+        }
+      },
+      "initialization_seconds": 27.76247701002285,
+      "active_groups": 3,
+      "completed_requests": 7,
+      "generated_tokens": 112,
+      "prompt_token_lengths": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "active_group_elapsed_ms": 29929.46535,
+      "per_generated_token_ms": 267.2273691964286,
+      "group_times": [
+        {
+          "label": "smoke-1",
+          "elapsed_ms": 5944.16727
+        },
+        {
+          "label": "smoke-2",
+          "elapsed_ms": 9562.64598
+        },
+        {
+          "label": "smoke-4",
+          "elapsed_ms": 14422.6521
+        }
+      ],
+      "observed_draft_graph_replays": 21,
+      "observed_target_graph_replays": 12,
+      "target_verifications_total": "NOT_AVAILABLE: Target Graph calls do not cover all eager/prefill verification work",
+      "acceptance": "NOT_AVAILABLE: no acceptance telemetry in frozen profile artifact",
+      "descriptors": {
+        "[1, 7]": 7,
+        "[2, 14]": 7,
+        "[4, 28]": 7
+      },
+      "runtime_window_descriptors": [
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        },
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        }
+      ],
+      "actual_window_crop": {
+        "observed": false,
+        "max_source_start_column": 0,
+        "scope": "runtime descriptor evidence, not prompt length"
+      },
+      "host_statistics": {
+        "Draft_materialize": {
+          "samples": 21,
+          "sum_ms": 102.21282000000001,
+          "mean_ms": 4.8672771428571435,
+          "p50_ms": 3.83242,
+          "p95_ms": 9.05301,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Draft_metadata_bind": {
+          "samples": 21,
+          "sum_ms": 2062.9209400000004,
+          "mean_ms": 98.2343304761905,
+          "p50_ms": 92.92621,
+          "p95_ms": 160.61147,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Draft_REPLAY_SUBMIT": {
+          "samples": 21,
+          "sum_ms": 8.87195,
+          "mean_ms": 0.42247380952380953,
+          "p50_ms": 0.2701,
+          "p95_ms": 1.70086,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Draft_UPDATE_CALL": {
+          "samples": 21,
+          "sum_ms": 10484.176050000002,
+          "mean_ms": 499.24647857142867,
+          "p50_ms": 483.21639,
+          "p95_ms": 791.75199,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Draft_REPLAY_PLUS_UPDATE": {
+          "samples": 21,
+          "sum_ms": 22974.310880000005,
+          "mean_ms": 1094.014803809524,
+          "p50_ms": 1057.51618,
+          "p95_ms": 1743.7926,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Draft_retire_host": {
+          "samples": 21,
+          "sum_ms": 2.7089000000000003,
+          "mean_ms": 0.1289952380952381,
+          "p50_ms": 0.12668,
+          "p95_ms": 0.14683,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Draft_propose": {
+          "samples": 21,
+          "sum_ms": 29390.27131999999,
+          "mean_ms": 1399.536729523809,
+          "p50_ms": 1352.54913,
+          "p95_ms": 2225.59668,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Target_REPLAY_SUBMIT": {
+          "samples": 12,
+          "sum_ms": 6.274659999999999,
+          "mean_ms": 0.5228883333333333,
+          "p50_ms": 0.0703,
+          "p95_ms": 4.97148,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        },
+        "Target_REPLAY_PLUS_UPDATE": {
+          "samples": 12,
+          "sum_ms": 66.4554,
+          "mean_ms": 5.5379499999999995,
+          "p50_ms": 4.61733,
+          "p95_ms": 10.33653,
+          "scope": "HOST_SUBMISSION_NOT_DEVICE_COMPLETION"
+        }
+      },
+      "host_subrange_coverage": {
+        "Draft_materialize": {
+          "installed": true,
+          "method": "_materialize_draft_window_read_inputs",
+          "owner": "AscendDSparkSpeculator",
+          "expected_minimum": 21,
+          "actual": 21,
+          "missing_generations": [],
+          "status": "OBSERVED",
+          "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+          "timing_scope": "nested host ranges; do not sum as device elapsed"
+        },
+        "Draft_metadata_bind": {
+          "installed": true,
+          "method": "build_draft_attn_metadatas",
+          "owner": "AscendDSparkSpeculator",
+          "expected_minimum": 21,
+          "actual": 21,
+          "missing_generations": [],
+          "status": "OBSERVED",
+          "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+          "timing_scope": "nested host ranges; do not sum as device elapsed"
+        },
+        "Draft_UPDATE_CALL": {
+          "installed": true,
+          "method": "_update_full_graph_params",
+          "owner": "DFlashAclGraphManager",
+          "expected_minimum": 21,
+          "actual": 21,
+          "missing_generations": [],
+          "status": "OBSERVED",
+          "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+          "timing_scope": "nested host ranges; do not sum as device elapsed"
+        },
+        "Draft_retire_host": {
+          "installed": true,
+          "method": "retire_generation",
+          "owner": "DraftWindowRuntimeState",
+          "expected_minimum": 21,
+          "actual": 21,
+          "missing_generations": [],
+          "status": "OBSERVED",
+          "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+          "timing_scope": "nested host ranges; do not sum as device elapsed"
+        }
+      },
+      "joint": {
+        "status": "PASS_SCOPED_PROFILING",
+        "execution": {
+          "status": "EXECUTION_ASSOCIATED",
+          "numeric_status": "NOT_ASSESSED",
+          "artifact_sha256": "e6924e123b1608aaa3ecb206c9aad3014d3997f74ff19a97458a420b97683c4f"
+        },
+        "requests": {
+          "schema": "repair4-joint-acceptance-v1",
+          "status": "PASS",
+          "acceptance_kind": "NORMAL_REQUESTS",
+          "scope": "external execution/request completion; B0 additionally checks its graph contracts",
+          "errors": [],
+          "numeric_gates": "OPEN"
+        },
+        "host_subrange_coverage": {
+          "Draft_materialize": {
+            "installed": true,
+            "method": "_materialize_draft_window_read_inputs",
+            "owner": "AscendDSparkSpeculator",
+            "expected_minimum": 21,
+            "actual": 21,
+            "missing_generations": [],
+            "status": "OBSERVED",
+            "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+            "timing_scope": "nested host ranges; do not sum as device elapsed"
+          },
+          "Draft_metadata_bind": {
+            "installed": true,
+            "method": "build_draft_attn_metadatas",
+            "owner": "AscendDSparkSpeculator",
+            "expected_minimum": 21,
+            "actual": 21,
+            "missing_generations": [],
+            "status": "OBSERVED",
+            "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+            "timing_scope": "nested host ranges; do not sum as device elapsed"
+          },
+          "Draft_UPDATE_CALL": {
+            "installed": true,
+            "method": "_update_full_graph_params",
+            "owner": "DFlashAclGraphManager",
+            "expected_minimum": 21,
+            "actual": 21,
+            "missing_generations": [],
+            "status": "OBSERVED",
+            "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+            "timing_scope": "nested host ranges; do not sum as device elapsed"
+          },
+          "Draft_retire_host": {
+            "installed": true,
+            "method": "retire_generation",
+            "owner": "DraftWindowRuntimeState",
+            "expected_minimum": 21,
+            "actual": 21,
+            "missing_generations": [],
+            "status": "OBSERVED",
+            "expected_rule": "minimum one per observed Draft graph; extra context/prefill calls retained",
+            "timing_scope": "nested host ranges; do not sum as device elapsed"
+          }
+        },
+        "physical_read": "OPEN"
+      },
+      "trace": {
+        "status": "ANALYZED",
+        "source_trace": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C17_prepare_02/PROFILE_LIFE/trace/node-39-101_312397_20261023005017200_ascend_pt/ASCEND_PROFILER_OUTPUT/trace_view.json",
+        "trace_bytes": 29830705,
+        "trace_sha256": "8470809dcef2a1a039b6dfdca283f64154bd84633e9604486f803b767bb6b1d8",
+        "event_count": 167546,
+        "selected_event_statistics": {
+          "acl_memcpy_host_to_device": {
+            "count": 513,
+            "summed_duration_us": 2384.3699999999994,
+            "median_duration_us": 3.94
+          },
+          "Event::synchronize": {
+            "count": 84,
+            "summed_duration_us": 4021.5699999999997,
+            "median_duration_us": 47.49
+          },
+          "Event::wait": {
+            "count": 75,
+            "summed_duration_us": 2258.54,
+            "median_duration_us": 29.77
+          },
+          "acl_memcpy_device_to_host": {
+            "count": 63,
+            "summed_duration_us": 239.98,
+            "median_duration_us": 3.66
+          },
+          "EVENT_WAIT": {
+            "count": 75,
+            "summed_duration_us": 198136.11999999985,
+            "median_duration_us": 0.02
+          },
+          "MODEL_EXECUTE": {
+            "count": 33,
+            "summed_duration_us": 763.8399999999999,
+            "median_duration_us": 3.08
+          },
+          "NOTIFY_WAIT": {
+            "count": 33,
+            "summed_duration_us": 10663284.84,
+            "median_duration_us": 321086.22
+          },
+          "MEM_WAIT_VALUE": {
+            "count": 1611,
+            "summed_duration_us": 1250.0399999999934,
+            "median_duration_us": 0.14
+          },
+          "MEMCPY_ASYNC": {
+            "count": 1859,
+            "summed_duration_us": 3756.380000000013,
+            "median_duration_us": 2.72
+          },
+          "acl_memcpy_device_to_device": "NOT_AVAILABLE: no explicit direction label in this export"
+        },
+        "nested_same_thread_copy_sync": {
+          "Draft_materialize": {
+            "parent_count": 21,
+            "children": {}
+          },
+          "Draft_metadata_bind": {
+            "parent_count": 21,
+            "children": {}
+          },
+          "Draft_UPDATE_CALL": {
+            "parent_count": 21,
+            "children": {}
+          },
+          "Draft_retire_host": {
+            "parent_count": 21,
+            "children": {}
+          }
+        },
+        "task_table": {
+          "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C17_prepare_02/PROFILE_LIFE/trace/node-39-101_312397_20261023005017200_ascend_pt/ASCEND_PROFILER_OUTPUT/task_time.csv",
+          "rows": 20311,
+          "duplicate_device_stream_task_keys": 11226,
+          "streams": {
+            "47": 5825,
+            "45": 126,
+            "42": 63,
+            "43": 1128,
+            "9": 1127,
+            "12": 4842,
+            "48": 6,
+            "10": 1176,
+            "13": 4842,
+            "11": 1176
+          },
+          "named_kernel_count": 10956,
+          "fia_named_kernel_count": 861,
+          "summed_named_kernel_duration_us": 408784.67999999947,
+          "named_kernel_interval_union_us": 408784.68,
+          "named_kernel_span_us": 29933279.9,
+          "task_internal_operand": "NOT_AVAILABLE",
+          "physical_read_set": "NOT_AVAILABLE",
+          "attribution": "Kernel name identifies FIA family only; no Target/Draft/layer/generation inference"
+        },
+        "flow_analysis": {
+          "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/profile_analysis_C17/PROFILE_LIFE/flow-analysis-module.json",
+          "counts": {
+            "MATCHED": 20504,
+            "UNMATCHED": 1
+          },
+          "coverage": {
+            "total_replays": 21,
+            "direct_matched": 21
+          },
+          "manager_flow_counts": [
+            38,
+            38,
+            38,
+            38,
+            38,
+            38,
+            38,
+            38,
+            38,
+            38,
+            38,
+            38,
+            38,
+            38,
+            38,
+            38,
+            38,
+            38,
+            38,
+            38,
+            38
+          ],
+          "split": "UNRESOLVED: replay and UPDATE device tasks cannot be split from these flows"
+        },
+        "clock_contract": "Trace exported timestamps only; never subtract Host monotonic_ns from trace timestamps",
+        "device_idle": "NOT_AVAILABLE: gaps between named kernels are not whole-device idle"
+      },
+      "observer_installation": {
+        "legacy_observer_enabled_meaning": "driver mode requested observer; not proof of installation or execution",
+        "provider_installed": true,
+        "recorder_enabled": true,
+        "recorder_installed": true
+      }
+    }
+  },
+  "external_work_comparison": {
+    "completed_requests": true,
+    "generated_tokens": true,
+    "prompt_token_lengths": true,
+    "observed_draft_graph_replays": true,
+    "observed_target_graph_replays": true
+  },
+  "comparison_scope": "same external request workload; LIFE adds observer/event/sync/D2H and may alter effective diagnostic preparation; difference is not isolated synchronize overhead or normal Window speedup",
+  "profiler_timing": "initialization/capture and warmup excluded by committed bounded request profile",
+  "read_set": "NOT_AVAILABLE",
+  "normal_reuse": "NOT_PROVEN_BY_SERIALIZED_DIAGNOSTIC"
+}

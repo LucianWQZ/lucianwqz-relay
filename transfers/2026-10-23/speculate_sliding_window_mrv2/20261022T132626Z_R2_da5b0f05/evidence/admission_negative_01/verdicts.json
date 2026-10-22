@@ -1,0 +1,22 @@
+{
+  "observed_utc": "2026-10-22T16:33:16.264434+00:00",
+  "scope": "read-only manifest validator counterexample; corrupt derived copy only; no runner or NPU launch",
+  "original_plan": "raw/C17_prepare_02/case-plan.json",
+  "results": [
+    {
+      "checker": "old_fixed_C17",
+      "result": "ACCEPTED",
+      "answer": {
+        "status": "LOCAL_COMMITTED_CANDIDATE",
+        "source_sha": "057b8e0300967e68e3f2a78c5910c8877521674e",
+        "source_tree": "90584c0d92d99c447534d081e16fc05e76e2647e",
+        "device_validation": "NOT_INFERRED"
+      }
+    },
+    {
+      "checker": "new_development",
+      "result": "REJECTED",
+      "reason": "Host evidence coverage missing"
+    }
+  ]
+}

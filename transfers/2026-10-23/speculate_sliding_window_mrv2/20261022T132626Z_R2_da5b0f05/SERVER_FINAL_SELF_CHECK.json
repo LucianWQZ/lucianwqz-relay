@@ -1,0 +1,15 @@
+{
+  "observed_utc": "2026-10-22T18:10:21.555514+00:00",
+  "zip": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261022T132626Z_R2_da5b0f05/MRV2_Server_Dev_review_20261022T132626Z_R2_da5b0f05.zip",
+  "bytes": 1919632,
+  "sha256": "4398546a648f101ce77c32f80589276359152624a9de653c6d212076a616139c",
+  "crc": "PASS",
+  "unique_members": 529,
+  "strict_json": "PASS",
+  "copy_hashes": "PASS",
+  "references": "PASS",
+  "bundle_restore": "PASS_EXACT_SHA_TREE",
+  "compact_cpu_recompute": "PASS_RETAINED_OUTPUT_NUMERIC_AND_ABA_ONLY",
+  "server_selfcheck": true,
+  "user_receipt_verified": false
+}

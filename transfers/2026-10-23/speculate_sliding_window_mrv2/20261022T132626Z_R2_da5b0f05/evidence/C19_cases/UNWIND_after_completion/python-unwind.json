@@ -1,0 +1,379 @@
+{
+  "schema": "repair8-python-unwind-v1",
+  "identity": {
+    "run_id": "r2-c19-phy0-20261022T132626Z",
+    "case_id": "UNWIND_after_completion",
+    "driver_mode": "B-observer-off",
+    "attempt_id": "1",
+    "source_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+    "source_tree": "af4519a635d6ccd70646f77195fde18368bdf22b",
+    "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c",
+    "engine_id": 281456467424272,
+    "process_id": 356110
+  },
+  "point": "after_completion",
+  "record": {
+    "generation": 0,
+    "epoch": 0,
+    "generation_identity": {
+      "generation_id": 0,
+      "mapping_epoch": 0,
+      "ordered_request_fingerprint": [
+        "0-9e6ec4bb"
+      ],
+      "actual_request_count": 1,
+      "padded_request_count": 1,
+      "normalized_method": "dspark",
+      "global_group_id": 0,
+      "read_descriptor_fingerprint": [
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        }
+      ],
+      "provider_id": 281454579615216,
+      "provider_version": 1,
+      "source_identity": {
+        "block_tables_owner_id": 281455181095312,
+        "input_block_table_ptrs": [
+          20623361144832
+        ],
+        "persistent_num_blocks_ptr": 5656170013120,
+        "idx_mapping_ptr": 20623359378432
+      },
+      "execution_lane": 0,
+      "phase": "proposal",
+      "step": 0,
+      "topology_fingerprint": {
+        "normalized_method": "dspark",
+        "runtime_route": "dspark",
+        "attention_backend_family": 1,
+        "backend_impls": [
+          "vllm_ascend.attention.attention_v1.AscendAttentionBackend"
+        ],
+        "builder_impls": [
+          "vllm_ascend.attention.attention_v1.AscendAttentionMetadataBuilder"
+        ],
+        "global_group_ids": [
+          0
+        ],
+        "layouts": [
+          "dense_gqa_direct_prefix"
+        ],
+        "block_geometry": [
+          [
+            0,
+            128,
+            128
+          ]
+        ],
+        "tensor_parallel_size": 1,
+        "data_parallel_size": 1,
+        "pipeline_parallel_size": 1,
+        "prefill_context_parallel_size": 1,
+        "decode_context_parallel_size": 1,
+        "sequence_parallel": false,
+        "dsa_context_parallel": false,
+        "flashcomm": false,
+        "graph_mode": "FULL_DECODE_ONLY",
+        "async_scheduling": false,
+        "prefix_caching": false,
+        "provider_version": 1,
+        "execution_lane": 0,
+        "tensor_parallel_rank": 0,
+        "parallel_read_semantics": "replicated"
+      },
+      "row_phase_fingerprint": [
+        "prefill_terminal"
+      ]
+    },
+    "carrier_binding": {
+      "method": "dspark",
+      "route": "dspark",
+      "global_group_id": 0,
+      "proposal_id": 0,
+      "generation_id": 0,
+      "mapping_epoch": 0,
+      "ordered_request_fingerprint": [
+        "0-9e6ec4bb"
+      ],
+      "actual_request_count": 1,
+      "padded_request_count": 1,
+      "provider_id": 281454579615216,
+      "provider_version": 1,
+      "source_owner_id": 281455181095312,
+      "execution_lane": 0,
+      "phase": "proposal",
+      "step": 0
+    },
+    "descriptor": [
+      1,
+      7
+    ],
+    "backing": {
+      "owner_id": 281455181911984,
+      "window_block_table": {
+        "storage_data_ptr": 20623361168384,
+        "data_ptr": 20623361168384,
+        "storage_offset": 0,
+        "shape": [
+          1,
+          32
+        ],
+        "stride": [
+          32,
+          1
+        ],
+        "dtype": "torch.int32",
+        "device": "npu:0"
+      },
+      "valid_num_blocks": {
+        "storage_data_ptr": 20623361168896,
+        "data_ptr": 20623361168896,
+        "storage_offset": 0,
+        "shape": [
+          1
+        ],
+        "stride": [
+          1
+        ],
+        "dtype": "torch.int32",
+        "device": "npu:0"
+      },
+      "device_window_exact": {
+        "storage_data_ptr": 20623361169408,
+        "data_ptr": 20623361169408,
+        "storage_offset": 0,
+        "shape": [
+          1
+        ],
+        "stride": [
+          1
+        ],
+        "dtype": "torch.int32",
+        "device": "npu:0"
+      },
+      "cpu_window_exact": {
+        "storage_data_ptr": 5656170014208,
+        "data_ptr": 5656170014208,
+        "storage_offset": 0,
+        "shape": [
+          1
+        ],
+        "stride": [
+          1
+        ],
+        "dtype": "torch.int32",
+        "device": "cpu"
+      },
+      "cpu_window_upper": {
+        "storage_data_ptr": 5656170014272,
+        "data_ptr": 5656170014272,
+        "storage_offset": 0,
+        "shape": [
+          1
+        ],
+        "stride": [
+          1
+        ],
+        "dtype": "torch.int32",
+        "device": "cpu"
+      }
+    },
+    "replay_called": true,
+    "replay_returned": true,
+    "update_returned": true,
+    "completion": "DIAGNOSTIC_STREAM_DRAIN_BEFORE_EXCEPTION",
+    "quarantine_calls": [
+      {
+        "identity": {
+          "generation_id": 0,
+          "mapping_epoch": 0,
+          "ordered_request_fingerprint": [
+            "0-9e6ec4bb"
+          ],
+          "actual_request_count": 1,
+          "padded_request_count": 1,
+          "normalized_method": "dspark",
+          "global_group_id": 0,
+          "read_descriptor_fingerprint": [
+            {
+              "global_group_id": 0,
+              "source_start_column": 0,
+              "first_token_offset": 0,
+              "required_columns": 1,
+              "safe_extent_tokens": 128,
+              "valid_num_blocks": 1,
+              "source_row_width": 32
+            }
+          ],
+          "provider_id": 281454579615216,
+          "provider_version": 1,
+          "source_identity": {
+            "block_tables_owner_id": 281455181095312,
+            "input_block_table_ptrs": [
+              20623361144832
+            ],
+            "persistent_num_blocks_ptr": 5656170013120,
+            "idx_mapping_ptr": 20623359378432
+          },
+          "execution_lane": 0,
+          "phase": "proposal",
+          "step": 0,
+          "topology_fingerprint": {
+            "normalized_method": "dspark",
+            "runtime_route": "dspark",
+            "attention_backend_family": 1,
+            "backend_impls": [
+              "vllm_ascend.attention.attention_v1.AscendAttentionBackend"
+            ],
+            "builder_impls": [
+              "vllm_ascend.attention.attention_v1.AscendAttentionMetadataBuilder"
+            ],
+            "global_group_ids": [
+              0
+            ],
+            "layouts": [
+              "dense_gqa_direct_prefix"
+            ],
+            "block_geometry": [
+              [
+                0,
+                128,
+                128
+              ]
+            ],
+            "tensor_parallel_size": 1,
+            "data_parallel_size": 1,
+            "pipeline_parallel_size": 1,
+            "prefill_context_parallel_size": 1,
+            "decode_context_parallel_size": 1,
+            "sequence_parallel": false,
+            "dsa_context_parallel": false,
+            "flashcomm": false,
+            "graph_mode": "FULL_DECODE_ONLY",
+            "async_scheduling": false,
+            "prefix_caching": false,
+            "provider_version": 1,
+            "execution_lane": 0,
+            "tensor_parallel_rank": 0,
+            "parallel_read_semantics": "replicated"
+          },
+          "row_phase_fingerprint": [
+            "prefill_terminal"
+          ]
+        },
+        "ns": 314715284296770
+      }
+    ],
+    "before_replay_ns": 314715277897950,
+    "replay_return_ns": 314715280041490,
+    "update_return_ns": 314715281305680,
+    "complete_ns": 314715284035970,
+    "completion_events": [
+      281454714044240,
+      281454714041936
+    ],
+    "completion_impact": "two ordinary events and explicit stream drains BEFORE injected error",
+    "injected_ns": 314715284042140,
+    "injected_point": "after_completion"
+  },
+  "state": {
+    "quarantined_identity": {
+      "generation_id": 0,
+      "mapping_epoch": 0,
+      "ordered_request_fingerprint": [
+        "0-9e6ec4bb"
+      ],
+      "actual_request_count": 1,
+      "padded_request_count": 1,
+      "normalized_method": "dspark",
+      "global_group_id": 0,
+      "read_descriptor_fingerprint": [
+        {
+          "global_group_id": 0,
+          "source_start_column": 0,
+          "first_token_offset": 0,
+          "required_columns": 1,
+          "safe_extent_tokens": 128,
+          "valid_num_blocks": 1,
+          "source_row_width": 32
+        }
+      ],
+      "provider_id": 281454579615216,
+      "provider_version": 1,
+      "source_identity": {
+        "block_tables_owner_id": 281455181095312,
+        "input_block_table_ptrs": [
+          20623361144832
+        ],
+        "persistent_num_blocks_ptr": 5656170013120,
+        "idx_mapping_ptr": 20623359378432
+      },
+      "execution_lane": 0,
+      "phase": "proposal",
+      "step": 0,
+      "topology_fingerprint": {
+        "normalized_method": "dspark",
+        "runtime_route": "dspark",
+        "attention_backend_family": 1,
+        "backend_impls": [
+          "vllm_ascend.attention.attention_v1.AscendAttentionBackend"
+        ],
+        "builder_impls": [
+          "vllm_ascend.attention.attention_v1.AscendAttentionMetadataBuilder"
+        ],
+        "global_group_ids": [
+          0
+        ],
+        "layouts": [
+          "dense_gqa_direct_prefix"
+        ],
+        "block_geometry": [
+          [
+            0,
+            128,
+            128
+          ]
+        ],
+        "tensor_parallel_size": 1,
+        "data_parallel_size": 1,
+        "pipeline_parallel_size": 1,
+        "prefill_context_parallel_size": 1,
+        "decode_context_parallel_size": 1,
+        "sequence_parallel": false,
+        "dsa_context_parallel": false,
+        "flashcomm": false,
+        "graph_mode": "FULL_DECODE_ONLY",
+        "async_scheduling": false,
+        "prefix_caching": false,
+        "provider_version": 1,
+        "execution_lane": 0,
+        "tensor_parallel_rank": 0,
+        "parallel_read_semantics": "replicated"
+      },
+      "row_phase_fingerprint": [
+        "prefill_terminal"
+      ]
+    },
+    "active_backing_retained": true,
+    "live_inputs_cleared": true,
+    "proposal_context_cleared": true,
+    "graph_submission_uncertain": true
+  },
+  "next_scope_guard": {
+    "rejected": true,
+    "body_entered": false,
+    "exception": "draft-window backing is quarantined after uncertain Graph submission",
+    "ns": 314715291014020
+  },
+  "status": "HOST_EXPORTED_ISOLATION_REQUIRED",
+  "isolated_exit_required": 74,
+  "scope": "real C1 exception unwinding; no native partial-submit claim or recovery",
+  "post_fault_device_operations": "NONE_BY_THIS_PROBE"
+}

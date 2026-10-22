@@ -1,0 +1,7 @@
+# Profiling离线重算
+
+工作目录为本报告目录，Python使用/usr/local/python3.11.10/bin/python。所有步骤只读既有trace，不加载模型。已完成的flow解析不重复覆盖：parse_C15_profile_exports.py和parse_C17_profile_exports.py须用新的输出目录重算，不修改旧表。
+
+依次执行analyze_C15_profiles.py、write_C15_profile_report.py、analyze_C17_diagnostic_profiles.py、classify_C17_direct_flows.py、finalize_profile_interpretation.py。前两步生成C15基础报告，后两步保留原始parser任意flow计数并加目的地分类；最后合并解释，避免把LIFE事件流当成模型执行直接流。
+
+大原始trace留服务器。每个输入trace的SHA、原始路径与parser命令/hash均在Summary或profiling_C15/profiling_C17片段索引。实际三组short只各一次，不因离线重算增加实验样本数。

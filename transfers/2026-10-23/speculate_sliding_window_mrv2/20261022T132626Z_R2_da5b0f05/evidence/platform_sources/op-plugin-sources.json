@@ -1,0 +1,34 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/Ascend/op-plugin/8b9c8534fa41eff367a41c155843daa530ab3a08/op_plugin/ops/opapi/FusedInferAttentionScoreKernelNpuOpApi.cpp",
+    "revision": "8b9c8534fa41eff367a41c155843daa530ab3a08",
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/opplugin__op_plugin__ops__opapi__FusedInferAttentionScoreKernelNpuOpApi.cpp",
+    "sha256": "402a4fef3864b9a887e82715320c9ba9b09a162bc37ddd7de7b97d4029d609d0",
+    "bytes": 34557,
+    "installed_sha256": null
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Ascend/op-plugin/8b9c8534fa41eff367a41c155843daa530ab3a08/op_plugin/utils/op_api_common.cpp",
+    "revision": "8b9c8534fa41eff367a41c155843daa530ab3a08",
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/opplugin__op_plugin__utils__op_api_common.cpp",
+    "sha256": "e49dbe4a0e6709f23d8c77437addecbbcccf14996c66db2ef66b7f1acbbb17f7",
+    "bytes": 67356,
+    "installed_sha256": null
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Ascend/op-plugin/8b9c8534fa41eff367a41c155843daa530ab3a08/op_plugin/utils/op_api_common.h",
+    "revision": "8b9c8534fa41eff367a41c155843daa530ab3a08",
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/opplugin__op_plugin__utils__op_api_common.h",
+    "sha256": "6849b4417a97df8fc349d02c8668a6a05c1b8d31dbc93d769e8ddf28181f5484",
+    "bytes": 63600,
+    "installed_sha256": "6849b4417a97df8fc349d02c8668a6a05c1b8d31dbc93d769e8ddf28181f5484"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Ascend/op-plugin/8b9c8534fa41eff367a41c155843daa530ab3a08/op_plugin/utils/op_api_common_base.h",
+    "revision": "8b9c8534fa41eff367a41c155843daa530ab3a08",
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/platform_sources/opplugin__op_plugin__utils__op_api_common_base.h",
+    "sha256": "f84e255ffe6f98d63f05a7b9cde71d00ce94ea78f861e7f2297046f16d8e2bc7",
+    "bytes": 30712,
+    "installed_sha256": "f84e255ffe6f98d63f05a7b9cde71d00ce94ea78f861e7f2297046f16d8e2bc7"
+  }
+]

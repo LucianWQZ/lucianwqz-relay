@@ -1,0 +1,1091 @@
+{
+  "schema": "p7x-repair4-acceptance-v1",
+  "identity": {
+    "run_id": "r2-c19-phy0-20261022T132626Z",
+    "case_id": "B0",
+    "attempt_id": "1"
+  },
+  "EVIDENCE_INTEGRITY": "PASS",
+  "HOST_CONTRACTS": "PASS",
+  "DEVICE_FUNCTIONAL_GATES": {
+    "B0": "PASS"
+  },
+  "DEVICE_EVIDENCE_LEVELS": {
+    "operator_boundary": "PASS",
+    "task_internal": "OPEN",
+    "physical_read": "OPEN",
+    "completion_and_effective_generation": "OPEN"
+  },
+  "NUMERIC_GATES": {
+    "draft_output": "OPEN",
+    "target_output": "OPEN",
+    "G4_full_target": "OPEN"
+  },
+  "PRODUCER_STATUS": {
+    "G4F": "BLOCKED",
+    "checker": "SUPPLIED_EVIDENCE_ONLY",
+    "producer": "tools/p7x_graph_repair4_target.py",
+    "live_aligned_pair": "NOT_VERIFIED",
+    "reason": "See target.py for the actual forward checkpoint producer; live aligned pair NOT_VERIFIED here."
+  },
+  "OUTPUT_EVIDENCE": {
+    "draft_hashes": "OPEN",
+    "draft_hash_count": 0,
+    "target_hashes": "OPEN",
+    "target_hash_count": 0,
+    "records": [
+      {
+        "generation_id": 0,
+        "mapping_epoch": 0,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 1,
+        "mapping_epoch": 1,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 2,
+        "mapping_epoch": 2,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 3,
+        "mapping_epoch": 3,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 4,
+        "mapping_epoch": 4,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 5,
+        "mapping_epoch": 5,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 6,
+        "mapping_epoch": 6,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 7,
+        "mapping_epoch": 7,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 8,
+        "mapping_epoch": 8,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 9,
+        "mapping_epoch": 9,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 10,
+        "mapping_epoch": 10,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 11,
+        "mapping_epoch": 11,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 12,
+        "mapping_epoch": 12,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 13,
+        "mapping_epoch": 13,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 14,
+        "mapping_epoch": 14,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 15,
+        "mapping_epoch": 15,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 16,
+        "mapping_epoch": 16,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 17,
+        "mapping_epoch": 17,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 18,
+        "mapping_epoch": 18,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 19,
+        "mapping_epoch": 19,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      },
+      {
+        "generation_id": 20,
+        "mapping_epoch": 20,
+        "output_status": null,
+        "output_reason": null,
+        "draft_output_status": "OUTPUT_NOT_CAPTURED",
+        "draft_output_reason": "GRAPH_MANAGER_RETURNS_NONE",
+        "target_output_status": "OUTPUT_NOT_CAPTURED",
+        "target_output_reason": "TARGET_OUTPUT_NOT_SUPPLIED"
+      }
+    ],
+    "numeric_reason": "Missing/null hashes remain OPEN; even present hashes alone do not establish aligned numeric comparison."
+  },
+  "HOST_OBSERVATIONS": {
+    "normal_outputs": {
+      "status": "PASS",
+      "batches": 3,
+      "request_counts": [
+        1,
+        2,
+        4
+      ]
+    },
+    "runtime_replays": {
+      "status": "PASS",
+      "replay_counts": {
+        "1,7": 7,
+        "2,14": 7,
+        "4,28": 7
+      }
+    },
+    "retirement": {
+      "status": "PASS",
+      "generations": 21,
+      "scope": "host proposal retirement only"
+    }
+  },
+  "errors": [],
+  "missing": [],
+  "repair2_audit": {
+    "EVIDENCE_INTEGRITY": "PASS",
+    "HOST_CONTRACTS": "PASS",
+    "DEVICE_FUNCTIONAL_GATES": {
+      "fixed_inventory_replay": "PASS",
+      "G2_A_B_A": "OPEN",
+      "G4_controlled_target_numeric": "OPEN"
+    },
+    "DEVICE_EVIDENCE_LEVELS": {
+      "operator_boundary": "PASS",
+      "task_internal": "OPEN",
+      "physical_read": "OPEN",
+      "completion_and_effective_generation": "OPEN"
+    },
+    "errors": [],
+    "missing": [],
+    "scope": "No device trace inference from Python records; public Graph gate remains frozen",
+    "actual_replay_buckets": [
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        14
+      ],
+      [
+        4,
+        28
+      ]
+    ],
+    "required_replay_buckets": [
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        14
+      ],
+      [
+        4,
+        28
+      ]
+    ],
+    "missing_replay_buckets": [],
+    "missing_inventory_buckets": [],
+    "independent_oracle_rows": [
+      {
+        "generation": [
+          0,
+          0,
+          "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 12,
+        "S": 0,
+        "E": 12,
+        "V": 12,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          1,
+          1,
+          "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 16,
+        "S": 0,
+        "E": 16,
+        "V": 16,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          2,
+          2,
+          "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 18,
+        "S": 0,
+        "E": 18,
+        "V": 18,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          3,
+          3,
+          "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 20,
+        "S": 0,
+        "E": 20,
+        "V": 20,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          4,
+          4,
+          "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 24,
+        "S": 0,
+        "E": 24,
+        "V": 24,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          5,
+          5,
+          "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 26,
+        "S": 0,
+        "E": 26,
+        "V": 26,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          6,
+          6,
+          "mode=FULL;reqs=1;tokens=7;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 28,
+        "S": 0,
+        "E": 28,
+        "V": 28,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          7,
+          7,
+          "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 12,
+        "S": 0,
+        "E": 12,
+        "V": 12,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          7,
+          7,
+          "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 1,
+        "H": 12,
+        "S": 0,
+        "E": 12,
+        "V": 12,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          8,
+          8,
+          "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 16,
+        "S": 0,
+        "E": 16,
+        "V": 16,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          8,
+          8,
+          "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 1,
+        "H": 16,
+        "S": 0,
+        "E": 16,
+        "V": 16,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          9,
+          9,
+          "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 18,
+        "S": 0,
+        "E": 18,
+        "V": 18,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          9,
+          9,
+          "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 1,
+        "H": 18,
+        "S": 0,
+        "E": 18,
+        "V": 18,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          10,
+          10,
+          "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 20,
+        "S": 0,
+        "E": 20,
+        "V": 20,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          10,
+          10,
+          "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 1,
+        "H": 20,
+        "S": 0,
+        "E": 20,
+        "V": 20,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          11,
+          11,
+          "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 24,
+        "S": 0,
+        "E": 24,
+        "V": 24,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          11,
+          11,
+          "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 1,
+        "H": 24,
+        "S": 0,
+        "E": 24,
+        "V": 24,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          12,
+          12,
+          "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 26,
+        "S": 0,
+        "E": 26,
+        "V": 26,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          12,
+          12,
+          "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 1,
+        "H": 26,
+        "S": 0,
+        "E": 26,
+        "V": 26,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          13,
+          13,
+          "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 28,
+        "S": 0,
+        "E": 28,
+        "V": 28,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          13,
+          13,
+          "mode=FULL;reqs=2;tokens=14;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 1,
+        "H": 28,
+        "S": 0,
+        "E": 28,
+        "V": 28,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          14,
+          14,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 12,
+        "S": 0,
+        "E": 12,
+        "V": 12,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          14,
+          14,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 1,
+        "H": 12,
+        "S": 0,
+        "E": 12,
+        "V": 12,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          14,
+          14,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 2,
+        "H": 12,
+        "S": 0,
+        "E": 12,
+        "V": 12,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          14,
+          14,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 3,
+        "H": 12,
+        "S": 0,
+        "E": 12,
+        "V": 12,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          15,
+          15,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 16,
+        "S": 0,
+        "E": 16,
+        "V": 16,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          15,
+          15,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 1,
+        "H": 16,
+        "S": 0,
+        "E": 16,
+        "V": 16,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          15,
+          15,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 2,
+        "H": 16,
+        "S": 0,
+        "E": 16,
+        "V": 16,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          15,
+          15,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 3,
+        "H": 16,
+        "S": 0,
+        "E": 16,
+        "V": 16,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          16,
+          16,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 18,
+        "S": 0,
+        "E": 18,
+        "V": 18,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          16,
+          16,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 1,
+        "H": 18,
+        "S": 0,
+        "E": 18,
+        "V": 18,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          16,
+          16,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 2,
+        "H": 18,
+        "S": 0,
+        "E": 18,
+        "V": 18,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          16,
+          16,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 3,
+        "H": 18,
+        "S": 0,
+        "E": 18,
+        "V": 18,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          17,
+          17,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 20,
+        "S": 0,
+        "E": 20,
+        "V": 20,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          17,
+          17,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 1,
+        "H": 20,
+        "S": 0,
+        "E": 20,
+        "V": 20,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          17,
+          17,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 2,
+        "H": 20,
+        "S": 0,
+        "E": 20,
+        "V": 20,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          17,
+          17,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 3,
+        "H": 20,
+        "S": 0,
+        "E": 20,
+        "V": 20,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          18,
+          18,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 24,
+        "S": 0,
+        "E": 24,
+        "V": 24,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          18,
+          18,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 1,
+        "H": 24,
+        "S": 0,
+        "E": 24,
+        "V": 24,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          18,
+          18,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 2,
+        "H": 24,
+        "S": 0,
+        "E": 24,
+        "V": 24,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          18,
+          18,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 3,
+        "H": 24,
+        "S": 0,
+        "E": 24,
+        "V": 24,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          19,
+          19,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 26,
+        "S": 0,
+        "E": 26,
+        "V": 26,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          19,
+          19,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 1,
+        "H": 26,
+        "S": 0,
+        "E": 26,
+        "V": 26,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          19,
+          19,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 2,
+        "H": 26,
+        "S": 0,
+        "E": 26,
+        "V": 26,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          19,
+          19,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 3,
+        "H": 26,
+        "S": 0,
+        "E": 26,
+        "V": 26,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          20,
+          20,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 0,
+        "H": 28,
+        "S": 0,
+        "E": 28,
+        "V": 28,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          20,
+          20,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 1,
+        "H": 28,
+        "S": 0,
+        "E": 28,
+        "V": 28,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          20,
+          20,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 2,
+        "H": 28,
+        "S": 0,
+        "E": 28,
+        "V": 28,
+        "columns": [
+          0
+        ]
+      },
+      {
+        "generation": [
+          20,
+          20,
+          "mode=FULL;reqs=4;tokens=28;uniform=7;max_query=None;loras=0;ubatches=1"
+        ],
+        "row": 3,
+        "H": 28,
+        "S": 0,
+        "E": 28,
+        "V": 28,
+        "columns": [
+          0
+        ]
+      }
+    ],
+    "HOST_A_B_A_CONTENT": "OPEN"
+  },
+  "actual_replay_buckets": [
+    [
+      1,
+      7
+    ],
+    [
+      2,
+      14
+    ],
+    [
+      4,
+      28
+    ]
+  ],
+  "required_replay_buckets": [
+    [
+      1,
+      7
+    ],
+    [
+      2,
+      14
+    ],
+    [
+      4,
+      28
+    ]
+  ],
+  "missing_replay_buckets": []
+}

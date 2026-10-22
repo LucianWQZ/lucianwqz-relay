@@ -1,0 +1,26 @@
+[
+  {
+    "case": "ABORT_before_replay",
+    "old": "INCOMPLETE_COVERAGE",
+    "new": "SCOPED_COMMANDS_ACCEPTED",
+    "checker_rc": 0
+  },
+  {
+    "case": "ABORT_after_replay",
+    "old": "INCOMPLETE_COVERAGE",
+    "new": "SCOPED_COMMANDS_ACCEPTED",
+    "checker_rc": 0
+  },
+  {
+    "case": "ABORT_after_update",
+    "old": "INCOMPLETE_COVERAGE",
+    "new": "SCOPED_COMMANDS_ACCEPTED",
+    "checker_rc": 0
+  },
+  {
+    "case": "ABORT_after_completion",
+    "old": "INCOMPLETE_COVERAGE",
+    "new": "SCOPED_COMMANDS_ACCEPTED",
+    "checker_rc": 0
+  }
+]

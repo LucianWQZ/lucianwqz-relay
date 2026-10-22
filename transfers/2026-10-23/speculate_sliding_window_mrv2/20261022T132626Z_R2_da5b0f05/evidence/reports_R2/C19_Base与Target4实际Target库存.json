@@ -1,0 +1,96 @@
+{
+  "observed_utc": "2026-10-22T17:38:27.913712+00:00",
+  "cases": {
+    "B0": {
+      "source_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+      "case_id": "B0",
+      "profile": "base",
+      "config_sha256": "dc886e67ca934aac4484e3eeba0e2d513e5e2072b705e351abfe63f7064fa80d",
+      "target_inventory": {
+        "descriptors": [
+          {
+            "mode": "FULL",
+            "num_reqs": 2,
+            "num_tokens": 16,
+            "uniform_token_count": 8
+          },
+          {
+            "mode": "FULL",
+            "num_reqs": 1,
+            "num_tokens": 8,
+            "uniform_token_count": 8
+          }
+        ],
+        "graphs": [
+          {
+            "mode": "FULL",
+            "num_reqs": 2,
+            "num_tokens": 16,
+            "uniform_token_count": 8
+          },
+          {
+            "mode": "FULL",
+            "num_reqs": 1,
+            "num_tokens": 8,
+            "uniform_token_count": 8
+          }
+        ]
+      },
+      "campaign_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/B0/campaign.json",
+      "campaign_sha256": "75b7ff59daa7364c2ad9ecc672112cd9e49642f89ac00e605aec09d9e9e4bc5c"
+    },
+    "NUMERIC_TARGET4": {
+      "source_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+      "case_id": "NUMERIC_TARGET4",
+      "profile": "target4",
+      "config_sha256": "b25498192decee98f90a7f651877a95beed46d086b4df55894565c9c7d53e025",
+      "target_inventory": {
+        "descriptors": [
+          {
+            "mode": "FULL",
+            "num_reqs": 4,
+            "num_tokens": 32,
+            "uniform_token_count": 8
+          },
+          {
+            "mode": "FULL",
+            "num_reqs": 2,
+            "num_tokens": 16,
+            "uniform_token_count": 8
+          },
+          {
+            "mode": "FULL",
+            "num_reqs": 1,
+            "num_tokens": 8,
+            "uniform_token_count": 8
+          }
+        ],
+        "graphs": [
+          {
+            "mode": "FULL",
+            "num_reqs": 4,
+            "num_tokens": 32,
+            "uniform_token_count": 8
+          },
+          {
+            "mode": "FULL",
+            "num_reqs": 2,
+            "num_tokens": 16,
+            "uniform_token_count": 8
+          },
+          {
+            "mode": "FULL",
+            "num_reqs": 1,
+            "num_tokens": 8,
+            "uniform_token_count": 8
+          }
+        ]
+      },
+      "campaign_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4/campaign.json",
+      "campaign_sha256": "01c4f2a093cf04eac252f927ce734578b7d6421c5b0e0402a5d24d53a02df2ee"
+    }
+  },
+  "scope": "actual separate profiles in C19; Base B0 validates Draft contracts only, not Full Target4; no extra Eager fallback implemented",
+  "base_full_target": "NOT_CLOSED_MISSING_TARGET_4_32",
+  "extension_target_profile": "TARGET4 independent; does not rename Base result"
+}

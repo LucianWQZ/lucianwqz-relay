@@ -1,0 +1,455 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <meta name="search_title" content="">
+ </head>
+ <body>
+  <a name="EN-US_TOPIC_0000002635948420"></a><a name="EN-US_TOPIC_0000002635948420"></a>
+  <h1 class="topictitle1">Task Update</h1>
+  <div id="body0000002635948420">
+   <p id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_p1444163415520">After the tasks in the stream are captured and temporarily stored in the model, you can update the tasks (including the tasks themselves and task parameter information) in either of the following ways:</p>
+   <ol id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_ol20584103811135">
+    <li id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_li15767412142713"><strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b56759472351243">Method 1</strong>: Use the task to be updated for demarcation. Capture the tasks before and after that task between <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b12500359202917">aclmdlRICaptureBegin</strong> and <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b1959447143016">aclmdlRICaptureEnd</strong>, and temporarily store the tasks in different models for separate execution.
+     <p id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_p2017461419279">This method is suitable for scenarios where a large number of tasks need to be updated (for example, a model has inputs of two types of shapes). The API call logic is simple, but the number of models that temporarily store captured tasks is increasing. If the number of models exceeds the hardware resource limit, an error is reported.</p>
+     <p id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_p1941541872812">The following figure shows the basic process of this method.</p>
+     <p id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_p1631202762814"><span><img class="imgResize" id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_image12583162123516" src="figure/en-us_image_0000002666262507.png" title="Click to enlarge"></span></p></li>
+    <li id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_li13846037162818"><strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b102175556311">Method 2</strong>: Deliver the tasks to be captured in the main stream between the <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b35151416153215">aclmdlRICaptureBegin</strong> and <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b175711023133211">aclmdlRICaptureEnd</strong>. Use <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b181051033103219">aclmdlRICaptureTaskGrpBegin</strong> and <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b1761125023214">aclmdlRICaptureTaskGrpEnd</strong> to mark the tasks to be captured in a task group, return the handle of the task group, and update the tasks between <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b9714203493317">aclmdlRICaptureTaskUpdateBegin</strong> and <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b1448245133316">aclmdlRICaptureTaskUpdateEnd</strong>.
+     <p id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_p0281839102816">This method is suitable for the scenario where a small number of single-operator call tasks need to be updated. You can update tasks and then execute the tasks in the model instance in sequence, or update the tasks and execute other tasks in the model instance concurrently. However, updating tasks is more time-consuming than delivering tasks separately. In addition, there are some restrictions: The number and types of tasks between <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b3939543163512">aclmdlRICaptureTaskGrpBegin</strong> and <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b26452498351">aclmdlRICaptureTaskGrpEnd</strong> must be the same as those between <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b193249711369">aclmdlRICaptureTaskUpdateBegin</strong> and <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b72781420193614">aclmdlRICaptureTaskUpdateEnd</strong>. In the cross-stream task capture scenario, tasks cannot be delivered to streams in other capture states at the same time between <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b1407559163616">aclmdlRICaptureTaskGrpBegin</strong> and <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b154191812193717">aclmdlRICaptureTaskGrpEnd</strong>. A task group is similar to a critical resource and does not support concurrent update of multiple threads and streams. Otherwise, the update result may be unexpected.</p>
+     <ul id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_ul7613142719218">
+      <li id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_li1361362717215">The following figure shows the process of updating tasks and then executing tasks in the <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b4838246141218">aclmdlRI</strong> instance in sequence.
+       <p id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_p522715503019"><span><img class="imgResize" id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_image6227195013013" src="figure/en-us_image_0000002666262505.png" title="Click to enlarge"></span></p></li>
+     </ul>
+     <ul id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_ul14618123942114">
+      <li id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_li8618113982112">The following figure shows the process of updating tasks and executing other tasks concurrently.
+       <p id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_p18283172117914"><a name="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_li8618113982112"></a><a name="en-us_topic_0000002635943444_li8618113982112"></a>If a large number of tasks exist in the running instance of the model, you can use an external event to update tasks and execute other tasks concurrently to improve performance. In addition, you need to create a stream (UpdateStream) for updating tasks. The external event refers to the event that is created through <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b1095172714013">aclrtCreateEventWithFlag</strong>, with the flag set to <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b21113649951243">ACL_EVENT_EXTERNAL</strong>. This type of event cannot be used for cross-stream task capture, and their specifications are limited. For this reason, you need to properly reuse this type of event. After creating an external event, deliver an update task in UpdateStream, and then call <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b1634825184113">aclrtRecordEvent</strong> to deliver an Event Record task. Then, in the main stream, call <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b19561184219410">aclrtStreamWaitEvent</strong> to deliver an Event Wait task before the task to be updated, to wait for the task update in UpdateStream to complete. Finally, in the main stream, call <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b2416312434">aclrtStreamWaitEvent</strong> and then <strong id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_b48719894315">aclrtResetEvent</strong> to reset the external event.</p>
+       <p id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_p185904834215"><span><img class="imgResize" id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_image126391222504" src="figure/en-us_image_0000002666222573.png" title="Click to enlarge"></span></p>
+       <p id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_p1949751014211"></p>
+       <p id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_p12541115841511">The following is the sample code for updating the input parameters of the aclnnAdd operator in the concurrent task execution scenario:</p>
+       <div class="codecoloring" codetype="Cpp" id="EN-US_TOPIC_0000002635948420__en-us_topic_0000002635943444_screen122301754125717">
+        <div class="highlight">
+         <table class="highlighttable">
+          <tbody>
+           <tr>
+            <td class="linenos">
+             <div class="linenodiv">
+              <pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span></pre>
+             </div></td>
+            <td class="code">
+             <div>
+              <pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"acl/acl.h"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"aclnnop/aclnn_add.h"</span>
+
+<span class="cp">#define ACL_LOG(fmt, args...) fprintf(stdout, "[INFO]  " fmt "\n", ##args)</span>
+
+<span class="kt">int64_t</span><span class="w"> </span><span class="nf">GetShapeSize</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">shape</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int64_t</span><span class="w"> </span><span class="n">shape_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">shape</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">shape_size</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">shape_size</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">CreateAclTensor</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">shape</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">**</span><span class="n">deviceAddr</span><span class="p">,</span>
+<span class="w">    </span><span class="n">aclDataType</span><span class="w"> </span><span class="n">dataType</span><span class="p">,</span><span class="w"> </span><span class="n">aclTensor</span><span class="w"> </span><span class="o">**</span><span class="n">tensor</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetShapeSize</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Allocate the device memory.</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aclrtMalloc</span><span class="p">(</span><span class="n">deviceAddr</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="n">ACL_MEM_MALLOC_HUGE_FIRST</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Compute the strides of the contiguous tensor.</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">strides</span><span class="p">(</span><span class="n">shape</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int64_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shape</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">strides</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shape</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">strides</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// Call aclCreateTensor to create an aclTensor.</span>
+<span class="w">    </span><span class="o">*</span><span class="n">tensor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aclCreateTensor</span><span class="p">(</span><span class="n">shape</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span>
+<span class="w">        </span><span class="n">shape</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span>
+<span class="w">        </span><span class="n">dataType</span><span class="p">,</span>
+<span class="w">        </span><span class="n">strides</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span>
+<span class="w">        </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="n">aclFormat</span><span class="o">::</span><span class="n">ACL_FORMAT_ND</span><span class="p">,</span>
+<span class="w">        </span><span class="n">shape</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span>
+<span class="w">        </span><span class="n">shape</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span>
+<span class="w">        </span><span class="o">*</span><span class="n">deviceAddr</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">devID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">self_d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">other_d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">out_d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">outtmp_d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="n">aclTensor</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="n">aclTensor</span><span class="w"> </span><span class="o">*</span><span class="n">other</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="n">aclScalar</span><span class="w"> </span><span class="o">*</span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="n">aclScalar</span><span class="w"> </span><span class="o">*</span><span class="n">updatealpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="n">aclTensor</span><span class="w"> </span><span class="o">*</span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="n">aclTensor</span><span class="w"> </span><span class="o">*</span><span class="n">outtmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/* aclnnAdd: self = self  +  other * alpha */</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">self_h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">other_h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">shape</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">};</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">out_h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">alphaValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.1f</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">updatealphaValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.5f</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">workspaceSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">workspaceSize1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">workspaceSize2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">aclOpExecutor</span><span class="w"> </span><span class="o">*</span><span class="n">executor2</span><span class="p">;</span>
+<span class="w">    </span><span class="n">aclOpExecutor</span><span class="w"> </span><span class="o">*</span><span class="n">executor</span><span class="p">;</span>
+<span class="w">    </span><span class="n">aclOpExecutor</span><span class="w"> </span><span class="o">*</span><span class="n">executor1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetShapeSize</span><span class="p">(</span><span class="n">shape</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Perform initialization.</span>
+<span class="w">    </span><span class="n">aclInit</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Specify the compute device.</span>
+<span class="w">    </span><span class="n">aclrtSetDevice</span><span class="p">(</span><span class="n">devID</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Prepare the input and output parameters of the aclnnAdd operator.</span>
+<span class="w">    </span><span class="n">CreateAclTensor</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">self_d</span><span class="p">,</span><span class="w"> </span><span class="n">aclDataType</span><span class="o">::</span><span class="n">ACL_FLOAT</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">self</span><span class="p">);</span>
+<span class="w">    </span><span class="n">CreateAclTensor</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">other_d</span><span class="p">,</span><span class="w"> </span><span class="n">aclDataType</span><span class="o">::</span><span class="n">ACL_FLOAT</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">other</span><span class="p">);</span>
+<span class="w">    </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aclCreateScalar</span><span class="p">(</span><span class="o">&amp;</span><span class="n">alphaValue</span><span class="p">,</span><span class="w"> </span><span class="n">aclDataType</span><span class="o">::</span><span class="n">ACL_FLOAT</span><span class="p">);</span>
+<span class="w">    </span><span class="n">updatealpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aclCreateScalar</span><span class="p">(</span><span class="o">&amp;</span><span class="n">updatealphaValue</span><span class="p">,</span><span class="w"> </span><span class="n">aclDataType</span><span class="o">::</span><span class="n">ACL_FLOAT</span><span class="p">);</span>
+<span class="w">    </span><span class="n">CreateAclTensor</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">out_d</span><span class="p">,</span><span class="w"> </span><span class="n">aclDataType</span><span class="o">::</span><span class="n">ACL_FLOAT</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">out</span><span class="p">);</span>
+<span class="w">    </span><span class="n">CreateAclTensor</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">outtmp_d</span><span class="p">,</span><span class="w"> </span><span class="n">aclDataType</span><span class="o">::</span><span class="n">ACL_FLOAT</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">outtmp</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Call the first-phase API of the aclnnAdd operator to obtain the workspace size required for operator computation and the executor that contains the operator computation process.</span>
+<span class="w">    </span><span class="c1">// If aclnnAdd is called multiple times, the first-phase API needs to be called multiple times to obtain different aclOpExecutors.</span>
+<span class="w">    </span><span class="c1">// outtmp = self + alpha * other</span>
+<span class="w">    </span><span class="c1">// Before the update: out = outtmp + alpha * other  After the update: out = outtmp + updatealpha * other</span>
+<span class="w">    </span><span class="n">aclnnAddGetWorkspaceSize</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">other</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="p">,</span><span class="w"> </span><span class="n">outtmp</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">workspaceSize</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">executor</span><span class="p">);</span>
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">workspaceAddr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">workspaceSize</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">aclrtMalloc</span><span class="p">(</span><span class="o">&amp;</span><span class="n">workspaceAddr</span><span class="p">,</span><span class="w"> </span><span class="n">workspaceSize</span><span class="p">,</span><span class="w"> </span><span class="n">ACL_MEM_MALLOC_HUGE_FIRST</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// Before the update: out = outtmp + alpha * other</span>
+<span class="w">    </span><span class="n">aclnnAddGetWorkspaceSize</span><span class="p">(</span><span class="n">outtmp</span><span class="p">,</span><span class="w"> </span><span class="n">other</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="p">,</span><span class="w"> </span><span class="n">out</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">workspaceSize1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">executor1</span><span class="p">);</span>
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">workspaceAddr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">workspaceSize1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">aclrtMalloc</span><span class="p">(</span><span class="o">&amp;</span><span class="n">workspaceAddr1</span><span class="p">,</span><span class="w"> </span><span class="n">workspaceSize1</span><span class="p">,</span><span class="w"> </span><span class="n">ACL_MEM_MALLOC_HUGE_FIRST</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// After the update: out = outtmp + updatealpha * other</span>
+<span class="w">    </span><span class="n">aclnnAddGetWorkspaceSize</span><span class="p">(</span><span class="n">outtmp</span><span class="p">,</span><span class="w"> </span><span class="n">other</span><span class="p">,</span><span class="w"> </span><span class="n">updatealpha</span><span class="p">,</span><span class="w"> </span><span class="n">out</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">workspaceSize2</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">executor2</span><span class="p">);</span>
+<span class="w">	</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">workspaceAddr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">workspaceSize2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">aclrtMalloc</span><span class="p">(</span><span class="o">&amp;</span><span class="n">workspaceAddr2</span><span class="p">,</span><span class="w"> </span><span class="n">workspaceSize2</span><span class="p">,</span><span class="w"> </span><span class="n">ACL_MEM_MALLOC_HUGE_FIRST</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">	</span>
+<span class="w">    </span><span class="c1">// Allocate page-locked memory by using aclrtMallocHost.</span>
+<span class="w">    </span><span class="n">aclrtMallocHost</span><span class="p">((</span><span class="kt">void</span><span class="w"> </span><span class="o">**</span><span class="p">)</span><span class="o">&amp;</span><span class="n">self_h</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">));</span>
+<span class="w">    </span><span class="n">aclrtMallocHost</span><span class="p">((</span><span class="kt">void</span><span class="w"> </span><span class="o">**</span><span class="p">)</span><span class="o">&amp;</span><span class="n">other_h</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">));</span>
+<span class="w">    </span><span class="n">aclrtMallocHost</span><span class="p">((</span><span class="kt">void</span><span class="w"> </span><span class="o">**</span><span class="p">)</span><span class="o">&amp;</span><span class="n">out_h</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">));</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">self_h</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">other_h</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">out_h</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">aclmdlRI</span><span class="w"> </span><span class="n">modelRI</span><span class="p">;</span>
+<span class="w">    </span><span class="n">aclrtStream</span><span class="w"> </span><span class="n">stream1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">aclrtCreateStream</span><span class="p">(</span><span class="o">&amp;</span><span class="n">stream1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">aclrtEvent</span><span class="w"> </span><span class="n">event</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Create an external event.</span>
+<span class="w">    </span><span class="n">aclrtCreateEventWithFlag</span><span class="p">(</span><span class="o">&amp;</span><span class="n">event</span><span class="p">,</span><span class="w"> </span><span class="n">ACL_EVENT_EXTERNAL</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// ====== ==Start the capture task.========</span>
+<span class="w">    </span><span class="n">aclmdlRICaptureBegin</span><span class="p">(</span><span class="n">stream1</span><span class="p">,</span><span class="w"> </span><span class="n">ACL_MODEL_RI_CAPTURE_MODE_GLOBAL</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Asynchronous copy, which is used to copy the input data of the self parameter of the aclnnAdd operator from the host to the device</span>
+<span class="w">    </span><span class="n">aclrtMemcpyAsync</span><span class="p">(</span><span class="n">self_d</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">),</span><span class="w"> </span><span class="n">self_h</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">),</span><span class="w"> </span><span class="n">ACL_MEMCPY_HOST_TO_DEVICE</span><span class="p">,</span><span class="w"> </span><span class="n">stream1</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Asynchronous copy, which is used to copy the input data of the other parameter of the aclnnAdd operator from the host to the device</span>
+<span class="w">    </span><span class="n">aclrtMemcpyAsync</span><span class="p">(</span><span class="n">other_d</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">),</span><span class="w"> </span><span class="n">other_h</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">),</span><span class="w"> </span><span class="n">ACL_MEMCPY_HOST_TO_DEVICE</span><span class="p">,</span><span class="w"> </span><span class="n">stream1</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Execute the aclnnAdd operator.</span>
+<span class="w">    </span><span class="n">aclnnAdd</span><span class="p">(</span><span class="n">workspaceAddr</span><span class="p">,</span><span class="w"> </span><span class="n">workspaceSize</span><span class="p">,</span><span class="w"> </span><span class="n">executor</span><span class="p">,</span><span class="w"> </span><span class="n">stream1</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Deliver an Event Wait task in the main stream (stream 1) to wait for the update task to complete.</span>
+<span class="w">    </span><span class="n">aclrtStreamWaitEvent</span><span class="p">(</span><span class="n">stream1</span><span class="p">,</span><span class="w"> </span><span class="n">event</span><span class="p">);</span>
+<span class="w">    </span><span class="n">aclrtResetEvent</span><span class="p">(</span><span class="n">event</span><span class="p">,</span><span class="w"> </span><span class="n">stream1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">aclrtTaskGrp</span><span class="w"> </span><span class="n">handle</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// Mark the task to be updated.</span>
+<span class="w">    </span><span class="n">aclmdlRICaptureTaskGrpBegin</span><span class="p">(</span><span class="n">stream1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">aclnnAdd</span><span class="p">(</span><span class="n">workspaceAddr1</span><span class="p">,</span><span class="w"> </span><span class="n">workspaceSize1</span><span class="p">,</span><span class="w"> </span><span class="n">executor1</span><span class="p">,</span><span class="w"> </span><span class="n">stream1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">aclmdlRICaptureTaskGrpEnd</span><span class="p">(</span><span class="n">stream1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">handle</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Asynchronous copy, which is used to copy the output data of the operator from the device to the host</span>
+<span class="w">    </span><span class="n">aclrtMemcpyAsync</span><span class="p">(</span><span class="n">out_h</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">),</span><span class="w"> </span><span class="n">out_d</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">float</span><span class="p">),</span><span class="w"> </span><span class="n">ACL_MEMCPY_DEVICE_TO_HOST</span><span class="p">,</span><span class="w"> </span><span class="n">stream1</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// ====== ==End the capture task.========</span>
+<span class="w">    </span><span class="n">aclmdlRICaptureEnd</span><span class="p">(</span><span class="n">stream1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">modelRI</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">aclrtStream</span><span class="w"> </span><span class="n">updateStream</span><span class="p">;</span>
+<span class="w">    </span><span class="n">aclrtCreateStream</span><span class="p">(</span><span class="o">&amp;</span><span class="n">updateStream</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ACL_LOG</span><span class="p">(</span><span class="s">"execute model, loop: %d"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="w">        </span><span class="n">aclmdlRIExecuteAsync</span><span class="p">(</span><span class="n">modelRI</span><span class="p">,</span><span class="w"> </span><span class="n">stream1</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// Start the update task and update the alpha parameter of the aclnnAdd operator to updatealpha.</span>
+<span class="w">        </span><span class="n">aclmdlRICaptureTaskUpdateBegin</span><span class="p">(</span><span class="n">updateStream</span><span class="p">,</span><span class="w"> </span><span class="n">handle</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">aclnnAdd</span><span class="p">(</span><span class="n">workspaceAddr2</span><span class="p">,</span><span class="w"> </span><span class="n">workspaceSize2</span><span class="p">,</span><span class="w"> </span><span class="n">executor2</span><span class="p">,</span><span class="w"> </span><span class="n">updateStream</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ACL_LOG</span><span class="p">(</span><span class="s">"update alpha value of aclnnAdd"</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">aclmdlRICaptureTaskUpdateEnd</span><span class="p">(</span><span class="n">updateStream</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// After the update task is complete, deliver an Event Record task in UpdateStream to notify the main stream (stream 1) to continue with the tasks following the Event Wait task.</span>
+<span class="w">        </span><span class="n">aclrtRecordEvent</span><span class="p">(</span><span class="n">event</span><span class="p">,</span><span class="w"> </span><span class="n">updateStream</span><span class="p">);</span>
+<span class="w">        </span><span class="n">aclrtSynchronizeStream</span><span class="p">(</span><span class="n">updateStream</span><span class="p">);</span><span class="w">		</span>
+<span class="w">        </span><span class="n">aclrtSynchronizeStream</span><span class="p">(</span><span class="n">stream1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">ACL_LOG</span><span class="p">(</span><span class="s">"%f %f %f %f %f %f %f %f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span>
+<span class="w">            </span><span class="n">out_h</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+<span class="w">            </span><span class="n">out_h</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+<span class="w">            </span><span class="n">out_h</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+<span class="w">            </span><span class="n">out_h</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+<span class="w">            </span><span class="n">out_h</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span>
+<span class="w">            </span><span class="n">out_h</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span>
+<span class="w">            </span><span class="n">out_h</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span>
+<span class="w">            </span><span class="n">out_h</span><span class="p">[</span><span class="mi">7</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Free resources.</span>
+<span class="w">    </span><span class="n">aclmdlRIDestroy</span><span class="p">(</span><span class="n">modelRI</span><span class="p">);</span>
+<span class="w">    </span><span class="n">aclDestroyTensor</span><span class="p">(</span><span class="n">self</span><span class="p">);</span>
+<span class="w">    </span><span class="n">aclDestroyTensor</span><span class="p">(</span><span class="n">other</span><span class="p">);</span>
+<span class="w">    </span><span class="n">aclDestroyTensor</span><span class="p">(</span><span class="n">out</span><span class="p">);</span>
+<span class="w">    </span><span class="n">aclDestroyTensor</span><span class="p">(</span><span class="n">outtmp</span><span class="p">);</span>
+<span class="w">    </span><span class="n">aclDestroyScalar</span><span class="p">(</span><span class="n">alpha</span><span class="p">);</span>
+<span class="w">    </span><span class="n">aclDestroyScalar</span><span class="p">(</span><span class="n">updatealpha</span><span class="p">);</span>
+<span class="w">    </span><span class="n">aclrtFree</span><span class="p">(</span><span class="n">self_d</span><span class="p">);</span>
+<span class="w">    </span><span class="n">aclrtFree</span><span class="p">(</span><span class="n">other_d</span><span class="p">);</span>
+<span class="w">    </span><span class="n">aclrtFree</span><span class="p">(</span><span class="n">out_d</span><span class="p">);</span>
+<span class="w">    </span><span class="n">aclrtFree</span><span class="p">(</span><span class="n">outtmp_d</span><span class="p">);</span>
+<span class="w">    </span><span class="n">aclrtDestroyStream</span><span class="p">(</span><span class="n">stream1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">aclrtDestroyStream</span><span class="p">(</span><span class="n">updateStream</span><span class="p">);</span>
+<span class="w">    </span><span class="n">aclrtDestroyEvent</span><span class="p">(</span><span class="n">event</span><span class="p">);</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">workspaceAddr</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">aclrtFree</span><span class="p">(</span><span class="n">workspaceAddr</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">workspaceAddr1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">aclrtFree</span><span class="p">(</span><span class="n">workspaceAddr1</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">workspaceAddr2</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">aclrtFree</span><span class="p">(</span><span class="n">workspaceAddr2</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w">	</span>
+<span class="w">    </span><span class="c1">// Free the resources of the compute device.</span>
+<span class="w">    </span><span class="n">aclrtResetDevice</span><span class="p">(</span><span class="n">devID</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Perform deinitialization.</span>
+<span class="w">    </span><span class="n">aclFinalize</span><span class="p">();</span>
+<span class="p">}</span>
+</pre>
+             </div></td>
+           </tr>
+          </tbody>
+         </table>
+        </div>
+       </div></li>
+     </ul></li>
+   </ol>
+  </div>
+  <div>
+   <div class="familylinks">
+    <div class="parentlink">
+     <strong>Parent topic:</strong> <a href="runtime_doc_dev_0029.html">ACL Graph</a>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

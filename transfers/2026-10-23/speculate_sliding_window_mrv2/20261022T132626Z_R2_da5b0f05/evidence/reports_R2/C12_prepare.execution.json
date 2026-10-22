@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/usr/local/python3.11.10/bin/python",
+    "-m",
+    "tools.p7x_graph_local_candidate",
+    "prepare",
+    "--repo",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C12_fixture/vllm-ascend",
+    "--vllm",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm",
+    "--inputs",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/inputs/inputs",
+    "--output",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C12_prepare_01",
+    "--host-evidence",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/state/R2_C12_HOST_EVIDENCE.json",
+    "--run-id",
+    "r2-c12-phy0-20261022T132626Z"
+  ],
+  "returncode": 0,
+  "start_ns": 1792676038974699420,
+  "end_ns": 1792676065090272790,
+  "log": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/C12_prepare.log"
+}

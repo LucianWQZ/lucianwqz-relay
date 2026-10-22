@@ -1,0 +1,5 @@
+{
+  "source_trace": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C15_prepare_01/PROFILE_ON_long_materialize/trace/node-39-101_261705_20261022230753190_ascend_pt/ASCEND_PROFILER_OUTPUT/trace_view.json",
+  "full_flow_table": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/profile_analysis_C15/PROFILE_ON_long_materialize/flow-analysis-module.json",
+  "selected_flows": []
+}

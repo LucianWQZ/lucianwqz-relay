@@ -1,0 +1,13 @@
+{
+  "observed_utc": "2026-10-22T17:52:53.805322+00:00",
+  "old_sha256": "1ecd46717e424bbae6ea8430ccd0520dae036e98988c7149eb25d83652ac43dd",
+  "new_sha256": "d092c1539b2c1e6ce2bdedabab984286465af8da2c6211df6aa77860c8b021c0",
+  "old_hash_confirmed_by_earlier_B0_execution": true,
+  "only_function_changed": "status_event",
+  "all_other_ast_identical": true,
+  "affected_case": "NUMERIC_SENTINEL",
+  "correction": "execution.json.supervisor_sha256 is current file hash measured at exit, not loaded-code attestation. Sentinel supervisor loaded pre-counter-fix version, matching earlier B0 hash; fixed candidate/committed runner/producer/checker and actual argv/imports did not change.",
+  "change_scope": "external offline reanalysis counter refresh only; no device operations, admission guards or runner argv affected",
+  "raw_records_unchanged": true,
+  "exact_prior_source_reconstructed_and_hash_matched": true
+}

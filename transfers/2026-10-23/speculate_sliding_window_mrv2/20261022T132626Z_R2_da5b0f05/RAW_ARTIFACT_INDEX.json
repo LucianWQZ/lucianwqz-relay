@@ -1,0 +1,224 @@
+{
+  "raw_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw",
+  "directories": [
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C12_campaign_01",
+      "files": 71,
+      "logical_bytes": 246956,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C12_prepare_01",
+      "files": 74,
+      "logical_bytes": 8410151,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C13_campaign_01",
+      "files": 99,
+      "logical_bytes": 285459,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C13_prepare_01",
+      "files": 102,
+      "logical_bytes": 9114688,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C14_prepare_01",
+      "files": 3,
+      "logical_bytes": 477346,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C15_campaign_01",
+      "files": 239,
+      "logical_bytes": 468677,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C15_prepare_01",
+      "files": 2842,
+      "logical_bytes": 5848676678,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C16_prepare_01",
+      "files": 3,
+      "logical_bytes": 494902,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C17_campaign_01",
+      "files": 99,
+      "logical_bytes": 309133,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C17_prepare_01",
+      "files": 3,
+      "logical_bytes": 496692,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C17_prepare_02",
+      "files": 533,
+      "logical_bytes": 653502982,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C18_prepare_01",
+      "files": 3,
+      "logical_bytes": 497037,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_campaign_01",
+      "files": 143,
+      "logical_bytes": 353334,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01",
+      "files": 2475,
+      "logical_bytes": 5487362452,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C12_attempt01",
+      "files": 186,
+      "logical_bytes": 4223255,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C13_attempt01",
+      "files": 241,
+      "logical_bytes": 5743594,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C13_retry02",
+      "files": 17,
+      "logical_bytes": 411399,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C15_attempt01",
+      "files": 125,
+      "logical_bytes": 3317118,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C15_followup02",
+      "files": 454,
+      "logical_bytes": 11065499,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C16_attempt01",
+      "files": 4,
+      "logical_bytes": 458,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C17_attempt01",
+      "files": 213,
+      "logical_bytes": 5884070,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01",
+      "files": 431,
+      "logical_bytes": 10267680,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/probe_phy0_01",
+      "files": 17,
+      "logical_bytes": 116088,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/probe_phy0_02",
+      "files": 14,
+      "logical_bytes": 89004,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/probe_phy0_03",
+      "files": 15,
+      "logical_bytes": 94097,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/probe_phy0_04",
+      "files": 14,
+      "logical_bytes": 85274,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/profile_analysis_C15",
+      "files": 9,
+      "logical_bytes": 57437773,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/profile_analysis_C17",
+      "files": 6,
+      "logical_bytes": 18559300,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/reanalysis_C12_ABORT_by_C13_01",
+      "files": 13,
+      "logical_bytes": 30380,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/target_join_C15_01",
+      "files": 5,
+      "logical_bytes": 25913,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/target_join_C19_01",
+      "files": 5,
+      "logical_bytes": 26285,
+      "retention": "SERVER_ONLY",
+      "hash_contract": "producer sample/chunk manifests and joint validations; profile trace SHA in Profiling Summary; no redundant full rehash"
+    }
+  ],
+  "server_originals_not_copied": true,
+  "model_weights_not_included": true
+}

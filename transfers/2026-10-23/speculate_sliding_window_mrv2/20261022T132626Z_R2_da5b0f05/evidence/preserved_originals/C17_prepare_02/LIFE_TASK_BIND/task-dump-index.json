@@ -1,0 +1,114 @@
+{
+  "schema": "repair8-native-graph-json-v2",
+  "identity": {
+    "run_id": "r2-c17-phy0-20261022T132626Z",
+    "case_id": "LIFE_TASK_BIND",
+    "driver_mode": "B",
+    "attempt_id": "1",
+    "source_sha": "057b8e0300967e68e3f2a78c5910c8877521674e",
+    "source_tree": "90584c0d92d99c447534d081e16fc05e76e2647e",
+    "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c",
+    "engine_id": 281455378802768,
+    "process_id": 301679
+  },
+  "records": [
+    {
+      "descriptor": [
+        1,
+        7
+      ],
+      "path": "native-graph-json/draft-1-7.json",
+      "last_life_generation": 6,
+      "last_life_epoch": 6,
+      "backing": {
+        "owner_id": 281454778094816,
+        "window_block_table": {
+          "storage_data_ptr": 20618011333632,
+          "data_ptr": 20618011333632,
+          "storage_offset": 0,
+          "shape": [
+            1,
+            32
+          ],
+          "stride": [
+            32,
+            1
+          ],
+          "dtype": "torch.int32",
+          "device": "npu:0"
+        },
+        "valid_num_blocks": {
+          "storage_data_ptr": 20618011334144,
+          "data_ptr": 20618011334144,
+          "storage_offset": 0,
+          "shape": [
+            1
+          ],
+          "stride": [
+            1
+          ],
+          "dtype": "torch.int32",
+          "device": "npu:0"
+        },
+        "device_window_exact": {
+          "storage_data_ptr": 20618011334656,
+          "data_ptr": 20618011334656,
+          "storage_offset": 0,
+          "shape": [
+            1
+          ],
+          "stride": [
+            1
+          ],
+          "dtype": "torch.int32",
+          "device": "npu:0"
+        },
+        "cpu_window_exact": {
+          "storage_data_ptr": 5281769661952,
+          "data_ptr": 5281769661952,
+          "storage_offset": 0,
+          "shape": [
+            1
+          ],
+          "stride": [
+            1
+          ],
+          "dtype": "torch.int32",
+          "device": "cpu"
+        },
+        "cpu_window_upper": {
+          "storage_data_ptr": 5281769662016,
+          "data_ptr": 5281769662016,
+          "storage_offset": 0,
+          "shape": [
+            1
+          ],
+          "stride": [
+            1
+          ],
+          "dtype": "torch.int32",
+          "device": "cpu"
+        }
+      },
+      "status": "EXPORT_FAILED",
+      "start_ns": 309886710319680,
+      "error": "ValueError('only one K/V tensor per FIA list supported')",
+      "end_ns": 309886715787780
+    }
+  ],
+  "status": "EXPORT_FAILED",
+  "source": "NPUGraph.debug_dump -> aclmdlRIDebugJsonPrint(flags=1)",
+  "collection_phase": "AFTER_ALL_DIAGNOSTIC_LIFE_DRAINS_AND_RETIREMENT",
+  "normal_timing": "NOT_REPRESENTATIVE",
+  "native_parameter_version": "UNRESOLVED_CAPTURE_VS_LAST_UPDATE",
+  "task_operand": "UNPROVEN_PENDING_FIELD_ANALYSIS",
+  "physical_read": "UNPROVEN",
+  "native_observation": {
+    "kernel_argument_d2h": "SYNCHRONOUS_DEVICE_TO_HOST_IN_CANN_VERBOSE_API",
+    "source_contract": "official Runtime v9.1.0 Stream::SetTraceKernelArgs -> Driver::MemCopySync",
+    "timing_scope": "AFTER_ALL_LIFE_DRAINS; NOT_NORMAL_PATH_OR_DEVICE_COMPLETION_PROOF",
+    "additional_host_capture_metadata": "NO_PYTHON_TENSOR_COPY_SYNC_OR_QUERY",
+    "native_json_ts_dur": "SYNTHETIC_LAYOUT_NOT_MEASURED_DEVICE_TIME"
+  },
+  "host_binding_scope": "AFTER_SUCCESSFUL_LIFE_DRAINS_METADATA_ONLY"
+}

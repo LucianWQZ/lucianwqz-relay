@@ -1,0 +1,42 @@
+{
+  "case_id": "C2",
+  "records": [
+    {
+      "argv": [
+        "/usr/local/python3.11.10/bin/python",
+        "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C19_native_tensor/vllm-ascend/tools/p7x_graph_repair4_fixture.py",
+        "run",
+        "--run-id",
+        "r2-c19-phy0-20261022T132626Z",
+        "--attempt",
+        "C2-1",
+        "--output",
+        "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/C2",
+        "--timeout",
+        "180"
+      ],
+      "pid": 315118,
+      "returncode": 0,
+      "signal": null,
+      "timeout": false,
+      "interrupted": false,
+      "owned_processes_terminated": [],
+      "elapsed_seconds": 19.069534940004814,
+      "max_rss_children": 2415832,
+      "status": "COMMAND_COMPLETED_NOT_GATE_PASS",
+      "kind": "launch"
+    }
+  ],
+  "dependency_satisfied": true,
+  "status": "SCOPED_COMMANDS_ACCEPTED",
+  "primary_failure": null,
+  "producer_status": "COMMAND_COMPLETED_NOT_GATE_PASS",
+  "artifact_status": "SEE_READ_ONLY_ACCEPTANCE_RECORDS",
+  "acceptance_status": "SCOPED_COMMANDS_ACCEPTED",
+  "dependency_status": "SATISFIED",
+  "source_identity": [
+    "r2-c19-phy0-20261022T132626Z",
+    "da5b0f054c4b94362ff3539de911b26b4074052a",
+    "af4519a635d6ccd70646f77195fde18368bdf22b"
+  ]
+}

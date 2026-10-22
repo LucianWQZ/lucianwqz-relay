@@ -1,0 +1,92 @@
+{
+  "pid": 317637,
+  "parent_pid": 317636,
+  "time_ns": 1792688109349142200,
+  "nodes": {
+    "/dev/davinci_manager": {
+      "major": 235,
+      "minor": 0
+    },
+    "/dev/davinci9": {
+      "major": 234,
+      "minor": 9
+    },
+    "/dev/davinci8": {
+      "major": 234,
+      "minor": 8
+    },
+    "/dev/davinci7": {
+      "major": 234,
+      "minor": 7
+    },
+    "/dev/davinci6": {
+      "major": 234,
+      "minor": 6
+    },
+    "/dev/davinci5": {
+      "major": 234,
+      "minor": 5
+    },
+    "/dev/davinci4": {
+      "major": 234,
+      "minor": 4
+    },
+    "/dev/davinci3": {
+      "major": 234,
+      "minor": 3
+    },
+    "/dev/davinci2": {
+      "major": 234,
+      "minor": 2
+    },
+    "/dev/davinci15": {
+      "major": 234,
+      "minor": 15
+    },
+    "/dev/davinci14": {
+      "major": 234,
+      "minor": 14
+    },
+    "/dev/davinci13": {
+      "major": 234,
+      "minor": 13
+    },
+    "/dev/davinci12": {
+      "major": 234,
+      "minor": 12
+    },
+    "/dev/davinci11": {
+      "major": 234,
+      "minor": 11
+    },
+    "/dev/davinci10": {
+      "major": 234,
+      "minor": 10
+    },
+    "/dev/davinci1": {
+      "major": 234,
+      "minor": 1
+    },
+    "/dev/davinci0": {
+      "major": 234,
+      "minor": 0
+    }
+  },
+  "visibility": {
+    "ASCEND_RT_VISIBLE_DEVICES": "0",
+    "ASCEND_VISIBLE_DEVICES": null
+  },
+  "namespace": "mnt:[4026565820]",
+  "boot_id": "f464cb09-421b-4de5-8f63-3406a46d262d",
+  "mapping_command": {
+    "argv": [
+      "npu-smi",
+      "info",
+      "-m"
+    ],
+    "rc": 0,
+    "stdout": "\tNPU ID                         Chip ID                        Chip Logic ID                  Chip Phy-ID                    Chip Name                     \n\t0                              0                              0                              0                              Ascend910\n\t0                              1                              1                              1                              Ascend910\n\t0                              2                              -                              -                              Mcu                           \n\t1                              0                              2                              2                              Ascend910\n\t1                              1                              3                              3                              Ascend910\n\t1                              2                              -                              -                              Mcu                           \n\t2                              0                              4                              4                              Ascend910\n\t2                              1                              5                              5                              Ascend910\n\t2                              2                              -                              -                              Mcu                           \n\t3                              0                              6                              6                              Ascend910\n\t3                              1                              7                              7                              Ascend910\n\t3                              2                              -                              -                              Mcu                           \n\t4                              0                              8                              8                              Ascend910\n\t4                              1                              9                              9                              Ascend910\n\t4                              2                              -                              -                              Mcu                           \n\t5                              0                              10                             10                             Ascend910\n\t5                              1                              11                             11                             Ascend910\n\t5                              2                              -                              -                              Mcu                           \n\t6                              0                              12                             12                             Ascend910\n\t6                              1                              13                             13                             Ascend910\n\t6                              2                              -                              -                              Mcu                           \n\t7                              0                              14                             14                             Ascend910\n\t7                              1                              15                             15                             Ascend910\n\t7                              2                              -                              -                              Mcu                           \n",
+    "stderr": ""
+  },
+  "status": "READ_ONLY_INVENTORY_NOT_ADMISSION"
+}

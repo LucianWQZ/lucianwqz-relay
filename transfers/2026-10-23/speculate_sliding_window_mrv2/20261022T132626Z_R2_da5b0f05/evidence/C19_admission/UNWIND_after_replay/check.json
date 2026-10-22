@@ -1,0 +1,5 @@
+{
+  "status": "ADMITTED_BY_USER_AUTHORIZATION_AND_MACHINE_EVIDENCE",
+  "physical_id": 0,
+  "proof_boundary": "user reservation plus live npu-smi and observed probe PID; no administrator signature"
+}

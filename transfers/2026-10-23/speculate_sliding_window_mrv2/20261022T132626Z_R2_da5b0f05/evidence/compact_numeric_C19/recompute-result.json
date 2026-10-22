@@ -1,0 +1,41 @@
+{
+  "status": "PASS_RETAINED_OUTPUT_NUMERIC_AND_ABA_ONLY",
+  "producer_commit": "da5b0f054c4b94362ff3539de911b26b4074052a",
+  "samples": [
+    {
+      "scenario": "A",
+      "generation": 0,
+      "epoch": 0,
+      "shape": [
+        7,
+        4096
+      ],
+      "max_abs": 0.0,
+      "finite": true
+    },
+    {
+      "scenario": "B",
+      "generation": 1,
+      "epoch": 1,
+      "shape": [
+        7,
+        4096
+      ],
+      "max_abs": 0.0,
+      "finite": true
+    },
+    {
+      "scenario": "A_prime",
+      "generation": 2,
+      "epoch": 2,
+      "shape": [
+        7,
+        4096
+      ],
+      "max_abs": 0.0,
+      "finite": true
+    }
+  ],
+  "scope": "Independent CPU recomputation of retained output numeric metrics and A/B/A-prime only; full KV/metadata/launcher joint acceptance requires original server artifacts",
+  "full_KV_joint": "NOT_ASSESSED_BY_COMPACT_PACKET"
+}

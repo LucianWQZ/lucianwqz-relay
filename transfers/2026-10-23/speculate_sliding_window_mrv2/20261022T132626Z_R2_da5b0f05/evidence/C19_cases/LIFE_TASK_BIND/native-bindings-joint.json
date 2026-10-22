@@ -1,0 +1,720 @@
+{
+  "status": "PASS_DIAGNOSTIC_NATIVE_PARAMETER_BINDING",
+  "task_operand": "POST_DRAIN_EXPORTED_PARAMETERS_ONLY",
+  "physical_read": "UNPROVEN",
+  "execution": {
+    "status": "EXECUTION_ASSOCIATED",
+    "numeric_status": "NOT_ASSESSED",
+    "artifact_sha256": "28daa5a15f3693c4715b65848aaea229b28f620562de918f66f627c9eca691cb"
+  },
+  "files": 3,
+  "bytes": 383892,
+  "binding": {
+    "status": "DIAGNOSTIC_POST_DRAIN_NATIVE_PARAMETER_BINDING",
+    "tasks": [
+      {
+        "descriptor": [
+          1,
+          7
+        ],
+        "layer_name": "model.layers.36.self_attn.attn",
+        "native": {
+          "model_id": 45,
+          "stream_id": 9,
+          "task_id": 16,
+          "argument_block_base": 20620159778816,
+          "query_ptr": 20645826061312,
+          "table_ptr": 20618011333632,
+          "output_ptr": 20645826119168,
+          "key": {
+            "data_ptr": 20682415013888,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "value": {
+            "data_ptr": 20682821861376,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "query_lengths": [
+            7
+          ],
+          "kv_lengths": [
+            28
+          ]
+        },
+        "parameter_values_match_host_generation": 6,
+        "capture_values_distinguishable": true,
+        "parameter_generation_candidates": [
+          6
+        ],
+        "task_execution_occurrence": "UNPROVEN_POST_DRAIN_EXPORT_ONLY"
+      },
+      {
+        "descriptor": [
+          1,
+          7
+        ],
+        "layer_name": "model.layers.37.self_attn.attn",
+        "native": {
+          "model_id": 45,
+          "stream_id": 9,
+          "task_id": 36,
+          "argument_block_base": 20620159782912,
+          "query_ptr": 20645826002944,
+          "table_ptr": 20618011333632,
+          "output_ptr": 20645826119168,
+          "key": {
+            "data_ptr": 20683488755712,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "value": {
+            "data_ptr": 20683895603200,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "query_lengths": [
+            7
+          ],
+          "kv_lengths": [
+            28
+          ]
+        },
+        "parameter_values_match_host_generation": 6,
+        "capture_values_distinguishable": true,
+        "parameter_generation_candidates": [
+          6
+        ],
+        "task_execution_occurrence": "UNPROVEN_POST_DRAIN_EXPORT_ONLY"
+      },
+      {
+        "descriptor": [
+          1,
+          7
+        ],
+        "layer_name": "model.layers.38.self_attn.attn",
+        "native": {
+          "model_id": 45,
+          "stream_id": 9,
+          "task_id": 56,
+          "argument_block_base": 20620159787008,
+          "query_ptr": 20645826002944,
+          "table_ptr": 20618011333632,
+          "output_ptr": 20645826119168,
+          "key": {
+            "data_ptr": 20684562497536,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "value": {
+            "data_ptr": 20684969345024,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "query_lengths": [
+            7
+          ],
+          "kv_lengths": [
+            28
+          ]
+        },
+        "parameter_values_match_host_generation": 6,
+        "capture_values_distinguishable": true,
+        "parameter_generation_candidates": [
+          6
+        ],
+        "task_execution_occurrence": "UNPROVEN_POST_DRAIN_EXPORT_ONLY"
+      },
+      {
+        "descriptor": [
+          1,
+          7
+        ],
+        "layer_name": "model.layers.39.self_attn.attn",
+        "native": {
+          "model_id": 45,
+          "stream_id": 9,
+          "task_id": 76,
+          "argument_block_base": 20620159791104,
+          "query_ptr": 20645826002944,
+          "table_ptr": 20618011333632,
+          "output_ptr": 20645826119168,
+          "key": {
+            "data_ptr": 20685636239360,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "value": {
+            "data_ptr": 20686043086848,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "query_lengths": [
+            7
+          ],
+          "kv_lengths": [
+            28
+          ]
+        },
+        "parameter_values_match_host_generation": 6,
+        "capture_values_distinguishable": true,
+        "parameter_generation_candidates": [
+          6
+        ],
+        "task_execution_occurrence": "UNPROVEN_POST_DRAIN_EXPORT_ONLY"
+      },
+      {
+        "descriptor": [
+          1,
+          7
+        ],
+        "layer_name": "model.layers.40.self_attn.attn",
+        "native": {
+          "model_id": 45,
+          "stream_id": 9,
+          "task_id": 96,
+          "argument_block_base": 20620159795200,
+          "query_ptr": 20645826002944,
+          "table_ptr": 20618011333632,
+          "output_ptr": 20645826119168,
+          "key": {
+            "data_ptr": 20686709981184,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "value": {
+            "data_ptr": 20687116828672,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "query_lengths": [
+            7
+          ],
+          "kv_lengths": [
+            28
+          ]
+        },
+        "parameter_values_match_host_generation": 6,
+        "capture_values_distinguishable": true,
+        "parameter_generation_candidates": [
+          6
+        ],
+        "task_execution_occurrence": "UNPROVEN_POST_DRAIN_EXPORT_ONLY"
+      },
+      {
+        "descriptor": [
+          2,
+          14
+        ],
+        "layer_name": "model.layers.36.self_attn.attn",
+        "native": {
+          "model_id": 46,
+          "stream_id": 10,
+          "task_id": 16,
+          "argument_block_base": 20620160270336,
+          "query_ptr": 20645826118656,
+          "table_ptr": 20618011332096,
+          "output_ptr": 20645826233856,
+          "key": {
+            "data_ptr": 20682415013888,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "value": {
+            "data_ptr": 20682821861376,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "query_lengths": [
+            7,
+            14
+          ],
+          "kv_lengths": [
+            28,
+            28
+          ]
+        },
+        "parameter_values_match_host_generation": 13,
+        "capture_values_distinguishable": true,
+        "parameter_generation_candidates": [
+          13
+        ],
+        "task_execution_occurrence": "UNPROVEN_POST_DRAIN_EXPORT_ONLY"
+      },
+      {
+        "descriptor": [
+          2,
+          14
+        ],
+        "layer_name": "model.layers.37.self_attn.attn",
+        "native": {
+          "model_id": 46,
+          "stream_id": 10,
+          "task_id": 36,
+          "argument_block_base": 20620160274432,
+          "query_ptr": 20645826002944,
+          "table_ptr": 20618011332096,
+          "output_ptr": 20645826233856,
+          "key": {
+            "data_ptr": 20683488755712,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "value": {
+            "data_ptr": 20683895603200,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "query_lengths": [
+            7,
+            14
+          ],
+          "kv_lengths": [
+            28,
+            28
+          ]
+        },
+        "parameter_values_match_host_generation": 13,
+        "capture_values_distinguishable": true,
+        "parameter_generation_candidates": [
+          13
+        ],
+        "task_execution_occurrence": "UNPROVEN_POST_DRAIN_EXPORT_ONLY"
+      },
+      {
+        "descriptor": [
+          2,
+          14
+        ],
+        "layer_name": "model.layers.38.self_attn.attn",
+        "native": {
+          "model_id": 46,
+          "stream_id": 10,
+          "task_id": 56,
+          "argument_block_base": 20620160446464,
+          "query_ptr": 20645826002944,
+          "table_ptr": 20618011332096,
+          "output_ptr": 20645826233856,
+          "key": {
+            "data_ptr": 20684562497536,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "value": {
+            "data_ptr": 20684969345024,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "query_lengths": [
+            7,
+            14
+          ],
+          "kv_lengths": [
+            28,
+            28
+          ]
+        },
+        "parameter_values_match_host_generation": 13,
+        "capture_values_distinguishable": true,
+        "parameter_generation_candidates": [
+          13
+        ],
+        "task_execution_occurrence": "UNPROVEN_POST_DRAIN_EXPORT_ONLY"
+      },
+      {
+        "descriptor": [
+          2,
+          14
+        ],
+        "layer_name": "model.layers.39.self_attn.attn",
+        "native": {
+          "model_id": 46,
+          "stream_id": 10,
+          "task_id": 76,
+          "argument_block_base": 20620160450560,
+          "query_ptr": 20645826002944,
+          "table_ptr": 20618011332096,
+          "output_ptr": 20645826233856,
+          "key": {
+            "data_ptr": 20685636239360,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "value": {
+            "data_ptr": 20686043086848,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "query_lengths": [
+            7,
+            14
+          ],
+          "kv_lengths": [
+            28,
+            28
+          ]
+        },
+        "parameter_values_match_host_generation": 13,
+        "capture_values_distinguishable": true,
+        "parameter_generation_candidates": [
+          13
+        ],
+        "task_execution_occurrence": "UNPROVEN_POST_DRAIN_EXPORT_ONLY"
+      },
+      {
+        "descriptor": [
+          2,
+          14
+        ],
+        "layer_name": "model.layers.40.self_attn.attn",
+        "native": {
+          "model_id": 46,
+          "stream_id": 10,
+          "task_id": 96,
+          "argument_block_base": 20620160454656,
+          "query_ptr": 20645826002944,
+          "table_ptr": 20618011332096,
+          "output_ptr": 20645826233856,
+          "key": {
+            "data_ptr": 20686709981184,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "value": {
+            "data_ptr": 20687116828672,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "query_lengths": [
+            7,
+            14
+          ],
+          "kv_lengths": [
+            28,
+            28
+          ]
+        },
+        "parameter_values_match_host_generation": 13,
+        "capture_values_distinguishable": true,
+        "parameter_generation_candidates": [
+          13
+        ],
+        "task_execution_occurrence": "UNPROVEN_POST_DRAIN_EXPORT_ONLY"
+      },
+      {
+        "descriptor": [
+          4,
+          28
+        ],
+        "layer_name": "model.layers.36.self_attn.attn",
+        "native": {
+          "model_id": 47,
+          "stream_id": 11,
+          "task_id": 16,
+          "argument_block_base": 20620160282624,
+          "query_ptr": 20645826233344,
+          "table_ptr": 20618011330048,
+          "output_ptr": 20645826463232,
+          "key": {
+            "data_ptr": 20682415013888,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "value": {
+            "data_ptr": 20682821861376,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "query_lengths": [
+            7,
+            14,
+            21,
+            28
+          ],
+          "kv_lengths": [
+            28,
+            28,
+            28,
+            28
+          ]
+        },
+        "parameter_values_match_host_generation": 20,
+        "capture_values_distinguishable": true,
+        "parameter_generation_candidates": [
+          20
+        ],
+        "task_execution_occurrence": "UNPROVEN_POST_DRAIN_EXPORT_ONLY"
+      },
+      {
+        "descriptor": [
+          4,
+          28
+        ],
+        "layer_name": "model.layers.37.self_attn.attn",
+        "native": {
+          "model_id": 47,
+          "stream_id": 11,
+          "task_id": 36,
+          "argument_block_base": 20620160286720,
+          "query_ptr": 20645826002944,
+          "table_ptr": 20618011330048,
+          "output_ptr": 20645826463232,
+          "key": {
+            "data_ptr": 20683488755712,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "value": {
+            "data_ptr": 20683895603200,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "query_lengths": [
+            7,
+            14,
+            21,
+            28
+          ],
+          "kv_lengths": [
+            28,
+            28,
+            28,
+            28
+          ]
+        },
+        "parameter_values_match_host_generation": 20,
+        "capture_values_distinguishable": true,
+        "parameter_generation_candidates": [
+          20
+        ],
+        "task_execution_occurrence": "UNPROVEN_POST_DRAIN_EXPORT_ONLY"
+      },
+      {
+        "descriptor": [
+          4,
+          28
+        ],
+        "layer_name": "model.layers.38.self_attn.attn",
+        "native": {
+          "model_id": 47,
+          "stream_id": 11,
+          "task_id": 56,
+          "argument_block_base": 20620160290816,
+          "query_ptr": 20645826002944,
+          "table_ptr": 20618011330048,
+          "output_ptr": 20645826463232,
+          "key": {
+            "data_ptr": 20684562497536,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "value": {
+            "data_ptr": 20684969345024,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "query_lengths": [
+            7,
+            14,
+            21,
+            28
+          ],
+          "kv_lengths": [
+            28,
+            28,
+            28,
+            28
+          ]
+        },
+        "parameter_values_match_host_generation": 20,
+        "capture_values_distinguishable": true,
+        "parameter_generation_candidates": [
+          20
+        ],
+        "task_execution_occurrence": "UNPROVEN_POST_DRAIN_EXPORT_ONLY"
+      },
+      {
+        "descriptor": [
+          4,
+          28
+        ],
+        "layer_name": "model.layers.39.self_attn.attn",
+        "native": {
+          "model_id": 47,
+          "stream_id": 11,
+          "task_id": 76,
+          "argument_block_base": 20620160294912,
+          "query_ptr": 20645826002944,
+          "table_ptr": 20618011330048,
+          "output_ptr": 20645826463232,
+          "key": {
+            "data_ptr": 20685636239360,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "value": {
+            "data_ptr": 20686043086848,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "query_lengths": [
+            7,
+            14,
+            21,
+            28
+          ],
+          "kv_lengths": [
+            28,
+            28,
+            28,
+            28
+          ]
+        },
+        "parameter_values_match_host_generation": 20,
+        "capture_values_distinguishable": true,
+        "parameter_generation_candidates": [
+          20
+        ],
+        "task_execution_occurrence": "UNPROVEN_POST_DRAIN_EXPORT_ONLY"
+      },
+      {
+        "descriptor": [
+          4,
+          28
+        ],
+        "layer_name": "model.layers.40.self_attn.attn",
+        "native": {
+          "model_id": 47,
+          "stream_id": 11,
+          "task_id": 96,
+          "argument_block_base": 20620160475136,
+          "query_ptr": 20645826002944,
+          "table_ptr": 20618011330048,
+          "output_ptr": 20645826463232,
+          "key": {
+            "data_ptr": 20686709981184,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "value": {
+            "data_ptr": 20687116828672,
+            "shape": [
+              1546,
+              128,
+              1024
+            ]
+          },
+          "query_lengths": [
+            7,
+            14,
+            21,
+            28
+          ],
+          "kv_lengths": [
+            28,
+            28,
+            28,
+            28
+          ]
+        },
+        "parameter_values_match_host_generation": 20,
+        "capture_values_distinguishable": true,
+        "parameter_generation_candidates": [
+          20
+        ],
+        "task_execution_occurrence": "UNPROVEN_POST_DRAIN_EXPORT_ONLY"
+      }
+    ],
+    "execution_occurrence_generation": "UNPROVEN",
+    "physical_read": "UNPROVEN",
+    "normal_backing_reuse": "UNPROVEN"
+  }
+}

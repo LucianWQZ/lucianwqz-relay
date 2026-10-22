@@ -1,0 +1,428 @@
+{
+  "mapping": [
+    [
+      "generation",
+      1
+    ],
+    [
+      "epoch",
+      1
+    ],
+    [
+      "case_identity",
+      {
+        "mapping": [
+          [
+            "scenario",
+            "B"
+          ],
+          [
+            "logical_requests",
+            {
+              "list": [
+                "row-0"
+              ]
+            }
+          ],
+          [
+            "phase",
+            "CONTROLLED_DECODE_SYNTHETIC_PRE_KV"
+          ],
+          [
+            "positions",
+            {
+              "list": [
+                {
+                  "list": [
+                    1272,
+                    1273,
+                    1274,
+                    1275,
+                    1276,
+                    1277,
+                    1278,
+                    1279
+                  ]
+                }
+              ]
+            }
+          ],
+          [
+            "query_layout",
+            {
+              "list": [
+                0,
+                8
+              ]
+            }
+          ],
+          [
+            "active",
+            1
+          ],
+          [
+            "padded",
+            1
+          ],
+          [
+            "step",
+            1
+          ],
+          [
+            "fixture_id",
+            "1c485bc43a6e8f6d0d83c1dc6ebfd0fb9bb1f31a8ad9e498ef1d3e9d562e7cd4"
+          ]
+        ]
+      }
+    ],
+    [
+      "descriptor",
+      {
+        "list": [
+          1,
+          7
+        ]
+      }
+    ],
+    [
+      "active",
+      1
+    ],
+    [
+      "reference_inputs",
+      {
+        "mapping": [
+          [
+            "input_ids",
+            {
+              "tensor_ref": {
+                "path": "435b55a95f9f5e2a0344151e0e90e33b05a8c9d40fbb8f397e4a096ebab4b32e.bin",
+                "bytes": 28,
+                "sha256": "435b55a95f9f5e2a0344151e0e90e33b05a8c9d40fbb8f397e4a096ebab4b32e",
+                "chunks": [
+                  {
+                    "offset": 0,
+                    "bytes": 28,
+                    "sha256": "435b55a95f9f5e2a0344151e0e90e33b05a8c9d40fbb8f397e4a096ebab4b32e"
+                  }
+                ],
+                "shape": [
+                  7
+                ],
+                "dtype": "torch.int32"
+              }
+            }
+          ],
+          [
+            "positions",
+            {
+              "tensor_ref": {
+                "path": "999bffdc0303087f0847fce80892c638c4970a5da4a8af6e3bdb5ecda8a52a2b.bin",
+                "bytes": 56,
+                "sha256": "999bffdc0303087f0847fce80892c638c4970a5da4a8af6e3bdb5ecda8a52a2b",
+                "chunks": [
+                  {
+                    "offset": 0,
+                    "bytes": 56,
+                    "sha256": "999bffdc0303087f0847fce80892c638c4970a5da4a8af6e3bdb5ecda8a52a2b"
+                  }
+                ],
+                "shape": [
+                  7
+                ],
+                "dtype": "torch.int64"
+              }
+            }
+          ],
+          [
+            "slot_mapping",
+            {
+              "tensor_ref": {
+                "path": "dd57c3cc319fc04646465ff673a9f580db4012298960eddf73469f1928b14d12.bin",
+                "bytes": 28,
+                "sha256": "dd57c3cc319fc04646465ff673a9f580db4012298960eddf73469f1928b14d12",
+                "chunks": [
+                  {
+                    "offset": 0,
+                    "bytes": 28,
+                    "sha256": "dd57c3cc319fc04646465ff673a9f580db4012298960eddf73469f1928b14d12"
+                  }
+                ],
+                "shape": [
+                  7
+                ],
+                "dtype": "torch.int32"
+              }
+            }
+          ],
+          [
+            "query_start_loc",
+            {
+              "tensor_ref": {
+                "path": "4e65285e650a360f443a4924e7caee49f419179d9613682c162ab6c5ee39046e.bin",
+                "bytes": 8,
+                "sha256": "4e65285e650a360f443a4924e7caee49f419179d9613682c162ab6c5ee39046e",
+                "chunks": [
+                  {
+                    "offset": 0,
+                    "bytes": 8,
+                    "sha256": "4e65285e650a360f443a4924e7caee49f419179d9613682c162ab6c5ee39046e"
+                  }
+                ],
+                "shape": [
+                  2
+                ],
+                "dtype": "torch.int32"
+              }
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      "hidden_contract",
+      {
+        "mapping": [
+          [
+            "width",
+            4096
+          ],
+          [
+            "dtype",
+            "torch.bfloat16"
+          ]
+        ]
+      }
+    ],
+    [
+      "inputs",
+      {
+        "mapping": [
+          [
+            "input_ids",
+            {
+              "tensor_ref": {
+                "path": "435b55a95f9f5e2a0344151e0e90e33b05a8c9d40fbb8f397e4a096ebab4b32e.bin",
+                "bytes": 28,
+                "sha256": "435b55a95f9f5e2a0344151e0e90e33b05a8c9d40fbb8f397e4a096ebab4b32e",
+                "chunks": [
+                  {
+                    "offset": 0,
+                    "bytes": 28,
+                    "sha256": "435b55a95f9f5e2a0344151e0e90e33b05a8c9d40fbb8f397e4a096ebab4b32e"
+                  }
+                ],
+                "shape": [
+                  7
+                ],
+                "dtype": "torch.int32"
+              }
+            }
+          ],
+          [
+            "positions",
+            {
+              "tensor_ref": {
+                "path": "999bffdc0303087f0847fce80892c638c4970a5da4a8af6e3bdb5ecda8a52a2b.bin",
+                "bytes": 56,
+                "sha256": "999bffdc0303087f0847fce80892c638c4970a5da4a8af6e3bdb5ecda8a52a2b",
+                "chunks": [
+                  {
+                    "offset": 0,
+                    "bytes": 56,
+                    "sha256": "999bffdc0303087f0847fce80892c638c4970a5da4a8af6e3bdb5ecda8a52a2b"
+                  }
+                ],
+                "shape": [
+                  7
+                ],
+                "dtype": "torch.int64"
+              }
+            }
+          ],
+          [
+            "slot_mapping",
+            {
+              "tensor_ref": {
+                "path": "dd57c3cc319fc04646465ff673a9f580db4012298960eddf73469f1928b14d12.bin",
+                "bytes": 28,
+                "sha256": "dd57c3cc319fc04646465ff673a9f580db4012298960eddf73469f1928b14d12",
+                "chunks": [
+                  {
+                    "offset": 0,
+                    "bytes": 28,
+                    "sha256": "dd57c3cc319fc04646465ff673a9f580db4012298960eddf73469f1928b14d12"
+                  }
+                ],
+                "shape": [
+                  7
+                ],
+                "dtype": "torch.int32"
+              }
+            }
+          ],
+          [
+            "query_start_loc",
+            {
+              "tensor_ref": {
+                "path": "4e65285e650a360f443a4924e7caee49f419179d9613682c162ab6c5ee39046e.bin",
+                "bytes": 8,
+                "sha256": "4e65285e650a360f443a4924e7caee49f419179d9613682c162ab6c5ee39046e",
+                "chunks": [
+                  {
+                    "offset": 0,
+                    "bytes": 8,
+                    "sha256": "4e65285e650a360f443a4924e7caee49f419179d9613682c162ab6c5ee39046e"
+                  }
+                ],
+                "shape": [
+                  2
+                ],
+                "dtype": "torch.int32"
+              }
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      "graph",
+      {
+        "tensor_ref": {
+          "path": "718040284a28feef4e75e431d4095ffea3d457c5460b73469f78ecd2dda15882.bin",
+          "bytes": 57344,
+          "sha256": "718040284a28feef4e75e431d4095ffea3d457c5460b73469f78ecd2dda15882",
+          "chunks": [
+            {
+              "offset": 0,
+              "bytes": 57344,
+              "sha256": "718040284a28feef4e75e431d4095ffea3d457c5460b73469f78ecd2dda15882"
+            }
+          ],
+          "shape": [
+            7,
+            4096
+          ],
+          "dtype": "torch.bfloat16"
+        }
+      }
+    ],
+    [
+      "reference",
+      {
+        "tensor_ref": {
+          "path": "718040284a28feef4e75e431d4095ffea3d457c5460b73469f78ecd2dda15882.bin",
+          "bytes": 57344,
+          "sha256": "718040284a28feef4e75e431d4095ffea3d457c5460b73469f78ecd2dda15882",
+          "chunks": [
+            {
+              "offset": 0,
+              "bytes": 57344,
+              "sha256": "718040284a28feef4e75e431d4095ffea3d457c5460b73469f78ecd2dda15882"
+            }
+          ],
+          "shape": [
+            7,
+            4096
+          ],
+          "dtype": "torch.bfloat16"
+        }
+      }
+    ],
+    [
+      "metrics",
+      {
+        "mapping": [
+          [
+            "shape",
+            {
+              "list": [
+                7,
+                4096
+              ]
+            }
+          ],
+          [
+            "dtype",
+            "torch.bfloat16"
+          ],
+          [
+            "finite",
+            true
+          ],
+          [
+            "max_abs",
+            0.0
+          ],
+          [
+            "max_rel",
+            0.0
+          ],
+          [
+            "atol",
+            0.0
+          ],
+          [
+            "rtol",
+            0.0
+          ]
+        ]
+      }
+    ],
+    [
+      "status",
+      "PASS_SCOPED_CONTINUOUS"
+    ],
+    [
+      "identity",
+      {
+        "mapping": [
+          [
+            "run_id",
+            "r2-c19-phy0-20261022T132626Z"
+          ],
+          [
+            "case_id",
+            "NUMERIC_SENTINEL"
+          ],
+          [
+            "driver_mode",
+            "B"
+          ],
+          [
+            "attempt_id",
+            "1"
+          ],
+          [
+            "source_sha",
+            "da5b0f054c4b94362ff3539de911b26b4074052a"
+          ],
+          [
+            "source_tree",
+            "af4519a635d6ccd70646f77195fde18368bdf22b"
+          ],
+          [
+            "vllm_sha",
+            "84030bbe3d74d99bad477a3d2e37a973ccd8865c"
+          ],
+          [
+            "engine_id",
+            281454657454032
+          ],
+          [
+            "process_id",
+            322131
+          ],
+          [
+            "generation",
+            1
+          ],
+          [
+            "epoch",
+            1
+          ]
+        ]
+      }
+    ]
+  ]
+}

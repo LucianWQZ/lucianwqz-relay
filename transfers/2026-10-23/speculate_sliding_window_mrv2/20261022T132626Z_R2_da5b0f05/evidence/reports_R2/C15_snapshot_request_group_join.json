@@ -1,0 +1,12 @@
+{
+  "scope": "same trace exported Host clock, same pid/tid and containment; no join to Host monotonic_ns",
+  "snapshot_event_index": 106695,
+  "enclosing_request_groups": [
+    {
+      "index": 110361,
+      "name": "repair5/request/prompt-length-2049-attempt-9",
+      "ts": "1792681674919305.270",
+      "dur": 219331.62
+    }
+  ]
+}

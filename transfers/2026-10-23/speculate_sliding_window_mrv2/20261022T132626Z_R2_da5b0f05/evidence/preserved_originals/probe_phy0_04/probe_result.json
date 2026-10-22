@@ -1,0 +1,66 @@
+{
+  "pid": 314276,
+  "argv": [
+    "/usr/local/python3.11.10/bin/python",
+    "-c",
+    "import runpy,sys,time,json,torch;sys.argv=['/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C19_native_tensor/vllm-ascend/tools/p7x_graph_repair7_device.py', 'probe', '--receipt', '/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/probe_phy0_04/receipt.json', '--run-id', 'r2-c19-phy0-20261022T132626Z', '--output', '/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/probe_phy0_04/committed-probe.json'];runpy.run_path(sys.argv[0],run_name='__main__');d=json.load(open('/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/probe_phy0_04/committed-probe.json'));print(json.dumps(dict(value=d['value'],logical_device=torch.npu.current_device())),flush=True);time.sleep(10)"
+  ],
+  "start_ns": 1792687888148069840,
+  "end_ns": 1792687909835519310,
+  "rc": 0,
+  "visibility": "0",
+  "stdout": "{\"value\": 1024.0, \"logical_device\": 0}\n",
+  "stderr": "[W1023 00:51:36.759524340 NPUCachingAllocator.cpp:202] Warning: The current CANN and HDK(driver) versions require processing for 32 padding size, with memory allocation. (function operator())\n",
+  "observations": [
+    {
+      "at": "2026-10-22T16:51:29.790572+00:00",
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/probe_phy0_04/npu_smi_00.txt",
+      "smi_mentions_pid": false,
+      "rows": [],
+      "returncode": 0
+    },
+    {
+      "at": "2026-10-22T16:51:33.358493+00:00",
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/probe_phy0_04/npu_smi_01.txt",
+      "smi_mentions_pid": false,
+      "rows": [],
+      "returncode": 0
+    },
+    {
+      "at": "2026-10-22T16:51:37.040562+00:00",
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/probe_phy0_04/npu_smi_02.txt",
+      "smi_mentions_pid": false,
+      "rows": [],
+      "returncode": 0
+    },
+    {
+      "at": "2026-10-22T16:51:40.621412+00:00",
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/probe_phy0_04/npu_smi_03.txt",
+      "smi_mentions_pid": true,
+      "rows": [
+        "| 0       0                 | 3928612       |                    | 123                   | 314276                  |"
+      ],
+      "returncode": 0
+    },
+    {
+      "at": "2026-10-22T16:51:44.220745+00:00",
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/probe_phy0_04/npu_smi_04.txt",
+      "smi_mentions_pid": true,
+      "rows": [
+        "| 0       0                 | 3928612       |                    | 123                   | 314276                  |"
+      ],
+      "returncode": 0
+    },
+    {
+      "at": "2026-10-22T16:51:47.834499+00:00",
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/probe_phy0_04/npu_smi_05.txt",
+      "smi_mentions_pid": true,
+      "rows": [
+        "| 0       0                 | 3928612       |                    | 123                   | 314276                  |"
+      ],
+      "returncode": 0
+    }
+  ],
+  "scope": "Committed C19 inspect/probe; ten-second process hold after successful calculation solely for external PID mapping, no additional kernel",
+  "committed_result": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/probe_phy0_04/committed-probe.json"
+}

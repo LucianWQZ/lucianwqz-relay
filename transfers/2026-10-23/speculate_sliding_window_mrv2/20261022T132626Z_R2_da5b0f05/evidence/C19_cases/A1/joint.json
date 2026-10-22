@@ -1,0 +1,8 @@
+{
+  "schema": "repair4-joint-acceptance-v1",
+  "status": "PASS",
+  "acceptance_kind": "EXPECTED_PUBLIC_GATE",
+  "scope": "external execution/request completion; B0 additionally checks its graph contracts",
+  "errors": [],
+  "numeric_gates": "OPEN"
+}

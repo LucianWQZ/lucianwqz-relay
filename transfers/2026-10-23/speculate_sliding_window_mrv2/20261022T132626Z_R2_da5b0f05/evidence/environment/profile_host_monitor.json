@@ -1,0 +1,12 @@
+{
+  "pid": 252731,
+  "start_ticks": "30394249",
+  "start_utc": "2026-10-22T14:58:45.547619+00:00",
+  "maximum_seconds": 1800,
+  "interval_seconds": 30,
+  "stop_on_case": "NUMERIC_TARGET4",
+  "scope": "Host load and process names only; not NPU execution or model progress",
+  "end_utc": "2026-10-22T15:08:45.800511+00:00",
+  "samples": 20,
+  "exit": "STOP_ON_NUMERIC_OR_BOUNDED_END"
+}

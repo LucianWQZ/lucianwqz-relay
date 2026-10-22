@@ -1,0 +1,120 @@
+{
+  "schema": "repair7-local-candidate-v1",
+  "source_checkout": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C19_native_tensor/vllm-ascend",
+  "source_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+  "source_tree": "af4519a635d6ccd70646f77195fde18368bdf22b",
+  "baseline_sha": "7a9f4aae1ebe5c5f3d4876ec9b49926949dfae14",
+  "vllm_checkout": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm",
+  "vllm_sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c",
+  "vllm_tree": "f3e320f8ae2e9a30e57a3c8dccfac94fcae93bee",
+  "run_id": "r2-c19-phy0-20261022T132626Z",
+  "cases_sha256": "24c92111a0d34cfe08c2af8c57b83fa76e01f0e025f3450661f6bac920a0f427",
+  "source_files_sha256": {
+    "tools/p7x_graph_local_candidate.py": "19f928de0c9824d37c8d46e8ad1d32cb2c89b1b731ebe09e4097319ecaa22335",
+    "tools/p7x_graph_repair6_runner.py": "4dd39590a69eb057c1ea77a957f5c00be6ea0427acbcc7dfa1bb6df1d9269f7e",
+    "tools/p7x_graph_repair7_device.py": "2c3598bec17c437a6e0e28f918fb1f292fb33352d3f1337b06b080eaf26b92ff",
+    "tools/p7x_graph_repair7_campaign.py": "4cbd730b7bf9d2004c9a081c225ccae43b7b5ceec74462fd50bcb46b9140a4f4",
+    "tools/p7x_graph_repair8_unwind.py": "e6bc7da2828d97106094e783451c02c495baacfe69d15676ffd1cd7e01fee711",
+    "tools/p7x_graph_repair8_task_dump.py": "9717b6f9acc363dce7ee86672d2d9ab6ff60c0abd03e788ecc610445da9efbbc",
+    "tools/p7x_graph_repair5_profile.py": "f3d2246445daa51e1d725ab7f423a703c2501c5356b8ca77595cf508fc191fe7",
+    "tools/p7x_graph_repair5_evidence.py": "deb5c341ad4927e2b8f00032a03494dd9dbc052220787c361384e17e3aea4ae3",
+    "tools/p7x_graph_repair7.py": "26b434d76f5201924f6de1109f6f7b5cb140cf159032de02c130be79959ce314",
+    "tools/p7x_graph_repair2.py": "d4094dcf29598d43efd80ab64fb5cbc55e45cc7c382c6f4701da2fafc65b73c0",
+    "vllm_ascend/worker/v2/spec_decode/draft_window.py": "6daa649633feb8cc220dc7b7839b6bb0a254da483d8585cbfbd3045bd1163215",
+    "vllm_ascend/worker/v2/spec_decode/draft_window_eager.py": "fc2a63dcb71cb72ef6de6071afa08ac0dd55eb1d773c22b3e1da3096f757eca5"
+  },
+  "fixture_manifest": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/inputs/inputs/fixture_manifest.json",
+  "fixture_files": [
+    {
+      "path": "/mnt/share/wql/Qwen3-8B/config.json",
+      "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+      "size": 728,
+      "mtime_ns": 1781235465559211690
+    },
+    {
+      "path": "/mnt/share/wql/Qwen3-8B/model.safetensors.index.json",
+      "sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc",
+      "size": 32878,
+      "mtime_ns": 1781235466068456690
+    },
+    {
+      "path": "/mnt/share/wql/Qwen3-8B/tokenizer.json",
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "size": 11422654,
+      "mtime_ns": 1781235482508083670
+    },
+    {
+      "path": "/mnt/share/dspark_qwen3_8b_block7/config.json",
+      "sha256": "e470e70a553616f0dce8f783f42cfd25b7bd7dfdcd57ead680a0623040725611",
+      "size": 1201,
+      "mtime_ns": 1787207307075063310
+    },
+    {
+      "path": "/mnt/share/dspark_qwen3_8b_block7/model.safetensors",
+      "sha256": "5c922d1f96c8d18dbdf005c40ea99878d9133d70eaa3be4bd1077ee5f2afc1e5",
+      "size": 4742170330,
+      "mtime_ns": 1787207307060149450
+    },
+    {
+      "path": "/mnt/share/wql/Qwen3-8B/model-00001-of-00005.safetensors",
+      "sha256": "31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f",
+      "size": 3996250744,
+      "mtime_ns": 1781239257717057820
+    },
+    {
+      "path": "/mnt/share/wql/Qwen3-8B/model-00002-of-00005.safetensors",
+      "sha256": "5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282",
+      "size": 3993160032,
+      "mtime_ns": 1781239495815045370
+    },
+    {
+      "path": "/mnt/share/wql/Qwen3-8B/model-00003-of-00005.safetensors",
+      "sha256": "c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836",
+      "size": 3959604768,
+      "mtime_ns": 1781239613919778110
+    },
+    {
+      "path": "/mnt/share/wql/Qwen3-8B/model-00004-of-00005.safetensors",
+      "sha256": "b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a",
+      "size": 3187841392,
+      "mtime_ns": 1781238625441951150
+    },
+    {
+      "path": "/mnt/share/wql/Qwen3-8B/model-00005-of-00005.safetensors",
+      "sha256": "20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff",
+      "size": 1244659840,
+      "mtime_ns": 1781236832184879470
+    }
+  ],
+  "config_report": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/config-schema.json",
+  "config_report_sha256": "a777747ec9161f23c6c34673dd07e0f3c0314100fdb00fd18d38cbb963e75b64",
+  "host_evidence": [
+    {
+      "label": "graph_quarantine",
+      "status": "PASS",
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/C17_admission_anchors.log",
+      "sha256": "0af3ab4d1cd0ecbe51dca17af8f54adbf04bf68601d0e4bfd5431d47a914d3e9",
+      "source_sha": "057b8e0300967e68e3f2a78c5910c8877521674e",
+      "scope": "three actual fixed C17 quarantine/local-admission Host anchors",
+      "reuse_basis": "C17 historical Host checks; C17 graph_quarantine anchor reused: entire production subtree identical; native diagnostic producer differs; not new C19 quarantine test"
+    },
+    {
+      "label": "local_admission",
+      "status": "PASS",
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/C18_host_admission_01.log",
+      "sha256": "3d3963d49b0c0766a300a5f348e66739b2f66b06e88434f9fef259e1b367cd7d",
+      "source_sha": "52c3d487bb3c302d7170087aaaa79e34e3de7846",
+      "scope": "C18 historical admission checks, source unchanged in C19; derived real C17 manifest old/new negative verdict retained"
+    },
+    {
+      "label": "native_fia_binding_safety_and_cli",
+      "status": "PASS",
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/C19_host_native_01.log",
+      "sha256": "875a4b652e6e0775b2f9a4c3ca205ecf9ba148d24f42a4785ab00fa90cbe886c",
+      "source_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+      "scope": "45 actual C19 Host checks; frozen single-Tensor metadata, strict native ABI/geometry/pointers and quarantine guards"
+    }
+  ],
+  "remote_publication": "NOT_PERFORMED",
+  "device_validation": "NOT_RUN"
+}

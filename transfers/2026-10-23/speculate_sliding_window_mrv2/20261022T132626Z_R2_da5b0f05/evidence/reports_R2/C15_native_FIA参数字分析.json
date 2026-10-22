@@ -1,0 +1,17 @@
+{
+  "source_sha": "1e88c8208670518f63043552b530b1ed3e2f2677",
+  "run": "C15_prepare_01/LIFE_TASK_DUMP",
+  "scope": "READ_ONLY_NATIVE_PARAMETER_WORD_ANALYSIS",
+  "descriptors": 3,
+  "fia_tasks": 15,
+  "all_match_host_table_word": true,
+  "word_indices": [
+    "[15]"
+  ],
+  "host_layer_count": 5,
+  "layer_assignment": "UNPROVEN",
+  "native_parameter_version": "UNRESOLVED_CAPTURE_VS_LAST_UPDATE",
+  "physical_read": "UNPROVEN",
+  "normal_backing_reuse": "UNPROVEN",
+  "native_ts_dur": "NO_MEASURED_DEVICE_CLOCK_CONTRACT; not used as elapsed or flow"
+}

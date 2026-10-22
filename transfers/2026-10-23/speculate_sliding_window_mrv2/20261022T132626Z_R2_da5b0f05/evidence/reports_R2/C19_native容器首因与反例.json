@@ -1,0 +1,46 @@
+{
+  "observed_utc": "2026-10-22T16:41:41.657710+00:00",
+  "scope": "Host-only counterexample matching real frozen tuple container; source and actual C17 runtime failure jointly establish root cause; synthetic pointers are not device measurements",
+  "root_cause": "full_graph_fia retains single K/V Tensor; pinned weak_ref_tensors preserves single Tensor rather than wrapping list; native operator ABI list is a different layer",
+  "files": [
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend/vllm_ascend/attention/attention_v1.py",
+      "bytes": 104423,
+      "sha256": "3fab84ab79560523e8b50e2dfa9ce96ec483d673e3d06b0ac7238d0d1259bbe2"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm/vllm/utils/torch_utils.py",
+      "bytes": 37751,
+      "sha256": "eec8b1e3c7c673d3d171b92530f8b07acabdad5b0e3ab07cc0e717f827af8e5a"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C17_prepare_02/LIFE_TASK_BIND/task-dump-index.json",
+      "bytes": 3356,
+      "sha256": "7e60ae283accea8b7b4f2f015be03d40bfb3f0bbc4cae7134de8d46762778723"
+    }
+  ],
+  "results": [
+    {
+      "implementation": "C17",
+      "status": "REJECTED",
+      "error": "only one K/V tensor per FIA list supported"
+    },
+    {
+      "implementation": "C19_development",
+      "status": "ACCEPTED_SINGLE_TENSOR_METADATA_ONLY",
+      "key": [
+        {
+          "data_ptr": 196608,
+          "shape": [
+            8,
+            128,
+            1024
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "npu:0"
+        }
+      ],
+      "form": "SINGLE_TENSOR"
+    }
+  ]
+}

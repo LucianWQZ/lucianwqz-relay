@@ -1,0 +1,92 @@
+{
+  "schema": "mrv2-next-session-final-v3",
+  "session_id": "20261022T132626Z_R2",
+  "start_utc": "2026-10-22T13:26:26+00:00",
+  "deadline_utc": "2026-10-22T23:26:26+00:00",
+  "start_asia_shanghai": "2026-10-22T21:26:26+08:00",
+  "deadline_asia_shanghai": "2026-10-23T07:26:26+08:00",
+  "user_resource_reservation_until_utc": "2026-10-23T02:00:00+00:00",
+  "resource_extension_did_not_extend_task": true,
+  "status": "BLOCKED_PLATFORM_DECISION",
+  "review_material_ready": true,
+  "production_graph_readiness": "NOT_ESTABLISHED",
+  "public_graph_gate": "FROZEN",
+  "development": {
+    "sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+    "tree": "af4519a635d6ccd70646f77195fde18368bdf22b",
+    "dirty": false
+  },
+  "running_candidate": null,
+  "last_device_candidate": {
+    "sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+    "case": "UNWIND_after_completion"
+  },
+  "last_key_validated_candidate": {
+    "sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+    "scope": "C19 numeric12/ABA, controlled Target4 paired12, LIFE21, native15 post-drain parameters, fourABORT/four real Python unwind; public Gate frozen"
+  },
+  "last_full_numeric_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+  "last_full_target_pair_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+  "last_native_parameter_binding_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+  "last_fault_validation_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+  "current_case": null,
+  "current_attempt": null,
+  "active_model_pids": [],
+  "active_runner_pids": [],
+  "active_profiler_pids": [],
+  "active_monitor_pids": [],
+  "release_observed_utc": "2026-10-22T18:00:40.421613+00:00",
+  "release_evidence": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/environment/final_release_check/snapshot.json",
+  "device_work_ended_utc": "2026-10-22T17:58:28.200388+00:00",
+  "counts": {
+    "model_starts": 72,
+    "expected_graph_frozen": 5,
+    "model_producer_exit0": 39,
+    "expected_abort_exits": 16,
+    "python_unwind_exits": 12,
+    "other_model_failures": 0,
+    "private_fixtures": 5,
+    "probes": 4,
+    "profiler_collections": 5,
+    "offline_reanalyses": 7,
+    "model_runner_accepted": 67,
+    "model_acceptance_failed": 5
+  },
+  "source_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend",
+  "candidate_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C19_native_tensor/vllm-ascend",
+  "vllm_pin": {
+    "sha": "84030bbe3d74d99bad477a3d2e37a973ccd8865c",
+    "tree": "f3e320f8ae2e9a30e57a3c8dccfac94fcae93bee",
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm"
+  },
+  "run_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw",
+  "cache_root": "/mnt/wenqing/mrv2_graph_server_dev/20261022T132626Z_R2",
+  "report_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2",
+  "review_root": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261022T132626Z_R2_da5b0f05",
+  "uncommitted_source_files": [],
+  "last_completed_operation": "all20 C19 cases accepted; explicit Target join12 pairs; final case/source/strictJSON/bundle/process review completed; packaging self-check follows",
+  "next_minimum_actions": [
+    "Read platform questions and five-step normal dependency proof; obtain maintainer confirmation of applicable Runtime/Event/update/partial-commit contract",
+    "Acceptance owner decides existing task operand/physical-read evidence and Base/Target4 review scope; no Agent waiver",
+    "Reuse complete raw/index rather than repeat identical traces; new experiments only for discriminating hypothesis or code impact",
+    "Before any device work verify original deadline/user reservation and live processes; do not auto-reset expired authorization"
+  ],
+  "blocks": {
+    "normal_update_generation": "SOURCE_CHAIN_SUPPORTED_OWNER_CONTRACT_PENDING",
+    "normal_backing_reuse": "SOURCE_CHAIN_SUPPORTED_OWNER_CONTRACT_PENDING",
+    "task_operand": "PARTIAL_POST_DRAIN_PARAMETER_BINDING",
+    "physical_read": "UNPROVEN",
+    "base_full_target": "NOT_CLOSED_MISSING_TARGET4_32",
+    "other_topologies_features": "NOT_REASSESSED_THIS_ROUND"
+  },
+  "remote_publication": "NOT_PERFORMED",
+  "git_bundle": {
+    "name": "MRV2_da5b0f05_from_Repair7.bundle",
+    "bytes": 57320,
+    "sha256": "280f0918b4f95f4d7ffe160b9864144fdbe07c7f35b68ef0e9ed4ffe349a468e",
+    "prerequisite": "7a9f4aae1ebe5c5f3d4876ec9b49926949dfae14",
+    "restored_exact_sha_tree": true
+  },
+  "snapshot_utc": "2026-10-22T18:07:33.747678+00:00",
+  "server_selfcheck_is_not_user_receipt": true
+}

@@ -1,0 +1,79 @@
+{
+  "pid": 241294,
+  "case": "B0",
+  "source_sha": "1e88c8208670518f63043552b530b1ed3e2f2677",
+  "observed_ns": 1792680159459014810,
+  "argv": [
+    "/usr/local/python3.11.10/bin/python",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C15_native/vllm-ascend/tools/p7x_graph_repair2.py",
+    "run",
+    "--case",
+    "B",
+    "--case-id",
+    "B0",
+    "--run-id",
+    "r2-c15-phy0-20261022T132626Z",
+    "--attempt",
+    "1",
+    "--expected-sha",
+    "1e88c8208670518f63043552b530b1ed3e2f2677",
+    "--vllm-repo",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm",
+    "--target-model",
+    "/mnt/share/wql/Qwen3-8B",
+    "--draft-model",
+    "/mnt/share/dspark_qwen3_8b_block7",
+    "--fixture-manifest",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/inputs/inputs/fixture_manifest.json",
+    "--requests",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/inputs/inputs/requests/smoke.json",
+    "--output",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C15_prepare_01/B0",
+    ""
+  ],
+  "exe": "/usr/local/python3.11.10/bin/python3.11",
+  "start_ticks": "30292138",
+  "environment": {
+    "PYTHONPATH": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C15_native/vllm-ascend:/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm:/usr/local/Ascend/ascend-toolkit/latest/python/site-packages:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe",
+    "VLLM_VERSION": "0.28.1",
+    "ASCEND_RT_VISIBLE_DEVICES": "0",
+    "ASCEND_VISIBLE_DEVICES": "UNSET",
+    "LD_LIBRARY_PATH": "/usr/local/Ascend/cann-9.1.0/lib64:/usr/local/Ascend/cann-9.1.0/lib64/plugin/opskernel:/usr/local/Ascend/cann-9.1.0/lib64/plugin/nnengine:/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe/op_tiling/lib/linux/aarch64:/usr/local/Ascend/driver/lib64:/usr/local/Ascend/driver/lib64/common:/usr/local/Ascend/driver/lib64/driver:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/lib:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/examples:/usr/local/Ascend/nnal/atb/latest/atb/cxx_abi_1/tests/atbopstest:/usr/local/Ascend/ascend-toolkit/latest/tools/aml/lib64:/usr/local/Ascend/ascend-toolkit/latest/tools/aml/lib64/plugin:/usr/local/Ascend/ascend-toolkit/latest/lib64:/usr/local/Ascend/ascend-toolkit/latest/lib64/plugin/opskernel:/usr/local/Ascend/ascend-toolkit/latest/lib64/plugin/nnengine:/usr/local/Ascend/ascend-toolkit/latest/opp/built-in/op_impl/ai_core/tbe/op_tiling:/usr/local/Ascend/driver/lib64/common/:/usr/local/Ascend/driver/lib64/driver/:/usr/local/lib:",
+    "VLLM_USE_V2_MODEL_RUNNER": "1",
+    "VLLM_ENABLE_V1_MULTIPROCESSING": "0",
+    "ASCEND_LAUNCH_BLOCKING": "UNSET",
+    "TASK_QUEUE_ENABLE": "UNSET",
+    "COMBINED_ENABLE": "UNSET",
+    "MULTI_STREAM_MEMORY_REUSE": "UNSET",
+    "TORCH_DEVICE_BACKEND_AUTOLOAD": "1",
+    "PYTORCH_NPU_ALLOC_CONF": "UNSET",
+    "ASCEND_CUSTOM_OPP_PATH": "UNSET"
+  },
+  "loaded_libraries": [
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C15_native/vllm-ascend/vllm_ascend/_cann_ops_custom/vendors/custom_transformer/op_api/lib/libcust_opapi.so",
+      "sha256": "f66884d90ba21e0aa8e0fd729e03ee43fa6b4eb6e0ceb78932cb8020033f7e2e"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C15_native/vllm-ascend/vllm_ascend/libvllm_ascend_kernels.so",
+      "sha256": "19ad5ca08d5a2dca53ff07a4eb788dfd8726951ab06bcc2c29d42e140e9cec73"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C15_native/vllm-ascend/vllm_ascend/vllm_ascend_C.cpython-311-aarch64-linux-gnu.so",
+      "sha256": "5d4130c363194eeeeab075d71c524972d2934fa9c929fc4bf8b46d2c03a96f7a"
+    },
+    {
+      "path": "/usr/local/Ascend/cann-9.1.0/aarch64-linux/lib64/libascendcl.so",
+      "sha256": "123d67c313f743e5d6f2e856f40c24d5edac376975cf0a7a1019e079b4171480"
+    },
+    {
+      "path": "/usr/local/Ascend/cann-9.1.0/opp/vendors/batch_invariant/op_api/lib/libcust_opapi.so",
+      "sha256": "ff82d965a8a08bfa2862567022a04a1fd04df56d142f4393f1fb527592111069"
+    },
+    {
+      "path": "/usr/local/python3.11.10/lib/python3.11/site-packages/torch_npu/lib/libtorch_npu.so",
+      "sha256": "3b43f9530ba124efd1f9cc8ea9f93088171d4493bfd8da9152b9ca547399a68a"
+    }
+  ],
+  "scope": "actual same-process MRV2 worker; source class/import path separately in campaign; no device reads"
+}

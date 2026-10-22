@@ -1,0 +1,12 @@
+{
+  "status": "PASS_SCOPED_PYTHON_UNWIND_ISOLATION",
+  "normal_reuse": "UNPROVEN",
+  "native_partial_submission": "NOT_SIMULATED",
+  "execution": {
+    "status": "EXECUTION_ASSOCIATED",
+    "numeric_status": "NOT_ASSESSED",
+    "artifact_sha256": "25f8d7493ae027baef72f1f8635f586a8d685a6866fe34be078c314207999b8c"
+  },
+  "point": "after_replay",
+  "generation": 0
+}

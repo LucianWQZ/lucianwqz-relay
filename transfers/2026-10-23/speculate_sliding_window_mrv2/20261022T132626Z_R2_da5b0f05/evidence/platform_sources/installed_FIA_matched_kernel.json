@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "path": "/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe/kernel/ascend910_93/ops_transformer/fused_infer_attention_score/FusedInferAttentionScore_3b093497fc536d61a77a7a3293a524da.json",
+    "saved": "reports/20261022T132626Z_R2/platform_sources/installed_FusedInferAttentionScore_3b093497fc536d61a77a7a3293a524da.json",
+    "bytes": 110315,
+    "sha256": "9e48ba54cf2fbf89346e366816a2d479d10676b635e44b16d1d0232367dfab0a"
+  },
+  "sources": [
+    {
+      "path": "/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe/impl/ops_transformer/ascendc/fused_infer_attention_score/fused_infer_attention_score.cpp",
+      "saved": "reports/20261022T132626Z_R2/platform_sources/installed_fused_infer_attention_score.cpp",
+      "bytes": 88661,
+      "sha256": "d34068f64e515b4c8ff75f12a2222f22cf9a397fb4e5812dd3dea1c5c573f787"
+    },
+    {
+      "path": "/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe/impl/ops_transformer/dynamic/fused_infer_attention_score.py",
+      "saved": "reports/20261022T132626Z_R2/platform_sources/installed_fused_infer_attention_score.py",
+      "bytes": 25254,
+      "sha256": "83ec07584f21acce9d36145023ef0f2b0a2220d30b748640b6cc9b5d70344730"
+    }
+  ],
+  "binary": {
+    "path": "/usr/local/Ascend/cann-9.1.0/opp/built-in/op_impl/ai_core/tbe/kernel/ascend910_93/ops_transformer/fused_infer_attention_score/FusedInferAttentionScore_3b093497fc536d61a77a7a3293a524da.o",
+    "bytes": 26396088,
+    "sha256": "9112128df445e2afc9ac037686b934d2fc0a462e822c0886479d5ca690f9998e",
+    "matches_metadata_sha256": true,
+    "copy": "NOT_COPIED"
+  },
+  "matched_native_kernel": {
+    "tilingKey": 5000000000010200200,
+    "kernelType": "MIX_AIC",
+    "crossCoreSync": 1,
+    "taskRation": "1:2",
+    "kernelName": "FusedInferAttentionScore_3b093497fc536d61a77a7a3293a524da_5000000000010200200"
+  },
+  "input_index_names": {
+    "0": "query",
+    "1": "key",
+    "2": "value",
+    "3": "pse_shift",
+    "4": "atten_mask",
+    "5": "actual_seq_lengths",
+    "6": "actual_seq_lengths_kv",
+    "7": "dequant_scale1",
+    "8": "quant_scale1",
+    "9": "dequant_scale2",
+    "10": "quant_scale2",
+    "11": "quant_offset2",
+    "12": "antiquant_scale",
+    "13": "antiquant_offset",
+    "14": "block_table",
+    "15": "query_padding_size",
+    "16": "kv_padding_size",
+    "17": "key_antiquant_scale",
+    "18": "key_antiquant_offset",
+    "19": "value_antiquant_scale",
+    "20": "value_antiquant_offset",
+    "21": "key_shared_prefix",
+    "22": "value_shared_prefix",
+    "23": "actual_shared_prefix_len",
+    "24": "query_rope",
+    "25": "key_rope",
+    "26": "key_rope_antiquant_scale",
+    "27": "dequant_scale_query",
+    "28": "learnable_sink",
+    "29": "q_start_idx",
+    "30": "kv_start_idx"
+  },
+  "block_table_formal_input_index": 14,
+  "block_table_kernel_cpp_pointer_index": 14,
+  "observed_native_word_index": 15,
+  "abi_boundary": "folded_with_desc + native runtime leading word/placeholder encoding not independently specified; no automatic field PASS or layer/generation assignment",
+  "dynamic_param_mode": "folded_with_desc"
+}

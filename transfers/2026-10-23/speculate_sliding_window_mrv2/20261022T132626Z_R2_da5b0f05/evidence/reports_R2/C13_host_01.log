@@ -1,0 +1,8 @@
+ImportError while loading conftest '/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend/tests/ut/conftest.py'.
+tests/ut/conftest.py:117: in <module>
+    import torch
+/usr/local/python3.11.10/lib/python3.11/site-packages/torch/__init__.py:2980: in <module>
+    _import_device_backends()
+/usr/local/python3.11.10/lib/python3.11/site-packages/torch/__init__.py:2939: in _import_device_backends
+    raise RuntimeError(
+E   RuntimeError: Failed to load the backend extension: torch_npu. You can disable extension auto-loading with TORCH_DEVICE_BACKEND_AUTOLOAD=0.

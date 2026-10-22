@@ -1,0 +1,108 @@
+/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm/vllm/__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+INFO 10-22 22:08:32 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 10-22 22:08:32 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 10-22 22:08:32 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 10-22 22:08:32 [__init__.py:272] Platform plugin ascend is activated
+INFO 10-22 22:08:32 [platform.py:69] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0
+INFO 10-22 22:08:32 [ascend_config.py:231] Dynamic EPLB is False
+INFO 10-22 22:08:32 [ascend_config.py:232] The number of redundant experts is 0

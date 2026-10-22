@@ -1,0 +1,7 @@
+{
+  "observed_utc": "2026-10-22T17:05:53.200522+00:00",
+  "available_bytes": 3942096830464,
+  "policy_floor_bytes": 68719476736,
+  "large_case": false,
+  "policy": "task-specific measured C15 total5.5GiB plus <=32GiB allowance; no500GiB rule"
+}

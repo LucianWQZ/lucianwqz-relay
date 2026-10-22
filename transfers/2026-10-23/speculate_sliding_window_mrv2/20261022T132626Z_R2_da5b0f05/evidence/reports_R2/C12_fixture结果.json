@@ -1,0 +1,10 @@
+{
+  "source_sha": "d15a510c2afba62b8a0e37aa574550852079fd13",
+  "producer_status": "COMPLETE",
+  "fixture": "PASS",
+  "ready": false,
+  "records": 8,
+  "pid": 193946,
+  "scope": "private FIA fixture only, not MRV2 model or full write/Target acceptance",
+  "evidence": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C12_prepare_01/C2"
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "label": "graph_quarantine",
+    "status": "PASS",
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/C17_admission_anchors.log",
+    "sha256": "0af3ab4d1cd0ecbe51dca17af8f54adbf04bf68601d0e4bfd5431d47a914d3e9",
+    "source_sha": "057b8e0300967e68e3f2a78c5910c8877521674e",
+    "scope": "three actual fixed C17 quarantine/local-admission Host anchors",
+    "reuse_basis": "C17 historical Host checks; C17 graph_quarantine anchor reused: entire production subtree identical; native diagnostic producer differs; not new C19 quarantine test"
+  },
+  {
+    "label": "local_admission",
+    "status": "PASS",
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/C18_host_admission_01.log",
+    "sha256": "3d3963d49b0c0766a300a5f348e66739b2f66b06e88434f9fef259e1b367cd7d",
+    "source_sha": "52c3d487bb3c302d7170087aaaa79e34e3de7846",
+    "scope": "C18 historical admission checks, source unchanged in C19; derived real C17 manifest old/new negative verdict retained"
+  },
+  {
+    "label": "native_fia_binding_safety_and_cli",
+    "status": "PASS",
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/C19_host_native_01.log",
+    "sha256": "875a4b652e6e0775b2f9a4c3ca205ecf9ba148d24f42a4785ab00fa90cbe886c",
+    "source_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+    "scope": "45 actual C19 Host checks; frozen single-Tensor metadata, strict native ABI/geometry/pointers and quarantine guards"
+  }
+]

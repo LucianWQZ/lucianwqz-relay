@@ -1,0 +1,234 @@
+{
+  "observed_utc": "2026-10-22T18:10:20.317447+00:00",
+  "strict_json_files": 289,
+  "copy_hashes": "PASS",
+  "references": [
+    {
+      "path": "reports/20261022T132626Z_R2/R1_RESUME_原件.md",
+      "exists": true
+    },
+    {
+      "path": "state/PATH_BINDING.json",
+      "exists": true
+    },
+    {
+      "path": "reports/20261022T132626Z_R2/源码身份当前核验.json",
+      "exists": true
+    },
+    {
+      "path": "state/R2_C19_RUNTIME_OVERLAY.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/environment/C19_actual_worker_provenance_complete.json",
+      "exists": true
+    },
+    {
+      "path": "state/ROUND2_USER_AUTHORIZATION_RECORD.json",
+      "exists": true
+    },
+    {
+      "path": "state/R2_USER_RESERVATION_CONFIRMATION_20261022T1626Z.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/probe_phy0_04/probe_result.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/admission_C19_attempt01",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_campaign_01/CONFIG/runner-result.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_campaign_01/A0/runner-result.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_campaign_01/A1/runner-result.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_campaign_01/B0/runner-result.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_campaign_01/B0/runner-result.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_prepare_01/B0/joint.json",
+      "exists": true
+    },
+    {
+      "path": "reports/20261022T132626Z_R2/C19_Base与Target4实际Target库存.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4/controlled-target.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_prepare_01/TARGET4_OFF/controlled-target.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/target_join_C19_01/target-join.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4/numeric-joint.json",
+      "exists": true
+    },
+    {
+      "path": "reports/20261022T132626Z_R2/C19_连续数值逐样本结论.csv",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4/numeric-joint.json",
+      "exists": true
+    },
+    {
+      "path": "reports/20261022T132626Z_R2/compact_numeric_C19/INDEX.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_prepare_01/LIFE/lifecycle-joint.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_prepare_01/LIFE/mrv2-lifecycle.json",
+      "exists": true
+    },
+    {
+      "path": "reports/20261022T132626Z_R2/正常UPDATE与backing顺序核验.md",
+      "exists": true
+    },
+    {
+      "path": "reports/20261022T132626Z_R2/平台问题单.md",
+      "exists": true
+    },
+    {
+      "path": "reports/20261022T132626Z_R2/正常UPDATE与backing顺序核验.md",
+      "exists": true
+    },
+    {
+      "path": "reports/20261022T132626Z_R2/平台问题单.md",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_campaign_01/ABORT_before_replay/runner-result.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_campaign_01/ABORT_after_replay/runner-result.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_campaign_01/ABORT_after_update/runner-result.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_campaign_01/ABORT_after_completion/runner-result.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_campaign_01/UNWIND_before_replay/runner-result.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_campaign_01/UNWIND_after_replay/runner-result.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_campaign_01/UNWIND_after_update/runner-result.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_campaign_01/UNWIND_after_completion/runner-result.json",
+      "exists": true
+    },
+    {
+      "path": "reports/20261022T132626Z_R2/MRV2_Profiling_Summary.json",
+      "exists": true
+    },
+    {
+      "path": "reports/20261022T132626Z_R2/MRV2_Profiling分析.md",
+      "exists": true
+    },
+    {
+      "path": "reports/20261022T132626Z_R2/C17_direct_flow_实际目的地分类.json",
+      "exists": true
+    },
+    {
+      "path": "state/SESSION_STATE.json",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_prepare_01/LIFE_TASK_BIND/native-bindings-joint.json",
+      "exists": true
+    },
+    {
+      "path": "reports/20261022T132626Z_R2/C19_native逐层参数绑定.csv",
+      "exists": true
+    },
+    {
+      "path": "reports/20261022T132626Z_R2/平台问题单.md",
+      "exists": true
+    },
+    {
+      "path": "reports/20261022T132626Z_R2/DECISION_QUEUE.md",
+      "exists": true
+    },
+    {
+      "path": "runs/20261022T132626Z_R2/raw/C19_prepare_01/A1/campaign.json",
+      "exists": true
+    }
+  ],
+  "compact_cpu_recompute": {
+    "status": "PASS_RETAINED_OUTPUT_NUMERIC_AND_ABA_ONLY",
+    "producer_commit": "da5b0f054c4b94362ff3539de911b26b4074052a",
+    "samples": [
+      {
+        "scenario": "A",
+        "generation": 0,
+        "epoch": 0,
+        "shape": [
+          7,
+          4096
+        ],
+        "max_abs": 0.0,
+        "finite": true
+      },
+      {
+        "scenario": "B",
+        "generation": 1,
+        "epoch": 1,
+        "shape": [
+          7,
+          4096
+        ],
+        "max_abs": 0.0,
+        "finite": true
+      },
+      {
+        "scenario": "A_prime",
+        "generation": 2,
+        "epoch": 2,
+        "shape": [
+          7,
+          4096
+        ],
+        "max_abs": 0.0,
+        "finite": true
+      }
+    ],
+    "scope": "Independent CPU recomputation of retained output numeric metrics and A/B/A-prime only; full KV/metadata/launcher joint acceptance requires original server artifacts",
+    "full_KV_joint": "NOT_ASSESSED_BY_COMPACT_PACKET"
+  },
+  "bundle_restore_evidence": "Git_bundle_恢复自检_da5b0f05.json",
+  "server_only_not_user_receipt": true
+}

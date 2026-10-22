@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "/usr/local/python3.11.10/bin/python",
+    "-m",
+    "tools.p7x_graph_repair6_trace",
+    "--trace",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C15_prepare_01/PROFILE_ON_long_normal/trace/node-39-101_259717_20261022230600971_ascend_pt/ASCEND_PROFILER_OUTPUT/trace_view.json",
+    "--output",
+    "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/profile_analysis_C15/PROFILE_ON_long_normal/flow-analysis-module.json"
+  ],
+  "returncode": 0,
+  "cwd": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C15_native/vllm-ascend",
+  "start_ns": 1792681811987361270,
+  "end_ns": 1792681855559268220,
+  "parser_sha256": "0c566486d3568884b6efb661312873d4d756159a34249df8366423910f8d00a4"
+}

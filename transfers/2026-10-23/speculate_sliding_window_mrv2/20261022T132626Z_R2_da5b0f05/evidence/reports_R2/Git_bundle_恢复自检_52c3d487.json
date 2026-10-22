@@ -1,0 +1,92 @@
+{
+  "observed_utc": "2026-10-22T16:38:01.587148+00:00",
+  "base": "7a9f4aae1ebe5c5f3d4876ec9b49926949dfae14",
+  "sha": "52c3d487bb3c302d7170087aaaa79e34e3de7846",
+  "tree": "918ee66be605d69da21aedb015be227c5cbcf411",
+  "bundle": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/MRV2_52c3d487_from_Repair7.bundle",
+  "bytes": 55834,
+  "sha256": "9371a240d86c486ee47f8ad8f46900fc5c558a45c7ef699385f6a9e1f650fe1e",
+  "temporary_bare_repo": "/tmp/mrv2-bundle-verify-20261022T132626Z_R2-52c3d487",
+  "restored_exact": true,
+  "steps": [
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend",
+        "bundle",
+        "create",
+        "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/MRV2_52c3d487_from_Repair7.bundle",
+        "HEAD",
+        "^7a9f4aae1ebe5c5f3d4876ec9b49926949dfae14"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "init",
+        "--bare",
+        "/tmp/mrv2-bundle-verify-20261022T132626Z_R2-52c3d487"
+      ],
+      "returncode": 0,
+      "stdout": "Initialized empty Git repository in /tmp/mrv2-bundle-verify-20261022T132626Z_R2-52c3d487/\n",
+      "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: will change to \"main\" in Git 3.0. To configure the initial branch name\nhint: to use in all of your new repositories, which will suppress this warning,\nhint: call:\nhint:\nhint: \tgit config --global init.defaultBranch <name>\nhint:\nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint:\nhint: \tgit branch -m <name>\nhint:\nhint: Disable this message with \"git config set advice.defaultBranchName false\"\n"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/tmp/mrv2-bundle-verify-20261022T132626Z_R2-52c3d487",
+        "fetch",
+        "--depth=1",
+        "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend",
+        "7a9f4aae1ebe5c5f3d4876ec9b49926949dfae14"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "From /mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend\n * branch            7a9f4aae1ebe5c5f3d4876ec9b49926949dfae14 -> FETCH_HEAD\n"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/tmp/mrv2-bundle-verify-20261022T132626Z_R2-52c3d487",
+        "bundle",
+        "verify",
+        "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/MRV2_52c3d487_from_Repair7.bundle"
+      ],
+      "returncode": 0,
+      "stdout": "The bundle contains this ref:\n52c3d487bb3c302d7170087aaaa79e34e3de7846 HEAD\nThe bundle requires this ref:\n7a9f4aae1ebe5c5f3d4876ec9b49926949dfae14 \nThe bundle uses this hash algorithm: sha1\n",
+      "stderr": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/MRV2_52c3d487_from_Repair7.bundle is okay\n"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/tmp/mrv2-bundle-verify-20261022T132626Z_R2-52c3d487",
+        "fetch",
+        "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/MRV2_52c3d487_from_Repair7.bundle",
+        "HEAD:refs/heads/restored"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "From /mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/20261022T132626Z_R2/MRV2_52c3d487_from_Repair7.bundle\n * [new ref]         HEAD       -> restored\n"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/tmp/mrv2-bundle-verify-20261022T132626Z_R2-52c3d487",
+        "rev-parse",
+        "restored",
+        "restored^{tree}"
+      ],
+      "returncode": 0,
+      "stdout": "52c3d487bb3c302d7170087aaaa79e34e3de7846\n918ee66be605d69da21aedb015be227c5cbcf411\n",
+      "stderr": ""
+    }
+  ]
+}

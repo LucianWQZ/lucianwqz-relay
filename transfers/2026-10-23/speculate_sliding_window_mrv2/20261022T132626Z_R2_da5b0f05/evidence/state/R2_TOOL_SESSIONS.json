@@ -1,0 +1,14 @@
+{
+  "at_utc": "2026-10-22T18:05:27.909160+00:00",
+  "active_model_chain": null,
+  "active_monitors": [],
+  "all_known_task_processes_released": true,
+  "release_evidence": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/environment/final_release_check/snapshot.json",
+  "completed_tools": [
+    "C19chain75663",
+    "C19readonlyTargetJoin62077",
+    "C17chain5599 and navigation54733",
+    "all bounded provenance/profile readers"
+  ],
+  "scope": "no process exit interpreted as device completion proof"
+}

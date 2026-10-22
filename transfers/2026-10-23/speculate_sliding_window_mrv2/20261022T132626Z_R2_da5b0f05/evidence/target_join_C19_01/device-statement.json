@@ -1,0 +1,55 @@
+{
+  "device_segment": "node-39-101 / Phy0 / visible0 / logical npu:0 / TP1",
+  "current_attempt_admission_records": [
+    {
+      "case_id": "NUMERIC_TARGET4",
+      "check": {
+        "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/NUMERIC_TARGET4/attempt01/check.json",
+        "bytes": 199,
+        "sha256": "ed8ee3dfb72153460b209f2851b5307ca5e065ea68c510a707cc260dafed1f9d"
+      },
+      "receipt": {
+        "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/NUMERIC_TARGET4/attempt01/user-machine-receipt.json",
+        "bytes": 3212,
+        "sha256": "a369672119214da5257df3a29749f2ac5ad4f02286754506c95820a68106c7b5"
+      },
+      "execution": {
+        "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/NUMERIC_TARGET4/attempt01/execution.json",
+        "bytes": 6595,
+        "sha256": "53f5cca5c87564c9f6e762926e363ce1c363906211f0789e9ab3fbfccd053f18"
+      },
+      "source_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+      "host_phy_id": 0,
+      "logical_npu": 0,
+      "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+      "runner_dependency_satisfied": true,
+      "scope": "fresh committed admission at actual case launch; not reissued or extended at comparison time"
+    },
+    {
+      "case_id": "TARGET4_OFF",
+      "check": {
+        "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/TARGET4_OFF/attempt01/check.json",
+        "bytes": 199,
+        "sha256": "ed8ee3dfb72153460b209f2851b5307ca5e065ea68c510a707cc260dafed1f9d"
+      },
+      "receipt": {
+        "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/TARGET4_OFF/attempt01/user-machine-receipt.json",
+        "bytes": 3201,
+        "sha256": "92925b49aedf07f961736f4c623700158db3efb057d44547eba834c133310ae3"
+      },
+      "execution": {
+        "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/admission_C19_attempt01/TARGET4_OFF/attempt01/execution.json",
+        "bytes": 6515,
+        "sha256": "955eef97ba4caf6f5e714174281450e1ae86623b39be54b4310c17e18bcd16a6"
+      },
+      "source_sha": "da5b0f054c4b94362ff3539de911b26b4074052a",
+      "host_phy_id": 0,
+      "logical_npu": 0,
+      "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+      "runner_dependency_satisfied": true,
+      "scope": "fresh committed admission at actual case launch; not reissued or extended at comparison time"
+    }
+  ],
+  "authority": "USER_INSTRUCTION_NO_ADMIN_SIGNATURE",
+  "scope": "External provenance records supplied for review; target-join itself does not validate reservation"
+}

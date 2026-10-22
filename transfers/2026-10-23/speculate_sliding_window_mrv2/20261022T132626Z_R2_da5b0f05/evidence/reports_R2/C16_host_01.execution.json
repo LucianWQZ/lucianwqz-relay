@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "/usr/local/python3.11.10/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/ut/spec_decode/test_graph_repair7.py",
+    "tests/ut/spec_decode/test_graph_repair8_materialize_profile.py",
+    "tests/ut/spec_decode/test_graph_repair8_native_binding.py",
+    "tests/ut/spec_decode/test_graph_repair8_task_dump.py",
+    "tests/ut/spec_decode/test_graph_repair8_unwind.py"
+  ],
+  "cwd": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend",
+  "returncode": 4,
+  "start_ns": 1792684136840455770,
+  "end_ns": 1792684169353061620,
+  "env_overrides": {
+    "TORCH_DEVICE_BACKEND_AUTOLOAD": "0",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend:/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/C2_303ef7fe/vllm"
+  },
+  "scope": "targeted CPU-only CLI/campaign/native-binding/default-off checks; not device execution"
+}

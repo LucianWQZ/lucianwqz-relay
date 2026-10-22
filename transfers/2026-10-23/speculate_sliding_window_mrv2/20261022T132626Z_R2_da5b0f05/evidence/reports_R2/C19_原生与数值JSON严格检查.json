@@ -1,0 +1,120 @@
+{
+  "observed_utc": "2026-10-22T17:41:53.850370+00:00",
+  "files": [
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/LIFE_TASK_BIND/native-graph-json/draft-1-7.json",
+      "bytes": 114552,
+      "sha256": "3e3430e0d006a7bf2a78f72b8912feca613198065f97f2a92a9d23068ac7ef98",
+      "strict_json": "PASS_NO_DUPLICATE_KEYS"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/LIFE_TASK_BIND/native-graph-json/draft-2-14.json",
+      "bytes": 134480,
+      "sha256": "aed0d2d765923358b9ceccb7dc629b8a923b5060af0d6ca962bf51a98804c090",
+      "strict_json": "PASS_NO_DUPLICATE_KEYS"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/LIFE_TASK_BIND/native-graph-json/draft-4-28.json",
+      "bytes": 134860,
+      "sha256": "fe0a972b362b34e09b899a9d532d81d3f0587169733adc4fa605245a6403dc7c",
+      "strict_json": "PASS_NO_DUPLICATE_KEYS"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/LIFE_TASK_BIND/task-dump-index.json",
+      "bytes": 37099,
+      "sha256": "28daa5a15f3693c4715b65848aaea229b28f620562de918f66f627c9eca691cb",
+      "strict_json": "PASS_NO_DUPLICATE_KEYS"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/LIFE_TASK_BIND/native-bindings-joint.json",
+      "bytes": 17671,
+      "sha256": "a985ee8a8c2e4bca67b03a494b36fc9e5c93330d28596162aed7e516477e8496",
+      "strict_json": "PASS_NO_DUPLICATE_KEYS"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4/numeric-reference.json",
+      "bytes": 11664,
+      "sha256": "6c029732141c22b78cc2f196e96673f724a0547175f9f00dc1115458f4f38f98",
+      "strict_json": "PASS_NO_DUPLICATE_KEYS"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4/numeric-joint.json",
+      "bytes": 6035,
+      "sha256": "ee24ef12ae52946a5213319aa40541f51b8959dbe61d17f8cc7e978179a48dc8",
+      "strict_json": "PASS_NO_DUPLICATE_KEYS"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4/numeric-reference-sample-000.json",
+      "bytes": 94008,
+      "sha256": "7469e32530063fe8d9b2015e3ed2759567ba91f3a01bea6c99ec8ca7d2ae7189",
+      "strict_json": "PASS_NO_DUPLICATE_KEYS"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4/numeric-reference-sample-001.json",
+      "bytes": 94023,
+      "sha256": "490ee2ca5d3cd666a5a933d6697223093f291cc3c8bc100ed70590cdab43a616",
+      "strict_json": "PASS_NO_DUPLICATE_KEYS"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4/numeric-reference-sample-002.json",
+      "bytes": 94014,
+      "sha256": "1a6e2676969eb608f098a6f8659d70b56f6bb13dcd503d590a5f9a1297a0b8cc",
+      "strict_json": "PASS_NO_DUPLICATE_KEYS"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4/numeric-reference-sample-003.json",
+      "bytes": 93709,
+      "sha256": "d2c6b20c28f61f9c5856f36cd1e47cc4887cb7c5c134443b7340f9407f690100",
+      "strict_json": "PASS_NO_DUPLICATE_KEYS"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4/numeric-reference-sample-004.json",
+      "bytes": 94011,
+      "sha256": "ba4b5ea58c2fc6a725fc88f30c5a163fdd7c9246d59da00a032a95afa7ff3670",
+      "strict_json": "PASS_NO_DUPLICATE_KEYS"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4/numeric-reference-sample-005.json",
+      "bytes": 93995,
+      "sha256": "49b75be10b7c8bb3209d314c4a09a285d52451825638deb709e3b6ab1871be46",
+      "strict_json": "PASS_NO_DUPLICATE_KEYS"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4/numeric-reference-sample-006.json",
+      "bytes": 94017,
+      "sha256": "debcee3a62e077e23f991647bc3c871b666db669caf2b65aef129288607849b9",
+      "strict_json": "PASS_NO_DUPLICATE_KEYS"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4/numeric-reference-sample-007.json",
+      "bytes": 96944,
+      "sha256": "51d7fc82d110d6846b8453ee9c08d2710faa6364c18b6eb67efd914b71536be6",
+      "strict_json": "PASS_NO_DUPLICATE_KEYS"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4/numeric-reference-sample-008.json",
+      "bytes": 93732,
+      "sha256": "2c1199c679e3f6d8bd993df0ccb23c7241363f6394f67e985182448750109f60",
+      "strict_json": "PASS_NO_DUPLICATE_KEYS"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4/numeric-reference-sample-009.json",
+      "bytes": 93716,
+      "sha256": "5dd76c7b9015e8ce5a4d7b629fcdb16dae20d504a078b8644b28e7a88b90ac21",
+      "strict_json": "PASS_NO_DUPLICATE_KEYS"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4/numeric-reference-sample-010.json",
+      "bytes": 101214,
+      "sha256": "44327d11ca623ace0cab0be5c095a51f0ed2ef1d41462ed4a10860ca35895e2c",
+      "strict_json": "PASS_NO_DUPLICATE_KEYS"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261022T132626Z_R2/raw/C19_prepare_01/NUMERIC_TARGET4/numeric-reference-sample-011.json",
+      "bytes": 103149,
+      "sha256": "0e7bff541b6c852b788c3337aaa71d90f6fcf919bbb37b2843ffc6439706d862",
+      "strict_json": "PASS_NO_DUPLICATE_KEYS"
+    }
+  ],
+  "scope": "sealed actual files only, no normalization or raw modification; not a new NPU run"
+}

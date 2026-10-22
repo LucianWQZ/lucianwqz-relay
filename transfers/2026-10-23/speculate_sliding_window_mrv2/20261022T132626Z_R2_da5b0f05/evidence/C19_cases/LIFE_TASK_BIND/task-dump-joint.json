@@ -1,0 +1,12 @@
+{
+  "status": "PASS_SCOPED_NATIVE_JSON_COLLECTION",
+  "task_operand": "UNPROVEN",
+  "physical_read": "UNPROVEN",
+  "execution": {
+    "status": "EXECUTION_ASSOCIATED",
+    "numeric_status": "NOT_ASSESSED",
+    "artifact_sha256": "28daa5a15f3693c4715b65848aaea229b28f620562de918f66f627c9eca691cb"
+  },
+  "files": 3,
+  "bytes": 383892
+}

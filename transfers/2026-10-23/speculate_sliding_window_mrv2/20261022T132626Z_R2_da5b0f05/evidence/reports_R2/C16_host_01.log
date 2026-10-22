@@ -1,0 +1,21 @@
+ImportError while loading conftest '/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend/tests/ut/conftest.py'.
+tests/ut/conftest.py:239: in <module>
+    adapt_patch()
+vllm_ascend/utils.py:601: in adapt_patch
+    from vllm_ascend.patch import worker  # noqa: F401
+vllm_ascend/patch/worker/__init__.py:29: in <module>
+    import vllm_ascend.patch.worker.patch_mamba_utils  # noqa
+vllm_ascend/patch/worker/patch_mamba_utils.py:435: in <module>
+    if vllm_version_is("0.28.0"):
+/usr/local/python3.11.10/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py:1181: in _fn
+    return fn(*args, **kwargs)
+vllm_ascend/utils.py:684: in vllm_version_is
+    raise ValueError(
+E   ValueError: Invalid vllm version dev found. A dev version of vllm is installed probably. Set the environment variable VLLM_VERSION to control it by hand. And please make sure the value follows the format of x.y.z.
+INFO 10-22 23:49:20 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 10-22 23:49:20 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 10-22 23:49:20 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 10-22 23:49:20 [__init__.py:272] Platform plugin ascend is activated
+INFO 10-22 23:49:21 [platform.py:69] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+WARNING 10-22 23:49:22 [importing.py:83] Triton is installed, but `triton.backends` could not be imported. Disabling Triton.
+INFO 10-22 23:49:22 [importing.py:98] Triton not installed or not compatible; certain GPU-related functions will not be available.

@@ -1,0 +1,162 @@
+[
+  {
+    "case": "P0",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792687909917165090,
+    "end_ns": 1792687939292968260
+  },
+  {
+    "case": "C2",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792687939297428790,
+    "end_ns": 1792687977444122720
+  },
+  {
+    "case": "CONFIG",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792687977447647290,
+    "end_ns": 1792688014568951040
+  },
+  {
+    "case": "A0",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792688014575549040,
+    "end_ns": 1792688109237295950
+  },
+  {
+    "case": "A1",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792688109242422620,
+    "end_ns": 1792688196219137370
+  },
+  {
+    "case": "B0",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792688196226936840,
+    "end_ns": 1792688295127741720
+  },
+  {
+    "case": "LIFE_TASK_BIND",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792688295135980810,
+    "end_ns": 1792688419811485750
+  },
+  {
+    "case": "NUMERIC_SENTINEL",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792688419818101040,
+    "end_ns": 1792688753141018580
+  },
+  {
+    "case": "LIFE",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792688753148276350,
+    "end_ns": 1792688863951228820
+  },
+  {
+    "case": "NUMERIC_TARGET4",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792688863957920350,
+    "end_ns": 1792689975027291550
+  },
+  {
+    "case": "PREFIX_OFF",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792689975034383140,
+    "end_ns": 1792690139496288030
+  },
+  {
+    "case": "TARGET4_OFF",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792690139502790280,
+    "end_ns": 1792691231578568300
+  },
+  {
+    "case": "ABORT_before_replay",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792691231583887730,
+    "end_ns": 1792691318342097410
+  },
+  {
+    "case": "ABORT_after_replay",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792691318347854500,
+    "end_ns": 1792691407836548090
+  },
+  {
+    "case": "ABORT_after_update",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792691407841582270,
+    "end_ns": 1792691489749057150
+  },
+  {
+    "case": "ABORT_after_completion",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792691489754475840,
+    "end_ns": 1792691575170283240
+  },
+  {
+    "case": "UNWIND_before_replay",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792691575177138820,
+    "end_ns": 1792691658049149520
+  },
+  {
+    "case": "UNWIND_after_replay",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792691658056162620,
+    "end_ns": 1792691744204090070
+  },
+  {
+    "case": "UNWIND_after_update",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792691744209107230,
+    "end_ns": 1792691826420261070
+  },
+  {
+    "case": "UNWIND_after_completion",
+    "orchestrator_rc": 0,
+    "runner_status": "SCOPED_COMMANDS_ACCEPTED",
+    "dependency_satisfied": true,
+    "start_ns": 1792691826428962110,
+    "end_ns": 1792691908182974240
+  }
+]
