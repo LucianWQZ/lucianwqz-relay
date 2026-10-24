@@ -1,0 +1,153 @@
+{
+  "session": "20261023T121157Z_R4_node140_c8776394",
+  "generated_at": "2026-10-23T21:54:42.771224+00:00",
+  "primary_review_zip": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/MRV2_Server_Dev_review_20261023T121157Z_R4_node140_c8776394_f00e4239_final.zip",
+  "source_sha": "f00e423936c23b0710fc2b5cd367d34ec7736d26",
+  "source_tree": "5383f503852c3e520bd10442ed7562e1df5a9a04",
+  "files": [
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/MRV2_Server_Dev_review_20261023T121157Z_R4_node140_c8776394_f00e4239_final.zip",
+      "bytes": 3016637,
+      "sha256": "e1c9104cdefbcea23b4ce6d5848af040a5837f5edfc8d0cce73f90ee3324dd79",
+      "suitable_for_chat_upload": true,
+      "role": "main review archive"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/MRV2_R4_C28_to_f00e4239.bundle",
+      "bytes": 42379,
+      "sha256": "d25456fba21bf16bb0e2eb631ae074d0e84a76acdf0579fc8ddb6c850f31ae8b",
+      "suitable_for_chat_upload": true,
+      "role": "source restore needs C28"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/PACKAGE_SELF_CHECK.json",
+      "bytes": 629,
+      "sha256": "91e3d6cb33e5146bb0f1546118f8f13bb5e4144fde200f027eaf166c0fe4f107",
+      "suitable_for_chat_upload": true,
+      "role": "small review/report"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/MRV2_持续开发阶段总结.md",
+      "bytes": 6679,
+      "sha256": "dc73a29dd328290426342816bb5dfe3d028e4ca62e84083bb5a153ae22a73d1a",
+      "suitable_for_chat_upload": true,
+      "role": "small review/report"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/MRV2_140迁移与环境等价性.md",
+      "bytes": 5906,
+      "sha256": "f15f2854f3dbb53322f4e5c7374a1578d426453bc45ab323c6c24b03901798d5",
+      "suitable_for_chat_upload": true,
+      "role": "small review/report"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/MRV2_实验矩阵与结论.csv",
+      "bytes": 150262,
+      "sha256": "529b0b63324b8c4cde3d188bc3cebe8fb263d8fd9ff600b05efd75e8284c07bc",
+      "suitable_for_chat_upload": true,
+      "role": "small review/report"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/MRV2_候选与证据对应表.md",
+      "bytes": 1778,
+      "sha256": "90a488bcd1890a5052f7f9cf5733985d3f7015d91def8ab405f51205943e3244",
+      "suitable_for_chat_upload": true,
+      "role": "small review/report"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/MRV2_正常Graph合同审查.md",
+      "bytes": 3091,
+      "sha256": "a519c132698b0a5898667ec593cd93504eef715d1ac5f71d73added249ee3b42",
+      "suitable_for_chat_upload": true,
+      "role": "small review/report"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/MRV2_性能与接受率报告.md",
+      "bytes": 4947,
+      "sha256": "2a4ba53f8ceeaace44126736e8b72f44c3dec34b29680abfc797c870d71a19b8",
+      "suitable_for_chat_upload": true,
+      "role": "small review/report"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/MRV2_Profiling分析.md",
+      "bytes": 4891,
+      "sha256": "7b9a9cbf4c6aa652cf33dbeb60087117c618b52ddda60cae81699ac0b0b92395",
+      "suitable_for_chat_upload": true,
+      "role": "small review/report"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/MRV2_Profiling_Summary.json",
+      "bytes": 45260,
+      "sha256": "0177d6635d25610c857b71f99b0d27fbd16be2524d52012b9e2bcd6e098d77fe",
+      "suitable_for_chat_upload": true,
+      "role": "small review/report"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/MRV2_性能与接受率_Summary.json",
+      "bytes": 280268,
+      "sha256": "1cbc01c370ac4a4fa9e79482104679cf48ea9b37da03a8201cfa6f9adc81bf49",
+      "suitable_for_chat_upload": true,
+      "role": "small review/report"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/MRV2_Graph支持范围与发布条件.md",
+      "bytes": 3166,
+      "sha256": "826034d67330ea12de95fb07ba55718925dd9b260f1abf1a0fd5080269d3e380",
+      "suitable_for_chat_upload": true,
+      "role": "small review/report"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/NEXT_SESSION_HANDOFF.json",
+      "bytes": 3378,
+      "sha256": "d0056ecd5238164972b56c1b7e644e4c923521d7decf44ae9af84166645375ff",
+      "suitable_for_chat_upload": true,
+      "role": "small review/report"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/RESUME.md",
+      "bytes": 2774,
+      "sha256": "195242f59987743723489635acf1a84452f922df207431f7198536d76048bcae",
+      "suitable_for_chat_upload": true,
+      "role": "small review/report"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/RAW_EVIDENCE_INDEX.json",
+      "bytes": 238533,
+      "sha256": "270df92b6c4b5772454c94e6b491766ed07a0c3850cbc2b094ec8b3b07b45789",
+      "suitable_for_chat_upload": true,
+      "role": "small review/report"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/FINAL_ZIP_PORTABLE_RECOMPUTATION.json",
+      "bytes": 1438,
+      "sha256": "dbe2a77c79c32370726cf68dc2bf7ef692a4d1e925aa54ab720a5b87578dfcef",
+      "suitable_for_chat_upload": true,
+      "role": "post-package server verification; original archive unchanged"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/FINAL_RESOURCE_AUDIT_POSTPACK.json",
+      "bytes": 603,
+      "sha256": "5f141376eec18f2df2d5584a124d8d7658f0904a0849e89bb6dd1a590797b3b5",
+      "suitable_for_chat_upload": true,
+      "role": "post-package server verification; original archive unchanged"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261023T121157Z_R4_node140_c8776394/FINALIZATION.json",
+      "bytes": 1341,
+      "sha256": "3988913a8384a1648964c4f219582c7e413bf2c195fb16915b27fe7bd44461d3",
+      "suitable_for_chat_upload": true,
+      "role": "post-package server verification; original archive unchanged"
+    }
+  ],
+  "large_raw": {
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261023T121157Z_R4_node140_c8776394/raw",
+    "suitable_for_chat_upload": false,
+    "reason": "full tensors/trace retained with index, no duplicate history pack"
+  },
+  "self_hash": "Excluded to avoid circular hash; report externally",
+  "server_selfcheck": "PASS",
+  "receiver_verification": "NOT_PERFORMED",
+  "full_product_scope_completed": false,
+  "public_graph_gate": "FROZEN",
+  "postpackage_verified_at": "2026-10-23T22:00:24.725668+00:00"
+}
