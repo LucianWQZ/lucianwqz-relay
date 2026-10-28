@@ -1,0 +1,241 @@
+{
+  "at": "2026-10-27T19:08:46.357075+00:00",
+  "directory": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z",
+  "candidate": "06fafe0da5f690bbd7accb21984063b53fb60031",
+  "tree": "95496f41d5d1ef0cdf297ce15b8c5217f3c9e98d",
+  "status": "SERVER_VERIFIED_COMPACT_HANDOFF_NOT_RELEASE",
+  "downloads": [
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/C184_可转交摘要.md",
+      "bytes": 2036,
+      "sha256": "5c4293c51c8ed8c592b9c5355b9fc19c3443de9f397c6348d89ffc614da161a5",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/Graph_C204_from_52ce43b1.bundle",
+      "bytes": 1708535,
+      "sha256": "92dada36c4baf78e6d41c58e287bf1fa7e0ddaef7a833f03b190b958a4044e15",
+      "kind": "primary_download"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/MRV2_Eagle3_K后态首因与修复验证.md",
+      "bytes": 2693,
+      "sha256": "67f2861a26c069cb8299e570ff26e323e6b24c9201ec76a7097b8c8c0d42de19",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/MRV2_Graph_R6_C204_review.zip",
+      "bytes": 7482924,
+      "sha256": "fe2f9e7b3c0c8fc290c01809577f1fac64231edabe9b375dc243ebfc60cab486",
+      "kind": "primary_download"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/MRV2_Graph_独立技术评审请求.md",
+      "bytes": 1784,
+      "sha256": "7b8c3827c867774467255e79e796e321c6ad1cf72d55e1608948d3ff56679566",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/MRV2_Graph_验收主张与证据对应表.md",
+      "bytes": 2023,
+      "sha256": "b22e693cdbc39cb02de69efa84dd5b1b0adec5b62c343b28a51cad2b4cb5ddee",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/MRV2_Graph_验收方案_review.zip",
+      "bytes": 7324609,
+      "sha256": "7ef2e5250f7574643db6cb78b7c2a5e842a367c98414cb6962ceb18d11267048",
+      "kind": "primary_download"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/MRV2_Graph_验收方案_中文说明.md",
+      "bytes": 1466,
+      "sha256": "31f6981716c838686beb10b17192449a5be44ff7e1d50186d96b9d0a7f665e6c",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/MRV2_Graph支持范围与发布条件.md",
+      "bytes": 4092,
+      "sha256": "12d5899340d72d999bddd97b8074f82db50ef7cb3237ced131545b83b66d8587",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/MRV2_Profiling分析.md",
+      "bytes": 1618,
+      "sha256": "a6d0222a1a9d254b67e461f7c4370874e931b60aa21898940309dc629175d3e5",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/MRV2_候选与证据对应表.md",
+      "bytes": 2450,
+      "sha256": "777f5c33c9a10a5ffd52fe7badee8831d953fbdc9200a0dc810e1087681be185",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/MRV2_多rank与必需组合验证.md",
+      "bytes": 1976,
+      "sha256": "fab374aa242b86403a8c469eaeb5953056bb961d0a2a9557e8743e2b1703e35b",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/MRV2_实验矩阵与结论.csv",
+      "bytes": 122679,
+      "sha256": "31feae9cdada2dd3640da8f0ca448651614510510f9b11691c9ed7dcf89bb1d9",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/MRV2_性能与接受率报告.md",
+      "bytes": 4838,
+      "sha256": "8b0a1893a08c9824b1a2835056ac40c0f2f90d625a77b2c02d5d54a931505dbc",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/MRV2_持续开发阶段总结.md",
+      "bytes": 4575,
+      "sha256": "a8fe149a61bf4b0228c6af2a4458748eba4cb6a6b395eadd31bc5a552ac0d51c",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/MRV2_正常Graph合同审查.md",
+      "bytes": 3973,
+      "sha256": "76de5f2ce6118fa074617473b07690850e2b3f30f24fa01f4712cbe71a942b25",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/NEXT_SESSION_HANDOFF.json",
+      "bytes": 3295,
+      "sha256": "dd53add4537fbf333e59dd8b8c1f3e5e65b021c149a08791a05b6de0ece6fd7f",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/PACKAGE_FILES.json",
+      "bytes": 83109,
+      "sha256": "f6710bc7de698ef4053938c264f5f4a23638c23fdb535a97ab74ed8359df9af0",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/Profiling_Summary.json",
+      "bytes": 554,
+      "sha256": "483409640643773496353f2134dbf1e978d1d5b3cbb171fe4a54ad3375db684b",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/README.md",
+      "bytes": 2678,
+      "sha256": "22eaec108a8708e771c653836abc5b31efae005fd19ef8aeccf15f566f3463f7",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/RESUME.md",
+      "bytes": 1534,
+      "sha256": "c1d1bb8d8f61918091d776c3f7b8da5e6202f199389bb3eff8dfb91de01ff7d2",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/TECHNICAL_PACKAGE_FILES.json",
+      "bytes": 79303,
+      "sha256": "32e1ef603fda966508cd6d04aeefca65727d8f6bfffbd136c5c515b8d3e36488",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/bundle_recovery_check.json",
+      "bytes": 5342,
+      "sha256": "10883365b456fde1fbf025ca8f28d8809bbaa95a54a7916f6b4905e85509c1ad",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/completion_status.json",
+      "bytes": 1479,
+      "sha256": "a960e21a0d359844c7406b37656cc3b2a548146aa5b1ceca00e02280c9891e1f",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/device_release_sample.txt",
+      "bytes": 8549,
+      "sha256": "6bad4318a0bd6c97359e9efdf247a1a3325aecd145212e21217155d70bd68a73",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/environment_identity.json",
+      "bytes": 1336,
+      "sha256": "b1528cfe8ba67607f220886f25ab40894ea5d1103a022fbb956394701250f9c0",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/final_process_lease_audit.json",
+      "bytes": 943,
+      "sha256": "e2e493ba6605198c651d6e6db9f5f5e55f01e9d5a678b78e8fc31f55844c60f6",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/git_state.json",
+      "bytes": 1712,
+      "sha256": "05dae1ea17c25d357f637d16c3a7dda7d338f144f7abf01e621ef390ebd57eee",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/launch_accounting.json",
+      "bytes": 4523,
+      "sha256": "df6f9be3af4c02b0921e50fb690584e33656906568f2566a39db7ae7fb8ef270",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/model_identities.json",
+      "bytes": 2898,
+      "sha256": "74205ef16861f88074934cafdcf4367f33f9c46ef346a5d999b3ae69c1373011",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/optional_native_repro_input.json",
+      "bytes": 406,
+      "sha256": "227340b9eee63d76de39853099c9b1c0a1c0cd26a7934f4e783d0396ff6f31ee",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/package_selfcheck.json",
+      "bytes": 3455,
+      "sha256": "ebe4315f4d55ad24af5d0063597a9fc1db376e0c6f730f71762aa267a55c718e",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/raw_evidence_index.json",
+      "bytes": 178957,
+      "sha256": "5ded6dca0888263df0c099df40155410f52b2247a9bd0eb76033fcedc6519c3b",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/selected_asset_index.json",
+      "bytes": 21952,
+      "sha256": "611ee70c42f0e3653229ada1912cf06c408c1999465e8b68106a7dfddacf4809",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/server_content_checks.json",
+      "bytes": 490,
+      "sha256": "8d37ed430632fe22ae77d9ffca1785b92613de8b1f8cc1dbfdf0e4cf769d98bb",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/source_from_official_base.diff",
+      "bytes": 4379552,
+      "sha256": "db17320c52877271849da14c83b3668fa808e7a8dd26864f7833cc5580cddf0b",
+      "kind": "supplemental_small_file"
+    },
+    {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261024T195020Z_R6_node140_3bf24139/final_20261027T173913Z/人工裁决与未决事项.md",
+      "bytes": 1733,
+      "sha256": "d6ed0bd0499230dba6e9159a46342fd3cbb8da737fe5568a74555e1265b34f0b",
+      "kind": "supplemental_small_file"
+    }
+  ],
+  "optional_native_input": {
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261024T195020Z_R6_node140_3bf24139/node140_return_C144_20261026T1425Z/raw/C184_saved_SWA_Full_FIA_native_probe_01_node140/operands.safetensors",
+    "bytes": 49619440,
+    "sha256": "160ed3d0ed75716911e737a01c0ab422b335ef6e10cd848cea4c0ebee45fb431",
+    "required_for_native_reproduction": true,
+    "in_review_zip": false
+  },
+  "server_checks": "package_selfcheck.json",
+  "user_receiver_validation": "NOT_RUN",
+  "NPU_results": "Original run identities only; no model restarted for packaging"
+}
