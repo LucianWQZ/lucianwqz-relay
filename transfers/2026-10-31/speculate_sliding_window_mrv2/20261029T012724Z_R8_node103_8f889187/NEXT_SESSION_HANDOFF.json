@@ -1,0 +1,219 @@
+{
+  "schema": "MRV2_GRAPH_R8_UNIFIED_PR017_544_HANDOFF_V1",
+  "updated_at": "2026-10-30T20:44:01.708155+00:00",
+  "task": "adapt / Graph",
+  "session_id": "20261029T012724Z_R8_node103_8f889187",
+  "codex_thread_id": "01a161fb-8dba-7ae3-a260-abdee005da7a",
+  "actual_host": "node-25-140",
+  "status": "WINDOW_EXPIRED_CPU_COMPLETE_FIXED_C304_NOT_READY",
+  "controller_policy": "One interactive Root controller; no automatic device queue/retry. Check exact PID/start and receipts before resume; never duplicate healthy job.",
+  "source": {
+    "development_candidate": "C304",
+    "sha": "f25dce7e7f4f31ec2d0057257fca5d805e2ad70c",
+    "tree": "38e19e4be80b11c232bd52e3fbc7f381ec566025",
+    "production_tree": "6c82f991116dbb36df8b195cd725dc7253cb2020",
+    "worktree": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/node140/integration_PR017_GraphC294/vllm-ascend",
+    "branch": "dev/mrv2-graph-pr017-vllm544-20261030",
+    "common_git": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/vllm-ascend/.git",
+    "tracked_clean": true,
+    "fixed_source": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/candidates/node140/C304_PR017_Graph_production/vllm-ascend",
+    "production_DCO_commits_above_017": 8,
+    "private_tools_excluded": true
+  },
+  "base": {
+    "ascend": "017cfca1c74c2e0b9984876bd4250593ed681908",
+    "ascend_tree": "45e4b805ff5df370d4a89e4285d2754d0281fe50",
+    "vllm": "544f182d9f0c9bfe8bd7645525951d5e3692a542",
+    "vllm_tree": "1c6150cc9f4580b617d946886af194e2c22b9764",
+    "vllm_worktree": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/node140/integration_PR017_GraphC294/vllm",
+    "vllm_common_git": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/node140/integration_PR534_GraphC254/vllm/.git",
+    "vllm_detached_clean": true,
+    "PR_worktree": "READ_ONLY_NOT_MODIFIED",
+    "remote_deliver_head_last_observed": "017cfca1c74c2e0b9984876bd4250593ed681908",
+    "remote_push": "NOT_PERFORMED",
+    "PR20288": {
+      "draft": true,
+      "mergeable": false,
+      "CI": "pre-commit/ci-gate failure; later CPU/NPU skipped, not passed"
+    }
+  },
+  "runtime": {
+    "manifest": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runtime/node140/C304_PR017_Graph_production/runtime_manifest.json",
+    "manifest_sha256": "3044b01d5a14fb4d972b7caccc72725313785cef1a102780233642a7c2f40d6b",
+    "python": "3.12.15",
+    "torch": "2.10.0+cpu",
+    "torch_npu": "2.10.0.post4",
+    "triton": "3.6.0",
+    "transformers": "5.19.0",
+    "CANN": "9.1.0 / V100R001C11SPC001B243",
+    "driver": "26.0.rc1 / HAL7.35.23 / innerV100R001C10SPC001B257",
+    "native_sha256": "ef173159087e6af357f5559ffceb8decf9dd5757e5f7f44fcb35a265ff426f3d",
+    "native_source_tree": "19b96b8af59b825cf74b9ad7010be76dc30a3a5b",
+    "scope": "Actual C304 CPU Source/native imports and37 helper guards; no C304 model/device PASS implied. Generic dependency distribution metadata may report a982; actual module paths/Git544 checked. No PR native binary copied."
+  },
+  "window": {
+    "t0": "2026-10-30T00:39:27.210402+00:00",
+    "dispatch_cutoff": "2026-10-30T19:54:27.210402+00:00",
+    "device_hard_deadline": "2026-10-30T20:39:27.210402+00:00",
+    "auth": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/state/R8_NODE140_GRAPH_AUTH_20H_20261030T003927Z.json",
+    "auth_sha256": "0ed55e9dd2925a938ba76b2cd7466fc5846c666f72cb43fe172668e025756f7b",
+    "NPU_workers": "RELEASED",
+    "leases": "RELEASED",
+    "device_dispatch_enabled": false,
+    "CPU_after_NPU_expiry": "Permitted by latest user instruction; no new device resource authorization inferred."
+  },
+  "new_pair_device_results": {
+    "ON": {
+      "producer_sha": "1fd6da87ae146cd87cff35bee9c9f0011372da04",
+      "raw": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261029T012724Z_R8_node103_8f889187/node140_return_20261029T0150Z/raw/C302_R8_GLM_DSpark_TP16_CP_return_0_10_2_ON_01_node140",
+      "producer_rc": 0,
+      "producer_seconds": 1238.4207541942596,
+      "checker_rc": 0,
+      "checker_seconds": 552.9128863811493,
+      "status": "PASS_SCOPED_ALL_RANK_SERIAL_DIAGNOSTIC",
+      "joint": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261029T012724Z_R8_node103_8f889187/node140_return_20261029T0150Z/raw/C302_R8_GLM_DSpark_TP16_CP_return_0_10_2_ON_01_node140/joint.json",
+      "joint_sha256": "c5fdaa35916a9537611e10ecff19c6ae0343c04ac653c62655fddd128336c88b",
+      "workers_released": {
+        "at": "2026-10-30T19:20:06.009773+00:00",
+        "remaining_owned_pids": [],
+        "scope": "Process exit audit only; not graph/device completion proof"
+      },
+      "leases": "RELEASED"
+    },
+    "OFF": {
+      "producer_sha": "1fd6da87ae146cd87cff35bee9c9f0011372da04",
+      "raw": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261029T012724Z_R8_node103_8f889187/node140_return_20261029T0150Z/raw/C302_R8_GLM_DSpark_TP16_CP_return_0_10_2_OFF_01_node140",
+      "producer_rc": 0,
+      "producer_seconds": 1221.791179895401,
+      "checker_rc": 0,
+      "checker_seconds": 510.84321641921997,
+      "status": "PASS_SCOPED_ALL_RANK_SERIAL_DIAGNOSTIC",
+      "joint": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261029T012724Z_R8_node103_8f889187/node140_return_20261029T0150Z/raw/C302_R8_GLM_DSpark_TP16_CP_return_0_10_2_OFF_01_node140/joint.json",
+      "joint_sha256": "77b2795ddd039f9a8cd3bcc085d41346e59837e46c65aaafce30d4850087330f",
+      "workers_released": {
+        "at": "2026-10-30T19:54:13.834820+00:00",
+        "remaining_owned_pids": [],
+        "scope": "Process exit audit only; not graph/device completion proof"
+      },
+      "leases": "RELEASED"
+    }
+  },
+  "target48_join": {
+    "status": "PASS_SCOPED_GLM_DSPARK_CP_TP16_TARGET_RETURN_0_10_2_48_PAIRS",
+    "directory": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261029T012724Z_R8_node103_8f889187/node140_return_20261029T0150Z/reanalysis/C302_CP_Target48_readonly_01",
+    "start_receipt": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261029T012724Z_R8_node103_8f889187/node140_return_20261029T0150Z/reanalysis/C302_CP_Target48_readonly_01/join-start.json",
+    "wrapper_pid": 2112418,
+    "wrapper_start_ticks": "97317627",
+    "checker_pid": 2112420,
+    "checker_start_ticks": "97317643",
+    "source_sha": "1fd6da87ae146cd87cff35bee9c9f0011372da04",
+    "start_utc": "2026-10-30T20:03:57.006746+00:00",
+    "hard_seconds": 3600,
+    "final_result": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261029T012724Z_R8_node103_8f889187/node140_return_20261029T0150Z/reanalysis/C302_CP_Target48_readonly_01/C302_OFF_ON_Target48.json",
+    "exit_receipt": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261029T012724Z_R8_node103_8f889187/node140_return_20261029T0150Z/reanalysis/C302_CP_Target48_readonly_01/join-exit.json",
+    "NPU": false,
+    "restart_policy": "COMPLETED: read final result; never rerun these models/checker for this result.",
+    "ranks": 16,
+    "pairs": 48,
+    "returncode": 0,
+    "timeout": false,
+    "elapsed_seconds": 2184.841359615326,
+    "ended_at": "2026-10-30T20:40:21.847380+00:00",
+    "final_result_sha256": "fe89893165f255f1ffcaaa9e2a7568063fdb653f00206cccfcb63f8ce623189e",
+    "processes_present": false
+  },
+  "evidence_boundaries": {
+    "C302": "Actual TP16/DP1 EP K8/Q8 TargetQ9 W1024, selected0/10/2, active/pad1/2->3/4->1/2, synthetic KV/serial diagnostic; no normal async/prefix-hit/performance proof.",
+    "C301_to_C304": "Only Eagle ordinary finite-entry refusal and corresponding UT changed; DSpark/DFlash/DFlash2, metadata/Graph update/native untouched. Evidence retains C302 SHA.",
+    "normal_completion_contract": "User accepted scoped Source/API+binding/ownership+independent numeric/Full/Target/exception evidence. Actual new544 context-KV-only/normal path remains a named qualification gap.",
+    "execution_operand": "UNPROVEN/NOT_OBSERVED directly",
+    "physical_read_set": "UNPROVEN/NOT_OBSERVED directly",
+    "public_gate": "FROZEN_NOT_RELEASE_APPROVED"
+  },
+  "known_route_limits": {
+    "DSpark": "New544 selected serial checks pass; completeTarget48 pending, normal/current-pair perf not measured. Historical534/a982 services/perf retain own scope.",
+    "GLM_DFlash": "Q023 QuaRot already in017/equivalent implementation, no repeated port; new544 actual normalGraph/context0 and affected eager qualification still needed.",
+    "Full8": "Exact checkpoint ordinary DraftGraph closed, bothWindowOFF/ON; single ordinary qualification absent. Historical single numeric-prefixPASS and multi-activeFAIL retained, no <=3/DP2 claim.",
+    "Eagle3": "C304 exact checkpoint ordinary DraftGraph finite entry closed pending new544 qualification. Numeric diagnostics and typed eager retained. Historicala982 TP4 finite pass not retagged.",
+    "SWA_DFlash": "Exact checkpoint Graph refused because correctness/API closure missing; not a performance rejection. Eager/TargetGraph preserved. C184/C216 native-call evidence does not assign platform blame.",
+    "DFlash2": "017 eager nativeSWA/five-layer fullKV retained; no DFlash2 DraftGraph support added."
+  },
+  "performance": {
+    "complete_dataset": "C273 PR534/a982 only,12/12 cells,one timed unit/length/arm; no statistical significance",
+    "producer_sha": "cefbbd6ebc103be7cb51f84463f509abb78203e8",
+    "CSV": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261029T012724Z_R8_node103_8f889187/node140_return_20261029T0150Z/reanalysis/C273_final12_metrics.csv",
+    "CSV_sha256": "7334b923c88d0ca2aed23f5a23abb0616156ca82265753e28b26656686d16ab4",
+    "new_PR017_544_four_lengths": "NOT_RUN; do not cross-version assemble",
+    "comparison": "G_OFF->G_ON extraWindow; E_ON->G_ON sameWindowDraftGraph; TargetGraph consistent; sampling/acceptance/shape workload differences reported."
+  },
+  "restore": {
+    "receipt": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261029T012724Z_R8_node103_8f889187/node140_return_20261029T0150Z/orchestration/C244_glm_dflash_required_OFF_baseline01/required-eager-prepared/integration-actual-check01/production-restore-validation01/PR017_544_final_revision03/C304-Eagle-pending-incremental01/restore-receipt.json",
+    "sha256": "3796a16288ac78dea4c48d618f4d664dfb9e7a23adebc9eda01e102199756ab0",
+    "prerequisite": "017 baseline, then C300 six commits +C301 delta +C304 delta. Actual independent bundlefetch and gitam verified complete Source tree, eightDCO, native Source unchanged; Python/models/vendor not in bundle."
+  },
+  "next_actions": [
+    {
+      "task": "GLM DFlash normal Graph context-KV-only/zero proposal and reader qualification",
+      "status": "PREPARED_NOT_RUN_REQUIRES_NEW_VALID_DEVICE_WINDOW",
+      "entry": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261029T012724Z_R8_node103_8f889187/node140_return_20261029T0150Z/orchestration/integration_PR017_544_20261030T1750Z/C303_glm_dflash_required_functional017544/G_ON-launch.json",
+      "dispatch_enabled": false,
+      "resource": "TP16 ~35–45min per arm; inspect exact plan/auth before enable"
+    },
+    {
+      "task": "Affected same-candidate eager OFF/ON and new544 DSpark service/performance applicability",
+      "status": "NOT_RUN_NEW_PAIR",
+      "resource": "TP16; do not relabel old534/a982 12 cells; minimal delta based on actual new-path evidence"
+    },
+    {
+      "task": "Eagle finite first/AR new544 qualification",
+      "status": "PREPARED_NOT_RUN_ORDINARY_ENTRY_CLOSED",
+      "resource": "TP4 ~10–20min then ordinary service qualification if numerical/Target passes"
+    },
+    {
+      "task": "Full8/SWA existing failures",
+      "status": "EXACT_CHECKPOINT_GRAPH_CLOSED_WITH_ORIGINAL_FAILS; do not repeat native probes without new discriminating input"
+    }
+  ],
+  "observation": {
+    "progress": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/all/adapt_progress.log",
+    "live": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/all/adapt_live.log",
+    "page": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/all/adapt进度.md",
+    "report": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/all/adapt_任务总报告.md",
+    "index": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/all/adapt_日志入口.json",
+    "resume": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/reports/RESUME.md",
+    "manual": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/manual_review/adapt_人工后续核查.md"
+  },
+  "management_percent": 95,
+  "management_scope": "Historical scoped coverage, not current-pair acceptance percentage.",
+  "readiness": "NOT_READY",
+  "legacy_root_entries": {
+    "NEXT_SESSION_HANDOFF.json": {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261029T012724Z_R8_node103_8f889187/legacy_root_NEXT_SESSION_HANDOFF_before_R8.json",
+      "sha256": "b7cbee9be644d0364d809f697b6d11f5b86db087d0de80ed316c5e6efbfb9234",
+      "scope": "Preserved historical root entry; not an active queue."
+    },
+    "RESUME.md": {
+      "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261029T012724Z_R8_node103_8f889187/legacy_root_RESUME_before_R8.md",
+      "sha256": "046c2b64a966f00b5b50cad87ef9933c8692fb7cc1ddfd61b63f4b66c549b42f",
+      "scope": "Preserved historical root entry; not an active queue."
+    }
+  },
+  "device_release_audit": {
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/runs/20261029T012724Z_R8_node103_8f889187/node140_return_20261029T0150Z/orchestration/integration_PR017_544_20261030T1750Z/C304_final_release_audit02.json",
+    "sha256": "6bef9947366fe5eb174bfd1828c33e8e3f0ac3d818067ffc158016d4ffe48b20",
+    "own_processes_remaining": [],
+    "lease_entries": []
+  },
+  "active_processes": [],
+  "device_dispatch_enabled": false,
+  "automatic_resume": false,
+  "full_product_scope_completed": false,
+  "delivery": {
+    "directory": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261029T012724Z_R8_node103_8f889187/unified_PR017_544_C304",
+    "zip": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261029T012724Z_R8_node103_8f889187/MRV2_PR017_544_C304_scoped_review.zip",
+    "download_manifest": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261029T012724Z_R8_node103_8f889187/DOWNLOAD_MANIFEST_PR017_544_C304.json",
+    "scope": "FIXED_LOCAL_UNIFIED_SOURCE_AND_SCOPED_RESULTS_NOT_FULL_PRODUCT_ACCEPTANCE",
+    "remote_pushed": false,
+    "released_branch_modified": false
+  }
+}

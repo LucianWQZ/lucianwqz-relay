@@ -1,0 +1,58 @@
+{
+  "schema": "C304_DOWNLOAD_MANIFEST_V1",
+  "created_utc": "2026-10-30T20:45:08.320069+00:00",
+  "task": "adapt/Graph",
+  "session_id": "20261029T012724Z_R8_node103_8f889187",
+  "source_sha": "f25dce7e7f4f31ec2d0057257fca5d805e2ad70c",
+  "source_tree": "38e19e4be80b11c232bd52e3fbc7f381ec566025",
+  "vllm": "544f182d9f0c9bfe8bd7645525951d5e3692a542",
+  "pr_base": "017cfca1c74c2e0b9984876bd4250593ed681908",
+  "delivery_branch": "dev/mrv2-graph-pr017-vllm544-20261030",
+  "source_path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/work/node140/integration_PR017_GraphC294/vllm-ascend",
+  "review_zip": {
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261029T012724Z_R8_node103_8f889187/MRV2_PR017_544_C304_scoped_review.zip",
+    "bytes": 3455390,
+    "sha256": "26c3b1b7dcd893cb77e0476ab07bc97045a0fc9f10b63cad26a0f1e451e77d02",
+    "crc": "PASS",
+    "members": 120,
+    "payload_hash_verification": "PASS",
+    "indexed_payloads": 119,
+    "strict_json_files": 55
+  },
+  "review_index": {
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261029T012724Z_R8_node103_8f889187/unified_PR017_544_C304/REVIEW_INDEX.json",
+    "sha256": "74929cdb21aac5e4dcb50a6cad6c249261ed9676d26cd3d933386a6e13da05ee"
+  },
+  "handoff": {
+    "path": "/mnt/share/z00937950/project/speculate_sliding_window_mrv2/dev/adapt/return/20261029T012724Z_R8_node103_8f889187/NEXT_SESSION_HANDOFF.json",
+    "sha256": "0cefd888499b107b7c36516a99512f5eda0c88377df2fa6b313f3c303646a2d6"
+  },
+  "source_restore": {
+    "status": "ACTUALLY_TESTED_BUNDLE_FETCH_AND_INDEPENDENT_GIT_AM",
+    "exact_prerequisite": "017cfca1c74c2e0b9984876bd4250593ed681908",
+    "bundle_stages": [
+      "C300",
+      "C301",
+      "C304"
+    ],
+    "native_source_tree": "19b96b8af59b825cf74b9ad7010be76dc30a3a5b",
+    "models_environment_native_binary": "NOT_INCLUDED; bind actual544/CP312/runtime separately"
+  },
+  "server_artifact_selfcheck": "PASS",
+  "offline_tensor_excerpt_recompute": "PASS_STDLIB_ORIGINAL_SELECTED_BYTES; not full Target checker",
+  "receiver_verification": "NOT_PERFORMED",
+  "qualification": "DSpark_TP16_CP_0_10_2_NUMERIC_FULL_ABA_TARGET48_SCOPED_PASS",
+  "full_product_scope_completed": false,
+  "unified_candidate_review_ready": false,
+  "missing": [
+    "new544 GLM DFlash normal context-KV-only/zero proposal and affected eager qualification",
+    "new544 normal service/reader applicability",
+    "new544 paired performance; old534/a982 four-length12 cells retained separately",
+    "Eagle new544 finite first/AR ordinary qualification; Full8/SWA exact guards remain"
+  ],
+  "processes_and_leases_released": true,
+  "device_deadline_utc": "2026-10-30T20:39:27.210402+00:00",
+  "public_graph_gate": "FROZEN",
+  "remote_pushed": false,
+  "existing_PR_delivery_branch_modified": false
+}
